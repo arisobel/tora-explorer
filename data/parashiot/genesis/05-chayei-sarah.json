@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 5,
+    "parasha_of_book": 5,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "chayei-sarah",
+    "name": "Chayei Sarah",
+    "name_pt": "Vida de Sara",
+    "hebrew": "חַיֵּי שָׂרָה",
+    "transliteration": "Chayei Sarah",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 23:1",
+    "ref_end": "Genesis 25:18",
+    "sefaria_ref": "Genesis 23:1-25:18",
+    "chapters_covered": [23, 24, 25],
+    "chapter_start": 23,
+    "chapter_end": 25,
+    "verse_start": 1,
+    "verse_end": 18
+  },
+
+  "timeline": {
+    "period_name": "Morte de Sara, casamento de Yitzchak e morte de Avraham",
+    "anno_mundi_start": 2085,
+    "anno_mundi_end": 2123,
+    "era": "patriarcas",
+    "position_pct": 38,
+    "description": "Da morte e sepultamento de Sara em Machpelah ao casamento de Yitzchak com Rivka e a morte de Avraham."
+  },
+
+  "summary": {
+    "short": "A morte de Sara, a compra da Caverna de Machpelah, o casamento de Yitzchak com Rivka e a morte de Avraham.",
+    "medium": "A parashá paradoxalmente intitulada 'Vida de Sara' abre com sua morte aos 127 anos. Avraham adquire da família hitita a Caverna de Machpelah como sepulcro perpétuo — a primeira propriedade judaica em Canaã. O capítulo mais longo do Gênesis narra a missão de Eliezer, servo de Avraham, para encontrar uma esposa para Yitzchak na família em Aram. A delicada Rivka é reconhecida como a escolhida e se une a Yitzchak, consolando-o após a morte da mãe. A parashá encerra com a morte de Avraham e a genealogia de Yishmael.",
+    "characters_main": ["Avraham", "Sara", "Yitzchak", "Rivka", "Eliezer"],
+    "characters_secondary": ["Efron o Hitita", "Betuel", "Lavan", "Milká", "Ketura", "Yishmael"],
+    "themes": ["Morte e luto", "Continuidade", "Propriedade da terra", "Casamento e destino", "Providência divina", "Legado"]
+  },
+
+  "facts": [
+    {
+      "id": "cs001",
+      "order": 1,
+      "text": "Sara falece aos 127 anos em Quiryat Arba (Hebron). Avraham vem prantear por ela e se inclina diante do povo da terra para pedir onde sepultá-la.",
+      "text_he": "וַיִּהְיוּ֙ חַיֵּ֣י שָׂרָ֔ה מֵאָ֥ה שָׁנָ֛ה וְעֶשְׂרִ֥ים שָׁנָ֖ה וְשֶׁ֣בַע שָׁנִ֑ים",
+      "refs": ["Genesis 23:1-2"],
+      "ref_start": "Genesis 23:1",
+      "ref_end": "Genesis 23:2",
+      "chapter": 23,
+      "verse_start": 1,
+      "verse_end": 2,
+      "sefaria_ref": "Genesis 23:1-2",
+      "day_of_creation": null,
+      "tags": ["sara", "morte", "127-anos", "luto", "hebron"],
+      "topic": "Morte de Sara — 127 Anos"
+    },
+    {
+      "id": "cs002",
+      "order": 2,
+      "text": "Avraham negocia com Efron o Hitita a compra da Caverna de Machpelah. Efron oferece o campo de graça, mas Avraham insiste em pagar o preço justo: 400 siclos de prata pesados diante de testemunhas.",
+      "text_he": "וַיִּשְׁקֹ֣ל אַבְרָהָ֗ם לְעֶפְרֹ֛ן אֶת הַכֶּ֕סֶף אֲשֶׁ֥ר דִּבֶּ֖ר",
+      "refs": ["Genesis 23:15-16"],
+      "ref_start": "Genesis 23:15",
+      "ref_end": "Genesis 23:16",
+      "chapter": 23,
+      "verse_start": 15,
+      "verse_end": 16,
+      "sefaria_ref": "Genesis 23:15-16",
+      "day_of_creation": null,
+      "tags": ["machpelah", "compra", "terra", "efron", "400-siclos"],
+      "topic": "Compra da Caverna de Machpelah — 400 Siclos"
+    },
+    {
+      "id": "cs003",
+      "order": 3,
+      "text": "A Caverna de Machpelah em Mamre se torna propriedade perpétua de Avraham — o primeiro território judeu adquirido legalmente em Canaã. Sara é sepultada ali.",
+      "text_he": "וְאַחֲרֵי כֵ֗ן קָבַ֧ר אַבְרָהָ֛ם אֶת שָׂרָ֥ה אִשְׁתּ֖וֹ",
+      "refs": ["Genesis 23:19-20"],
+      "ref_start": "Genesis 23:19",
+      "ref_end": "Genesis 23:20",
+      "chapter": 23,
+      "verse_start": 19,
+      "verse_end": 20,
+      "sefaria_ref": "Genesis 23:19-20",
+      "day_of_creation": null,
+      "tags": ["sepultamento", "machpelah", "propriedade", "canaã"],
+      "topic": "Sepultamento de Sara em Machpelah"
+    },
+    {
+      "id": "cs004",
+      "order": 4,
+      "text": "Avraham, velho e de dias avançados, faz seu servo jurar não tomar uma esposa cananeia para Yitzchak, mas ir à sua terra e família para buscar a noiva certa.",
+      "text_he": "לֹ֤א תִקַּח֙ אִשָּׁ֔ה לִבְנִ֖י מִבְּנ֣וֹת הַֽכְּנַעֲנִ֑י",
+      "refs": ["Genesis 24:2-4"],
+      "ref_start": "Genesis 24:2",
+      "ref_end": "Genesis 24:4",
+      "chapter": 24,
+      "verse_start": 2,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 24:2-4",
+      "day_of_creation": null,
+      "tags": ["juramento", "shidduch", "yitzchak", "noiva", "família"],
+      "topic": "O Juramento do Servo — Missão para Buscar a Noiva"
+    },
+    {
+      "id": "cs005",
+      "order": 5,
+      "text": "O servo de Avraham (identificado pela tradição como Eliezer) chega a Aram Naharaim e, ao poço, pede a Deus um sinal: a jovem que lhe oferecer água e também der de beber aos camelos será a escolhida.",
+      "text_he": "וְהָיָ֣ה הַֽנַּעֲרָ֗ אֲשֶׁ֤ר אֹמַר֙ אֵלֶ֔יהָ הַטִּי נָ֥א כַדֵּ֖ךְ",
+      "refs": ["Genesis 24:14"],
+      "ref_start": "Genesis 24:14",
+      "ref_end": "Genesis 24:14",
+      "chapter": 24,
+      "verse_start": 14,
+      "verse_end": 14,
+      "sefaria_ref": "Genesis 24:14",
+      "day_of_creation": null,
+      "tags": ["eliezer", "sinal", "poço", "camelos", "providência"],
+      "topic": "O Sinal de Eliezer no Poço"
+    },
+    {
+      "id": "cs006",
+      "order": 6,
+      "text": "Rivka chega ao poço e cumpre o sinal: oferece água a Eliezer e corre para dar de beber a todos os dez camelos. Eliezer reconhece a escolha divina e lhe oferece um brinco e braceletes de ouro.",
+      "text_he": "וַתְּמַהֵ֣ר וַתֹּ֣רֶד כַּדָּ֗הּ וַתַּשְׁקֵ֖הוּ",
+      "refs": ["Genesis 24:18-22"],
+      "ref_start": "Genesis 24:18",
+      "ref_end": "Genesis 24:22",
+      "chapter": 24,
+      "verse_start": 18,
+      "verse_end": 22,
+      "sefaria_ref": "Genesis 24:18-22",
+      "day_of_creation": null,
+      "tags": ["rivka", "camelos", "água", "escolhida", "sinal"],
+      "topic": "Rivka — O Sinal se Cumpre"
+    },
+    {
+      "id": "cs007",
+      "order": 7,
+      "text": "Eliezer é recebido na casa de Betuel e narra toda a missão de Avraham, a oração no poço e o cumprimento do sinal. Betuel e Lavan respondem: 'Do Senhor veio esta coisa — não podemos falar nem bem nem mal.'",
+      "text_he": "מֵֽה' יָצָ֣א הַדָּבָ֑ר לֹ֥א נוּכַ֛ל דַּבֵּ֥ר אֵלֶ֖יךָ רַ֥ע אוֹ טֽוֹב",
+      "refs": ["Genesis 24:50-51"],
+      "ref_start": "Genesis 24:50",
+      "ref_end": "Genesis 24:51",
+      "chapter": 24,
+      "verse_start": 50,
+      "verse_end": 51,
+      "sefaria_ref": "Genesis 24:50-51",
+      "day_of_creation": null,
+      "tags": ["betuel", "lavan", "providência", "resposta", "aceitação"],
+      "topic": "A Família de Rivka Reconhece o Decreto Divino"
+    },
+    {
+      "id": "cs008",
+      "order": 8,
+      "text": "A família quer reter Rivka alguns dias, mas ela opta por partir imediatamente. A bênção familiar: 'Torna-te em milhares de dezenas de milhares, e que tua descendência herde os portões de seus inimigos.'",
+      "text_he": "אֲחֹתֵ֗נוּ אַ֣תְּ הֲיִ֤י לְאַלְפֵי֙ רְבָבָ֔ה",
+      "refs": ["Genesis 24:59-60"],
+      "ref_start": "Genesis 24:59",
+      "ref_end": "Genesis 24:60",
+      "chapter": 24,
+      "verse_start": 59,
+      "verse_end": 60,
+      "sefaria_ref": "Genesis 24:59-60",
+      "day_of_creation": null,
+      "tags": ["bênção", "rivka", "partida", "milhares"],
+      "topic": "A Partida de Rivka — Bênção da Família"
+    },
+    {
+      "id": "cs009",
+      "order": 9,
+      "text": "Yitzchak sai ao campo ao anoitecer para meditar. Rivka o avista montada no camelo e pergunta ao servo quem é aquele homem. Ao saber que é Yitzchak, ela desce do camelo e cobre o rosto com o véu.",
+      "text_he": "וַיֵּצֵ֥א יִצְחָ֛ק לָשׂ֥וּחַ בַּשָּׂדֶ֖ה לִפְנ֣וֹת עָ֑רֶב",
+      "refs": ["Genesis 24:63-65"],
+      "ref_start": "Genesis 24:63",
+      "ref_end": "Genesis 24:65",
+      "chapter": 24,
+      "verse_start": 63,
+      "verse_end": 65,
+      "sefaria_ref": "Genesis 24:63-65",
+      "day_of_creation": null,
+      "tags": ["yitzchak", "rivka", "encontro", "véu", "campo"],
+      "topic": "O Primeiro Encontro de Yitzchak e Rivka"
+    },
+    {
+      "id": "cs010",
+      "order": 10,
+      "text": "Yitzchak traz Rivka para a tenda de Sara sua mãe. Ela se torna sua esposa e ele a ama — e Yitzchak se consola após a morte de sua mãe.",
+      "text_he": "וַיְבִאֶ֣הָ יִצְחָ֗ק הָאֹ֛הֱלָה שָׂרָ֥ה אִמּ֖וֹ וַיִּקַּ֤ח אֶת רִבְקָה֙",
+      "refs": ["Genesis 24:67"],
+      "ref_start": "Genesis 24:67",
+      "ref_end": "Genesis 24:67",
+      "chapter": 24,
+      "verse_start": 67,
+      "verse_end": 67,
+      "sefaria_ref": "Genesis 24:67",
+      "day_of_creation": null,
+      "tags": ["casamento", "amor", "consolo", "continuidade", "tenda-de-sara"],
+      "topic": "Casamento de Yitzchak e Rivka"
+    },
+    {
+      "id": "cs011",
+      "order": 11,
+      "text": "Avraham toma uma segunda esposa chamada Ketura e tem mais seis filhos. Mas tudo o que possui ele dá a Yitzchak, e aos filhos das concubinas ele dá presentes e os envia para longe.",
+      "text_he": "וְאֶ֨ת כָּל אֲשֶׁר ל֖וֹ נָתַ֥ן לְיִצְחָֽק",
+      "refs": ["Genesis 25:1-6"],
+      "ref_start": "Genesis 25:1",
+      "ref_end": "Genesis 25:6",
+      "chapter": 25,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Genesis 25:1-6",
+      "day_of_creation": null,
+      "tags": ["ketura", "yitzchak", "herança", "filhos"],
+      "topic": "Avraham, Ketura e a Herança de Yitzchak"
+    },
+    {
+      "id": "cs012",
+      "order": 12,
+      "text": "Avraham morre aos 175 anos, 'velho e saciado de dias.' Seus filhos Yitzchak e Yishmael o sepultam juntos na Caverna de Machpelah, ao lado de Sara.",
+      "text_he": "וַיִּגְוַ֨ע וַיָּ֤מָת אַבְרָהָם֙ בְּשֵׂיבָ֣ה טוֹבָ֔ה זָקֵ֖ן וְשָׂבֵ֑עַ",
+      "refs": ["Genesis 25:7-10"],
+      "ref_start": "Genesis 25:7",
+      "ref_end": "Genesis 25:10",
+      "chapter": 25,
+      "verse_start": 7,
+      "verse_end": 10,
+      "sefaria_ref": "Genesis 25:7-10",
+      "day_of_creation": null,
+      "tags": ["morte", "avraham", "175-anos", "machpelah", "yitzchak", "yishmael"],
+      "topic": "Morte de Avraham — 175 Anos"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 23:1",  "ref_end": "Genesis 23:16", "sefaria_ref": "Genesis 23:1-16" },
+    { "number": 2, "ref_start": "Genesis 23:17", "ref_end": "Genesis 24:9",  "sefaria_ref": "Genesis 23:17-24:9" },
+    { "number": 3, "ref_start": "Genesis 24:10", "ref_end": "Genesis 24:26", "sefaria_ref": "Genesis 24:10-26" },
+    { "number": 4, "ref_start": "Genesis 24:27", "ref_end": "Genesis 24:52", "sefaria_ref": "Genesis 24:27-52" },
+    { "number": 5, "ref_start": "Genesis 24:53", "ref_end": "Genesis 24:67", "sefaria_ref": "Genesis 24:53-67" },
+    { "number": 6, "ref_start": "Genesis 25:1",  "ref_end": "Genesis 25:11", "sefaria_ref": "Genesis 25:1-11" },
+    { "number": 7, "ref_start": "Genesis 25:12", "ref_end": "Genesis 25:18", "sefaria_ref": "Genesis 25:12-18" }
+  ],
+
+  "haftarah": {
+    "ref": "I Kings 1:1-31",
+    "sefaria_ref": "I Kings 1:1-31",
+    "note": "Tema: a velhice do rei David — paralelo à velhice de Avraham; a questão da sucessão"
+  },
+
+  "connections": {
+    "next_parasha": "toldot",
+    "prev_parasha": "vayera",
+    "thematic_links": [
+      { "parasha": "vayera",  "theme": "Consequência da Akeda — Yitzchak sobreviveu e agora precisa de uma esposa" },
+      { "parasha": "toldot",  "theme": "Rivka e Yitzchak — seus filhos gêmeos são o tema da próxima parashá" }
+    ]
+  }
+}

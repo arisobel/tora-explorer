@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 6,
+    "parasha_of_book": 6,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "toldot",
+    "name": "Toldot",
+    "name_pt": "Gerações",
+    "hebrew": "תּוֹלְדֹת",
+    "transliteration": "Toldot",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 25:19",
+    "ref_end": "Genesis 28:9",
+    "sefaria_ref": "Genesis 25:19-28:9",
+    "chapters_covered": [25, 26, 27, 28],
+    "chapter_start": 25,
+    "chapter_end": 28,
+    "verse_start": 19,
+    "verse_end": 9
+  },
+
+  "timeline": {
+    "period_name": "Yaakov e Essav — os gêmeos e as bênçãos",
+    "anno_mundi_start": 2108,
+    "anno_mundi_end": 2171,
+    "era": "patriarcas",
+    "position_pct": 46,
+    "description": "Do nascimento dos gêmeos Yaakov e Essav à fuga de Yaakov para Charan após tomar as bênçãos de Yitzchak."
+  },
+
+  "summary": {
+    "short": "O nascimento de Yaakov e Essav, a venda da primogenitura, Yitzchak em Gerar, e Yaakov que rouba a bênção do pai.",
+    "medium": "A parashá narra a gravidez difícil de Rivka — dois povos lutando em seu ventre — e o nascimento dos gêmeos: Essav, vermelho e peludo; Yaakov, segurado pelo calcanhar. Essav vende sua primogenitura por um prato de lentilhas. Yitzchak passa por dificuldades em Gerar, similar às de Avraham. O clímax é a cena em que Yaakov, disfarçado de Essav a pedido de Rivka, recebe a bênção de Yitzchak destinada ao filho mais velho. Ao descobrir o ocorrido, Essav quer matar Yaakov, que foge para Charan.",
+    "characters_main": ["Yitzchak", "Rivka", "Yaakov", "Essav"],
+    "characters_secondary": ["Avimelech de Gerar", "Yehudit e Basmat — esposas de Essav"],
+    "themes": ["Predestinação e livre-arbítrio", "Primogenitura e identidade", "Engano e bênção", "Conflito de irmãos", "Continuidade da aliança"]
+  },
+
+  "facts": [
+    {
+      "id": "tl001",
+      "order": 1,
+      "text": "Rivka está estéril. Yitzchak reza a Deus por sua esposa e ela concebe. Na gravidez ela sente uma luta intensa e pergunta a Deus o que significa.",
+      "text_he": "וַיֶּעְתַּ֨ר יִצְחָ֤ק לַֽה' לְנֹ֣כַח אִשְׁתּ֔וֹ כִּ֥י עֲקָרָ֖ה הִ֑וא",
+      "refs": ["Genesis 25:21-22"],
+      "ref_start": "Genesis 25:21",
+      "ref_end": "Genesis 25:22",
+      "chapter": 25,
+      "verse_start": 21,
+      "verse_end": 22,
+      "sefaria_ref": "Genesis 25:21-22",
+      "day_of_creation": null,
+      "tags": ["esterilidade", "prece", "rivka", "yitzchak", "gravidez"],
+      "topic": "Rivka Estéril — A Prece de Yitzchak"
+    },
+    {
+      "id": "tl002",
+      "order": 2,
+      "text": "Deus responde a Rivka: 'Dois povos estão em teu ventre; dois governos se separarão de tuas entranhas — e o maior servirá o menor.'",
+      "text_he": "שְׁנֵ֤י גוֹיִם֙ בְּבִטְנֵ֔ךְ וּשְׁנֵ֣י לְאֻמִּ֔ים מִמֵּעַ֖יִךְ יִפָּרֵ֑דוּ",
+      "refs": ["Genesis 25:23"],
+      "ref_start": "Genesis 25:23",
+      "ref_end": "Genesis 25:23",
+      "chapter": 25,
+      "verse_start": 23,
+      "verse_end": 23,
+      "sefaria_ref": "Genesis 25:23",
+      "day_of_creation": null,
+      "tags": ["profecia", "dois-povos", "maior-serve-menor", "destino"],
+      "topic": "Profecia — Dois Povos no Ventre"
+    },
+    {
+      "id": "tl003",
+      "order": 3,
+      "text": "Essav nasce primeiro — avermelhado e todo peludo como um manto. Depois nasce Yaakov com a mão agarrada ao calcanhar de Essav. Yitzchak tem 60 anos quando os filhos nascem.",
+      "text_he": "וְאַחֲרֵי כֵ֞ן יָצָ֣א אָחִ֗יו וְיָד֛וֹ אֹחֶ֛זֶת בַּעֲקֵ֥ב עֵשָׂ֖ו",
+      "refs": ["Genesis 25:25-26"],
+      "ref_start": "Genesis 25:25",
+      "ref_end": "Genesis 25:26",
+      "chapter": 25,
+      "verse_start": 25,
+      "verse_end": 26,
+      "sefaria_ref": "Genesis 25:25-26",
+      "day_of_creation": null,
+      "tags": ["essav", "yaakov", "nascimento", "calcanhar", "gêmeos"],
+      "topic": "Nascimento dos Gêmeos — Essav e Yaakov"
+    },
+    {
+      "id": "tl004",
+      "order": 4,
+      "text": "Essav volta faminto do campo e pede a Yaakov o prato de lentilhas vermelhas. Yaakov exige: 'Vende-me hoje a tua primogenitura.' Essav cede — 'De que me serve a primogenitura?' — e jura.",
+      "text_he": "מִכְרָ֥ה כַיּ֖וֹם אֶת בְּכֹרָֽתְךָ לִֽי",
+      "refs": ["Genesis 25:31-34"],
+      "ref_start": "Genesis 25:31",
+      "ref_end": "Genesis 25:34",
+      "chapter": 25,
+      "verse_start": 31,
+      "verse_end": 34,
+      "sefaria_ref": "Genesis 25:31-34",
+      "day_of_creation": null,
+      "tags": ["primogenitura", "lentilhas", "venda", "essav", "yaakov"],
+      "topic": "A Venda da Primogenitura — Lentilhas"
+    },
+    {
+      "id": "tl005",
+      "order": 5,
+      "text": "Fome na terra. Deus aparece a Yitzchak e ordena que não desça ao Egito — mas fique em Canaã. Renova a promessa da terra e da descendência feita a Avraham.",
+      "text_he": "גּ֣וּר בָּאָ֤רֶץ הַזֹּאת֙ וְאֶֽהְיֶ֣ה עִמְּךָ֔ וַאֲבָרְכֶ֑ךָּ",
+      "refs": ["Genesis 26:2-5"],
+      "ref_start": "Genesis 26:2",
+      "ref_end": "Genesis 26:5",
+      "chapter": 26,
+      "verse_start": 2,
+      "verse_end": 5,
+      "sefaria_ref": "Genesis 26:2-5",
+      "day_of_creation": null,
+      "tags": ["fome", "yitzchak", "promessa", "terra", "canaã"],
+      "topic": "Deus Ordena a Yitzchak Ficar em Canaã"
+    },
+    {
+      "id": "tl006",
+      "order": 6,
+      "text": "Em Gerar, Yitzchak diz que Rivka é sua irmã — como fizera Avraham com Sara. Avimelech o percebe e repreende Yitzchak. Deus abençoa Yitzchak: ele planta e colhe cem vezes mais, enriquecendo grandemente.",
+      "text_he": "וַיִּזְרַ֥ע יִצְחָ֛ק בָּאָ֥רֶץ הַהִ֖וא וַיִּמְצָ֣א בַּשָּׁנָ֣ה הַהִ֑וא מֵאָ֣ה שְׁעָרִ֔ים",
+      "refs": ["Genesis 26:12-13"],
+      "ref_start": "Genesis 26:12",
+      "ref_end": "Genesis 26:13",
+      "chapter": 26,
+      "verse_start": 12,
+      "verse_end": 13,
+      "sefaria_ref": "Genesis 26:12-13",
+      "day_of_creation": null,
+      "tags": ["bênção", "yitzchak", "colheita", "riqueza", "gerar"],
+      "topic": "Bênção de Yitzchak — Cem Vezes Mais"
+    },
+    {
+      "id": "tl007",
+      "order": 7,
+      "text": "Os filisteus obstruem os poços que os servos de Avraham haviam escavado. Yitzchak os reescava e nomeia cada um. Nas disputas com os pastores de Gerar, ele abre novos poços — Esek, Sitnah, Rechovot — até encontrar paz.",
+      "text_he": "וַיַּ֨חְפְּר֤וּ עַבְדֵֽי יִצְחָק֙ בַּנָּ֔חַל",
+      "refs": ["Genesis 26:19-22"],
+      "ref_start": "Genesis 26:19",
+      "ref_end": "Genesis 26:22",
+      "chapter": 26,
+      "verse_start": 19,
+      "verse_end": 22,
+      "sefaria_ref": "Genesis 26:19-22",
+      "day_of_creation": null,
+      "tags": ["poços", "filisteus", "esek", "sitnah", "rechovot", "paz"],
+      "topic": "Os Poços de Yitzchak — Disputas e Paz"
+    },
+    {
+      "id": "tl008",
+      "order": 8,
+      "text": "Yitzchak fica velho e cego. Ele chama Essav e pede que caçe e prepare comida para que possa abençoá-lo antes de morrer. Rivka ouve e planeja fazer Yaakov receber a bênção.",
+      "text_he": "וְעַתָּ֣ה שָׂ֣א נָ֣א כֵלֶ֗יךָ תֶּלְיְךָ֣ וְקַשְׁתֶּ֔ךָ",
+      "refs": ["Genesis 27:1-4"],
+      "ref_start": "Genesis 27:1",
+      "ref_end": "Genesis 27:4",
+      "chapter": 27,
+      "verse_start": 1,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 27:1-4",
+      "day_of_creation": null,
+      "tags": ["yitzchak", "cego", "bênção", "essav", "caça"],
+      "topic": "Yitzchak Convoca Essav para a Bênção"
+    },
+    {
+      "id": "tl009",
+      "order": 9,
+      "text": "Rivka veste Yaakov com as roupas de Essav e cobre seus braços e pescoço lisos com pele de cabrito. Yaakov entra e apresenta-se ao pai com o alimento. Yitzchak sente as mãos e diz: 'A voz é a de Yaakov, mas as mãos são as de Essav.'",
+      "text_he": "הַקֹּ֖ל ק֣וֹל יַעֲקֹ֑ב וְהַיָּדַ֖יִם יְדֵ֥י עֵשָֽׂו",
+      "refs": ["Genesis 27:22"],
+      "ref_start": "Genesis 27:22",
+      "ref_end": "Genesis 27:22",
+      "chapter": 27,
+      "verse_start": 22,
+      "verse_end": 22,
+      "sefaria_ref": "Genesis 27:22",
+      "day_of_creation": null,
+      "tags": ["disfarce", "yaakov", "voz", "mãos", "engano"],
+      "topic": "O Disfarce de Yaakov — 'A Voz é a de Yaakov'"
+    },
+    {
+      "id": "tl010",
+      "order": 10,
+      "text": "Yitzchak abençoa Yaakov pensando ser Essav: 'Que Deus te dê o orvalho dos céus, a gordura da terra, e abundância de trigo e vinho. Que povos te sirvam e nações se curvem a ti.'",
+      "text_he": "וְיִֽתֶּן לְךָ֙ הָאֱלֹהִ֜ים מִטַּ֤ל הַשָּׁמַ֙יִם֙ וּמִשְׁמַנֵּ֣י הָאָ֔רֶץ",
+      "refs": ["Genesis 27:28-29"],
+      "ref_start": "Genesis 27:28",
+      "ref_end": "Genesis 27:29",
+      "chapter": 27,
+      "verse_start": 28,
+      "verse_end": 29,
+      "sefaria_ref": "Genesis 27:28-29",
+      "day_of_creation": null,
+      "tags": ["bênção", "orvalho", "abundância", "domínio", "yitzchak"],
+      "topic": "A Bênção de Yitzchak a Yaakov"
+    },
+    {
+      "id": "tl011",
+      "order": 11,
+      "text": "Essav retorna da caça e descobre que Yaakov levou a bênção. Yitzchak treme e diz: 'Quem era ele então? Eu o abençoei e bendito permanecerá!' Essav chora amargamente e pede uma bênção.",
+      "text_he": "וַיֶּחֱרַ֣ד יִצְחָ֮ק חֲרָדָ֣ה גְדֹלָ֣ה עַד מְאֹד֒",
+      "refs": ["Genesis 27:33-34"],
+      "ref_start": "Genesis 27:33",
+      "ref_end": "Genesis 27:34",
+      "chapter": 27,
+      "verse_start": 33,
+      "verse_end": 34,
+      "sefaria_ref": "Genesis 27:33-34",
+      "day_of_creation": null,
+      "tags": ["essav", "traição", "choro", "bênção-perdida"],
+      "topic": "Essav Descobre o Engano"
+    },
+    {
+      "id": "tl012",
+      "order": 12,
+      "text": "Yitzchak dá a Essav uma bênção alternativa: viverá pela espada, servirá a seu irmão — mas quando se sacudir, despedaçará seu jugo. Essav odeia Yaakov e planeja matá-lo após a morte do pai.",
+      "text_he": "וְעַל חַרְבְּךָ֣ תִחְיֶ֔ה וְאֶת אָחִ֖יךָ תַּעֲבֹ֑ד",
+      "refs": ["Genesis 27:40"],
+      "ref_start": "Genesis 27:40",
+      "ref_end": "Genesis 27:40",
+      "chapter": 27,
+      "verse_start": 40,
+      "verse_end": 40,
+      "sefaria_ref": "Genesis 27:40",
+      "day_of_creation": null,
+      "tags": ["essav", "espada", "jugo", "ódio", "ameaça"],
+      "topic": "A Bênção de Essav — 'Pela Espada Viverás'"
+    },
+    {
+      "id": "tl013",
+      "order": 13,
+      "text": "Rivka avisa Yaakov que Essav quer matá-lo e o aconselha a fugir para seu irmão Lavan em Charan até que a ira de Essav se acalme. Ela convence Yitzchak dizendo temer que Yaakov se case com uma hitita.",
+      "text_he": "בְּרַ֣ח לְךָ֗ אֶל לָבָן֙ אָחִ֔י חָרָ֑נָה",
+      "refs": ["Genesis 27:43-45"],
+      "ref_start": "Genesis 27:43",
+      "ref_end": "Genesis 27:45",
+      "chapter": 27,
+      "verse_start": 43,
+      "verse_end": 45,
+      "sefaria_ref": "Genesis 27:43-45",
+      "day_of_creation": null,
+      "tags": ["fuga", "charan", "lavan", "rivka", "ameaça"],
+      "topic": "Rivka Manda Yaakov Fugir para Charan"
+    },
+    {
+      "id": "tl014",
+      "order": 14,
+      "text": "Yitzchak chama Yaakov, o abençoa explicitamente e ordena que não tome esposa entre as canaanitas, mas vá à casa de Betuel em Padã Aram e se case com uma filha de Lavan.",
+      "text_he": "וְאֵ֤ל שַׁדַּי֙ יְבָרֵ֣ךְ אֹֽתְךָ֔ וְיַפְרְךָ֖ וְיַרְבֶּ֑ךָ",
+      "refs": ["Genesis 28:1-4"],
+      "ref_start": "Genesis 28:1",
+      "ref_end": "Genesis 28:4",
+      "chapter": 28,
+      "verse_start": 1,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 28:1-4",
+      "day_of_creation": null,
+      "tags": ["bênção", "yitzchak", "shidduch", "charan", "noiva"],
+      "topic": "Yitzchak Abençoa Yaakov e o Envia para Charan"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 25:19", "ref_end": "Genesis 26:5",  "sefaria_ref": "Genesis 25:19-26:5" },
+    { "number": 2, "ref_start": "Genesis 26:6",  "ref_end": "Genesis 26:12", "sefaria_ref": "Genesis 26:6-12" },
+    { "number": 3, "ref_start": "Genesis 26:13", "ref_end": "Genesis 26:22", "sefaria_ref": "Genesis 26:13-22" },
+    { "number": 4, "ref_start": "Genesis 26:23", "ref_end": "Genesis 26:29", "sefaria_ref": "Genesis 26:23-29" },
+    { "number": 5, "ref_start": "Genesis 26:30", "ref_end": "Genesis 27:27", "sefaria_ref": "Genesis 26:30-27:27" },
+    { "number": 6, "ref_start": "Genesis 27:28", "ref_end": "Genesis 28:4",  "sefaria_ref": "Genesis 27:28-28:4" },
+    { "number": 7, "ref_start": "Genesis 28:5",  "ref_end": "Genesis 28:9",  "sefaria_ref": "Genesis 28:5-9" }
+  ],
+
+  "haftarah": {
+    "ref": "Malachi 1:1-2:7",
+    "sefaria_ref": "Malachi 1:1-2:7",
+    "note": "Tema: 'Amei a Yaakov e a Essav odiei' — o destino dos dois povos irmãos"
+  },
+
+  "connections": {
+    "next_parasha": "vayetze",
+    "prev_parasha": "chayei-sarah",
+    "thematic_links": [
+      { "parasha": "chayei-sarah", "theme": "Rivka chegou como noiva de Yitzchak — agora é mãe dos gêmeos" },
+      { "parasha": "vayetze",      "theme": "Yaakov foge e chega a Lavan — começa a era dos filhos de Yaakov" }
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 8,
+    "parasha_of_book": 8,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "vayishlach",
+    "name": "Vayishlach",
+    "name_pt": "E enviou",
+    "hebrew": "וַיִּשְׁלַח",
+    "transliteration": "Vayishlach",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 32:4",
+    "ref_end": "Genesis 36:43",
+    "sefaria_ref": "Genesis 32:4-36:43",
+    "chapters_covered": [32, 33, 34, 35, 36],
+    "chapter_start": 32,
+    "chapter_end": 36,
+    "verse_start": 4,
+    "verse_end": 43
+  },
+
+  "timeline": {
+    "period_name": "O retorno de Yaakov — luta, reencontro e Dina",
+    "anno_mundi_start": 2198,
+    "anno_mundi_end": 2205,
+    "era": "patriarcas",
+    "position_pct": 62,
+    "description": "Desde os preparativos de Yaakov para o encontro com Essav, a luta com o anjo e o nome Yisrael, até o caso de Dina e a morte de Rachel e Yitzchak."
+  },
+
+  "summary": {
+    "short": "Yaakov luta com o anjo e recebe o nome Yisrael, reencontra Essav, o caso de Dina e a morte de Rachel.",
+    "medium": "Yaakov retorna a Canaã com medo de Essav. Ele envia mensageiros e presentes, e na noite antes do encontro luta com um ser misterioso até o amanhecer — saindo com a bênção de um novo nome: Yisrael. O reencontro com Essav é surpreendentemente pacífico. Em Shechem ocorre o caso de Dina — Shimon e Levi vingam a honra da irmã com violência extrema. Yaakov parte para Bet-El conforme ordenado por Deus. Rachel morre dando à luz Binyamin — o décimo segundo filho. Yitzchak morre em Hebron e os dois filhos o sepultam juntos.",
+    "characters_main": ["Yaakov", "Essav", "Dina", "Shimon", "Levi", "Rachel", "Binyamin"],
+    "characters_secondary": ["o anjo (ish)", "Shechem ben Chamor", "Chamor", "Yitzchak", "Reuven", "Bilhá"],
+    "themes": ["Luta e transformação", "Nome e identidade", "Reconciliação", "Honra e vingança", "Morte e vida", "A família completa"]
+  },
+
+  "facts": [
+    {
+      "id": "vs001",
+      "order": 1,
+      "text": "Yaakov envia mensageiros a Essav informando seu retorno e sua riqueza, buscando boa vontade. Os mensageiros retornam informando que Essav vem ao encontro com 400 homens. Yaakov fica com muito medo.",
+      "text_he": "וַיִּירָ֧א יַעֲקֹ֛ב מְאֹ֖ד וַיֵּ֣צֶר ל֑וֹ",
+      "refs": ["Genesis 32:7"],
+      "ref_start": "Genesis 32:7",
+      "ref_end": "Genesis 32:7",
+      "chapter": 32,
+      "verse_start": 7,
+      "verse_end": 7,
+      "sefaria_ref": "Genesis 32:7",
+      "day_of_creation": null,
+      "tags": ["essav", "400-homens", "medo", "mensageiros"],
+      "topic": "Yaakov Envia Mensageiros a Essav"
+    },
+    {
+      "id": "vs002",
+      "order": 2,
+      "text": "Yaakov divide seu acampamento em dois grupos — se Essav atacar um, o outro sobreviverá. Ele reza a Deus lembrando a promessa e enviando presentes para apaziguar Essav: rebanhos de ovelhas, cabras, camelos e burros.",
+      "text_he": "הַצִּילֵ֤נִי נָא֙ מִיַּ֣ד אָחִ֔י מִיַּ֖ד עֵשָׂ֑ו",
+      "refs": ["Genesis 32:12-21"],
+      "ref_start": "Genesis 32:12",
+      "ref_end": "Genesis 32:21",
+      "chapter": 32,
+      "verse_start": 12,
+      "verse_end": 21,
+      "sefaria_ref": "Genesis 32:12-21",
+      "day_of_creation": null,
+      "tags": ["prece", "presentes", "estratégia", "humildade"],
+      "topic": "Preparação para o Encontro com Essav"
+    },
+    {
+      "id": "vs003",
+      "order": 3,
+      "text": "Yaakov fica sozinho na noite e luta com um homem misterioso até o amanhecer. O ser não consegue vencê-lo e toca o nervo da coxa de Yaakov — que mesmo mancando não o solta sem receber a bênção.",
+      "text_he": "וַיֵּאָבֵ֥ק אִישׁ עִמּ֖וֹ עַ֥ד עֲל֥וֹת הַשָּׁחַֽר",
+      "refs": ["Genesis 32:25-26"],
+      "ref_start": "Genesis 32:25",
+      "ref_end": "Genesis 32:26",
+      "chapter": 32,
+      "verse_start": 25,
+      "verse_end": 26,
+      "sefaria_ref": "Genesis 32:25-26",
+      "day_of_creation": null,
+      "tags": ["luta", "anjo", "bênção", "nervo", "coxa"],
+      "topic": "A Luta de Yaakov com o Anjo"
+    },
+    {
+      "id": "vs004",
+      "order": 4,
+      "text": "O ser pergunta o nome de Yaakov e o renomeia: 'Não se chamará mais teu nome Yaakov, mas Yisrael — pois lutaste com Deus e com homens e prevaleceste.' Yaakov pergunta o nome do ser, que recusa revelar e o abençoa.",
+      "text_he": "לֹ֤א יַעֲקֹב֙ יֵֽאָמֵ֥ר ע֖וֹד שִׁמְךָ֑ כִּքי אִם יִשְׂרָאֵ֔ל",
+      "refs": ["Genesis 32:29"],
+      "ref_start": "Genesis 32:29",
+      "ref_end": "Genesis 32:29",
+      "chapter": 32,
+      "verse_start": 29,
+      "verse_end": 29,
+      "sefaria_ref": "Genesis 32:29",
+      "day_of_creation": null,
+      "tags": ["yisrael", "nome", "luta", "transformação", "bênção"],
+      "topic": "Yaakov Torna-se Yisrael"
+    },
+    {
+      "id": "vs005",
+      "order": 5,
+      "text": "Essav corre ao encontro de Yaakov e o abraça, cai sobre seu pescoço e chora. Yaakov se inclina sete vezes. O reencontro que todos temiam ser violento é repleto de emoção e reconciliação.",
+      "text_he": "וַיָּ֨רָץ עֵשָׂ֤ו לִקְרָאתוֹ֙ וַיְחַבְּקֵ֔הוּ",
+      "refs": ["Genesis 33:4"],
+      "ref_start": "Genesis 33:4",
+      "ref_end": "Genesis 33:4",
+      "chapter": 33,
+      "verse_start": 4,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 33:4",
+      "day_of_creation": null,
+      "tags": ["reencontro", "essav", "abraço", "choro", "reconciliação"],
+      "topic": "O Reencontro com Essav — Abraço e Choro"
+    },
+    {
+      "id": "vs006",
+      "order": 6,
+      "text": "Yaakov apresenta sua família a Essav. Essav oferece escolta, mas Yaakov recusa gentilmente e dirige-se a Sukkot. Essav retorna a Seir enquanto Yaakov chega a Shechem e compra um terreno.",
+      "text_he": "וְיַעֲקֹ֖ב נָסַ֣ע סֻכֹּ֑תָה",
+      "refs": ["Genesis 33:16-19"],
+      "ref_start": "Genesis 33:16",
+      "ref_end": "Genesis 33:19",
+      "chapter": 33,
+      "verse_start": 16,
+      "verse_end": 19,
+      "sefaria_ref": "Genesis 33:16-19",
+      "day_of_creation": null,
+      "tags": ["sukkot", "shechem", "terreno", "separação", "paz"],
+      "topic": "Separação de Essav — Yaakov Chega a Shechem"
+    },
+    {
+      "id": "vs007",
+      "order": 7,
+      "text": "Shechem ben Chamor, príncipe da terra, rapta e se deita com Dina, filha de Lea. Depois ele se apaixona e quer casar-se com ela. Chamor propõe aos filhos de Yaakov que as famílias se misturem.",
+      "text_he": "וַיִּקַּ֥ח אֹתָ֛הּ וַיִּשְׁכַּ֥ב אֹתָ֖הּ וַיְעַנֶּ֥הָ",
+      "refs": ["Genesis 34:2-4"],
+      "ref_start": "Genesis 34:2",
+      "ref_end": "Genesis 34:4",
+      "chapter": 34,
+      "verse_start": 2,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 34:2-4",
+      "day_of_creation": null,
+      "tags": ["dina", "shechem", "desonra", "casamento"],
+      "topic": "O Caso de Dina em Shechem"
+    },
+    {
+      "id": "vs008",
+      "order": 8,
+      "text": "Os filhos de Yaakov concordam com o casamento sob condição de que todos os homens de Shechem sejam circuncidados. No terceiro dia, quando os homens ainda doíam, Shimon e Levi atacam a cidade e matam todos os homens.",
+      "text_he": "וַיָּבֹ֨אוּ שִׁמְע֤וֹן וְלֵוִי֙ אֲחֵ֣י דִינָ֔ה",
+      "refs": ["Genesis 34:25-26"],
+      "ref_start": "Genesis 34:25",
+      "ref_end": "Genesis 34:26",
+      "chapter": 34,
+      "verse_start": 25,
+      "verse_end": 26,
+      "sefaria_ref": "Genesis 34:25-26",
+      "day_of_creation": null,
+      "tags": ["shimon", "levi", "vingança", "circuncisão", "violência"],
+      "topic": "A Vingança de Shimon e Levi"
+    },
+    {
+      "id": "vs009",
+      "order": 9,
+      "text": "Yaakov repreende Shimon e Levi: 'Trouxestes-me problemas, tornando-me repugnante entre os habitantes da terra.' Eles respondem: 'Deveria ele tratar nossa irmã como prostituta?' Yaakov parte de Shechem.",
+      "text_he": "עֲכַרְתֶּ֣ם אֹתִ֗י לְהַבְאִישֵׁ֙נִי֙",
+      "refs": ["Genesis 34:30-31"],
+      "ref_start": "Genesis 34:30",
+      "ref_end": "Genesis 34:31",
+      "chapter": 34,
+      "verse_start": 30,
+      "verse_end": 31,
+      "sefaria_ref": "Genesis 34:30-31",
+      "day_of_creation": null,
+      "tags": ["yaakov", "repreensão", "shimon", "levi", "conflito"],
+      "topic": "Yaakov Repreende Shimon e Levi"
+    },
+    {
+      "id": "vs010",
+      "order": 10,
+      "text": "Deus ordena a Yaakov que vá a Bet-El e construa um altar. Yaakov pede que sua família descarte os ídolos estrangeiros e purifique-se. Eles entregam os ídolos e as arrecadas de ouro — Yaakov os enterra.",
+      "text_he": "הָסִ֗רוּ אֶת אֱלֹהֵ֤י הַנֵּכָר֙ אֲשֶׁ֣ר בְּתֹֽכְכֶ֔ם",
+      "refs": ["Genesis 35:2-4"],
+      "ref_start": "Genesis 35:2",
+      "ref_end": "Genesis 35:4",
+      "chapter": 35,
+      "verse_start": 2,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 35:2-4",
+      "day_of_creation": null,
+      "tags": ["bet-el", "purificação", "ídolos", "altar", "renovação"],
+      "topic": "Renovação Espiritual — Enterrando os Ídolos"
+    },
+    {
+      "id": "vs011",
+      "order": 11,
+      "text": "Em Bet-El, Deus aparece novamente a Yaakov e confirma seu nome Yisrael. Renova as promessas: 'Sê fecundo e multiplica-te. Reis sairão dos teus lombos. A terra que dei a Avraham e a Yitzchak te darei.'",
+      "text_he": "שִׁמְךָ֙ יַֽעֲקֹ֔ב לֹֽא יִקָּרֵ֥א שִׁמְךָ֛ ע֖וֹד יַעֲקֹ֑ב כִּ֤י אִם יִשְׂרָאֵל֙ יִהְיֶ֣ה שְׁמֶ֔ךָ",
+      "refs": ["Genesis 35:9-12"],
+      "ref_start": "Genesis 35:9",
+      "ref_end": "Genesis 35:12",
+      "chapter": 35,
+      "verse_start": 9,
+      "verse_end": 12,
+      "sefaria_ref": "Genesis 35:9-12",
+      "day_of_creation": null,
+      "tags": ["yisrael", "bet-el", "nome", "promessa", "reis"],
+      "topic": "Confirmação do Nome Yisrael em Bet-El"
+    },
+    {
+      "id": "vs012",
+      "order": 12,
+      "text": "No caminho para Efrat (Belém), Rachel entra em trabalho de parto difícil e morre ao dar à luz seu segundo filho. Com seu último suspiro ela o chama Ben-Oni (filho da minha dor). Yaakov o chama Binyamin. Rachel é sepultada no caminho.",
+      "text_he": "וַיְהִ֤י בְצֵאת֙ נַפְשָׁ֔הּ כִּ֥י מֵ֖תָה",
+      "refs": ["Genesis 35:18-19"],
+      "ref_start": "Genesis 35:18",
+      "ref_end": "Genesis 35:19",
+      "chapter": 35,
+      "verse_start": 18,
+      "verse_end": 19,
+      "sefaria_ref": "Genesis 35:18-19",
+      "day_of_creation": null,
+      "tags": ["rachel", "morte", "binyamin", "belém", "luto"],
+      "topic": "Morte de Rachel — Nascimento de Binyamin"
+    },
+    {
+      "id": "vs013",
+      "order": 13,
+      "text": "Yitzchak morre aos 180 anos, 'velho e saciado de dias.' Seus filhos Essav e Yaakov o sepultam juntos — a segunda vez que os irmãos estão unidos diante de uma morte.",
+      "text_he": "וַיִּגְוַ֨ע יִצְחָ֤ק וַיָּ֙מָת֙ וַיֵּאָ֣סֶף אֶל עַמָּ֔יו",
+      "refs": ["Genesis 35:28-29"],
+      "ref_start": "Genesis 35:28",
+      "ref_end": "Genesis 35:29",
+      "chapter": 35,
+      "verse_start": 28,
+      "verse_end": 29,
+      "sefaria_ref": "Genesis 35:28-29",
+      "day_of_creation": null,
+      "tags": ["yitzchak", "morte", "180-anos", "essav", "yaakov"],
+      "topic": "Morte de Yitzchak — 180 Anos"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 32:4",  "ref_end": "Genesis 32:13", "sefaria_ref": "Genesis 32:4-13" },
+    { "number": 2, "ref_start": "Genesis 32:14", "ref_end": "Genesis 32:30", "sefaria_ref": "Genesis 32:14-30" },
+    { "number": 3, "ref_start": "Genesis 32:31", "ref_end": "Genesis 33:5",  "sefaria_ref": "Genesis 32:31-33:5" },
+    { "number": 4, "ref_start": "Genesis 33:6",  "ref_end": "Genesis 33:20", "sefaria_ref": "Genesis 33:6-20" },
+    { "number": 5, "ref_start": "Genesis 34:1",  "ref_end": "Genesis 35:11", "sefaria_ref": "Genesis 34:1-35:11" },
+    { "number": 6, "ref_start": "Genesis 35:12", "ref_end": "Genesis 36:19", "sefaria_ref": "Genesis 35:12-36:19" },
+    { "number": 7, "ref_start": "Genesis 36:20", "ref_end": "Genesis 36:43", "sefaria_ref": "Genesis 36:20-43" }
+  ],
+
+  "haftarah": {
+    "ref": "Hosea 11:7-12:12",
+    "sefaria_ref": "Hosea 11:7-12:12",
+    "note": "Tema: Yisrael que luta com Deus e com homens — referência direta à luta de Yaakov"
+  },
+
+  "connections": {
+    "next_parasha": "vayeshev",
+    "prev_parasha": "vayetze",
+    "thematic_links": [
+      { "parasha": "vayetze",  "theme": "Yaakov retorna de onde havia fugido — o ciclo do exílio se fecha" },
+      { "parasha": "vayeshev", "theme": "Yaakov está de volta em Canaã — começa a história de Yossef" }
+    ]
+  }
+}

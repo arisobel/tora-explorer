@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 7,
+    "parasha_of_book": 7,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "vayetze",
+    "name": "Vayetze",
+    "name_pt": "E saiu",
+    "hebrew": "וַיֵּצֵא",
+    "transliteration": "Vayetze",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 28:10",
+    "ref_end": "Genesis 32:3",
+    "sefaria_ref": "Genesis 28:10-32:3",
+    "chapters_covered": [28, 29, 30, 31, 32],
+    "chapter_start": 28,
+    "chapter_end": 32,
+    "verse_start": 10,
+    "verse_end": 3
+  },
+
+  "timeline": {
+    "period_name": "Yaakov em Charan — as 12 tribos nascem",
+    "anno_mundi_start": 2171,
+    "anno_mundi_end": 2198,
+    "era": "patriarcas",
+    "position_pct": 54,
+    "description": "Desde o sonho da escada em Bet-El até o retorno de Yaakov para Canaã com suas esposas, filhos e rebanhos após 20 anos."
+  },
+
+  "summary": {
+    "short": "O sonho da escada, os 20 anos de Yaakov em Charan, seus casamentos, o nascimento das 12 tribos e a fuga de Lavan.",
+    "medium": "Yaakov foge de Essav e no caminho tem o famoso sonho da escada que vai ao céu com anjos subindo e descendo. Deus renova a aliança com ele. Em Charan, Yaakov se apaixona por Rachel, mas Lavan o engana casando-o primeiro com Lea. Após 14 anos de trabalho pelos casamentos, Yaakov tem 11 filhos e a filha Dina pelas quatro mulheres (Lea, Rachel, Bilha e Zilpa). Depois de mais 6 anos de acordo sobre os rebanhos, Yaakov foge com sua família e bens. Lavan o persegue, mas Deus o adverte em sonho. Eles fazem um tratado e se separam.",
+    "characters_main": ["Yaakov", "Lea", "Rachel", "Lavan"],
+    "characters_secondary": ["Bilha", "Zilpa", "Dina", "Reuven", "Shimon", "Levi", "Yehuda", "Issachar", "Zevulun", "Gad", "Asher", "Naftali", "Yossef"],
+    "themes": ["Fuga e exílio", "Sonho e revelação", "Amor e trabalho", "Engano e recompensa", "As 12 tribos", "Aliança familiar", "Retorno"]
+  },
+
+  "facts": [
+    {
+      "id": "vtz001",
+      "order": 1,
+      "text": "No caminho para Charan, Yaakov para para dormir usando uma pedra como travesseiro. Ele sonha com uma escada que vai da terra ao céu, com anjos de Deus subindo e descendo por ela.",
+      "text_he": "וְהִנֵּ֤ה סֻלָּם֙ מֻצָּ֣ב אַ֔רְצָה וְרֹאשׁ֖וֹ מַגִּ֣יעַ הַשָּׁמָ֑יְמָה",
+      "refs": ["Genesis 28:12"],
+      "ref_start": "Genesis 28:12",
+      "ref_end": "Genesis 28:12",
+      "chapter": 28,
+      "verse_start": 12,
+      "verse_end": 12,
+      "sefaria_ref": "Genesis 28:12",
+      "day_of_creation": null,
+      "tags": ["sonho", "escada", "anjos", "sulam", "bet-el"],
+      "topic": "O Sonho da Escada — Sulam Bet-El"
+    },
+    {
+      "id": "vtz002",
+      "order": 2,
+      "text": "Deus aparece no sonho e renova as promessas: a terra para ele e sua descendência, que será como o pó da terra, espalhada para todos os lados. 'Estarei contigo onde quer que fores.'",
+      "text_he": "וְהִנֵּ֨ה אָנֹכִ֜י עִמָּ֗ךְ וּשְׁמַרְתִּ֙יךָ֙ בְּכֹ֣ל אֲשֶׁר תֵּלֵ֔ךְ",
+      "refs": ["Genesis 28:13-15"],
+      "ref_start": "Genesis 28:13",
+      "ref_end": "Genesis 28:15",
+      "chapter": 28,
+      "verse_start": 13,
+      "verse_end": 15,
+      "sefaria_ref": "Genesis 28:13-15",
+      "day_of_creation": null,
+      "tags": ["promessa", "terra", "descendência", "proteção", "aliança"],
+      "topic": "Deus Renova a Aliança com Yaakov"
+    },
+    {
+      "id": "vtz003",
+      "order": 3,
+      "text": "Yaakov desperta e declara: 'Como terrível é este lugar! É a Casa de Deus e o Portal do Céu!' Ele ergue a pedra como pilar, derrama óleo sobre ela e chama o lugar Bet-El. Ele faz um voto: se Deus o proteger e trouxer de volta, o Senhor será seu Deus.",
+      "text_he": "מַה נּוֹרָ֖א הַמָּק֣וֹם הַזֶּ֑ה אֵ֣ין זֶ֗ה כִּ֚י אִם בֵּ֣ית אֱלֹהִ֔ים",
+      "refs": ["Genesis 28:17-22"],
+      "ref_start": "Genesis 28:17",
+      "ref_end": "Genesis 28:22",
+      "chapter": 28,
+      "verse_start": 17,
+      "verse_end": 22,
+      "sefaria_ref": "Genesis 28:17-22",
+      "day_of_creation": null,
+      "tags": ["bet-el", "pedra", "voto", "portal-dos-céus"],
+      "topic": "Yaakov Consagra Bet-El — O Voto"
+    },
+    {
+      "id": "vtz004",
+      "order": 4,
+      "text": "Yaakov chega a Charan e encontra pastores junto a um poço coberto por uma grande pedra. Rachel, filha de Lavan, chega com o rebanho. Yaakov rola sozinho a pedra — que normalmente exigia vários homens — e rega os rebanhos.",
+      "text_he": "וַיְגַ֥ל אֶת הָאֶ֛בֶן מֵעַ֥ל פִּ֖י הַבְּאֵ֑ר",
+      "refs": ["Genesis 29:10"],
+      "ref_start": "Genesis 29:10",
+      "ref_end": "Genesis 29:10",
+      "chapter": 29,
+      "verse_start": 10,
+      "verse_end": 10,
+      "sefaria_ref": "Genesis 29:10",
+      "day_of_creation": null,
+      "tags": ["rachel", "poço", "pedra", "força", "encontro"],
+      "topic": "Yaakov Encontra Rachel no Poço"
+    },
+    {
+      "id": "vtz005",
+      "order": 5,
+      "text": "Yaakov ama Rachel e concorda em trabalhar sete anos para Lavan em troca de sua mão. 'Os sete anos foram para ele como poucos dias, por causa do amor que tinha por ela.'",
+      "text_he": "וַיַּֽעַבֹד יַעֲקֹב בְּרָחֵל שֶׁ֣בַע שָׁנִ֑ים",
+      "refs": ["Genesis 29:20"],
+      "ref_start": "Genesis 29:20",
+      "ref_end": "Genesis 29:20",
+      "chapter": 29,
+      "verse_start": 20,
+      "verse_end": 20,
+      "sefaria_ref": "Genesis 29:20",
+      "day_of_creation": null,
+      "tags": ["amor", "rachel", "sete-anos", "trabalho"],
+      "topic": "Sete Anos de Trabalho por Rachel"
+    },
+    {
+      "id": "vtz006",
+      "order": 6,
+      "text": "Na noite do casamento, Lavan coloca Lea em lugar de Rachel. Na manhã seguinte Yaakov descobre o engano e confronta Lavan. Lavan justifica: 'Não se dá a mais nova antes da mais velha em nossa terra.' Lavan oferece Rachel após outra semana — por mais sete anos de trabalho.",
+      "text_he": "לֹא יֵעָשֶׂ֣ה כֵ֔ן בִּמְקוֹמֵ֕נוּ לָתֵ֥ת הַצְּעִירָ֖ה לִפְנֵ֣י הַבְּכִירָ֑ה",
+      "refs": ["Genesis 29:26-28"],
+      "ref_start": "Genesis 29:26",
+      "ref_end": "Genesis 29:28",
+      "chapter": 29,
+      "verse_start": 26,
+      "verse_end": 28,
+      "sefaria_ref": "Genesis 29:26-28",
+      "day_of_creation": null,
+      "tags": ["lea", "engano", "lavan", "casamento", "rachel"],
+      "topic": "O Engano de Lavan — Lea em Lugar de Rachel"
+    },
+    {
+      "id": "vtz007",
+      "order": 7,
+      "text": "Deus vê que Lea é desprezada e abre seu ventre. Ela concebe e dá à luz Reuven, Shimon, Levi e Yehuda — os quatro primeiros dos filhos de Yaakov. Rachel permanece estéril e sofre.",
+      "text_he": "וַיַּ֤רְא ה' כִּי שְׂנוּאָ֣ה לֵאָ֔ה",
+      "refs": ["Genesis 29:31-35"],
+      "ref_start": "Genesis 29:31",
+      "ref_end": "Genesis 29:35",
+      "chapter": 29,
+      "verse_start": 31,
+      "verse_end": 35,
+      "sefaria_ref": "Genesis 29:31-35",
+      "day_of_creation": null,
+      "tags": ["lea", "reuven", "shimon", "levi", "yehuda", "tribos"],
+      "topic": "Os Quatro Filhos de Lea"
+    },
+    {
+      "id": "vtz008",
+      "order": 8,
+      "text": "Rachel, invejosa, dá sua serva Bilha a Yaakov. Bilha dá à luz Dan e Naftali. Lea responde dando sua serva Zilpa, que dá à luz Gad e Asher.",
+      "text_he": "וַתֵּ֣רֶא רָחֵ֗ל כִּ֣י לֹ֤א יָֽלְדָה֙ לְיַעֲקֹ֔ב",
+      "refs": ["Genesis 30:1-13"],
+      "ref_start": "Genesis 30:1",
+      "ref_end": "Genesis 30:13",
+      "chapter": 30,
+      "verse_start": 1,
+      "verse_end": 13,
+      "sefaria_ref": "Genesis 30:1-13",
+      "day_of_creation": null,
+      "tags": ["bilha", "zilpa", "dan", "naftali", "gad", "asher", "tribos"],
+      "topic": "Dan, Naftali, Gad e Asher — Filhos das Servas"
+    },
+    {
+      "id": "vtz009",
+      "order": 9,
+      "text": "Com as mandrágoras que Reuven encontrou, Lea ganha mais uma noite com Yaakov. Ela dá à luz Issachar, Zevulun e a filha Dina. Deus lembra-Se de Rachel e ela concebe Yossef — 'que Deus acrescente a mim outro filho.'",
+      "text_he": "וַיִּזְכֹּ֥ר אֱלֹהִ֖ים אֶת רָחֵ֑ל",
+      "refs": ["Genesis 30:17-24"],
+      "ref_start": "Genesis 30:17",
+      "ref_end": "Genesis 30:24",
+      "chapter": 30,
+      "verse_start": 17,
+      "verse_end": 24,
+      "sefaria_ref": "Genesis 30:17-24",
+      "day_of_creation": null,
+      "tags": ["issachar", "zevulun", "dina", "yossef", "rachel", "tribos"],
+      "topic": "Nascimento de Issachar, Zevulun, Dina e Yossef"
+    },
+    {
+      "id": "vtz010",
+      "order": 10,
+      "text": "Yaakov pede licença para partir. Lavan não quer que vá — percebe que foi abençoado por sua causa. Fazem um acordo com os animais malhados. Yaakov usa galhos descascados para que os animais fortes criem descendência malhada para ele.",
+      "text_he": "נָחַ֤שְׁתִּי וַיְבָרֲכֵ֣נִי ה' בִּגְלָלֶ֑ךָ",
+      "refs": ["Genesis 30:27-43"],
+      "ref_start": "Genesis 30:27",
+      "ref_end": "Genesis 30:43",
+      "chapter": 30,
+      "verse_start": 27,
+      "verse_end": 43,
+      "sefaria_ref": "Genesis 30:27-43",
+      "day_of_creation": null,
+      "tags": ["rebanhos", "acordo", "galhos", "bênção", "riqueza"],
+      "topic": "O Acordo dos Rebanhos — Yaakov Enriquece"
+    },
+    {
+      "id": "vtz011",
+      "order": 11,
+      "text": "Após 20 anos, Deus ordena a Yaakov que retorne a Canaã. Yaakov reúne suas esposas e filhos e parte secretamente enquanto Lavan tosquia as ovelhas. Rachel rouba os ídolos domésticos de seu pai.",
+      "text_he": "שׁ֗וּב אֶל אֶ֧רֶץ אֲבוֹתֶ֛יךָ וּלְמוֹלַדְתֶּ֖ךָ",
+      "refs": ["Genesis 31:17-19"],
+      "ref_start": "Genesis 31:17",
+      "ref_end": "Genesis 31:19",
+      "chapter": 31,
+      "verse_start": 17,
+      "verse_end": 19,
+      "sefaria_ref": "Genesis 31:17-19",
+      "day_of_creation": null,
+      "tags": ["fuga", "retorno", "canaã", "rachel", "ídolos", "terafim"],
+      "topic": "A Fuga de Charan — 20 Anos"
+    },
+    {
+      "id": "vtz012",
+      "order": 12,
+      "text": "Lavan persegue Yaakov por sete dias. Deus aparece a Lavan em sonho: 'Guarda-te de falar a Yaakov nem bem nem mal.' Lavan alcança Yaakov mas não pode agir. Os dois fazem um acordo e erguem um monte de pedras como testemunho.",
+      "text_he": "הִשָּׁ֧מֶר לְךָ֛ פֶּן תְּדַבֵּ֥ר עִם יַעֲקֹ֖ב מִטּ֥וֹב עַד רָֽע",
+      "refs": ["Genesis 31:24-44"],
+      "ref_start": "Genesis 31:24",
+      "ref_end": "Genesis 31:44",
+      "chapter": 31,
+      "verse_start": 24,
+      "verse_end": 44,
+      "sefaria_ref": "Genesis 31:24-44",
+      "day_of_creation": null,
+      "tags": ["lavan", "perseguição", "sonho", "tratado", "pedras"],
+      "topic": "Lavan Persegue Yaakov — O Tratado"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 28:10", "ref_end": "Genesis 28:22", "sefaria_ref": "Genesis 28:10-22" },
+    { "number": 2, "ref_start": "Genesis 29:1",  "ref_end": "Genesis 29:17", "sefaria_ref": "Genesis 29:1-17" },
+    { "number": 3, "ref_start": "Genesis 29:18", "ref_end": "Genesis 30:13", "sefaria_ref": "Genesis 29:18-30:13" },
+    { "number": 4, "ref_start": "Genesis 30:14", "ref_end": "Genesis 30:27", "sefaria_ref": "Genesis 30:14-27" },
+    { "number": 5, "ref_start": "Genesis 30:28", "ref_end": "Genesis 31:16", "sefaria_ref": "Genesis 30:28-31:16" },
+    { "number": 6, "ref_start": "Genesis 31:17", "ref_end": "Genesis 31:42", "sefaria_ref": "Genesis 31:17-42" },
+    { "number": 7, "ref_start": "Genesis 31:43", "ref_end": "Genesis 32:3",  "sefaria_ref": "Genesis 31:43-32:3" }
+  ],
+
+  "haftarah": {
+    "ref": "Hosea 12:13-14:10",
+    "sefaria_ref": "Hosea 12:13-14:10",
+    "note": "Tema: Yaakov que fugiu e serviu — paralelo ao serviço do profeta que representa Israel"
+  },
+
+  "connections": {
+    "next_parasha": "vayishlach",
+    "prev_parasha": "toldot",
+    "thematic_links": [
+      { "parasha": "toldot",     "theme": "Yaakov fugiu da ira de Essav — agora retorna para enfrentá-lo" },
+      { "parasha": "vayishlach", "theme": "Continuação direta — o retorno de Yaakov e o reencontro com Essav" }
+    ]
+  }
+}
