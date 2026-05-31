@@ -15,6 +15,10 @@ data/
       index.json
       01-shemot.json
       ...
+    leviticus/
+      index.json
+      01-vayikra.json
+      ...
 ```
 
 ---
@@ -164,6 +168,16 @@ Quando o fato atravessa capítulos (ex: Gen 4:17 → Gen 6:8), use:
 | Miketz        | `mk`    |
 | Vayigash      | `vg`    |
 | Vayechi       | `vc`    |
+| Vayikra       | `vy`    |
+| Tzav          | `tzv`   |
+| Shemini       | `shm`   |
+| Tazria        | `tzr`   |
+| Metzora       | `mtz`   |
+| Achrei Mot    | `am`    |
+| Kedoshim      | `kd`    |
+| Emor          | `em`    |
+| Behar         | `bh`    |
+| Bechukotai    | `bc`    |
 
 ---
 

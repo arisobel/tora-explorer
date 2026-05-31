@@ -2,9 +2,11 @@
 
 ## Immediate (Next Cycle)
 
-- [ ] Map current JSON files into the `nodes` / `node_edges` draft schema
+- [ ] Resume parasha JSON population, starting with `data/parashiot/exodus/10-vayakhel.json`
+- [ ] Create `data/parashiot/exodus/11-pekudei.json`
+- [ ] Review and refine Vayikra fact wording, refs, and visual-marker opportunities before broad UI exposure
 - [ ] Define first generated `data/views/structure.json` and `data/views/timeline.json` projection shapes
-- [ ] Create import script from current JSON files into SQLite
+- [ ] Create export script from SQLite back to runtime JSON
 - [ ] Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -35,7 +37,6 @@
 ## Mid Term
 
 - [ ] Extend drawer support to Vayikra, Bamidbar, and Devarim once data folders exist
-- [ ] Create `data/parashiot/leviticus/index.json` + individual JSONs
 - [ ] Create `data/parashiot/numbers/index.json` + individual JSONs
 - [ ] Create `data/parashiot/deuteronomy/index.json` + individual JSONs
 - [ ] Replace static Chumash event lists with parasha-driven book views
@@ -46,8 +47,6 @@
 
 ## Long Term
 
-- [ ] Create `data/parashiot/exodus/10-vayakhel.json` with 11 facts matching `index.json`
-- [ ] Create `data/parashiot/exodus/11-pekudei.json` with 10 facts matching `index.json`
 - [ ] Complete all 54 parashiot across all 5 Chumash books
 - [ ] Add Haftarah display per parasha
 - [ ] Add a commentary layer after the primary-text flow is stable

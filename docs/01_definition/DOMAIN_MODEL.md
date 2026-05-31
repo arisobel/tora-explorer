@@ -16,7 +16,8 @@ Split into two traditions:
 The 5 books of Moses. Divided into 54 **Parashiot** (weekly portions).
 - Gênesis (Bereshit): 12 parashiot
 - Shemot (Exodus): 11 parashiot
-- Vayikrá (Leviticus), Bamidbar (Numbers), Devarim (Deuteronomy): remaining Chumash parashiot not yet represented as data folders
+- Vayikrá (Leviticus): 10 parashiot
+- Bamidbar (Numbers), Devarim (Deuteronomy): remaining Chumash parashiot not yet represented as data folders
 
 ### Parasha
 The atomic content unit. Each parasha has:
@@ -139,7 +140,7 @@ Timeline
 Chumash
   └── Book[] (5 books)
        ├── Milestone[] (strategic narrative aggregators)
-       └── Parasha[] (54 total; Genesis complete, Exodus partially populated)
+       └── Parasha[] (54 total; Genesis and Vayikra complete, Exodus partially populated)
             ├── Fact[] (ordered narrative moments with Sefaria refs)
             │    └── VisualMarker? (optional icon/image metadata)
             ├── Aliyot[] (7 divisions per Parasha)
@@ -162,8 +163,10 @@ Sefaria API (external)
 | `data/parashiot/genesis/index.json` | Light metadata for all 12 Genesis parashiot |
 | `data/parashiot/genesis/01-bereshit.json` through `12-vayechi.json` | Full Genesis data; all `facts_count` values match actual `facts[]` length |
 | `data/parashiot/exodus/index.json` | Light metadata for all 11 Exodus parashiot |
-| `data/parashiot/exodus/01-shemot.json` through `08-tetzaveh.json` | Full Exodus data currently present |
-| `data/parashiot/exodus/09-ki-tisa.json` through `11-pekudei.json` | Referenced in `index.json` but not yet present on disk |
+| `data/parashiot/exodus/01-shemot.json` through `09-ki-tisa.json` | Full Exodus data currently present |
+| `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` | Referenced in `index.json` but not yet present on disk |
+| `data/parashiot/leviticus/index.json` | Light metadata for all 10 Vayikra parashiot |
+| `data/parashiot/leviticus/01-vayikra.json` through `10-bechukotai.json` | Full Vayikra data; all `facts_count` values match actual `facts[]` length |
 | `data/milestones/chumash.json` | Chumash Atlas milestones across the 5 books |
 | `assets/` | Planned folder for visual icons/images referenced by JSON; not implemented yet |
 
@@ -186,10 +189,8 @@ Sefaria API (external)
 ## Current Implementation Boundary
 
 The data model already supports multiple books through parallel folders under
-`data/parashiot/`. The UI drawer, however, is currently implemented only for
-Genesis: it loads `data/parashiot/genesis/index.json`, uses Genesis labels in
-the historical ruler, and sends drawer verse navigation to the Genesis selector
-in the Pessukim tab.
+`data/parashiot/`. The UI drawer has started to generalize across books, but
+still has Genesis-era assumptions in the ruler, labels, and Pessukim navigation.
 
 The next model/UI alignment step is to make the drawer book-aware so that
 `genesis` and `exodus` can use the same rendering flow.

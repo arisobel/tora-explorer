@@ -35,3 +35,20 @@ The first schema models:
 
 The next step is to import existing JSON content into this schema and then
 export runtime JSON back out.
+
+## Import Current JSON
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\import-json-to-sqlite.ps1 -Reset
+```
+
+Current import sources:
+
+- `data/timeline.json`
+- `data/timeline_groups.json`
+- `data/milestones/chumash.json`
+- `data/parashiot/*/index.json`
+- existing `data/parashiot/*/*.json` files
+
+The import is idempotent. Use `-Reset` to clear imported content tables before
+loading the current JSON state again.

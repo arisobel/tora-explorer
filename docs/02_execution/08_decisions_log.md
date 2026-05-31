@@ -169,3 +169,23 @@
 **Decision:** Use SQLite as the first authoring/source-of-truth database. Version the schema as SQL migrations under `db/migrations/` and create local ignored database files with `scripts/init-sqlite.ps1`.
 
 **Impact:** The runtime app is unchanged. The next work is to import current JSON into SQLite and then export equivalent runtime JSON from the database.
+
+---
+
+## 2026-05-31 — Current JSON imported into SQLite
+
+**Context:** The SQLite authoring schema exists, but needed a first import from the current JSON runtime files.
+
+**Decision:** Add `scripts/import-json-to-sqlite.ps1` to load timeline, milestones, parasha indexes, parasha facts, source refs, time ranges, visual markers, and view projections into SQLite.
+
+**Impact:** The database can now be rebuilt from current JSON. The next database task is export back to runtime JSON; the next content task is to resume populating missing parasha JSON files.
+
+---
+
+## 2026-05-31 — Vayikra JSON generated and synced to SQLite
+
+**Context:** The content backlog resumed with Vayikra after the SQLite import path was created.
+
+**Decision:** Add a complete first pass for `data/parashiot/leviticus/`, including the book `index.json` and all 10 parasha JSON files from Vayikra through Bechukotai.
+
+**Impact:** Vayikra now participates in the JSON source set and in the SQLite node/edge model. Before exposing it fully in the UI, the drawer still needs book-aware polish and the Vayikra facts should receive a focused content review.

@@ -230,7 +230,9 @@ Long term, if needed, replace static JSON fetches with API reads.
 
 - `db/README.md`
 - `db/migrations/001_initial_drill_model.sql`
+- `db/migrations/002_rebuild_relationship_tables.sql`
 - `scripts/init-sqlite.ps1`
+- `scripts/import-json-to-sqlite.ps1`
 
 Default local database path:
 
@@ -239,6 +241,24 @@ db/tora-explorer.sqlite
 ```
 
 The local `.sqlite` file is ignored by Git.
+
+Current JSON import command:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\import-json-to-sqlite.ps1 -Reset
+```
+
+The first import created:
+
+- 1430 nodes
+- 2534 node edges
+- 353 source refs
+- 59 time ranges
+- 67 visual markers
+- 416 view projections
+
+Some relations may be skipped when current JSON references content that is not
+present yet, such as parashiot/facts still planned for later population.
 
 ## Open Decision
 
