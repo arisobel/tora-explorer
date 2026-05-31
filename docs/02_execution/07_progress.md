@@ -18,22 +18,33 @@
 - [x] `data/timeline.json` — 14 eras, 16 key events (complete)
 - [x] `data/SCHEMA.md` — full parasha JSON schema documented
 - [x] `data/parashiot/genesis/index.json` — all 12 Genesis parashiot metadata
-- [x] `data/parashiot/genesis/01-bereshit.json` — full data with 20 facts
+- [x] `data/parashiot/genesis/01-bereshit.json` — 20 facts
+- [x] `data/parashiot/genesis/02-noach.json` — 21 facts
+- [x] `data/parashiot/genesis/03-lech-lecha.json` — 17 facts
+- [x] `data/parashiot/genesis/04-vayera.json` — 15 facts
+- [x] `data/parashiot/genesis/05-chayei-sarah.json` — 12 facts
+- [x] `data/parashiot/genesis/06-toldot.json` — 14 facts
+- [x] `data/parashiot/genesis/07-vayetze.json` — 12 facts
+- [x] `data/parashiot/genesis/08-vayishlach.json` — 13 facts
+- [x] `data/parashiot/genesis/09-vayeshev.json` — 12 facts
+- [x] `data/parashiot/genesis/10-miketz.json` — 12 facts
+- [x] `data/parashiot/genesis/11-vayigash.json` — 9 facts
+- [x] `data/parashiot/genesis/12-vayechi.json` — 11 facts
+- [x] `index.json` — all facts_count fields updated
 - [x] Parasha drawer — fully implemented (slide-in panel, historical ruler, facts list, inline Sefaria passages, "→ Capítulo N" nav to Pessukim tab, Escape/overlay close)
 
 ---
 
 ## In Progress
 
-- [ ] `data/parashiot/genesis/02-noach.json` — shell exists, facts_count = 0
+- (nothing — all Genesis parashiot are now populated)
 
 ---
 
 ## Next Actions (Short Horizon)
 
-1. Populate `02-noach.json` with facts (Genesis 6:9–11:32, ~15 facts)
-2. Create `03-lech-lecha.json` through `12-vayechi.json` (10 missing files)
-3. Update `facts_count` in `index.json` as each file is populated
+1. Create `data/parashiot/exodus/index.json` + individual JSONs for Shemot (11 parashiot)
+2. Wire drawer to support other books beyond Bereshit (Shemot chip → Exodus drawer)
 
 ---
 

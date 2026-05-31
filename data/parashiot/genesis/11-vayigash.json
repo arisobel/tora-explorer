@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 11,
+    "parasha_of_book": 11,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "vayigash",
+    "name": "Vayigash",
+    "name_pt": "E se aproximou",
+    "hebrew": "וַיִּגַּשׁ",
+    "transliteration": "Vayigash",
+    "aliyot_count": 6
+  },
+
+  "range": {
+    "ref_start": "Genesis 44:18",
+    "ref_end": "Genesis 47:27",
+    "sefaria_ref": "Genesis 44:18-47:27",
+    "chapters_covered": [44, 45, 46, 47],
+    "chapter_start": 44,
+    "chapter_end": 47,
+    "verse_start": 18,
+    "verse_end": 27
+  },
+
+  "timeline": {
+    "period_name": "Yossef se revela — Yaakov desce ao Egito",
+    "anno_mundi_start": 2238,
+    "anno_mundi_end": 2238,
+    "era": "yossef",
+    "position_pct": 86,
+    "description": "O discurso de Yehuda, a revelação de Yossef, a descida de Yaakov com toda a família para o Egito e a instalação em Goshen."
+  },
+
+  "summary": {
+    "short": "Yehuda implora por Binyamin, Yossef revela sua identidade entre lágrimas, e Yaakov desce ao Egito com 70 almas.",
+    "medium": "Yehuda se aproxima de Yossef e faz um dos discursos mais comoventes da Torá — lembrando a promessa a Yaakov e oferecendo-se como escravo em lugar de Binyamin. Yossef, incapaz de se conter, manda todos saírem e revela-se aos irmãos em pranto. 'Eu sou Yossef! Meu pai ainda vive?' Ele interpreta tudo como providência divina: 'Deus me enviou antes de vós para preservar vida.' Mensageiros são enviados a Yaakov. Toda a família — 70 almas — desce ao Egito. Yossef apresenta o pai ao Faraó. A família se instala em Goshen durante a fome.",
+    "characters_main": ["Yehuda", "Yossef", "Yaakov", "Binyamin"],
+    "characters_secondary": ["Faraó", "os 70 filhos de Israel", "Efraim", "Menashe"],
+    "themes": ["Arrependimento e transformação", "Revelação e perdão", "Providência divina", "Reunificação familiar", "Exílio voluntário", "O início do Egito"]
+  },
+
+  "facts": [
+    {
+      "id": "vg001",
+      "order": 1,
+      "text": "Yehuda se aproxima de Yossef e faz um longo e emocionado discurso: recorda que Yaakov perdeu um filho e que se Binyamin não retornar, o pai morrerá de dor. Ele oferece a si mesmo como escravo em lugar de Binyamin.",
+      "text_he": "בִּ֣י אֲדֹנִ֔י יְדַבֶּר נָ֥א עַבְדְּךָ֛ דָּבָ֖ר בְּאָזְנֵ֣י אֲדֹנִ֑י",
+      "refs": ["Genesis 44:18-34"],
+      "ref_start": "Genesis 44:18",
+      "ref_end": "Genesis 44:34",
+      "chapter": 44,
+      "verse_start": 18,
+      "verse_end": 34,
+      "sefaria_ref": "Genesis 44:18-34",
+      "day_of_creation": null,
+      "tags": ["yehuda", "discurso", "arrependimento", "binyamin", "escravo"],
+      "topic": "O Discurso de Yehuda — Teshuva"
+    },
+    {
+      "id": "vg002",
+      "order": 2,
+      "text": "Yossef não consegue mais se conter. Manda todos saírem. Fica sozinho com os irmãos e chora em voz alta — os egípcios ouvem do lado de fora, e até o palácio de Faraó sabe. Ele se revela: 'Eu sou Yossef! Meu pai ainda vive?'",
+      "text_he": "אֲנִ֣י יוֹסֵ֔ף הַע֥וֹד אָבִ֖י חָ֑י",
+      "refs": ["Genesis 45:1-3"],
+      "ref_start": "Genesis 45:1",
+      "ref_end": "Genesis 45:3",
+      "chapter": 45,
+      "verse_start": 1,
+      "verse_end": 3,
+      "sefaria_ref": "Genesis 45:1-3",
+      "day_of_creation": null,
+      "tags": ["revelação", "yossef", "choro", "irmãos", "identidade"],
+      "topic": "Yossef se Revela — 'Eu Sou Yossef!'"
+    },
+    {
+      "id": "vg003",
+      "order": 3,
+      "text": "Yossef consola os irmãos aterrorizados: 'Não vos entristeçais nem vos culpeis por me haverdes vendido. Deus me enviou antes de vós para preservar a vida. Não fostes vós que me enviastes, mas Deus.'",
+      "text_he": "וְעַתָּ֞ה אַל תֵּֽעָצְב֣וּ וְאַל יִ֣חַר בְּעֵינֵיכֶ֗ם כִּֽי מְכַרְתֶּ֤ם אֹתִי֙ הֵ֔נָּה",
+      "refs": ["Genesis 45:5-8"],
+      "ref_start": "Genesis 45:5",
+      "ref_end": "Genesis 45:8",
+      "chapter": 45,
+      "verse_start": 5,
+      "verse_end": 8,
+      "sefaria_ref": "Genesis 45:5-8",
+      "day_of_creation": null,
+      "tags": ["providência", "perdão", "consolação", "deus-enviou", "plano-divino"],
+      "topic": "A Providência Divina — 'Deus Me Enviou'"
+    },
+    {
+      "id": "vg004",
+      "order": 4,
+      "text": "Yossef ordena que tragam seu pai e toda a família ao Egito, prometendo cuidar deles durante os cinco anos de fome que restam. Faraó confirma a oferta: 'Tomai o melhor da terra do Egito.'",
+      "text_he": "וּבַ֤אֲרֶץ כְּנַ֙עַן֙ לֹ֣א יִֽהְיֶ֔ה חָרִ֖ישׁ וְקָצִ֑יר",
+      "refs": ["Genesis 45:9-11"],
+      "ref_start": "Genesis 45:9",
+      "ref_end": "Genesis 45:11",
+      "chapter": 45,
+      "verse_start": 9,
+      "verse_end": 11,
+      "sefaria_ref": "Genesis 45:9-11",
+      "day_of_creation": null,
+      "tags": ["convite", "egito", "fome", "cinco-anos", "família"],
+      "topic": "O Convite para Descer ao Egito"
+    },
+    {
+      "id": "vg005",
+      "order": 5,
+      "text": "Yossef abraça Binyamin, seu irmão de mãe, e ambos choram. Ele beija cada um dos irmãos. Quando Yaakov ouve que Yossef está vivo e é governante do Egito, seu espírito revive: 'Chega! Yossef meu filho ainda vive!'",
+      "text_he": "וַיֶּחִ֕י ר֖וּחַ יַעֲקֹ֣ב אֲבִיהֶ֑ם",
+      "refs": ["Genesis 45:26-27"],
+      "ref_start": "Genesis 45:26",
+      "ref_end": "Genesis 45:27",
+      "chapter": 45,
+      "verse_start": 26,
+      "verse_end": 27,
+      "sefaria_ref": "Genesis 45:26-27",
+      "day_of_creation": null,
+      "tags": ["yaakov", "choque", "alegria", "yossef-vivo", "espírito"],
+      "topic": "Yaakov Sabe que Yossef Vive"
+    },
+    {
+      "id": "vg006",
+      "order": 6,
+      "text": "Em Beer-Sheva, Deus fala a Yaakov em visão noturna: 'Eu sou Deus, o Deus de teu pai. Não temas descer ao Egito, pois farei de ti ali uma grande nação. Eu descerei contigo e Eu também te farei subir.'",
+      "text_he": "אָנֹכִ֗י הָאֵל֙ אֱלֹהֵ֣י אָבִ֔יךָ אַל תִּירָ֖א מֵרְדָ֣ה מִצְרָ֑יְמָה",
+      "refs": ["Genesis 46:2-4"],
+      "ref_start": "Genesis 46:2",
+      "ref_end": "Genesis 46:4",
+      "chapter": 46,
+      "verse_start": 2,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 46:2-4",
+      "day_of_creation": null,
+      "tags": ["deus", "yaakov", "beer-sheva", "visão", "egito", "promessa"],
+      "topic": "Deus Fala a Yaakov — 'Não Temas Descer'"
+    },
+    {
+      "id": "vg007",
+      "order": 7,
+      "text": "Toda a família de Yaakov desce ao Egito: 70 almas ao todo. Yossef prepara sua carruagem e vai ao encontro de seu pai em Goshen. Yossef cai no pescoço do pai e chora por longo tempo.",
+      "text_he": "כָּל הַנֶּ֧פֶשׁ לְבֵֽית יַעֲקֹ֛ב הַבָּ֥אָה מִצְרַ֖יְמָה שִׁבְעִֽים",
+      "refs": ["Genesis 46:27-29"],
+      "ref_start": "Genesis 46:27",
+      "ref_end": "Genesis 46:29",
+      "chapter": 46,
+      "verse_start": 27,
+      "verse_end": 29,
+      "sefaria_ref": "Genesis 46:27-29",
+      "day_of_creation": null,
+      "tags": ["70-almas", "descida", "goshen", "reencontro", "choro"],
+      "topic": "70 Almas Descem ao Egito — Reencontro em Goshen"
+    },
+    {
+      "id": "vg008",
+      "order": 8,
+      "text": "Yossef apresenta cinco de seus irmãos e depois seu pai Yaakov ao Faraó. Yaakov abençoa Faraó. Quando Faraó pergunta sua idade, Yaakov responde: '130 anos, poucos e difíceis.' A família se instala em Goshen.",
+      "text_he": "יְמֵ֤י שְׁנֵֽי מְגוּרַי֙ שְׁלֹשִׁ֣ים וּמְאַ֣ת שָׁנָ֔ה",
+      "refs": ["Genesis 47:7-11"],
+      "ref_start": "Genesis 47:7",
+      "ref_end": "Genesis 47:11",
+      "chapter": 47,
+      "verse_start": 7,
+      "verse_end": 11,
+      "sefaria_ref": "Genesis 47:7-11",
+      "day_of_creation": null,
+      "tags": ["faraó", "yaakov", "130-anos", "bênção", "goshen"],
+      "topic": "Yaakov Diante do Faraó — '130 Anos'"
+    },
+    {
+      "id": "vg009",
+      "order": 9,
+      "text": "Durante a fome, Yossef compra todo o gado, as terras e a liberdade dos egípcios em troca de grão. Apenas as terras dos sacerdotes não são compradas. Ele institui um imposto de 20% à coroa. O povo agradece: 'Salvaste-nos!'",
+      "text_he": "וַיִּקֶן יוֹסֵ֗ף אֶת כָּל אַדְמַ֤ת מִצְרַ֙יִם֙ לְפַרְעֹ֔ה",
+      "refs": ["Genesis 47:20-26"],
+      "ref_start": "Genesis 47:20",
+      "ref_end": "Genesis 47:26",
+      "chapter": 47,
+      "verse_start": 20,
+      "verse_end": 26,
+      "sefaria_ref": "Genesis 47:20-26",
+      "day_of_creation": null,
+      "tags": ["reforma", "terras", "egito", "imposto", "yossef"],
+      "topic": "As Reformas Econômicas de Yossef no Egito"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 44:18", "ref_end": "Genesis 44:30", "sefaria_ref": "Genesis 44:18-30" },
+    { "number": 2, "ref_start": "Genesis 44:31", "ref_end": "Genesis 45:7",  "sefaria_ref": "Genesis 44:31-45:7" },
+    { "number": 3, "ref_start": "Genesis 45:8",  "ref_end": "Genesis 45:18", "sefaria_ref": "Genesis 45:8-18" },
+    { "number": 4, "ref_start": "Genesis 45:19", "ref_end": "Genesis 45:27", "sefaria_ref": "Genesis 45:19-27" },
+    { "number": 5, "ref_start": "Genesis 45:28", "ref_end": "Genesis 46:27", "sefaria_ref": "Genesis 45:28-46:27" },
+    { "number": 6, "ref_start": "Genesis 46:28", "ref_end": "Genesis 47:27", "sefaria_ref": "Genesis 46:28-47:27" }
+  ],
+
+  "haftarah": {
+    "ref": "Ezekiel 37:15-28",
+    "sefaria_ref": "Ezekiel 37:15-28",
+    "note": "Tema: a reunificação dos dois paus — Yehuda e Yossef — em um só povo, como a visão de Ezequiel"
+  },
+
+  "connections": {
+    "next_parasha": "vayechi",
+    "prev_parasha": "miketz",
+    "thematic_links": [
+      { "parasha": "miketz",  "theme": "O cálice plantado — o confronto que levou ao discurso de Yehuda" },
+      { "parasha": "vayechi", "theme": "Yaakov está no Egito — seus últimos anos e bênçãos" }
+    ]
+  }
+}

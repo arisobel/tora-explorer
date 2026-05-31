@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 12,
+    "parasha_of_book": 12,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "vayechi",
+    "name": "Vayechi",
+    "name_pt": "E viveu",
+    "hebrew": "וַיְחִי",
+    "transliteration": "Vayechi",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 47:28",
+    "ref_end": "Genesis 50:26",
+    "sefaria_ref": "Genesis 47:28-50:26",
+    "chapters_covered": [47, 48, 49, 50],
+    "chapter_start": 47,
+    "chapter_end": 50,
+    "verse_start": 28,
+    "verse_end": 26
+  },
+
+  "timeline": {
+    "period_name": "Os últimos anos de Yaakov e Yossef no Egito",
+    "anno_mundi_start": 2238,
+    "anno_mundi_end": 2255,
+    "era": "yossef",
+    "position_pct": 93,
+    "description": "Dos últimos 17 anos de Yaakov no Egito, passando pelas bênçãos de Efraim e Menashe e das 12 tribos, até a morte de Yaakov e de Yossef."
+  },
+
+  "summary": {
+    "short": "Yaakov abençoa Efraim e Menashe, profetiza sobre as 12 tribos, morre e é sepultado em Machpelah; Yossef morre no Egito.",
+    "medium": "Yaakov vive 17 anos no Egito. Ao sentir a morte aproximar, pede a Yossef que jure sepultá-lo em Canaã. Yossef traz seus filhos Efraim e Menashe para serem abençoados. Yaakov cruza as mãos e dá a bênção maior ao mais novo, Efraim. Em seguida, reúne todos os filhos e profetiza sobre o destino de cada uma das 12 tribos. Yaakov morre aos 147 anos; um cortejo solene o leva a Canaã para ser sepultado na Caverna de Machpelah. De volta ao Egito, os irmãos temem que Yossef agora os castigue. Ele os tranquiliza novamente. Yossef morre aos 110 anos, pedindo que seus ossos sejam levados para Canaã quando Deus redimir o povo.",
+    "characters_main": ["Yaakov", "Yossef", "Efraim", "Menashe"],
+    "characters_secondary": ["Yehuda", "os 12 filhos", "Binyamin", "Reuven", "Faraó"],
+    "themes": ["Bênção e transmissão", "Primogenitura invertida", "Profecia das tribos", "Morte e sepultamento", "Perdão e reconciliação", "A promessa de retorno"]
+  },
+
+  "facts": [
+    {
+      "id": "vc001",
+      "order": 1,
+      "text": "Yaakov vive 17 anos no Egito, chegando aos 147 anos. Ao sentir a morte próxima, convoca Yossef e faz-lhe jurar que não o sepultará no Egito, mas o levará à sepultura de seus pais em Canaã.",
+      "text_he": "וְאָשַׁכְבְּתִ֖י עִם אֲבֹתַ֑י וּנְשָׂאתַ֙נִי֙ מִמִּצְרַ֔יִם",
+      "refs": ["Genesis 47:28-30"],
+      "ref_start": "Genesis 47:28",
+      "ref_end": "Genesis 47:30",
+      "chapter": 47,
+      "verse_start": 28,
+      "verse_end": 30,
+      "sefaria_ref": "Genesis 47:28-30",
+      "day_of_creation": null,
+      "tags": ["yaakov", "147-anos", "juramento", "machpelah", "morte"],
+      "topic": "Yaakov Faz Yossef Jurar — Sepultura em Canaã"
+    },
+    {
+      "id": "vc002",
+      "order": 2,
+      "text": "Yossef traz seus dois filhos, Menashe e Efraim, para serem abençoados por Yaakov. Israel, debilitado, reúne suas forças e se senta na cama para abençoá-los.",
+      "text_he": "וַיִּתְחַזֵּ֥ק יִשְׂרָאֵ֖ל וַיֵּ֣שֶׁב עַל הַמִּטָּֽה",
+      "refs": ["Genesis 48:1-2"],
+      "ref_start": "Genesis 48:1",
+      "ref_end": "Genesis 48:2",
+      "chapter": 48,
+      "verse_start": 1,
+      "verse_end": 2,
+      "sefaria_ref": "Genesis 48:1-2",
+      "day_of_creation": null,
+      "tags": ["efraim", "menashe", "bênção", "yaakov", "força"],
+      "topic": "Yossef Traz Efraim e Menashe para Ser Abençoados"
+    },
+    {
+      "id": "vc003",
+      "order": 3,
+      "text": "Yaakov adota Efraim e Menashe como filhos seus, equivalentes a Reuven e Shimon: 'Serão meus.' Os outros filhos de Yossef serão chamados pelo nome de seus irmãos na sua herança.",
+      "text_he": "אֶפְרַ֤יִם וּמְנַשֶּׁה֙ כִּרְאוּבֵ֣ן וְשִׁמְע֔וֹן יִהְיוּ לִֽי",
+      "refs": ["Genesis 48:5"],
+      "ref_start": "Genesis 48:5",
+      "ref_end": "Genesis 48:5",
+      "chapter": 48,
+      "verse_start": 5,
+      "verse_end": 5,
+      "sefaria_ref": "Genesis 48:5",
+      "day_of_creation": null,
+      "tags": ["adoção", "efraim", "menashe", "tribos", "herança"],
+      "topic": "Adoção de Efraim e Menashe como Filhos de Yaakov"
+    },
+    {
+      "id": "vc004",
+      "order": 4,
+      "text": "Yossef coloca Menashe à direita de Yaakov (para a mão direita) e Efraim à esquerda (para a mão esquerda, menos privilegiada). Mas Yaakov cruza os braços, colocando a mão direita sobre Efraim, o mais novo.",
+      "text_he": "וַיָּ֤שֶׂת יִשְׂרָאֵל֙ אֶת יְמִינ֔וֹ וַיָּ֙שֶׁת֙ עַל רֹ֣אשׁ אֶפְרַ֔יִם",
+      "refs": ["Genesis 48:14"],
+      "ref_start": "Genesis 48:14",
+      "ref_end": "Genesis 48:14",
+      "chapter": 48,
+      "verse_start": 14,
+      "verse_end": 14,
+      "sefaria_ref": "Genesis 48:14",
+      "day_of_creation": null,
+      "tags": ["cruzamento", "mão-direita", "efraim", "menashe", "bênção-invertida"],
+      "topic": "As Mãos Cruzadas — Efraim Recebe a Bênção Maior"
+    },
+    {
+      "id": "vc005",
+      "order": 5,
+      "text": "Yossef protesta quando vê as mãos cruzadas. Yaakov recusa corrigi-las: 'Eu sei, meu filho, eu sei — ele também se tornará um povo e também será grande, mas seu irmão mais novo será maior que ele e sua descendência encherá as nações.'",
+      "text_he": "יָדַ֤עְתִּי בְנִי֙ יָדַ֔עְתִּי גַּם ה֖וּא יִֽהְיֶה לְעָ֑ם",
+      "refs": ["Genesis 48:19"],
+      "ref_start": "Genesis 48:19",
+      "ref_end": "Genesis 48:19",
+      "chapter": 48,
+      "verse_start": 19,
+      "verse_end": 19,
+      "sefaria_ref": "Genesis 48:19",
+      "day_of_creation": null,
+      "tags": ["yaakov", "profecia", "efraim", "nações", "mais-novo"],
+      "topic": "Yaakov Profetiza — Efraim Maior que Menashe"
+    },
+    {
+      "id": "vc006",
+      "order": 6,
+      "text": "Yaakov reúne todos os filhos e profetiza sobre o destino de cada um: Reuven — instável como água; Shimon e Levi — dispersos; Yehuda — o leão, de quem o cetro não se afastará; Issachar — o asno forte; Dan — serpente; Gad — incursões; Asher — pão rico; Naftali — cerva ágil; Yossef — ramo frutífero; Binyamin — lobo rapace.",
+      "text_he": "לֹא יָס֥וּר שֵׁ֖בֶט מִיהוּדָ֑ה",
+      "refs": ["Genesis 49:1-28"],
+      "ref_start": "Genesis 49:1",
+      "ref_end": "Genesis 49:28",
+      "chapter": 49,
+      "verse_start": 1,
+      "verse_end": 28,
+      "sefaria_ref": "Genesis 49:1-28",
+      "day_of_creation": null,
+      "tags": ["bênçãos", "12-tribos", "profecia", "cetro-yehuda", "mashiach"],
+      "topic": "As 12 Bênçãos — Profecia sobre as Tribos"
+    },
+    {
+      "id": "vc007",
+      "order": 7,
+      "text": "Yaakov pede que o sepultem na Caverna de Machpelah, em Canaã — onde estão Avraham e Sara, Yitzchak e Rivka, e onde ele mesmo sepultou Lea. Ao terminar o testamento, retrai os pés para a cama e expira.",
+      "text_he": "וַיֶּאֱסֹ֤ף רַגְלָיו֙ אֶל הַמִּטָּ֔ה וַיִּגְוַ֖ע וַיֵּאָ֥סֶף אֶל עַמָּֽיו",
+      "refs": ["Genesis 49:29-33"],
+      "ref_start": "Genesis 49:29",
+      "ref_end": "Genesis 49:33",
+      "chapter": 49,
+      "verse_start": 29,
+      "verse_end": 33,
+      "sefaria_ref": "Genesis 49:29-33",
+      "day_of_creation": null,
+      "tags": ["testamento", "machpelah", "morte", "yaakov", "sepultamento"],
+      "topic": "Morte de Yaakov — Testamento Final"
+    },
+    {
+      "id": "vc008",
+      "order": 8,
+      "text": "Yossef cai sobre o rosto do pai e chora. Ele ordena que os médicos embalsamem Yaakov — o processo leva 40 dias. Os egípcios choram por Yaakov por 70 dias.",
+      "text_he": "וַיִּפֹּ֥ל יוֹסֵ֖ף עַל פְּנֵ֣י אָבִ֑יו",
+      "refs": ["Genesis 50:1-3"],
+      "ref_start": "Genesis 50:1",
+      "ref_end": "Genesis 50:3",
+      "chapter": 50,
+      "verse_start": 1,
+      "verse_end": 3,
+      "sefaria_ref": "Genesis 50:1-3",
+      "day_of_creation": null,
+      "tags": ["choro", "embalsamamento", "luto", "egípcios", "40-dias"],
+      "topic": "Yaakov Embalsamado — 70 Dias de Luto"
+    },
+    {
+      "id": "vc009",
+      "order": 9,
+      "text": "Um grande cortejo leva o corpo de Yaakov de volta a Canaã, com carruagens, cavaleiros e todos os servos de Faraó. Os habitantes de Canaã ficam impressionados. Yaakov é sepultado na Caverna de Machpelah por Yossef e seus irmãos.",
+      "text_he": "וַיְקַבֵּ֨ר אֹת֤וֹ בִּמְעָרַ֙ת֙ שְׂדֵ֣ה הַמַּכְפֵּלָ֔ה",
+      "refs": ["Genesis 50:13"],
+      "ref_start": "Genesis 50:13",
+      "ref_end": "Genesis 50:13",
+      "chapter": 50,
+      "verse_start": 13,
+      "verse_end": 13,
+      "sefaria_ref": "Genesis 50:13",
+      "day_of_creation": null,
+      "tags": ["cortejo", "machpelah", "sepultamento", "canaã", "funeral"],
+      "topic": "Sepultamento de Yaakov em Machpelah"
+    },
+    {
+      "id": "vc010",
+      "order": 10,
+      "text": "Após a morte de Yaakov, os irmãos temem que Yossef agora se vingue deles. Yossef chora ao ouvi-los e diz: 'Não temais. Estou eu no lugar de Deus? Vós pretendestes o mal contra mim, mas Deus o pretendia para o bem.'",
+      "text_he": "וְאַתֶּ֕ם חֲשַׁבְתֶּ֥ם עָלַ֖י רָעָ֑ה אֱלֹהִ֣ים חֲשָׁבָ֔הּ לְטֹבָ֕ה",
+      "refs": ["Genesis 50:19-20"],
+      "ref_start": "Genesis 50:19",
+      "ref_end": "Genesis 50:20",
+      "chapter": 50,
+      "verse_start": 19,
+      "verse_end": 20,
+      "sefaria_ref": "Genesis 50:19-20",
+      "day_of_creation": null,
+      "tags": ["perdão", "providência", "mal-para-bem", "reconciliação"],
+      "topic": "'Vós Pretendestes o Mal — Deus o Pretendia para o Bem'"
+    },
+    {
+      "id": "vc011",
+      "order": 11,
+      "text": "Yossef vive 110 anos, vê os filhos de Efraim até a terceira geração. Ao sentir a morte próxima, faz os filhos de Israel jurarem: 'Deus certamente vos visitará e fareis subir meus ossos daqui.' Yossef morre e é embalsamado no Egito — encerrando o livro de Gênesis.",
+      "text_he": "פָּקֹ֨ד יִפְקֹ֤ד אֱלֹהִים֙ אֶתְכֶ֔ם וְהַעֲלִתֶ֥ם אֶת עַצְמֹתַ֖י מִזֶּֽה",
+      "refs": ["Genesis 50:24-26"],
+      "ref_start": "Genesis 50:24",
+      "ref_end": "Genesis 50:26",
+      "chapter": 50,
+      "verse_start": 24,
+      "verse_end": 26,
+      "sefaria_ref": "Genesis 50:24-26",
+      "day_of_creation": null,
+      "tags": ["yossef", "110-anos", "ossos", "juramento", "êxodo-futuro"],
+      "topic": "Morte de Yossef — 'Fareis Subir Meus Ossos'"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 47:28", "ref_end": "Genesis 48:9",  "sefaria_ref": "Genesis 47:28-48:9" },
+    { "number": 2, "ref_start": "Genesis 48:10", "ref_end": "Genesis 48:16", "sefaria_ref": "Genesis 48:10-16" },
+    { "number": 3, "ref_start": "Genesis 48:17", "ref_end": "Genesis 48:22", "sefaria_ref": "Genesis 48:17-22" },
+    { "number": 4, "ref_start": "Genesis 49:1",  "ref_end": "Genesis 49:18", "sefaria_ref": "Genesis 49:1-18" },
+    { "number": 5, "ref_start": "Genesis 49:19", "ref_end": "Genesis 49:26", "sefaria_ref": "Genesis 49:19-26" },
+    { "number": 6, "ref_start": "Genesis 49:27", "ref_end": "Genesis 50:20", "sefaria_ref": "Genesis 49:27-50:20" },
+    { "number": 7, "ref_start": "Genesis 50:21", "ref_end": "Genesis 50:26", "sefaria_ref": "Genesis 50:21-26" }
+  ],
+
+  "haftarah": {
+    "ref": "I Kings 2:1-12",
+    "sefaria_ref": "I Kings 2:1-12",
+    "note": "Tema: as instruções finais do rei David a Shlomo — paralelo às instruções finais de Yaakov a seus filhos"
+  },
+
+  "connections": {
+    "next_parasha": "shemot",
+    "prev_parasha": "vayigash",
+    "thematic_links": [
+      { "parasha": "vayigash", "theme": "Yaakov chegou ao Egito — Vayechi são seus últimos anos lá" },
+      { "parasha": "shemot",   "theme": "A morte de Yossef e os irmãos prepara o palco para a escravidão no Egito" }
+    ]
+  }
+}

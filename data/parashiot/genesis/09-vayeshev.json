@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 9,
+    "parasha_of_book": 9,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "vayeshev",
+    "name": "Vayeshev",
+    "name_pt": "E habitou",
+    "hebrew": "וַיֵּשֶׁב",
+    "transliteration": "Vayeshev",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 37:1",
+    "ref_end": "Genesis 40:23",
+    "sefaria_ref": "Genesis 37:1-40:23",
+    "chapters_covered": [37, 38, 39, 40],
+    "chapter_start": 37,
+    "chapter_end": 40,
+    "verse_start": 1,
+    "verse_end": 23
+  },
+
+  "timeline": {
+    "period_name": "Yossef — os sonhos e a descida ao Egito",
+    "anno_mundi_start": 2216,
+    "anno_mundi_end": 2229,
+    "era": "yossef",
+    "position_pct": 70,
+    "description": "Da preferência de Yaakov por Yossef e os sonhos à venda dos irmãos, o caso de Yehuda e Tamar, e Yossef como escravo e preso no Egito."
+  },
+
+  "summary": {
+    "short": "Yossef e seus sonhos, a venda para o Egito, Yehuda e Tamar, e Yossef na prisão após a acusação de Potifar.",
+    "medium": "A parashá apresenta o jovem Yossef, favorito de Yaakov, que relata sonhos de superioridade sobre seus irmãos. A inveja dos irmãos culmina na venda de Yossef aos ismaelitas por 20 moedas de prata. O capítulo 38 interrompe para narrar a história de Yehuda e Tamar — fundamental para a linhagem de David e Mashiach. Yossef, vendido a Potifar no Egito, sobe de escravo a administrador da casa. A esposa de Potifar o acusa falsamente de assédio e ele é preso. Na prisão interpreta os sonhos do copeiro e do padeiro — o copeiro se esquece dele por dois anos.",
+    "characters_main": ["Yossef", "Yaakov", "Yehuda", "Tamar"],
+    "characters_secondary": ["Reuven", "os irmãos", "Potifar", "a esposa de Potifar", "o copeiro", "o padeiro", "Onã", "Er"],
+    "themes": ["Sonhos e destino", "Inveja e irmandade", "Providência oculta", "Fidelidade moral", "Falsa acusação", "A história de Yehuda"]
+  },
+
+  "facts": [
+    {
+      "id": "vsh001",
+      "order": 1,
+      "text": "Yaakov ama Yossef mais do que todos os seus filhos, pois é filho de sua velhice, e lhe faz uma túnica de cores (ketonet passim). Os irmãos o odeiam e não podem falar com ele em paz.",
+      "text_he": "וְיִשְׂרָאֵ֗ל אָהַ֤ב אֶת יוֹסֵף֙ מִכָּל בָּנָ֔יו",
+      "refs": ["Genesis 37:3-4"],
+      "ref_start": "Genesis 37:3",
+      "ref_end": "Genesis 37:4",
+      "chapter": 37,
+      "verse_start": 3,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 37:3-4",
+      "day_of_creation": null,
+      "tags": ["yossef", "ketonet-passim", "amor", "ódio", "irmãos"],
+      "topic": "A Túnica de Yossef — Favorito de Yaakov"
+    },
+    {
+      "id": "vsh002",
+      "order": 2,
+      "text": "Yossef conta ao pai seu primeiro sonho: os feixes dos irmãos se inclinaram ao seu feixe. Seu segundo sonho: o sol, a lua e onze estrelas se curvaram a ele. Yaakov o repreende mas guarda a palavra no coração.",
+      "text_he": "הֲמָלֹ֤ךְ תִּמְלֹךְ֙ עָלֵ֔ינוּ אִם מָשׁ֥וֹל תִּמְשֹׁ֖ל בָּ֑נוּ",
+      "refs": ["Genesis 37:5-11"],
+      "ref_start": "Genesis 37:5",
+      "ref_end": "Genesis 37:11",
+      "chapter": 37,
+      "verse_start": 5,
+      "verse_end": 11,
+      "sefaria_ref": "Genesis 37:5-11",
+      "day_of_creation": null,
+      "tags": ["sonhos", "feixes", "estrelas", "profecias", "inveja"],
+      "topic": "Os Dois Sonhos de Yossef"
+    },
+    {
+      "id": "vsh003",
+      "order": 3,
+      "text": "Yaakov envia Yossef ao campo para verificar os irmãos. Ao avistá-lo de longe, eles conspiram para matá-lo. Reuven intervém e propõe jogá-lo numa cisterna sem derramar sangue — para depois resgatá-lo.",
+      "text_he": "וְעַתָּ֣ה לְכ֔וּ וְנַֽהַרְגֵ֖הוּ וְנַשְׁלִכֵ֣הוּ בְּאַחַ֣ד הַבֹּר֑וֹת",
+      "refs": ["Genesis 37:18-22"],
+      "ref_start": "Genesis 37:18",
+      "ref_end": "Genesis 37:22",
+      "chapter": 37,
+      "verse_start": 18,
+      "verse_end": 22,
+      "sefaria_ref": "Genesis 37:18-22",
+      "day_of_creation": null,
+      "tags": ["conspiração", "reuven", "cisterna", "morte"],
+      "topic": "Os Irmãos Conspiraram — Reuven Intervém"
+    },
+    {
+      "id": "vsh004",
+      "order": 4,
+      "text": "Yehuda propõe vender Yossef a mercadores ismaelitas que passam. Os irmãos vendem Yossef por 20 moedas de prata. Os ismaelitas o levam para o Egito. Reuven retorna à cisterna e não o encontra — rasga suas vestes.",
+      "text_he": "וַיִּמְכְּר֤וּ אֶת יוֹסֵף֙ לַיִּשְׁמְעֵאלִ֔ים בְּעֶשְׂרִ֖ים כָּ֑סֶף",
+      "refs": ["Genesis 37:26-28"],
+      "ref_start": "Genesis 37:26",
+      "ref_end": "Genesis 37:28",
+      "chapter": 37,
+      "verse_start": 26,
+      "verse_end": 28,
+      "sefaria_ref": "Genesis 37:26-28",
+      "day_of_creation": null,
+      "tags": ["venda", "yehuda", "20-pratas", "ismaelitas", "egito"],
+      "topic": "A Venda de Yossef — 20 Moedas de Prata"
+    },
+    {
+      "id": "vsh005",
+      "order": 5,
+      "text": "Os irmãos mergulham a túnica no sangue de um bode e a enviam ao pai. Yaakov a reconhece e conclui que Yossef foi dilacerado por uma fera. Ele rasga suas vestes, se veste de saco e chora seu filho por muitos dias.",
+      "text_he": "וַיְקַנֵּ֣א בּ֔וֹ אֶחָ֖יו וְאָבִ֥יו שָׁמַ֛ר אֶת הַדָּבָֽר",
+      "refs": ["Genesis 37:32-35"],
+      "ref_start": "Genesis 37:32",
+      "ref_end": "Genesis 37:35",
+      "chapter": 37,
+      "verse_start": 32,
+      "verse_end": 35,
+      "sefaria_ref": "Genesis 37:32-35",
+      "day_of_creation": null,
+      "tags": ["túnica", "sangue", "yaakov", "luto", "choro"],
+      "topic": "Yaakov Recebe a Túnica — Luto pelo Filho"
+    },
+    {
+      "id": "vsh006",
+      "order": 6,
+      "text": "Yehuda desce de junto de seus irmãos e se casa com a filha de Shua. Têm três filhos: Er, Onã e Shlá. Er morre por ser mal aos olhos de Deus. Yehuda ordena a Onã que realize o levirato com Tamar, viúva de Er.",
+      "text_he": "וַיֵּרַ֛ע בְּעֵינֵ֥י ה' אֲשֶׁ֥ר עָשָׂ֖ה וַיָּ֥מֶת גַּם אֹתֽוֹ",
+      "refs": ["Genesis 38:1-10"],
+      "ref_start": "Genesis 38:1",
+      "ref_end": "Genesis 38:10",
+      "chapter": 38,
+      "verse_start": 1,
+      "verse_end": 10,
+      "sefaria_ref": "Genesis 38:1-10",
+      "day_of_creation": null,
+      "tags": ["yehuda", "tamar", "er", "oná", "levirato"],
+      "topic": "Yehuda e seus Filhos — Tamar Viúva"
+    },
+    {
+      "id": "vsh007",
+      "order": 7,
+      "text": "Tamar disfarça-se de prostituta no caminho para Timná e Yehuda se deita com ela, dando seu sinete, cordão e cajado como garantia. Ela engravida. Quando Yehuda descobre e quer puni-la, ela apresenta os objetos: 'De quem é o dono é que me engravidou.' Yehuda reconhece: 'Ela é mais justa do que eu.'",
+      "text_he": "צָדְקָ֣ה מִמֶּ֔נִּי",
+      "refs": ["Genesis 38:24-26"],
+      "ref_start": "Genesis 38:24",
+      "ref_end": "Genesis 38:26",
+      "chapter": 38,
+      "verse_start": 24,
+      "verse_end": 26,
+      "sefaria_ref": "Genesis 38:24-26",
+      "day_of_creation": null,
+      "tags": ["tamar", "yehuda", "disfarce", "sinete", "justiça"],
+      "topic": "Tamar e Yehuda — 'Ela é Mais Justa'"
+    },
+    {
+      "id": "vsh008",
+      "order": 8,
+      "text": "Yossef é vendido no Egito a Potifar, oficial do Faraó e chefe dos guardas. Deus está com Yossef e tudo que ele faz prospera. Potifar o nomeia administrador de toda sua casa.",
+      "text_he": "וַיְהִ֤י ה' אֶת יוֹסֵ֔ף וַיְהִ֖י אִ֣ישׁ מַצְלִ֑יחַ",
+      "refs": ["Genesis 39:2-4"],
+      "ref_start": "Genesis 39:2",
+      "ref_end": "Genesis 39:4",
+      "chapter": 39,
+      "verse_start": 2,
+      "verse_end": 4,
+      "sefaria_ref": "Genesis 39:2-4",
+      "day_of_creation": null,
+      "tags": ["potifar", "egito", "prosperidade", "administrador", "deus-com-yossef"],
+      "topic": "Yossef na Casa de Potifar — Deus Está com Ele"
+    },
+    {
+      "id": "vsh009",
+      "order": 9,
+      "text": "A esposa de Potifar insiste que Yossef se deite com ela. Dia após dia ele recusa: 'Como poderia cometer este grande mal e pecar contra Deus?' Ela agarra sua roupa e ele foge deixando-a na mão dela.",
+      "text_he": "וְאֵ֥יךְ אֶֽעֱשֶׂ֛ה הָרָעָ֥ה הַגְּדֹלָ֖ה הַזֹּ֑את וְחָטָ֖אתִי לֵֽאלֹהִֽים",
+      "refs": ["Genesis 39:9-12"],
+      "ref_start": "Genesis 39:9",
+      "ref_end": "Genesis 39:12",
+      "chapter": 39,
+      "verse_start": 9,
+      "verse_end": 12,
+      "sefaria_ref": "Genesis 39:9-12",
+      "day_of_creation": null,
+      "tags": ["esposa-de-potifar", "tentação", "recusa", "roupa", "fidelidade"],
+      "topic": "A Tentação de Yossef — 'Pecar Contra Deus'"
+    },
+    {
+      "id": "vsh010",
+      "order": 10,
+      "text": "A esposa de Potifar acusa Yossef com a roupa como prova. Potifar fica furioso e lança Yossef na prisão do rei. Mas Deus está com Yossef e lhe concede graça perante o guarda-chefe da prisão.",
+      "text_he": "וַיְהִ֤י ה' אֶת יוֹסֵ֔ף וַיֵּ֥ט אֵלָ֖יו חָ֑סֶד",
+      "refs": ["Genesis 39:20-21"],
+      "ref_start": "Genesis 39:20",
+      "ref_end": "Genesis 39:21",
+      "chapter": 39,
+      "verse_start": 20,
+      "verse_end": 21,
+      "sefaria_ref": "Genesis 39:20-21",
+      "day_of_creation": null,
+      "tags": ["prisão", "acusação", "deus-com-yossef", "graça", "guarda"],
+      "topic": "Yossef na Prisão — Deus Ainda Está com Ele"
+    },
+    {
+      "id": "vsh011",
+      "order": 11,
+      "text": "O copeiro e o padeiro do Faraó são presos junto a Yossef. Ambos têm sonhos numa mesma noite. Yossef nota que estão tristes e se oferece para interpretar: 'As interpretações não pertencem a Deus? Narrai-me.'",
+      "text_he": "הֲלוֹא לֵֽאלֹהִ֖ים פִּתְרֹנִ֑ים",
+      "refs": ["Genesis 40:5-8"],
+      "ref_start": "Genesis 40:5",
+      "ref_end": "Genesis 40:8",
+      "chapter": 40,
+      "verse_start": 5,
+      "verse_end": 8,
+      "sefaria_ref": "Genesis 40:5-8",
+      "day_of_creation": null,
+      "tags": ["copeiro", "padeiro", "sonhos", "interpretação", "prisão"],
+      "topic": "Os Sonhos do Copeiro e do Padeiro"
+    },
+    {
+      "id": "vsh012",
+      "order": 12,
+      "text": "Yossef interpreta: em três dias o copeiro será reintegrado ao seu cargo, o padeiro será enforcado. Ele pede ao copeiro que o mencione ao Faraó. Tudo se cumpre — mas o copeiro se esquece de Yossef por dois anos.",
+      "text_he": "כִּ֛י אִם זְכַרְתַּ֥נִי אִתְּךָ֖ כַּֽאֲשֶׁ֣ר יִיטַ֣ב לָ֑ךְ",
+      "refs": ["Genesis 40:14-23"],
+      "ref_start": "Genesis 40:14",
+      "ref_end": "Genesis 40:23",
+      "chapter": 40,
+      "verse_start": 14,
+      "verse_end": 23,
+      "sefaria_ref": "Genesis 40:14-23",
+      "day_of_creation": null,
+      "tags": ["interpretação", "copeiro", "padeiro", "esquecimento", "dois-anos"],
+      "topic": "A Interpretação — O Copeiro Esquece Yossef"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 37:1",  "ref_end": "Genesis 37:11", "sefaria_ref": "Genesis 37:1-11" },
+    { "number": 2, "ref_start": "Genesis 37:12", "ref_end": "Genesis 37:22", "sefaria_ref": "Genesis 37:12-22" },
+    { "number": 3, "ref_start": "Genesis 37:23", "ref_end": "Genesis 38:30", "sefaria_ref": "Genesis 37:23-38:30" },
+    { "number": 4, "ref_start": "Genesis 39:1",  "ref_end": "Genesis 39:6",  "sefaria_ref": "Genesis 39:1-6" },
+    { "number": 5, "ref_start": "Genesis 39:7",  "ref_end": "Genesis 39:23", "sefaria_ref": "Genesis 39:7-23" },
+    { "number": 6, "ref_start": "Genesis 40:1",  "ref_end": "Genesis 40:14", "sefaria_ref": "Genesis 40:1-14" },
+    { "number": 7, "ref_start": "Genesis 40:15", "ref_end": "Genesis 40:23", "sefaria_ref": "Genesis 40:15-23" }
+  ],
+
+  "haftarah": {
+    "ref": "Amos 2:6-3:8",
+    "sefaria_ref": "Amos 2:6-3:8",
+    "note": "Tema: 'Venderam o justo por prata' — referência direta à venda de Yossef"
+  },
+
+  "connections": {
+    "next_parasha": "miketz",
+    "prev_parasha": "vayishlach",
+    "thematic_links": [
+      { "parasha": "vayishlach", "theme": "A família de Yaakov se completa — agora começa o drama de Yossef" },
+      { "parasha": "miketz",     "theme": "Continuação direta — os dois anos que passam e Faraó sonha" }
+    ]
+  }
+}

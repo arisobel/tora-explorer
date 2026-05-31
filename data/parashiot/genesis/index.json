@@ -47,7 +47,7 @@
       "summary_short": "O Dilúvio, a Arca, o arco-íris e a Torre de Babel.",
       "characters": ["Noach", "Shem", "Cham", "Yafet", "Nimrod"],
       "data_file": "data/parashiot/genesis/02-noach.json",
-      "facts_count": 0
+      "facts_count": 21
     },
     {
       "id": "lech-lecha",
@@ -67,7 +67,7 @@
       "summary_short": "A chamada de Avraham, sua jornada, Brit Milah e a promessa de Yitzchak.",
       "characters": ["Avraham", "Sara", "Lot", "Hagar", "Yishmael"],
       "data_file": "data/parashiot/genesis/03-lech-lecha.json",
-      "facts_count": 0
+      "facts_count": 17
     },
     {
       "id": "vayera",
@@ -87,7 +87,7 @@
       "summary_short": "Visita dos anjos, destruição de Sedom, nascimento de Yitzchak e Akeda.",
       "characters": ["Avraham", "Sara", "Lot", "Yitzchak", "Yishmael"],
       "data_file": "data/parashiot/genesis/04-vayera.json",
-      "facts_count": 0
+      "facts_count": 15
     },
     {
       "id": "chayei-sarah",
@@ -107,7 +107,7 @@
       "summary_short": "Morte de Sara, casamento de Yitzchak e Rivka, morte de Avraham.",
       "characters": ["Avraham", "Sara", "Yitzchak", "Rivka", "Eliezer"],
       "data_file": "data/parashiot/genesis/05-chayei-sarah.json",
-      "facts_count": 0
+      "facts_count": 12
     },
     {
       "id": "toldot",
@@ -127,7 +127,7 @@
       "summary_short": "Nascimento de Yaakov e Essav, venda da primogenitura e as bênçãos.",
       "characters": ["Yitzchak", "Rivka", "Yaakov", "Essav"],
       "data_file": "data/parashiot/genesis/06-toldot.json",
-      "facts_count": 0
+      "facts_count": 14
     },
     {
       "id": "vayetze",
@@ -147,7 +147,7 @@
       "summary_short": "Sonho da escada, Yaakov em Charan, casamento com Lea e Rachel, as 12 tribos.",
       "characters": ["Yaakov", "Lea", "Rachel", "Lavan", "Bilha", "Zilpa"],
       "data_file": "data/parashiot/genesis/07-vayetze.json",
-      "facts_count": 0
+      "facts_count": 12
     },
     {
       "id": "vayishlach",
@@ -167,7 +167,7 @@
       "summary_short": "Retorno de Yaakov, luta com o anjo, reencontro com Essav, caso Dina.",
       "characters": ["Yaakov", "Essav", "Dina", "Shechem", "Rachel"],
       "data_file": "data/parashiot/genesis/08-vayishlach.json",
-      "facts_count": 0
+      "facts_count": 13
     },
     {
       "id": "vayeshev",
@@ -187,7 +187,7 @@
       "summary_short": "Yossef e seus irmãos, venda para o Egito, Yehuda e Tamar, prisão.",
       "characters": ["Yossef", "Yaakov", "Yehuda", "Tamar", "Potifar"],
       "data_file": "data/parashiot/genesis/09-vayeshev.json",
-      "facts_count": 0
+      "facts_count": 12
     },
     {
       "id": "miketz",
@@ -207,7 +207,7 @@
       "summary_short": "Yossef interpreta sonhos do Faraó, torna-se vice-rei e reencontra irmãos.",
       "characters": ["Yossef", "Faraó", "Binyamin", "Yehuda"],
       "data_file": "data/parashiot/genesis/10-miketz.json",
-      "facts_count": 0
+      "facts_count": 12
     },
     {
       "id": "vayigash",
@@ -227,7 +227,7 @@
       "summary_short": "Yossef revela sua identidade, Yaakov desce ao Egito com toda a família.",
       "characters": ["Yossef", "Yehuda", "Yaakov", "Faraó"],
       "data_file": "data/parashiot/genesis/11-vayigash.json",
-      "facts_count": 0
+      "facts_count": 9
     },
     {
       "id": "vayechi",
@@ -247,7 +247,7 @@
       "summary_short": "Bênçãos de Yaakov às 12 tribos, sua morte e a de Yossef no Egito.",
       "characters": ["Yaakov", "Yossef", "Efraim", "Menashe"],
       "data_file": "data/parashiot/genesis/12-vayechi.json",
-      "facts_count": 0
+      "facts_count": 11
     }
   ]
 }

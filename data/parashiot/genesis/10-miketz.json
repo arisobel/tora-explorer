@@ -1,0 +1,268 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "book_sefaria": "Genesis",
+    "parasha_index": 10,
+    "parasha_of_book": 10,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "miketz",
+    "name": "Miketz",
+    "name_pt": "No fim de",
+    "hebrew": "מִקֵּץ",
+    "transliteration": "Miketz",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 41:1",
+    "ref_end": "Genesis 44:17",
+    "sefaria_ref": "Genesis 41:1-44:17",
+    "chapters_covered": [41, 42, 43, 44],
+    "chapter_start": 41,
+    "chapter_end": 44,
+    "verse_start": 1,
+    "verse_end": 17
+  },
+
+  "timeline": {
+    "period_name": "Yossef — vice-rei e o reencontro com os irmãos",
+    "anno_mundi_start": 2229,
+    "anno_mundi_end": 2238,
+    "era": "yossef",
+    "position_pct": 78,
+    "description": "Desde a interpretação dos sonhos do Faraó e a ascensão de Yossef ao poder até a primeira e segunda viagem dos irmãos ao Egito e o cálice encontrado na bolsa de Binyamin."
+  },
+
+  "summary": {
+    "short": "Yossef interpreta os sonhos de Faraó, torna-se vice-rei, os irmãos descem ao Egito e o cálice é plantado na bolsa de Binyamin.",
+    "medium": "Dois anos após o episódio com o copeiro, Faraó tem dois sonhos perturbadores que ninguém consegue interpretar. O copeiro se lembra de Yossef. Chamado às pressas, Yossef interpreta: sete anos de abundância seguidos de sete anos de fome. Faraó o nomeia segundo do reino. Durante os anos de fome, os irmãos de Yossef descem ao Egito comprar trigo. Yossef os reconhece mas não se revela. Na primeira viagem, Shimon fica preso como garantia. Na segunda, levam Binyamin. Yossef planta seu cálice de prata na bolsa de Binyamin para criar um pretexto de detê-lo.",
+    "characters_main": ["Yossef", "Faraó", "os irmãos", "Binyamin", "Yehuda"],
+    "characters_secondary": ["o copeiro", "Asnát — esposa de Yossef", "Efraim", "Menashe", "Shimon"],
+    "themes": ["Sonhos e interpretação", "Ascensão ao poder", "Providência divina", "Reencontro disfarçado", "Arrependimento dos irmãos", "O teste de Binyamin"]
+  },
+
+  "facts": [
+    {
+      "id": "mk001",
+      "order": 1,
+      "text": "Dois anos após o esquecimento do copeiro, Faraó sonha duas vezes: sete vacas gordas devoradas por sete vacas magras; sete espigas cheias devoradas por sete espigas ressequidas. Nenhum sábio consegue interpretar.",
+      "text_he": "וְהִנֵּ֣ה מִן הַיְאֹ֔ר עֹלֹ֕ת שֶׁ֥בַע פָּר֖וֹת יְפ֣וֹת מַרְאֶ֑ה",
+      "refs": ["Genesis 41:1-8"],
+      "ref_start": "Genesis 41:1",
+      "ref_end": "Genesis 41:8",
+      "chapter": 41,
+      "verse_start": 1,
+      "verse_end": 8,
+      "sefaria_ref": "Genesis 41:1-8",
+      "day_of_creation": null,
+      "tags": ["faraó", "sonhos", "vacas", "espigas", "sete-anos"],
+      "topic": "Os Dois Sonhos de Faraó"
+    },
+    {
+      "id": "mk002",
+      "order": 2,
+      "text": "O copeiro se lembra de Yossef e o menciona ao Faraó. Yossef é retirado às pressas da prisão. Ele se banha, troca de roupa e se apresenta diante do Faraó.",
+      "text_he": "אֶת חֲטָאַ֕י אֲנִ֖י מַזְכִּ֥יר הַיּֽוֹם",
+      "refs": ["Genesis 41:9-14"],
+      "ref_start": "Genesis 41:9",
+      "ref_end": "Genesis 41:14",
+      "chapter": 41,
+      "verse_start": 9,
+      "verse_end": 14,
+      "sefaria_ref": "Genesis 41:9-14",
+      "day_of_creation": null,
+      "tags": ["copeiro", "yossef", "prisão", "faraó", "memória"],
+      "topic": "O Copeiro Se Lembra de Yossef"
+    },
+    {
+      "id": "mk003",
+      "order": 3,
+      "text": "Faraó conta os sonhos. Yossef responde: 'Não sou eu — é Deus quem dará a Faraó uma resposta favorável.' Ele interpreta: os dois sonhos são um — sete anos de grande fartura serão seguidos de sete anos de fome severa em todo o Egito.",
+      "text_he": "הַחֲלוֹ֥ם פַּרְעֹ֖ה אֶחָ֣ד ה֑וּא",
+      "refs": ["Genesis 41:25-31"],
+      "ref_start": "Genesis 41:25",
+      "ref_end": "Genesis 41:31",
+      "chapter": 41,
+      "verse_start": 25,
+      "verse_end": 31,
+      "sefaria_ref": "Genesis 41:25-31",
+      "day_of_creation": null,
+      "tags": ["interpretação", "sete-anos", "fartura", "fome", "sonho-um"],
+      "topic": "Yossef Interpreta — Sete Anos de Fartura, Sete de Fome"
+    },
+    {
+      "id": "mk004",
+      "order": 4,
+      "text": "Yossef aconselha Faraó a nomear um homem sábio para administrar o armazenamento durante os anos de fartura. Faraó diz: 'Haverá alguém como este, em quem está o espírito de Deus?' — e o nomeia vice-rei do Egito.",
+      "text_he": "רַ֥ק הַכִּסֵּ֖א אֶגְדַּ֥ל מִמֶּֽךָּ",
+      "refs": ["Genesis 41:37-41"],
+      "ref_start": "Genesis 41:37",
+      "ref_end": "Genesis 41:41",
+      "chapter": 41,
+      "verse_start": 37,
+      "verse_end": 41,
+      "sefaria_ref": "Genesis 41:37-41",
+      "day_of_creation": null,
+      "tags": ["vice-rei", "faraó", "nomeação", "espírito-divino", "poder"],
+      "topic": "Yossef Nomeado Vice-Rei do Egito"
+    },
+    {
+      "id": "mk005",
+      "order": 5,
+      "text": "Faraó muda o nome de Yossef para Tzafnat Pane'ach e o casa com Asnát, filha do sacerdote de On. Yossef tem 30 anos. Nos sete anos de fartura ele acumula grãos em quantidade como a areia do mar.",
+      "text_he": "וְיוֹסֵ֖ף בֶּן שְׁלֹשִׁ֣ים שָׁנָ֑ה",
+      "refs": ["Genesis 41:45-49"],
+      "ref_start": "Genesis 41:45",
+      "ref_end": "Genesis 41:49",
+      "chapter": 41,
+      "verse_start": 45,
+      "verse_end": 49,
+      "sefaria_ref": "Genesis 41:45-49",
+      "day_of_creation": null,
+      "tags": ["yossef", "30-anos", "asnát", "grãos", "fartura"],
+      "topic": "Yossef — 30 Anos, Casamento e Armazenamento"
+    },
+    {
+      "id": "mk006",
+      "order": 6,
+      "text": "Yossef tem dois filhos: o primogênito Menashe ('Deus me fez esquecer toda a minha labuta') e o segundo Efraim ('Deus me fez frutificar na terra da minha aflição').",
+      "text_he": "כִּֽי נַשַּׁ֤נִי אֱלֹהִים֙ אֶֽת כָּל עֲמָלִ֔י",
+      "refs": ["Genesis 41:50-52"],
+      "ref_start": "Genesis 41:50",
+      "ref_end": "Genesis 41:52",
+      "chapter": 41,
+      "verse_start": 50,
+      "verse_end": 52,
+      "sefaria_ref": "Genesis 41:50-52",
+      "day_of_creation": null,
+      "tags": ["menashe", "efraim", "filhos", "nome", "gratidão"],
+      "topic": "Nascimento de Menashe e Efraim"
+    },
+    {
+      "id": "mk007",
+      "order": 7,
+      "text": "A fome se alastra por toda a terra. Yaakov em Canaã sabe do trigo no Egito e envia dez filhos para comprar. Apenas Binyamin fica em casa — Yaakov teme que um mal lhe aconteça.",
+      "text_he": "וַיַּ֥רְא יַעֲקֹ֖ב כִּ֣י יֶשׁ שֶׁ֣בֶר בְּמִצְרָ֑יִם",
+      "refs": ["Genesis 42:1-5"],
+      "ref_start": "Genesis 42:1",
+      "ref_end": "Genesis 42:5",
+      "chapter": 42,
+      "verse_start": 1,
+      "verse_end": 5,
+      "sefaria_ref": "Genesis 42:1-5",
+      "day_of_creation": null,
+      "tags": ["fome", "irmãos", "egito", "binyamin", "yaakov"],
+      "topic": "Os Irmãos Descem ao Egito"
+    },
+    {
+      "id": "mk008",
+      "order": 8,
+      "text": "Os irmãos chegam a Yossef e se prostram com o rosto em terra. Yossef os reconhece mas finge ser estranho e fala duramente. Lembra os sonhos. Os acusa de espiões. Os irmãos falam entre si: 'Somos culpados por causa de nosso irmão.'",
+      "text_he": "אֲבָ֖ל אֲשֵׁמִ֣ים אֲנַ֑חְנוּ עַ֣ל אָחִ֔ינוּ",
+      "refs": ["Genesis 42:6-21"],
+      "ref_start": "Genesis 42:6",
+      "ref_end": "Genesis 42:21",
+      "chapter": 42,
+      "verse_start": 6,
+      "verse_end": 21,
+      "sefaria_ref": "Genesis 42:6-21",
+      "day_of_creation": null,
+      "tags": ["reencontro", "disfarce", "espião", "prostração", "culpa"],
+      "topic": "Os Irmãos Diante de Yossef — 'Somos Culpados'"
+    },
+    {
+      "id": "mk009",
+      "order": 9,
+      "text": "Yossef mantém Shimon preso como garantia e devolve os outros com grãos — secretamente devolvendo o dinheiro nas bolsas. De volta a Yaakov, relatam tudo. Ao abrir as bolsas e encontrar o dinheiro, ficam aterrorizados.",
+      "text_he": "מֶ֣ה זֹּ֗את עָשָׂ֨ה אֱלֹהִ֤ים לָ֙נוּ֙",
+      "refs": ["Genesis 42:24-28"],
+      "ref_start": "Genesis 42:24",
+      "ref_end": "Genesis 42:28",
+      "chapter": 42,
+      "verse_start": 24,
+      "verse_end": 28,
+      "sefaria_ref": "Genesis 42:24-28",
+      "day_of_creation": null,
+      "tags": ["shimon", "dinheiro", "bolsas", "terror", "garantia"],
+      "topic": "Shimon Preso — O Dinheiro nas Bolsas"
+    },
+    {
+      "id": "mk010",
+      "order": 10,
+      "text": "A fome piora. Yehuda se responsabiliza pessoalmente por Binyamin perante Yaakov: 'Serei eu seu fiador.' Yaakov, relutante, os deixa partir com Binyamin, presentes e o dobro do dinheiro.",
+      "text_he": "אָנֹכִ֥י אֶֽעֶרְבֶ֖נּוּ",
+      "refs": ["Genesis 43:9-14"],
+      "ref_start": "Genesis 43:9",
+      "ref_end": "Genesis 43:14",
+      "chapter": 43,
+      "verse_start": 9,
+      "verse_end": 14,
+      "sefaria_ref": "Genesis 43:9-14",
+      "day_of_creation": null,
+      "tags": ["yehuda", "binyamin", "fiança", "yaakov", "segunda-viagem"],
+      "topic": "Yehuda Garante Binyamin — Segunda Viagem"
+    },
+    {
+      "id": "mk011",
+      "order": 11,
+      "text": "Na segunda viagem Yossef os recebe em sua casa, liberta Shimon e serve-lhes uma refeição. Vendo Binyamin, ele sai para chorar em particular. Sentam-se por ordem de nascimento — os irmãos ficam estarrecidos.",
+      "text_he": "וַיְבַקֵּ֣שׁ לִבְכּ֔וֹת וַיָּבֹ֥א הַחַ֖דְרָה",
+      "refs": ["Genesis 43:29-34"],
+      "ref_start": "Genesis 43:29",
+      "ref_end": "Genesis 43:34",
+      "chapter": 43,
+      "verse_start": 29,
+      "verse_end": 34,
+      "sefaria_ref": "Genesis 43:29-34",
+      "day_of_creation": null,
+      "tags": ["yossef", "choro", "binyamin", "ordem", "refeição"],
+      "topic": "A Refeição — Yossef Chora ao Ver Binyamin"
+    },
+    {
+      "id": "mk012",
+      "order": 12,
+      "text": "Yossef ordena que coloquem seu cálice de prata na bolsa de Binyamin. Na manhã seguinte os irmãos partem. Yossef envia seu mordomo atrás deles. O cálice é encontrado na bolsa de Binyamin — todos rasgam suas vestes.",
+      "text_he": "וַיְמַהֵ֗ר וַיּוֹרֵד֙ אִ֣ישׁ אֶֽת אַמְתַּחְתּ֔וֹ",
+      "refs": ["Genesis 44:2-12"],
+      "ref_start": "Genesis 44:2",
+      "ref_end": "Genesis 44:12",
+      "chapter": 44,
+      "verse_start": 2,
+      "verse_end": 12,
+      "sefaria_ref": "Genesis 44:2-12",
+      "day_of_creation": null,
+      "tags": ["cálice", "binyamin", "bolsa", "acusação", "roupas-rasgadas"],
+      "topic": "O Cálice na Bolsa de Binyamin"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 41:1",  "ref_end": "Genesis 41:14", "sefaria_ref": "Genesis 41:1-14" },
+    { "number": 2, "ref_start": "Genesis 41:15", "ref_end": "Genesis 41:38", "sefaria_ref": "Genesis 41:15-38" },
+    { "number": 3, "ref_start": "Genesis 41:39", "ref_end": "Genesis 41:52", "sefaria_ref": "Genesis 41:39-52" },
+    { "number": 4, "ref_start": "Genesis 41:53", "ref_end": "Genesis 42:18", "sefaria_ref": "Genesis 41:53-42:18" },
+    { "number": 5, "ref_start": "Genesis 42:19", "ref_end": "Genesis 43:15", "sefaria_ref": "Genesis 42:19-43:15" },
+    { "number": 6, "ref_start": "Genesis 43:16", "ref_end": "Genesis 43:29", "sefaria_ref": "Genesis 43:16-29" },
+    { "number": 7, "ref_start": "Genesis 43:30", "ref_end": "Genesis 44:17", "sefaria_ref": "Genesis 43:30-44:17" }
+  ],
+
+  "haftarah": {
+    "ref": "I Kings 3:15-4:1",
+    "sefaria_ref": "I Kings 3:15-4:1",
+    "note": "Tema: o sonho de Salomão — sonho que muda um destino, paralelo ao sonho de Faraó"
+  },
+
+  "connections": {
+    "next_parasha": "vayigash",
+    "prev_parasha": "vayeshev",
+    "thematic_links": [
+      { "parasha": "vayeshev", "theme": "Yossef estava na prisão e o copeiro se esqueceu — agora ele é chamado" },
+      { "parasha": "vayigash", "theme": "Continuação direta — Yehuda faz o discurso e Yossef revela sua identidade" }
+    ]
+  }
+}
