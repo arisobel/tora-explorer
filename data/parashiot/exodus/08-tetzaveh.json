@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 20,
+    "parasha_of_book": 8,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "tetzaveh",
+    "name": "Tetzaveh",
+    "name_pt": "Ordena",
+    "hebrew": "תְּצַוֶּה",
+    "transliteration": "Tetzaveh",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Exodus 27:20",
+    "ref_end": "Exodus 30:10",
+    "sefaria_ref": "Exodus 27:20-30:10",
+    "chapters_covered": [27, 28, 29, 30],
+    "chapter_start": 27,
+    "chapter_end": 30,
+    "verse_start": 20,
+    "verse_end": 10
+  },
+
+  "timeline": {
+    "period_name": "As vestes sacerdotais e a inauguração do sacerdócio",
+    "anno_mundi_start": 2449,
+    "anno_mundi_end": 2449,
+    "era": "saida-egito",
+    "position_pct": 42,
+    "description": "Deus instrui sobre o azeite da Menorá, as oito vestes do Kohen Gadol, as quatro vestes dos cohanim regulares e o ritual de sete dias de inauguração do sacerdócio."
+  },
+
+  "summary": {
+    "short": "O azeite da Menorá, as vestes sacerdotais — o Éfod, o Choshen com Urim e Tumim, o Meil com sinos, o Tzitz — e o ritual de consagração de sete dias.",
+    "medium": "A única parashá desde o Êxodo onde o nome de Moshe não aparece. Deus instrui sobre o azeite de oliva puro para a Menorá, que deve arder permanentemente. Descreve em detalhe as oito vestes do Kohen Gadol: a Ketonet (túnica), o Michnasayim (calças de linho), o Avnet (cinto), o Mitznefet (turbante), a Choshen Mishpat (peitoral com os 12 nomes gravados e os Urim e Tumim), o Éfod (avental) com as pedras de ônix, o Meil (robe azul) com sinos e romãs, e o Tzitz (placa de ouro com 'Santo para Deus'). O ritual de sete dias de instalação dos sacerdotes incluindo sacrifícios e aspersão de sangue é descrito com precision.",
+    "characters_main": ["Moshe", "Aharon", "Nadav", "Avihu", "Elazar", "Itamar"],
+    "characters_secondary": [],
+    "themes": ["Sacerdócio", "Vestes sagradas", "Kedushah visível", "Urim e Tumim", "Inauguração", "O Altar do Incenso"]
+  },
+
+  "facts": [
+    {
+      "id": "tz001",
+      "order": 1,
+      "text": "Deus ordena a Moshe que os filhos de Israel tragam azeite de oliva puro — batido — para a Menorá, para que a lâmpada queime permanentemente. Aharon e seus filhos a prepararão da tarde até a manhã diante de Deus — lei eterna em todas as gerações.",
+      "text_he": "וְאַתָּה תְּצַוֶּה אֶת בְּנֵי יִשְׂרָאֵל וְיִקְחוּ אֵלֶיךָ שֶׁמֶן זַיִת זָךְ כָּתִית לַמָּאוֹר",
+      "refs": ["Exodus 27:20-21"],
+      "ref_start": "Exodus 27:20",
+      "ref_end": "Exodus 27:21",
+      "chapter": 27,
+      "verse_start": 20,
+      "verse_end": 21,
+      "sefaria_ref": "Exodus 27:20-21",
+      "day_of_creation": null,
+      "tags": ["menorá", "azeite", "ner-tamid", "aharon", "luz-permanente"],
+      "topic": "O Azeite Puro — Luz Permanente da Menorá"
+    },
+    {
+      "id": "tz002",
+      "order": 2,
+      "text": "O Éfod — avental sagrado do Kohen Gadol — de ouro, lã azul, púrpura, escarlate e linho torcido, obra de artesão. Duas pedras de ônix nos ombros, com os nomes das 12 tribos gravados — seis de cada lado. 'Aharon carregará seus nomes perante Deus como memorial.'",
+      "text_he": "וְנָשָׂא אַהֲרֹן אֶת שְׁמוֹתָם לִפְנֵי ה' עַל שְׁתֵּי כְתֵפָיו לְזִכָּרֹן",
+      "refs": ["Exodus 28:9-12"],
+      "ref_start": "Exodus 28:6",
+      "ref_end": "Exodus 28:12",
+      "chapter": 28,
+      "verse_start": 6,
+      "verse_end": 12,
+      "sefaria_ref": "Exodus 28:6-12",
+      "day_of_creation": null,
+      "tags": ["éfod", "pedras-de-ônix", "tribos", "memorial", "kohen-gadol"],
+      "topic": "O Éfod — As 12 Tribos nos Ombros do Kohen"
+    },
+    {
+      "id": "tz003",
+      "order": 3,
+      "text": "O Choshen Mishpat — peitoral do julgamento — com 12 pedras preciosas em quatro filas, cada uma gravada com o nome de uma das tribos. O Choshen contém os Urim e Tumim — o meio de consulta divina. 'Aharon carregará o julgamento dos filhos de Israel sobre seu coração perante Deus.'",
+      "text_he": "וְנָשָׂא אַהֲרֹן אֶת מִשְׁפַּט בְּנֵי יִשְׂרָאֵל עַל לִבּוֹ לִפְנֵי ה' תָּמִיד",
+      "refs": ["Exodus 28:15-30"],
+      "ref_start": "Exodus 28:15",
+      "ref_end": "Exodus 28:30",
+      "chapter": 28,
+      "verse_start": 15,
+      "verse_end": 30,
+      "sefaria_ref": "Exodus 28:15-30",
+      "day_of_creation": null,
+      "tags": ["choshen", "12-pedras", "urim-vetumim", "julgamento", "coração"],
+      "topic": "O Choshen — Peitoral com Urim e Tumim"
+    },
+    {
+      "id": "tz004",
+      "order": 4,
+      "text": "O Meil — robe azul do Kohen Gadol. Em sua borda, alternando, romãs de lã azul, púrpura e escarlate, e sinos de ouro. 'O som será ouvido ao entrar no Santo diante de Deus e ao sair — para que não morra.'",
+      "text_he": "וְנִשְׁמַע קוֹלוֹ בְּבֹאוֹ אֶל הַקֹּדֶשׁ לִפְנֵי ה' וּבְצֵאתוֹ וְלֹא יָמוּת",
+      "refs": ["Exodus 28:35"],
+      "ref_start": "Exodus 28:31",
+      "ref_end": "Exodus 28:35",
+      "chapter": 28,
+      "verse_start": 31,
+      "verse_end": 35,
+      "sefaria_ref": "Exodus 28:31-35",
+      "day_of_creation": null,
+      "tags": ["meil", "sinos", "romãs", "azul", "kohen-gadol"],
+      "topic": "O Meil — Robe com Sinos e Romãs"
+    },
+    {
+      "id": "tz005",
+      "order": 5,
+      "text": "O Tzitz — placa de ouro puro presa na fronte do Kohen Gadol com fio azul. Nela está gravado 'Santo para Deus' (Kodesh LeHashem). Aharon carregará os pecados das ofertas dos filhos de Israel para que sejam aceitas diante de Deus.",
+      "text_he": "קֹדֶשׁ לַה'",
+      "refs": ["Exodus 28:36-38"],
+      "ref_start": "Exodus 28:36",
+      "ref_end": "Exodus 28:38",
+      "chapter": 28,
+      "verse_start": 36,
+      "verse_end": 38,
+      "sefaria_ref": "Exodus 28:36-38",
+      "day_of_creation": null,
+      "tags": ["tzitz", "kodesh-lashem", "fronte", "ouro", "aceitação"],
+      "topic": "O Tzitz — 'Santo para Deus' na Fronte"
+    },
+    {
+      "id": "tz006",
+      "order": 6,
+      "text": "As vestes dos cohanim regulares: túnicas de linho (Ketonet), cintos (Avnet) e toucas (Migba'ot). Tudo para dar honra e beleza ao sacerdócio. Aharon e seus filhos serão ungidos, consagrados e santificados para servir como sacerdotes.",
+      "text_he": "וְעָשִׂיתָ לִבְנֵי אַהֲרֹן כֻּתֳּנֹת",
+      "refs": ["Exodus 28:40-43"],
+      "ref_start": "Exodus 28:40",
+      "ref_end": "Exodus 28:43",
+      "chapter": 28,
+      "verse_start": 40,
+      "verse_end": 43,
+      "sefaria_ref": "Exodus 28:40-43",
+      "day_of_creation": null,
+      "tags": ["cohanim", "túnicas", "toucas", "honra", "beleza", "sacerdócio"],
+      "topic": "As Vestes dos Cohanim — Honra e Beleza"
+    },
+    {
+      "id": "tz007",
+      "order": 7,
+      "text": "O ritual de instalação (Miluim): Aharon e seus filhos são lavados, vestidos com as vestes sacerdotais e ungidos com o azeite da unção. São oferecidos um touro e dois carneiros. O sangue do carneiro da instalação é colocado na orelha direita, no polegar da mão direita e no dedão do pé direito de cada sacerdote.",
+      "text_he": "וְלָקַחְתָּ מִן הַדָּם אֲשֶׁר עַל הַמִּזְבֵּחַ וּמִשֶּׁמֶן הַמִּשְׁחָה",
+      "refs": ["Exodus 29:4-21"],
+      "ref_start": "Exodus 29:4",
+      "ref_end": "Exodus 29:21",
+      "chapter": 29,
+      "verse_start": 4,
+      "verse_end": 21,
+      "sefaria_ref": "Exodus 29:4-21",
+      "day_of_creation": null,
+      "tags": ["miluim", "instalação", "unção", "sangue", "orelha-polegar-dedão"],
+      "topic": "O Ritual de Instalação dos Sacerdotes — Miluim"
+    },
+    {
+      "id": "tz008",
+      "order": 8,
+      "text": "A oferta tamid — diária — dois cordeiros por dia, um de manhã e um ao entardecer, como oferta contínua (olá). 'Lá Me encontrarei com os filhos de Israel e o lugar será santificado pela Minha glória. Habitarei entre os filhos de Israel e serei o Deus deles.'",
+      "text_he": "שְׁנַיִם לַיּוֹם עֹלָה תָמִיד",
+      "refs": ["Exodus 29:38-46"],
+      "ref_start": "Exodus 29:38",
+      "ref_end": "Exodus 29:46",
+      "chapter": 29,
+      "verse_start": 38,
+      "verse_end": 46,
+      "sefaria_ref": "Exodus 29:38-46",
+      "day_of_creation": null,
+      "tags": ["tamid", "oferta-diária", "dois-cordeiros", "presença", "habitação"],
+      "topic": "A Oferta Tamid — Dois Cordeiros Diários"
+    },
+    {
+      "id": "tz009",
+      "order": 9,
+      "text": "O Altar do Incenso (Mizbeach HaZahav) — de acácia coberto de ouro, com chifres de ouro. Aharon queimará incenso aromático toda manhã ao cuidar das lâmpadas e ao entardecer ao acendê-las. É oferta perpétua ao longo das gerações. Uma vez por ano, no Yom Kippur, o Kohen Gadol expiará seus chifres com o sangue.",
+      "text_he": "וְהִקְטִיר עָלָיו אַהֲרֹן קְטֹרֶת סַמִּים בַּבֹּקֶר בַּבֹּקֶר",
+      "refs": ["Exodus 30:1-10"],
+      "ref_start": "Exodus 30:1",
+      "ref_end": "Exodus 30:10",
+      "chapter": 30,
+      "verse_start": 1,
+      "verse_end": 10,
+      "sefaria_ref": "Exodus 30:1-10",
+      "day_of_creation": null,
+      "tags": ["ketoret", "incenso", "altar-do-ouro", "manhã", "entardecer", "yom-kippur"],
+      "topic": "O Altar do Incenso — Ketoret Manhã e Tarde"
+    },
+    {
+      "id": "tz010",
+      "order": 10,
+      "text": "Tetzaveh é a única parashá desde o nascimento de Moshe (Shemot 2) onde o nome de Moshe não aparece. A tradição explica que isso se deve à intercessão de Moshe por Israel após o Bezerro de Ouro: 'Se não perdurarás, apaga-me de Teu livro.' As palavras de um sábio sempre se realizam, mesmo condicionalmente.",
+      "text_he": "מְחֵנִי נָא מִסִּפְרְךָ אֲשֶׁר כָּתָבְתָּ",
+      "refs": ["Exodus 32:32"],
+      "ref_start": "Exodus 32:32",
+      "ref_end": "Exodus 32:32",
+      "chapter": 32,
+      "verse_start": 32,
+      "verse_end": 32,
+      "sefaria_ref": "Exodus 32:32",
+      "day_of_creation": null,
+      "tags": ["moshe", "ausente", "intercessão", "bezerro-de-ouro", "tradição"],
+      "topic": "Moshe Ausente da Parashá — O Peso da Intercessão"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 27:20", "ref_end": "Exodus 28:12", "sefaria_ref": "Exodus 27:20-28:12" },
+    { "number": 2, "ref_start": "Exodus 28:13", "ref_end": "Exodus 28:30", "sefaria_ref": "Exodus 28:13-30" },
+    { "number": 3, "ref_start": "Exodus 28:31", "ref_end": "Exodus 28:43", "sefaria_ref": "Exodus 28:31-43" },
+    { "number": 4, "ref_start": "Exodus 29:1",  "ref_end": "Exodus 29:18", "sefaria_ref": "Exodus 29:1-18" },
+    { "number": 5, "ref_start": "Exodus 29:19", "ref_end": "Exodus 29:37", "sefaria_ref": "Exodus 29:19-37" },
+    { "number": 6, "ref_start": "Exodus 29:38", "ref_end": "Exodus 29:46", "sefaria_ref": "Exodus 29:38-46" },
+    { "number": 7, "ref_start": "Exodus 30:1",  "ref_end": "Exodus 30:10", "sefaria_ref": "Exodus 30:1-10" }
+  ],
+
+  "haftarah": {
+    "ref": "Ezekiel 43:10-27",
+    "sefaria_ref": "Ezekiel 43:10-27",
+    "note": "Tema: Ezequiel descreve o altar do Templo futuro — paralelo ao altar descrito em Tetzaveh"
+  },
+
+  "connections": {
+    "next_parasha": "ki-tisa",
+    "prev_parasha": "terumah",
+    "thematic_links": [
+      { "parasha": "terumah", "theme": "O projeto dos objetos do Mishkan — Tetzaveh trata das vestes e dos sacerdotes" },
+      { "parasha": "ki-tisa", "theme": "O Bezerro de Ouro — o colapso do sacerdócio antes mesmo de ser inaugurado" }
+    ]
+  }
+}

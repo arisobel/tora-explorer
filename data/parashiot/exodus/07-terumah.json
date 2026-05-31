@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 19,
+    "parasha_of_book": 7,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "terumah",
+    "name": "Terumah",
+    "name_pt": "Oferta",
+    "hebrew": "תְּרוּמָה",
+    "transliteration": "Terumah",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Exodus 25:1",
+    "ref_end": "Exodus 27:19",
+    "sefaria_ref": "Exodus 25:1-27:19",
+    "chapters_covered": [25, 26, 27],
+    "chapter_start": 25,
+    "chapter_end": 27,
+    "verse_start": 1,
+    "verse_end": 19
+  },
+
+  "timeline": {
+    "period_name": "O projeto divino do Mishkan",
+    "anno_mundi_start": 2449,
+    "anno_mundi_end": 2449,
+    "era": "saida-egito",
+    "position_pct": 42,
+    "description": "Deus instrui Moshe sobre o projeto detalhado do Mishkan — o santuário portátil — e seus principais objetos sagrados: a Arca, o Kapporet, a Mesa, a Menorá e o Altar."
+  },
+
+  "summary": {
+    "short": "O projeto divino do Mishkan: a Arca com o Kapporet, a Mesa do pão da proposição, a Menorá de ouro, as cortinas e o Altar de cobre.",
+    "medium": "Ainda no alto do monte Sinai, Deus instrui Moshe sobre a construção do Mishkan — o santuário portátil para que Deus habite entre Israel. O princípio é voluntariedade: 'todo aquele cujo coração o mover'. O projeto inclui especificações precisas para a Arca da Aliança com seu Kapporet e dois querubins de ouro de onde Deus falará; a Mesa para o pão da proposição; a Menorá de ouro puro em forma de árvore com sete braços; as cortinas e coberturas do Mishkan; as tábuas e colunas de acácia; o Pano interior (Parochet) separando o Santo do Santo dos Santos; e o Altar de cobre para os sacrifícios com seu pátio.",
+    "characters_main": ["Moshe"],
+    "characters_secondary": ["Betzalel", "Oholiav"],
+    "themes": ["A presença divina entre Israel", "Voluntariedade e generosidade", "Arte e arquitetura sagrada", "Simbolismo do Mishkan", "O Santo dos Santos"]
+  },
+
+  "facts": [
+    {
+      "id": "tr001",
+      "order": 1,
+      "text": "Deus instrui Moshe a falar ao povo para trazarem uma terumá — oferta voluntária. A lista de materiais: ouro, prata, cobre; lã azul, púrpura e escarlate; linho fino; pelo de cabra; couros de carneiro tingidos; madeira de acácia; azeite; especiarias; pedras de ônix.",
+      "text_he": "מֵאֵת כָּל אִישׁ אֲשֶׁר יִדְּבֶנּוּ לִבּוֹ תִּקְחוּ אֶת תְּרוּמָתִי",
+      "refs": ["Exodus 25:2-7"],
+      "ref_start": "Exodus 25:2",
+      "ref_end": "Exodus 25:7",
+      "chapter": 25,
+      "verse_start": 2,
+      "verse_end": 7,
+      "sefaria_ref": "Exodus 25:2-7",
+      "day_of_creation": null,
+      "tags": ["terumah", "voluntária", "materiais", "ouro", "madeira-acácia"],
+      "topic": "A Oferta Voluntária — Materiais do Mishkan"
+    },
+    {
+      "id": "tr002",
+      "order": 2,
+      "text": "O propósito: 'Farão para Mim um santuário e habitarei entre eles.' Este versículo é o fundamento de todo o Mishkan — a presença divina habitando no meio de Israel. O modelo será exatamente como Deus mostrar a Moshe no monte.",
+      "text_he": "וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם",
+      "refs": ["Exodus 25:8-9"],
+      "ref_start": "Exodus 25:8",
+      "ref_end": "Exodus 25:9",
+      "chapter": 25,
+      "verse_start": 8,
+      "verse_end": 9,
+      "sefaria_ref": "Exodus 25:8-9",
+      "day_of_creation": null,
+      "tags": ["mishkan", "presença-divina", "shechina", "habitação", "propósito"],
+      "topic": "'Farão para Mim um Santuário' — A Shechina entre Israel"
+    },
+    {
+      "id": "tr003",
+      "order": 3,
+      "text": "A Arca da Aliança (Aron HaBrit): caixa de madeira de acácia coberta de ouro puro por dentro e por fora, com bordas de ouro ao redor. Dimensões: 2,5 cúbitos de comprimento, 1,5 de largura e 1,5 de altura. Argolas de ouro para as varas de transporte — que nunca serão retiradas.",
+      "text_he": "וְעָשׂוּ אֲרוֹן עֲצֵי שִׁטִּים",
+      "refs": ["Exodus 25:10-15"],
+      "ref_start": "Exodus 25:10",
+      "ref_end": "Exodus 25:15",
+      "chapter": 25,
+      "verse_start": 10,
+      "verse_end": 15,
+      "sefaria_ref": "Exodus 25:10-15",
+      "day_of_creation": null,
+      "tags": ["arca", "aron-habrit", "ouro", "acácia", "dimensões", "varas"],
+      "topic": "A Arca da Aliança — Aron HaBrit"
+    },
+    {
+      "id": "tr004",
+      "order": 4,
+      "text": "O Kapporet — a tampa da Arca — de ouro puro maciço. Dois querubins de ouro batido nos extremos, com asas abertas cobrindo o Kapporet. 'De lá Me encontrarei contigo e te falarei de tudo o que ordenarei aos filhos de Israel.'",
+      "text_he": "וְנֹעַדְתִּי לְךָ שָׁם וְדִבַּרְתִּי אִתְּךָ מֵעַל הַכַּפֹּרֶת",
+      "refs": ["Exodus 25:17-22"],
+      "ref_start": "Exodus 25:17",
+      "ref_end": "Exodus 25:22",
+      "chapter": 25,
+      "verse_start": 17,
+      "verse_end": 22,
+      "sefaria_ref": "Exodus 25:17-22",
+      "day_of_creation": null,
+      "tags": ["kapporet", "querubins", "ouro", "revelação", "encontro-divino"],
+      "topic": "O Kapporet e os Querubins — Lugar da Revelação"
+    },
+    {
+      "id": "tr005",
+      "order": 5,
+      "text": "A Mesa (Shulchan) de acácia coberta de ouro, com moldura e bordas de ouro. Sobre ela serão colocados os doze pães da proposição (Lechem HaPanim) permanentemente diante de Deus — renovados todo Shabat.",
+      "text_he": "וְנָתַתָּ עַל הַשֻּׁלְחָן לֶחֶם פָּנִים לְפָנַי תָּמִיד",
+      "refs": ["Exodus 25:23-30"],
+      "ref_start": "Exodus 25:23",
+      "ref_end": "Exodus 25:30",
+      "chapter": 25,
+      "verse_start": 23,
+      "verse_end": 30,
+      "sefaria_ref": "Exodus 25:23-30",
+      "day_of_creation": null,
+      "tags": ["shulchan", "mesa", "lechem-hapanim", "pão", "ouro"],
+      "topic": "A Mesa (Shulchan) e o Pão da Proposição"
+    },
+    {
+      "id": "tr006",
+      "order": 6,
+      "text": "A Menorá de ouro puro batido — seu pedestal, tronco e seis braços, com cálices em forma de flor de amêndoa. Sete lâmpadas que devem iluminar para a frente. Projeto exato dado por Deus a Moshe no monte.",
+      "text_he": "וְעָשִׂיתָ מְנֹרַת זָהָב טָהוֹר",
+      "refs": ["Exodus 25:31-40"],
+      "ref_start": "Exodus 25:31",
+      "ref_end": "Exodus 25:40",
+      "chapter": 25,
+      "verse_start": 31,
+      "verse_end": 40,
+      "sefaria_ref": "Exodus 25:31-40",
+      "day_of_creation": null,
+      "tags": ["menorá", "sete-braços", "ouro", "flor-de-amêndoa", "luz"],
+      "topic": "A Menorá — Sete Braços de Ouro Puro"
+    },
+    {
+      "id": "tr007",
+      "order": 7,
+      "text": "As dez cortinas do Mishkan de linho torcido, lã azul, púrpura e escarlate, com querubins bordados — trabalho de artesão especializado. Duas coberturas adicionais de pelo de cabra e couros sobre as cortinas internas.",
+      "text_he": "עֶשֶׂר יְרִיעֹת שֵׁשׁ מָשְׁזָר וּתְכֵלֶת וְאַרְגָּמָן וְתֹלַעַת שָׁנִי",
+      "refs": ["Exodus 26:1-14"],
+      "ref_start": "Exodus 26:1",
+      "ref_end": "Exodus 26:14",
+      "chapter": 26,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "Exodus 26:1-14",
+      "day_of_creation": null,
+      "tags": ["cortinas", "linho", "querubins", "bordado", "coberturas"],
+      "topic": "As Cortinas e Coberturas do Mishkan"
+    },
+    {
+      "id": "tr008",
+      "order": 8,
+      "text": "O Pano (Parochet) de lã azul, púrpura e escarlate com linho torcido — bordado com querubins. Será pendurado sobre quatro colunas para separar o Santo do Santo dos Santos. Ali, atrás do Parochet, será colocada a Arca.",
+      "text_he": "וְהִבְדִּילָה הַפָּרֹכֶת לָכֶם בֵּין הַקֹּדֶשׁ וּבֵין קֹדֶשׁ הַקֳּדָשִׁים",
+      "refs": ["Exodus 26:31-35"],
+      "ref_start": "Exodus 26:31",
+      "ref_end": "Exodus 26:35",
+      "chapter": 26,
+      "verse_start": 31,
+      "verse_end": 35,
+      "sefaria_ref": "Exodus 26:31-35",
+      "day_of_creation": null,
+      "tags": ["parochet", "véu", "kodesh-hakodashim", "separação", "arca"],
+      "topic": "O Parochet — Véu do Santo dos Santos"
+    },
+    {
+      "id": "tr009",
+      "order": 9,
+      "text": "O Altar de Bronze (Mizbeach HaNechoshet) de madeira de acácia coberto de cobre — quadrado, cinco cúbitos de lado e três de altura. Com chifres nos quatro cantos, varas para transporte, e grade de rede de cobre para as cinzas.",
+      "text_he": "וְעָשִׂיתָ אֶת הַמִּזְבֵּחַ עֲצֵי שִׁטִּים",
+      "refs": ["Exodus 27:1-8"],
+      "ref_start": "Exodus 27:1",
+      "ref_end": "Exodus 27:8",
+      "chapter": 27,
+      "verse_start": 1,
+      "verse_end": 8,
+      "sefaria_ref": "Exodus 27:1-8",
+      "day_of_creation": null,
+      "tags": ["altar", "cobre", "chifres", "acácia", "sacrifícios"],
+      "topic": "O Altar de Cobre — Mizbeach HaNechoshet"
+    },
+    {
+      "id": "tr010",
+      "order": 10,
+      "text": "O Pátio do Mishkan: cercado por cortinas de linho torcido branco sustentadas por colunas de acácia com bases de cobre. Dimensões: 100 cúbitos de comprimento, 50 de largura. A entrada tem um véu colorido.",
+      "text_he": "וְעָשִׂיתָ אֵת חֲצַר הַמִּשְׁכָּן",
+      "refs": ["Exodus 27:9-19"],
+      "ref_start": "Exodus 27:9",
+      "ref_end": "Exodus 27:19",
+      "chapter": 27,
+      "verse_start": 9,
+      "verse_end": 19,
+      "sefaria_ref": "Exodus 27:9-19",
+      "day_of_creation": null,
+      "tags": ["pátio", "chatzar", "colunas", "linho-branco", "entrada"],
+      "topic": "O Pátio do Mishkan"
+    },
+    {
+      "id": "tr011",
+      "order": 11,
+      "text": "Deus avisa Moshe: 'Olha e faz conforme o modelo que te foi mostrado no monte.' Este versículo é citado três vezes na Torah — a ênfase é que cada detalhe do Mishkan deve corresponder exatamente ao modelo divino revelado no Sinai.",
+      "text_he": "וּרְאֵה וַעֲשֵׂה בְּתַבְנִיתָם אֲשֶׁר אַתָּה מָרְאֶה בָּהָר",
+      "refs": ["Exodus 25:40"],
+      "ref_start": "Exodus 25:40",
+      "ref_end": "Exodus 25:40",
+      "chapter": 25,
+      "verse_start": 40,
+      "verse_end": 40,
+      "sefaria_ref": "Exodus 25:40",
+      "day_of_creation": null,
+      "tags": ["modelo-divino", "exatidão", "monte", "construção", "revelação"],
+      "topic": "'Conforme o Modelo do Monte' — Exatidão Divina"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 25:1",  "ref_end": "Exodus 25:16", "sefaria_ref": "Exodus 25:1-16" },
+    { "number": 2, "ref_start": "Exodus 25:17", "ref_end": "Exodus 25:30", "sefaria_ref": "Exodus 25:17-30" },
+    { "number": 3, "ref_start": "Exodus 25:31", "ref_end": "Exodus 26:14", "sefaria_ref": "Exodus 25:31-26:14" },
+    { "number": 4, "ref_start": "Exodus 26:15", "ref_end": "Exodus 26:30", "sefaria_ref": "Exodus 26:15-30" },
+    { "number": 5, "ref_start": "Exodus 26:31", "ref_end": "Exodus 27:10", "sefaria_ref": "Exodus 26:31-27:10" },
+    { "number": 6, "ref_start": "Exodus 27:1",  "ref_end": "Exodus 27:8",  "sefaria_ref": "Exodus 27:1-8" },
+    { "number": 7, "ref_start": "Exodus 27:9",  "ref_end": "Exodus 27:19", "sefaria_ref": "Exodus 27:9-19" }
+  ],
+
+  "haftarah": {
+    "ref": "I Kings 5:26-6:13",
+    "sefaria_ref": "I Kings 5:26-6:13",
+    "note": "Tema: Shlomo constrói o Templo em Jerusalém — paralelo às instruções do Mishkan"
+  },
+
+  "connections": {
+    "next_parasha": "tetzaveh",
+    "prev_parasha": "mishpatim",
+    "thematic_links": [
+      { "parasha": "mishpatim", "theme": "As leis civis precedem o projeto do Mishkan" },
+      { "parasha": "tetzaveh",  "theme": "As vestes sacerdotais e a inauguração do sacerdócio" },
+      { "parasha": "vayakhel",  "theme": "A execução do projeto descrito aqui" }
+    ]
+  }
+}

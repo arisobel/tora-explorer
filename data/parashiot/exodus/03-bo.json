@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 15,
+    "parasha_of_book": 3,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "bo",
+    "name": "Bo",
+    "name_pt": "Vai",
+    "hebrew": "בֹּא",
+    "transliteration": "Bo",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Exodus 10:1",
+    "ref_end": "Exodus 13:16",
+    "sefaria_ref": "Exodus 10:1-13:16",
+    "chapters_covered": [10, 11, 12, 13],
+    "chapter_start": 10,
+    "chapter_end": 13,
+    "verse_start": 1,
+    "verse_end": 16
+  },
+
+  "timeline": {
+    "period_name": "As últimas pragas, o Pessach e o Êxodo",
+    "anno_mundi_start": 2448,
+    "anno_mundi_end": 2448,
+    "era": "egito",
+    "position_pct": 42,
+    "description": "As três últimas pragas, a instituição do Pessach como primeiro mandamento coletivo de Israel, a morte dos primogênitos e a saída do Egito."
+  },
+
+  "summary": {
+    "short": "As últimas três pragas, a instituição do Pessach, a morte dos primogênitos às meia-noite e o início do Êxodo.",
+    "medium": "A parashá abre com Deus revelando que Ele endurece o coração de Faraó para multiplicar Seus sinais — para que Israel conte às futuras gerações. Seguem-se as pragas de gafanhotos e trevas. Antes da última praga, Deus institui o primeiro mandamento coletivo de Israel: o sacrifício do Pessach, com suas leis detalhadas. Na meia-noite, todos os primogênitos egípcios morrem. Faraó expulsa Israel às pressas. Israel parte com 600 mil homens, levando os utensílios de ouro e prata que pedira aos egípcios — e os ossos de Yossef. A parashá encerra com as leis do Pessach, tefilin e redimir o primogênito.",
+    "characters_main": ["Moshe", "Aharon", "Faraó", "Bnei Israel"],
+    "characters_secondary": ["os primogênitos egípcios", "Yossef (seus ossos)"],
+    "themes": ["As pragas finais", "O Pessach — primeiro mandamento", "A morte dos primogênitos", "O Êxodo", "Memória e transmissão", "Tefilin"]
+  },
+
+  "facts": [
+    {
+      "id": "bo001",
+      "order": 1,
+      "text": "Deus diz a Moshe que Ele endureceu o coração de Faraó para multiplicar Seus sinais — para que Israel conte às gerações futuras como Deus brincou com o Egito. 'E sabereis que Eu sou יהוה.'",
+      "text_he": "לְמַעַן תְּסַפֵּר בְּאָזְנֵי בִנְךָ וּבֶן בִּנְךָ",
+      "refs": ["Exodus 10:1-2"],
+      "ref_start": "Exodus 10:1",
+      "ref_end": "Exodus 10:2",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 2,
+      "sefaria_ref": "Exodus 10:1-2",
+      "day_of_creation": null,
+      "tags": ["endurecimento", "transmissão", "gerações", "propósito", "seder"],
+      "topic": "O Propósito das Pragas — Contar às Gerações"
+    },
+    {
+      "id": "bo002",
+      "order": 2,
+      "text": "Praga 8 — Gafanhotos: gafanhotos cobrem toda a terra do Egito, escurecendo o solo, e devoram tudo o que restou do granizo. Os servos de Faraó imploram que deixe Israel ir. Faraó negocia — apenas os homens podem ir. Deus sopra um vento que lança todos os gafanhotos ao mar. Faraó endurece.",
+      "text_he": "וַיְכַס אֶת עֵין כָּל הָאָרֶץ וַתֶּחְשַׁךְ הָאָרֶץ",
+      "refs": ["Exodus 10:15"],
+      "ref_start": "Exodus 10:13",
+      "ref_end": "Exodus 10:20",
+      "chapter": 10,
+      "verse_start": 13,
+      "verse_end": 20,
+      "sefaria_ref": "Exodus 10:13-20",
+      "day_of_creation": null,
+      "tags": ["praga-8", "gafanhotos", "arbeh", "negociação", "vento"],
+      "topic": "Praga 8 — Gafanhotos (Arbeh)"
+    },
+    {
+      "id": "bo003",
+      "order": 3,
+      "text": "Praga 9 — Trevas: Moshe estende a mão e uma escuridão palpável cobre o Egito por três dias — ninguém se levanta do lugar. Mas para todos os filhos de Israel havia luz em suas moradias.",
+      "text_he": "וְלֹא רָאוּ אִישׁ אֶת אָחִיו וְלֹא קָמוּ אִישׁ מִתַּחְתָּיו שְׁלֹשֶׁת יָמִים",
+      "refs": ["Exodus 10:22-23"],
+      "ref_start": "Exodus 10:22",
+      "ref_end": "Exodus 10:23",
+      "chapter": 10,
+      "verse_start": 22,
+      "verse_end": 23,
+      "sefaria_ref": "Exodus 10:22-23",
+      "day_of_creation": null,
+      "tags": ["praga-9", "trevas", "choshech", "luz-para-israel", "distinção"],
+      "topic": "Praga 9 — Trevas (Choshech) — Israel tem Luz"
+    },
+    {
+      "id": "bo004",
+      "order": 4,
+      "text": "Faraó oferece deixar Israel ir — mas sem o gado. Moshe recusa: 'Nem uma úngula ficará.' Faraó o expulsa: 'No dia em que vires meu rosto, morrerás.' Moshe: 'Correto — não voltarei a ver teu rosto.'",
+      "text_he": "לֹא תֹסִף רְאוֹת פָּנַי כִּי בְּיוֹם רְאֹתְךָ פָנַי תָּמוּת",
+      "refs": ["Exodus 10:28-29"],
+      "ref_start": "Exodus 10:28",
+      "ref_end": "Exodus 10:29",
+      "chapter": 10,
+      "verse_start": 28,
+      "verse_end": 29,
+      "sefaria_ref": "Exodus 10:28-29",
+      "day_of_creation": null,
+      "tags": ["faraó", "gado", "expulsão", "última-audiência", "moshe"],
+      "topic": "Última Audiência com Faraó — 'Não Voltarás a Ver Meu Rosto'"
+    },
+    {
+      "id": "bo005",
+      "order": 5,
+      "text": "Deus anuncia a última praga: à meia-noite morrerá todo primogênito egípcio — do primogênito de Faraó ao primogênito da escrava, e todo primogênito do gado. Em todo o Egito haverá grande clamor, mas em Israel nenhum cão latirá.",
+      "text_he": "וְכָל בְּכוֹר בְּאֶרֶץ מִצְרַיִם יָמוּת",
+      "refs": ["Exodus 11:4-7"],
+      "ref_start": "Exodus 11:4",
+      "ref_end": "Exodus 11:7",
+      "chapter": 11,
+      "verse_start": 4,
+      "verse_end": 7,
+      "sefaria_ref": "Exodus 11:4-7",
+      "day_of_creation": null,
+      "tags": ["décima-praga", "primogênitos", "meia-noite", "clamor", "israel-protegido"],
+      "topic": "Anúncio da Décima Praga — Morte dos Primogênitos"
+    },
+    {
+      "id": "bo006",
+      "order": 6,
+      "text": "Deus institui o primeiro mandamento coletivo de Israel: o mês de Nissan será o primeiro dos meses. No décimo dia cada família tomará um cordeiro; no décimo-quarto o abaterá ao entardecer.",
+      "text_he": "הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים רִאשׁוֹן הוּא לָכֶם לְחָדְשֵׁי הַשָּׁנָה",
+      "refs": ["Exodus 12:2-6"],
+      "ref_start": "Exodus 12:2",
+      "ref_end": "Exodus 12:6",
+      "chapter": 12,
+      "verse_start": 2,
+      "verse_end": 6,
+      "sefaria_ref": "Exodus 12:2-6",
+      "day_of_creation": null,
+      "tags": ["pessach", "nissan", "primeiro-mandamento", "calendário", "cordeiro"],
+      "topic": "O Primeiro Mandamento — Qidush HaChodesh"
+    },
+    {
+      "id": "bo007",
+      "order": 7,
+      "text": "O sangue do cordeiro será colocado nos dois umbrais e na verga superior das casas. Na noite do décimo-quarto comerão a carne assada com ervas amargas e pão ázimo — apressadamente. 'É o Pessach para Deus.'",
+      "text_he": "וְאָכְלוּ אֶת הַבָּשָׂר בַּלַּיְלָה הַזֶּה צְלִי אֵשׁ וּמַצּוֹת עַל מְרֹרִים יֹאכְלֻהוּ",
+      "refs": ["Exodus 12:7-11"],
+      "ref_start": "Exodus 12:7",
+      "ref_end": "Exodus 12:11",
+      "chapter": 12,
+      "verse_start": 7,
+      "verse_end": 11,
+      "sefaria_ref": "Exodus 12:7-11",
+      "day_of_creation": null,
+      "tags": ["pessach", "sangue", "umbrais", "matzá", "maror", "korban-pessach"],
+      "topic": "O Korban Pessach — Sangue, Maror e Matzá"
+    },
+    {
+      "id": "bo008",
+      "order": 8,
+      "text": "Deus passará pelo Egito naquela noite e ferirá todo primogênito. 'Ao ver o sangue nos umbrais, passarei adiante — e a praga não vos destruirá.' Este dia será commemorado como lei eterna em todas as gerações.",
+      "text_he": "וְרָאִיתִי אֶת הַדָּם וּפָסַחְתִּי עֲלֵכֶם",
+      "refs": ["Exodus 12:13"],
+      "ref_start": "Exodus 12:12",
+      "ref_end": "Exodus 12:14",
+      "chapter": 12,
+      "verse_start": 12,
+      "verse_end": 14,
+      "sefaria_ref": "Exodus 12:12-14",
+      "day_of_creation": null,
+      "tags": ["passagem", "sangue", "proteção", "lei-eterna", "pessach"],
+      "topic": "'Passarei Adiante' — O Sangue nos Umbrais"
+    },
+    {
+      "id": "bo009",
+      "order": 9,
+      "text": "À meia-noite do décimo-quarto de Nissan, Deus fere todo primogênito no Egito. Faraó se levanta à noite — ele e todos os seus servos e todo o Egito. Grande clamor, pois não há casa sem morto. Faraó convoca Moshe e Aharon e os expulsa: 'Ide, servi a Deus!'",
+      "text_he": "וַיְהִי בַּחֲצִי הַלַּיְלָה וַה' הִכָּה כָל בְּכוֹר בְּאֶרֶץ מִצְרָיִם",
+      "refs": ["Exodus 12:29-31"],
+      "ref_start": "Exodus 12:29",
+      "ref_end": "Exodus 12:31",
+      "chapter": 12,
+      "verse_start": 29,
+      "verse_end": 31,
+      "sefaria_ref": "Exodus 12:29-31",
+      "day_of_creation": null,
+      "tags": ["décima-praga", "meia-noite", "primogênitos", "clamor", "expulsão"],
+      "topic": "A Décima Praga — Morte dos Primogênitos à Meia-Noite"
+    },
+    {
+      "id": "bo010",
+      "order": 10,
+      "text": "Os egípcios premiam Israel para que parta rapidamente — temem que todos morram. Israel pede utensílios de ouro, prata e roupas: os egípcios os dão. Israel 'despoliou' o Egito.",
+      "text_he": "וַיַּשְׁאִלוּם וַיְנַצְּלוּ אֶת מִצְרָיִם",
+      "refs": ["Exodus 12:35-36"],
+      "ref_start": "Exodus 12:35",
+      "ref_end": "Exodus 12:36",
+      "chapter": 12,
+      "verse_start": 35,
+      "verse_end": 36,
+      "sefaria_ref": "Exodus 12:35-36",
+      "day_of_creation": null,
+      "tags": ["ouro", "prata", "despoliou", "egito", "riqueza"],
+      "topic": "Israel Despolía o Egito — Ouro e Prata"
+    },
+    {
+      "id": "bo011",
+      "order": 11,
+      "text": "Israel parte de Ramsés em direção a Sucot — aproximadamente 600 mil homens de pé, além das crianças. Uma grande mistura de povos saiu com eles. Moshe leva os ossos de Yossef, como ele havia pedido.",
+      "text_he": "וְכֵן עָשָׂה מֹשֶׁה כַּאֲשֶׁר צִוָּה יוֹסֵף",
+      "refs": ["Exodus 12:37-38"],
+      "ref_start": "Exodus 12:37",
+      "ref_end": "Exodus 13:19",
+      "chapter": 12,
+      "verse_start": 37,
+      "verse_end": 38,
+      "sefaria_ref": "Exodus 12:37-38",
+      "day_of_creation": null,
+      "tags": ["êxodo", "600-mil", "sucot", "erev-rav", "ossos-de-yossef"],
+      "topic": "O Êxodo — 600 Mil Homens Partem"
+    },
+    {
+      "id": "bo012",
+      "order": 12,
+      "text": "Deus ordena a Moshe a mitzvá de Tefilin: 'Será para ti como um sinal na mão e um lembrete entre teus olhos — para que a Torá de Deus esteja em tua boca, pois com mão forte Deus te tirou do Egito.'",
+      "text_he": "וְהָיָה לְךָ לְאוֹת עַל יָדְךָ וּלְזִכָּרוֹן בֵּין עֵינֶיךָ",
+      "refs": ["Exodus 13:9"],
+      "ref_start": "Exodus 13:9",
+      "ref_end": "Exodus 13:9",
+      "chapter": 13,
+      "verse_start": 9,
+      "verse_end": 9,
+      "sefaria_ref": "Exodus 13:9",
+      "day_of_creation": null,
+      "tags": ["tefilin", "sinal", "mão", "olhos", "memória", "êxodo"],
+      "topic": "Mitzvá de Tefilin — Sinal da Mão e entre os Olhos"
+    },
+    {
+      "id": "bo013",
+      "order": 13,
+      "text": "Deus ordena a consagração dos primogênitos: 'Todo primogênito que abre o ventre entre os filhos de Israel, do homem e do animal, é Meu.' Em todo tempo futuro, o pai deverá resgatar o filho primogênito com cinco siclos de prata.",
+      "text_he": "קַדֶּשׁ לִי כָל בְּכוֹר פֶּטֶר כָּל רֶחֶם בִּבְנֵי יִשְׂרָאֵל",
+      "refs": ["Exodus 13:2"],
+      "ref_start": "Exodus 13:2",
+      "ref_end": "Exodus 13:16",
+      "chapter": 13,
+      "verse_start": 2,
+      "verse_end": 16,
+      "sefaria_ref": "Exodus 13:2-16",
+      "day_of_creation": null,
+      "tags": ["primogênito", "pidyon-haben", "consagração", "resgate", "cinco-siclos"],
+      "topic": "Consagração e Resgate do Primogênito"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 10:1",  "ref_end": "Exodus 10:11", "sefaria_ref": "Exodus 10:1-11" },
+    { "number": 2, "ref_start": "Exodus 10:12", "ref_end": "Exodus 10:23", "sefaria_ref": "Exodus 10:12-23" },
+    { "number": 3, "ref_start": "Exodus 10:24", "ref_end": "Exodus 11:3",  "sefaria_ref": "Exodus 10:24-11:3" },
+    { "number": 4, "ref_start": "Exodus 11:4",  "ref_end": "Exodus 12:20", "sefaria_ref": "Exodus 11:4-12:20" },
+    { "number": 5, "ref_start": "Exodus 12:21", "ref_end": "Exodus 12:28", "sefaria_ref": "Exodus 12:21-28" },
+    { "number": 6, "ref_start": "Exodus 12:29", "ref_end": "Exodus 12:51", "sefaria_ref": "Exodus 12:29-51" },
+    { "number": 7, "ref_start": "Exodus 13:1",  "ref_end": "Exodus 13:16", "sefaria_ref": "Exodus 13:1-16" }
+  ],
+
+  "haftarah": {
+    "ref": "Jeremiah 46:13-28",
+    "sefaria_ref": "Jeremiah 46:13-28",
+    "note": "Tema: julgamento divino sobre o Egito — paralelo às pragas e ao Êxodo"
+  },
+
+  "connections": {
+    "next_parasha": "beshalach",
+    "prev_parasha": "vaera",
+    "thematic_links": [
+      { "parasha": "vaera",      "theme": "As sete primeiras pragas — Bo traz as três últimas e a saída" },
+      { "parasha": "beshalach",  "theme": "Israel sai do Egito e enfrenta o mar e o deserto" }
+    ]
+  }
+}

@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 14,
+    "parasha_of_book": 2,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "vaera",
+    "name": "Va'era",
+    "name_pt": "E apareci",
+    "hebrew": "וָאֵרָא",
+    "transliteration": "Va'era",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Exodus 6:2",
+    "ref_end": "Exodus 9:35",
+    "sefaria_ref": "Exodus 6:2-9:35",
+    "chapters_covered": [6, 7, 8, 9],
+    "chapter_start": 6,
+    "chapter_end": 9,
+    "verse_start": 2,
+    "verse_end": 35
+  },
+
+  "timeline": {
+    "period_name": "As primeiras sete pragas do Egito",
+    "anno_mundi_start": 2447,
+    "anno_mundi_end": 2448,
+    "era": "egito",
+    "position_pct": 42,
+    "description": "Deus revela o nome יהוה em sua plenitude e envia as sete primeiras pragas sobre o Egito enquanto o coração de Faraó endurece."
+  },
+
+  "summary": {
+    "short": "Deus revela Seu nome e Sua aliança, e envia as sete primeiras pragas sobre o Egito — Faraó recusa a cada vez.",
+    "medium": "A parashá abre com Deus revelando o nome יהוה em sua plenitude — que Ele não havia revelado aos patriarcas nesse sentido. Ele reafirma a aliança de resgatar Israel. Os israelitas não ouvem por causa do espírito angustiado. Deus instrui Moshe e Aharon com a genealogia sacerdotal, e envia as sete primeiras das dez pragas: sangue, rãs, piolhos, mistura de bestas, pestilência no gado, chagas e granizo. A cada praga Faraó endurece o coração — ora por vontade própria, ora com a ajuda divina — e recusa-se a deixar o povo partir.",
+    "characters_main": ["Moshe", "Aharon", "Faraó"],
+    "characters_secondary": ["os magos egípcios", "os servos de Faraó"],
+    "themes": ["Revelação do Nome Divino", "Coração endurecido", "As pragas como julgamento", "Fé versus incredulidade", "A distinção de Israel"]
+  },
+
+  "facts": [
+    {
+      "id": "ve001",
+      "order": 1,
+      "text": "Deus fala a Moshe: 'Eu sou יהוה. Apareci a Avraham, Yitzchak e Yaakov como El Shadai, mas com Meu nome יהוה não fui conhecido por eles.' Deus reafirma a aliança: tirará Israel do Egito e os levará à terra prometida.",
+      "text_he": "וָאֵרָא אֶל אַבְרָהָם אֶל יִצְחָק וְאֶל יַעֲקֹב בְּאֵל שַׁדַּי וּשְׁמִי ה' לֹא נוֹדַעְתִּי לָהֶם",
+      "refs": ["Exodus 6:2-8"],
+      "ref_start": "Exodus 6:2",
+      "ref_end": "Exodus 6:8",
+      "chapter": 6,
+      "verse_start": 2,
+      "verse_end": 8,
+      "sefaria_ref": "Exodus 6:2-8",
+      "day_of_creation": null,
+      "tags": ["nome-divino", "havayah", "aliança", "redenção", "el-shadai"],
+      "topic": "Revelação do Nome יהוה — A Aliança Renovada"
+    },
+    {
+      "id": "ve002",
+      "order": 2,
+      "text": "Israel não ouve Moshe por angústia de espírito e trabalho pesado. Deus envia Moshe e Aharon ao Faraó — Moshe, de 80 anos, e Aharon, de 83, estão diante de Faraó pela primeira vez com o bastão de Aharon.",
+      "text_he": "וְלֹא שָׁמְעוּ אֶל מֹשֶׁה מִקֹּצֶר רוּחַ וּמֵעֲבֹדָה קָשָׁה",
+      "refs": ["Exodus 6:9-13"],
+      "ref_start": "Exodus 6:9",
+      "ref_end": "Exodus 6:13",
+      "chapter": 6,
+      "verse_start": 9,
+      "verse_end": 13,
+      "sefaria_ref": "Exodus 6:9-13",
+      "day_of_creation": null,
+      "tags": ["israel", "angústia", "80-anos", "aharon", "missão"],
+      "topic": "Israel Não Ouve — Moshe e Aharon Enviados"
+    },
+    {
+      "id": "ve003",
+      "order": 3,
+      "text": "O bastão de Aharon transforma-se em serpente diante de Faraó. Os magos egípcios fazem o mesmo com seus encantamentos. Mas o bastão de Aharon engole os dos magos — e o coração de Faraó endurece.",
+      "text_he": "וַיַּשְׁלֵךְ אַהֲרֹן אֶת מַטֵּהוּ לִפְנֵי פַרְעֹה וְלִפְנֵי עֲבָדָיו וַיְהִי לְתַנִּין",
+      "refs": ["Exodus 7:10-12"],
+      "ref_start": "Exodus 7:10",
+      "ref_end": "Exodus 7:12",
+      "chapter": 7,
+      "verse_start": 10,
+      "verse_end": 12,
+      "sefaria_ref": "Exodus 7:10-12",
+      "day_of_creation": null,
+      "tags": ["bastão", "serpente", "magos", "engoliu", "faraó"],
+      "topic": "O Bastão-Serpente — Sinal Inicial"
+    },
+    {
+      "id": "ve004",
+      "order": 4,
+      "text": "Praga 1 — Sangue: Aharon estende o bastão sobre o Nilo e todas as águas do Egito se transformam em sangue. Os peixes morrem, o rio fede. Os magos egípcios fazem o mesmo. Faraó não liga — vai para casa.",
+      "text_he": "וְהַדָּם הָיָה בְּכָל אֶרֶץ מִצְרָיִם",
+      "refs": ["Exodus 7:20-21"],
+      "ref_start": "Exodus 7:20",
+      "ref_end": "Exodus 7:21",
+      "chapter": 7,
+      "verse_start": 20,
+      "verse_end": 21,
+      "sefaria_ref": "Exodus 7:20-21",
+      "day_of_creation": null,
+      "tags": ["praga-1", "sangue", "nilo", "peixes", "dam"],
+      "topic": "Praga 1 — Sangue (Dam)"
+    },
+    {
+      "id": "ve005",
+      "order": 5,
+      "text": "Praga 2 — Rãs: rãs sobem do Nilo e invadem toda a terra. Faraó pede a Moshe que as retire — e promete deixar o povo ir. Moshe ora; as rãs morrem. Faraó endurece o coração e não cumpre a promessa.",
+      "text_he": "וַיַּעַל הַצְּפַרְדֵּעַ וַתְּכַס אֶת אֶרֶץ מִצְרָיִם",
+      "refs": ["Exodus 8:2-3"],
+      "ref_start": "Exodus 8:2",
+      "ref_end": "Exodus 8:3",
+      "chapter": 8,
+      "verse_start": 2,
+      "verse_end": 3,
+      "sefaria_ref": "Exodus 8:2-3",
+      "day_of_creation": null,
+      "tags": ["praga-2", "rãs", "tzfardea", "promessa-falsa", "faraó"],
+      "topic": "Praga 2 — Rãs (Tzfardea)"
+    },
+    {
+      "id": "ve006",
+      "order": 6,
+      "text": "Praga 3 — Piolhos/Lêndeas: Aharon fere o pó da terra com o bastão e todo o pó do Egito torna-se piolhos. Os magos tentam reproduzir mas fracassam e declaram: 'É o dedo de Deus!' — mas Faraó endurece.",
+      "text_he": "וַיֹּאמְרוּ הַחַרְטֻמִּים אֶל פַּרְעֹה אֶצְבַּע אֱלֹהִים הִוא",
+      "refs": ["Exodus 8:15"],
+      "ref_start": "Exodus 8:12",
+      "ref_end": "Exodus 8:15",
+      "chapter": 8,
+      "verse_start": 12,
+      "verse_end": 15,
+      "sefaria_ref": "Exodus 8:12-15",
+      "day_of_creation": null,
+      "tags": ["praga-3", "piolhos", "kinim", "dedo-de-deus", "magos"],
+      "topic": "Praga 3 — Piolhos (Kinim) — 'É o Dedo de Deus'"
+    },
+    {
+      "id": "ve007",
+      "order": 7,
+      "text": "Praga 4 — Mistura de bestas/Insetos: hordas de animais selvagens invadem o Egito — mas a terra de Goshen, onde Israel vive, está preservada. Primeira distinção explícita entre Egito e Israel.",
+      "text_he": "וְהִפְלֵיתִי בַיּוֹם הַהוּא אֶת אֶרֶץ גֹּשֶׁן אֲשֶׁר עַמִּי עֹמֵד עָלֶיהָ",
+      "refs": ["Exodus 8:19-20"],
+      "ref_start": "Exodus 8:18",
+      "ref_end": "Exodus 8:20",
+      "chapter": 8,
+      "verse_start": 18,
+      "verse_end": 20,
+      "sefaria_ref": "Exodus 8:18-20",
+      "day_of_creation": null,
+      "tags": ["praga-4", "arov", "goshen", "distinção", "israel-protegido"],
+      "topic": "Praga 4 — Arov — Goshen Preservada"
+    },
+    {
+      "id": "ve008",
+      "order": 8,
+      "text": "Praga 5 — Pestilência no gado: todo o gado dos egípcios morre — cavalos, asnos, camelos, bois, ovelhas. Mas do gado de Israel não morre um só animal. Faraó verifica e endurece o coração.",
+      "text_he": "וּמִמִּקְנֵה בְנֵי יִשְׂרָאֵל לֹא מֵת אֶחָד",
+      "refs": ["Exodus 9:6-7"],
+      "ref_start": "Exodus 9:3",
+      "ref_end": "Exodus 9:7",
+      "chapter": 9,
+      "verse_start": 3,
+      "verse_end": 7,
+      "sefaria_ref": "Exodus 9:3-7",
+      "day_of_creation": null,
+      "tags": ["praga-5", "pestilência", "dever", "gado", "israel-salvo"],
+      "topic": "Praga 5 — Pestilência no Gado (Dever)"
+    },
+    {
+      "id": "ve009",
+      "order": 9,
+      "text": "Praga 6 — Chagas/Furúnculos: Moshe e Aharon jogam punhados de cinza no ar diante de Faraó. Chagas surgem nos egípcios e nos animais. Os magos não podem sequer comparecer diante de Moshe por causa das chagas.",
+      "text_he": "וַיִּהְיוּ שְׁחִין אֲבַעְבֻּעֹת פֹּרֵחַ בָּאָדָם וּבַבְּהֵמָה",
+      "refs": ["Exodus 9:10-11"],
+      "ref_start": "Exodus 9:10",
+      "ref_end": "Exodus 9:11",
+      "chapter": 9,
+      "verse_start": 10,
+      "verse_end": 11,
+      "sefaria_ref": "Exodus 9:10-11",
+      "day_of_creation": null,
+      "tags": ["praga-6", "chagas", "shchin", "cinza", "magos-vencidos"],
+      "topic": "Praga 6 — Chagas (Shchin)"
+    },
+    {
+      "id": "ve010",
+      "order": 10,
+      "text": "Deus avisa Faraó antes da praga de granizo: 'Para isso te mantive de pé — para mostrar Meu poder.' Alguns servos de Faraó que temeram a palavra de Deus recolheram seus escravos e gado.",
+      "text_he": "וּלְמַעַן סַפֵּר שְׁמִי בְּכָל הָאָרֶץ",
+      "refs": ["Exodus 9:15-20"],
+      "ref_start": "Exodus 9:15",
+      "ref_end": "Exodus 9:20",
+      "chapter": 9,
+      "verse_start": 15,
+      "verse_end": 20,
+      "sefaria_ref": "Exodus 9:15-20",
+      "day_of_creation": null,
+      "tags": ["praga-7", "granizo", "aviso", "tementes", "propósito-divino"],
+      "topic": "Praga 7 — Aviso do Granizo — Tementes a Deus"
+    },
+    {
+      "id": "ve011",
+      "order": 11,
+      "text": "Praga 7 — Granizo: trovões, fogo e granizo extremamente pesado caem sobre o Egito — o pior desde que o Egito existiu. A terra de Goshen, onde Israel está, não é atingida. Faraó confessa: 'Pequei — Deus é justo, eu e meu povo somos culpados.' Mas ao parar o granizo, endurece de novo.",
+      "text_he": "חָטָאתִי הַפַּעַם ה' הַצַּדִּיק וַאֲנִי וְעַמִּי הָרְשָׁעִים",
+      "refs": ["Exodus 9:27-28"],
+      "ref_start": "Exodus 9:24",
+      "ref_end": "Exodus 9:35",
+      "chapter": 9,
+      "verse_start": 24,
+      "verse_end": 35,
+      "sefaria_ref": "Exodus 9:24-35",
+      "day_of_creation": null,
+      "tags": ["praga-7", "granizo", "barad", "confissão", "endurecimento"],
+      "topic": "Praga 7 — Granizo (Barad) — A Confissão de Faraó"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 6:2",  "ref_end": "Exodus 6:13", "sefaria_ref": "Exodus 6:2-13" },
+    { "number": 2, "ref_start": "Exodus 6:14", "ref_end": "Exodus 6:28", "sefaria_ref": "Exodus 6:14-28" },
+    { "number": 3, "ref_start": "Exodus 6:29", "ref_end": "Exodus 7:7",  "sefaria_ref": "Exodus 6:29-7:7" },
+    { "number": 4, "ref_start": "Exodus 7:8",  "ref_end": "Exodus 8:6",  "sefaria_ref": "Exodus 7:8-8:6" },
+    { "number": 5, "ref_start": "Exodus 8:7",  "ref_end": "Exodus 8:18", "sefaria_ref": "Exodus 8:7-18" },
+    { "number": 6, "ref_start": "Exodus 8:19", "ref_end": "Exodus 9:16", "sefaria_ref": "Exodus 8:19-9:16" },
+    { "number": 7, "ref_start": "Exodus 9:17", "ref_end": "Exodus 9:35", "sefaria_ref": "Exodus 9:17-35" }
+  ],
+
+  "haftarah": {
+    "ref": "Ezekiel 28:25-29:21",
+    "sefaria_ref": "Ezekiel 28:25-29:21",
+    "note": "Tema: o julgamento divino sobre o Egito — paralelo às pragas; Ezequiel profetiza contra Faraó"
+  },
+
+  "connections": {
+    "next_parasha": "bo",
+    "prev_parasha": "shemot",
+    "thematic_links": [
+      { "parasha": "shemot",     "theme": "Moshe recebeu a missão — agora começa a executá-la com as pragas" },
+      { "parasha": "bo",         "theme": "Continuação das pragas — as últimas três e o Êxodo" }
+    ]
+  }
+}

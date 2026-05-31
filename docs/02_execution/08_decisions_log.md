@@ -16,7 +16,7 @@
 
 **Context:** Need a free, authoritative source for Hebrew + English text.
 
-**Decision:** Use Sefaria public API (`sefaria.org/api/texts/{ref}`) with no auth token.
+**Decision:** Use Sefaria public API with no auth token. The current implementation uses `sefaria.org/api/v3/texts/{ref}`.
 
 **Impact:** No API key needed. Dependent on Sefaria uptime and CORS policy. Verse text is always current/authoritative.
 
@@ -49,3 +49,43 @@
 **Decision:** `index.json.parashiot[n].facts_count` must be updated manually when facts are added to a parasha JSON.
 
 **Impact:** Risk of drift. Mitigation: schema doc notes this requirement. Future improvement could add a validation script.
+
+---
+
+## 2026-05-31 — Documentation reconciled to repository reality
+
+**Context:** Several docs still described an older state where Genesis data and the parasha drawer were incomplete, while the repository now contains all 12 Genesis files, a working Genesis drawer, and partial Exodus data.
+
+**Decision:** Treat `docs/02_execution/07_progress.md` as the operational source of truth for current state, keep `09_backlog.md` focused on next work, and keep `KNOWN_ISSUES.md` limited to verified issues.
+
+**Impact:** Next iterations should start from the real blockers: missing Exodus files, Genesis-only drawer assumptions, book-aware Pessukim navigation, and validation tooling.
+
+---
+
+## 2026-05-31 — JSON-first visual content strategy
+
+**Context:** The project needs richer drill-down views and sensory visual markers, including icons or images for narrative facts. A database could support editing, but would add backend, deployment, authentication, migrations, and storage complexity before those needs are proven.
+
+**Decision:** Keep static JSON as the public app runtime format. Add optional visual metadata to facts, parashiot, books, and timeline events. Store images/icons as separate static files under a future `assets/` folder and reference them from JSON. Defer database usage until a real authoring workflow requires it.
+
+**Impact:** The next implementation can add visual markers incrementally without changing hosting architecture. A future local `editor.html` / `admin.html` can edit or export JSON through forms. If a database is introduced later, it should act as an authoring backend that exports the same JSON format consumed by the static app.
+
+---
+
+## 2026-05-31 — CapRover tar packaging
+
+**Context:** The project needs a repeatable way to deploy the static app to CapRover while preserving the zero-build runtime.
+
+**Decision:** Add a CapRover `captain-definition`, a minimal Nginx `Dockerfile`, and a PowerShell packaging script that creates timestamped `.tar` files under `dist/`.
+
+**Impact:** Deployment artifacts are generated locally with `scripts/build-caprover.ps1`. The script includes only runtime files and keeps the 5 newest CapRover tar packages in `dist/`.
+
+---
+
+## 2026-05-31 — Same-origin Sefaria proxy for production
+
+**Context:** `corsproxy.io` free usage is limited to localhost/development origins, so the deployed CapRover app could not fetch Sefaria passages in production.
+
+**Decision:** Add an Nginx reverse proxy at `/api/sefaria/` and update browser code to call that same-origin path in production. Local `file://` and localhost usage can still fall back to `corsproxy.io`.
+
+**Impact:** Production Sefaria calls no longer depend on a public CORS proxy. CapRover packages now include `nginx.conf`, and the Docker image uses it as the default Nginx site config.

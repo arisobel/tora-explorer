@@ -1,0 +1,252 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 17,
+    "parasha_of_book": 5,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "yitro",
+    "name": "Yitro",
+    "name_pt": "Jetro",
+    "hebrew": "יִתְרוֹ",
+    "transliteration": "Yitro",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Exodus 18:1",
+    "ref_end": "Exodus 20:23",
+    "sefaria_ref": "Exodus 18:1-20:23",
+    "chapters_covered": [18, 19, 20],
+    "chapter_start": 18,
+    "chapter_end": 20,
+    "verse_start": 1,
+    "verse_end": 23
+  },
+
+  "timeline": {
+    "period_name": "Yitro, a chegada ao Sinai e os Dez Mandamentos",
+    "anno_mundi_start": 2448,
+    "anno_mundi_end": 2449,
+    "era": "saida-egito",
+    "position_pct": 42,
+    "description": "Yitro visita Moshe e aconselha a delegação do julgamento. Israel chega ao Sinai, aceita a aliança e recebe os Dez Mandamentos na Revelação."
+  },
+
+  "summary": {
+    "short": "Yitro aconselha Moshe sobre a delegação da justiça, Israel chega ao Sinai e recebe os Dez Mandamentos.",
+    "medium": "Yitro, sogro de Moshe, ouve tudo o que Deus fez com Moshe e Israel e vem ao encontro deles no deserto, trazendo Tziporah e os dois filhos. Ele testemunha Moshe julgando o povo do amanhecer ao anoitecer e o aconselha: nomeie juízes em níveis hierárquicos. Israel acampa ao pé do Sinai. Deus convida Israel para ser 'um reino de sacerdotes e uma nação santa' — e o povo aceita. Após três dias de preparação, a Revelação: trovões, relâmpagos, nuvem espessa, som de shofar. Deus fala os Dez Mandamentos (Aseret HaDibrot) diretamente ao povo.",
+    "characters_main": ["Moshe", "Yitro", "Bnei Israel"],
+    "characters_secondary": ["Aharon", "os 70 anciãos", "Tziporah", "Gershom", "Eliezer"],
+    "themes": ["Administração e delegação", "Chegada ao Sinai", "A aliança coletiva", "Revelação divina", "Os Dez Mandamentos", "O medo sagrado"]
+  },
+
+  "facts": [
+    {
+      "id": "yt001",
+      "order": 1,
+      "text": "Yitro, sacerdote de Midian e sogro de Moshe, ouve tudo o que Deus fez por Moshe e Israel — como tirou Israel do Egito. Ele vem ao deserto trazendo a esposa de Moshe, Tziporah, e os dois filhos.",
+      "text_he": "וַיִּשְׁמַע יִתְרוֹ כֹהֵן מִדְיָן חֹתֵן מֹשֶׁה אֵת כָּל אֲשֶׁר עָשָׂה אֱלֹהִים לְמֹשֶׁה",
+      "refs": ["Exodus 18:1-5"],
+      "ref_start": "Exodus 18:1",
+      "ref_end": "Exodus 18:5",
+      "chapter": 18,
+      "verse_start": 1,
+      "verse_end": 5,
+      "sefaria_ref": "Exodus 18:1-5",
+      "day_of_creation": null,
+      "tags": ["yitro", "tziporah", "família", "midian", "visita"],
+      "topic": "Yitro Vem ao Encontro de Moshe"
+    },
+    {
+      "id": "yt002",
+      "order": 2,
+      "text": "Yitro se alegra com tudo o que Deus fez por Israel: 'Bendito seja Deus que vos livrou da mão dos egípcios!' Ele oferece sacrifícios e Aharon e todos os anciãos de Israel comem junto com Yitro diante de Deus.",
+      "text_he": "בָּרוּךְ ה' אֲשֶׁר הִצִּיל אֶתְכֶם מִיַּד מִצְרַיִם",
+      "refs": ["Exodus 18:10-12"],
+      "ref_start": "Exodus 18:10",
+      "ref_end": "Exodus 18:12",
+      "chapter": 18,
+      "verse_start": 10,
+      "verse_end": 12,
+      "sefaria_ref": "Exodus 18:10-12",
+      "day_of_creation": null,
+      "tags": ["bênção", "yitro", "sacrifício", "refeição", "aharon"],
+      "topic": "A Refeição com Yitro — Reconhecimento Divino"
+    },
+    {
+      "id": "yt003",
+      "order": 3,
+      "text": "Yitro observa Moshe julgando o povo do amanhecer ao anoitecer. Ele o repreende: 'O que fazes não é bom — esgotarás tanto a ti como ao povo.' Aconselha criar uma hierarquia de juízes: de mil, de cem, de cinquenta, de dez.",
+      "text_he": "לֹא טוֹב הַדָּבָר אֲשֶׁר אַתָּה עֹשֶׂה",
+      "refs": ["Exodus 18:17-22"],
+      "ref_start": "Exodus 18:13",
+      "ref_end": "Exodus 18:22",
+      "chapter": 18,
+      "verse_start": 13,
+      "verse_end": 22,
+      "sefaria_ref": "Exodus 18:13-22",
+      "day_of_creation": null,
+      "tags": ["juízes", "delegação", "hierarquia", "administração", "yitro"],
+      "topic": "O Conselho de Yitro — Delegação da Justiça"
+    },
+    {
+      "id": "yt004",
+      "order": 4,
+      "text": "No terceiro mês após a saída do Egito, Israel chega ao deserto do Sinai e acampa diante da montanha.",
+      "text_he": "בַּחֹדֶשׁ הַשְּׁלִישִׁי לְצֵאת בְּנֵי יִשְׂרָאֵל מֵאֶרֶץ מִצְרָיִם בַּיּוֹם הַזֶּה בָּאוּ מִדְבַּר סִינָי",
+      "refs": ["Exodus 19:1-2"],
+      "ref_start": "Exodus 19:1",
+      "ref_end": "Exodus 19:2",
+      "chapter": 19,
+      "verse_start": 1,
+      "verse_end": 2,
+      "sefaria_ref": "Exodus 19:1-2",
+      "day_of_creation": null,
+      "tags": ["sinai", "terceiro-mês", "acampamento", "montanha"],
+      "topic": "Israel Chega ao Sinai — Terceiro Mês"
+    },
+    {
+      "id": "yt005",
+      "order": 5,
+      "text": "Deus convoca Moshe ao monte e lhe envia um mensagem para Israel: 'Viram o que fiz ao Egito e como vos carreguei em asas de águias e vos trouxe a Mim. Se ouvirdes Minha voz e guardardes Minha aliança, sereis para Mim um tesouro especial entre todos os povos — um reino de sacerdotes e uma nação santa.'",
+      "text_he": "וְאַתֶּם תִּהְיוּ לִי מַמְלֶכֶת כֹּהֲנִים וְגוֹי קָדוֹשׁ",
+      "refs": ["Exodus 19:5-6"],
+      "ref_start": "Exodus 19:4",
+      "ref_end": "Exodus 19:6",
+      "chapter": 19,
+      "verse_start": 4,
+      "verse_end": 6,
+      "sefaria_ref": "Exodus 19:4-6",
+      "day_of_creation": null,
+      "tags": ["aliança", "reino-de-sacerdotes", "nação-santa", "tesouro", "asas-de-águias"],
+      "topic": "'Reino de Sacerdotes e Nação Santa' — A Oferta da Aliança"
+    },
+    {
+      "id": "yt006",
+      "order": 6,
+      "text": "Moshe transmite as palavras ao povo. Todo o povo responde juntos: 'Tudo o que Deus falou faremos.' Moshe reporta a resposta a Deus. Deus anuncia que virá numa nuvem espessa para que o povo ouça e acredite em Moshe para sempre.",
+      "text_he": "כֹּל אֲשֶׁר דִּבֶּר ה' נַעֲשֶׂה",
+      "refs": ["Exodus 19:8"],
+      "ref_start": "Exodus 19:7",
+      "ref_end": "Exodus 19:9",
+      "chapter": 19,
+      "verse_start": 7,
+      "verse_end": 9,
+      "sefaria_ref": "Exodus 19:7-9",
+      "day_of_creation": null,
+      "tags": ["aceitação", "na'ase", "povo", "aliança", "nuvem"],
+      "topic": "'Tudo o que Deus Falou Faremos' — Aceitação da Aliança"
+    },
+    {
+      "id": "yt007",
+      "order": 7,
+      "text": "Deus ordena três dias de preparação: o povo deve santificar-se, lavar vestes e não se aproximar do monte. Ao terceiro dia, trovões, relâmpagos, nuvem espessa e som de shofar muito forte. Todo o povo no acampamento treme.",
+      "text_he": "וַיְהִי קֹלֹת וּבְרָקִים וְעָנָן כָּבֵד עַל הָהָר וְקֹל שֹׁפָר חָזָק מְאֹד",
+      "refs": ["Exodus 19:16-19"],
+      "ref_start": "Exodus 19:10",
+      "ref_end": "Exodus 19:19",
+      "chapter": 19,
+      "verse_start": 10,
+      "verse_end": 19,
+      "sefaria_ref": "Exodus 19:10-19",
+      "day_of_creation": null,
+      "tags": ["preparação", "santificação", "trovões", "shofar", "tremor", "revelação"],
+      "topic": "A Preparação — Três Dias antes da Revelação"
+    },
+    {
+      "id": "yt008",
+      "order": 8,
+      "text": "Deus fala os Dez Mandamentos (Aseret HaDibrot): 1) Eu sou Deus; 2) Não terás outros deuses, não farás ídolos; 3) Não tomarás o Nome em vão; 4) Lembra do Shabat; 5) Honra pai e mãe; 6) Não matarás; 7) Não adulterarás; 8) Não roubarás; 9) Não darás falso testemunho; 10) Não cobiçarás.",
+      "text_he": "אָנֹכִי ה' אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרָיִם",
+      "refs": ["Exodus 20:2-14"],
+      "ref_start": "Exodus 20:2",
+      "ref_end": "Exodus 20:14",
+      "chapter": 20,
+      "verse_start": 2,
+      "verse_end": 14,
+      "sefaria_ref": "Exodus 20:2-14",
+      "day_of_creation": null,
+      "tags": ["dez-mandamentos", "aseret-hadibrot", "shabat", "ídolos", "honrar-pais"],
+      "topic": "Os Dez Mandamentos — Aseret HaDibrot"
+    },
+    {
+      "id": "yt009",
+      "order": 9,
+      "text": "O povo fica aterrorizado com os trovões e relâmpagos e recua, pedindo a Moshe que seja o intermediário: 'Fala tu conosco e ouviremos — mas que Deus não nos fale, para que não morramos.' Moshe responde: 'Não temais — Deus veio para vos provar.'",
+      "text_he": "דַּבֵּר אַתָּה עִמָּנוּ וְנִשְׁמָעָה וְאַל יְדַבֵּר עִמָּנוּ אֱלֹהִים פֶּן נָמוּת",
+      "refs": ["Exodus 20:15-17"],
+      "ref_start": "Exodus 20:15",
+      "ref_end": "Exodus 20:17",
+      "chapter": 20,
+      "verse_start": 15,
+      "verse_end": 17,
+      "sefaria_ref": "Exodus 20:15-17",
+      "day_of_creation": null,
+      "tags": ["medo", "intermediário", "moshe", "povo", "terror-sagrado"],
+      "topic": "O Povo Recua — Moshe como Intermediário"
+    },
+    {
+      "id": "yt010",
+      "order": 10,
+      "text": "Deus instrui sobre o altar: não fazer imagens de prata ou ouro. Altares de terra ou pedras brutas não talhadas — não usarás espada sobre eles. Não subirás por degraus ao altar para não expor tua nudez.",
+      "text_he": "מִזְבַּח אֲדָמָה תַּעֲשֶׂה לִּי",
+      "refs": ["Exodus 20:20-23"],
+      "ref_start": "Exodus 20:20",
+      "ref_end": "Exodus 20:23",
+      "chapter": 20,
+      "verse_start": 20,
+      "verse_end": 23,
+      "sefaria_ref": "Exodus 20:20-23",
+      "day_of_creation": null,
+      "tags": ["altar", "pedra", "ídolos", "simplicidade", "kedushah"],
+      "topic": "O Altar de Terra e Pedra — Primeiras Leis"
+    },
+    {
+      "id": "yt011",
+      "order": 11,
+      "text": "Moshe se aproxima da escuridão espessa onde Deus está. Deus detalha leis adicionais que não fazem parte dos Dez Mandamentos formais — reveladas apenas a Moshe, o início do corpus legal que continua em Mishpatim.",
+      "text_he": "וַיִּגַּשׁ מֹשֶׁה אֶל הָעֲרָפֶל אֲשֶׁר שָׁם הָאֱלֹהִים",
+      "refs": ["Exodus 20:18"],
+      "ref_start": "Exodus 20:18",
+      "ref_end": "Exodus 20:18",
+      "chapter": 20,
+      "verse_start": 18,
+      "verse_end": 18,
+      "sefaria_ref": "Exodus 20:18",
+      "day_of_creation": null,
+      "tags": ["escuridão", "moshe", "revelação-privada", "leis-adicionais"],
+      "topic": "Moshe na Escuridão — Revelação Adicional"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 18:1",  "ref_end": "Exodus 18:12", "sefaria_ref": "Exodus 18:1-12" },
+    { "number": 2, "ref_start": "Exodus 18:13", "ref_end": "Exodus 18:23", "sefaria_ref": "Exodus 18:13-23" },
+    { "number": 3, "ref_start": "Exodus 18:24", "ref_end": "Exodus 18:27", "sefaria_ref": "Exodus 18:24-27" },
+    { "number": 4, "ref_start": "Exodus 19:1",  "ref_end": "Exodus 19:6",  "sefaria_ref": "Exodus 19:1-6" },
+    { "number": 5, "ref_start": "Exodus 19:7",  "ref_end": "Exodus 19:19", "sefaria_ref": "Exodus 19:7-19" },
+    { "number": 6, "ref_start": "Exodus 19:20", "ref_end": "Exodus 20:14", "sefaria_ref": "Exodus 19:20-20:14" },
+    { "number": 7, "ref_start": "Exodus 20:15", "ref_end": "Exodus 20:23", "sefaria_ref": "Exodus 20:15-23" }
+  ],
+
+  "haftarah": {
+    "ref": "Isaiah 6:1-7:6",
+    "sefaria_ref": "Isaiah 6:1-7:6",
+    "note": "Tema: a visão de Isaías — a Revelação divina e o chamado profético, paralelo à Revelação no Sinai"
+  },
+
+  "connections": {
+    "next_parasha": "mishpatim",
+    "prev_parasha": "beshalach",
+    "thematic_links": [
+      { "parasha": "beshalach",  "theme": "Israel no deserto — preparação para o Sinai" },
+      { "parasha": "mishpatim",  "theme": "O corpus legal que expande os Dez Mandamentos em leis civis" }
+    ]
+  }
+}

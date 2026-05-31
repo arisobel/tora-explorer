@@ -21,12 +21,14 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
 - Flow diagram: Mikra → Talmud → Halachá
 - Chips for each book, with tooltips
 - **Bereshit chip opens the parasha drawer** (lateral panel)
+- Future visual drill-down: macro tradition map → Chumash overview → book/parasha overview → fact detail
 
 ### Tab 2 — Linha do Tempo
 - Vertical timeline from Creation (0 AM) to Acharonim (today)
 - Color-coded: blue = Written Torah, green = Oral Torah, purple = Transition
 - Horizontal bar showing Oral Torah periods by century CE
 - Events are clickable (currently no action)
+- Future event markers may include icons or images for key narrative moments
 
 ### Tab 3 — Mishna & Guemara
 - Two-column panel: Tanaim (Mishna) and Amoraim (Guemara) with key figures
@@ -37,6 +39,7 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
 - Sub-navigation per book
 - Key events list + character roster per book
 - Static content, not API-driven
+- Future visual atlas: event lanes, character lanes, book markers, and parasha-level drill-down
 
 ### Tab 5 — Pessukim — Versículos
 - Live reader: selects book + chapter, fetches from Sefaria API
@@ -51,6 +54,29 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
 - No Hebrew keyboard input
 - No commentary layer (Rashi, etc.) in this version
 - No mobile-first design (responsive exists but desktop-primary)
+- No database-backed public runtime in the current phase; static JSON remains the app data format
+
+---
+
+## Visual Content Strategy
+
+The product should evolve from text-only facts into a visual learning atlas.
+Facts, parashiot, timeline events, and books may receive optional visual metadata:
+icons, image references, captions, lanes, colors, and importance levels.
+
+Images and icons should live as files under a future `assets/` folder. JSON files
+should reference those assets, not embed binary data.
+
+The intended drill-down hierarchy is:
+
+1. Canonical structure: Torah Escrita, Torah Oral, Mikra, Talmud, Halacha
+2. Chumash overview: five books, major event lanes, people lanes
+3. Book/parasha overview: all parashiot in a book with summaries and markers
+4. Fact detail: text, Sefaria ref, people/themes, and visual marker
+
+Authoring should remain JSON-first for now. A future local `editor.html` /
+`admin.html` may edit or export JSON files through forms before any database is
+introduced.
 
 ---
 
@@ -59,3 +85,4 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
 - Drawer opens with facts and links to Pessukim tab for each parasha
 - Historical ruler renders inside the drawer
 - App loads with zero build step (pure HTML/CSS/JS)
+- Visual markers can be added to facts without changing the static hosting model

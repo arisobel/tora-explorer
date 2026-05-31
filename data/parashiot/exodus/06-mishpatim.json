@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 18,
+    "parasha_of_book": 6,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "mishpatim",
+    "name": "Mishpatim",
+    "name_pt": "Leis",
+    "hebrew": "מִּשְׁפָּטִים",
+    "transliteration": "Mishpatim",
+    "aliyot_count": 6
+  },
+
+  "range": {
+    "ref_start": "Exodus 21:1",
+    "ref_end": "Exodus 24:18",
+    "sefaria_ref": "Exodus 21:1-24:18",
+    "chapters_covered": [21, 22, 23, 24],
+    "chapter_start": 21,
+    "chapter_end": 24,
+    "verse_start": 1,
+    "verse_end": 18
+  },
+
+  "timeline": {
+    "period_name": "O código civil e ético de Israel no Sinai",
+    "anno_mundi_start": 2449,
+    "anno_mundi_end": 2449,
+    "era": "saida-egito",
+    "position_pct": 42,
+    "description": "O extenso código de leis civis, sociais e rituais dado a Moshe no Sinai, culminando com a ratificação solene da aliança e a subida de Moshe para receber as Tábuas."
+  },
+
+  "summary": {
+    "short": "O código civil de Israel: leis de escravidão, danos, propriedade, tratamento do estrangeiro, as três festas e a ratificação da aliança com sangue.",
+    "medium": "Imediatamente após os Dez Mandamentos, Deus dita a Moshe um extenso código civil e ético — o 'Sefer HaBrit', Livro da Aliança. Abrange leis sobre escravos hebreus, homicídio, danos corporais, furto, danos a propriedade, empréstimos, trato com estrangeiros, viúvas e órfãos, proibição de juros ao pobre, integridade judicial, os três festivais anuais, a proibição de cozinhar o cabrito no leite da mãe e muito mais. A parashá encerra com a ratificação solene da aliança: Moshe lê o Livro da Aliança ao povo, que responde 'faremos e ouviremos', asperge sangue sobre o povo e sobe ao monte por quarenta dias.",
+    "characters_main": ["Moshe", "Aharon", "os 70 anciãos", "Bnei Israel"],
+    "characters_secondary": ["Nadav", "Avihu"],
+    "themes": ["Direito civil", "Proteção dos vulneráveis", "Integridade judicial", "Calendário sagrado", "Aliança de sangue", "A Lei Oral começa"]
+  },
+
+  "facts": [
+    {
+      "id": "mp001",
+      "order": 1,
+      "text": "A primeira lei: o servo hebreus trabalhará seis anos e no sétimo sairá livre sem pagar. Se entrou solteiro, sai solteiro; se casado, a esposa sai com ele. Se o servo declarar amor ao senhor e quiser ficar, sua orelha é perfurada na porta.",
+      "text_he": "כִּי תִקְנֶה עֶבֶד עִבְרִי שֵׁשׁ שָׁנִים יַעֲבֹד",
+      "refs": ["Exodus 21:2-6"],
+      "ref_start": "Exodus 21:2",
+      "ref_end": "Exodus 21:6",
+      "chapter": 21,
+      "verse_start": 2,
+      "verse_end": 6,
+      "sefaria_ref": "Exodus 21:2-6",
+      "day_of_creation": null,
+      "tags": ["eved-ivri", "seis-anos", "liberdade", "orelha", "amor-ao-senhor"],
+      "topic": "O Escravo Hebreus — Seis Anos e Liberdade"
+    },
+    {
+      "id": "mp002",
+      "order": 2,
+      "text": "Leis do homicídio: quem matar intencionalmente será morto; quem matar sem intenção poderá fugir ao lugar de refúgio. 'Olho por olho, dente por dente' — interpretado pela tradição como compensação monetária equivalente.",
+      "text_he": "עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן",
+      "refs": ["Exodus 21:24"],
+      "ref_start": "Exodus 21:12",
+      "ref_end": "Exodus 21:27",
+      "chapter": 21,
+      "verse_start": 12,
+      "verse_end": 27,
+      "sefaria_ref": "Exodus 21:12-27",
+      "day_of_creation": null,
+      "tags": ["homicídio", "olho-por-olho", "compensação", "intenção", "refúgio"],
+      "topic": "Leis de Homicídio e Danos — 'Olho por Olho'"
+    },
+    {
+      "id": "mp003",
+      "order": 3,
+      "text": "Leis de danos a animais e propriedade: se o boi de alguém chifrar o boi do vizinho e morrer, vendem o boi vivo e dividem o dinheiro. O dono que conhecia a natureza violenta do boi e não o guardou indeniza totalmente.",
+      "text_he": "וְאִם יְדַע כִּי שׁוֹר נַגָּח הוּא",
+      "refs": ["Exodus 21:35-36"],
+      "ref_start": "Exodus 21:28",
+      "ref_end": "Exodus 22:3",
+      "chapter": 21,
+      "verse_start": 28,
+      "verse_end": 36,
+      "sefaria_ref": "Exodus 21:28-36",
+      "day_of_creation": null,
+      "tags": ["boi", "danos", "responsabilidade", "negligência", "compensação"],
+      "topic": "Danos por Animais — Responsabilidade do Proprietário"
+    },
+    {
+      "id": "mp004",
+      "order": 4,
+      "text": "Leis de custódia e empréstimos: quem recebe algo para guardar e é roubado paga o dobro. Quem toma emprestado um animal e ele morre ou se machuca sem o dono presente, paga integralmente. Se o dono estava presente, não paga.",
+      "text_he": "כִּי יִתֵּן אִישׁ אֶל רֵעֵהוּ חֲמוֹר אוֹ שׁוֹר",
+      "refs": ["Exodus 22:9-14"],
+      "ref_start": "Exodus 22:6",
+      "ref_end": "Exodus 22:14",
+      "chapter": 22,
+      "verse_start": 6,
+      "verse_end": 14,
+      "sefaria_ref": "Exodus 22:6-14",
+      "day_of_creation": null,
+      "tags": ["custódia", "empréstimo", "dano", "responsabilidade", "dono-presente"],
+      "topic": "Custódia e Empréstimo de Animais"
+    },
+    {
+      "id": "mp005",
+      "order": 5,
+      "text": "Leis sociais: não oprimirás o estrangeiro — 'pois fostes estrangeiros na terra do Egito.' Não afligirás a viúva nem o órfão. Não emprestarás com juros ao pobre. Se alguém empenhar o manto, devolve-o antes do anoitecer — é sua única cobertura.",
+      "text_he": "וְגֵר לֹא תִלְחָץ וְאַתֶּם יְדַעְתֶּם אֶת נֶפֶשׁ הַגֵּר",
+      "refs": ["Exodus 22:20-26"],
+      "ref_start": "Exodus 22:20",
+      "ref_end": "Exodus 22:26",
+      "chapter": 22,
+      "verse_start": 20,
+      "verse_end": 26,
+      "sefaria_ref": "Exodus 22:20-26",
+      "day_of_creation": null,
+      "tags": ["estrangeiro", "viúva", "órfão", "juros", "manto", "vulneráveis"],
+      "topic": "Proteção dos Vulneráveis — Estrangeiro, Viúva e Órfão"
+    },
+    {
+      "id": "mp006",
+      "order": 6,
+      "text": "Integridade judicial: não espalharás rumor falso; não follows a multidão para o mal; não favorecerás o pobre no julgamento; não aceitarás suborno — o suborno cega os que veem e perverte as palavras dos justos.",
+      "text_he": "וְשֹׁחַד לֹא תִקָּח כִּי הַשֹּׁחַד יְעַוֵּר פִּקְחִים",
+      "refs": ["Exodus 23:8"],
+      "ref_start": "Exodus 23:1",
+      "ref_end": "Exodus 23:9",
+      "chapter": 23,
+      "verse_start": 1,
+      "verse_end": 9,
+      "sefaria_ref": "Exodus 23:1-9",
+      "day_of_creation": null,
+      "tags": ["justiça", "suborno", "multidão", "rumor", "integridade"],
+      "topic": "Integridade Judicial — Proibição do Suborno"
+    },
+    {
+      "id": "mp007",
+      "order": 7,
+      "text": "Leis da Shemitah: seis anos semeará o campo e no sétimo o deixará descansar — o que crescer por si será para os pobres e para os animais do campo. E seis dias trabalhará e no sétimo descansará.",
+      "text_he": "וְהַשְּׁבִיעִת תִּשְׁמְטֶנָּה וּנְטַשְׁתָּהּ",
+      "refs": ["Exodus 23:11"],
+      "ref_start": "Exodus 23:10",
+      "ref_end": "Exodus 23:12",
+      "chapter": 23,
+      "verse_start": 10,
+      "verse_end": 12,
+      "sefaria_ref": "Exodus 23:10-12",
+      "day_of_creation": null,
+      "tags": ["shemitah", "sétimo-ano", "descanso", "pobres", "terra"],
+      "topic": "Shemitah — O Sétimo Ano da Terra"
+    },
+    {
+      "id": "mp008",
+      "order": 8,
+      "text": "As três festas de peregrinação: Pessach (festival dos ázimos), Shavuot (colheita das primícias) e Sukkot (colheita do fim do ano). Três vezes por ano todo macho deverá comparecer diante do Senhor. Não cozinharás o cabrito no leite de sua mãe.",
+      "text_he": "שָׁלֹשׁ רְגָלִים תָּחֹג לִי בַּשָּׁנָה",
+      "refs": ["Exodus 23:14-19"],
+      "ref_start": "Exodus 23:14",
+      "ref_end": "Exodus 23:19",
+      "chapter": 23,
+      "verse_start": 14,
+      "verse_end": 19,
+      "sefaria_ref": "Exodus 23:14-19",
+      "day_of_creation": null,
+      "tags": ["shalosh-regalim", "pessach", "shavuot", "sukkot", "cabrito-no-leite"],
+      "topic": "As Três Festas de Peregrinação"
+    },
+    {
+      "id": "mp009",
+      "order": 9,
+      "text": "Deus promete enviar um anjo para guiar Israel até a terra. Deus lutará pelos israelitas e expulsará gradualmente os povos de Canaã — para que a terra não fique desolada. A fronteira da terra será do mar dos Juncos ao mar dos Filisteus, do deserto ao rio Eufrates.",
+      "text_he": "הִנֵּה אָנֹכִי שֹׁלֵחַ מַלְאָךְ לְפָנֶיךָ לִשְׁמָרְךָ בַּדָּרֶךְ",
+      "refs": ["Exodus 23:20-23"],
+      "ref_start": "Exodus 23:20",
+      "ref_end": "Exodus 23:31",
+      "chapter": 23,
+      "verse_start": 20,
+      "verse_end": 31,
+      "sefaria_ref": "Exodus 23:20-31",
+      "day_of_creation": null,
+      "tags": ["anjo", "terra-de-israel", "fronteiras", "expulsão-gradual", "promessa"],
+      "topic": "Promessa da Terra — O Anjo que Guia"
+    },
+    {
+      "id": "mp010",
+      "order": 10,
+      "text": "Moshe desce e relata ao povo todas as palavras de Deus. O povo responde em uníssono: 'Faremos e ouviremos!' — Na'aseh veNishmah. Moshe escreve todas as palavras de Deus no Livro da Aliança.",
+      "text_he": "כֹּל אֲשֶׁר דִּבֶּר ה' נַעֲשֶׂה וְנִשְׁמָע",
+      "refs": ["Exodus 24:7"],
+      "ref_start": "Exodus 24:3",
+      "ref_end": "Exodus 24:7",
+      "chapter": 24,
+      "verse_start": 3,
+      "verse_end": 7,
+      "sefaria_ref": "Exodus 24:3-7",
+      "day_of_creation": null,
+      "tags": ["naase-venishmah", "faremos-e-ouviremos", "aliança", "livro", "povo"],
+      "topic": "'Faremos e Ouviremos' — Na'aseh veNishmah"
+    },
+    {
+      "id": "mp011",
+      "order": 11,
+      "text": "Moshe asperse metade do sangue dos sacrifícios sobre o altar e metade sobre o povo: 'Este é o sangue da aliança que Deus estabeleceu convosco.' Aharon, Nadav, Avihu e os 70 anciãos sobem e veem o Deus de Israel — debaixo de seus pés algo como uma obra de safira.",
+      "text_he": "הִנֵּה דַם הַבְּרִית אֲשֶׁר כָּרַת ה' עִמָּכֶם",
+      "refs": ["Exodus 24:8-10"],
+      "ref_start": "Exodus 24:8",
+      "ref_end": "Exodus 24:10",
+      "chapter": 24,
+      "verse_start": 8,
+      "verse_end": 10,
+      "sefaria_ref": "Exodus 24:8-10",
+      "day_of_creation": null,
+      "tags": ["sangue-da-aliança", "safira", "70-anciãos", "visão-divina", "ratificação"],
+      "topic": "Ratificação da Aliança com Sangue — Os Anciãos Veem Deus"
+    },
+    {
+      "id": "mp012",
+      "order": 12,
+      "text": "Moshe sobe ao monte com Yehoshua. A nuvem cobre o monte por seis dias; no sétimo Deus chama Moshe da nuvem — 'como fogo consumidor no topo do monte.' Moshe entra na nuvem e permanece no monte quarenta dias e quarenta noites.",
+      "text_he": "וַיָּבֹא מֹשֶׁה בְּתוֹךְ הֶעָנָן וַיַּעַל אֶל הָהָר",
+      "refs": ["Exodus 24:15-18"],
+      "ref_start": "Exodus 24:15",
+      "ref_end": "Exodus 24:18",
+      "chapter": 24,
+      "verse_start": 15,
+      "verse_end": 18,
+      "sefaria_ref": "Exodus 24:15-18",
+      "day_of_creation": null,
+      "tags": ["quarenta-dias", "monte", "nuvem", "fogo", "moshe", "yehoshua"],
+      "topic": "Moshe Sobe — Quarenta Dias na Nuvem"
+      }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 21:1",  "ref_end": "Exodus 21:19", "sefaria_ref": "Exodus 21:1-19" },
+    { "number": 2, "ref_start": "Exodus 21:20", "ref_end": "Exodus 22:3",  "sefaria_ref": "Exodus 21:20-22:3" },
+    { "number": 3, "ref_start": "Exodus 22:4",  "ref_end": "Exodus 22:26", "sefaria_ref": "Exodus 22:4-26" },
+    { "number": 4, "ref_start": "Exodus 22:27", "ref_end": "Exodus 23:5",  "sefaria_ref": "Exodus 22:27-23:5" },
+    { "number": 5, "ref_start": "Exodus 23:6",  "ref_end": "Exodus 23:19", "sefaria_ref": "Exodus 23:6-19" },
+    { "number": 6, "ref_start": "Exodus 23:20", "ref_end": "Exodus 24:18", "sefaria_ref": "Exodus 23:20-24:18" }
+  ],
+
+  "haftarah": {
+    "ref": "Jeremiah 34:8-22",
+    "sefaria_ref": "Jeremiah 34:8-22",
+    "note": "Tema: a violação das leis do escravo hebreus em Jeremias — paralelo às primeiras leis de Mishpatim"
+  },
+
+  "connections": {
+    "next_parasha": "terumah",
+    "prev_parasha": "yitro",
+    "thematic_links": [
+      { "parasha": "yitro",   "theme": "Os Dez Mandamentos — Mishpatim é o código civil que os expande" },
+      { "parasha": "terumah", "theme": "Após as leis, Deus instrui sobre o Mishkan" }
+    ]
+  }
+}

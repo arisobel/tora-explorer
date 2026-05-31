@@ -1271,6 +1271,19 @@ function showBook(id, btn) {
 
 let pkState = { book: 'Genesis', chapter: 1, heTexts: [], enTexts: [], view: 'parallel' };
 
+function sefariaTextUrl(ref, version) {
+  const path = encodeURIComponent(ref);
+  const query = `?version=${encodeURIComponent(version)}&return_format=text_only`;
+  const isLocalDev = location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname);
+
+  if (isLocalDev) {
+    const base = `https://www.sefaria.org/api/v3/texts/${path}${query}`;
+    return `https://corsproxy.io/?url=${encodeURIComponent(base)}`;
+  }
+
+  return `/api/sefaria/${path}${query}`;
+}
+
 function pkUpdateChapters() {
   const sel = document.getElementById('pk-book');
   const opt = sel.options[sel.selectedIndex];
@@ -1306,11 +1319,9 @@ async function pkLoad() {
   document.getElementById('pk-reader').style.display = 'none';
   document.getElementById('pk-loading').style.display = 'flex';
 
-  const ref = encodeURIComponent(`${book} ${chapter}`);
-  const CORS = 'https://corsproxy.io/?url=';
-  const base = `https://www.sefaria.org/api/v3/texts/${ref}`;
-  const urlHe = `${CORS}${encodeURIComponent(base + '?version=hebrew&return_format=text_only')}`;
-  const urlEn = `${CORS}${encodeURIComponent(base + '?version=english&return_format=text_only')}`;
+  const ref = `${book} ${chapter}`;
+  const urlHe = sefariaTextUrl(ref, 'hebrew');
+  const urlEn = sefariaTextUrl(ref, 'english');
 
   try {
     const [resHe, resEn] = await Promise.all([fetch(urlHe), fetch(urlEn)]);
@@ -1827,10 +1838,8 @@ async function drawerLoadPassage(btn, ref) {
   area.innerHTML = '<div class="passage-loading">Carregando da Sefaria…</div>';
   btn.textContent = 'Carregando…';
 
-  const CORS = 'https://corsproxy.io/?url=';
-  const base = `https://www.sefaria.org/api/v3/texts/${encodeURIComponent(ref)}`;
-  const urlHe = `${CORS}${encodeURIComponent(base + '?version=hebrew&return_format=text_only')}`;
-  const urlEn = `${CORS}${encodeURIComponent(base + '?version=english&return_format=text_only')}`;
+  const urlHe = sefariaTextUrl(ref, 'hebrew');
+  const urlEn = sefariaTextUrl(ref, 'english');
 
   try {
     const [resHe, resEn] = await Promise.all([fetch(urlHe), fetch(urlEn)]);

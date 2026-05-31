@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 13,
+    "parasha_of_book": 1,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "shemot",
+    "name": "Shemot",
+    "name_pt": "Nomes",
+    "hebrew": "שְׁמוֹת",
+    "transliteration": "Shemot",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Exodus 1:1",
+    "ref_end": "Exodus 6:1",
+    "sefaria_ref": "Exodus 1:1-6:1",
+    "chapters_covered": [1, 2, 3, 4, 5, 6],
+    "chapter_start": 1,
+    "chapter_end": 6,
+    "verse_start": 1,
+    "verse_end": 1
+  },
+
+  "timeline": {
+    "period_name": "Opressão no Egito e chamado de Moshe",
+    "anno_mundi_start": 2238,
+    "anno_mundi_end": 2447,
+    "era": "egito",
+    "position_pct": 39,
+    "description": "Do crescimento do povo de Israel no Egito à escravidão, nascimento de Moshe, sua fuga para Midian e o chamado da sarça ardente."
+  },
+
+  "summary": {
+    "short": "Israel multiplica-se e é escravizado no Egito; Moshe nasce, foge para Midian e é chamado por Deus na sarça ardente para resgatar o povo.",
+    "medium": "A parashá abre com os nomes dos filhos de Israel que desceram ao Egito — e a nova geração que proliferou. Um novo Faraó que não conhecia Yossef converte o povo em escravos. As parteiras Shifra e Puah desobedecem à ordem de matar os bebês hebreus. Moshe nasce, é escondido, encontrado pela filha de Faraó e criado no palácio. Ao crescer, mata um egípcio que espancava um hebreu e foge para Midian, onde se casa com Tziporah. Na sarça ardente, Deus se revela e ordena a Moshe que vá ao Faraó e liberte Israel. Moshe objeta cinco vezes. A parashá termina com a primeira audiência fracassada perante Faraó.",
+    "characters_main": ["Moshe", "Aharon", "Faraó", "Yocheved", "Miriam"],
+    "characters_secondary": ["Shifra", "Puah", "a filha de Faraó", "Tziporah", "Yitro", "Gershom"],
+    "themes": ["Opressão e resistência", "Providência divina", "O chamado profético", "Resistência ao poder", "A missão de Moshe", "O Nome Divino"]
+  },
+
+  "facts": [
+    {
+      "id": "sm001",
+      "order": 1,
+      "text": "Os filhos de Israel, que desceram ao Egito com Yaakov, proliferam e enchem a terra. Um novo rei sobe ao poder no Egito que não conhecia Yossef — e teme o crescimento do povo.",
+      "text_he": "וַיָּקָם מֶלֶךְ חָדָשׁ עַל מִצְרָיִם אֲשֶׁר לֹא יָדַע אֶת יוֹסֵף",
+      "refs": ["Exodus 1:7-8"],
+      "ref_start": "Exodus 1:7",
+      "ref_end": "Exodus 1:8",
+      "chapter": 1,
+      "verse_start": 7,
+      "verse_end": 8,
+      "sefaria_ref": "Exodus 1:7-8",
+      "day_of_creation": null,
+      "tags": ["faraó", "novo-rei", "medo", "crescimento", "israel"],
+      "topic": "O Novo Faraó — Começa a Opressão"
+    },
+    {
+      "id": "sm002",
+      "order": 2,
+      "text": "Faraó escraviza Israel com trabalhos forçados — construção das cidades de Pitom e Ramsés. Quanto mais os oprimem, mais o povo cresce. O Egito os faz trabalhar com crueldade.",
+      "text_he": "וַיָּשִׂימוּ עָלָיו שָׂרֵי מִסִּים לְמַעַן עַנֹּתוֹ בְּסִבְלֹתָם",
+      "refs": ["Exodus 1:11-14"],
+      "ref_start": "Exodus 1:11",
+      "ref_end": "Exodus 1:14",
+      "chapter": 1,
+      "verse_start": 11,
+      "verse_end": 14,
+      "sefaria_ref": "Exodus 1:11-14",
+      "day_of_creation": null,
+      "tags": ["escravidão", "trabalho-forçado", "pitom", "ramsés", "opressão"],
+      "topic": "A Escravidão — Trabalho Forçado"
+    },
+    {
+      "id": "sm003",
+      "order": 3,
+      "text": "Faraó ordena às parteiras hebreias Shifra e Puah que matem todo bebê do sexo masculino ao nascer. Elas temem a Deus e desobedecem. Faraó as interroga; elas dizem que as mulheres hebreias parem antes de chegarem. Deus abençoa as parteiras.",
+      "text_he": "וַתִּירֶאן הַמְיַלְּדֹת אֶת הָאֱלֹהִים וְלֹא עָשׂוּ כַּאֲשֶׁר דִּבֶּר אֲלֵיהֶן מֶלֶךְ מִצְרָיִם",
+      "refs": ["Exodus 1:17"],
+      "ref_start": "Exodus 1:15",
+      "ref_end": "Exodus 1:21",
+      "chapter": 1,
+      "verse_start": 15,
+      "verse_end": 21,
+      "sefaria_ref": "Exodus 1:15-21",
+      "day_of_creation": null,
+      "tags": ["shifra", "puah", "parteiras", "desobediência-civil", "resistência"],
+      "topic": "As Parteiras — Shifra e Puah Desobedecem"
+    },
+    {
+      "id": "sm004",
+      "order": 4,
+      "text": "Faraó ordena a todo o povo: todo menino hebreu nascido deve ser lançado ao Nilo, mas as meninas podem viver.",
+      "text_he": "כָּל הַבֵּן הַיִּלּוֹד הַיְאֹרָה תַּשְׁלִיכֻהוּ וְכָל הַבַּת תְּחַיּוּן",
+      "refs": ["Exodus 1:22"],
+      "ref_start": "Exodus 1:22",
+      "ref_end": "Exodus 1:22",
+      "chapter": 1,
+      "verse_start": 22,
+      "verse_end": 22,
+      "sefaria_ref": "Exodus 1:22",
+      "day_of_creation": null,
+      "tags": ["decreto", "nilo", "infanticídio", "faraó"],
+      "topic": "Decreto de Faraó — Lançar os Filhos ao Nilo"
+    },
+    {
+      "id": "sm005",
+      "order": 5,
+      "text": "Uma mulher da tribo de Levi concebe e dá à luz um menino. Vendo que é belo, o esconde por três meses. Depois o coloca numa cesta de papiro calafetada com betume e o deposita entre os juncos do Nilo. Miriam observa de longe.",
+      "text_he": "וַתִּקַּח לוֹ תֵּבַת גֹּמֶא וַתַּחְמְרָה בַחֵמָר וּבַזָּפֶת",
+      "refs": ["Exodus 2:2-4"],
+      "ref_start": "Exodus 2:2",
+      "ref_end": "Exodus 2:4",
+      "chapter": 2,
+      "verse_start": 2,
+      "verse_end": 4,
+      "sefaria_ref": "Exodus 2:2-4",
+      "day_of_creation": null,
+      "tags": ["moshe", "cesta", "nilo", "yocheved", "miriam"],
+      "topic": "Nascimento de Moshe — A Cesta no Nilo"
+    },
+    {
+      "id": "sm006",
+      "order": 6,
+      "text": "A filha de Faraó desce ao Nilo, encontra a cesta e abre — o menino chora. Ela o reconhece como hebreus mas tem compaixão. Miriam se aproxima e oferece uma ama de leite hebreia — a própria mãe de Moshe. A filha de Faraó o adota e lhe dá o nome Moshe: 'pois o tirei das águas.'",
+      "text_he": "וַתִּקְרָא שְׁמוֹ מֹשֶׁה וַתֹּאמֶר כִּי מִן הַמַּיִם מְשִׁיתִהוּ",
+      "refs": ["Exodus 2:5-10"],
+      "ref_start": "Exodus 2:5",
+      "ref_end": "Exodus 2:10",
+      "chapter": 2,
+      "verse_start": 5,
+      "verse_end": 10,
+      "sefaria_ref": "Exodus 2:5-10",
+      "day_of_creation": null,
+      "tags": ["filha-de-faraó", "miriam", "moshe", "nome", "adoção"],
+      "topic": "A Filha de Faraó Adota Moshe — O Nome"
+    },
+    {
+      "id": "sm007",
+      "order": 7,
+      "text": "Moshe cresce e sai para ver seus irmãos. Vê um egípcio espancando um hebreu. Ele olha para os lados, não vê ninguém e mata o egípcio, enterrando-o na areia. No dia seguinte intervém numa briga entre dois hebreus — e percebe que seu ato foi descoberto. Faraó quer matá-lo. Moshe foge para Midian.",
+      "text_he": "וַיַּרְא כִּי אֵין אִישׁ וַיַּךְ אֶת הַמִּצְרִי",
+      "refs": ["Exodus 2:11-15"],
+      "ref_start": "Exodus 2:11",
+      "ref_end": "Exodus 2:15",
+      "chapter": 2,
+      "verse_start": 11,
+      "verse_end": 15,
+      "sefaria_ref": "Exodus 2:11-15",
+      "day_of_creation": null,
+      "tags": ["moshe", "egípcio", "fuga", "midian", "justiça"],
+      "topic": "Moshe Mata o Egípcio — Fuga para Midian"
+    },
+    {
+      "id": "sm008",
+      "order": 8,
+      "text": "Em Midian, Moshe defende as filhas de Yitro num poço e é convidado para a casa dele. Casa-se com Tziporah, filha de Yitro. Têm um filho chamado Gershom — 'pois fui estrangeiro em terra alheia.'",
+      "text_he": "וַיּוֹאֶל מֹשֶׁה לָשֶׁבֶת אֶת הָאִישׁ וַיִּתֵּן אֶת צִפֹּרָה בִתּוֹ לְמֹשֶׁה",
+      "refs": ["Exodus 2:21-22"],
+      "ref_start": "Exodus 2:21",
+      "ref_end": "Exodus 2:22",
+      "chapter": 2,
+      "verse_start": 21,
+      "verse_end": 22,
+      "sefaria_ref": "Exodus 2:21-22",
+      "day_of_creation": null,
+      "tags": ["tziporah", "gershom", "midian", "yitro", "estrangeiro"],
+      "topic": "Moshe em Midian — Casamento e Filho"
+    },
+    {
+      "id": "sm009",
+      "order": 9,
+      "text": "Israel geme sob a escravidão e clama. Deus ouve o clamor, lembra Sua aliança com Avraham, Yitzchak e Yaakov, e 'conhece' Israel.",
+      "text_he": "וַיִּשְׁמַע אֱלֹהִים אֶת נַאֲקָתָם וַיִּזְכֹּר אֱלֹהִים אֶת בְּרִיתוֹ",
+      "refs": ["Exodus 2:24-25"],
+      "ref_start": "Exodus 2:24",
+      "ref_end": "Exodus 2:25",
+      "chapter": 2,
+      "verse_start": 24,
+      "verse_end": 25,
+      "sefaria_ref": "Exodus 2:24-25",
+      "day_of_creation": null,
+      "tags": ["clamor", "aliança", "deus-ouve", "memória", "redenção"],
+      "topic": "Deus Ouve o Clamor — A Aliança Lembrada"
+    },
+    {
+      "id": "sm010",
+      "order": 10,
+      "text": "Moshe pastoreia o rebanho de Yitro e chega ao monte Horev. Um anjo de Deus aparece numa sarça que arde em fogo mas não se consome. Moshe se aproxima. Deus o chama: 'Moshe! Moshe!' e lhe ordena tirar as sandálias — 'pois o lugar em que estás é terra sagrada.'",
+      "text_he": "וַיֵּרָא מַלְאַךְ ה' אֵלָיו בְּלַבַּת אֵשׁ מִתּוֹךְ הַסְּנֶה",
+      "refs": ["Exodus 3:2-5"],
+      "ref_start": "Exodus 3:2",
+      "ref_end": "Exodus 3:5",
+      "chapter": 3,
+      "verse_start": 2,
+      "verse_end": 5,
+      "sefaria_ref": "Exodus 3:2-5",
+      "day_of_creation": null,
+      "tags": ["sarça-ardente", "sinai", "horev", "revelação", "terra-sagrada"],
+      "topic": "A Sarça Ardente — A Revelação no Horev"
+    },
+    {
+      "id": "sm011",
+      "order": 11,
+      "text": "Deus se identifica como o Deus de Avraham, Yitzchak e Yaakov. Revela Sua missão a Moshe: 'Vi o sofrimento do Meu povo, ouvi seu clamor — vou descê-lo do Egito a uma terra boa e espaçosa. Vai! Eu te envio ao Faraó para tirar Meu povo do Egito.'",
+      "text_he": "לְכָה וְאֶשְׁלָחֲךָ אֶל פַּרְעֹה וְהוֹצֵא אֶת עַמִּי בְנֵי יִשְׂרָאֵל מִמִּצְרָיִם",
+      "refs": ["Exodus 3:7-10"],
+      "ref_start": "Exodus 3:7",
+      "ref_end": "Exodus 3:10",
+      "chapter": 3,
+      "verse_start": 7,
+      "verse_end": 10,
+      "sefaria_ref": "Exodus 3:7-10",
+      "day_of_creation": null,
+      "tags": ["missão", "redenção", "terra-boa", "envio", "povo-de-deus"],
+      "topic": "A Missão de Moshe — 'Eu te Envio ao Faraó'"
+    },
+    {
+      "id": "sm012",
+      "order": 12,
+      "text": "Moshe pergunta: 'Qual é o Seu nome?' Deus responde: 'Ehyeh Asher Ehyeh — Eu Serei o que Serei.' Diz ainda: 'Assim dirás aos filhos de Israel: יהוה, o Deus de vossos pais, me enviou a vós. Este é o Meu nome para sempre.'",
+      "text_he": "אֶהְיֶה אֲשֶׁר אֶהְיֶה",
+      "refs": ["Exodus 3:13-15"],
+      "ref_start": "Exodus 3:13",
+      "ref_end": "Exodus 3:15",
+      "chapter": 3,
+      "verse_start": 13,
+      "verse_end": 15,
+      "sefaria_ref": "Exodus 3:13-15",
+      "day_of_creation": null,
+      "tags": ["nome-divino", "ehyeh", "havayah", "tetragramaton", "eterno"],
+      "topic": "Revelação do Nome Divino — Ehyeh Asher Ehyeh"
+    },
+    {
+      "id": "sm013",
+      "order": 13,
+      "text": "Moshe objeta cinco vezes. Deus concede a Aharon como porta-voz. Moshe retorna ao Egito. Sua primeira audiência com Faraó: 'Deixa meu povo ir!' — Faraó recusa e agrava a carga dos hebreus. O povo acusa Moshe; Moshe reclama a Deus. Deus promete: 'Agora verás o que farei ao Faraó.'",
+      "text_he": "עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה",
+      "refs": ["Exodus 5:1-6:1"],
+      "ref_start": "Exodus 5:1",
+      "ref_end": "Exodus 6:1",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 1,
+      "sefaria_ref": "Exodus 5:1-6:1",
+      "day_of_creation": null,
+      "tags": ["faraó", "recusa", "tijolos", "queixa", "promessa-divina"],
+      "topic": "Primeira Audiência com Faraó — A Carga Agravada"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 1:1",  "ref_end": "Exodus 1:17", "sefaria_ref": "Exodus 1:1-17" },
+    { "number": 2, "ref_start": "Exodus 1:18", "ref_end": "Exodus 2:10", "sefaria_ref": "Exodus 1:18-2:10" },
+    { "number": 3, "ref_start": "Exodus 2:11", "ref_end": "Exodus 2:25", "sefaria_ref": "Exodus 2:11-25" },
+    { "number": 4, "ref_start": "Exodus 3:1",  "ref_end": "Exodus 3:15", "sefaria_ref": "Exodus 3:1-15" },
+    { "number": 5, "ref_start": "Exodus 3:16", "ref_end": "Exodus 4:17", "sefaria_ref": "Exodus 3:16-4:17" },
+    { "number": 6, "ref_start": "Exodus 4:18", "ref_end": "Exodus 4:31", "sefaria_ref": "Exodus 4:18-31" },
+    { "number": 7, "ref_start": "Exodus 5:1",  "ref_end": "Exodus 6:1",  "sefaria_ref": "Exodus 5:1-6:1" }
+  ],
+
+  "haftarah": {
+    "ref": "Isaiah 27:6-28:13",
+    "sefaria_ref": "Isaiah 27:6-28:13",
+    "note": "Tema: Israel que floresce e a promessa de redenção — paralelo ao florescimento de Israel no Egito"
+  },
+
+  "connections": {
+    "next_parasha": "vaera",
+    "prev_parasha": null,
+    "thematic_links": [
+      { "parasha": "vayechi",  "theme": "Fim de Gênesis — a morte de Yossef prepara o esquecimento e a opressão" },
+      { "parasha": "vaera",    "theme": "Deus revela Seu nome e as pragas começam" },
+      { "parasha": "bo",       "theme": "As últimas pragas e o Êxodo" }
+    ]
+  }
+}

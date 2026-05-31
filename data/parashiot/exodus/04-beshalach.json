@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Exodus",
+    "book_he": "שְׁמוֹת",
+    "book_sefaria": "Exodus",
+    "parasha_index": 16,
+    "parasha_of_book": 4,
+    "total_parashiot_in_book": 11
+  },
+
+  "identity": {
+    "id": "beshalach",
+    "name": "Beshalach",
+    "name_pt": "Quando enviou",
+    "hebrew": "בְּשַׁלַּח",
+    "transliteration": "Beshalach",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Exodus 13:17",
+    "ref_end": "Exodus 17:16",
+    "sefaria_ref": "Exodus 13:17-17:16",
+    "chapters_covered": [13, 14, 15, 16, 17],
+    "chapter_start": 13,
+    "chapter_end": 17,
+    "verse_start": 17,
+    "verse_end": 16
+  },
+
+  "timeline": {
+    "period_name": "Do Egito ao deserto — Mar, Maná e Amalek",
+    "anno_mundi_start": 2448,
+    "anno_mundi_end": 2449,
+    "era": "saida-egito",
+    "position_pct": 42,
+    "description": "Da saída do Egito pela rota do deserto, passando pela divisão do mar, o Cântico de Moshe, o maná, a água da rocha e a primeira batalha contra Amalek."
+  },
+
+  "summary": {
+    "short": "A divisão do Mar dos Juncos, o Cântico do Mar, o maná, a água da rocha em Refidim e a batalha contra Amalek.",
+    "medium": "Deus leva Israel pelo caminho do deserto, não pela rota dos Filisteus. Faraó se arrepende e persegue Israel com seu exército. Encurralados no mar, o povo clama contra Moshe. Deus ordena a Moshe que estenda a mão sobre o mar — as águas se dividem, Israel atravessa em seco, os egípcios afogam-se. Moshe e Miriam lideram cantos de louvor. No deserto, o povo reclama por água e comida. Deus envia o maná — pão do céu — e as codornizes. O maná não deve ser armazenado, mas na sexta-feira cai porção dupla para o Shabat. A água brota da rocha em Refidim. Israel luta contra Amalek: enquanto Moshe levanta as mãos, Israel vence.",
+    "characters_main": ["Moshe", "Miriam", "Faraó", "Yehoshua", "Aharon", "Chur"],
+    "characters_secondary": ["o exército egípcio", "Amalek"],
+    "themes": ["Fé no deserto", "A divisão do mar", "O louvor a Deus", "Alimento miraculoso", "O Shabat", "A primeira guerra"]
+  },
+
+  "facts": [
+    {
+      "id": "bs001",
+      "order": 1,
+      "text": "Deus não conduz Israel pela rota dos Filisteus — o caminho mais curto — pois o povo poderia se arrepender ao ver guerra. Ele os leva pelo caminho do deserto do Mar dos Juncos.",
+      "text_he": "כִּי אָמַר אֱלֹהִים פֶּן יִנָּחֵם הָעָם בִּרְאֹתָם מִלְחָמָה וְשָׁבוּ מִצְרָיְמָה",
+      "refs": ["Exodus 13:17-18"],
+      "ref_start": "Exodus 13:17",
+      "ref_end": "Exodus 13:18",
+      "chapter": 13,
+      "verse_start": 17,
+      "verse_end": 18,
+      "sefaria_ref": "Exodus 13:17-18",
+      "day_of_creation": null,
+      "tags": ["rota", "deserto", "providência", "guerra", "fé"],
+      "topic": "A Rota do Deserto — Não pelo Caminho dos Filisteus"
+    },
+    {
+      "id": "bs002",
+      "order": 2,
+      "text": "Deus guia Israel com uma coluna de nuvem de dia — para mostrar o caminho — e uma coluna de fogo de noite, para iluminar. A coluna nunca se afasta do povo.",
+      "text_he": "וַה' הֹלֵךְ לִפְנֵיהֶם יוֹמָם בְּעַמּוּד עָנָן לַנְחֹתָם הַדֶּרֶךְ",
+      "refs": ["Exodus 13:21-22"],
+      "ref_start": "Exodus 13:21",
+      "ref_end": "Exodus 13:22",
+      "chapter": 13,
+      "verse_start": 21,
+      "verse_end": 22,
+      "sefaria_ref": "Exodus 13:21-22",
+      "day_of_creation": null,
+      "tags": ["nuvem", "fogo", "guia", "providência", "presença-divina"],
+      "topic": "Coluna de Nuvem e de Fogo"
+    },
+    {
+      "id": "bs003",
+      "order": 3,
+      "text": "Faraó se arrepende de ter deixado Israel partir. Mobiliza seiscentos carros escolhidos e todo o exército do Egito e persegue Israel. Israel, encurralado entre o mar e o exército, clama contra Moshe: 'Não havia túmulos no Egito?'",
+      "text_he": "הֲמִבְּלִי אֵין קְבָרִים בְּמִצְרַיִם לְקַחְתָּנוּ לָמוּת בַּמִּדְבָּר",
+      "refs": ["Exodus 14:9-12"],
+      "ref_start": "Exodus 14:5",
+      "ref_end": "Exodus 14:12",
+      "chapter": 14,
+      "verse_start": 5,
+      "verse_end": 12,
+      "sefaria_ref": "Exodus 14:5-12",
+      "day_of_creation": null,
+      "tags": ["faraó", "exército", "perseguição", "medo", "reclamação"],
+      "topic": "Faraó Persegue — Israel Encurralado"
+    },
+    {
+      "id": "bs004",
+      "order": 4,
+      "text": "Moshe responde: 'Não temais! Ficai firmes e vereis a salvação de Deus — os egípcios que vedes hoje não vereis jamais. Deus combaterá por vós e vós ficareis em silêncio.' Deus manda Moshe estender o bastão.",
+      "text_he": "ה' יִלָּחֵם לָכֶם וְאַתֶּם תַּחֲרִישׁוּן",
+      "refs": ["Exodus 14:13-14"],
+      "ref_start": "Exodus 14:13",
+      "ref_end": "Exodus 14:14",
+      "chapter": 14,
+      "verse_start": 13,
+      "verse_end": 14,
+      "sefaria_ref": "Exodus 14:13-14",
+      "day_of_creation": null,
+      "tags": ["fé", "salvação", "silêncio", "batalha-divina", "moshe"],
+      "topic": "'Deus Combaterá por Vós' — Firmeza de Moshe"
+    },
+    {
+      "id": "bs005",
+      "order": 5,
+      "text": "Moshe estende a mão sobre o mar. Deus faz soprar um forte vento leste a noite toda — as águas se dividem, formando paredes de água à direita e à esquerda. Israel atravessa o mar em terra seca.",
+      "text_he": "וַיִּבָּקְעוּ הַמָּיִם וַיָּבֹאוּ בְנֵי יִשְׂרָאֵל בְּתוֹךְ הַיָּם בַּיַּבָּשָׁה",
+      "refs": ["Exodus 14:21-22"],
+      "ref_start": "Exodus 14:21",
+      "ref_end": "Exodus 14:22",
+      "chapter": 14,
+      "verse_start": 21,
+      "verse_end": 22,
+      "sefaria_ref": "Exodus 14:21-22",
+      "day_of_creation": null,
+      "tags": ["divisão-do-mar", "vento", "paredes-de-água", "milagre", "terra-seca"],
+      "topic": "A Divisão do Mar dos Juncos"
+    },
+    {
+      "id": "bs006",
+      "order": 6,
+      "text": "Os egípcios entram atrás de Israel no mar. Deus perturba o exército: as rodas dos carros travam. Os egípcios tentam fugir — 'Deus combate por eles!' Moshe estende novamente a mão e o mar retorna. Todo o exército de Faraó afoga-se.",
+      "text_he": "וַיָּשָׁב הַיָּם לִפְנוֹת בֹּקֶר לְאֵיתָנוֹ",
+      "refs": ["Exodus 14:27-28"],
+      "ref_start": "Exodus 14:23",
+      "ref_end": "Exodus 14:28",
+      "chapter": 14,
+      "verse_start": 23,
+      "verse_end": 28,
+      "sefaria_ref": "Exodus 14:23-28",
+      "day_of_creation": null,
+      "tags": ["egípcios", "afogamento", "carros", "mar-retorna", "salvação"],
+      "topic": "Os Egípcios Afogam-se — A Salvação Completa"
+    },
+    {
+      "id": "bs007",
+      "order": 7,
+      "text": "Israel vê o grande poder de Deus, teme a Deus e crê em Deus e em Moshe Seu servo. Então Moshe e os filhos de Israel cantam o Shirat HaYam — o Cântico do Mar — o primeiro grande poema de louvor da história bíblica.",
+      "text_he": "אָשִׁירָה לַה' כִּי גָאֹה גָּאָה סוּס וְרֹכְבוֹ רָמָה בַיָּם",
+      "refs": ["Exodus 15:1-19"],
+      "ref_start": "Exodus 15:1",
+      "ref_end": "Exodus 15:19",
+      "chapter": 15,
+      "verse_start": 1,
+      "verse_end": 19,
+      "sefaria_ref": "Exodus 15:1-19",
+      "day_of_creation": null,
+      "tags": ["shirat-hayam", "cântico", "louvor", "fé", "az-yashir"],
+      "topic": "Shirat HaYam — O Cântico do Mar"
+    },
+    {
+      "id": "bs008",
+      "order": 8,
+      "text": "Miriam, a profetisa, irmã de Aharon, pega o pandeiro e todas as mulheres saem atrás dela cantando e dançando. Miriam responde: 'Cantai a Deus, pois Ele é grandioso — cavalo e cavaleiro lançou ao mar.'",
+      "text_he": "וַתִּקַּח מִרְיָם הַנְּבִיאָה אֲחוֹת אַהֲרֹן אֶת הַתֹּף בְּיָדָהּ",
+      "refs": ["Exodus 15:20-21"],
+      "ref_start": "Exodus 15:20",
+      "ref_end": "Exodus 15:21",
+      "chapter": 15,
+      "verse_start": 20,
+      "verse_end": 21,
+      "sefaria_ref": "Exodus 15:20-21",
+      "day_of_creation": null,
+      "tags": ["miriam", "pandeiro", "dança", "mulheres", "profetisa"],
+      "topic": "O Cântico de Miriam — As Mulheres Dançam"
+    },
+    {
+      "id": "bs009",
+      "order": 9,
+      "text": "No deserto de Shur, após três dias sem água, chegam a Mará — as águas são amargas. O povo reclama contra Moshe. Deus mostra-lhe uma árvore; Moshe a lança à água e ela adoça. 'Eu sou Deus teu médico.'",
+      "text_he": "כִּי אֲנִי ה' רֹפְאֶךָ",
+      "refs": ["Exodus 15:23-26"],
+      "ref_start": "Exodus 15:23",
+      "ref_end": "Exodus 15:26",
+      "chapter": 15,
+      "verse_start": 23,
+      "verse_end": 26,
+      "sefaria_ref": "Exodus 15:23-26",
+      "day_of_creation": null,
+      "tags": ["mará", "água-amarga", "árvore", "cura", "rofecha"],
+      "topic": "As Águas de Mará — 'Eu Sou Deus Teu Médico'"
+    },
+    {
+      "id": "bs010",
+      "order": 10,
+      "text": "No deserto de Sin o povo reclama que tinha carne e pão farto no Egito. Deus anuncia que fará chover pão do céu — cada dia colherão a porção do dia, para testar se andam em Sua Torá. À tarde chegam codornizes e de manhã o maná.",
+      "text_he": "הִנְנִי מַמְטִיר לָכֶם לֶחֶם מִן הַשָּׁמָיִם",
+      "refs": ["Exodus 16:4-5"],
+      "ref_start": "Exodus 16:4",
+      "ref_end": "Exodus 16:5",
+      "chapter": 16,
+      "verse_start": 4,
+      "verse_end": 5,
+      "sefaria_ref": "Exodus 16:4-5",
+      "day_of_creation": null,
+      "tags": ["maná", "pão-do-céu", "codornizes", "teste", "torá"],
+      "topic": "O Maná — Pão do Céu"
+    },
+    {
+      "id": "bs011",
+      "order": 11,
+      "text": "Na sexta-feira cai o dobro de maná. Moshe explica: 'Amanhã é descanso, Shabat sagrado para Deus.' Quem saiu para coletar no Shabat não encontrou nada. Deus diz: 'Até quando recusarão guardar Meus mandamentos?'",
+      "text_he": "שִׁבְתוֹן שַׁבַּת קֹדֶשׁ לַה' מָחָר",
+      "refs": ["Exodus 16:23-29"],
+      "ref_start": "Exodus 16:23",
+      "ref_end": "Exodus 16:29",
+      "chapter": 16,
+      "verse_start": 23,
+      "verse_end": 29,
+      "sefaria_ref": "Exodus 16:23-29",
+      "day_of_creation": null,
+      "tags": ["shabat", "maná-duplo", "descanso", "mandamento", "kedushah"],
+      "topic": "O Maná e o Shabat — Porção Dupla na Sexta"
+    },
+    {
+      "id": "bs012",
+      "order": 12,
+      "text": "Em Refidim não há água para o povo. O povo briga com Moshe: 'Por que nos tiraste do Egito para matar a sede a nós, nossos filhos e nosso gado?' Deus ordena a Moshe bater na rocha com o bastão — água jorra. O lugar é chamado Massah e Merivah.",
+      "text_he": "וַיַּךְ אֶת הַצּוּר וַיֵּצְאוּ מַיִם רַבִּים",
+      "refs": ["Exodus 17:6"],
+      "ref_start": "Exodus 17:3",
+      "ref_end": "Exodus 17:7",
+      "chapter": 17,
+      "verse_start": 3,
+      "verse_end": 7,
+      "sefaria_ref": "Exodus 17:3-7",
+      "day_of_creation": null,
+      "tags": ["refidim", "rocha", "água", "massah", "merivah"],
+      "topic": "Água da Rocha em Refidim"
+    },
+    {
+      "id": "bs013",
+      "order": 13,
+      "text": "Amalek vem e ataca Israel em Refidim. Moshe diz a Yehoshua: 'Escolhe homens e combate Amalek.' Moshe sobe ao cume do morro com o bastão. Quando Moshe levanta as mãos, Israel prevalece; quando as abaixa, Amalek prevalece.",
+      "text_he": "וְהָיָה כַּאֲשֶׁר יָרִים מֹשֶׁה יָדוֹ וְגָבַר יִשְׂרָאֵל",
+      "refs": ["Exodus 17:11"],
+      "ref_start": "Exodus 17:8",
+      "ref_end": "Exodus 17:11",
+      "chapter": 17,
+      "verse_start": 8,
+      "verse_end": 11,
+      "sefaria_ref": "Exodus 17:8-11",
+      "day_of_creation": null,
+      "tags": ["amalek", "yehoshua", "mãos-de-moshe", "batalha", "fé"],
+      "topic": "Batalha Contra Amalek — As Mãos de Moshe"
+    },
+    {
+      "id": "bs014",
+      "order": 14,
+      "text": "Aharon e Chur sustentam as mãos de Moshe — um de cada lado — até o pôr do sol. Yehoshua derrota Amalek. Deus diz: 'Escrevei isto como memorial — apagará a memória de Amalek.' Moshe constrói um altar chamado Hashem Nisi.",
+      "text_he": "מִלְחָמָה לַה' בַּעֲמָלֵק מִדֹּר דֹּר",
+      "refs": ["Exodus 17:12-16"],
+      "ref_start": "Exodus 17:12",
+      "ref_end": "Exodus 17:16",
+      "chapter": 17,
+      "verse_start": 12,
+      "verse_end": 16,
+      "sefaria_ref": "Exodus 17:12-16",
+      "day_of_creation": null,
+      "tags": ["aharon", "chur", "vitória", "memorial", "amalek", "altar"],
+      "topic": "Vitória Sobre Amalek — 'Guerra a Deus em Todas as Gerações'"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Exodus 13:17", "ref_end": "Exodus 14:8",  "sefaria_ref": "Exodus 13:17-14:8" },
+    { "number": 2, "ref_start": "Exodus 14:9",  "ref_end": "Exodus 14:14", "sefaria_ref": "Exodus 14:9-14" },
+    { "number": 3, "ref_start": "Exodus 14:15", "ref_end": "Exodus 14:25", "sefaria_ref": "Exodus 14:15-25" },
+    { "number": 4, "ref_start": "Exodus 14:26", "ref_end": "Exodus 15:26", "sefaria_ref": "Exodus 14:26-15:26" },
+    { "number": 5, "ref_start": "Exodus 15:27", "ref_end": "Exodus 16:10", "sefaria_ref": "Exodus 15:27-16:10" },
+    { "number": 6, "ref_start": "Exodus 16:11", "ref_end": "Exodus 16:36", "sefaria_ref": "Exodus 16:11-36" },
+    { "number": 7, "ref_start": "Exodus 17:1",  "ref_end": "Exodus 17:16", "sefaria_ref": "Exodus 17:1-16" }
+  ],
+
+  "haftarah": {
+    "ref": "Judges 4:4-5:31",
+    "sefaria_ref": "Judges 4:4-5:31",
+    "note": "Tema: Devorah e Barak — batalha e cântico de vitória; paralelo ao Shirat HaYam de Miriam e Moshe"
+  },
+
+  "connections": {
+    "next_parasha": "yitro",
+    "prev_parasha": "bo",
+    "thematic_links": [
+      { "parasha": "bo",    "theme": "O Êxodo levou Israel para fora — Beshalach é a jornada inicial no deserto" },
+      { "parasha": "yitro", "theme": "Chegada ao Sinai — a Revelação e os Dez Mandamentos" }
+    ]
+  }
+}
