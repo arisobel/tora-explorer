@@ -119,3 +119,13 @@
 **Decision:** Add `data/milestones/chumash.json` as a milestone layer. Milestones aggregate existing parashiot and facts by ID and should not duplicate detailed fact content.
 
 **Impact:** The Chumash tab can render a 5-book atlas and open the parasha drawer from milestone cards. This creates another drill level: book → milestone → parasha/theme → fact → pessukim.
+
+---
+
+## 2026-05-31 — White atlas UI as default presentation
+
+**Context:** The dark prototype made the app feel more like a dashboard than a visual Torah atlas. The next product direction requires clearer scanability, visual markers, book lanes, and multi-level drill-down.
+
+**Decision:** Move the default presentation to a white, atlas-like study surface. Treat this as a navigation restructure, not only a palette change.
+
+**Impact:** New UI work should use the light CSS tokens as the default. Remaining dark-theme assumptions in inline styles should be removed incrementally. Drill levels should remain explicit: structure → book → milestone → parasha → fact/pessukim.

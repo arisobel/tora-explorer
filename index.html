@@ -7,25 +7,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0e0d0b;
-  --bg2: #161410;
-  --bg3: #1e1b17;
-  --surface: #252118;
-  --surface2: #2e2820;
-  --gold: #c9a84c;
-  --gold2: #e8c97a;
-  --gold3: #f5e0a0;
-  --sand: #b8a88a;
-  --sand2: #d4c4a0;
-  --blue: #4a7fa5;
-  --blue2: #6fb4e0;
-  --green: #4a8a6a;
-  --green2: #72c494;
-  --text: #e8e0d0;
-  --text2: #a89880;
-  --text3: #6a5e4e;
-  --border: rgba(201,168,76,0.15);
-  --border2: rgba(201,168,76,0.3);
+  --bg: #fbfaf7;
+  --bg2: #f5f1e9;
+  --bg3: #eee7d9;
+  --surface: #ffffff;
+  --surface2: #f3efe7;
+  --gold: #b88a24;
+  --gold2: #8f691a;
+  --gold3: #6f5013;
+  --sand: #8f826d;
+  --sand2: #5f5343;
+  --blue: #2f78a8;
+  --blue2: #1f638d;
+  --green: #3d8b62;
+  --green2: #2f754f;
+  --text: #24211c;
+  --text2: #5f5547;
+  --text3: #8a7d68;
+  --border: rgba(92,76,47,0.16);
+  --border2: rgba(92,76,47,0.28);
   --r: 8px;
   --r2: 14px;
 }
@@ -35,7 +35,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 280px);
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
@@ -46,7 +46,7 @@ body {
 /* NAV */
 nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(14,13,11,0.92);
+  background: rgba(255,255,255,0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   display: flex; align-items: center;
@@ -76,14 +76,14 @@ nav {
 .hero {
   text-align: center;
   padding: 5rem 2rem 3.5rem;
-  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  background: linear-gradient(180deg, rgba(238,231,217,0.72), rgba(255,255,255,0));
   border-bottom: 1px solid var(--border);
 }
 .hero-he {
   font-family: 'Crimson Pro', serif;
   font-size: 48px; font-weight: 300;
   color: var(--gold3); letter-spacing: 0.15em;
-  margin-bottom: 0.5rem; opacity: 0.6;
+  margin-bottom: 0.5rem; opacity: 0.72;
 }
 .hero-title {
   font-family: 'Crimson Pro', serif;
@@ -167,6 +167,53 @@ nav {
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 .arrow-label { color: var(--gold2); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+
+/* DRILL PATH */
+.drill-path {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(130px, 1fr));
+  gap: .65rem;
+  margin: 0 0 1.4rem;
+}
+.drill-step {
+  appearance: none;
+  text-align: left;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: var(--r);
+  padding: .75rem .85rem;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(82,65,35,0.05);
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.drill-step:hover {
+  transform: translateY(-1px);
+  border-color: rgba(184,138,36,.45);
+  box-shadow: 0 10px 28px rgba(82,65,35,0.08);
+}
+.drill-step-kicker {
+  display: block;
+  color: var(--text3);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: .15rem;
+}
+.drill-step-title {
+  display: block;
+  color: var(--text);
+  font-family: 'Crimson Pro', serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.drill-step-sub {
+  display: block;
+  color: var(--text2);
+  font-size: 11px;
+  line-height: 1.25;
+  margin-top: .25rem;
+}
 
 /* FLOW DIAGRAM */
 .flow-row {
@@ -438,10 +485,11 @@ nav {
 .tooltip-wrap { position: relative; display: inline-block; }
 .tooltip {
   position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
-  background: var(--bg3); border: 1px solid var(--border2);
+  background: #fffdf8; border: 1px solid var(--border2);
   border-radius: var(--r); padding: 6px 10px;
   font-size: 12px; color: var(--text); white-space: nowrap;
   pointer-events: none; opacity: 0; transition: opacity .2s; z-index: 50;
+  box-shadow: 0 12px 26px rgba(62,48,24,0.12);
 }
 .tooltip-wrap:hover .tooltip { opacity: 1; }
 
@@ -452,6 +500,7 @@ nav {
   .oral-cols { grid-template-columns: 1fr; }
   .events-chars-grid { grid-template-columns: 1fr; }
   .atlas-grid { grid-template-columns: 1fr; }
+  .drill-path { grid-template-columns: 1fr; }
   .hero-title { font-size: 36px; }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
@@ -488,6 +537,34 @@ nav {
 <div id="page-estrutura" class="page active">
   <div class="sec-title">Estrutura da Torá</div>
   <div class="sec-sub">Da Torá Escrita à Halachá — o caminho da transmissão</div>
+
+  <div class="drill-path" aria-label="Níveis de drill-down">
+    <button class="drill-step" onclick="drillGo('estrutura')">
+      <span class="drill-step-kicker">Nível 1</span>
+      <span class="drill-step-title">Estrutura</span>
+      <span class="drill-step-sub">Torá Escrita, Oral e Halachá</span>
+    </button>
+    <button class="drill-step" onclick="drillGo('chumash')">
+      <span class="drill-step-kicker">Nível 2</span>
+      <span class="drill-step-title">5 Livros</span>
+      <span class="drill-step-sub">Mapa visual do Chumash</span>
+    </button>
+    <button class="drill-step" onclick="drillGo('chumash', 'genesis')">
+      <span class="drill-step-kicker">Nível 3</span>
+      <span class="drill-step-title">Milestones</span>
+      <span class="drill-step-sub">Grandes agregadores narrativos</span>
+    </button>
+    <button class="drill-step" onclick="drawerOpen('genesis')">
+      <span class="drill-step-kicker">Nível 4</span>
+      <span class="drill-step-title">Parashá</span>
+      <span class="drill-step-sub">Régua, temas e fatos</span>
+    </button>
+    <button class="drill-step" onclick="drillGo('pessukim')">
+      <span class="drill-step-kicker">Nível 5</span>
+      <span class="drill-step-title">Pessukim</span>
+      <span class="drill-step-sub">Texto-fonte na Sefaria</span>
+    </button>
+  </div>
 
   <!-- Flow: Mikra → Talmud → Halachá -->
   <div class="flow-row" style="margin-bottom: 2rem;">
@@ -1316,6 +1393,21 @@ function showPage(id, btn) {
   btn.classList.add('active');
 }
 
+function drillGo(pageId, bookKey = null) {
+  const tab = [...document.querySelectorAll('.nav-tab')]
+    .find(t => t.getAttribute('onclick') && t.getAttribute('onclick').includes(`'${pageId}'`));
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + pageId).classList.add('active');
+  if (tab) tab.classList.add('active');
+
+  if (pageId === 'chumash' && bookKey) {
+    const btn = [...document.querySelectorAll('.book-btn')]
+      .find(b => b.getAttribute('onclick') && b.getAttribute('onclick').includes(`'${bookKey}'`));
+    if (btn) showBook(bookKey, btn);
+  }
+}
+
 function showBook(id, btn) {
   document.querySelectorAll('.book-view').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.book-btn').forEach(b => b.classList.remove('active'));
@@ -1543,7 +1635,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <style>
 .drawer-overlay {
   position: fixed; inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(36,31,23,0.32);
   z-index: 200;
   opacity: 0; pointer-events: none;
   transition: opacity .3s;
@@ -1560,6 +1652,7 @@ document.addEventListener('DOMContentLoaded', () => {
   transition: transform .32s cubic-bezier(.4,0,.2,1);
   overflow-y: auto;
   display: flex; flex-direction: column;
+  box-shadow: -18px 0 46px rgba(62,48,24,0.14);
 }
 .drawer.open { transform: translateX(0); }
 
@@ -1567,7 +1660,8 @@ document.addEventListener('DOMContentLoaded', () => {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
   display: flex; align-items: center; gap: 10px;
-  background: var(--bg3);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
   position: sticky; top: 0; z-index: 1;
   flex-shrink: 0;
 }

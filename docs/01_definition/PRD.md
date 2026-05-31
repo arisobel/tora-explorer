@@ -64,6 +64,9 @@ The product should evolve from text-only facts into a visual learning atlas.
 Facts, parashiot, timeline events, and books may receive optional visual metadata:
 icons, image references, captions, lanes, colors, and importance levels.
 
+The default UI direction is a white, atlas-like study surface. Dark UI should not
+be the default presentation.
+
 Images and icons should live as files under a future `assets/` folder. JSON files
 should reference those assets, not embed binary data.
 
@@ -71,8 +74,10 @@ The intended drill-down hierarchy is:
 
 1. Canonical structure: Torah Escrita, Torah Oral, Mikra, Talmud, Halacha
 2. Chumash overview: five books, major event lanes, people lanes
-3. Book/parasha overview: all parashiot in a book with summaries and markers
-4. Fact detail: text, Sefaria ref, people/themes, and visual marker
+3. Milestone overview: strategic narrative aggregators across books/parashiot
+4. Book/parasha overview: all parashiot in a book with summaries and markers
+5. Fact detail: text, Sefaria ref, people/themes, and visual marker
+6. Pessukim: source text and chapter-level reading
 
 Authoring should remain JSON-first for now. A future local `editor.html` /
 `admin.html` may edit or export JSON files through forms before any database is

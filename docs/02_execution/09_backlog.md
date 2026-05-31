@@ -3,6 +3,7 @@
 ## Immediate (Next Cycle)
 
 - [ ] Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
+- [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Add repeatable validation for `data/milestones/chumash.json` parasha/fact links
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add selected/highlight state from Parasha drawer back to Timeline tab
@@ -11,6 +12,7 @@
 ## Short Term
 
 - [ ] Add "ver na linha do tempo" action from parasha/fact views
+- [ ] Remove remaining dark-theme assumptions from inline styles
 - [ ] Add a fallback/error message that distinguishes Sefaria failure from proxy/CORS failure
 - [ ] Add a smoke-check step after CapRover package generation to verify the tar contents
 - [ ] Extend the parasha schema with optional `visual` metadata for facts, parashiot, books, and timeline events

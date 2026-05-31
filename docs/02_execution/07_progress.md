@@ -38,6 +38,9 @@
 - [x] `data/milestones/chumash.json` added as the Chumash Atlas milestone layer
 - [x] Chumash tab renders a 5-book milestone atlas; Genesis/Exodus milestones can open the drawer
 - [x] Estrutura tab chips for Bereshit and Shemot open their respective parasha drawers
+- [x] White UI foundation added through global theme tokens
+- [x] Estrutura page now has a 5-level drill rail
+- [x] White UI / multi-level drill strategy documented
 
 ---
 
@@ -51,11 +54,12 @@
 ## Next Actions (Short Horizon)
 
 1. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
-2. Validate milestone `fact_ids` in a repeatable script/check
-3. Add selected/highlight state from drawer back to the Timeline tab
-4. Show linked global timeline events inside the Parasha drawer
-5. Extend timeline event links beyond the Genesis pilot
-6. Add fallback/error messaging that distinguishes Sefaria failure from proxy/CORS failure
+2. Add selected-state breadcrumb across book, milestone, parasha, and fact levels
+3. Validate milestone `fact_ids` in a repeatable script/check
+4. Add selected/highlight state from drawer back to the Timeline tab
+5. Show linked global timeline events inside the Parasha drawer
+6. Extend timeline event links beyond the Genesis pilot
+7. Add fallback/error messaging that distinguishes Sefaria failure from proxy/CORS failure
 
 ---
 
