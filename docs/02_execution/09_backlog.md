@@ -2,9 +2,9 @@
 
 ## Immediate (Next Cycle)
 
-- [ ] Decide database engine for authoring/source-of-truth model (SQLite first vs PostgreSQL)
 - [ ] Map current JSON files into the `nodes` / `node_edges` draft schema
 - [ ] Define first generated `data/views/structure.json` and `data/views/timeline.json` projection shapes
+- [ ] Create import script from current JSON files into SQLite
 - [ ] Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -15,7 +15,6 @@
 
 ## Short Term
 
-- [ ] Create import script from current JSON files into database draft schema
 - [ ] Create export script from database draft schema back to runtime JSON
 - [ ] Replace hand-authored `data/timeline_groups.json` with a generated timeline projection
 - [ ] Add "ver na linha do tempo" action from parasha/fact views

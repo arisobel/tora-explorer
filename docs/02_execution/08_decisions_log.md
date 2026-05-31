@@ -159,3 +159,13 @@
 **Decision:** Define a screen-agnostic drill-down architecture. Estrutura and Timeline are entry points over the same graph of nodes and typed relations. No UI screen owns the content.
 
 **Impact:** Future implementation should avoid creating more view-specific source files unless they are generated runtime projections. New domain content should be modeled as reusable nodes and edges first.
+
+---
+
+## 2026-05-31 — SQLite first for authoring database
+
+**Context:** The project needs to start structuring a database for horizontal drill-down data, but the public app should remain static and JSON-driven for CapRover deployment.
+
+**Decision:** Use SQLite as the first authoring/source-of-truth database. Version the schema as SQL migrations under `db/migrations/` and create local ignored database files with `scripts/init-sqlite.ps1`.
+
+**Impact:** The runtime app is unchanged. The next work is to import current JSON into SQLite and then export equivalent runtime JSON from the database.

@@ -1,1 +1,4 @@
 dist/*.tar
+db/*.sqlite
+db/*.sqlite-shm
+db/*.sqlite-wal

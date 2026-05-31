@@ -219,20 +219,35 @@ Long term, if needed, replace static JSON fetches with API reads.
 ## Suggested Implementation Order
 
 1. Keep current JSON runtime unchanged.
-2. Define the database schema in SQL/migrations.
-3. Import existing JSON into database tables.
-4. Build export scripts that regenerate the JSON files.
-5. Use the exported JSON in the existing frontend.
-6. Only then consider a live admin/editor UI.
+2. Define the database schema in SQL/migrations. **Done in `db/migrations/001_initial_drill_model.sql`.**
+3. Initialize a local SQLite database. **Done through `scripts/init-sqlite.ps1`.**
+4. Import existing JSON into database tables.
+5. Build export scripts that regenerate the JSON files.
+6. Use the exported JSON in the existing frontend.
+7. Only then consider a live admin/editor UI.
+
+## Current SQLite Files
+
+- `db/README.md`
+- `db/migrations/001_initial_drill_model.sql`
+- `scripts/init-sqlite.ps1`
+
+Default local database path:
+
+```text
+db/tora-explorer.sqlite
+```
+
+The local `.sqlite` file is ignored by Git.
 
 ## Open Decision
 
-Database engine is not chosen yet.
+SQLite is the initial authoring database for the current stage.
 
-Good candidates:
+PostgreSQL remains a future candidate if the project needs:
 
-- SQLite for local authoring and simple export scripts.
-- PostgreSQL if multi-user editing, hosted admin, or richer querying becomes
-  necessary.
-
-For the current project stage, SQLite is the lower-friction first step.
+- multi-user editing
+- hosted admin workflows
+- concurrent writes
+- richer permissions
+- server-side querying

@@ -45,6 +45,8 @@
 - [x] Timeline phases can expand into subject/milestone groups that open the parasha drawer
 - [x] Horizontal database drill model documented with draft SQL schema
 - [x] General screen-agnostic drill-down architecture documented
+- [x] SQLite v0 authoring schema added under `db/migrations/`
+- [x] `scripts/init-sqlite.ps1` creates local `db/tora-explorer.sqlite`
 
 ---
 
@@ -57,9 +59,9 @@
 
 ## Next Actions (Short Horizon)
 
-1. Decide database engine for the authoring/source-of-truth model
-2. Map current JSON into the `nodes` / `node_edges` draft schema
-3. Define generated `data/views/structure.json` and `data/views/timeline.json`
+1. Map current JSON into the `nodes` / `node_edges` draft schema
+2. Define generated `data/views/structure.json` and `data/views/timeline.json`
+3. Create import script from current JSON into SQLite
 4. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
 5. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
 6. Validate milestone and timeline group `fact_ids` in a repeatable script/check
