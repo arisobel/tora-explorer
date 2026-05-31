@@ -30,6 +30,9 @@ The core navigation model is:
    - Strategic narrative aggregators
    - Stored in `data/milestones/chumash.json`
    - Links to parashiot and facts by ID
+   - Timeline phases can expose related subject groups. The current runtime
+     file is `data/timeline_groups.json`; the intended source-of-truth is the
+     horizontal database model.
 
 4. **Parasha Level**
    - Local parasha drawer
@@ -50,6 +53,7 @@ The first implementation adds:
 
 - a light visual theme through global CSS tokens in `index.html`
 - a 5-level drill rail on the Estrutura page
+- Timeline phase expansion through `data/timeline_groups.json`
 - navigation from the drill rail into Estrutura, Chumash, Genesis milestones,
   the Genesis parasha drawer, and Pessukim
 - white drawer styling to match the new visual direction
@@ -64,6 +68,14 @@ cross-link through stable IDs:
 ```text
 book_key -> milestone.id -> parasha_id -> fact_id -> sefaria_ref
 ```
+
+Timeline-specific groups currently use the same IDs:
+
+```text
+timeline_phase -> timeline_group -> book_key/parasha_id/fact_ids
+```
+
+This should be treated as a runtime projection, not a long-term data silo.
 
 ## Next Design Iterations
 

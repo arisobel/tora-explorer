@@ -2,15 +2,20 @@
 
 ## Immediate (Next Cycle)
 
+- [ ] Decide database engine for authoring/source-of-truth model (SQLite first vs PostgreSQL)
+- [ ] Map current JSON files into the `nodes` / `node_edges` draft schema
 - [ ] Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
-- [ ] Add repeatable validation for `data/milestones/chumash.json` parasha/fact links
+- [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add selected/highlight state from Parasha drawer back to Timeline tab
 - [ ] Show linked global timeline events inside the Parasha drawer
+- [ ] Show linked timeline groups inside the Parasha drawer
 
 ## Short Term
 
+- [ ] Create import script from current JSON files into database draft schema
+- [ ] Create export script from database draft schema back to runtime JSON
 - [ ] Add "ver na linha do tempo" action from parasha/fact views
 - [ ] Remove remaining dark-theme assumptions from inline styles
 - [ ] Add a fallback/error message that distinguishes Sefaria failure from proxy/CORS failure

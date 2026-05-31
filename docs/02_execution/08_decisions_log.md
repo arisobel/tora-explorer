@@ -129,3 +129,23 @@
 **Decision:** Move the default presentation to a white, atlas-like study surface. Treat this as a navigation restructure, not only a palette change.
 
 **Impact:** New UI work should use the light CSS tokens as the default. Remaining dark-theme assumptions in inline styles should be removed incrementally. Drill levels should remain explicit: structure → book → milestone → parasha → fact/pessukim.
+
+---
+
+## 2026-05-31 — Timeline groups as intermediate drill-down
+
+**Context:** Timeline phases were too coarse and clicking them jumped directly to parasha detail. The product needs an intermediate level for large structures of events and subject aggregators.
+
+**Decision:** Add `data/timeline_groups.json` as the Timeline drill-down layer. Timeline phases can expand into subject/milestone cards. Cards link by stable IDs to books, milestones, parashiot, and facts.
+
+**Impact:** The Timeline now supports phase → group → parasha/facts. Future timeline work should add groups to JSON rather than hard-coding additional cards in HTML.
+
+---
+
+## 2026-05-31 — Horizontal database model for drill-down data
+
+**Context:** Timeline groups, Chumash milestones, parasha facts, themes, characters, and future visual markers are cross-cutting dimensions. Keeping separate JSON files per view risks vertical data silos.
+
+**Decision:** Define a database authoring/source-of-truth model based on reusable `nodes` and typed `node_edges`. Timeline, Chumash Atlas, character views, and parasha drawers should become projections over the same graph. Static JSON remains the public runtime format until a live API is justified.
+
+**Impact:** `data/timeline_groups.json` is transitional. The next data architecture step is to import current JSON into the node/edge model and export the existing runtime JSON shapes from the database.

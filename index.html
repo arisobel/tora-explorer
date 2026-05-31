@@ -286,6 +286,78 @@ nav {
 .tl-event:hover .tl-dot { transform: scale(1.4); }
 .tl-event.selected .tl-event-title { color: var(--gold2); }
 .tl-event.selected .tl-dot { transform: scale(1.5); box-shadow: 0 0 0 4px rgba(201,168,76,.16); }
+.tl-drill-hint {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin-top: 7px;
+  font-size: 11px; color: var(--gold2);
+}
+.tl-drill-panel {
+  display: none;
+  margin-top: .8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: rgba(255,255,255,0.72);
+  box-shadow: 0 10px 26px rgba(82,65,35,0.06);
+  padding: .85rem;
+}
+.tl-event.expanded .tl-drill-panel { display: block; }
+.tl-drill-summary {
+  color: var(--text2);
+  font-size: 12px;
+  margin-bottom: .75rem;
+}
+.tl-group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: .6rem;
+}
+.tl-group-card {
+  border: 1px solid rgba(92,76,47,0.14);
+  border-radius: var(--r);
+  background: var(--surface);
+  padding: .65rem;
+  cursor: pointer;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.tl-group-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(184,138,36,.42);
+  box-shadow: 0 10px 20px rgba(82,65,35,0.08);
+}
+.tl-group-head {
+  display: flex; align-items: center; gap: .45rem;
+  font-family: 'Crimson Pro', serif;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.tl-group-icon {
+  width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--gold2);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  flex: 0 0 auto;
+}
+.tl-group-summary {
+  color: var(--text2);
+  font-size: 11px;
+  line-height: 1.35;
+  margin-top: .35rem;
+}
+.tl-group-themes {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  margin-top: .55rem;
+}
+.tl-group-theme {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 10px;
+  color: var(--text3);
+  background: var(--bg);
+}
 
 /* Era colors */
 .dot-escrita { background: var(--blue); }
@@ -703,7 +775,7 @@ nav {
     <div class="timeline-spine"></div>
     <div class="tl-events">
 
-      <div class="tl-event" data-timeline-event="creation" onclick="timelineOpenEvent('creation', this)">
+      <div class="tl-event" data-timeline-phase="early-world" onclick="timelineTogglePhase('early-world', this)">
         <div class="tl-period">0 – 1656<br>10 gerações</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -713,7 +785,7 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event" data-timeline-event="flood" onclick="timelineOpenEvent('flood', this)">
+      <div class="tl-event" data-timeline-phase="flood-babel" onclick="timelineTogglePhase('flood-babel', this)">
         <div class="tl-period">1656 – 1948<br>10 gerações</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -723,7 +795,7 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event" data-timeline-event="avraham-lech-lecha" onclick="timelineOpenEvent('avraham-lech-lecha', this)">
+      <div class="tl-event" data-timeline-phase="patriarchs" onclick="timelineTogglePhase('patriarchs', this)">
         <div class="tl-period">1948 – 2448<br>7 gerações</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -733,7 +805,7 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event">
+      <div class="tl-event" data-timeline-phase="exodus-sinai" onclick="timelineTogglePhase('exodus-sinai', this)">
         <div class="tl-period">2448 – 2928<br>8 gerações</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -1625,6 +1697,7 @@ function toHebNum(n) {
 document.addEventListener('DOMContentLoaded', () => {
   pkUpdateChapters();
   renderChumashAtlas('genesis');
+  renderTimelineDrilldowns();
 });
 
 </script>
@@ -1849,7 +1922,7 @@ const BOOK_META = {
   exodus:  { title: 'Êxodo · Parashiot',   label: 'Êxodo',   path: 'data/parashiot/exodus/index.json',  sefaria: 'Exodus'  }
 };
 
-const _mart = { timeline: null, parasha: {} };
+const _mart = { timeline: null, timelineGroups: null, parasha: {} };
 const _drawer = { bookKey: 'genesis', index: null, indices: {}, cache: {}, context: null };
 
 async function loadTimelineData() {
@@ -1859,6 +1932,81 @@ async function loadTimelineData() {
     _mart.timeline = await r.json();
   }
   return _mart.timeline;
+}
+
+async function loadTimelineGroups() {
+  if (!_mart.timelineGroups) {
+    const r = await fetch('data/timeline_groups.json');
+    if (!r.ok) throw new Error(`${r.status} — agrupadores da timeline não encontrados`);
+    _mart.timelineGroups = await r.json();
+  }
+  return _mart.timelineGroups;
+}
+
+async function renderTimelineDrilldowns() {
+  try {
+    const data = await loadTimelineGroups();
+    for (const phase of (data.phases || [])) {
+      const el = document.querySelector(`[data-timeline-phase="${phase.id}"]`);
+      if (!el) continue;
+      const content = el.querySelector('.tl-content');
+      if (!content || content.querySelector('.tl-drill-panel')) continue;
+
+      const cards = (phase.groups || []).map(g => {
+        const themes = (g.themes || [])
+          .slice(0, 3)
+          .map(t => `<span class="tl-group-theme">${t}</span>`)
+          .join('');
+        return `
+          <div class="tl-group-card" onclick="openTimelineGroup('${phase.id}','${g.id}', event)">
+            <div class="tl-group-head"><span class="tl-group-icon">${g.icon || '•'}</span>${g.label}</div>
+            <div class="tl-group-summary">${g.summary || ''}</div>
+            ${themes ? `<div class="tl-group-themes">${themes}</div>` : ''}
+          </div>`;
+      }).join('');
+
+      content.insertAdjacentHTML('beforeend', `
+        <div class="tl-drill-hint">＋ Abrir agrupadores</div>
+        <div class="tl-drill-panel">
+          <div class="tl-drill-summary">${phase.summary || ''}</div>
+          <div class="tl-group-grid">${cards}</div>
+        </div>
+      `);
+    }
+  } catch(e) {
+    console.error('Erro ao carregar agrupadores da timeline', e);
+  }
+}
+
+function timelineTogglePhase(phaseId, el) {
+  document.querySelectorAll('.tl-event').forEach(e => {
+    if (e !== el) e.classList.remove('selected', 'expanded');
+  });
+  if (!el) return;
+  el.classList.toggle('expanded');
+  el.classList.add('selected');
+}
+
+async function openTimelineGroup(phaseId, groupId, ev = null) {
+  if (ev) ev.stopPropagation();
+  try {
+    const data = await loadTimelineGroups();
+    const phase = (data.phases || []).find(p => p.id === phaseId);
+    const group = phase && (phase.groups || []).find(g => g.id === groupId);
+    if (!group || !group.book_key || !group.parasha_id) return;
+
+    await loadParashaMart(group.book_key);
+    drawerOpen({
+      bookKey: group.book_key,
+      parashaId: group.parasha_id,
+      factIds: group.fact_ids || [],
+      timelinePhaseId: phaseId,
+      timelineGroupId: groupId,
+      milestoneId: group.milestone_id || null
+    });
+  } catch(e) {
+    console.error('Erro ao abrir agrupador da timeline', e);
+  }
 }
 
 async function loadParashaMart(bookKey) {

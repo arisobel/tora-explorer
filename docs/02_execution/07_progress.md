@@ -41,6 +41,9 @@
 - [x] White UI foundation added through global theme tokens
 - [x] Estrutura page now has a 5-level drill rail
 - [x] White UI / multi-level drill strategy documented
+- [x] `data/timeline_groups.json` added for Timeline phase drill-down
+- [x] Timeline phases can expand into subject/milestone groups that open the parasha drawer
+- [x] Horizontal database drill model documented with draft SQL schema
 
 ---
 
@@ -53,13 +56,13 @@
 
 ## Next Actions (Short Horizon)
 
-1. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
-2. Add selected-state breadcrumb across book, milestone, parasha, and fact levels
-3. Validate milestone `fact_ids` in a repeatable script/check
-4. Add selected/highlight state from drawer back to the Timeline tab
-5. Show linked global timeline events inside the Parasha drawer
-6. Extend timeline event links beyond the Genesis pilot
-7. Add fallback/error messaging that distinguishes Sefaria failure from proxy/CORS failure
+1. Decide database engine for the authoring/source-of-truth model
+2. Map current JSON into the `nodes` / `node_edges` draft schema
+3. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
+4. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
+5. Validate milestone and timeline group `fact_ids` in a repeatable script/check
+6. Add selected/highlight state from drawer back to the Timeline tab
+7. Show linked global timeline events/groups inside the Parasha drawer
 
 ---
 

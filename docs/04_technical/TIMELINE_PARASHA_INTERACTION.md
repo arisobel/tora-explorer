@@ -159,6 +159,7 @@ manual data files:
 
 ```text
 data/timeline.json
+data/timeline_groups.json
 data/milestones/chumash.json
 data/parashiot/genesis/index.json
 data/parashiot/exodus/index.json
@@ -194,6 +195,22 @@ This keeps the book index as the source for:
 `data/milestones/chumash.json` provides explicit book-level aggregators for
 the atlas. It links to parashas and facts by ID instead of copying their full
 content.
+
+`data/timeline_groups.json` currently provides transitional Timeline-specific
+phase drill-downs. It adds one level between a large timeline phase and the
+parasha drawer:
+
+```text
+timeline phase -> subject group -> parasha/fact detail
+```
+
+Timeline groups are intentionally light. They may point to `book_key`,
+`milestone_id`, `parasha_id`, `fact_ids`, and `themes`. They should not
+duplicate full parasha or fact narrative text.
+
+Longer term, these groups should not remain a Timeline-only silo. They should
+be exported from the horizontal database model described in
+`docs/04_technical/DATABASE_DRILL_MODEL.md`.
 
 Later, when facts carry stable character IDs, a deeper character mart can link:
 
@@ -253,9 +270,14 @@ controller:
 
 - eras as large bands
 - key events as markers
-- event click opens related parasha drawer or Pessukim chapter
+- phase click expands subject/milestone groups
+- group click opens related parasha drawer or Pessukim chapter
 - selected event state
 - related parashiot shown in context
+
+Large phases can now expand into subject groups from
+`data/timeline_groups.json`. Each group acts as a thematic/milestone card and
+can open the parasha drawer with highlighted facts.
 
 ### Parasha Drawer
 

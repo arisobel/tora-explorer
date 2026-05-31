@@ -85,6 +85,24 @@ Each milestone may include:
 Milestones should aggregate existing facts; they should not duplicate fact
 content.
 
+### Timeline Group
+A subject-level drill-down inside a large historical phase. It is narrower than
+an era and broader than a fact.
+
+Timeline groups currently live in `data/timeline_groups.json` as a transitional
+runtime file and may point to:
+- a Chumash book via `book_key`
+- a milestone via `milestone_id`
+- a parasha via `parasha_id`
+- facts via `fact_ids`
+- themes for filtering/visual grouping
+
+They should not duplicate the detailed parasha/fact narrative.
+
+The intended long-term model is horizontal: timeline groups, milestones,
+characters, themes, parashiot, and facts should become reusable database nodes
+connected by typed edges. See `docs/04_technical/DATABASE_DRILL_MODEL.md`.
+
 ### Anno Mundi (AM)
 The Jewish calendar year-from-creation. Used as the x-axis of the timeline.
 - 0 AM = Creation
@@ -132,6 +150,7 @@ Sefaria API (external)
 | File | Content |
 |------|---------|
 | `data/timeline.json` | All eras + key events (complete) |
+| `data/timeline_groups.json` | Timeline phase drill-down groups |
 | `data/SCHEMA.md` | JSON schema spec for parasha files |
 | `data/parashiot/genesis/index.json` | Light metadata for all 12 Genesis parashiot |
 | `data/parashiot/genesis/01-bereshit.json` through `12-vayechi.json` | Full Genesis data; all `facts_count` values match actual `facts[]` length |
@@ -153,6 +172,7 @@ Sefaria API (external)
 6. Visual assets are referenced by path from JSON; image binaries are never embedded in JSON
 7. Every visual marker with an `asset` must include a `caption` or equivalent accessible label
 8. Milestones aggregate parashiot/facts by ID; they must not become duplicate narrative text stores
+9. Timeline-specific JSON drill files are transitional; the intended source-of-truth is a horizontal node/edge data model that can export runtime JSON
 
 ---
 
@@ -168,6 +188,6 @@ The next model/UI alignment step is to make the drawer book-aware so that
 `genesis` and `exodus` can use the same rendering flow.
 
 The next content-model evolution is documented in
-`docs/04_technical/CONTENT_VISUAL_STRATEGY.md`: keep JSON as the app runtime
-format, add optional visual metadata, and defer database usage until authoring
-needs justify it.
+`docs/04_technical/DATABASE_DRILL_MODEL.md`: keep JSON as the app runtime
+format, but introduce a database authoring/source-of-truth model with reusable
+nodes and typed edges.

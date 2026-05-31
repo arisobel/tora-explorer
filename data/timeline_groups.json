@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "description": "Intermediate drill-down groups for the Timeline tab. Each phase groups strategic narrative milestones before opening parasha/fact detail.",
+  "phases": [
+    {
+      "id": "early-world",
+      "timeline_event_id": "creation",
+      "label": "Criação até Noach",
+      "am_start": 0,
+      "am_end": 1656,
+      "summary": "Do surgimento do mundo até a corrupção moral que antecede o Dilúvio.",
+      "groups": [
+        {
+          "id": "creation-order",
+          "label": "Ordem da criação",
+          "icon": "🌍",
+          "summary": "Criação do céu, terra, luz, separações, vida e Shabat.",
+          "book_key": "genesis",
+          "milestone_id": "gen-creation",
+          "parasha_id": "bereshit",
+          "fact_ids": ["b001", "b002", "b003", "b004", "b005", "b006", "b007", "b008", "b009"],
+          "themes": ["criação", "ordem", "shabat"]
+        },
+        {
+          "id": "eden-fall",
+          "label": "Gan Eden e queda",
+          "icon": "🌳",
+          "summary": "Livre-arbítrio, transgressão e consequências humanas.",
+          "book_key": "genesis",
+          "milestone_id": "gen-eden-fall",
+          "parasha_id": "bereshit",
+          "fact_ids": ["b011", "b012", "b013", "b014", "b015", "b016", "b017"],
+          "themes": ["livre-arbítrio", "pecado", "consequência"]
+        },
+        {
+          "id": "first-violence",
+          "label": "Primeira violência",
+          "icon": "⚖️",
+          "summary": "Kayin e Hevel introduzem responsabilidade moral e ruptura familiar.",
+          "book_key": "genesis",
+          "milestone_id": "gen-cain-abel",
+          "parasha_id": "bereshit",
+          "fact_ids": ["b018", "b019"],
+          "themes": ["irmãos", "violência", "responsabilidade"]
+        }
+      ]
+    },
+    {
+      "id": "flood-babel",
+      "timeline_event_id": "flood",
+      "label": "Dilúvio e dispersão",
+      "am_start": 1656,
+      "am_end": 1948,
+      "summary": "Do juízo do Dilúvio à dispersão das nações em Babel.",
+      "groups": [
+        {
+          "id": "flood-covenant",
+          "label": "Dilúvio e nova aliança",
+          "icon": "🌊",
+          "summary": "Noach, arca, destruição, salvação e pacto pós-Dilúvio.",
+          "book_key": "genesis",
+          "milestone_id": "gen-flood",
+          "parasha_id": "noach",
+          "fact_ids": ["n003", "n004", "n007", "n008", "n009", "n010", "n011", "n012", "n013"],
+          "themes": ["julgamento", "salvação", "aliança"]
+        },
+        {
+          "id": "babel-dispersion",
+          "label": "Torre de Babel",
+          "icon": "🧱",
+          "summary": "A humanidade concentrada é dispersa em línguas e povos.",
+          "book_key": "genesis",
+          "milestone_id": "gen-babel",
+          "parasha_id": "noach",
+          "fact_ids": ["n020"],
+          "themes": ["dispersão", "linguagem", "arrogância"]
+        }
+      ]
+    },
+    {
+      "id": "patriarchs",
+      "timeline_event_id": "avraham-lech-lecha",
+      "label": "Patriarcas",
+      "am_start": 1948,
+      "am_end": 2238,
+      "summary": "Formação da família de Avraham até a descida de Yaakov ao Egito.",
+      "groups": [
+        {
+          "id": "avraham-call",
+          "label": "Chamado de Avraham",
+          "icon": "⛺",
+          "summary": "Missão, terra prometida e início da aliança.",
+          "book_key": "genesis",
+          "milestone_id": "gen-avraham-call",
+          "parasha_id": "lech-lecha",
+          "fact_ids": ["ll001", "ll002", "ll003", "ll004"],
+          "themes": ["aliança", "terra", "missão"]
+        },
+        {
+          "id": "covenant-akedah",
+          "label": "Aliança, Sedom e Akedah",
+          "icon": "🔥",
+          "summary": "Justiça, hospitalidade, teste e promessa.",
+          "book_key": "genesis",
+          "milestone_id": "gen-sedom-akedah",
+          "parasha_id": "vayera",
+          "fact_ids": ["va002", "va003", "va010", "va011", "va012", "va013"],
+          "themes": ["justiça", "teste", "hospitalidade"]
+        },
+        {
+          "id": "birthright-blessings",
+          "label": "Primogenitura e bênçãos",
+          "icon": "12",
+          "summary": "Rivka, Yaakov e Essav estruturam a continuidade patriarcal.",
+          "book_key": "genesis",
+          "milestone_id": "gen-rivka-toldot",
+          "parasha_id": "toldot",
+          "fact_ids": ["tl001", "tl002", "tl003", "tl004", "tl010", "tl011", "tl012"],
+          "themes": ["primogenitura", "irmãos", "bênção"]
+        },
+        {
+          "id": "tribes-formation",
+          "label": "Formação das tribos",
+          "icon": "👥",
+          "summary": "Yaakov em exílio, casamento, filhos e retorno.",
+          "book_key": "genesis",
+          "milestone_id": "gen-yaakov-tribes",
+          "parasha_id": "vayetze",
+          "fact_ids": ["vtz001", "vtz004", "vtz005", "vtz006", "vtz007", "vtz008", "vtz009"],
+          "themes": ["família", "tribos", "exílio"]
+        },
+        {
+          "id": "yosef-egypt",
+          "label": "Yossef e providência",
+          "icon": "🌾",
+          "summary": "Conflito familiar, sonhos, Egito e preparação para o exílio.",
+          "book_key": "genesis",
+          "milestone_id": "gen-yosef",
+          "parasha_id": "vayeshev",
+          "fact_ids": ["vsh001", "vsh003", "vsh009", "mk001", "mk004", "mk005"],
+          "themes": ["sonhos", "providência", "Egito"]
+        }
+      ]
+    },
+    {
+      "id": "exodus-sinai",
+      "timeline_event_id": "exodus-sinai",
+      "label": "Saída do Egito e Sinai",
+      "am_start": 2238,
+      "am_end": 2488,
+      "summary": "Da escravidão no Egito à revelação, leis e Mishkan.",
+      "groups": [
+        {
+          "id": "slavery-moshe",
+          "label": "Escravidão e nascimento de Moshe",
+          "icon": "🧺",
+          "summary": "Opressão do povo e surgimento do libertador.",
+          "book_key": "exodus",
+          "milestone_id": "exo-moshe-born",
+          "parasha_id": "shemot",
+          "fact_ids": ["sm001", "sm002", "sm004", "sm005", "sm006"],
+          "themes": ["exílio", "liderança", "salvação"]
+        },
+        {
+          "id": "plagues-pesach",
+          "label": "Pragas, Pessach e saída",
+          "icon": "🚪",
+          "summary": "Juízo sobre o Egito, Pessach e saída nacional.",
+          "book_key": "exodus",
+          "milestone_id": "exo-pesach",
+          "parasha_id": "bo",
+          "fact_ids": ["bo001", "bo002", "bo003", "bo004", "bo005", "bo006", "bo007"],
+          "themes": ["libertação", "memória", "juízo"]
+        },
+        {
+          "id": "sea-manna-war",
+          "label": "Mar, maná e primeiras provas",
+          "icon": "🌊",
+          "summary": "Abertura do mar, canto, sustento e aprendizado no deserto.",
+          "book_key": "exodus",
+          "milestone_id": "exo-sea",
+          "parasha_id": "beshalach",
+          "fact_ids": ["bs002", "bs003", "bs004", "bs007", "bs008", "bs009"],
+          "themes": ["salvação", "fé", "sustento"]
+        },
+        {
+          "id": "sinai-laws",
+          "label": "Sinai e leis da aliança",
+          "icon": "📜",
+          "summary": "Revelação dos mandamentos e estrutura jurídica da aliança.",
+          "book_key": "exodus",
+          "milestone_id": "exo-sinai",
+          "parasha_id": "yitro",
+          "fact_ids": ["yt005", "yt006", "yt007", "yt008", "mp001", "mp002", "mp003"],
+          "themes": ["revelação", "aliança", "justiça"]
+        },
+        {
+          "id": "mishkan-crisis",
+          "label": "Mishkan, crise e reconciliação",
+          "icon": "🏛️",
+          "summary": "Projeto do Mishkan, Bezerro de Ouro e renovação das tábuas.",
+          "book_key": "exodus",
+          "milestone_id": "exo-mishkan-design",
+          "parasha_id": "terumah",
+          "fact_ids": ["tr001", "tr002", "tr003", "kt008", "kt009", "kt010", "kt014", "kt015"],
+          "themes": ["presença", "idolatria", "perdão"]
+        }
+      ]
+    }
+  ]
+}
