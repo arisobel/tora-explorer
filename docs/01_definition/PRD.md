@@ -1,0 +1,61 @@
+# PRD — Torá Explorer (Minian)
+
+## Vision
+
+An interactive, browser-based reference tool for exploring the structure, timeline, and content of the Torah and Oral Law tradition — in Portuguese, sourced live from the Sefaria API.
+
+## Target User
+
+Hebrew school students, adult learners, and researchers in the Brazilian Jewish community who want an overview of the canonical corpus and easy access to primary texts.
+
+## Core Problem
+
+The Torah tradition spans thousands of years and dozens of texts. There is no single Portuguese-language tool that visualizes its structure, historical arc, key figures, and allows reading the source verses in one place.
+
+---
+
+## Feature Set (5 tabs)
+
+### Tab 1 — Estrutura
+- Visual map of Written Torah (Chumash + Nach) and Oral Torah (Mishna, Guemara, Halacha)
+- Flow diagram: Mikra → Talmud → Halachá
+- Chips for each book, with tooltips
+- **Bereshit chip opens the parasha drawer** (lateral panel)
+
+### Tab 2 — Linha do Tempo
+- Vertical timeline from Creation (0 AM) to Acharonim (today)
+- Color-coded: blue = Written Torah, green = Oral Torah, purple = Transition
+- Horizontal bar showing Oral Torah periods by century CE
+- Events are clickable (currently no action)
+
+### Tab 3 — Mishna & Guemara
+- Two-column panel: Tanaim (Mishna) and Amoraim (Guemara) with key figures
+- Academies section (Israel + Babylon)
+- Braitot & parallel works
+
+### Tab 4 — Chumash — 5 Livros
+- Sub-navigation per book
+- Key events list + character roster per book
+- Static content, not API-driven
+
+### Tab 5 — Pessukim — Versículos
+- Live reader: selects book + chapter, fetches from Sefaria API
+- View modes: Parallel (Hebrew + English), Hebrew only, English only
+- Chapter navigation, verse jump, link to Sefaria
+- Connects from parasha drawer ("→ Ver versículos" button)
+
+---
+
+## Non-Goals
+- No user accounts or bookmarks
+- No Hebrew keyboard input
+- No commentary layer (Rashi, etc.) in this version
+- No mobile-first design (responsive exists but desktop-primary)
+
+---
+
+## Success Criteria
+- All 12 Gênesis parashiot have populated JSON data files
+- Drawer opens with facts and links to Pessukim tab for each parasha
+- Historical ruler renders inside the drawer
+- App loads with zero build step (pure HTML/CSS/JS)

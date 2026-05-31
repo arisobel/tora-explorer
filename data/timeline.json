@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "note": "anno_mundi = anos desde a Criação segundo o calendário judaico tradicional",
+  "total_span_am": 5785,
+  "total_span_label": "0 AM → Hoje (~5785 AM)",
+
+  "eras": [
+    {
+      "id": "criacao",
+      "name": "Criação",
+      "name_he": "בְּרֵאשִׁית",
+      "am_start": 0,
+      "am_end": 1056,
+      "color": "#4a7fa5",
+      "books": ["Genesis 1-6"],
+      "parashiot": ["bereshit"]
+    },
+    {
+      "id": "pre-diluvio",
+      "name": "Pré-Dilúvio",
+      "name_he": "לִפְנֵי הַמַּבּוּל",
+      "am_start": 0,
+      "am_end": 1656,
+      "color": "#4a7fa5",
+      "books": ["Genesis 1-7"],
+      "parashiot": ["bereshit", "noach"]
+    },
+    {
+      "id": "pos-diluvio",
+      "name": "Pós-Dilúvio / Torre de Babel",
+      "name_he": "אַחַר הַמַּבּוּל",
+      "am_start": 1656,
+      "am_end": 1948,
+      "color": "#6a9abf",
+      "books": ["Genesis 8-11"],
+      "parashiot": ["noach"]
+    },
+    {
+      "id": "patriarcas",
+      "name": "Era dos Patriarcas",
+      "name_he": "אָבוֹת",
+      "am_start": 1948,
+      "am_end": 2238,
+      "color": "#c9a84c",
+      "books": ["Genesis 12-47"],
+      "parashiot": ["lech-lecha","vayera","chayei-sarah","toldot","vayetze","vayishlach","vayeshev","miketz","vayigash","vayechi"]
+    },
+    {
+      "id": "egito",
+      "name": "Exílio no Egito",
+      "name_he": "גָּלוּת מִצְרַיִם",
+      "am_start": 2238,
+      "am_end": 2448,
+      "color": "#a06030",
+      "books": ["Genesis 47-50", "Exodus 1-12"],
+      "parashiot": ["vayechi","shemot","vaera","bo"]
+    },
+    {
+      "id": "saida-egito",
+      "name": "Saída do Egito / Sinai",
+      "name_he": "יְצִיאַת מִצְרַיִם",
+      "am_start": 2448,
+      "am_end": 2488,
+      "color": "#e8c97a",
+      "books": ["Exodus 12-40", "Leviticus", "Numbers 1-10"],
+      "parashiot": ["bo","beshalach","yitro","mishpatim","terumah","tetzaveh","ki-tisa","vayakhel","pekudei"]
+    },
+    {
+      "id": "deserto",
+      "name": "40 Anos no Deserto",
+      "name_he": "מִדְבָּר",
+      "am_start": 2448,
+      "am_end": 2488,
+      "color": "#b8a060",
+      "books": ["Numbers", "Deuteronomy"],
+      "parashiot": []
+    },
+    {
+      "id": "primeiro-templo",
+      "name": "Primeiro Templo",
+      "name_he": "בֵּית רִאשׁוֹן",
+      "am_start": 2928,
+      "am_end": 3338,
+      "color": "#72c494",
+      "books": ["Joshua","Judges","Samuel","Kings","Isaiah","Jeremiah","Ezekiel"],
+      "parashiot": []
+    },
+    {
+      "id": "exilio-babilonia",
+      "name": "Exílio da Babilônia",
+      "name_he": "גָּלוּת בָּבֶל",
+      "am_start": 3338,
+      "am_end": 3408,
+      "color": "#8a6abf",
+      "books": ["Esther","Daniel","Ezra","Nehemiah"],
+      "parashiot": []
+    },
+    {
+      "id": "segundo-templo",
+      "name": "Segundo Templo",
+      "name_he": "בֵּית שֵׁנִי",
+      "am_start": 3408,
+      "am_end": 3828,
+      "color": "#4a8a6a",
+      "books": [],
+      "parashiot": []
+    },
+    {
+      "id": "tanaim",
+      "name": "Tanaim / Mishna",
+      "name_he": "תַּנָּאִים",
+      "am_start": 3828,
+      "am_end": 3960,
+      "color": "#5a9a7a",
+      "books": ["Mishna"],
+      "parashiot": []
+    },
+    {
+      "id": "amoraim",
+      "name": "Amoraim / Guemara",
+      "name_he": "אֲמוֹרָאִים",
+      "am_start": 3960,
+      "am_end": 4260,
+      "color": "#6aaa8a",
+      "books": ["Talmud Bavli","Talmud Yerushalmi"],
+      "parashiot": []
+    },
+    {
+      "id": "rishonim",
+      "name": "Rishonim",
+      "name_he": "רִאשׁוֹנִים",
+      "am_start": 4750,
+      "am_end": 5250,
+      "color": "#c9a84c",
+      "books": ["Rambam","Rif","Rosh","Tur"],
+      "parashiot": []
+    },
+    {
+      "id": "acharonim",
+      "name": "Acharonim / Hoje",
+      "name_he": "אַחֲרוֹנִים",
+      "am_start": 5250,
+      "am_end": 5785,
+      "color": "#e8c97a",
+      "books": ["Shulchan Aruch","Chassidut","Mussar"],
+      "parashiot": []
+    }
+  ],
+
+  "key_events": [
+    { "am": 0,    "label": "Criação",           "label_he": "בְּרֵאשִׁית",      "book": "Genesis 1" },
+    { "am": 1056, "label": "Noach nasce",       "label_he": "נֹחַ",              "book": "Genesis 5" },
+    { "am": 1656, "label": "Dilúvio",           "label_he": "הַמַּבּוּל",        "book": "Genesis 7" },
+    { "am": 1948, "label": "Avraham / Lech-Lecha","label_he": "לֶךְ לְךָ",       "book": "Genesis 12" },
+    { "am": 2048, "label": "Brit Milah",        "label_he": "בְּרִית מִילָה",    "book": "Genesis 17" },
+    { "am": 2108, "label": "Yitzchak nasce",    "label_he": "יִצְחָק",           "book": "Genesis 21" },
+    { "am": 2168, "label": "Yaakov nasce",      "label_he": "יַעֲקֹב",           "book": "Genesis 25" },
+    { "am": 2216, "label": "Yossef nasce",      "label_he": "יוֹסֵף",            "book": "Genesis 30" },
+    { "am": 2238, "label": "Yaakov → Egito",    "label_he": "יְרִידָה מִצְרַיִם","book": "Genesis 46" },
+    { "am": 2448, "label": "Saída do Egito / Sinai","label_he": "יְצִיאַת מִצְרַיִם","book": "Exodus 12" },
+    { "am": 2488, "label": "Entrada em Israel", "label_he": "כְּנִיסָה לָאָרֶץ", "book": "Joshua 1" },
+    { "am": 2928, "label": "1º Templo",         "label_he": "בֵּית רִאשׁוֹן",   "book": "I Kings 6" },
+    { "am": 3338, "label": "Destruição 1º Templo","label_he": "חֻרְבַּן רִאשׁוֹן","book": "II Kings 25" },
+    { "am": 3408, "label": "2º Templo",         "label_he": "בֵּית שֵׁנִי",     "book": "Ezra 1" },
+    { "am": 3828, "label": "Destruição 2º Templo","label_he": "חֻרְבַּן שֵׁנִי", "book": null },
+    { "am": 5708, "label": "Estado de Israel",  "label_he": "מְדִינַת יִשְׂרָאֵל","book": null }
+  ]
+}

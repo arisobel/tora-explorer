@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "book": "Genesis",
+    "book_he": "בְּרֵאשִׁית",
+    "parasha_index": 2,
+    "parasha_of_book": 2,
+    "total_parashiot_in_book": 12
+  },
+
+  "identity": {
+    "id": "noach",
+    "name": "Noach",
+    "hebrew": "נֹחַ",
+    "aliyot_count": 7
+  },
+
+  "range": {
+    "ref_start": "Genesis 6:9",
+    "ref_end": "Genesis 11:32",
+    "sefaria_ref": "Genesis 6:9-11:32",
+    "chapters_covered": [6, 7, 8, 9, 10, 11]
+  },
+
+  "timeline": {
+    "anno_mundi_start": 1056,
+    "anno_mundi_end": 1948,
+    "era": "pos-diluvio",
+    "position_pct": 18
+  },
+
+  "summary": {
+    "short": "Da retidão de Noach ao Dilúvio universal, à aliança do arco-íris e à dispersão dos povos na Torre de Bavel.",
+    "medium": "A parashá apresenta Noach como homem justo numa geração corrompida. Deus decreta o Dilúvio e ordena a construção da Teivá. Noach obedece fielmente, entra com sua família e os animais, e sobrevive às águas. Após o Dilúvio, Deus estabelece uma aliança eterna simbolizada pelo arco-íris. A parashá encerra com o episódio da Torre de Bavel e a genealogia que prepara a chegada de Avraham.",
+    "characters_main": ["Noach", "Shem", "Cham", "Yafet", "Canaã"],
+    "themes": ["Julgamento divino", "Fé e obediência", "Dilúvio e salvação", "Aliança", "Pureza e impureza", "Dispersão dos povos", "Arrogância humana"]
+  },
+
+  "facts": [
+    {
+      "id": "n001",
+      "order": 1,
+      "text": "A Torá apresenta Noach como homem justo e íntegro em sua geração, que caminhava com Deus — em contraste com a corrupção ao seu redor.",
+      "text_he": "נֹ֗חַ אִ֥ישׁ צַדִּ֛יק תָּמִ֥ים הָיָ֖ה בְּדֹֽרֹתָ֑יו אֶת־הָֽאֱלֹהִ֖ים הִֽתְהַלֶּךְ־נֹֽחַ",
+      "ref_start": "Genesis 6:9",
+      "ref_end": "Genesis 6:10",
+      "sefaria_ref": "Genesis 6:9-10",
+      "tags": ["tzaddik", "retidão", "fé", "geração-corrupta"],
+      "topic": "Noach — O Homem Justo"
+    },
+    {
+      "id": "n002",
+      "order": 2,
+      "text": "A humanidade se corrompe profundamente diante de Deus: a terra se enche de violência e injustiça em todas as suas formas.",
+      "text_he": "וַתִּשָּׁחֵ֥ת הָאָ֖רֶץ לִפְנֵ֣י הָֽאֱלֹהִ֑ים וַתִּמָּלֵ֥א הָאָ֖רֶץ חָמָֽס",
+      "ref_start": "Genesis 6:11",
+      "ref_end": "Genesis 6:12",
+      "sefaria_ref": "Genesis 6:11-12",
+      "tags": ["corrupção", "chamas", "violência", "julgamento"],
+      "topic": "A Corrupção da Humanidade"
+    },
+    {
+      "id": "n003",
+      "order": 3,
+      "text": "Deus comunica a Noach sua decisão: o fim de toda a criação está próximo por causa da violência que encheu a terra; o Dilúvio destruirá tudo.",
+      "text_he": "קֵ֣ץ כָּל־בָּשָׂ֗ר בָּ֚א לְפָנַ֔י כִּֽי־מָלְאָ֥ה הָאָ֛רֶץ חָמָ֖ס מִפְּנֵיהֶ֑ם",
+      "ref_start": "Genesis 6:13",
+      "ref_end": "Genesis 6:13",
+      "sefaria_ref": "Genesis 6:13",
+      "tags": ["decreto", "dilúvio", "julgamento", "fim"],
+      "topic": "O Decreto do Dilúvio"
+    },
+    {
+      "id": "n004",
+      "order": 4,
+      "text": "Noach recebe instruções detalhadas para construir a Teivá (arca) — dimensões precisas em madeira de gofer, com compartimentos internos e cobertura de betume.",
+      "text_he": "עֲשֵׂ֤ה לְךָ֙ תֵּבַ֣ת עֲצֵי־גֹ֔פֶר קִנִּ֖ים תַּֽעֲשֶׂ֣ה אֶת־הַתֵּבָ֑ה",
+      "ref_start": "Genesis 6:14",
+      "ref_end": "Genesis 6:16",
+      "sefaria_ref": "Genesis 6:14-16",
+      "tags": ["teivá", "construção", "madeira", "instrução"],
+      "topic": "A Construção da Teivá"
+    },
+    {
+      "id": "n005",
+      "order": 5,
+      "text": "Deus ordena que Noach reúna na arca um par de cada espécie animal — macho e fêmea — para preservar a vida após o Dilúvio.",
+      "text_he": "וּמִכָּל־הָחַ֗י מִכָּל־בָּשָׂ֛ר שְׁנַ֥יִם מִכֹּ֖ל תָּבִ֣יא אֶל־הַתֵּבָ֑ה",
+      "ref_start": "Genesis 6:19",
+      "ref_end": "Genesis 6:20",
+      "sefaria_ref": "Genesis 6:19-20",
+      "tags": ["animais", "preservação", "espécies", "par"],
+      "topic": "Os Animais na Teivá"
+    },
+    {
+      "id": "n006",
+      "order": 6,
+      "text": "Noach prepara provisões para sua família e para todos os animais, cumprindo exatamente cada detalhe da ordem divina — sem questionar.",
+      "text_he": "וַיַּ֖עַשׂ נֹ֑חַ כְּכֹ֛ל אֲשֶׁר צִוָּ֥ה אֹת֖וֹ אֱלֹהִ֖ים כֵּ֥ן עָשָֽׂה",
+      "ref_start": "Genesis 6:21",
+      "ref_end": "Genesis 6:22",
+      "sefaria_ref": "Genesis 6:21-22",
+      "tags": ["obediência", "fé", "provisões", "cumprimento"],
+      "topic": "A Obediência Perfeita de Noach"
+    },
+    {
+      "id": "n007",
+      "order": 7,
+      "text": "No tempo determinado, Noach entra na arca com sua esposa, seus três filhos e as noras, junto a todos os animais puros e impuros, antes que as chuvas comecem.",
+      "text_he": "בֹּ֤א אַתָּה֙ וְכָל־בֵּֽיתְךָ֔ אֶל־הַתֵּבָ֑ה כִּֽי־אֹֽתְךָ֥ רָאִ֛יתִי צַדִּ֥יק לְפָנַ֖י בַּדּ֥וֹר הַזֶּֽה",
+      "ref_start": "Genesis 7:1",
+      "ref_end": "Genesis 7:9",
+      "sefaria_ref": "Genesis 7:1-9",
+      "tags": ["entrada", "teivá", "família", "animais"],
+      "topic": "Entrada na Teivá"
+    },
+    {
+      "id": "n008",
+      "order": 8,
+      "text": "As águas do Dilúvio irrompem: as fontes do grande abismo se rompem e as comportas dos céus se abrem — chuvas por quarenta dias e quarenta noites.",
+      "text_he": "נִבְקְע֗וּ כָּל־מַעְיְנֹת֙ תְּה֣וֹם רַבָּ֔ה וַֽאֲרֻבֹּ֥ת הַשָּׁמַ֖יִם נִפְתָּֽחוּ",
+      "ref_start": "Genesis 7:11",
+      "ref_end": "Genesis 7:12",
+      "sefaria_ref": "Genesis 7:11-12",
+      "tags": ["dilúvio", "abismo", "chuva", "quarenta-dias"],
+      "topic": "O Início do Dilúvio"
+    },
+    {
+      "id": "n009",
+      "order": 9,
+      "text": "As águas sobem e dominam toda a terra, cobrindo inclusive as mais altas montanhas. Toda carne que se movia sobre a terra perece — exceto os que estavam na arca.",
+      "text_he": "וַיִּגְבְּר֥וּ הַמַּ֖יִם וַיִּרְבּ֣וּ מְאֹ֑ד עַל־הָאָ֔רֶץ וַתֵּ֥לֶךְ הַתֵּבָ֖ה עַל־פְּנֵ֥י הַמָּֽיִם",
+      "ref_start": "Genesis 7:18",
+      "ref_end": "Genesis 7:24",
+      "sefaria_ref": "Genesis 7:18-24",
+      "tags": ["dilúvio", "destruição", "montanhas", "morte"],
+      "topic": "As Águas Dominam a Terra"
+    },
+    {
+      "id": "n010",
+      "order": 10,
+      "text": "Deus lembra-Se de Noach e de todos os seres vivos na arca — um vento passa sobre a terra, e as águas começam lentamente a baixar.",
+      "text_he": "וַיִּזְכֹּ֤ר אֱלֹהִים֙ אֶת־נֹ֔חַ וְאֵ֤ת כָּל־הַֽחַיָּה֙ וְאֶת־כָּל־הַבְּהֵמָ֔ה",
+      "ref_start": "Genesis 8:1",
+      "ref_end": "Genesis 8:5",
+      "sefaria_ref": "Genesis 8:1-5",
+      "tags": ["memória-divina", "recuo-das-águas", "vento", "misericórdia"],
+      "topic": "Deus Lembra-Se de Noach"
+    },
+    {
+      "id": "n011",
+      "order": 11,
+      "text": "Para verificar se a terra havia secado, Noach envia primeiro um corvo — que vai e volta — e depois uma pomba, que não encontra lugar para pousar e retorna.",
+      "text_he": "וַיְשַׁלַּ֖ח אֶת־הָעֹרֵ֑ב וַיֵּצֵ֤א יָצ֙וֹא֙ וָשׁ֔וֹב",
+      "ref_start": "Genesis 8:7",
+      "ref_end": "Genesis 8:9",
+      "sefaria_ref": "Genesis 8:7-9",
+      "tags": ["corvo", "pomba", "sinal", "terra-seca"],
+      "topic": "O Corvo e a Pomba"
+    },
+    {
+      "id": "n012",
+      "order": 12,
+      "text": "Na segunda missão, a pomba retorna com uma folha de oliveira fresca no bico — sinal inconfundível de que a terra voltava a florescer.",
+      "text_he": "וְהִנֵּ֥ה עֲלֵה־זַ֖יִת טָרָ֣ף בְּפִ֑יהָ",
+      "ref_start": "Genesis 8:11",
+      "ref_end": "Genesis 8:11",
+      "sefaria_ref": "Genesis 8:11",
+      "tags": ["pomba", "oliveira", "paz", "renovação"],
+      "topic": "A Folha de Oliveira — Sinal de Esperança"
+    },
+    {
+      "id": "n013",
+      "order": 13,
+      "text": "Quando a terra seca completamente, Deus ordena que Noach saia da arca com sua família e todos os animais — para que se reproduzam e encham a terra novamente.",
+      "text_he": "צֵ֖א מִן־הַתֵּבָֽה אַתָּ֕ה וְאִשְׁתְּךָ֛ וּבָנֶ֥יךָ וּנְשֵֽׁי־בָנֶ֖יךָ אִתָּֽךְ",
+      "ref_start": "Genesis 8:15",
+      "ref_end": "Genesis 8:19",
+      "sefaria_ref": "Genesis 8:15-19",
+      "tags": ["saída", "teivá", "recomeço", "terra"],
+      "topic": "A Saída da Teivá"
+    },
+    {
+      "id": "n014",
+      "order": 14,
+      "text": "O primeiro ato de Noach ao sair da arca é construir um altar a Deus e oferecer sacrifícios de animais puros — um ato de gratidão e consagração.",
+      "text_he": "וַיִּ֤בֶן נֹ֙חַ֙ מִזְבֵּ֔חַ לַֽיהוָ֖ה וַיִּקַּ֞ח מִכֹּ֣ל הַבְּהֵמָ֧ה הַטְּהֹרָ֛ה וּמִכֹּ֛ל הָע֥וֹף הַטָּה֖וֹר",
+      "ref_start": "Genesis 8:20",
+      "ref_end": "Genesis 8:20",
+      "sefaria_ref": "Genesis 8:20",
+      "tags": ["altar", "sacrifício", "gratidão", "culto"],
+      "topic": "Noach Constrói um Altar"
+    },
+    {
+      "id": "n015",
+      "order": 15,
+      "text": "Deus promete em seu coração que nunca mais amaldiçoará a terra por causa do homem, nem destruirá toda vida — apesar da inclinação humana ao mal desde a juventude.",
+      "text_he": "לֹא־אֹסִ֥ף לְקַלֵּ֛ל ע֖וֹד אֶת־הָֽאֲדָמָ֑ה בַּעֲב֣וּר הָֽאָדָ֗ם",
+      "ref_start": "Genesis 8:21",
+      "ref_end": "Genesis 8:22",
+      "sefaria_ref": "Genesis 8:21-22",
+      "tags": ["promessa", "misericórdia", "natureza-humana", "continuidade"],
+      "topic": "A Promessa Divina — Nunca Mais"
+    },
+    {
+      "id": "n016",
+      "order": 16,
+      "text": "Deus abençoa Noach e seus filhos com um novo início: a ordem de frutificar e multiplicar é renovada, agora com leis que incluem a proibição do assassinato e o respeito à vida.",
+      "text_he": "וַיְבָ֣רֶךְ אֱלֹהִ֔ים אֶת־נֹ֖חַ וְאֶת־בָּנָ֑יו וַיֹּ֧אמֶר לָהֶ֛ם פְּר֥וּ וּרְב֖וּ",
+      "ref_start": "Genesis 9:1",
+      "ref_end": "Genesis 9:7",
+      "sefaria_ref": "Genesis 9:1-7",
+      "tags": ["bênção", "sheva-mitzvot", "vida", "aliança-noachida"],
+      "topic": "A Nova Aliança com a Humanidade"
+    },
+    {
+      "id": "n017",
+      "order": 17,
+      "text": "Deus estabelece uma aliança eterna com Noach, sua descendência e todos os seres vivos — o arco-íris nas nuvens é dado como sinal permanente desta promessa.",
+      "text_he": "אֶת־קַשְׁתִּ֕י נָתַ֖תִּי בֶּֽעָנָ֑ן וְהָיְתָ֕ה לְא֗וֹת בְּרִית֙ בֵּינִ֔י וּבֵ֖ין הָאָֽרֶץ",
+      "ref_start": "Genesis 9:13",
+      "ref_end": "Genesis 9:17",
+      "sefaria_ref": "Genesis 9:13-17",
+      "tags": ["arco-íris", "aliança", "sinal", "eterno"],
+      "topic": "O Arco-Íris — Sinal da Aliança"
+    },
+    {
+      "id": "n018",
+      "order": 18,
+      "text": "Noach planta uma vinha, bebe do vinho e se embriaga — e o comportamento inadequado de Cham ao ver o pai descoberto desencadeia tensões entre os filhos de Noach.",
+      "text_he": "וַיֵּ֥שְׁתְּ מִן־הַיַּ֖יִן וַיִּשְׁכָּ֑ר וַיִּתְגַּ֖ל בְּת֥וֹךְ אָֽהֳלֹֽה",
+      "ref_start": "Genesis 9:20",
+      "ref_end": "Genesis 9:24",
+      "sefaria_ref": "Genesis 9:20-24",
+      "tags": ["vinho", "embriaguez", "cham", "honra-dos-pais"],
+      "topic": "Noach, o Vinho e Cham"
+    },
+    {
+      "id": "n019",
+      "order": 19,
+      "text": "Noach abençoa Shem e Yafet, que cobriam seu pai com respeito, e pronuncia uma maldição sobre Canaã — descendente de Cham — prenunciando os destinos das nações.",
+      "text_he": "אָר֥וּר כְּנָ֖עַן עֶ֣בֶד עֲבָדִ֑ים יִהְיֶ֖ה לְאֶחָֽיו",
+      "ref_start": "Genesis 9:25",
+      "ref_end": "Genesis 9:29",
+      "sefaria_ref": "Genesis 9:25-29",
+      "tags": ["bênção", "maldição", "canaã", "nações"],
+      "topic": "A Bênção e a Maldição de Noach"
+    },
+    {
+      "id": "n020",
+      "order": 20,
+      "text": "A humanidade se torna uma só — com uma única língua. Unem-se para construir uma cidade e uma torre com o topo nos céus, buscando fama e evitando a dispersão. Deus confunde suas línguas e os dispersa por toda a terra.",
+      "text_he": "הָ֣בָה נִבְנֶה־לָּ֤נוּ עִיר֙ וּמִגְדָּ֔ל וְרֹאשׁ֖וֹ בַשָּׁמַ֑יִם וְנַֽעֲשֶׂה־לָּ֣נוּ שֵׁ֔ם",
+      "ref_start": "Genesis 11:1",
+      "ref_end": "Genesis 11:9",
+      "sefaria_ref": "Genesis 11:1-9",
+      "tags": ["babel", "língua", "dispersão", "arrogância"],
+      "topic": "A Torre de Bavel"
+    },
+    {
+      "id": "n021",
+      "order": 21,
+      "text": "A parashá encerra com a genealogia de Shem até Terach, pai de Avraham — preparando a transição para a história do patriarca fundador do povo judeu.",
+      "text_he": "אֵ֙לֶּה֙ תּוֹלְדֹ֣ת שֵׁ֔ם",
+      "ref_start": "Genesis 11:10",
+      "ref_end": "Genesis 11:32",
+      "sefaria_ref": "Genesis 11:10-32",
+      "tags": ["genealogia", "shem", "terach", "avraham", "transição"],
+      "topic": "Genealogia de Shem a Terach"
+    }
+  ],
+
+  "aliyot": [
+    { "number": 1, "ref_start": "Genesis 6:9",  "ref_end": "Genesis 6:22" },
+    { "number": 2, "ref_start": "Genesis 7:1",  "ref_end": "Genesis 7:16" },
+    { "number": 3, "ref_start": "Genesis 7:17", "ref_end": "Genesis 8:14" },
+    { "number": 4, "ref_start": "Genesis 8:15", "ref_end": "Genesis 9:7"  },
+    { "number": 5, "ref_start": "Genesis 9:8",  "ref_end": "Genesis 9:17" },
+    { "number": 6, "ref_start": "Genesis 9:18", "ref_end": "Genesis 10:32"},
+    { "number": 7, "ref_start": "Genesis 11:1", "ref_end": "Genesis 11:32"}
+  ],
+
+  "haftarah": {
+    "ref": "Isaiah 54:1-55:5",
+    "note": "Tema: a aliança eterna de paz — paralelo à promessa após o Dilúvio"
+  },
+
+  "connections": {
+    "next_parasha": "lech-lecha",
+    "prev_parasha": "bereshit",
+    "thematic_links": [
+      { "parasha": "bereshit", "theme": "Corrupção humana que cresce desde Caim" },
+      { "parasha": "lech-lecha", "theme": "Transição para a era dos Patriarcas — Avraham surge da linhagem de Shem" }
+    ]
+  }
+}
