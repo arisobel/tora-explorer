@@ -1,7 +1,7 @@
 # Project Progress
 
 ## Current State
-- **Phase:** Exodus data completion + drawer generalization
+- **Phase:** Timeline/parasha interaction model + drawer generalization
 - **Last update:** 2026-05-31
 - **Reality check:** Documentation was reconciled with the actual repository state on 2026-05-31.
 
@@ -24,30 +24,38 @@
 - [x] Parasha drawer implemented for Genesis: slide-in panel, historical ruler, facts list, inline Sefaria passages, chapter navigation to Pessukim, Escape/overlay close
 - [x] `data/parashiot/exodus/index.json` - all 11 Exodus parashiot metadata
 - [x] `data/parashiot/exodus/01-shemot.json` through `08-tetzaveh.json` - first 8 Exodus parashiot populated
-- [x] Exodus `facts_count` verified for existing files `01` through `08`
+- [x] `data/parashiot/exodus/09-ki-tisa.json` - 15 facts
+- [x] Exodus `facts_count` verified for existing files `01` through `09`
 - [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`
+- [x] Timeline/parasha cross-interaction strategy documented
+- [x] `data/timeline.json.key_events[]` has stable `id` fields
+- [x] Genesis pilot links timeline events to parashiot/facts (`creation`, `flood`, `avraham-lech-lecha`)
+- [x] Runtime parasha mart derives `byId` and `byCharacter` from book `index.json`
+- [x] Timeline pilot events open the parasha drawer with linked fact highlights
+- [x] `drawerOpen()` accepts book/deep-link context: `{ bookKey, parashaId, factIds }`
+- [x] `data/milestones/chumash.json` added as the Chumash Atlas milestone layer
+- [x] Chumash tab renders a 5-book milestone atlas; Genesis/Exodus milestones can open the drawer
+- [x] Estrutura tab chips for Bereshit and Shemot open their respective parasha drawers
 
 ---
 
 ## In Progress
 
-- [ ] Complete the missing Exodus parasha JSON files referenced by `data/parashiot/exodus/index.json`
-- [ ] Generalize the drawer so it can render books beyond Genesis
+- [ ] Extend timeline links beyond the Genesis pilot
+- [ ] Finish drawer behavior for books beyond Genesis
 
 ---
 
 ## Next Actions (Short Horizon)
 
-1. Create `data/parashiot/exodus/09-ki-tisa.json`
-2. Create `data/parashiot/exodus/10-vayakhel.json`
-3. Create `data/parashiot/exodus/11-pekudei.json`
-4. Refactor `drawerOpen()` to accept a book key (`genesis`, `exodus`)
-5. Wire the Shemot chip in the Estrutura tab to the Exodus drawer
-6. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
-7. Extend the parasha schema with optional visual marker metadata
-8. Pilot visual markers on one Genesis parasha before broad rollout
+1. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
+2. Validate milestone `fact_ids` in a repeatable script/check
+3. Add selected/highlight state from drawer back to the Timeline tab
+4. Show linked global timeline events inside the Parasha drawer
+5. Extend timeline event links beyond the Genesis pilot
+6. Add fallback/error messaging that distinguishes Sefaria failure from proxy/CORS failure
 
 ---
 
@@ -55,7 +63,8 @@
 
 - Sefaria API access depends on a public external service.
 - Local development may still use `corsproxy.io`; production uses the same-origin Nginx proxy.
-- `data/parashiot/exodus/index.json` currently references 3 files that do not exist, so an Exodus drawer would 404 for Ki Tisa, Vayakhel, and Pekudei until those files are created.
+- `data/parashiot/exodus/index.json` currently references 2 files that do not exist, so an Exodus drawer would 404 for Vayakhel and Pekudei until those files are created.
+- Further parasha population is intentionally deprioritized until the timeline/parasha interaction model is stable.
 - Git commands are blocked in this workspace by Git's `dubious ownership` safety check until `safe.directory` is configured.
 
 ---
@@ -67,6 +76,9 @@
 - Inline fact chapter detection currently matches `Genesis` refs only.
 - `drawerGoToPessukim()` always selects `Genesis`.
 - No validation script checks missing files, `facts_count` drift, Sefaria ref shape, or required schema fields.
+- Timeline key events do not yet have stable IDs or routing metadata into parashiot/facts.
+- Timeline tab and parasha drawer do not yet share selected/highlight state.
+- Milestone validation is manual; no script checks broken milestone-to-fact links yet.
 - No validation exists yet for visual asset paths, captions, or marker shape.
 - No local content editor exists yet; JSON editing is still manual.
 - CapRover package generation is local-only; deployment upload is still manual through CapRover.

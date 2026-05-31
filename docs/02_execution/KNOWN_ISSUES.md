@@ -1,19 +1,18 @@
 # Known Issues
 
-## BUG-01 — Exodus index references 3 missing JSON files
+## BUG-01 — Exodus index references 2 missing JSON files
 
-**Symptom:** `data/parashiot/exodus/index.json` lists Ki Tisa, Vayakhel, and Pekudei, but their `data_file` targets do not exist on disk.
+**Symptom:** `data/parashiot/exodus/index.json` lists Vayakhel and Pekudei, but their `data_file` targets do not exist on disk.
 
 **Missing files:**
-- `data/parashiot/exodus/09-ki-tisa.json`
 - `data/parashiot/exodus/10-vayakhel.json`
 - `data/parashiot/exodus/11-pekudei.json`
 
-**Root cause:** Exodus data population is partially complete: files `01` through `08` exist and match their `facts_count`; files `09` through `11` are metadata-only references.
+**Root cause:** Exodus data population is partially complete: files `01` through `09` exist and match their `facts_count`; files `10` and `11` are metadata-only references.
 
-**Impact:** Any future Exodus drawer/list expansion will hit fetch errors for these three parashiot until the files are created.
+**Impact:** Any future Exodus drawer/list expansion will hit fetch errors for these two parashiot until the files are created.
 
-**Fix:** Create the three missing JSON files and verify their `facts[]` lengths match `index.json`.
+**Fix:** Create the two missing JSON files and verify their `facts[]` lengths match `index.json`.
 
 ---
 

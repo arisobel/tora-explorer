@@ -2,14 +2,15 @@
 
 ## Immediate (Next Cycle)
 
-- [ ] Create `data/parashiot/exodus/09-ki-tisa.json` with 15 facts matching `index.json`
-- [ ] Create `data/parashiot/exodus/10-vayakhel.json` with 11 facts matching `index.json`
-- [ ] Create `data/parashiot/exodus/11-pekudei.json` with 10 facts matching `index.json`
-- [ ] Generalize `drawerOpen()` to accept a book key and load `data/parashiot/{book}/index.json`
-- [ ] Wire the Estrutura tab's `Shemot` chip to open the Exodus drawer
+- [ ] Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
+- [ ] Add repeatable validation for `data/milestones/chumash.json` parasha/fact links
+- [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
+- [ ] Add selected/highlight state from Parasha drawer back to Timeline tab
+- [ ] Show linked global timeline events inside the Parasha drawer
 
 ## Short Term
 
+- [ ] Add "ver na linha do tempo" action from parasha/fact views
 - [ ] Add a fallback/error message that distinguishes Sefaria failure from proxy/CORS failure
 - [ ] Add a smoke-check step after CapRover package generation to verify the tar contents
 - [ ] Extend the parasha schema with optional `visual` metadata for facts, parashiot, books, and timeline events
@@ -20,7 +21,6 @@
 - [ ] Make drawer titles, ruler labels, and total AM ranges book-aware
 - [ ] Add Exodus era labels/styles to the drawer `ERA` map (`egito`, `saida-egito`)
 - [ ] Make fact chapter parsing work for any Chumash book, not only `Genesis`
-- [ ] Change `drawerGoToPessukim()` to accept book + chapter and set the correct Pessukim selector
 - [ ] Update drawer passage buttons so labels and behavior match the schema wording consistently
 - [ ] Add a lightweight validation script or documented checklist for `facts_count`, missing files, required schema keys, and ref formatting
 
@@ -30,7 +30,6 @@
 - [ ] Create `data/parashiot/leviticus/index.json` + individual JSONs
 - [ ] Create `data/parashiot/numbers/index.json` + individual JSONs
 - [ ] Create `data/parashiot/deuteronomy/index.json` + individual JSONs
-- [ ] Make timeline events clickable and route to the relevant parasha drawer or Pessukim chapter
 - [ ] Replace static Chumash event lists with parasha-driven book views
 - [ ] Build the Chumash visual atlas view with book lanes, event lanes, character lanes, and visual markers
 - [ ] Build a book/parasha overview view for Genesis using the complete Genesis data
@@ -39,6 +38,8 @@
 
 ## Long Term
 
+- [ ] Create `data/parashiot/exodus/10-vayakhel.json` with 11 facts matching `index.json`
+- [ ] Create `data/parashiot/exodus/11-pekudei.json` with 10 facts matching `index.json`
 - [ ] Complete all 54 parashiot across all 5 Chumash books
 - [ ] Add Haftarah display per parasha
 - [ ] Add a commentary layer after the primary-text flow is stable
@@ -53,7 +54,8 @@
 ## Corrections Registered From Current State
 
 - [ ] Remove remaining Genesis-only assumptions from the drawer implementation
-- [ ] Complete missing Exodus JSON files before exposing all Exodus parashiot in the UI
+- [ ] Complete remaining Exodus JSON files before exposing all Exodus parashiot in the UI
+- [ ] Prioritize timeline/parasha cross-interaction before further bulk parasha population
 - [ ] Keep `docs/02_execution/07_progress.md` as the operational source of truth
 - [ ] Keep `docs/02_execution/KNOWN_ISSUES.md` limited to real, verified issues
 - [ ] Resolve local Git `dubious ownership` before relying on Git status/diff workflows

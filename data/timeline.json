@@ -148,21 +148,69 @@
   ],
 
   "key_events": [
-    { "am": 0,    "label": "Criação",           "label_he": "בְּרֵאשִׁית",      "book": "Genesis 1" },
-    { "am": 1056, "label": "Noach nasce",       "label_he": "נֹחַ",              "book": "Genesis 5" },
-    { "am": 1656, "label": "Dilúvio",           "label_he": "הַמַּבּוּל",        "book": "Genesis 7" },
-    { "am": 1948, "label": "Avraham / Lech-Lecha","label_he": "לֶךְ לְךָ",       "book": "Genesis 12" },
-    { "am": 2048, "label": "Brit Milah",        "label_he": "בְּרִית מִילָה",    "book": "Genesis 17" },
-    { "am": 2108, "label": "Yitzchak nasce",    "label_he": "יִצְחָק",           "book": "Genesis 21" },
-    { "am": 2168, "label": "Yaakov nasce",      "label_he": "יַעֲקֹב",           "book": "Genesis 25" },
-    { "am": 2216, "label": "Yossef nasce",      "label_he": "יוֹסֵף",            "book": "Genesis 30" },
-    { "am": 2238, "label": "Yaakov → Egito",    "label_he": "יְרִידָה מִצְרַיִם","book": "Genesis 46" },
-    { "am": 2448, "label": "Saída do Egito / Sinai","label_he": "יְצִיאַת מִצְרַיִם","book": "Exodus 12" },
-    { "am": 2488, "label": "Entrada em Israel", "label_he": "כְּנִיסָה לָאָרֶץ", "book": "Joshua 1" },
-    { "am": 2928, "label": "1º Templo",         "label_he": "בֵּית רִאשׁוֹן",   "book": "I Kings 6" },
-    { "am": 3338, "label": "Destruição 1º Templo","label_he": "חֻרְבַּן רִאשׁוֹן","book": "II Kings 25" },
-    { "am": 3408, "label": "2º Templo",         "label_he": "בֵּית שֵׁנִי",     "book": "Ezra 1" },
-    { "am": 3828, "label": "Destruição 2º Templo","label_he": "חֻרְבַּן שֵׁנִי", "book": null },
-    { "am": 5708, "label": "Estado de Israel",  "label_he": "מְדִינַת יִשְׂרָאֵל","book": null }
+    {
+      "id": "creation",
+      "am": 0,
+      "label": "Criação",
+      "label_he": "בְּרֵאשִׁית",
+      "book": "Genesis 1",
+      "links": {
+        "book_key": "genesis",
+        "parasha_id": "bereshit",
+        "fact_ids": ["b001", "b002", "b003", "b004", "b005", "b006", "b007", "b008", "b009"],
+        "sefaria_ref": "Genesis 1:1-2:3"
+      }
+    },
+    {
+      "id": "noach-born",
+      "am": 1056,
+      "label": "Noach nasce",
+      "label_he": "נֹחַ",
+      "book": "Genesis 5",
+      "links": {
+        "book_key": "genesis",
+        "parasha_id": "bereshit",
+        "fact_ids": ["b020"],
+        "sefaria_ref": "Genesis 5:28-32"
+      }
+    },
+    {
+      "id": "flood",
+      "am": 1656,
+      "label": "Dilúvio",
+      "label_he": "הַמַּבּוּל",
+      "book": "Genesis 7",
+      "links": {
+        "book_key": "genesis",
+        "parasha_id": "noach",
+        "fact_ids": ["n007", "n008", "n009", "n010", "n011", "n012", "n013"],
+        "sefaria_ref": "Genesis 7:1-8:19"
+      }
+    },
+    {
+      "id": "avraham-lech-lecha",
+      "am": 1948,
+      "label": "Avraham / Lech-Lecha",
+      "label_he": "לֶךְ לְךָ",
+      "book": "Genesis 12",
+      "links": {
+        "book_key": "genesis",
+        "parasha_id": "lech-lecha",
+        "fact_ids": ["ll001", "ll002", "ll003", "ll004"],
+        "sefaria_ref": "Genesis 12:1-9"
+      }
+    },
+    { "id": "brit-milah", "am": 2048, "label": "Brit Milah", "label_he": "בְּרִית מִילָה", "book": "Genesis 17" },
+    { "id": "yitzchak-born", "am": 2108, "label": "Yitzchak nasce", "label_he": "יִצְחָק", "book": "Genesis 21" },
+    { "id": "yaakov-born", "am": 2168, "label": "Yaakov nasce", "label_he": "יַעֲקֹב", "book": "Genesis 25" },
+    { "id": "yosef-born", "am": 2216, "label": "Yossef nasce", "label_he": "יוֹסֵף", "book": "Genesis 30" },
+    { "id": "yaakov-egypt", "am": 2238, "label": "Yaakov → Egito", "label_he": "יְרִידָה מִצְרַיִם", "book": "Genesis 46" },
+    { "id": "exodus-sinai", "am": 2448, "label": "Saída do Egito / Sinai", "label_he": "יְצִיאַת מִצְרַיִם", "book": "Exodus 12" },
+    { "id": "entry-israel", "am": 2488, "label": "Entrada em Israel", "label_he": "כְּנִיסָה לָאָרֶץ", "book": "Joshua 1" },
+    { "id": "first-temple", "am": 2928, "label": "1º Templo", "label_he": "בֵּית רִאשׁוֹן", "book": "I Kings 6" },
+    { "id": "first-temple-destruction", "am": 3338, "label": "Destruição 1º Templo", "label_he": "חֻרְבַּן רִאשׁוֹן", "book": "II Kings 25" },
+    { "id": "second-temple", "am": 3408, "label": "2º Templo", "label_he": "בֵּית שֵׁנִי", "book": "Ezra 1" },
+    { "id": "second-temple-destruction", "am": 3828, "label": "Destruição 2º Templo", "label_he": "חֻרְבַּן שֵׁנִי", "book": null },
+    { "id": "state-of-israel", "am": 5708, "label": "Estado de Israel", "label_he": "מְדִינַת יִשְׂרָאֵל", "book": null }
   ]
 }

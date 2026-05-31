@@ -237,6 +237,8 @@ nav {
 
 .tl-event:hover .tl-event-title { color: var(--gold2); }
 .tl-event:hover .tl-dot { transform: scale(1.4); }
+.tl-event.selected .tl-event-title { color: var(--gold2); }
+.tl-event.selected .tl-dot { transform: scale(1.5); box-shadow: 0 0 0 4px rgba(201,168,76,.16); }
 
 /* Era colors */
 .dot-escrita { background: var(--blue); }
@@ -372,6 +374,49 @@ nav {
 .char-list { font-size: 13px; color: var(--text2); line-height: 1.8; }
 .char-primary { color: var(--sand2); font-weight: 500; }
 
+.atlas-section {
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.015);
+  border-radius: var(--r2);
+  padding: 1rem;
+}
+.atlas-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap;
+}
+.atlas-title {
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--text3);
+}
+.atlas-sub { font-size: 12px; color: var(--text3); }
+.atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(170px, 1fr));
+  gap: .75rem;
+}
+.atlas-book {
+  border-left: 2px solid rgba(74,127,165,.45);
+  padding-left: .65rem;
+}
+.atlas-book-title {
+  font-family: 'Crimson Pro', serif; font-size: 18px; color: var(--gold2);
+  margin-bottom: .55rem;
+}
+.atlas-book-he { color: var(--text3); font-size: 13px; margin-left: 4px; }
+.milestone-card {
+  display: grid; grid-template-columns: 26px 1fr; gap: .45rem;
+  align-items: start;
+  padding: .45rem .35rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  cursor: default;
+}
+.milestone-card.interactive { cursor: pointer; border-radius: 6px; }
+.milestone-card.interactive:hover { background: rgba(201,168,76,0.08); }
+.milestone-icon { font-size: 16px; width: 24px; text-align: center; opacity: .8; }
+.milestone-label { color: var(--text2); font-size: 12px; line-height: 1.3; }
+.milestone-meta { color: var(--text3); font-size: 10px; margin-top: 2px; }
+
 /* SHARED COMPONENTS */
 .badge {
   display: inline-block; padding: 2px 8px; border-radius: 20px;
@@ -406,6 +451,7 @@ nav {
   .mg-header { grid-template-columns: 1fr; }
   .oral-cols { grid-template-columns: 1fr; }
   .events-chars-grid { grid-template-columns: 1fr; }
+  .atlas-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: 36px; }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
@@ -475,11 +521,11 @@ nav {
         <div class="book-group">
           <div class="book-group-title">Chumash — 5 livros <span class="badge badge-blue" style="margin-left:6px">Moshe</span></div>
           <div class="book-chips">
-            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen()" style="cursor:pointer">Bereshit ›<div class="tooltip">Gênesis — clique para explorar parashiot</div></div>
-            <div class="chip chip-blue tooltip-wrap">Shemot<div class="tooltip">Êxodo — Saída do Egito</div></div>
-            <div class="chip chip-blue tooltip-wrap">Vayikrá<div class="tooltip">Levítico — Leis sacerdotais</div></div>
-            <div class="chip chip-blue tooltip-wrap">Bamidbar<div class="tooltip">Números — Deserto</div></div>
-            <div class="chip chip-blue tooltip-wrap">Devarim<div class="tooltip">Deuteronômio — Repetição da Lei</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('genesis')" style="cursor:pointer">Bereshit ›<div class="tooltip">Gênesis — clique para explorar parashiot</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('exodus')" style="cursor:pointer">Shemot ›<div class="tooltip">Êxodo — clique para explorar parashiot</div></div>
+            <div class="chip chip-blue tooltip-wrap">Vayikrá<div class="tooltip">Levítico — dados de parashiot em preparação</div></div>
+            <div class="chip chip-blue tooltip-wrap">Bamidbar<div class="tooltip">Números — dados de parashiot em preparação</div></div>
+            <div class="chip chip-blue tooltip-wrap">Devarim<div class="tooltip">Deuteronômio — dados de parashiot em preparação</div></div>
           </div>
         </div>
         <div class="book-group">
@@ -580,7 +626,7 @@ nav {
     <div class="timeline-spine"></div>
     <div class="tl-events">
 
-      <div class="tl-event" onclick="">
+      <div class="tl-event" data-timeline-event="creation" onclick="timelineOpenEvent('creation', this)">
         <div class="tl-period">0 – 1656<br>10 gerações</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -590,7 +636,7 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event">
+      <div class="tl-event" data-timeline-event="flood" onclick="timelineOpenEvent('flood', this)">
         <div class="tl-period">1656 – 1948<br>10 gerações</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -600,7 +646,7 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event">
+      <div class="tl-event" data-timeline-event="avraham-lech-lecha" onclick="timelineOpenEvent('avraham-lech-lecha', this)">
         <div class="tl-period">1948 – 2448<br>7 gerações</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -868,6 +914,16 @@ nav {
     <button class="book-btn" onclick="showBook('leviticus', this)">Vayikrá · Levítico</button>
     <button class="book-btn" onclick="showBook('numbers', this)">Bamidbar · Números</button>
     <button class="book-btn" onclick="showBook('deuteronomy', this)">Devarim · Deuteronômio</button>
+  </div>
+
+  <div class="atlas-section">
+    <div class="atlas-head">
+      <div class="atlas-title">Chumash Atlas · Milestones dos 5 livros</div>
+      <div class="atlas-sub">Clique em milestones com dados de parashá para abrir o drill-down</div>
+    </div>
+    <div id="chumash-atlas" class="atlas-grid">
+      <div style="grid-column:1/-1;color:var(--text3);font-size:13px;">Carregando milestones…</div>
+    </div>
   </div>
 
   <!-- GÊNESIS -->
@@ -1265,6 +1321,69 @@ function showBook(id, btn) {
   document.querySelectorAll('.book-btn').forEach(b => b.classList.remove('active'));
   document.getElementById('book-' + id).classList.add('active');
   btn.classList.add('active');
+  renderChumashAtlas(id);
+}
+
+const _milestones = { chumash: null };
+
+async function loadChumashMilestones() {
+  if (!_milestones.chumash) {
+    const r = await fetch('data/milestones/chumash.json');
+    if (!r.ok) throw new Error(`${r.status} — milestones não encontrados`);
+    _milestones.chumash = await r.json();
+  }
+  return _milestones.chumash;
+}
+
+async function renderChumashAtlas(activeBookKey = 'genesis') {
+  const root = document.getElementById('chumash-atlas');
+  if (!root) return;
+
+  try {
+    const data = await loadChumashMilestones();
+    root.innerHTML = (data.books || []).map(book => {
+      const milestones = (book.milestones || []).map(m => {
+        const hasDrawer = Array.isArray(m.parasha_ids) && m.parasha_ids.length > 0 && ['genesis', 'exodus'].includes(book.book_key);
+        const meta = [
+          (m.parasha_ids || []).slice(0, 2).join(', '),
+          (m.themes || []).slice(0, 2).join(' · ')
+        ].filter(Boolean).join(' · ');
+        const click = hasDrawer
+          ? `onclick="openMilestone('${book.book_key}','${m.id}')"`
+          : '';
+        return `
+          <div class="milestone-card ${hasDrawer ? 'interactive' : ''}" ${click} title="${m.sefaria_ref || ''}">
+            <div class="milestone-icon">${m.icon || '•'}</div>
+            <div>
+              <div class="milestone-label">${m.label}</div>
+              <div class="milestone-meta">${meta}</div>
+            </div>
+          </div>`;
+      }).join('');
+
+      return `
+        <div class="atlas-book" style="${book.book_key === activeBookKey ? 'border-left-color:var(--gold)' : ''}">
+          <div class="atlas-book-title">${book.label}<span class="atlas-book-he">${book.label_he || ''}</span></div>
+          ${milestones}
+        </div>`;
+    }).join('');
+  } catch(e) {
+    root.innerHTML = `<div style="grid-column:1/-1;color:#e07060;font-size:13px;">Erro ao carregar milestones: ${e.message}</div>`;
+  }
+}
+
+async function openMilestone(bookKey, milestoneId) {
+  const data = await loadChumashMilestones();
+  const book = (data.books || []).find(b => b.book_key === bookKey);
+  const milestone = book && (book.milestones || []).find(m => m.id === milestoneId);
+  if (!milestone || !milestone.parasha_ids || !milestone.parasha_ids.length) return;
+
+  drawerOpen({
+    bookKey,
+    parashaId: milestone.parasha_ids[0],
+    factIds: milestone.fact_ids || [],
+    milestoneId: milestone.id
+  });
 }
 
 /* ═══════ PESSUKIM / SEFARIA INTEGRATION ═══════ */
@@ -1410,8 +1529,11 @@ function toHebNum(n) {
   return h[n] || n;
 }
 
-// Init chapter selector on load
-document.addEventListener('DOMContentLoaded', () => { pkUpdateChapters(); });
+// Init data-driven controls on load
+document.addEventListener('DOMContentLoaded', () => {
+  pkUpdateChapters();
+  renderChumashAtlas('genesis');
+});
 
 </script>
 
@@ -1540,6 +1662,10 @@ document.addEventListener('DOMContentLoaded', () => { pkUpdateChapters(); });
   padding: .8rem 1.5rem;
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
+.fact-item.highlighted {
+  background: rgba(201,168,76,0.08);
+  border-left: 2px solid var(--gold);
+}
 .fact-topic {
   font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
   color: var(--blue2); margin-bottom: 3px;
@@ -1618,18 +1744,82 @@ document.addEventListener('DOMContentLoaded', () => { pkUpdateChapters(); });
 const ERA = {
   'pre-diluvio': { bg: 'rgba(74,127,165,0.7)',  label: 'Pré-Dilúvio', cls: 'era-pre-diluvio' },
   'pos-diluvio': { bg: 'rgba(74,138,106,0.65)', label: 'Pós-Dilúvio', cls: 'era-pos-diluvio' },
-  'patriarcas':  { bg: 'rgba(201,168,76,0.65)', label: 'Patriarcas',  cls: 'era-patriarcas'  }
+  'patriarcas':  { bg: 'rgba(201,168,76,0.65)', label: 'Patriarcas',  cls: 'era-patriarcas'  },
+  'egito':       { bg: 'rgba(160,96,48,0.65)',  label: 'Egito',       cls: 'era-patriarcas'  },
+  'saida-egito': { bg: 'rgba(232,201,122,0.65)',label: 'Êxodo/Sinai', cls: 'era-patriarcas'  }
 };
 function eraOf(id) { return ERA[id] || ERA['patriarcas']; }
 
-const _drawer = { index: null, cache: {} };
+const BOOK_META = {
+  genesis: { title: 'Gênesis · Parashiot', label: 'Gênesis', path: 'data/parashiot/genesis/index.json', sefaria: 'Genesis' },
+  exodus:  { title: 'Êxodo · Parashiot',   label: 'Êxodo',   path: 'data/parashiot/exodus/index.json',  sefaria: 'Exodus'  }
+};
 
-function drawerOpen() {
+const _mart = { timeline: null, parasha: {} };
+const _drawer = { bookKey: 'genesis', index: null, indices: {}, cache: {}, context: null };
+
+async function loadTimelineData() {
+  if (!_mart.timeline) {
+    const r = await fetch('data/timeline.json');
+    if (!r.ok) throw new Error(`${r.status} — timeline não encontrada`);
+    _mart.timeline = await r.json();
+  }
+  return _mart.timeline;
+}
+
+async function loadParashaMart(bookKey) {
+  if (_mart.parasha[bookKey]) return _mart.parasha[bookKey];
+  const idx = await _drawerFetchIndex(bookKey, { render: false });
+  const byId = {};
+  const byCharacter = {};
+  for (const p of (idx.parashiot || [])) {
+    byId[p.id] = p;
+    for (const c of (p.characters || [])) {
+      if (!byCharacter[c]) byCharacter[c] = [];
+      byCharacter[c].push(p.id);
+    }
+  }
+  _mart.parasha[bookKey] = { bookKey, index: idx, byId, byCharacter };
+  return _mart.parasha[bookKey];
+}
+
+async function timelineOpenEvent(eventId, el) {
+  document.querySelectorAll('.tl-event').forEach(e => e.classList.remove('selected'));
+  if (el) el.classList.add('selected');
+
+  try {
+    const timeline = await loadTimelineData();
+    const event = (timeline.key_events || []).find(e => e.id === eventId);
+    if (!event || !event.links) return;
+
+    const links = event.links;
+    await loadParashaMart(links.book_key);
+    drawerOpen({
+      bookKey: links.book_key,
+      parashaId: links.parasha_id,
+      factIds: links.fact_ids || [],
+      timelineEventId: event.id
+    });
+  } catch(e) {
+    console.error('Erro ao abrir evento da timeline', e);
+  }
+}
+
+function drawerOpen(context) {
+  const nextContext = typeof context === 'string'
+    ? { bookKey: context }
+    : (context || { bookKey: 'genesis' });
+
+  _drawer.bookKey = nextContext.bookKey || 'genesis';
+  _drawer.context = nextContext;
   document.getElementById('drawer-overlay').classList.add('open');
   document.getElementById('drawer').classList.add('open');
   document.body.style.overflow = 'hidden';
-  if (!_drawer.index) {
-    _drawerFetchIndex();
+  if (!_drawer.indices[_drawer.bookKey]) {
+    _drawerFetchIndex(_drawer.bookKey);
+  } else if (nextContext.parashaId) {
+    const p = _drawer.indices[_drawer.bookKey].parashiot.find(x => x.id === nextContext.parashaId);
+    if (p) drawerShowParasha(p.id, p.data_file, nextContext);
   } else {
     drawerShowIndex();
   }
@@ -1641,14 +1831,29 @@ function drawerClose() {
   document.body.style.overflow = '';
 }
 
-async function _drawerFetchIndex() {
-  _drawerSetBody('<div style="padding:2rem 1.5rem;color:var(--text3);font-size:13px;">Carregando…</div>');
+async function _drawerFetchIndex(bookKey = _drawer.bookKey, opts = { render: true }) {
+  if (_drawer.indices[bookKey]) return _drawer.indices[bookKey];
+  if (opts.render) _drawerSetBody('<div style="padding:2rem 1.5rem;color:var(--text3);font-size:13px;">Carregando…</div>');
   try {
-    const r = await fetch('data/parashiot/genesis/index.json');
-    _drawer.index = await r.json();
-    drawerShowIndex();
+    const meta = BOOK_META[bookKey] || BOOK_META.genesis;
+    const r = await fetch(meta.path);
+    if (!r.ok) throw new Error(`${r.status} — index não encontrado`);
+    _drawer.indices[bookKey] = await r.json();
+    if (_drawer.bookKey === bookKey) _drawer.index = _drawer.indices[bookKey];
+    if (opts.render) {
+      const ctx = _drawer.context || {};
+      if (ctx.parashaId) {
+        const p = _drawer.indices[bookKey].parashiot.find(x => x.id === ctx.parashaId);
+        if (p) drawerShowParasha(p.id, p.data_file, ctx);
+        else drawerShowIndex();
+      } else {
+        drawerShowIndex();
+      }
+    }
+    return _drawer.indices[bookKey];
   } catch(e) {
-    _drawerSetBody(`<div class="drawer-no-data"><div class="big">✕</div>Erro ao carregar index: ${e.message}</div>`);
+    if (opts.render) _drawerSetBody(`<div class="drawer-no-data"><div class="big">✕</div>Erro ao carregar index: ${e.message}</div>`);
+    throw e;
   }
 }
 
@@ -1681,10 +1886,11 @@ function _buildRuler(parashiot, totalAM, highlightId) {
 
 function drawerShowIndex() {
   document.getElementById('drawer-back').style.display = 'none';
-  document.getElementById('drawer-head-title').textContent = 'Gênesis · Parashiot';
+  const meta = BOOK_META[_drawer.bookKey] || BOOK_META.genesis;
+  document.getElementById('drawer-head-title').textContent = meta.title;
   document.getElementById('drawer').scrollTop = 0;
 
-  const idx   = _drawer.index;
+  const idx   = _drawer.indices[_drawer.bookKey] || _drawer.index;
   const total = idx.timeline.anno_mundi_end;
 
   const ruler = _buildRuler(idx.parashiot, total, null);
@@ -1713,28 +1919,30 @@ function drawerShowIndex() {
 
   _drawerSetBody(`
     <div class="drawer-ruler">
-      <div class="ruler-label">Régua histórica — Gênesis (0 – ${total} AM)</div>
+      <div class="ruler-label">Régua histórica — ${meta.label} (0 – ${total} AM)</div>
       ${ruler}
     </div>
-    <div style="padding:.5rem 1.5rem .15rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)">12 Parashiot</div>
+    <div style="padding:.5rem 1.5rem .15rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)">${idx.total_parashiot || idx.parashiot.length} Parashiot</div>
     ${items}
   `);
 }
 
-async function drawerShowParasha(id, dataFile) {
+async function drawerShowParasha(id, dataFile, context = null) {
   document.getElementById('drawer-back').style.display = 'block';
   document.getElementById('drawer-head-title').textContent = '…';
   _drawerSetBody('<div style="padding:2rem 1.5rem;color:var(--text3);font-size:13px;">Carregando…</div>');
 
   try {
-    if (!_drawer.cache[id]) {
+    const cacheKey = `${_drawer.bookKey}:${id}`;
+    if (!_drawer.cache[cacheKey]) {
       const r = await fetch(dataFile);
       if (!r.ok) throw new Error(`${r.status} — arquivo não encontrado`);
-      _drawer.cache[id] = await r.json();
+      _drawer.cache[cacheKey] = await r.json();
     }
-    _drawerRenderParasha(_drawer.cache[id]);
+    _drawerRenderParasha(_drawer.cache[cacheKey], context || _drawer.context);
   } catch(e) {
-    const p = _drawer.index.parashiot.find(x => x.id === id);
+    const idx = _drawer.indices[_drawer.bookKey] || _drawer.index;
+    const p = idx.parashiot.find(x => x.id === id);
     _drawerSetBody(`
       <div class="dp-header">
         <div class="dp-he">${p ? p.hebrew : ''}</div>
@@ -1751,21 +1959,23 @@ async function drawerShowParasha(id, dataFile) {
   }
 }
 
-function _drawerRenderParasha(data) {
+function _drawerRenderParasha(data, context = null) {
   const { identity, range, timeline, summary, facts } = data;
   document.getElementById('drawer-head-title').textContent = identity.name;
   document.getElementById('drawer').scrollTop = 0;
 
-  const idx   = _drawer.index;
+  const idx   = _drawer.indices[_drawer.bookKey] || _drawer.index;
+  const meta  = BOOK_META[_drawer.bookKey] || BOOK_META.genesis;
   const total = idx.timeline.anno_mundi_end;
   const ec    = eraOf(timeline.era);
   const ruler = _buildRuler(idx.parashiot, total, identity.id);
 
   const themesHTML = (summary.themes || []).map(t => `<span class="dp-theme">${t}</span>`).join('');
+  const highlightedFacts = new Set((context && context.factIds) || []);
 
   let factsHTML = '';
   for (const f of (facts || [])) {
-    const chapMatch = (f.ref_start || '').match(/Genesis\s+(\d+)/i);
+    const chapMatch = (f.ref_start || '').match(/[A-Za-z]+\s+(\d+)/i);
     const chapNum   = chapMatch ? chapMatch[1] : null;
     const tagsHTML  = (f.tags || []).map(t => `<span class="fact-tag">${t}</span>`).join('');
     const passRef  = f.sefaria_ref || f.ref_start || null;
@@ -1779,7 +1989,7 @@ function _drawerRenderParasha(data) {
       ? `<div style="display:flex;gap:5px;flex-shrink:0">${passBtn}${chapBtn}</div>`
       : '';
     factsHTML += `
-      <div class="fact-item">
+      <div class="fact-item ${highlightedFacts.has(f.id) ? 'highlighted' : ''}" id="fact-${f.id}">
         ${f.topic ? `<div class="fact-topic">${f.topic}</div>` : ''}
         <div class="fact-text">${f.text}</div>
         ${f.text_he ? `<div class="fact-he">${f.text_he}</div>` : ''}
@@ -1801,7 +2011,7 @@ function _drawerRenderParasha(data) {
       <div class="dp-themes">${themesHTML}</div>
     </div>
     <div class="drawer-ruler">
-      <div class="ruler-label">Posição em Gênesis (0 – ${total} AM)</div>
+      <div class="ruler-label">Posição em ${meta.label} (0 – ${total} AM)</div>
       ${ruler}
       <div style="margin-top:6px;font-size:11px;color:var(--text2);display:flex;align-items:center;gap:8px">
         <span class="era-chip ${ec.cls}">${ec.label}</span>
@@ -1812,6 +2022,13 @@ function _drawerRenderParasha(data) {
     <div class="facts-heading">${(facts||[]).length} Fatos da Parashá</div>
     ${factsHTML}
   `);
+
+  if (highlightedFacts.size) {
+    setTimeout(() => {
+      const first = document.querySelector('.fact-item.highlighted');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 80);
+  }
 }
 
 /* ═══════ PASSAGEM INLINE ═══════ */

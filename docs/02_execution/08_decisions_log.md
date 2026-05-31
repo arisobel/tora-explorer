@@ -89,3 +89,33 @@
 **Decision:** Add an Nginx reverse proxy at `/api/sefaria/` and update browser code to call that same-origin path in production. Local `file://` and localhost usage can still fall back to `corsproxy.io`.
 
 **Impact:** Production Sefaria calls no longer depend on a public CORS proxy. CapRover packages now include `nginx.conf`, and the Docker image uses it as the default Nginx site config.
+
+---
+
+## 2026-05-31 — Prioritize timeline/parasha cross-interaction
+
+**Context:** Continuing to populate parasha JSON files adds content, but the Timeline tab and parasha drawer currently represent overlapping historical dimensions without a shared interaction model.
+
+**Decision:** Deprioritize further bulk parasha population temporarily. Prioritize stable timeline event IDs, routing links from timeline events to parashiot/facts, and bidirectional highlight/navigation between the Timeline tab and Parasha drawer.
+
+**Impact:** The next development cycle should focus on structure and cross-interaction. Remaining Exodus files (`10-vayakhel.json`, `11-pekudei.json`) move to long-term/backlog until the interaction model is stable.
+
+---
+
+## 2026-05-31 — Runtime marts from book indices
+
+**Context:** Book index files already contain strategic mid-level data: parasha ranges, eras, characters, summaries, and target JSON paths. This is the natural bridge between global timeline events and full fact-level parasha files.
+
+**Decision:** Use each `data/parashiot/{book}/index.json` as the source for runtime marts, starting with `byId` and `byCharacter`. Do not create separate manual mart files until a real need appears.
+
+**Impact:** Timeline and future character interactions can use book indices as a stable intermediate layer. This avoids duplicating parasha metadata across timeline, drawer, and future atlas views.
+
+---
+
+## 2026-05-31 — Chumash milestones as drill-down aggregators
+
+**Context:** Theme chips inside parasha drawers are useful, but the project also needs larger narrative anchors for a 5-book overview, similar to a visual atlas. These anchors should connect books, parashiot, facts, characters, and future icons/images.
+
+**Decision:** Add `data/milestones/chumash.json` as a milestone layer. Milestones aggregate existing parashiot and facts by ID and should not duplicate detailed fact content.
+
+**Impact:** The Chumash tab can render a 5-book atlas and open the parasha drawer from milestone cards. This creates another drill level: book → milestone → parasha/theme → fact → pessukim.

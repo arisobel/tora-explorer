@@ -75,6 +75,10 @@ Future drill-down levels:
 - Level 3: book/parasha overview
 - Level 4: fact detail with Sefaria passage and optional visual marker
 
+Timeline/parasha cross-interaction is a first-class architectural concern:
+global timeline events should route into parashiot/facts, and parasha/fact views
+should expose their related global timeline markers.
+
 ---
 
 ## Data Flow: Parasha Drawer
@@ -100,10 +104,25 @@ Current status:
 
 Target next architecture:
 ```
-drawerOpen(bookKey)
+drawerOpen({ bookKey, parashaId?, factIds? })
   → load data/parashiot/{bookKey}/index.json
   → render the same drawer UI for any supported Chumash book
+  → optionally select a parasha and highlight linked facts
   → drawerGoToPessukim(book, chapter, verseStart?)
+```
+
+Timeline interaction target:
+```
+timelineEvent.links
+  → { book_key, parasha_id, fact_ids[], sefaria_ref }
+  → drawerOpen({ bookKey, parashaId, factIds })
+```
+
+Runtime mart target:
+```
+data/parashiot/{book}/index.json
+  → { byId, byCharacter }
+  → timeline routing, drawer lookup, future character views
 ```
 
 ---
@@ -197,6 +216,9 @@ already consumes.
 
 Detailed strategy:
 `docs/04_technical/CONTENT_VISUAL_STRATEGY.md`
+
+Timeline/parasha interaction strategy:
+`docs/04_technical/TIMELINE_PARASHA_INTERACTION.md`
 
 ---
 

@@ -61,6 +61,30 @@ Suggested shape:
 The `visual` field is optional. Source refs remain mandatory for facts that
 open Sefaria passages.
 
+### Milestone
+A strategic aggregation layer between book, parasha, themes, characters, facts,
+and timeline events.
+
+Milestones are broader than facts and more concrete than eras. They are useful
+for visual drill-down screens such as the Chumash Atlas:
+
+```
+Book → Milestone → Parasha → Theme → Fact → Pessukim
+```
+
+Each milestone may include:
+- book key
+- label and icon
+- parasha IDs
+- fact IDs
+- themes
+- characters
+- Sefaria ref
+- visual metadata
+
+Milestones should aggregate existing facts; they should not duplicate fact
+content.
+
 ### Anno Mundi (AM)
 The Jewish calendar year-from-creation. Used as the x-axis of the timeline.
 - 0 AM = Creation
@@ -89,6 +113,7 @@ Timeline
 
 Chumash
   └── Book[] (5 books)
+       ├── Milestone[] (strategic narrative aggregators)
        └── Parasha[] (54 total; Genesis complete, Exodus partially populated)
             ├── Fact[] (ordered narrative moments with Sefaria refs)
             │    └── VisualMarker? (optional icon/image metadata)
@@ -113,6 +138,7 @@ Sefaria API (external)
 | `data/parashiot/exodus/index.json` | Light metadata for all 11 Exodus parashiot |
 | `data/parashiot/exodus/01-shemot.json` through `08-tetzaveh.json` | Full Exodus data currently present |
 | `data/parashiot/exodus/09-ki-tisa.json` through `11-pekudei.json` | Referenced in `index.json` but not yet present on disk |
+| `data/milestones/chumash.json` | Chumash Atlas milestones across the 5 books |
 | `assets/` | Planned folder for visual icons/images referenced by JSON; not implemented yet |
 
 ---
@@ -126,6 +152,7 @@ Sefaria API (external)
 5. Any book exposed in the drawer must have matching book-aware navigation into the Pessukim reader
 6. Visual assets are referenced by path from JSON; image binaries are never embedded in JSON
 7. Every visual marker with an `asset` must include a `caption` or equivalent accessible label
+8. Milestones aggregate parashiot/facts by ID; they must not become duplicate narrative text stores
 
 ---
 

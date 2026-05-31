@@ -20,7 +20,7 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
 - Visual map of Written Torah (Chumash + Nach) and Oral Torah (Mishna, Guemara, Halacha)
 - Flow diagram: Mikra → Talmud → Halachá
 - Chips for each book, with tooltips
-- **Bereshit chip opens the parasha drawer** (lateral panel)
+- **Bereshit and Shemot chips open the parasha drawer** (lateral panel)
 - Future visual drill-down: macro tradition map → Chumash overview → book/parasha overview → fact detail
 
 ### Tab 2 — Linha do Tempo
