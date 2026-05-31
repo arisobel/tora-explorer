@@ -2,6 +2,11 @@
 
 ## Core Concepts
 
+The long-term model for drill-down is documented in
+`docs/04_technical/GENERAL_DRILL_DOWN_ARCHITECTURE.md`. The key principle is
+that screens such as Estrutura, Timeline, Chumash Atlas, and future character
+views are entry points over the same domain graph, not owners of separate data.
+
 ### Torah (תּוֹרָה)
 Split into two traditions:
 - **Torah Escrita** (Written): Chumash (5 books) + Nach (Prophets + Writings)
@@ -101,7 +106,9 @@ They should not duplicate the detailed parasha/fact narrative.
 
 The intended long-term model is horizontal: timeline groups, milestones,
 characters, themes, parashiot, and facts should become reusable database nodes
-connected by typed edges. See `docs/04_technical/DATABASE_DRILL_MODEL.md`.
+connected by typed edges. See
+`docs/04_technical/GENERAL_DRILL_DOWN_ARCHITECTURE.md` and
+`docs/04_technical/DATABASE_DRILL_MODEL.md`.
 
 ### Anno Mundi (AM)
 The Jewish calendar year-from-creation. Used as the x-axis of the timeline.

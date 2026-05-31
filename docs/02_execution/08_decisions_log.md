@@ -149,3 +149,13 @@
 **Decision:** Define a database authoring/source-of-truth model based on reusable `nodes` and typed `node_edges`. Timeline, Chumash Atlas, character views, and parasha drawers should become projections over the same graph. Static JSON remains the public runtime format until a live API is justified.
 
 **Impact:** `data/timeline_groups.json` is transitional. The next data architecture step is to import current JSON into the node/edge model and export the existing runtime JSON shapes from the database.
+
+---
+
+## 2026-05-31 — General drill-down is screen-agnostic
+
+**Context:** The product needs drill-down from both Estrutura Geral and Linha do Tempo, and later from Chumash, characters, themes, and visual markers.
+
+**Decision:** Define a screen-agnostic drill-down architecture. Estrutura and Timeline are entry points over the same graph of nodes and typed relations. No UI screen owns the content.
+
+**Impact:** Future implementation should avoid creating more view-specific source files unless they are generated runtime projections. New domain content should be modeled as reusable nodes and edges first.

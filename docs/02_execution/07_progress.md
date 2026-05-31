@@ -44,6 +44,7 @@
 - [x] `data/timeline_groups.json` added for Timeline phase drill-down
 - [x] Timeline phases can expand into subject/milestone groups that open the parasha drawer
 - [x] Horizontal database drill model documented with draft SQL schema
+- [x] General screen-agnostic drill-down architecture documented
 
 ---
 
@@ -58,11 +59,11 @@
 
 1. Decide database engine for the authoring/source-of-truth model
 2. Map current JSON into the `nodes` / `node_edges` draft schema
-3. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
-4. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
-5. Validate milestone and timeline group `fact_ids` in a repeatable script/check
-6. Add selected/highlight state from drawer back to the Timeline tab
-7. Show linked global timeline events/groups inside the Parasha drawer
+3. Define generated `data/views/structure.json` and `data/views/timeline.json`
+4. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
+5. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
+6. Validate milestone and timeline group `fact_ids` in a repeatable script/check
+7. Add selected/highlight state from drawer back to the Timeline tab
 
 ---
 
