@@ -366,6 +366,23 @@ nav {
   background: var(--bg);
 }
 
+/* PHASE KEY EVENTS */
+.tl-phase-events {
+  display: flex; flex-wrap: wrap; gap: 5px;
+  margin-bottom: .75rem;
+}
+.tl-phase-event-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px; border-radius: 20px;
+  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+  color: var(--gold2); font-size: 11px; cursor: pointer;
+  transition: all .2s; appearance: none;
+}
+.tl-phase-event-chip:hover { background: rgba(201,168,76,0.2); border-color: var(--gold2); }
+.tl-phase-event-chip-he {
+  font-family: 'Crimson Pro', serif; font-size: 13px; opacity: .65;
+}
+
 /* GROUP FACTS PANEL */
 .tl-group-card.tl-group-expanded {
   border-color: rgba(184,138,36,.5);
@@ -2013,7 +2030,8 @@ function _parashaRangeLabel(parashaIds, bookKey) {
 
 async function renderTimelineDrilldowns() {
   try {
-    const data = await loadTimelineGroups();
+    const [data, timelineData] = await Promise.all([loadTimelineGroups(), loadTimelineData()]);
+    const allKeyEvents = timelineData.key_events || [];
 
     const bookKeys = [...new Set(
       (data.phases || []).flatMap(p => (p.groups || []).map(g => g.book_key).filter(Boolean))
@@ -2025,6 +2043,17 @@ async function renderTimelineDrilldowns() {
       if (!el) continue;
       const content = el.querySelector('.tl-content');
       if (!content || content.querySelector('.tl-drill-panel')) continue;
+
+      const phaseEvents = allKeyEvents.filter(e =>
+        e.links && e.am >= phase.am_start && e.am <= phase.am_end
+      );
+      const eventsHTML = phaseEvents.length ? `
+        <div class="tl-phase-events">
+          ${phaseEvents.map(e => `
+            <button class="tl-phase-event-chip" onclick="timelineOpenEvent('${e.id}', null, event)">
+              <span class="tl-phase-event-chip-he">${e.label_he || ''}</span>${e.label}
+            </button>`).join('')}
+        </div>` : '';
 
       const cards = (phase.groups || []).map(g => {
         const themes = (g.themes || [])
@@ -2043,9 +2072,10 @@ async function renderTimelineDrilldowns() {
       }).join('');
 
       content.insertAdjacentHTML('beforeend', `
-        <div class="tl-drill-hint">＋ Abrir agrupadores</div>
+        <div class="tl-drill-hint">＋ Eventos e agrupadores</div>
         <div class="tl-drill-panel">
           <div class="tl-drill-summary">${phase.summary || ''}</div>
+          ${eventsHTML}
           <div class="tl-group-grid">${cards}</div>
         </div>
       `);
@@ -2173,7 +2203,8 @@ async function loadParashaMart(bookKey) {
   return _mart.parasha[bookKey];
 }
 
-async function timelineOpenEvent(eventId, el) {
+async function timelineOpenEvent(eventId, el = null, ev = null) {
+  if (ev) ev.stopPropagation();
   document.querySelectorAll('.tl-event').forEach(e => e.classList.remove('selected'));
   if (el) el.classList.add('selected');
 
