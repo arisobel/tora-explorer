@@ -379,6 +379,14 @@ nav {
   transition: all .2s; appearance: none;
 }
 .tl-phase-event-chip:hover { background: rgba(201,168,76,0.2); border-color: var(--gold2); }
+.tl-phase-event-chip.active {
+  background: rgba(201,168,76,0.28); border-color: var(--gold);
+  font-weight: 500; box-shadow: 0 0 0 2px rgba(201,168,76,0.18);
+}
+.tl-group-card.tl-group-selected {
+  border-color: rgba(184,138,36,.6);
+  box-shadow: 0 0 0 2px rgba(201,168,76,0.15), 0 10px 24px rgba(82,65,35,0.09);
+}
 .tl-phase-event-chip-he {
   font-family: 'Crimson Pro', serif; font-size: 13px; opacity: .65;
 }
@@ -2063,7 +2071,7 @@ async function renderTimelineDrilldowns() {
           .join('');
         const range = _parashaRangeLabel(g.parasha_ids, g.book_key);
         return `
-          <div class="tl-group-card" onclick="toggleGroupFacts('${phase.id}','${g.id}', this, event)">
+          <div class="tl-group-card" data-group-id="${g.id}" onclick="toggleGroupFacts('${phase.id}','${g.id}', this, event)">
             <div class="tl-group-head"><span class="tl-group-icon">${g.icon || '•'}</span>${g.label}</div>
             <div class="tl-group-summary">${g.summary || ''}</div>
             ${range ? `<div class="tl-group-parasha-range">${range}</div>` : ''}
@@ -2175,6 +2183,10 @@ async function openTimelineGroup(phaseId, groupId, ev = null) {
     if (!group || !group.book_key || !parashaId) return;
 
     await loadParashaMart(group.book_key);
+    document.querySelectorAll('.tl-phase-event-chip.active').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.tl-group-card.tl-group-selected').forEach(c => c.classList.remove('tl-group-selected'));
+    const card = document.querySelector(`[data-group-id="${groupId}"]`);
+    if (card) card.classList.add('tl-group-selected');
     drawerOpen({
       bookKey: group.book_key,
       parashaId: parashaId,
@@ -2208,6 +2220,11 @@ async function timelineOpenEvent(eventId, el = null, ev = null) {
   if (ev) ev.stopPropagation();
   document.querySelectorAll('.tl-event').forEach(e => e.classList.remove('selected'));
   if (el) el.classList.add('selected');
+  document.querySelectorAll('.tl-phase-event-chip.active').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tl-group-card.tl-group-selected').forEach(c => c.classList.remove('tl-group-selected'));
+  if (ev && ev.currentTarget && ev.currentTarget.classList.contains('tl-phase-event-chip')) {
+    ev.currentTarget.classList.add('active');
+  }
 
   try {
     const timeline = await loadTimelineData();
@@ -2251,6 +2268,8 @@ function drawerClose() {
   document.getElementById('drawer-overlay').classList.remove('open');
   document.getElementById('drawer').classList.remove('open');
   document.body.style.overflow = '';
+  document.querySelectorAll('.tl-phase-event-chip.active').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.tl-group-card.tl-group-selected').forEach(c => c.classList.remove('tl-group-selected'));
 }
 
 async function _drawerFetchIndex(bookKey = _drawer.bookKey, opts = { render: true }) {
