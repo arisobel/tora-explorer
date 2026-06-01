@@ -47,6 +47,7 @@
 - [x] `data/nach/judges/01-transition-and-first-judges.json` through `07-gibeah-civil-war.json` - Judges first pass with 56 facts
 - [x] Judges `facts_count` values verified against actual JSON `facts[]` lengths
 - [x] SQLite import re-run after Judges JSON generation
+- [x] Estrutura tab chips for Yehoshua and Shoftim open the Nach unit drawer
 - [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`

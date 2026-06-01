@@ -366,6 +366,39 @@ nav {
   background: var(--bg);
 }
 
+/* GROUP FACTS PANEL */
+.tl-group-card.tl-group-expanded {
+  border-color: rgba(184,138,36,.5);
+  box-shadow: 0 12px 28px rgba(82,65,35,0.1);
+}
+.tl-group-facts-panel {
+  display: none;
+  margin-top: .65rem;
+  border-top: 1px solid var(--border);
+  padding-top: .65rem;
+}
+.tl-group-expanded .tl-group-facts-panel { display: block; }
+.tl-group-facts-loading { font-size: 12px; color: var(--text3); padding: .4rem 0; }
+.tl-group-fact-item {
+  padding: .45rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.tl-group-fact-item:last-of-type { border-bottom: none; }
+.tl-group-fact-meta {
+  font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--blue2); margin-bottom: 2px;
+}
+.tl-group-fact-text { font-size: 12px; color: var(--text); line-height: 1.5; margin-bottom: 4px; }
+.tl-group-fact-btns { display: flex; gap: 5px; flex-wrap: wrap; }
+.tl-group-drawer-btn {
+  display: block; width: 100%; margin-top: .65rem;
+  padding: 5px 12px; border-radius: var(--r);
+  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold2); font-size: 11px; cursor: pointer;
+  text-align: center; transition: all .2s;
+}
+.tl-group-drawer-btn:hover { background: rgba(201,168,76,0.18); border-color: var(--gold2); }
+
 /* Era colors */
 .dot-escrita { background: var(--blue); }
 .dot-oral { background: var(--green); }
@@ -691,7 +724,7 @@ nav {
           </div>
           <div class="book-chips" style="margin-top:5px">
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('joshua')" style="font-size:11px;cursor:pointer">Yehoshua ›<div class="tooltip">Josué — clique para explorar unidades</div></div>
-            <div class="chip chip-blue tooltip-wrap" style="font-size:11px">Shoftim<div class="tooltip">Juízes</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('judges')" style="font-size:11px;cursor:pointer">Shoftim ›<div class="tooltip">Juízes — clique para explorar unidades</div></div>
             <div class="chip chip-blue" style="font-size:11px">Shmuel I/II</div>
             <div class="chip chip-blue" style="font-size:11px">Malachim I/II</div>
             <div class="chip chip-blue" style="font-size:11px">Yeshaya</div>
@@ -1941,6 +1974,7 @@ const BOOK_META = {
   numbers:     { title: 'Bamidbar · Parashiot',  label: 'Bamidbar', path: 'data/parashiot/numbers/index.json',     sefaria: 'Numbers',     indexField: 'parashiot' },
   deuteronomy: { title: 'Devarim · Parashiot',   label: 'Devarim',  path: 'data/parashiot/deuteronomy/index.json', sefaria: 'Deuteronomy', indexField: 'parashiot' },
   joshua:      { title: 'Yehoshua · Unidades',   label: 'Yehoshua', path: 'data/nach/joshua/index.json',           sefaria: 'Joshua',      indexField: 'units'     },
+  judges:      { title: 'Shoftim · Unidades',    label: 'Shoftim',  path: 'data/nach/judges/index.json',           sefaria: 'Judges',      indexField: 'units'     },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
@@ -1998,11 +2032,12 @@ async function renderTimelineDrilldowns() {
           .join('');
         const range = _parashaRangeLabel(g.parasha_ids, g.book_key);
         return `
-          <div class="tl-group-card" onclick="openTimelineGroup('${phase.id}','${g.id}', event)">
+          <div class="tl-group-card" onclick="toggleGroupFacts('${phase.id}','${g.id}', this, event)">
             <div class="tl-group-head"><span class="tl-group-icon">${g.icon || '•'}</span>${g.label}</div>
             <div class="tl-group-summary">${g.summary || ''}</div>
             ${range ? `<div class="tl-group-parasha-range">${range}</div>` : ''}
             ${themes ? `<div class="tl-group-themes">${themes}</div>` : ''}
+            <div class="tl-group-facts-panel"></div>
           </div>`;
       }).join('');
 
@@ -2026,6 +2061,76 @@ function timelineTogglePhase(phaseId, el) {
   if (!el) return;
   el.classList.toggle('expanded');
   el.classList.add('selected');
+}
+
+async function toggleGroupFacts(phaseId, groupId, cardEl, ev) {
+  if (ev) ev.stopPropagation();
+  const panel = cardEl.querySelector('.tl-group-facts-panel');
+  if (!panel) return;
+
+  const isExpanded = cardEl.classList.contains('tl-group-expanded');
+  if (isExpanded) { cardEl.classList.remove('tl-group-expanded'); return; }
+  cardEl.classList.add('tl-group-expanded');
+
+  if (panel.dataset.loaded) return;
+  panel.dataset.loaded = '1';
+  panel.innerHTML = '<div class="tl-group-facts-loading">Carregando fatos…</div>';
+
+  try {
+    const data = await loadTimelineGroups();
+    const phase = (data.phases || []).find(p => p.id === phaseId);
+    const group = phase && (phase.groups || []).find(g => g.id === groupId);
+    if (!group) return;
+
+    const mart = await loadParashaMart(group.book_key);
+    const factIdSet = new Set(group.fact_ids || []);
+    const factOrder = group.fact_ids || [];
+    const allFacts = [];
+
+    for (const parashaId of (group.parasha_ids || [])) {
+      const p = mart.byId[parashaId];
+      if (!p?.data_file) continue;
+      const cacheKey = `${group.book_key}:${parashaId}`;
+      if (!_drawer.cache[cacheKey]) {
+        const r = await fetch(p.data_file);
+        if (r.ok) _drawer.cache[cacheKey] = await r.json();
+      }
+      const full = _drawer.cache[cacheKey];
+      if (!full?.facts) continue;
+      for (const f of full.facts) {
+        if (factIdSet.has(f.id)) allFacts.push({ ...f, _parashaName: p.name });
+      }
+    }
+
+    allFacts.sort((a, b) => factOrder.indexOf(a.id) - factOrder.indexOf(b.id));
+
+    const factsHTML = allFacts.map(f => {
+      const chapMatch = (f.ref_start || '').match(/[A-Za-z]+\s+(\d+)/i);
+      const chapNum = chapMatch ? chapMatch[1] : null;
+      const passRef = f.sefaria_ref || f.ref_start || null;
+      const passBtn = passRef
+        ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">Ver passagem</button>`
+        : '';
+      const chapBtn = chapNum
+        ? `<button class="fact-verse-btn" style="font-size:11px;padding:3px 9px" onclick="drawerGoToPessukim(${chapNum},'${group.book_key}')">→ Cap. ${chapNum}</button>`
+        : '';
+      return `
+        <div class="tl-group-fact-item fact-item" id="tl-fact-${f.id}">
+          <div class="tl-group-fact-meta">${f._parashaName}${f.topic ? ' · ' + f.topic : ''}</div>
+          <div class="tl-group-fact-text">${f.text}</div>
+          <div class="tl-group-fact-btns">${passBtn}${chapBtn}</div>
+          ${passRef ? '<div class="fact-passage-area"></div>' : ''}
+        </div>`;
+    }).join('');
+
+    panel.innerHTML = `
+      ${factsHTML || '<div style="color:var(--text3);font-size:12px;padding:.4rem 0">Nenhum fato mapeado.</div>'}
+      <button class="tl-group-drawer-btn" onclick="openTimelineGroup('${phaseId}','${groupId}',event)">
+        Parasha completa ›
+      </button>`;
+  } catch(e) {
+    panel.innerHTML = `<div class="tl-group-facts-loading" style="color:#e07060">Erro: ${e.message}</div>`;
+  }
 }
 
 async function openTimelineGroup(phaseId, groupId, ev = null) {
@@ -2181,6 +2286,8 @@ function _buildRuler(parashiot, totalAM, highlightId) {
 function drawerShowIndex() {
   document.getElementById('drawer-back').style.display = 'none';
   const meta = BOOK_META[_drawer.bookKey] || BOOK_META.genesis;
+  const isNach = meta.indexField === 'units';
+  const itemLabel = isNach ? 'Unidades narrativas' : 'Parashiot';
   document.getElementById('drawer-head-title').textContent = meta.title;
   document.getElementById('drawer').scrollTop = 0;
 
@@ -2216,7 +2323,7 @@ function drawerShowIndex() {
       <div class="ruler-label">Régua histórica — ${meta.label} (0 – ${total} AM)</div>
       ${ruler}
     </div>
-    <div style="padding:.5rem 1.5rem .15rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)">${idx.total_parashiot || idx.parashiot.length} Parashiot</div>
+    <div style="padding:.5rem 1.5rem .15rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)">${idx.total_parashiot || idx.parashiot.length} ${itemLabel}</div>
     ${items}
   `);
 }
@@ -2262,6 +2369,7 @@ function _drawerRenderParasha(data, context = null) {
   const bookKey = _drawer.bookKey;
   const idx   = _drawer.indices[bookKey] || _drawer.index;
   const meta  = BOOK_META[bookKey] || BOOK_META.genesis;
+  const isNach = meta.indexField === 'units';
   const total = idx.timeline.anno_mundi_end;
   const ec    = eraOf(timeline.era);
   const ruler = _buildRuler(idx.parashiot, total, identity.id);
@@ -2300,7 +2408,7 @@ function _drawerRenderParasha(data, context = null) {
   const spanAM = timeline.anno_mundi_end - timeline.anno_mundi_start;
   _drawerSetBody(`
     <div class="dp-header">
-      <div class="dp-he">${identity.hebrew}</div>
+      <div class="dp-he">${identity.hebrew || ''}</div>
       <div class="dp-name">${identity.name}</div>
       <div class="dp-range">${range.ref_start} – ${range.ref_end} &nbsp;·&nbsp; ${timeline.anno_mundi_start}–${timeline.anno_mundi_end} AM</div>
       <div class="dp-summary">${summary.short}</div>
@@ -2315,7 +2423,7 @@ function _drawerRenderParasha(data, context = null) {
         ${spanAM > 0 ? `<span style="color:var(--text3)">(${spanAM} anos)</span>` : ''}
       </div>
     </div>
-    <div class="facts-heading">${(facts||[]).length} Fatos da Parashá</div>
+    <div class="facts-heading">${(facts||[]).length} Fatos ${isNach ? 'da Unidade' : 'da Parashá'}</div>
     ${factsHTML}
   `);
 

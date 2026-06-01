@@ -24,6 +24,7 @@
 - [x] **Devarim JSON set** — `data/parashiot/deuteronomy/index.json` + all 11 individual parasha JSONs generated and synced to SQLite (2026-06-01)
 - [x] **Joshua/Nach pilot JSON set** — `data/nach/joshua/index.json` + 8 narrative-unit JSONs generated and synced to SQLite (2026-06-01)
 - [x] **Judges/Nach JSON set** — `data/nach/judges/index.json` + 7 narrative-unit JSONs generated and synced to SQLite (2026-06-01)
+- [x] **Estrutura Nach chips** — Yehoshua and Shoftim chips open the drawer using `data/nach/*` unit indexes (2026-06-01)
 
 ## Short Term
 
