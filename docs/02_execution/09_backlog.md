@@ -2,20 +2,22 @@
 
 ## Immediate (Next Cycle)
 
-- [ ] Resume parasha JSON population, starting with `data/parashiot/exodus/10-vayakhel.json`
-- [ ] Create `data/parashiot/exodus/11-pekudei.json`
-- [ ] Review and refine Vayikra fact wording, refs, and visual-marker opportunities before broad UI exposure
-- [ ] Review and refine Bamidbar fact wording, refs, and visual-marker opportunities before broad UI exposure
-- [ ] Generate Devarim JSON set (`data/parashiot/deuteronomy/index.json` + individual JSONs)
-- [ ] Define first generated `data/views/structure.json` and `data/views/timeline.json` projection shapes
-- [ ] Create export script from SQLite back to runtime JSON
-- [ ] Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
+- [ ] Create `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` (drawer 404s for these)
+- [ ] Generate Devarim JSON set (`data/parashiot/deuteronomy/index.json` + 11 individual JSONs)
+- [ ] Add Exodus era labels/styles to the drawer `ERA` map (`egito`, `saida-egito`) — currently falls back to `patriarcas` color
+- [ ] Make fact chapter parsing work for any Chumash book (regex currently correct, but `drawerGoToPessukim` now fixed)
+- [ ] Review and refine Vayikra fact wording and refs before exposing drawer for that book
+- [ ] Review and refine Bamidbar fact wording and refs before exposing drawer for that book
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
-- [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
+- [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
 - [ ] Add selected/highlight state from Parasha drawer back to Timeline tab
 - [ ] Show linked global timeline events inside the Parasha drawer
 - [ ] Show linked timeline groups inside the Parasha drawer
+
+## Recently Completed
+
+- [x] **drawer→Pessukim book-aware** — `drawerGoToPessukim(chapterNum, bookKey)` now resolves Sefaria book name from bookKey; button in `_drawerRenderParasha` passes `bookKey` captured at render time (2026-06-01)
 
 ## Short Term
 

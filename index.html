@@ -2206,8 +2206,9 @@ function _drawerRenderParasha(data, context = null) {
   document.getElementById('drawer-head-title').textContent = identity.name;
   document.getElementById('drawer').scrollTop = 0;
 
-  const idx   = _drawer.indices[_drawer.bookKey] || _drawer.index;
-  const meta  = BOOK_META[_drawer.bookKey] || BOOK_META.genesis;
+  const bookKey = _drawer.bookKey;
+  const idx   = _drawer.indices[bookKey] || _drawer.index;
+  const meta  = BOOK_META[bookKey] || BOOK_META.genesis;
   const total = idx.timeline.anno_mundi_end;
   const ec    = eraOf(timeline.era);
   const ruler = _buildRuler(idx.parashiot, total, identity.id);
@@ -2225,7 +2226,7 @@ function _drawerRenderParasha(data, context = null) {
       ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">Ver passagem</button>`
       : '';
     const chapBtn  = chapNum
-      ? `<button class="fact-verse-btn" onclick="drawerGoToPessukim(${chapNum})">→ Capítulo ${chapNum}</button>`
+      ? `<button class="fact-verse-btn" onclick="drawerGoToPessukim(${chapNum}, '${bookKey}')">→ Capítulo ${chapNum}</button>`
       : '';
     const btnsHTML = (passBtn || chapBtn)
       ? `<div style="display:flex;gap:5px;flex-shrink:0">${passBtn}${chapBtn}</div>`
@@ -2339,19 +2340,19 @@ async function drawerLoadPassage(btn, ref) {
   }
 }
 
-function drawerGoToPessukim(chapterNum) {
+function drawerGoToPessukim(chapterNum, bookKey) {
   drawerClose();
 
-  // Ativar aba Pessukim
   const pkTab = [...document.querySelectorAll('.nav-tab')].find(t => t.textContent.includes('Pessukim'));
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-pessukim').classList.add('active');
   if (pkTab) pkTab.classList.add('active');
 
-  // Configurar seletores
+  const sefariaName = (BOOK_META[bookKey] && BOOK_META[bookKey].sefaria)
+    || (bookKey ? bookKey.charAt(0).toUpperCase() + bookKey.slice(1) : 'Genesis');
   const bookSel = document.getElementById('pk-book');
-  bookSel.value = 'Genesis';
+  bookSel.value = sefariaName;
   pkUpdateChapters();
   document.getElementById('pk-chapter').value = chapterNum;
 

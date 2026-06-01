@@ -57,13 +57,14 @@
 - [x] `scripts/init-sqlite.ps1` creates local `db/tora-explorer.sqlite`
 - [x] `scripts/import-json-to-sqlite.ps1` imports current JSON into SQLite
 - [x] First JSON import validated with `PRAGMA foreign_key_check`
+- [x] `drawerGoToPessukim()` made book-aware — receives `bookKey`, resolves Sefaria name, sets correct book in Pessukim selector (2026-06-01)
 
 ---
 
 ## In Progress
 
 - [ ] Extend timeline links beyond the Genesis pilot
-- [ ] Finish drawer behavior for books beyond Genesis
+- [ ] Finish drawer behavior for books beyond Genesis (ERA colors, missing Exodus files)
 
 ---
 
