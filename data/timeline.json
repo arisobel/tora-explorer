@@ -200,13 +200,69 @@
         "sefaria_ref": "Genesis 12:1-9"
       }
     },
-    { "id": "brit-milah", "am": 2048, "label": "Brit Milah", "label_he": "בְּרִית מִילָה", "book": "Genesis 17" },
-    { "id": "yitzchak-born", "am": 2108, "label": "Yitzchak nasce", "label_he": "יִצְחָק", "book": "Genesis 21" },
-    { "id": "yaakov-born", "am": 2168, "label": "Yaakov nasce", "label_he": "יַעֲקֹב", "book": "Genesis 25" },
-    { "id": "yosef-born", "am": 2216, "label": "Yossef nasce", "label_he": "יוֹסֵף", "book": "Genesis 30" },
-    { "id": "yaakov-egypt", "am": 2238, "label": "Yaakov → Egito", "label_he": "יְרִידָה מִצְרַיִם", "book": "Genesis 46" },
-    { "id": "exodus-sinai", "am": 2448, "label": "Saída do Egito / Sinai", "label_he": "יְצִיאַת מִצְרַיִם", "book": "Exodus 12" },
-    { "id": "entry-israel", "am": 2488, "label": "Entrada em Israel", "label_he": "כְּנִיסָה לָאָרֶץ", "book": "Joshua 1" },
+    {
+      "id": "brit-milah", "am": 2048,
+      "label": "Brit Milah", "label_he": "בְּרִית מִילָה", "book": "Genesis 17",
+      "links": {
+        "book_key": "genesis", "parasha_id": "lech-lecha",
+        "fact_ids": ["ll016", "ll017"],
+        "sefaria_ref": "Genesis 17:5-17:14"
+      }
+    },
+    {
+      "id": "yitzchak-born", "am": 2108,
+      "label": "Yitzchak nasce", "label_he": "יִצְחָק", "book": "Genesis 21",
+      "links": {
+        "book_key": "genesis", "parasha_id": "vayera",
+        "fact_ids": ["va002", "va008"],
+        "sefaria_ref": "Genesis 21:1-7"
+      }
+    },
+    {
+      "id": "yaakov-born", "am": 2168,
+      "label": "Yaakov nasce", "label_he": "יַעֲקֹב", "book": "Genesis 25",
+      "links": {
+        "book_key": "genesis", "parasha_id": "toldot",
+        "fact_ids": ["tl002", "tl003"],
+        "sefaria_ref": "Genesis 25:23-26"
+      }
+    },
+    {
+      "id": "yosef-born", "am": 2216,
+      "label": "Yossef nasce", "label_he": "יוֹסֵף", "book": "Genesis 30",
+      "links": {
+        "book_key": "genesis", "parasha_id": "vayetze",
+        "fact_ids": ["vtz009"],
+        "sefaria_ref": "Genesis 30:24"
+      }
+    },
+    {
+      "id": "yaakov-egypt", "am": 2238,
+      "label": "Yaakov → Egito", "label_he": "יְרִידָה מִצְרַיִם", "book": "Genesis 46",
+      "links": {
+        "book_key": "genesis", "parasha_id": "vayigash",
+        "fact_ids": ["vg005", "vg006", "vg007"],
+        "sefaria_ref": "Genesis 46:2-27"
+      }
+    },
+    {
+      "id": "exodus-sinai", "am": 2448,
+      "label": "Saída do Egito / Sinai", "label_he": "יְצִיאַת מִצְרַיִם", "book": "Exodus 12",
+      "links": {
+        "book_key": "exodus", "parasha_id": "bo",
+        "fact_ids": ["bo009", "bo011", "yt005", "yt008"],
+        "sefaria_ref": "Exodus 12:29-12:37"
+      }
+    },
+    {
+      "id": "entry-israel", "am": 2488,
+      "label": "Entrada em Israel", "label_he": "כְּנִיסָה לָאָרֶץ", "book": "Joshua 1",
+      "links": {
+        "book_key": "joshua", "parasha_id": "entry-into-canaan",
+        "fact_ids": ["js001", "js006"],
+        "sefaria_ref": "Joshua 1:1-3:17"
+      }
+    },
     { "id": "first-temple", "am": 2928, "label": "1º Templo", "label_he": "בֵּית רִאשׁוֹן", "book": "I Kings 6" },
     { "id": "first-temple-destruction", "am": 3338, "label": "Destruição 1º Templo", "label_he": "חֻרְבַּן רִאשׁוֹן", "book": "II Kings 25" },
     { "id": "second-temple", "am": 3408, "label": "2º Templo", "label_he": "בֵּית שֵׁנִי", "book": "Ezra 1" },
