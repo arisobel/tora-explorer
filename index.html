@@ -1803,9 +1803,14 @@ document.addEventListener('DOMContentLoaded', () => {
 .era-chip {
   font-size: 10px; padding: 2px 8px; border-radius: 20px; white-space: nowrap;
 }
-.era-pre-diluvio  { background: rgba(74,127,165,0.15); color: var(--blue2);  border: 1px solid rgba(74,127,165,0.25); }
-.era-pos-diluvio  { background: rgba(74,138,106,0.15); color: var(--green2); border: 1px solid rgba(74,138,106,0.25); }
-.era-patriarcas   { background: rgba(201,168,76,0.15); color: var(--gold2);  border: 1px solid rgba(201,168,76,0.25); }
+.era-pre-diluvio     { background: rgba(74,127,165,0.15);  color: var(--blue2);  border: 1px solid rgba(74,127,165,0.25); }
+.era-pos-diluvio     { background: rgba(74,138,106,0.15);  color: var(--green2); border: 1px solid rgba(74,138,106,0.25); }
+.era-patriarcas      { background: rgba(201,168,76,0.15);  color: var(--gold2);  border: 1px solid rgba(201,168,76,0.25); }
+.era-yossef          { background: rgba(180,130,50,0.15);  color: #7a5510;       border: 1px solid rgba(180,130,50,0.25); }
+.era-egito           { background: rgba(160,80,40,0.15);   color: #7a3a18;       border: 1px solid rgba(160,80,40,0.25); }
+.era-saida-egito     { background: rgba(200,150,50,0.15);  color: #8a6010;       border: 1px solid rgba(200,150,50,0.25); }
+.era-jornada-deserto { background: rgba(160,130,70,0.15);  color: #6a5020;       border: 1px solid rgba(160,130,70,0.25); }
+.era-entrada-terra   { background: rgba(80,130,70,0.15);   color: #3a6530;       border: 1px solid rgba(80,130,70,0.25); }
 
 /* DETALHE DA PARASHÁ */
 .dp-header {
@@ -1909,11 +1914,14 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ═══════ DRAWER — PARASHIOT ═══════ */
 
 const ERA = {
-  'pre-diluvio': { bg: 'rgba(74,127,165,0.7)',  label: 'Pré-Dilúvio', cls: 'era-pre-diluvio' },
-  'pos-diluvio': { bg: 'rgba(74,138,106,0.65)', label: 'Pós-Dilúvio', cls: 'era-pos-diluvio' },
-  'patriarcas':  { bg: 'rgba(201,168,76,0.65)', label: 'Patriarcas',  cls: 'era-patriarcas'  },
-  'egito':       { bg: 'rgba(160,96,48,0.65)',  label: 'Egito',       cls: 'era-patriarcas'  },
-  'saida-egito': { bg: 'rgba(232,201,122,0.65)',label: 'Êxodo/Sinai', cls: 'era-patriarcas'  }
+  'pre-diluvio':     { bg: 'rgba(74,127,165,0.7)',   label: 'Pré-Dilúvio',     cls: 'era-pre-diluvio'     },
+  'pos-diluvio':     { bg: 'rgba(74,138,106,0.65)',  label: 'Pós-Dilúvio',     cls: 'era-pos-diluvio'     },
+  'patriarcas':      { bg: 'rgba(201,168,76,0.65)',  label: 'Patriarcas',      cls: 'era-patriarcas'      },
+  'yossef':          { bg: 'rgba(180,130,50,0.65)',  label: 'Yossef',          cls: 'era-yossef'          },
+  'egito':           { bg: 'rgba(160,80,40,0.65)',   label: 'Egito',           cls: 'era-egito'           },
+  'saida-egito':     { bg: 'rgba(200,150,50,0.65)',  label: 'Êxodo/Sinai',     cls: 'era-saida-egito'     },
+  'jornada-deserto': { bg: 'rgba(160,130,70,0.65)',  label: 'Jornada no Deserto', cls: 'era-jornada-deserto' },
+  'entrada-terra':   { bg: 'rgba(80,130,70,0.65)',   label: 'Entrada na Terra', cls: 'era-entrada-terra'  },
 };
 function eraOf(id) { return ERA[id] || ERA['patriarcas']; }
 
