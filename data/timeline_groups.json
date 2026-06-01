@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "description": "Intermediate drill-down groups for the Timeline tab. Each phase groups strategic narrative milestones before opening parasha/fact detail.",
+  "schema_version": "2.0",
+  "description": "Intermediate drill-down groups for the Timeline tab. Each phase groups strategic narrative milestones before opening parasha/fact detail. parasha_ids[] lists all parashiot covered by the group; primary_parasha_id is the one opened by default in the drawer.",
   "phases": [
     {
       "id": "early-world",
@@ -17,7 +17,8 @@
           "summary": "Criação do céu, terra, luz, separações, vida e Shabat.",
           "book_key": "genesis",
           "milestone_id": "gen-creation",
-          "parasha_id": "bereshit",
+          "primary_parasha_id": "bereshit",
+          "parasha_ids": ["bereshit"],
           "fact_ids": ["b001", "b002", "b003", "b004", "b005", "b006", "b007", "b008", "b009"],
           "themes": ["criação", "ordem", "shabat"]
         },
@@ -28,7 +29,8 @@
           "summary": "Livre-arbítrio, transgressão e consequências humanas.",
           "book_key": "genesis",
           "milestone_id": "gen-eden-fall",
-          "parasha_id": "bereshit",
+          "primary_parasha_id": "bereshit",
+          "parasha_ids": ["bereshit"],
           "fact_ids": ["b011", "b012", "b013", "b014", "b015", "b016", "b017"],
           "themes": ["livre-arbítrio", "pecado", "consequência"]
         },
@@ -39,7 +41,8 @@
           "summary": "Kayin e Hevel introduzem responsabilidade moral e ruptura familiar.",
           "book_key": "genesis",
           "milestone_id": "gen-cain-abel",
-          "parasha_id": "bereshit",
+          "primary_parasha_id": "bereshit",
+          "parasha_ids": ["bereshit"],
           "fact_ids": ["b018", "b019"],
           "themes": ["irmãos", "violência", "responsabilidade"]
         }
@@ -60,7 +63,8 @@
           "summary": "Noach, arca, destruição, salvação e pacto pós-Dilúvio.",
           "book_key": "genesis",
           "milestone_id": "gen-flood",
-          "parasha_id": "noach",
+          "primary_parasha_id": "noach",
+          "parasha_ids": ["noach"],
           "fact_ids": ["n003", "n004", "n007", "n008", "n009", "n010", "n011", "n012", "n013"],
           "themes": ["julgamento", "salvação", "aliança"]
         },
@@ -71,7 +75,8 @@
           "summary": "A humanidade concentrada é dispersa em línguas e povos.",
           "book_key": "genesis",
           "milestone_id": "gen-babel",
-          "parasha_id": "noach",
+          "primary_parasha_id": "noach",
+          "parasha_ids": ["noach"],
           "fact_ids": ["n020"],
           "themes": ["dispersão", "linguagem", "arrogância"]
         }
@@ -92,7 +97,8 @@
           "summary": "Missão, terra prometida e início da aliança.",
           "book_key": "genesis",
           "milestone_id": "gen-avraham-call",
-          "parasha_id": "lech-lecha",
+          "primary_parasha_id": "lech-lecha",
+          "parasha_ids": ["lech-lecha"],
           "fact_ids": ["ll001", "ll002", "ll003", "ll004"],
           "themes": ["aliança", "terra", "missão"]
         },
@@ -103,7 +109,8 @@
           "summary": "Justiça, hospitalidade, teste e promessa.",
           "book_key": "genesis",
           "milestone_id": "gen-sedom-akedah",
-          "parasha_id": "vayera",
+          "primary_parasha_id": "vayera",
+          "parasha_ids": ["vayera"],
           "fact_ids": ["va002", "va003", "va010", "va011", "va012", "va013"],
           "themes": ["justiça", "teste", "hospitalidade"]
         },
@@ -114,7 +121,8 @@
           "summary": "Rivka, Yaakov e Essav estruturam a continuidade patriarcal.",
           "book_key": "genesis",
           "milestone_id": "gen-rivka-toldot",
-          "parasha_id": "toldot",
+          "primary_parasha_id": "toldot",
+          "parasha_ids": ["chayei-sarah", "toldot"],
           "fact_ids": ["tl001", "tl002", "tl003", "tl004", "tl010", "tl011", "tl012"],
           "themes": ["primogenitura", "irmãos", "bênção"]
         },
@@ -125,7 +133,8 @@
           "summary": "Yaakov em exílio, casamento, filhos e retorno.",
           "book_key": "genesis",
           "milestone_id": "gen-yaakov-tribes",
-          "parasha_id": "vayetze",
+          "primary_parasha_id": "vayetze",
+          "parasha_ids": ["vayetze", "vayishlach"],
           "fact_ids": ["vtz001", "vtz004", "vtz005", "vtz006", "vtz007", "vtz008", "vtz009"],
           "themes": ["família", "tribos", "exílio"]
         },
@@ -136,7 +145,8 @@
           "summary": "Conflito familiar, sonhos, Egito e preparação para o exílio.",
           "book_key": "genesis",
           "milestone_id": "gen-yosef",
-          "parasha_id": "vayeshev",
+          "primary_parasha_id": "vayeshev",
+          "parasha_ids": ["vayeshev", "miketz", "vayigash", "vayechi"],
           "fact_ids": ["vsh001", "vsh003", "vsh009", "mk001", "mk004", "mk005"],
           "themes": ["sonhos", "providência", "Egito"]
         }
@@ -157,7 +167,8 @@
           "summary": "Opressão do povo e surgimento do libertador.",
           "book_key": "exodus",
           "milestone_id": "exo-moshe-born",
-          "parasha_id": "shemot",
+          "primary_parasha_id": "shemot",
+          "parasha_ids": ["shemot", "vaera"],
           "fact_ids": ["sm001", "sm002", "sm004", "sm005", "sm006"],
           "themes": ["exílio", "liderança", "salvação"]
         },
@@ -168,7 +179,8 @@
           "summary": "Juízo sobre o Egito, Pessach e saída nacional.",
           "book_key": "exodus",
           "milestone_id": "exo-pesach",
-          "parasha_id": "bo",
+          "primary_parasha_id": "bo",
+          "parasha_ids": ["vaera", "bo"],
           "fact_ids": ["bo001", "bo002", "bo003", "bo004", "bo005", "bo006", "bo007"],
           "themes": ["libertação", "memória", "juízo"]
         },
@@ -179,7 +191,8 @@
           "summary": "Abertura do mar, canto, sustento e aprendizado no deserto.",
           "book_key": "exodus",
           "milestone_id": "exo-sea",
-          "parasha_id": "beshalach",
+          "primary_parasha_id": "beshalach",
+          "parasha_ids": ["beshalach"],
           "fact_ids": ["bs002", "bs003", "bs004", "bs007", "bs008", "bs009"],
           "themes": ["salvação", "fé", "sustento"]
         },
@@ -190,7 +203,8 @@
           "summary": "Revelação dos mandamentos e estrutura jurídica da aliança.",
           "book_key": "exodus",
           "milestone_id": "exo-sinai",
-          "parasha_id": "yitro",
+          "primary_parasha_id": "yitro",
+          "parasha_ids": ["yitro", "mishpatim"],
           "fact_ids": ["yt005", "yt006", "yt007", "yt008", "mp001", "mp002", "mp003"],
           "themes": ["revelação", "aliança", "justiça"]
         },
@@ -201,7 +215,8 @@
           "summary": "Projeto do Mishkan, Bezerro de Ouro e renovação das tábuas.",
           "book_key": "exodus",
           "milestone_id": "exo-mishkan-design",
-          "parasha_id": "terumah",
+          "primary_parasha_id": "terumah",
+          "parasha_ids": ["terumah", "tetzaveh", "ki-tisa"],
           "fact_ids": ["tr001", "tr002", "tr003", "kt008", "kt009", "kt010", "kt014", "kt015"],
           "themes": ["presença", "idolatria", "perdão"]
         }

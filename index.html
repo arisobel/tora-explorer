@@ -346,6 +346,13 @@ nav {
   line-height: 1.35;
   margin-top: .35rem;
 }
+.tl-group-parasha-range {
+  font-family: 'Crimson Pro', serif;
+  font-size: 12px;
+  color: var(--gold2);
+  margin-top: .3rem;
+  opacity: .8;
+}
 .tl-group-themes {
   display: flex; flex-wrap: wrap; gap: 4px;
   margin-top: .55rem;
@@ -1954,9 +1961,27 @@ async function loadTimelineGroups() {
   return _mart.timelineGroups;
 }
 
+function _parashaRangeLabel(parashaIds, bookKey) {
+  const mart = _mart.parasha[bookKey];
+  if (!mart || !parashaIds || !parashaIds.length) return '';
+  const names = parashaIds.map(id => {
+    const p = mart.byId[id];
+    return p ? p.name : id;
+  }).filter(Boolean);
+  if (!names.length) return '';
+  if (names.length === 1) return names[0];
+  return `${names[0]} → ${names[names.length - 1]}`;
+}
+
 async function renderTimelineDrilldowns() {
   try {
     const data = await loadTimelineGroups();
+
+    const bookKeys = [...new Set(
+      (data.phases || []).flatMap(p => (p.groups || []).map(g => g.book_key).filter(Boolean))
+    )];
+    await Promise.all(bookKeys.map(bk => loadParashaMart(bk)));
+
     for (const phase of (data.phases || [])) {
       const el = document.querySelector(`[data-timeline-phase="${phase.id}"]`);
       if (!el) continue;
@@ -1968,10 +1993,12 @@ async function renderTimelineDrilldowns() {
           .slice(0, 3)
           .map(t => `<span class="tl-group-theme">${t}</span>`)
           .join('');
+        const range = _parashaRangeLabel(g.parasha_ids, g.book_key);
         return `
           <div class="tl-group-card" onclick="openTimelineGroup('${phase.id}','${g.id}', event)">
             <div class="tl-group-head"><span class="tl-group-icon">${g.icon || '•'}</span>${g.label}</div>
             <div class="tl-group-summary">${g.summary || ''}</div>
+            ${range ? `<div class="tl-group-parasha-range">${range}</div>` : ''}
             ${themes ? `<div class="tl-group-themes">${themes}</div>` : ''}
           </div>`;
       }).join('');
@@ -2004,12 +2031,13 @@ async function openTimelineGroup(phaseId, groupId, ev = null) {
     const data = await loadTimelineGroups();
     const phase = (data.phases || []).find(p => p.id === phaseId);
     const group = phase && (phase.groups || []).find(g => g.id === groupId);
-    if (!group || !group.book_key || !group.parasha_id) return;
+    const parashaId = group.primary_parasha_id || group.parasha_id;
+    if (!group || !group.book_key || !parashaId) return;
 
     await loadParashaMart(group.book_key);
     drawerOpen({
       bookKey: group.book_key,
-      parashaId: group.parasha_id,
+      parashaId: parashaId,
       factIds: group.fact_ids || [],
       timelinePhaseId: phaseId,
       timelineGroupId: groupId,
