@@ -190,15 +190,15 @@ Response shape used:
 |-----------|-----|--------|
 | Parasha Drawer — Genesis | Estrutura | Implemented |
 | Parasha Drawer — Exodus | Estrutura | Implemented (9 of 11 parashiot have JSON; 2 missing) |
-| Parasha Drawer — Leviticus/Numbers/Deuteronomy | Estrutura | Data exists; drawer chip not yet exposed in UI |
+| Parasha Drawer — Leviticus/Numbers/Deuteronomy | Estrutura | Data exists; structure chips open the drawer |
 | Historical Ruler inside Drawer | Estrutura | Implemented; AM ranges from book index |
-| ERA color styling — Exodus | Estrutura Drawer | `egito`/`saida-egito` fall back to `patriarcas` color (known gap) |
+| ERA color styling — Exodus and Nach | Estrutura Drawer | Core eras are mapped in `ERA`; additional book-specific polish remains possible |
 | Facts panel with inline Sefaria passages | Estrutura Drawer | Implemented |
 | Book-aware drawer-to-Pessukim navigation | Estrutura/Pessukim | Implemented (2026-06-01) |
-| Timeline → Parasha drawer cross-link | Timeline | Pilot for Genesis (creation, flood, avraham) |
+| Timeline → drawer cross-link | Timeline | Pilots for Genesis groups and Kings/First Temple groups |
 | Timeline phase drill-down groups | Timeline | Implemented via `data/timeline_groups.json` |
 | Chumash Atlas milestones | Chumash | Implemented via `data/milestones/chumash.json` |
-| Nach data model | Data | Implemented for `data/nach/joshua/`, `data/nach/judges/`, and `data/nach/samuel/` |
+| Nach data model | Data | Implemented for `data/nach/joshua/`, `data/nach/judges/`, `data/nach/samuel/`, and `data/nach/kings/` |
 | SQLite authoring database | Authoring | Schema + import implemented; export script not yet written |
 | Data validation script | Data | Not implemented |
 | Visual markers for facts/parashiot | Data/UI | Planned |

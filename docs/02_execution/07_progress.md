@@ -53,6 +53,13 @@
 - [x] SQLite import re-run after Samuel JSON generation
 - [x] Estrutura tab chips for Yehoshua and Shoftim open the Nach unit drawer
 - [x] Estrutura tab chip for Shmuel I/II opens the Nach unit drawer
+- [x] `data/nach/kings/index.json` - Melachim/Kings I-II metadata and 8 narrative-unit summaries
+- [x] `data/nach/kings/01-solomon-consolidation-wisdom.json` through `08-judah-reform-exile.json` - Kings first pass with 64 facts
+- [x] Kings `facts_count` values verified against actual JSON `facts[]` lengths
+- [x] SQLite import re-run after Kings JSON generation
+- [x] Estrutura tab chip for Malachim I/II opens the Nach unit drawer
+- [x] Timeline phase `first-temple-kings` expands into Kings narrative groups and opens the drawer
+- [x] Timeline phase `exodus-sinai` now also includes Yehoshua, Shoftim, and Shemuel groups so the new Nach books are clickable from the Timeline
 - [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`
@@ -76,7 +83,7 @@
 - [x] `scripts/init-sqlite.ps1` creates local `db/tora-explorer.sqlite`
 - [x] `scripts/import-json-to-sqlite.ps1` imports current JSON into SQLite
 - [x] First JSON import validated with `PRAGMA foreign_key_check`
-- [x] SQLite import re-run after Devarim JSON addition — counts: 2025 nodes, 3952 node_edges, 632 source_refs, 93 time_ranges, 67 visual_markers, 698 view_projections, 76 skipped_edges (2026-06-01)
+- [x] SQLite import re-run after Kings and Timeline Nach group additions — counts: 2768 nodes, 5512 node_edges, 911 source_refs, 129 time_ranges, 74 visual_markers, 993 view_projections, 128 skipped_edges (2026-06-01)
 - [x] `drawerGoToPessukim()` made book-aware — receives `bookKey`, resolves Sefaria name, sets correct book in Pessukim selector (2026-06-01)
 - [x] `docs/04_technical/DATABASE_EXPORT_SPEC.md` — new doc specifying the SQLite→JSON export pipeline, field-by-field mapping, lossy fields, and new view file shapes (2026-06-01)
 - [x] `GENERAL_DRILL_DOWN_ARCHITECTURE.md` open questions closed with resolved decisions
@@ -86,7 +93,7 @@
 
 ## In Progress
 
-- [ ] Extend timeline links beyond the Genesis pilot
+- [ ] Refine Timeline period boundaries beyond the Genesis/Nach pilots
 - [ ] Finish drawer behavior for books beyond Genesis (ERA colors, missing Exodus files)
 
 ---
@@ -94,10 +101,10 @@
 ## Next Actions (Short Horizon)
 
 1. Resume parasha JSON population, starting with remaining Exodus files (`10-vayakhel.json`, `11-pekudei.json`)
-2. Decide next Nach book after Samuel (`Malachim I/II` is the natural continuation)
+2. Review and refine the new Malachim/Kings first-pass data and timeline grouping
 3. Define generated `data/views/structure.json` and `data/views/timeline.json`
 4. Create export script from SQLite back to runtime JSON
-5. Expose Vayikra, Bamidbar, Devarim, Joshua, Judges, and Samuel only after UI review
+5. Expose/refine Vayikra, Bamidbar, Devarim, Joshua, Judges, Samuel, and Kings after UI review
 6. Add selected-state breadcrumb across book, milestone, timeline group, parasha/unit, and fact levels
 7. Validate milestone, timeline group, parasha, and Nach unit links in a repeatable script/check
 8. Add selected/highlight state from drawer back to the Timeline tab
@@ -109,19 +116,18 @@
 - Sefaria API access depends on a public external service.
 - Local development may still use `corsproxy.io`; production uses the same-origin Nginx proxy.
 - `data/parashiot/exodus/index.json` currently references 2 files that do not exist, so an Exodus drawer would 404 for Vayakhel and Pekudei until those files are created.
-- Chumash data is complete except for the two remaining Exodus files; Nach data has Joshua, Judges, and Samuel first-pass sets. The UI still needs book/unit-aware drawer refinements before all books can be exposed safely.
+- Chumash data is complete except for the two remaining Exodus files; Nach data has Joshua, Judges, Samuel, and Kings first-pass sets. The UI still needs book/unit-aware drawer refinements before all books can be exposed safely.
 - Git commands are blocked in this workspace by Git's `dubious ownership` safety check until `safe.directory` is configured.
 
 ---
 
 ## Technical Debt
 
-- Drawer implementation is book-specific even though the data model is book-oriented.
-- `ERA` styling in the drawer only defines Genesis-era labels (`pre-diluvio`, `pos-diluvio`, `patriarcas`); Exodus eras fall back incorrectly.
-- Inline fact chapter detection currently matches `Genesis` refs only.
-- `drawerGoToPessukim()` always selects `Genesis`.
+- Drawer is now book-aware, but still uses the parasha naming internally for both Chumash parashiot and Nach narrative units.
+- `ERA` styling has basic Genesis/Exodus/Nach support; it still needs a richer visual language per book/period.
+- Fact chapter detection and Pessukim routing now read the current book/ref, but need a repeatable regression test for `I/II Samuel` and `I/II Kings`.
 - No validation script checks missing files, `facts_count` drift, Sefaria ref shape, or required schema fields.
-- Timeline key events do not yet have stable IDs or routing metadata into parashiot/facts.
+- Timeline key events have stable IDs, but routing metadata is still partial.
 - Timeline tab and parasha drawer do not yet share selected/highlight state.
 - Milestone validation is manual; no script checks broken milestone-to-fact links yet.
 - No validation exists yet for visual asset paths, captions, or marker shape.

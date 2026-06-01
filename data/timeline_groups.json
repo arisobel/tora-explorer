@@ -155,10 +155,10 @@
     {
       "id": "exodus-sinai",
       "timeline_event_id": "exodus-sinai",
-      "label": "Saída do Egito e Sinai",
+      "label": "Saída, Terra e monarquia",
       "am_start": 2238,
-      "am_end": 2488,
-      "summary": "Da escravidão no Egito à revelação, leis e Mishkan.",
+      "am_end": 2928,
+      "summary": "Da escravidão no Egito à revelação, entrada na terra, ciclos dos juízes e nascimento da monarquia.",
       "groups": [
         {
           "id": "slavery-moshe",
@@ -219,6 +219,100 @@
           "parasha_ids": ["terumah", "tetzaveh", "ki-tisa"],
           "fact_ids": ["tr001", "tr002", "tr003", "kt008", "kt009", "kt010", "kt014", "kt015"],
           "themes": ["presença", "idolatria", "perdão"]
+        },
+        {
+          "id": "yehoshua-entry-land",
+          "label": "Yehoshua e entrada na terra",
+          "icon": "🪨",
+          "summary": "Liderança após Moshe, travessia do Jordão, conquista inicial, heranças e aliança em Shechem.",
+          "book_key": "joshua",
+          "milestone_id": "nach-yehoshua-entry-land",
+          "primary_parasha_id": "entry-into-canaan",
+          "parasha_ids": ["entry-into-canaan", "jericho-ai-ebal", "land-allotments-west", "farewell-covenant-shechem"],
+          "fact_ids": ["js001", "js006", "js007", "js008"],
+          "themes": ["terra", "aliança", "liderança"]
+        },
+        {
+          "id": "shoftim-cycle",
+          "label": "Shoftim e ciclos de queda",
+          "icon": "⚖️",
+          "summary": "Conquista incompleta, esquecimento geracional, opressão, clamor e libertadores regionais.",
+          "book_key": "judges",
+          "milestone_id": "nach-shoftim-cycle",
+          "primary_parasha_id": "transition-and-first-judges",
+          "parasha_ids": ["transition-and-first-judges", "deborah-barak-yael", "gideon-cycle", "samson-cycle", "gibeah-civil-war"],
+          "fact_ids": ["jd001", "jd003", "jd005", "jd006", "jd007", "jd008"],
+          "themes": ["juízes", "ciclo", "libertação"]
+        },
+        {
+          "id": "shemuel-monarchy-transition",
+          "label": "Shemuel e nascimento da monarquia",
+          "icon": "👑",
+          "summary": "Renovação profética, pedido por rei, Shaul, David e consolidação de Yerushalayim.",
+          "book_key": "samuel",
+          "milestone_id": "nach-shemuel-monarchy",
+          "primary_parasha_id": "saul-chosen-king",
+          "parasha_ids": ["samuel-birth-ark-crisis", "saul-chosen-king", "saul-rejected-david-anointed", "david-king-jerusalem-covenant"],
+          "fact_ids": ["sm001", "sm005", "sm009", "sm012", "sm015", "sm016"],
+          "themes": ["profecia", "monarquia", "david"]
+        }
+      ]
+    },
+    {
+      "id": "first-temple-kings",
+      "timeline_event_id": "first-temple",
+      "label": "Monarquia e Primeiro Templo",
+      "am_start": 2924,
+      "am_end": 3339,
+      "summary": "De Shlomo e a construção do Primeiro Templo até a divisão do reino, o confronto profético e a queda de Yerushalayim.",
+      "groups": [
+        {
+          "id": "solomon-temple",
+          "label": "Shlomo e o Templo",
+          "icon": "🏛️",
+          "summary": "Sucessão davídica, sabedoria real, construção e dedicação do Beit HaMikdash.",
+          "book_key": "kings",
+          "milestone_id": "kings-solomon-temple",
+          "primary_parasha_id": "temple-built-dedicated",
+          "parasha_ids": ["solomon-consolidation-wisdom", "temple-built-dedicated"],
+          "fact_ids": ["kg001", "kg006", "kg009", "kg010", "kg014", "kg015", "kg016"],
+          "themes": ["templo", "sabedoria", "aliança"]
+        },
+        {
+          "id": "kingdom-split",
+          "label": "Divisão do reino",
+          "icon": "⚔️",
+          "summary": "Riqueza, desvio espiritual e ruptura política entre Yehudá e Israel.",
+          "book_key": "kings",
+          "milestone_id": "kings-kingdom-split",
+          "primary_parasha_id": "solomon-decline-kingdom-split",
+          "parasha_ids": ["solomon-decline-kingdom-split"],
+          "fact_ids": ["kg017", "kg021", "kg023", "kg024"],
+          "themes": ["divisão", "idolatria", "reino"]
+        },
+        {
+          "id": "elijah-elisha-prophetic-axis",
+          "label": "Eliyahu e Elisha",
+          "icon": "🔥",
+          "summary": "Profetas confrontam Baal, injustiça real, fome, guerra e crise espiritual.",
+          "book_key": "kings",
+          "milestone_id": "kings-elijah-elisha",
+          "primary_parasha_id": "northern-southern-kings-elijah",
+          "parasha_ids": ["northern-southern-kings-elijah", "ahab-elisha-transition", "elisha-and-jehu"],
+          "fact_ids": ["kg029", "kg031", "kg032", "kg035", "kg039", "kg045", "kg047", "kg048"],
+          "themes": ["profecia", "teshuvah", "juízo"]
+        },
+        {
+          "id": "israel-judah-exiles",
+          "label": "Exílios e destruição",
+          "icon": "⛓️",
+          "summary": "Queda de Shomron, reformas de Yehudá, cerco babilônico e destruição do Primeiro Templo.",
+          "book_key": "kings",
+          "milestone_id": "kings-exile-destruction",
+          "primary_parasha_id": "judah-reform-exile",
+          "parasha_ids": ["kingdoms-to-israel-exile", "judah-reform-exile"],
+          "fact_ids": ["kg056", "kg057", "kg058", "kg061", "kg062", "kg063", "kg064"],
+          "themes": ["exílio", "reforma", "destruição"]
         }
       ]
     }

@@ -743,7 +743,7 @@ nav {
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('joshua')" style="font-size:11px;cursor:pointer">Yehoshua ›<div class="tooltip">Josué — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('judges')" style="font-size:11px;cursor:pointer">Shoftim ›<div class="tooltip">Juízes — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('samuel')" style="font-size:11px;cursor:pointer">Shmuel I/II ›<div class="tooltip">Samuel — clique para explorar unidades</div></div>
-            <div class="chip chip-blue" style="font-size:11px">Malachim I/II</div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('kings')" style="font-size:11px;cursor:pointer">Malachim I/II ›<div class="tooltip">Reis — clique para explorar unidades</div></div>
             <div class="chip chip-blue" style="font-size:11px">Yeshaya</div>
             <div class="chip chip-blue" style="font-size:11px">Yirmiya</div>
             <div class="chip chip-blue" style="font-size:11px">Yechezkel</div>
@@ -872,7 +872,7 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event">
+      <div class="tl-event" data-timeline-phase="first-temple-kings" onclick="timelineTogglePhase('first-temple-kings', this)">
         <div class="tl-period">2928 – 3339<br>410 anos</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita"></div><div class="tl-connector connector-escrita" style="height:60px"></div></div>
         <div class="tl-content">
@@ -1993,6 +1993,7 @@ const BOOK_META = {
   joshua:      { title: 'Yehoshua · Unidades',   label: 'Yehoshua', path: 'data/nach/joshua/index.json',           sefaria: 'Joshua',      indexField: 'units'     },
   judges:      { title: 'Shoftim · Unidades',    label: 'Shoftim',  path: 'data/nach/judges/index.json',           sefaria: 'Judges',      indexField: 'units'     },
   samuel:      { title: 'Shemuel · Unidades',    label: 'Shemuel',  path: 'data/nach/samuel/index.json',           sefaria: 'I Samuel',    indexField: 'units'     },
+  kings:       { title: 'Melachim · Unidades',   label: 'Melachim', path: 'data/nach/kings/index.json',            sefaria: 'I Kings',     indexField: 'units'     },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };

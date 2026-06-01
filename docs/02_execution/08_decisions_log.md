@@ -239,3 +239,13 @@
 **Decision:** Add `data/nach/samuel/` as a combined Samuel I/II dataset with `index.json` plus 8 narrative-unit files. Units may reference either `I Samuel` or `II Samuel` in Sefaria refs.
 
 **Impact:** Samuel contributes 1 book, 8 narrative units, and 64 facts to the SQLite graph. The Estrutura tab now opens Shmuel I/II through the Nach unit drawer, and drawer-to-Pessukim navigation reads the concrete Sefaria book from `fact.ref_start` so `II Samuel` facts route correctly.
+
+---
+
+## 2026-06-01 — Kings extends Nach and pilots First Temple timeline drill-down
+
+**Context:** After Shemuel I/II, Melachim I/II is the natural continuation of Neviim Rishonim and the first major source for the First Temple timeline period.
+
+**Decision:** Add `data/nach/kings/` as a combined Kings I/II dataset with `index.json` plus 8 narrative-unit files. Connect `Malachim I/II` in the Estrutura tab to the drawer and add `first-temple-kings` to `data/timeline_groups.json` so the First Temple timeline event expands into Kings groups.
+
+**Impact:** Kings contributes 1 book, 8 narrative units, and 64 facts to SQLite. The timeline now has a second organic drill-down pilot beyond Genesis. Yehoshua, Shoftim, and Shemuel are also reachable from the existing Moshe→Shlomo phase, but that broad phase still needs more precise period boundaries later.

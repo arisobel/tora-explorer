@@ -16,39 +16,27 @@
 
 ---
 
-## BUG-02 — Parasha drawer is hardcoded to Genesis
+## BUG-02 — Timeline phase for Moshe → Shlomo is too broad
 
-**Symptom:** Only the Bereshit chip opens the drawer. The drawer always loads `data/parashiot/genesis/index.json` and labels the panel as Genesis.
+**Symptom:** The Timeline event `Saída do Egito — Sinai — Israel` spans `2448–2928` and currently opens the `exodus-sinai` drill-down, which only covers Exodus/Sinai groups.
 
-**Root cause:** `drawerOpen()` has no book parameter, and `_drawerFetchIndex()` fetches a fixed Genesis path.
+**Root cause:** The timeline was originally event-first. Nach books were later added horizontally, so Yehoshua, Shoftim, and Shemuel are currently represented as groups inside one broad phase instead of generated book/period lanes.
 
-**Impact:** Existing Exodus data cannot be explored through the drawer UI.
+**Impact:** The books are clickable from the timeline, but the visual period still compresses Exodus, entry into the land, judges, and early monarchy into one large event. This is usable for navigation, but not yet the final organic structure.
 
-**Fix:** Refactor drawer state to track `bookKey`, load `data/parashiot/{bookKey}/index.json`, and update titles/ruler labels from the loaded index.
-
----
-
-## BUG-03 — Drawer era labels do not support Exodus eras
-
-**Symptom:** If Exodus data is rendered through the current drawer, eras like `egito` and `saida-egito` will fall back to the `patriarcas` label/style.
-
-**Root cause:** The drawer `ERA` map only defines `pre-diluvio`, `pos-diluvio`, and `patriarcas`.
-
-**Impact:** Exodus historical context would display misleading labels/colors.
-
-**Fix:** Add all eras used by visible parasha data, starting with `egito` and `saida-egito`, or derive era metadata from `data/timeline.json`.
+**Fix:** Add a generated or curated Nach transition phase for Yehoshua → Shoftim → Shemuel, or split the existing event into smaller phases backed by `data/nach/*` units.
 
 ---
 
-## BUG-04 — Drawer-to-Pessukim navigation assumes Genesis
+## BUG-03 — Timeline groups are still hand-authored runtime projections
 
-**Symptom:** Fact buttons that navigate to Pessukim always set the book selector to `Genesis`.
+**Symptom:** `data/timeline_groups.json` now includes Chumash groups and a Kings/First Temple pilot, but it is still manually maintained.
 
-**Root cause:** `drawerGoToPessukim(chapterNum)` hardcodes `bookSel.value = 'Genesis'`, and fact chapter extraction matches only `Genesis`.
+**Root cause:** SQLite import exists, but the SQLite→JSON export pipeline is not implemented yet.
 
-**Impact:** Exodus facts would open the wrong book in the Pessukim reader.
+**Impact:** Timeline drill-down can drift from book/unit/fact data unless links are validated after each content change.
 
-**Fix:** Pass the book name from the parasha/fact context into `drawerGoToPessukim(book, chapterNum, verseStart?)`.
+**Fix:** Implement `scripts/export-sqlite-to-json.ps1` and add validation for `book_key`, `parasha_ids`, and `fact_ids` in timeline groups.
 
 ---
 
