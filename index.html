@@ -690,7 +690,7 @@ nav {
             <div class="chip chip-blue" style="font-size:11px">Neviim · Profetas</div>
           </div>
           <div class="book-chips" style="margin-top:5px">
-            <div class="chip chip-blue tooltip-wrap" style="font-size:11px">Yehoshua<div class="tooltip">Josué</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('joshua')" style="font-size:11px;cursor:pointer">Yehoshua ›<div class="tooltip">Josué — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" style="font-size:11px">Shoftim<div class="tooltip">Juízes</div></div>
             <div class="chip chip-blue" style="font-size:11px">Shmuel I/II</div>
             <div class="chip chip-blue" style="font-size:11px">Malachim I/II</div>
@@ -1818,6 +1818,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .era-saida-egito     { background: rgba(200,150,50,0.15);  color: #8a6010;       border: 1px solid rgba(200,150,50,0.25); }
 .era-jornada-deserto { background: rgba(160,130,70,0.15);  color: #6a5020;       border: 1px solid rgba(160,130,70,0.25); }
 .era-entrada-terra   { background: rgba(80,130,70,0.15);   color: #3a6530;       border: 1px solid rgba(80,130,70,0.25); }
+.era-nach            { background: rgba(100,120,160,0.15); color: #3a4a70;       border: 1px solid rgba(100,120,160,0.25); }
 
 /* DETALHE DA PARASHÁ */
 .dp-header {
@@ -1929,15 +1930,17 @@ const ERA = {
   'saida-egito':     { bg: 'rgba(200,150,50,0.65)',  label: 'Êxodo/Sinai',     cls: 'era-saida-egito'     },
   'jornada-deserto': { bg: 'rgba(160,130,70,0.65)',  label: 'Jornada no Deserto', cls: 'era-jornada-deserto' },
   'entrada-terra':   { bg: 'rgba(80,130,70,0.65)',   label: 'Entrada na Terra', cls: 'era-entrada-terra'  },
+  'nach':            { bg: 'rgba(100,120,160,0.65)', label: 'Nach',             cls: 'era-nach'            },
 };
 function eraOf(id) { return ERA[id] || ERA['patriarcas']; }
 
 const BOOK_META = {
-  genesis:     { title: 'Gênesis · Parashiot',  label: 'Gênesis',  path: 'data/parashiot/genesis/index.json',     sefaria: 'Genesis'     },
-  exodus:      { title: 'Êxodo · Parashiot',     label: 'Êxodo',    path: 'data/parashiot/exodus/index.json',      sefaria: 'Exodus'      },
-  leviticus:   { title: 'Vayikrá · Parashiot',   label: 'Vayikrá',  path: 'data/parashiot/leviticus/index.json',   sefaria: 'Leviticus'   },
-  numbers:     { title: 'Bamidbar · Parashiot',  label: 'Bamidbar', path: 'data/parashiot/numbers/index.json',     sefaria: 'Numbers'     },
-  deuteronomy: { title: 'Devarim · Parashiot',   label: 'Devarim',  path: 'data/parashiot/deuteronomy/index.json', sefaria: 'Deuteronomy' },
+  genesis:     { title: 'Gênesis · Parashiot',  label: 'Gênesis',  path: 'data/parashiot/genesis/index.json',     sefaria: 'Genesis',     indexField: 'parashiot' },
+  exodus:      { title: 'Êxodo · Parashiot',     label: 'Êxodo',    path: 'data/parashiot/exodus/index.json',      sefaria: 'Exodus',      indexField: 'parashiot' },
+  leviticus:   { title: 'Vayikrá · Parashiot',   label: 'Vayikrá',  path: 'data/parashiot/leviticus/index.json',   sefaria: 'Leviticus',   indexField: 'parashiot' },
+  numbers:     { title: 'Bamidbar · Parashiot',  label: 'Bamidbar', path: 'data/parashiot/numbers/index.json',     sefaria: 'Numbers',     indexField: 'parashiot' },
+  deuteronomy: { title: 'Devarim · Parashiot',   label: 'Devarim',  path: 'data/parashiot/deuteronomy/index.json', sefaria: 'Deuteronomy', indexField: 'parashiot' },
+  joshua:      { title: 'Yehoshua · Unidades',   label: 'Yehoshua', path: 'data/nach/joshua/index.json',           sefaria: 'Joshua',      indexField: 'units'     },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
@@ -2119,7 +2122,17 @@ async function _drawerFetchIndex(bookKey = _drawer.bookKey, opts = { render: tru
     const meta = BOOK_META[bookKey] || BOOK_META.genesis;
     const r = await fetch(meta.path);
     if (!r.ok) throw new Error(`${r.status} — index não encontrado`);
-    _drawer.indices[bookKey] = await r.json();
+    const raw = await r.json();
+    if (!raw.parashiot && raw.units) {
+      raw.parashiot = raw.units.map(u => ({
+        ...u,
+        name: u.label,
+        name_pt: u.label_pt || '',
+        hebrew: u.hebrew || '',
+        era: u.era || 'nach',
+      }));
+    }
+    _drawer.indices[bookKey] = raw;
     if (_drawer.bookKey === bookKey) _drawer.index = _drawer.indices[bookKey];
     if (opts.render) {
       const ctx = _drawer.context || {};
@@ -2241,7 +2254,8 @@ async function drawerShowParasha(id, dataFile, context = null) {
 }
 
 function _drawerRenderParasha(data, context = null) {
-  const { identity, range, timeline, summary, facts } = data;
+  const { range, timeline, summary, facts } = data;
+  const identity = { ...data.identity, name: data.identity.name || data.identity.label || data.identity.id };
   document.getElementById('drawer-head-title').textContent = identity.name;
   document.getElementById('drawer').scrollTop = 0;
 
