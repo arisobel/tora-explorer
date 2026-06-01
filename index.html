@@ -1507,7 +1507,7 @@ async function renderChumashAtlas(activeBookKey = 'genesis') {
     const data = await loadChumashMilestones();
     root.innerHTML = (data.books || []).map(book => {
       const milestones = (book.milestones || []).map(m => {
-        const hasDrawer = Array.isArray(m.parasha_ids) && m.parasha_ids.length > 0 && ['genesis', 'exodus'].includes(book.book_key);
+        const hasDrawer = Array.isArray(m.parasha_ids) && m.parasha_ids.length > 0 && (book.book_key in BOOK_META);
         const meta = [
           (m.parasha_ids || []).slice(0, 2).join(', '),
           (m.themes || []).slice(0, 2).join(' · ')
