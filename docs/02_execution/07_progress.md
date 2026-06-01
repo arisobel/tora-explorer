@@ -47,7 +47,12 @@
 - [x] `data/nach/judges/01-transition-and-first-judges.json` through `07-gibeah-civil-war.json` - Judges first pass with 56 facts
 - [x] Judges `facts_count` values verified against actual JSON `facts[]` lengths
 - [x] SQLite import re-run after Judges JSON generation
+- [x] `data/nach/samuel/index.json` - Shemuel/Samuel I-II metadata and 8 narrative-unit summaries
+- [x] `data/nach/samuel/01-samuel-birth-ark-crisis.json` through `08-david-restoration-final-appendix.json` - Samuel first pass with 64 facts
+- [x] Samuel `facts_count` values verified against actual JSON `facts[]` lengths
+- [x] SQLite import re-run after Samuel JSON generation
 - [x] Estrutura tab chips for Yehoshua and Shoftim open the Nach unit drawer
+- [x] Estrutura tab chip for Shmuel I/II opens the Nach unit drawer
 - [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`
@@ -89,10 +94,10 @@
 ## Next Actions (Short Horizon)
 
 1. Resume parasha JSON population, starting with remaining Exodus files (`10-vayakhel.json`, `11-pekudei.json`)
-2. Decide next Nach book after Judges (`I Samuel` is the natural continuation)
+2. Decide next Nach book after Samuel (`Malachim I/II` is the natural continuation)
 3. Define generated `data/views/structure.json` and `data/views/timeline.json`
 4. Create export script from SQLite back to runtime JSON
-5. Expose Vayikra, Bamidbar, Devarim, Joshua, and Judges only after UI review
+5. Expose Vayikra, Bamidbar, Devarim, Joshua, Judges, and Samuel only after UI review
 6. Add selected-state breadcrumb across book, milestone, timeline group, parasha/unit, and fact levels
 7. Validate milestone, timeline group, parasha, and Nach unit links in a repeatable script/check
 8. Add selected/highlight state from drawer back to the Timeline tab
@@ -104,7 +109,7 @@
 - Sefaria API access depends on a public external service.
 - Local development may still use `corsproxy.io`; production uses the same-origin Nginx proxy.
 - `data/parashiot/exodus/index.json` currently references 2 files that do not exist, so an Exodus drawer would 404 for Vayakhel and Pekudei until those files are created.
-- Chumash data is complete except for the two remaining Exodus files; Nach data has Joshua and Judges first-pass sets. The UI still needs book/unit-aware drawer refinements before all books can be exposed safely.
+- Chumash data is complete except for the two remaining Exodus files; Nach data has Joshua, Judges, and Samuel first-pass sets. The UI still needs book/unit-aware drawer refinements before all books can be exposed safely.
 - Git commands are blocked in this workspace by Git's `dubious ownership` safety check until `safe.directory` is configured.
 
 ---

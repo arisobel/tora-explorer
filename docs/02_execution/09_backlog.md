@@ -10,7 +10,8 @@
 - [ ] Review and refine Devarim fact wording and refs before exposing drawer for that book
 - [ ] Review and refine Joshua narrative-unit wording and refs before exposing Nach drill-down
 - [ ] Review and refine Judges narrative-unit wording and refs before exposing Nach drill-down
-- [ ] Decide next Nach JSON set after Judges, likely `data/nach/i-samuel/`
+- [ ] Review and refine Samuel narrative-unit wording and refs before exposing Nach drill-down
+- [ ] Decide next Nach JSON set after Samuel, likely `data/nach/kings/`
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -25,6 +26,7 @@
 - [x] **Joshua/Nach pilot JSON set** — `data/nach/joshua/index.json` + 8 narrative-unit JSONs generated and synced to SQLite (2026-06-01)
 - [x] **Judges/Nach JSON set** — `data/nach/judges/index.json` + 7 narrative-unit JSONs generated and synced to SQLite (2026-06-01)
 - [x] **Estrutura Nach chips** — Yehoshua and Shoftim chips open the drawer using `data/nach/*` unit indexes (2026-06-01)
+- [x] **Samuel/Nach JSON set** — `data/nach/samuel/index.json` + 8 narrative-unit JSONs generated and synced to SQLite; Shmuel I/II chip opens the drawer (2026-06-01)
 
 ## Short Term
 

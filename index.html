@@ -725,7 +725,7 @@ nav {
           <div class="book-chips" style="margin-top:5px">
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('joshua')" style="font-size:11px;cursor:pointer">Yehoshua ›<div class="tooltip">Josué — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('judges')" style="font-size:11px;cursor:pointer">Shoftim ›<div class="tooltip">Juízes — clique para explorar unidades</div></div>
-            <div class="chip chip-blue" style="font-size:11px">Shmuel I/II</div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('samuel')" style="font-size:11px;cursor:pointer">Shmuel I/II ›<div class="tooltip">Samuel — clique para explorar unidades</div></div>
             <div class="chip chip-blue" style="font-size:11px">Malachim I/II</div>
             <div class="chip chip-blue" style="font-size:11px">Yeshaya</div>
             <div class="chip chip-blue" style="font-size:11px">Yirmiya</div>
@@ -1975,6 +1975,7 @@ const BOOK_META = {
   deuteronomy: { title: 'Devarim · Parashiot',   label: 'Devarim',  path: 'data/parashiot/deuteronomy/index.json', sefaria: 'Deuteronomy', indexField: 'parashiot' },
   joshua:      { title: 'Yehoshua · Unidades',   label: 'Yehoshua', path: 'data/nach/joshua/index.json',           sefaria: 'Joshua',      indexField: 'units'     },
   judges:      { title: 'Shoftim · Unidades',    label: 'Shoftim',  path: 'data/nach/judges/index.json',           sefaria: 'Judges',      indexField: 'units'     },
+  samuel:      { title: 'Shemuel · Unidades',    label: 'Shemuel',  path: 'data/nach/samuel/index.json',           sefaria: 'I Samuel',    indexField: 'units'     },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
@@ -2112,7 +2113,7 @@ async function toggleGroupFacts(phaseId, groupId, cardEl, ev) {
         ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">Ver passagem</button>`
         : '';
       const chapBtn = chapNum
-        ? `<button class="fact-verse-btn" style="font-size:11px;padding:3px 9px" onclick="drawerGoToPessukim(${chapNum},'${group.book_key}')">→ Cap. ${chapNum}</button>`
+        ? `<button class="fact-verse-btn" style="font-size:11px;padding:3px 9px" onclick="drawerGoToPessukim(${chapNum},'${group.book_key}','${f.ref_start || ''}')">→ Cap. ${chapNum}</button>`
         : '';
       return `
         <div class="tl-group-fact-item fact-item" id="tl-fact-${f.id}">
@@ -2387,7 +2388,7 @@ function _drawerRenderParasha(data, context = null) {
       ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">Ver passagem</button>`
       : '';
     const chapBtn  = chapNum
-      ? `<button class="fact-verse-btn" onclick="drawerGoToPessukim(${chapNum}, '${bookKey}')">→ Capítulo ${chapNum}</button>`
+      ? `<button class="fact-verse-btn" onclick="drawerGoToPessukim(${chapNum}, '${bookKey}', '${f.ref_start || ''}')">→ Capítulo ${chapNum}</button>`
       : '';
     const btnsHTML = (passBtn || chapBtn)
       ? `<div style="display:flex;gap:5px;flex-shrink:0">${passBtn}${chapBtn}</div>`
@@ -2501,7 +2502,7 @@ async function drawerLoadPassage(btn, ref) {
   }
 }
 
-function drawerGoToPessukim(chapterNum, bookKey) {
+function drawerGoToPessukim(chapterNum, bookKey, refStart = null) {
   drawerClose();
 
   const pkTab = [...document.querySelectorAll('.nav-tab')].find(t => t.textContent.includes('Pessukim'));
@@ -2510,7 +2511,9 @@ function drawerGoToPessukim(chapterNum, bookKey) {
   document.getElementById('page-pessukim').classList.add('active');
   if (pkTab) pkTab.classList.add('active');
 
-  const sefariaName = (BOOK_META[bookKey] && BOOK_META[bookKey].sefaria)
+  const refBookMatch = refStart && refStart.match(/^(.+?)\s+\d+:/);
+  const sefariaName = (refBookMatch && refBookMatch[1])
+    || (BOOK_META[bookKey] && BOOK_META[bookKey].sefaria)
     || (bookKey ? bookKey.charAt(0).toUpperCase() + bookKey.slice(1) : 'Genesis');
   const bookSel = document.getElementById('pk-book');
   bookSel.value = sefariaName;

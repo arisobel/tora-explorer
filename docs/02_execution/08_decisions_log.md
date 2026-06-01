@@ -229,3 +229,13 @@
 **Decision:** Add `data/nach/judges/` with `index.json` plus 7 narrative-unit files covering the transition after Yehoshua, Devorah, Gidon, Avimelech/Yiftach, Shimshon, Michah/Dan, and Givah/Binyamin.
 
 **Impact:** The Nach model is no longer only a Joshua pilot. Judges contributes 1 book, 7 narrative units, and 56 facts to the SQLite graph using the same `book -> milestone -> fact` pattern.
+
+---
+
+## 2026-06-01 — Samuel extends the Nach JSON model
+
+**Context:** After Shoftim/Judges, Shemuel I/II is the next narrative bridge from decentralized judges to monarchy.
+
+**Decision:** Add `data/nach/samuel/` as a combined Samuel I/II dataset with `index.json` plus 8 narrative-unit files. Units may reference either `I Samuel` or `II Samuel` in Sefaria refs.
+
+**Impact:** Samuel contributes 1 book, 8 narrative units, and 64 facts to the SQLite graph. The Estrutura tab now opens Shmuel I/II through the Nach unit drawer, and drawer-to-Pessukim navigation reads the concrete Sefaria book from `fact.ref_start` so `II Samuel` facts route correctly.
