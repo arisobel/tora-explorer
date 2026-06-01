@@ -2,7 +2,7 @@
 
 ## Current State
 - **Phase:** Timeline/parasha interaction model + drawer generalization
-- **Last update:** 2026-05-31
+- **Last update:** 2026-06-01
 - **Reality check:** Documentation was reconciled with the actual repository state on 2026-05-31.
 
 ---
@@ -34,6 +34,10 @@
 - [x] `data/parashiot/numbers/01-bamidbar.json` through `10-masei.json` - all Bamidbar parashiot populated with 8 facts each
 - [x] Bamidbar `facts_count` values verified against actual JSON `facts[]` lengths
 - [x] SQLite import re-run after Bamidbar JSON generation
+- [x] `data/parashiot/deuteronomy/index.json` - all 11 Devarim parashiot metadata
+- [x] `data/parashiot/deuteronomy/01-devarim.json` through `11-vezot-haberakhah.json` - all Devarim parashiot populated with 8 facts each
+- [x] Devarim `facts_count` values verified against actual JSON `facts[]` lengths
+- [x] SQLite import re-run after Devarim JSON generation
 - [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`
@@ -58,6 +62,9 @@
 - [x] `scripts/import-json-to-sqlite.ps1` imports current JSON into SQLite
 - [x] First JSON import validated with `PRAGMA foreign_key_check`
 - [x] `drawerGoToPessukim()` made book-aware — receives `bookKey`, resolves Sefaria name, sets correct book in Pessukim selector (2026-06-01)
+- [x] `docs/04_technical/DATABASE_EXPORT_SPEC.md` — new doc specifying the SQLite→JSON export pipeline, field-by-field mapping, lossy fields, and new view file shapes (2026-06-01)
+- [x] `GENERAL_DRILL_DOWN_ARCHITECTURE.md` open questions closed with resolved decisions
+- [x] `ARCHITECTURE.md`, `DOMAIN_MODEL.md`, `db/README.md` updated to reflect current state
 
 ---
 
@@ -71,13 +78,12 @@
 ## Next Actions (Short Horizon)
 
 1. Resume parasha JSON population, starting with remaining Exodus files (`10-vayakhel.json`, `11-pekudei.json`)
-2. Generate Devarim JSON set (`data/parashiot/deuteronomy/`)
-3. Define generated `data/views/structure.json` and `data/views/timeline.json`
-4. Create export script from SQLite back to runtime JSON
-5. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
-6. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
-7. Validate milestone and timeline group `fact_ids` in a repeatable script/check
-8. Add selected/highlight state from drawer back to the Timeline tab
+2. Define generated `data/views/structure.json` and `data/views/timeline.json`
+3. Create export script from SQLite back to runtime JSON
+4. Expose Vayikra, Bamidbar, and Devarim chips in the drawer only after UI review
+5. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
+6. Validate milestone and timeline group `fact_ids` in a repeatable script/check
+7. Add selected/highlight state from drawer back to the Timeline tab
 
 ---
 
@@ -86,7 +92,7 @@
 - Sefaria API access depends on a public external service.
 - Local development may still use `corsproxy.io`; production uses the same-origin Nginx proxy.
 - `data/parashiot/exodus/index.json` currently references 2 files that do not exist, so an Exodus drawer would 404 for Vayakhel and Pekudei until those files are created.
-- Further parasha population should continue after the Bamidbar pass, but the UI still needs book-aware drawer refinements before all books can be exposed safely.
+- Chumash data is complete except for the two remaining Exodus files; the UI still needs book-aware drawer refinements before all books can be exposed safely.
 - Git commands are blocked in this workspace by Git's `dubious ownership` safety check until `safe.directory` is configured.
 
 ---

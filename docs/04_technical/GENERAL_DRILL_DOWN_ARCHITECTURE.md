@@ -289,26 +289,32 @@ node_edges with relation_type = aggregates
 view_projections for view_key = timeline
 ```
 
-## Open Questions
+## Resolved Questions
 
-- Should the first authoring database be SQLite or PostgreSQL?
-- Should IDs be UUIDs, stable slugs, or both?
-- Should Hebrew labels be one field or a separate localization table?
-- Should Sefaria refs be nodes or attached records?
-- How much view-specific layout metadata belongs in `view_projections`?
+These questions were open during initial design and are now closed.
 
-## Current Recommendation
+**Should the first authoring database be SQLite or PostgreSQL?**
+SQLite. Rationale: single-file, zero-server, no auth, fits the local authoring
+workflow. PostgreSQL remains a future option if the project needs multi-user
+editing or hosted workflows.
 
-Start with SQLite, stable slugs, and export scripts.
+**Should IDs be UUIDs, stable slugs, or both?**
+Both. The `nodes.id` is a composite `type:slug` (e.g. `parasha:genesis:bereshit`,
+`fact:genesis:b001`). The `slug` column holds the human-readable stable key.
+This makes the graph self-describing and avoids UUID opacity.
 
-Use:
+**Should Hebrew labels be one field or a separate localization table?**
+One field (`label_he`) for now. A localization table would add complexity without
+clear benefit at the current scale. If Portuguese translations need the same
+treatment as Hebrew, add `label_pt` first before abstracting.
 
-- `nodes`
-- `node_edges`
-- `source_refs`
-- `time_ranges`
-- `visual_markers`
-- `view_projections`
+**Should Sefaria refs be nodes or attached records?**
+Attached records. Source refs live in the `source_refs` table, linked to their
+`node_id`. This avoids cluttering the node graph with low-level source records
+while still allowing one node to have multiple ref ranges.
 
-This gives enough structure for general drill-down without prematurely building
-a full backend.
+**How much view-specific layout metadata belongs in `view_projections`?**
+Use `metadata_json` sparingly — only for display hints that don't belong in
+the node itself (e.g. `display_mode`, `icon` for rendering in a specific view).
+Content (labels, summaries, refs) always lives in the node; layout hints go
+in the projection.

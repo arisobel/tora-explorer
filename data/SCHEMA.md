@@ -23,6 +23,10 @@ data/
       index.json
       01-bamidbar.json
       ...
+    deuteronomy/
+      index.json
+      01-devarim.json
+      ...
 ```
 
 ---
@@ -192,6 +196,17 @@ Quando o fato atravessa capítulos (ex: Gen 4:17 → Gen 6:8), use:
 | Pinchas       | `pn`    |
 | Matot         | `mt`    |
 | Masei         | `ms`    |
+| Devarim       | `dv`    |
+| Vaetchanan    | `ve`    |
+| Eikev         | `ek`    |
+| Re'eh         | `rh`    |
+| Shoftim       | `sf`    |
+| Ki Teitzei    | `ktz`   |
+| Ki Tavo       | `ktv`   |
+| Nitzavim      | `nz`    |
+| Vayeilech     | `vl`    |
+| Haazinu       | `hz`    |
+| Vezot Haberakhah | `vh` |
 
 ---
 

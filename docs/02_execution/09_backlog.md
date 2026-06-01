@@ -3,11 +3,11 @@
 ## Immediate (Next Cycle)
 
 - [ ] Create `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` (drawer 404s for these)
-- [ ] Generate Devarim JSON set (`data/parashiot/deuteronomy/index.json` + 11 individual JSONs)
 - [ ] Add Exodus era labels/styles to the drawer `ERA` map (`egito`, `saida-egito`) — currently falls back to `patriarcas` color
 - [ ] Make fact chapter parsing work for any Chumash book (regex currently correct, but `drawerGoToPessukim` now fixed)
 - [ ] Review and refine Vayikra fact wording and refs before exposing drawer for that book
 - [ ] Review and refine Bamidbar fact wording and refs before exposing drawer for that book
+- [ ] Review and refine Devarim fact wording and refs before exposing drawer for that book
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -18,10 +18,12 @@
 ## Recently Completed
 
 - [x] **drawer→Pessukim book-aware** — `drawerGoToPessukim(chapterNum, bookKey)` now resolves Sefaria book name from bookKey; button in `_drawerRenderParasha` passes `bookKey` captured at render time (2026-06-01)
+- [x] **Devarim JSON set** — `data/parashiot/deuteronomy/index.json` + all 11 individual parasha JSONs generated and synced to SQLite (2026-06-01)
 
 ## Short Term
 
-- [ ] Create export script from database draft schema back to runtime JSON
+- [ ] Write `scripts/export-sqlite-to-json.ps1` per spec in `docs/04_technical/DATABASE_EXPORT_SPEC.md`
+- [ ] Add `summary_medium`, `aliyot`, `haftarah` to the import script and schema to close lossy-field gaps
 - [ ] Replace hand-authored `data/timeline_groups.json` with a generated timeline projection
 - [ ] Add "ver na linha do tempo" action from parasha/fact views
 - [ ] Remove remaining dark-theme assumptions from inline styles
@@ -41,7 +43,6 @@
 ## Mid Term
 
 - [ ] Extend drawer support to Vayikra, Bamidbar, and Devarim once data folders exist
-- [ ] Create `data/parashiot/deuteronomy/index.json` + individual JSONs
 - [ ] Replace static Chumash event lists with parasha-driven book views
 - [ ] Build the Chumash visual atlas view with book lanes, event lanes, character lanes, and visual markers
 - [ ] Build a book/parasha overview view for Genesis using the complete Genesis data
@@ -50,7 +51,7 @@
 
 ## Long Term
 
-- [ ] Complete all 54 parashiot across all 5 Chumash books
+- [ ] Refine all 54 parashiot across all 5 Chumash books after first-pass data completion
 - [ ] Add Haftarah display per parasha
 - [ ] Add a commentary layer after the primary-text flow is stable
 - [ ] Mishna & Guemara tab: clicking a sage opens a bio panel

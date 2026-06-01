@@ -84,31 +84,30 @@ should expose their related global timeline markers.
 ## Data Flow: Parasha Drawer
 
 ```
-User clicks "Bereshit ›" chip
-  → drawerOpen()
-  → fetch("data/parashiot/genesis/index.json")
-  → render list of 12 parashiot with summary_short
-  → user expands a parasha
+User clicks "Bereshit ›" or "Shemot ›" chip
+  → drawerOpen({ bookKey })
+  → fetch("data/parashiot/{bookKey}/index.json")
+  → render parashiot list with summary_short and mini-ruler
+  → user clicks a parasha
   → fetch(parasha.data_file)    ← e.g. "data/parashiot/genesis/01-bereshit.json"
   → render facts[]
-  → each fact has "→ Ver versículos" button
-  → click → showPage('pessukim'); pkLoad(fact.ref_start)
+  → each fact has "→ Capítulo N" button
+  → click → drawerGoToPessukim(chapter, bookKey)
+           → resolves Sefaria name via BOOK_META[bookKey].sefaria
+           → showPage('pessukim'); pkLoad()
 ```
 
 Current status:
-- Implemented for Genesis.
-- The drawer is still hardcoded to `data/parashiot/genesis/index.json`.
-- The Shemot/Exodus data exists partially, but the Shemot chip does not yet open
-  a drawer.
-- Drawer-to-Pessukim navigation currently assumes `Genesis`.
+- Drawer is book-aware: implemented for Genesis and Exodus.
+- `drawerOpen()` accepts `{ bookKey, parashaId?, factIds? }`.
+- Drawer-to-Pessukim navigation is book-aware (fixed 2026-06-01).
+- Exodus ERA colors in the drawer (`egito`, `saida-egito`) still fall back to
+  `patriarcas` style — a known cosmetic gap.
 
-Target next architecture:
+Next step:
 ```
-drawerOpen({ bookKey, parashaId?, factIds? })
-  → load data/parashiot/{bookKey}/index.json
-  → render the same drawer UI for any supported Chumash book
-  → optionally select a parasha and highlight linked facts
-  → drawerGoToPessukim(book, chapter, verseStart?)
+drawerGoToPessukim(chapter, bookKey)
+  → also support verse-level navigation once fact refs carry chapter:verse
 ```
 
 Timeline interaction target:
@@ -189,11 +188,17 @@ Response shape used:
 
 | Component | Tab | Status |
 |-----------|-----|--------|
-| Parasha Drawer | Estrutura | Implemented for Genesis only |
-| Historical Ruler inside Drawer | Estrutura | Implemented for Genesis; labels/ranges are hardcoded |
-| Facts panel with inline Sefaria passages | Estrutura Drawer | Implemented for Genesis facts |
-| Drawer support for Exodus | Estrutura | Not implemented |
-| Book-aware drawer-to-Pessukim navigation | Estrutura/Pessukim | Not implemented |
+| Parasha Drawer — Genesis | Estrutura | Implemented |
+| Parasha Drawer — Exodus | Estrutura | Implemented (9 of 11 parashiot have JSON; 2 missing) |
+| Parasha Drawer — Leviticus/Numbers/Deuteronomy | Estrutura | Data exists; drawer chip not yet exposed in UI |
+| Historical Ruler inside Drawer | Estrutura | Implemented; AM ranges from book index |
+| ERA color styling — Exodus | Estrutura Drawer | `egito`/`saida-egito` fall back to `patriarcas` color (known gap) |
+| Facts panel with inline Sefaria passages | Estrutura Drawer | Implemented |
+| Book-aware drawer-to-Pessukim navigation | Estrutura/Pessukim | Implemented (2026-06-01) |
+| Timeline → Parasha drawer cross-link | Timeline | Pilot for Genesis (creation, flood, avraham) |
+| Timeline phase drill-down groups | Timeline | Implemented via `data/timeline_groups.json` |
+| Chumash Atlas milestones | Chumash | Implemented via `data/milestones/chumash.json` |
+| SQLite authoring database | Authoring | Schema + import implemented; export script not yet written |
 | Data validation script | Data | Not implemented |
 | Visual markers for facts/parashiot | Data/UI | Planned |
 | Local JSON editor / Content Studio | Authoring | Planned, not implemented |

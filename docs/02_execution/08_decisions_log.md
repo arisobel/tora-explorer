@@ -199,3 +199,13 @@
 **Decision:** Add a complete first pass for `data/parashiot/numbers/`, including the book `index.json` and all 10 parasha JSON files from Bamidbar through Masei.
 
 **Impact:** Bamidbar now participates in the JSON source set and in the SQLite node/edge model. The next Chumash content block is Devarim, while Exodus still has two missing files (`Vayakhel` and `Pekudei`).
+
+---
+
+## 2026-06-01 — Devarim JSON generated and synced to SQLite
+
+**Context:** The Chumash content backlog continued with the final book after Genesis, Vayikra, and Bamidbar were already represented as complete JSON sets.
+
+**Decision:** Add a complete first pass for `data/parashiot/deuteronomy/`, including the book `index.json` and all 11 parasha JSON files from Devarim through Vezot Haberakhah.
+
+**Impact:** The SQLite graph now contains all 54 Chumash parashiot. The only remaining missing parasha JSON files are Exodus `Vayakhel` and `Pekudei`, which are referenced by `data/parashiot/exodus/index.json` but not yet present on disk.
