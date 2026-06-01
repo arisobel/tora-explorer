@@ -672,9 +672,9 @@ nav {
           <div class="book-chips">
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('genesis')" style="cursor:pointer">Bereshit ›<div class="tooltip">Gênesis — clique para explorar parashiot</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('exodus')" style="cursor:pointer">Shemot ›<div class="tooltip">Êxodo — clique para explorar parashiot</div></div>
-            <div class="chip chip-blue tooltip-wrap">Vayikrá<div class="tooltip">Levítico — dados de parashiot em preparação</div></div>
-            <div class="chip chip-blue tooltip-wrap">Bamidbar<div class="tooltip">Números — dados de parashiot em preparação</div></div>
-            <div class="chip chip-blue tooltip-wrap">Devarim<div class="tooltip">Deuteronômio — dados de parashiot em preparação</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('leviticus')" style="cursor:pointer">Vayikrá ›<div class="tooltip">Levítico — clique para explorar parashiot</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('numbers')" style="cursor:pointer">Bamidbar ›<div class="tooltip">Números — clique para explorar parashiot</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('deuteronomy')" style="cursor:pointer">Devarim ›<div class="tooltip">Deuteronômio — clique para explorar parashiot</div></div>
           </div>
         </div>
         <div class="book-group">
@@ -1926,8 +1926,11 @@ const ERA = {
 function eraOf(id) { return ERA[id] || ERA['patriarcas']; }
 
 const BOOK_META = {
-  genesis: { title: 'Gênesis · Parashiot', label: 'Gênesis', path: 'data/parashiot/genesis/index.json', sefaria: 'Genesis' },
-  exodus:  { title: 'Êxodo · Parashiot',   label: 'Êxodo',   path: 'data/parashiot/exodus/index.json',  sefaria: 'Exodus'  }
+  genesis:     { title: 'Gênesis · Parashiot',  label: 'Gênesis',  path: 'data/parashiot/genesis/index.json',     sefaria: 'Genesis'     },
+  exodus:      { title: 'Êxodo · Parashiot',     label: 'Êxodo',    path: 'data/parashiot/exodus/index.json',      sefaria: 'Exodus'      },
+  leviticus:   { title: 'Vayikrá · Parashiot',   label: 'Vayikrá',  path: 'data/parashiot/leviticus/index.json',   sefaria: 'Leviticus'   },
+  numbers:     { title: 'Bamidbar · Parashiot',  label: 'Bamidbar', path: 'data/parashiot/numbers/index.json',     sefaria: 'Numbers'     },
+  deuteronomy: { title: 'Devarim · Parashiot',   label: 'Devarim',  path: 'data/parashiot/deuteronomy/index.json', sefaria: 'Deuteronomy' },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
