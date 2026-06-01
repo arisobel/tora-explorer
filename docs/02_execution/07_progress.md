@@ -61,6 +61,7 @@
 - [x] `scripts/init-sqlite.ps1` creates local `db/tora-explorer.sqlite`
 - [x] `scripts/import-json-to-sqlite.ps1` imports current JSON into SQLite
 - [x] First JSON import validated with `PRAGMA foreign_key_check`
+- [x] SQLite import re-run after Devarim JSON addition — counts: 2025 nodes, 3952 node_edges, 632 source_refs, 93 time_ranges, 67 visual_markers, 698 view_projections, 76 skipped_edges (2026-06-01)
 - [x] `drawerGoToPessukim()` made book-aware — receives `bookKey`, resolves Sefaria name, sets correct book in Pessukim selector (2026-06-01)
 - [x] `docs/04_technical/DATABASE_EXPORT_SPEC.md` — new doc specifying the SQLite→JSON export pipeline, field-by-field mapping, lossy fields, and new view file shapes (2026-06-01)
 - [x] `GENERAL_DRILL_DOWN_ARCHITECTURE.md` open questions closed with resolved decisions
