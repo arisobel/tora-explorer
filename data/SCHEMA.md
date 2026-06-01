@@ -19,6 +19,10 @@ data/
       index.json
       01-vayikra.json
       ...
+    numbers/
+      index.json
+      01-bamidbar.json
+      ...
 ```
 
 ---
@@ -178,6 +182,16 @@ Quando o fato atravessa capítulos (ex: Gen 4:17 → Gen 6:8), use:
 | Emor          | `em`    |
 | Behar         | `bh`    |
 | Bechukotai    | `bc`    |
+| Bamidbar      | `bm`    |
+| Nasso         | `ns`    |
+| Behaalotecha  | `bhlt`  |
+| Shelach       | `sl`    |
+| Korach        | `kr`    |
+| Chukat        | `chk`   |
+| Balak         | `blk`   |
+| Pinchas       | `pn`    |
+| Matot         | `mt`    |
+| Masei         | `ms`    |
 
 ---
 

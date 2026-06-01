@@ -17,7 +17,8 @@ The 5 books of Moses. Divided into 54 **Parashiot** (weekly portions).
 - Gênesis (Bereshit): 12 parashiot
 - Shemot (Exodus): 11 parashiot
 - Vayikrá (Leviticus): 10 parashiot
-- Bamidbar (Numbers), Devarim (Deuteronomy): remaining Chumash parashiot not yet represented as data folders
+- Bamidbar (Numbers): 10 parashiot
+- Devarim (Deuteronomy): remaining Chumash parashiot not yet represented as data folders
 
 ### Parasha
 The atomic content unit. Each parasha has:
@@ -140,7 +141,7 @@ Timeline
 Chumash
   └── Book[] (5 books)
        ├── Milestone[] (strategic narrative aggregators)
-       └── Parasha[] (54 total; Genesis and Vayikra complete, Exodus partially populated)
+       └── Parasha[] (54 total; Genesis, Vayikra, and Bamidbar complete; Exodus partially populated)
             ├── Fact[] (ordered narrative moments with Sefaria refs)
             │    └── VisualMarker? (optional icon/image metadata)
             ├── Aliyot[] (7 divisions per Parasha)
@@ -167,6 +168,8 @@ Sefaria API (external)
 | `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` | Referenced in `index.json` but not yet present on disk |
 | `data/parashiot/leviticus/index.json` | Light metadata for all 10 Vayikra parashiot |
 | `data/parashiot/leviticus/01-vayikra.json` through `10-bechukotai.json` | Full Vayikra data; all `facts_count` values match actual `facts[]` length |
+| `data/parashiot/numbers/index.json` | Light metadata for all 10 Bamidbar parashiot |
+| `data/parashiot/numbers/01-bamidbar.json` through `10-masei.json` | Full Bamidbar data; all `facts_count` values match actual `facts[]` length |
 | `data/milestones/chumash.json` | Chumash Atlas milestones across the 5 books |
 | `assets/` | Planned folder for visual icons/images referenced by JSON; not implemented yet |
 

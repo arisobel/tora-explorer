@@ -30,6 +30,10 @@
 - [x] `data/parashiot/leviticus/01-vayikra.json` through `10-bechukotai.json` - all Vayikra parashiot populated with 8 facts each
 - [x] Vayikra `facts_count` values verified against actual JSON `facts[]` lengths
 - [x] SQLite import re-run after Vayikra JSON generation
+- [x] `data/parashiot/numbers/index.json` - all 10 Bamidbar parashiot metadata
+- [x] `data/parashiot/numbers/01-bamidbar.json` through `10-masei.json` - all Bamidbar parashiot populated with 8 facts each
+- [x] Bamidbar `facts_count` values verified against actual JSON `facts[]` lengths
+- [x] SQLite import re-run after Bamidbar JSON generation
 - [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`
@@ -66,12 +70,13 @@
 ## Next Actions (Short Horizon)
 
 1. Resume parasha JSON population, starting with remaining Exodus files (`10-vayakhel.json`, `11-pekudei.json`)
-2. Define generated `data/views/structure.json` and `data/views/timeline.json`
-3. Create export script from SQLite back to runtime JSON
-4. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
-5. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
-6. Validate milestone and timeline group `fact_ids` in a repeatable script/check
-7. Add selected/highlight state from drawer back to the Timeline tab
+2. Generate Devarim JSON set (`data/parashiot/deuteronomy/`)
+3. Define generated `data/views/structure.json` and `data/views/timeline.json`
+4. Create export script from SQLite back to runtime JSON
+5. Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
+6. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
+7. Validate milestone and timeline group `fact_ids` in a repeatable script/check
+8. Add selected/highlight state from drawer back to the Timeline tab
 
 ---
 
@@ -80,7 +85,7 @@
 - Sefaria API access depends on a public external service.
 - Local development may still use `corsproxy.io`; production uses the same-origin Nginx proxy.
 - `data/parashiot/exodus/index.json` currently references 2 files that do not exist, so an Exodus drawer would 404 for Vayakhel and Pekudei until those files are created.
-- Further parasha population should continue after the Vayikra pass, but the UI still needs book-aware drawer refinements before all books can be exposed safely.
+- Further parasha population should continue after the Bamidbar pass, but the UI still needs book-aware drawer refinements before all books can be exposed safely.
 - Git commands are blocked in this workspace by Git's `dubious ownership` safety check until `safe.directory` is configured.
 
 ---

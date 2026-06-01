@@ -189,3 +189,13 @@
 **Decision:** Add a complete first pass for `data/parashiot/leviticus/`, including the book `index.json` and all 10 parasha JSON files from Vayikra through Bechukotai.
 
 **Impact:** Vayikra now participates in the JSON source set and in the SQLite node/edge model. Before exposing it fully in the UI, the drawer still needs book-aware polish and the Vayikra facts should receive a focused content review.
+
+---
+
+## 2026-05-31 — Bamidbar JSON generated and synced to SQLite
+
+**Context:** After Vayikra, the content backlog continued into Bamidbar/Numbers using the same JSON-first and SQLite-sync workflow.
+
+**Decision:** Add a complete first pass for `data/parashiot/numbers/`, including the book `index.json` and all 10 parasha JSON files from Bamidbar through Masei.
+
+**Impact:** Bamidbar now participates in the JSON source set and in the SQLite node/edge model. The next Chumash content block is Devarim, while Exodus still has two missing files (`Vayakhel` and `Pekudei`).

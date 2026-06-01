@@ -5,6 +5,8 @@
 - [ ] Resume parasha JSON population, starting with `data/parashiot/exodus/10-vayakhel.json`
 - [ ] Create `data/parashiot/exodus/11-pekudei.json`
 - [ ] Review and refine Vayikra fact wording, refs, and visual-marker opportunities before broad UI exposure
+- [ ] Review and refine Bamidbar fact wording, refs, and visual-marker opportunities before broad UI exposure
+- [ ] Generate Devarim JSON set (`data/parashiot/deuteronomy/index.json` + individual JSONs)
 - [ ] Define first generated `data/views/structure.json` and `data/views/timeline.json` projection shapes
 - [ ] Create export script from SQLite back to runtime JSON
 - [ ] Make drawer-to-Pessukim navigation book-aware instead of Genesis-only
@@ -37,7 +39,6 @@
 ## Mid Term
 
 - [ ] Extend drawer support to Vayikra, Bamidbar, and Devarim once data folders exist
-- [ ] Create `data/parashiot/numbers/index.json` + individual JSONs
 - [ ] Create `data/parashiot/deuteronomy/index.json` + individual JSONs
 - [ ] Replace static Chumash event lists with parasha-driven book views
 - [ ] Build the Chumash visual atlas view with book lanes, event lanes, character lanes, and visual markers
