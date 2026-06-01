@@ -38,6 +38,11 @@
 - [x] `data/parashiot/deuteronomy/01-devarim.json` through `11-vezot-haberakhah.json` - all Devarim parashiot populated with 8 facts each
 - [x] Devarim `facts_count` values verified against actual JSON `facts[]` lengths
 - [x] SQLite import re-run after Devarim JSON generation
+- [x] `data/nach/joshua/index.json` - Yehoshua/Joshua metadata and 8 narrative-unit summaries
+- [x] `data/nach/joshua/01-entry-into-canaan.json` through `08-farewell-covenant-shechem.json` - Joshua first pass with 64 facts
+- [x] Joshua `facts_count` values verified against actual JSON `facts[]` lengths
+- [x] `scripts/import-json-to-sqlite.ps1` imports `data/nach/*` books, narrative units, and facts
+- [x] SQLite import re-run after Joshua JSON generation
 - [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`
@@ -79,12 +84,13 @@
 ## Next Actions (Short Horizon)
 
 1. Resume parasha JSON population, starting with remaining Exodus files (`10-vayakhel.json`, `11-pekudei.json`)
-2. Define generated `data/views/structure.json` and `data/views/timeline.json`
-3. Create export script from SQLite back to runtime JSON
-4. Expose Vayikra, Bamidbar, and Devarim chips in the drawer only after UI review
-5. Add selected-state breadcrumb across book, milestone, timeline group, parasha, and fact levels
-6. Validate milestone and timeline group `fact_ids` in a repeatable script/check
-7. Add selected/highlight state from drawer back to the Timeline tab
+2. Decide next Nach book after Joshua (`Shoftim/Judges` is the natural continuation)
+3. Define generated `data/views/structure.json` and `data/views/timeline.json`
+4. Create export script from SQLite back to runtime JSON
+5. Expose Vayikra, Bamidbar, Devarim, and Joshua only after UI review
+6. Add selected-state breadcrumb across book, milestone, timeline group, parasha/unit, and fact levels
+7. Validate milestone, timeline group, parasha, and Nach unit links in a repeatable script/check
+8. Add selected/highlight state from drawer back to the Timeline tab
 
 ---
 
@@ -93,7 +99,7 @@
 - Sefaria API access depends on a public external service.
 - Local development may still use `corsproxy.io`; production uses the same-origin Nginx proxy.
 - `data/parashiot/exodus/index.json` currently references 2 files that do not exist, so an Exodus drawer would 404 for Vayakhel and Pekudei until those files are created.
-- Chumash data is complete except for the two remaining Exodus files; the UI still needs book-aware drawer refinements before all books can be exposed safely.
+- Chumash data is complete except for the two remaining Exodus files; Nach data has a Joshua pilot. The UI still needs book/unit-aware drawer refinements before all books can be exposed safely.
 - Git commands are blocked in this workspace by Git's `dubious ownership` safety check until `safe.directory` is configured.
 
 ---

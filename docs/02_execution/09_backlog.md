@@ -8,6 +8,8 @@
 - [ ] Review and refine Vayikra fact wording and refs before exposing drawer for that book
 - [ ] Review and refine Bamidbar fact wording and refs before exposing drawer for that book
 - [ ] Review and refine Devarim fact wording and refs before exposing drawer for that book
+- [ ] Review and refine Joshua narrative-unit wording and refs before exposing Nach drill-down
+- [ ] Decide next Nach JSON set after Joshua, likely `data/nach/judges/`
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -19,6 +21,7 @@
 
 - [x] **drawer→Pessukim book-aware** — `drawerGoToPessukim(chapterNum, bookKey)` now resolves Sefaria book name from bookKey; button in `_drawerRenderParasha` passes `bookKey` captured at render time (2026-06-01)
 - [x] **Devarim JSON set** — `data/parashiot/deuteronomy/index.json` + all 11 individual parasha JSONs generated and synced to SQLite (2026-06-01)
+- [x] **Joshua/Nach pilot JSON set** — `data/nach/joshua/index.json` + 8 narrative-unit JSONs generated and synced to SQLite (2026-06-01)
 
 ## Short Term
 
@@ -44,6 +47,7 @@
 
 - [ ] Extend drawer support to Vayikra, Bamidbar, and Devarim once data folders exist
 - [ ] Replace static Chumash event lists with parasha-driven book views
+- [ ] Build a Nach atlas/drill view using `data/nach/*` narrative units
 - [ ] Build the Chumash visual atlas view with book lanes, event lanes, character lanes, and visual markers
 - [ ] Build a book/parasha overview view for Genesis using the complete Genesis data
 - [ ] Add search/filter across facts, characters, themes, and refs

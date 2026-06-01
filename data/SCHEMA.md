@@ -27,6 +27,11 @@ data/
       index.json
       01-devarim.json
       ...
+  nach/
+    joshua/
+      index.json                   ← Índice de unidades narrativas de Yehoshua/Josué
+      01-entry-into-canaan.json
+      ...
 ```
 
 ---
@@ -217,6 +222,42 @@ Quando o fato atravessa capítulos (ex: Gen 4:17 → Gen 6:8), use:
 3. Adicione os `facts` — um por tópico, com `ref_start`/`ref_end` precisos
 4. Atualize `data/parashiot/[livro]/index.json` com `facts_count` correto
 5. O drawer e o leitor de Pessukim usarão os dados automaticamente
+
+---
+
+## Schema de livros Nach (`data/nach/[livro]/`)
+
+Livros pós-Chumash não usam `parashiot[]`. Use `units[]` como blocos
+narrativos intermediários:
+
+```json
+{
+  "book": "Joshua",
+  "book_he": "יְהוֹשֻׁעַ",
+  "book_pt": "Yehoshua · Josué",
+  "corpus": "nach",
+  "division": "neviim-rishonim",
+  "total_chapters": 24,
+  "timeline": {
+    "anno_mundi_start": 2488,
+    "anno_mundi_end": 2516
+  },
+  "units": [
+    {
+      "id": "entry-into-canaan",
+      "index": 1,
+      "label": "Entrada em Canaã",
+      "sefaria_ref": "Joshua 1:1-5:15",
+      "data_file": "data/nach/joshua/01-entry-into-canaan.json",
+      "facts_count": 8
+    }
+  ]
+}
+```
+
+Cada arquivo de unidade segue o mesmo padrão de `facts[]` usado nas parashiot:
+`id`, `order`, `text`, `refs`, `ref_start`, `ref_end`, `chapter`,
+`verse_start`, `verse_end`, `sefaria_ref`, `tags`, `topic`.
 
 ---
 

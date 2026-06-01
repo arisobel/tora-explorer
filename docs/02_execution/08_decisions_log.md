@@ -209,3 +209,13 @@
 **Decision:** Add a complete first pass for `data/parashiot/deuteronomy/`, including the book `index.json` and all 11 parasha JSON files from Devarim through Vezot Haberakhah.
 
 **Impact:** The SQLite graph now contains all 54 Chumash parashiot. The only remaining missing parasha JSON files are Exodus `Vayakhel` and `Pekudei`, which are referenced by `data/parashiot/exodus/index.json` but not yet present on disk.
+
+---
+
+## 2026-06-01 — Joshua starts the Nach JSON model
+
+**Context:** The project needs to continue beyond the five books without forcing Nach into the parasha model.
+
+**Decision:** Add `data/nach/joshua/` with `index.json` plus 8 narrative-unit files. In SQLite, Nach books remain `book` nodes, narrative units are stored as `milestone` nodes, and unit facts are stored as `fact` nodes with Sefaria refs.
+
+**Impact:** The post-Chumash content model has a working pilot. `scripts/import-json-to-sqlite.ps1` now imports `data/nach/*`, and Joshua contributes 1 book, 8 narrative units, and 64 facts to the SQLite graph.

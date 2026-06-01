@@ -20,6 +20,17 @@ The 5 books of Moses. Divided into 54 **Parashiot** (weekly portions).
 - Bamidbar (Numbers): 10 parashiot — complete
 - Devarim (Deuteronomy): 11 parashiot — complete
 
+### Nach
+Post-Chumash biblical books use a different content unit from parasha. They are
+modeled as:
+
+```
+Nach Book → Narrative Unit → Fact → Pessukim
+```
+
+The first implemented Nach book is Yehoshua/Joshua:
+- Yehoshua (Joshua): 8 narrative units — complete first pass
+
 ### Parasha
 The atomic content unit. Each parasha has:
 - **Identity**: name (Hebrew + Portuguese), transliteration, aliyot count
@@ -92,6 +103,10 @@ Each milestone may include:
 Milestones should aggregate existing facts; they should not duplicate fact
 content.
 
+For Nach books, the same `milestone` concept is reused for narrative units.
+This avoids introducing a parallel table/type before the UI needs it and keeps
+cross-screen drill-down consistent.
+
 ### Timeline Group
 A subject-level drill-down inside a large historical phase. It is narrower than
 an era and broader than a fact.
@@ -148,6 +163,11 @@ Chumash
             ├── Haftarah
             └── Connections { prev, next, thematic_links[] }
 
+Nach
+  └── Book[] (Joshua pilot)
+       └── NarrativeUnit[] (stored as milestone nodes)
+            └── Fact[] (ordered narrative moments with Sefaria refs)
+
 Sefaria API (external)
   └── Text { he[], text[] } keyed by ref string
 ```
@@ -172,6 +192,8 @@ Sefaria API (external)
 | `data/parashiot/numbers/01-bamidbar.json` through `10-masei.json` | Full Bamidbar data; all `facts_count` values match actual `facts[]` length |
 | `data/parashiot/deuteronomy/index.json` | Light metadata for all 11 Devarim parashiot |
 | `data/parashiot/deuteronomy/01-devarim.json` through `11-vezot-haberakhah.json` | Full Devarim data; all `facts_count` values match actual `facts[]` length |
+| `data/nach/joshua/index.json` | Yehoshua/Joshua metadata and 8 narrative-unit summaries |
+| `data/nach/joshua/01-entry-into-canaan.json` through `08-farewell-covenant-shechem.json` | Full Joshua first-pass data; all `facts_count` values match actual `facts[]` length |
 | `data/milestones/chumash.json` | Chumash Atlas milestones across the 5 books |
 | `assets/` | Planned folder for visual icons/images referenced by JSON; not implemented yet |
 
@@ -187,7 +209,8 @@ Sefaria API (external)
 6. Visual assets are referenced by path from JSON; image binaries are never embedded in JSON
 7. Every visual marker with an `asset` must include a `caption` or equivalent accessible label
 8. Milestones aggregate parashiot/facts by ID; they must not become duplicate narrative text stores
-9. Timeline-specific JSON drill files are transitional; the intended source-of-truth is a horizontal node/edge data model that can export runtime JSON
+9. Nach books use `units[]`, not `parashiot[]`; each unit aggregates facts by stable local IDs
+10. Timeline-specific JSON drill files are transitional; the intended source-of-truth is a horizontal node/edge data model that can export runtime JSON
 
 ---
 

@@ -367,6 +367,69 @@ if (Test-Path $milestonesPath) {
   }
 }
 
+# Nach books, narrative units, facts
+$nachRoot = Join-Path $root "data/nach"
+if (Test-Path $nachRoot) {
+  foreach ($indexFile in Get-ChildItem $nachRoot -Recurse -Filter "index.json") {
+    $bookKey = Split-Path (Split-Path $indexFile.FullName -Parent) -Leaf
+    $idx = Get-Content $indexFile.FullName -Encoding UTF8 | ConvertFrom-Json
+    $bookId = Node-Id "book" "nach:$bookKey"
+    Add-Node $bookId "nach:$bookKey" "book" $idx.book $idx.book_he $idx.summary.short $null $null $null @{ corpus = $idx.corpus; division = $idx.division; book_pt = $idx.book_pt; total_chapters = $idx.total_chapters; units_count = @($idx.units).Count }
+    Add-TimeRange $bookId "anno_mundi" $idx.timeline.anno_mundi_start $idx.timeline.anno_mundi_end $idx.timeline.description
+    Add-Edge $nach $bookId "contains"
+    Add-Projection "structure" $bookId $nach "chip" $idx.total_chapters
+    Add-Projection "nach-atlas" $bookId $null "band" $idx.timeline.anno_mundi_start
+
+    foreach ($theme in @($idx.summary.themes)) {
+      $themeId = Add-Theme $theme
+      Add-Edge $themeId $bookId "tagged_with"
+    }
+    foreach ($character in @($idx.summary.characters)) {
+      $charId = Add-Character $character
+      Add-Edge $charId $bookId "appears_in"
+    }
+
+    foreach ($unit in @($idx.units)) {
+      $unitId = Node-Id "milestone" "nach:$bookKey`:$($unit.id)"
+      Add-Node $unitId "nach:$bookKey`:$($unit.id)" "milestone" $unit.label $null $unit.summary_short $null $unit.index $null @{ corpus = "nach"; division = $idx.division; book_key = $bookKey; label_pt = $unit.label_pt; data_file = $unit.data_file; facts_count = $unit.facts_count }
+      Add-Edge $bookId $unitId "aggregates" $unit.index
+      Add-TimeRange $unitId "anno_mundi" $unit.anno_mundi_start $unit.anno_mundi_end $unit.summary_short
+      Add-SourceRef $unitId $unit.sefaria_ref $unit.ref_start $unit.ref_end
+      Add-Projection "nach-atlas" $unitId $bookId "card" $unit.index
+
+      foreach ($character in @($unit.characters)) {
+        $charId = Add-Character $character
+        Add-Edge $charId $unitId "appears_in"
+      }
+
+      $dataFilePath = Join-Path $root $unit.data_file
+      if (Test-Path $dataFilePath) {
+        $full = Get-Content $dataFilePath -Encoding UTF8 | ConvertFrom-Json
+        foreach ($theme in @($full.summary.themes)) {
+          $themeId = Add-Theme $theme
+          Add-Edge $themeId $unitId "tagged_with"
+        }
+        foreach ($character in @($full.summary.characters_main + $full.summary.characters_secondary)) {
+          $charId = Add-Character $character
+          Add-Edge $charId $unitId "appears_in"
+        }
+        foreach ($f in @($full.facts)) {
+          $factId = Node-Id "fact" "nach:$bookKey`:$($f.id)"
+          $factLabel = if ($f.topic) { $f.topic } else { $f.id }
+          Add-Node $factId "nach:$bookKey`:$($f.id)" "fact" $factLabel $null $f.text $f.text_he $f.order $null @{ corpus = "nach"; division = $idx.division; book_key = $bookKey; local_id = $f.id; chapter = $f.chapter }
+          Add-Edge $unitId $factId "contains" $f.order
+          Add-SourceRef $factId $f.sefaria_ref $f.ref_start $f.ref_end
+          Add-Projection "nach-atlas" $factId $unitId "drawer_item" $f.order
+          foreach ($tag in @($f.tags)) {
+            $themeId = Add-Theme $tag
+            Add-Edge $themeId $factId "tagged_with"
+          }
+        }
+      }
+    }
+  }
+}
+
 # Transitional timeline groups
 $timelineGroupsPath = Join-Path $root "data/timeline_groups.json"
 if (Test-Path $timelineGroupsPath) {
