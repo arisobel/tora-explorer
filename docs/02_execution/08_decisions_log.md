@@ -219,3 +219,13 @@
 **Decision:** Add `data/nach/joshua/` with `index.json` plus 8 narrative-unit files. In SQLite, Nach books remain `book` nodes, narrative units are stored as `milestone` nodes, and unit facts are stored as `fact` nodes with Sefaria refs.
 
 **Impact:** The post-Chumash content model has a working pilot. `scripts/import-json-to-sqlite.ps1` now imports `data/nach/*`, and Joshua contributes 1 book, 8 narrative units, and 64 facts to the SQLite graph.
+
+---
+
+## 2026-06-01 — Judges extends the Nach JSON model
+
+**Context:** After Joshua, the natural continuation of Neviim Rishonim is Shoftim/Judges.
+
+**Decision:** Add `data/nach/judges/` with `index.json` plus 7 narrative-unit files covering the transition after Yehoshua, Devorah, Gidon, Avimelech/Yiftach, Shimshon, Michah/Dan, and Givah/Binyamin.
+
+**Impact:** The Nach model is no longer only a Joshua pilot. Judges contributes 1 book, 7 narrative units, and 56 facts to the SQLite graph using the same `book -> milestone -> fact` pattern.

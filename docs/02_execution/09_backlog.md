@@ -9,7 +9,8 @@
 - [ ] Review and refine Bamidbar fact wording and refs before exposing drawer for that book
 - [ ] Review and refine Devarim fact wording and refs before exposing drawer for that book
 - [ ] Review and refine Joshua narrative-unit wording and refs before exposing Nach drill-down
-- [ ] Decide next Nach JSON set after Joshua, likely `data/nach/judges/`
+- [ ] Review and refine Judges narrative-unit wording and refs before exposing Nach drill-down
+- [ ] Decide next Nach JSON set after Judges, likely `data/nach/i-samuel/`
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -22,6 +23,7 @@
 - [x] **drawer→Pessukim book-aware** — `drawerGoToPessukim(chapterNum, bookKey)` now resolves Sefaria book name from bookKey; button in `_drawerRenderParasha` passes `bookKey` captured at render time (2026-06-01)
 - [x] **Devarim JSON set** — `data/parashiot/deuteronomy/index.json` + all 11 individual parasha JSONs generated and synced to SQLite (2026-06-01)
 - [x] **Joshua/Nach pilot JSON set** — `data/nach/joshua/index.json` + 8 narrative-unit JSONs generated and synced to SQLite (2026-06-01)
+- [x] **Judges/Nach JSON set** — `data/nach/judges/index.json` + 7 narrative-unit JSONs generated and synced to SQLite (2026-06-01)
 
 ## Short Term
 

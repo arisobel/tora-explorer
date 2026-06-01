@@ -198,7 +198,7 @@ Response shape used:
 | Timeline → Parasha drawer cross-link | Timeline | Pilot for Genesis (creation, flood, avraham) |
 | Timeline phase drill-down groups | Timeline | Implemented via `data/timeline_groups.json` |
 | Chumash Atlas milestones | Chumash | Implemented via `data/milestones/chumash.json` |
-| Nach/Joshua data model | Data | Implemented as `data/nach/joshua/` with 8 narrative units |
+| Nach data model | Data | Implemented for `data/nach/joshua/` and `data/nach/judges/` |
 | SQLite authoring database | Authoring | Schema + import implemented; export script not yet written |
 | Data validation script | Data | Not implemented |
 | Visual markers for facts/parashiot | Data/UI | Planned |

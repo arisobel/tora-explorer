@@ -28,8 +28,9 @@ modeled as:
 Nach Book → Narrative Unit → Fact → Pessukim
 ```
 
-The first implemented Nach book is Yehoshua/Joshua:
+The first implemented Nach books are:
 - Yehoshua (Joshua): 8 narrative units — complete first pass
+- Shoftim (Judges): 7 narrative units — complete first pass
 
 ### Parasha
 The atomic content unit. Each parasha has:
@@ -164,7 +165,7 @@ Chumash
             └── Connections { prev, next, thematic_links[] }
 
 Nach
-  └── Book[] (Joshua pilot)
+  └── Book[] (Joshua, Judges)
        └── NarrativeUnit[] (stored as milestone nodes)
             └── Fact[] (ordered narrative moments with Sefaria refs)
 
@@ -194,6 +195,8 @@ Sefaria API (external)
 | `data/parashiot/deuteronomy/01-devarim.json` through `11-vezot-haberakhah.json` | Full Devarim data; all `facts_count` values match actual `facts[]` length |
 | `data/nach/joshua/index.json` | Yehoshua/Joshua metadata and 8 narrative-unit summaries |
 | `data/nach/joshua/01-entry-into-canaan.json` through `08-farewell-covenant-shechem.json` | Full Joshua first-pass data; all `facts_count` values match actual `facts[]` length |
+| `data/nach/judges/index.json` | Shoftim/Judges metadata and 7 narrative-unit summaries |
+| `data/nach/judges/01-transition-and-first-judges.json` through `07-gibeah-civil-war.json` | Full Judges first-pass data; all `facts_count` values match actual `facts[]` length |
 | `data/milestones/chumash.json` | Chumash Atlas milestones across the 5 books |
 | `assets/` | Planned folder for visual icons/images referenced by JSON; not implemented yet |
 
