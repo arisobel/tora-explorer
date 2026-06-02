@@ -12,7 +12,8 @@
 - [ ] Review and refine Judges narrative-unit wording and refs before exposing Nach drill-down
 - [ ] Review and refine Samuel narrative-unit wording and refs before exposing Nach drill-down
 - [ ] Review and refine Kings narrative-unit wording and refs before broader Nach drill-down
-- [ ] Decide next Nach JSON set after Kings, likely Neviim Acharonim pilot (`Yeshayahu` or `Yirmiyahu`)
+- [ ] Review and refine Isaiah prophetic-unit wording and refs before broader Nach drill-down
+- [ ] Decide next Nach JSON set after Isaiah, likely `Yirmiyahu`
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -30,6 +31,7 @@
 - [x] **Samuel/Nach JSON set** — `data/nach/samuel/index.json` + 8 narrative-unit JSONs generated and synced to SQLite; Shmuel I/II chip opens the drawer (2026-06-01)
 - [x] **Kings/Nach JSON set** — `data/nach/kings/index.json` + 8 narrative-unit JSONs generated and synced to SQLite; Malachim I/II chip opens the drawer and the First Temple timeline phase expands into Kings groups (2026-06-01)
 - [x] **Timeline Nach clickability** — Yehoshua, Shoftim, Shemuel, and Malachim are reachable from Timeline drill-down groups without replacing the current timeline structure (2026-06-01)
+- [x] **Isaiah/Nach JSON set** — `data/nach/isaiah/index.json` + 8 prophetic-unit JSONs generated and synced to SQLite; Yeshaya chip opens the drawer and First Temple timeline groups link into Isaiah (2026-06-01)
 
 ## Short Term
 
@@ -53,7 +55,7 @@
 
 ## Mid Term
 
-- [ ] Refine drawer support for Vayikra, Bamidbar, Devarim, Joshua, Judges, Samuel, and Kings after UI review
+- [ ] Refine drawer support for Vayikra, Bamidbar, Devarim, Joshua, Judges, Samuel, Kings, and Isaiah after UI review
 - [ ] Replace static Chumash event lists with parasha-driven book views
 - [ ] Build a Nach atlas/drill view using `data/nach/*` narrative units
 - [ ] Build the Chumash visual atlas view with book lanes, event lanes, character lanes, and visual markers

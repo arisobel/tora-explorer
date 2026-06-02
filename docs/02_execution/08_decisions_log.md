@@ -249,3 +249,13 @@
 **Decision:** Add `data/nach/kings/` as a combined Kings I/II dataset with `index.json` plus 8 narrative-unit files. Connect `Malachim I/II` in the Estrutura tab to the drawer and add `first-temple-kings` to `data/timeline_groups.json` so the First Temple timeline event expands into Kings groups.
 
 **Impact:** Kings contributes 1 book, 8 narrative units, and 64 facts to SQLite. The timeline now has a second organic drill-down pilot beyond Genesis. Yehoshua, Shoftim, and Shemuel are also reachable from the existing Moshe→Shlomo phase, but that broad phase still needs more precise period boundaries later.
+
+---
+
+## 2026-06-01 — Isaiah starts Neviim Acharonim in the same drill model
+
+**Context:** After Melachim I/II, Yeshaya is the natural first Neviim Acharonim pilot because it is historically anchored in the First Temple period and thematically bridges Assyria, Bavel, Tzion, judgment, and consolation.
+
+**Decision:** Add `data/nach/isaiah/` with `index.json` plus 8 prophetic-unit files. Keep the same runtime contract used by other Nach books (`units[]` plus fact files), and connect Yeshaya to both Estrutura and the `first-temple-kings` timeline phase.
+
+**Impact:** Isaiah contributes 1 book, 8 prophetic units, and 64 facts to SQLite. The Timeline now links First Temple history and prophetic interpretation without changing the current `index.html` timeline structure.

@@ -30,7 +30,7 @@
 
 ## BUG-03 — Timeline groups are still hand-authored runtime projections
 
-**Symptom:** `data/timeline_groups.json` now includes Chumash groups and a Kings/First Temple pilot, but it is still manually maintained.
+**Symptom:** `data/timeline_groups.json` now includes Chumash groups plus Kings/Isaiah First Temple pilots, but it is still manually maintained.
 
 **Root cause:** SQLite import exists, but the SQLite→JSON export pipeline is not implemented yet.
 
