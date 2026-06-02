@@ -1916,6 +1916,14 @@ const DrillDataSource = {
 /* ═══════ DRILL UI ═══════ */
 const drillState = { era: null, deck: [], idx: 0, revealed: false, ready: false };
 
+function drillShuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 async function initDrill() {
   if (drillState.ready) return;
   drillState.ready = true;
@@ -1932,7 +1940,7 @@ async function initDrill() {
         `<button class="drill-era-chip" onclick="drillSelectEra('${p.id}',this)">${p.label}</button>`
       ).join('');
 
-    drillState.deck = deck;
+    drillState.deck = drillShuffle(deck);
     drillState.idx = 0;
     drillRenderCard();
   } catch(e) {
@@ -1948,7 +1956,7 @@ async function drillSelectEra(era, btn) {
   drillState.idx = 0;
   drillState.revealed = false;
   document.getElementById('drill-card').innerHTML = '<div class="drill-loading">Filtrando…</div>';
-  drillState.deck = await DrillDataSource.getFactsByPeriod(era);
+  drillState.deck = drillShuffle(await DrillDataSource.getFactsByPeriod(era));
   drillRenderCard();
 }
 
