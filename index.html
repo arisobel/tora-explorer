@@ -1119,6 +1119,26 @@ nav {
     </div>
   </div>
 
+  <!-- DRILL DE FATOS -->
+  <div id="chumash-drill" class="drill-section">
+    <div class="drill-section-head">
+      <div class="atlas-title">Drill de Fatos · Revise por período</div>
+      <div id="drill-era-chips" class="drill-era-chips">
+        <span style="font-size:12px;color:var(--text3)">Carregando…</span>
+      </div>
+    </div>
+    <div class="drill-card-area">
+      <div class="drill-card" id="drill-card">
+        <div class="drill-loading">Carregando fatos…</div>
+      </div>
+    </div>
+    <div class="drill-controls">
+      <button class="drill-nav-btn" id="drill-prev" onclick="drillNav(-1)">← Anterior</button>
+      <span class="drill-counter" id="drill-counter">— / —</span>
+      <button class="drill-nav-btn" id="drill-next" onclick="drillNav(1)">Próximo →</button>
+    </div>
+  </div>
+
   <!-- GÊNESIS -->
   <div id="book-genesis" class="book-view active">
     <div class="book-header">
@@ -1499,6 +1519,81 @@ nav {
   padding: 6px 4px 6px 12px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
   color: var(--text3);
 }
+
+/* ═══ CHUMASH DRILL ═══ */
+.drill-section {
+  margin-bottom: 2rem;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.015);
+  border-radius: var(--r2);
+  padding: 1.25rem;
+}
+.drill-section-head {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 1rem;
+  margin-bottom: 1.25rem; flex-wrap: wrap;
+}
+.drill-era-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.drill-era-chip {
+  padding: 5px 13px; border-radius: 20px;
+  font-size: 12px; cursor: pointer; transition: all .2s;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text2);
+}
+.drill-era-chip:hover { border-color: var(--gold); color: var(--gold2); }
+.drill-era-chip.active { background: rgba(201,168,76,0.12); border-color: var(--gold); color: var(--gold2); font-weight: 500; }
+.drill-card-area { min-height: 140px; }
+.drill-card {
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  background: var(--surface);
+  padding: 1.25rem 1.5rem;
+}
+.drill-card-era {
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text3); margin-bottom: 0.5rem;
+}
+.drill-card-topic {
+  font-family: 'Crimson Pro', serif;
+  font-size: 22px; font-weight: 600; color: var(--gold2);
+  margin-bottom: 1rem; line-height: 1.3;
+}
+.drill-reveal-btn {
+  padding: 7px 20px; border-radius: 20px;
+  font-size: 13px; cursor: pointer; transition: all .2s;
+  background: rgba(201,168,76,0.1); border: 1px solid var(--gold);
+  color: var(--gold2);
+}
+.drill-reveal-btn:hover { background: rgba(201,168,76,0.22); }
+.drill-card-text {
+  color: var(--text2); font-size: 14px; line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+.drill-card-he {
+  font-size: 15px; color: var(--text3); direction: rtl; text-align: right;
+  margin-bottom: 0.75rem; font-family: 'Crimson Pro', serif;
+}
+.drill-card-meta {
+  display: flex; align-items: center; gap: 1rem;
+  font-size: 12px; color: var(--text3);
+}
+.drill-card-sefaria {
+  color: var(--blue); text-decoration: none;
+}
+.drill-card-sefaria:hover { text-decoration: underline; }
+.drill-controls {
+  display: flex; align-items: center; justify-content: center;
+  gap: 1.5rem; margin-top: 1rem;
+}
+.drill-nav-btn {
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; cursor: pointer; transition: all .2s;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text2);
+}
+.drill-nav-btn:hover { border-color: var(--gold); color: var(--gold2); }
+.drill-counter { font-size: 13px; color: var(--text3); min-width: 60px; text-align: center; }
+.drill-loading, .drill-empty { color: var(--text3); font-size: 13px; text-align: center; padding: 2rem 0; }
 </style>
 
 <script>
@@ -1507,6 +1602,7 @@ function showPage(id, btn) {
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   btn.classList.add('active');
+  if (id === 'chumash') initDrill();
 }
 
 function drillGo(pageId, bookKey = null) {
@@ -1516,6 +1612,8 @@ function drillGo(pageId, bookKey = null) {
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-' + pageId).classList.add('active');
   if (tab) tab.classList.add('active');
+
+  if (pageId === 'chumash') initDrill();
 
   if (pageId === 'chumash' && bookKey) {
     const btn = [...document.querySelectorAll('.book-btn')]
@@ -1742,6 +1840,170 @@ document.addEventListener('DOMContentLoaded', () => {
   pkUpdateChapters();
   renderChumashAtlas('genesis');
   renderTimelineDrilldowns();
+});
+
+/* ═══════════════════════════════════════════════════════════
+   DRILL DATA SOURCE
+   Abstraction layer for fact retrieval.
+   To migrate to SQLite: replace _load(), getPeriods(),
+   and getFactsByPeriod() — the UI code stays unchanged.
+   Contract: getFactsByPeriod(era|null) → Promise<EnrichedFact[]>
+             getPeriods()               → Promise<{id,label}[]>
+═══════════════════════════════════════════════════════════ */
+const DrillDataSource = {
+  _facts: null,
+
+  ERA_LABELS: {
+    'pre-diluvio':     'Pré-Dilúvio',
+    'pos-diluvio':     'Pós-Dilúvio',
+    'patriarcas':      'Patriarcas',
+    'yossef':          'Yossef',
+    'egito':           'Egito',
+    'saida-egito':     'Saída do Egito',
+    'jornada-deserto': 'Deserto',
+    'entrada-terra':   'Entrada na Terra',
+  },
+
+  CHUMASH_BOOKS: ['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy'],
+
+  async _load() {
+    if (this._facts) return this._facts;
+    const facts = [];
+
+    const indices = await Promise.all(
+      this.CHUMASH_BOOKS.map(async bk => {
+        try {
+          const mart = await loadParashaMart(bk);
+          const field = BOOK_META[bk]?.indexField || 'parashiot';
+          return { bk, parashiot: mart.index[field] || [] };
+        } catch { return { bk, parashiot: [] }; }
+      })
+    );
+
+    await Promise.all(
+      indices.flatMap(({ bk, parashiot }) =>
+        parashiot.filter(p => p.data_file).map(p =>
+          fetch(p.data_file)
+            .then(r => r.ok ? r.json() : null)
+            .then(data => {
+              for (const f of (data?.facts || [])) {
+                facts.push({ ...f, _era: p.era, _parasha: p.name, _parasha_id: p.id, _book: bk });
+              }
+            })
+            .catch(() => {})
+        )
+      )
+    );
+
+    this._facts = facts;
+    return facts;
+  },
+
+  async getPeriods() {
+    const facts = await this._load();
+    const found = new Set(facts.map(f => f._era).filter(Boolean));
+    return Object.entries(this.ERA_LABELS)
+      .filter(([id]) => found.has(id))
+      .map(([id, label]) => ({ id, label }));
+  },
+
+  async getFactsByPeriod(era) {
+    const facts = await this._load();
+    return era ? facts.filter(f => f._era === era) : [...facts];
+  },
+};
+
+/* ═══════ DRILL UI ═══════ */
+const drillState = { era: null, deck: [], idx: 0, revealed: false, ready: false };
+
+async function initDrill() {
+  if (drillState.ready) return;
+  drillState.ready = true;
+  try {
+    const [periods, deck] = await Promise.all([
+      DrillDataSource.getPeriods(),
+      DrillDataSource.getFactsByPeriod(null),
+    ]);
+
+    const chipsEl = document.getElementById('drill-era-chips');
+    chipsEl.innerHTML =
+      `<button class="drill-era-chip active" onclick="drillSelectEra(null,this)">Todos</button>` +
+      periods.map(p =>
+        `<button class="drill-era-chip" onclick="drillSelectEra('${p.id}',this)">${p.label}</button>`
+      ).join('');
+
+    drillState.deck = deck;
+    drillState.idx = 0;
+    drillRenderCard();
+  } catch(e) {
+    document.getElementById('drill-card').innerHTML =
+      `<div style="color:#e07060;font-size:13px;padding:1rem">Erro: ${e.message}</div>`;
+  }
+}
+
+async function drillSelectEra(era, btn) {
+  document.querySelectorAll('.drill-era-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  drillState.era = era;
+  drillState.idx = 0;
+  drillState.revealed = false;
+  document.getElementById('drill-card').innerHTML = '<div class="drill-loading">Filtrando…</div>';
+  drillState.deck = await DrillDataSource.getFactsByPeriod(era);
+  drillRenderCard();
+}
+
+function drillRenderCard() {
+  const { deck, idx, revealed } = drillState;
+  const card = document.getElementById('drill-card');
+  const counter = document.getElementById('drill-counter');
+
+  if (!deck.length) {
+    card.innerHTML = '<div class="drill-empty">Nenhum fato para este período.</div>';
+    counter.textContent = '— / —';
+    return;
+  }
+
+  const f = deck[idx];
+  const eraLabel = DrillDataSource.ERA_LABELS[f._era] || f._era || '';
+  const refText = (f.refs?.length ? f.refs : [f.sefaria_ref]).filter(Boolean).join(', ');
+  const sefariaHref = f.sefaria_ref
+    ? `https://www.sefaria.org/${encodeURIComponent(f.sefaria_ref)}?lang=bi`
+    : null;
+
+  card.innerHTML = `
+    <div class="drill-card-era">${eraLabel} · ${f._parasha || ''}</div>
+    <div class="drill-card-topic">${f.topic || ''}</div>
+    ${revealed ? `
+      <div class="drill-card-text">${f.text || ''}</div>
+      ${f.text_he ? `<div class="drill-card-he">${f.text_he}</div>` : ''}
+      <div class="drill-card-meta">
+        ${refText ? `<span>${refText}</span>` : ''}
+        ${sefariaHref ? `<a class="drill-card-sefaria" href="${sefariaHref}" target="_blank" rel="noopener">→ Sefaria</a>` : ''}
+      </div>` : `
+      <button class="drill-reveal-btn" onclick="drillReveal()">Revelar</button>`}`;
+
+  counter.textContent = `${idx + 1} / ${deck.length}`;
+}
+
+function drillReveal() {
+  drillState.revealed = true;
+  drillRenderCard();
+}
+
+function drillNav(dir) {
+  const { deck } = drillState;
+  if (!deck.length) return;
+  drillState.idx = (drillState.idx + dir + deck.length) % deck.length;
+  drillState.revealed = false;
+  drillRenderCard();
+}
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('page-chumash').classList.contains('active')) return;
+  if (['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) return;
+  if (e.key === 'ArrowRight') { e.preventDefault(); drillNav(1); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); drillNav(-1); }
+  else if ((e.key === ' ' || e.key === 'Enter') && !drillState.revealed) { e.preventDefault(); drillReveal(); }
 });
 
 </script>
