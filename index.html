@@ -2182,6 +2182,11 @@ async function openTimelineGroup(phaseId, groupId, ev = null) {
 
 async function loadParashaMart(bookKey) {
   if (_mart.parasha[bookKey]) return _mart.parasha[bookKey];
+  if (!BOOK_META[bookKey]) {
+    const empty = { bookKey, index: { parashiot: [] }, byId: {}, byCharacter: {} };
+    _mart.parasha[bookKey] = empty;
+    return empty;
+  }
   const idx = await _drawerFetchIndex(bookKey, { render: false });
   const byId = {};
   const byCharacter = {};

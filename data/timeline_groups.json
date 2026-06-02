@@ -229,7 +229,7 @@
           "milestone_id": "nach-yehoshua-entry-land",
           "primary_parasha_id": "entry-into-canaan",
           "parasha_ids": ["entry-into-canaan", "jericho-ai-ebal", "land-allotments-west", "farewell-covenant-shechem"],
-          "fact_ids": ["js001", "js006", "js007", "js008"],
+          "fact_ids": ["js001", "js004", "js006", "js008", "js009", "js011", "js016", "js035", "js036", "js061", "js063"],
           "themes": ["terra", "aliança", "liderança"]
         },
         {
