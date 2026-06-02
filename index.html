@@ -73,25 +73,6 @@ nav {
 .nav-tab.active { color: var(--gold2); border-bottom-color: var(--gold); }
 
 /* HERO */
-.hero {
-  text-align: center;
-  padding: 5rem 2rem 3.5rem;
-  background: linear-gradient(180deg, rgba(238,231,217,0.72), rgba(255,255,255,0));
-  border-bottom: 1px solid var(--border);
-}
-.hero-he {
-  font-family: 'Crimson Pro', serif;
-  font-size: 48px; font-weight: 300;
-  color: var(--gold3); letter-spacing: 0.15em;
-  margin-bottom: 0.5rem; opacity: 0.72;
-}
-.hero-title {
-  font-family: 'Crimson Pro', serif;
-  font-size: 52px; font-weight: 600;
-  color: var(--gold2); line-height: 1.1;
-  margin-bottom: 1rem;
-}
-.hero-sub { color: var(--text2); font-size: 16px; max-width: 560px; margin: 0 auto; }
 
 /* PAGES */
 .page { display: none; padding: 2.5rem 2rem; max-width: 1100px; margin: 0 auto; }
@@ -398,22 +379,26 @@ nav {
 }
 .tl-group-facts-panel {
   display: none;
-  margin-top: .65rem;
-  border-top: 1px solid var(--border);
+  margin-top: .75rem;
   padding-top: .65rem;
+  border-top: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: .4rem;
 }
-.tl-group-expanded .tl-group-facts-panel { display: block; }
+.tl-group-expanded .tl-group-facts-panel { display: flex; }
 .tl-group-facts-loading { font-size: 12px; color: var(--text3); padding: .4rem 0; }
 .tl-group-fact-item {
-  padding: .45rem 0;
-  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--blue);
+  border-radius: var(--r);
+  padding: .55rem .75rem .55rem .8rem;
+  margin-left: .3rem;
 }
-.tl-group-fact-item:last-of-type { border-bottom: none; }
 .tl-group-fact-meta {
   font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
-  color: var(--blue2); margin-bottom: 2px;
+  color: var(--blue2); margin-bottom: 3px;
 }
-.tl-group-fact-text { font-size: 12px; color: var(--text); line-height: 1.5; margin-bottom: 4px; }
+.tl-group-fact-text { font-size: 12px; color: var(--text); line-height: 1.5; margin-bottom: 5px; }
 .tl-group-fact-btns { display: flex; gap: 5px; flex-wrap: wrap; }
 .tl-group-drawer-btn {
   display: block; width: 100%; margin-top: .65rem;
@@ -638,7 +623,6 @@ nav {
   .events-chars-grid { grid-template-columns: 1fr; }
   .atlas-grid { grid-template-columns: 1fr; }
   .drill-path { grid-template-columns: 1fr; }
-  .hero-title { font-size: 36px; }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
 }
@@ -664,11 +648,6 @@ nav {
   </div>
 </nav>
 
-<div class="hero">
-  <div class="hero-he">תּוֹרָה שֶׁבִּכְתָב &nbsp;·&nbsp; תּוֹרָה שֶׁבְּעַל פֶּה</div>
-  <div class="hero-title">Torá Escrita &amp; Oral</div>
-  <div class="hero-sub">Explore a estrutura, linha do tempo e personagens da tradição judaica — da Criação até os Acharonim.</div>
-</div>
 
 <!-- ════════════════════════ PAGE 1: ESTRUTURA ════════════════════════ -->
 <div id="page-estrutura" class="page active">
@@ -752,7 +731,7 @@ nav {
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('judges')" style="font-size:11px;cursor:pointer">Shoftim ›<div class="tooltip">Juízes — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('samuel')" style="font-size:11px;cursor:pointer">Shmuel I/II ›<div class="tooltip">Samuel — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('kings')" style="font-size:11px;cursor:pointer">Malachim I/II ›<div class="tooltip">Reis — clique para explorar unidades</div></div>
-            <div class="chip chip-blue" style="font-size:11px">Yeshaya</div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('isaiah')" style="font-size:11px;cursor:pointer">Yeshaya ›<div class="tooltip">Isaías — clique para explorar unidades</div></div>
             <div class="chip chip-blue" style="font-size:11px">Yirmiya</div>
             <div class="chip chip-blue" style="font-size:11px">Yechezkel</div>
             <div class="chip chip-blue" style="font-size:11px">Trei Assar</div>
@@ -2002,6 +1981,7 @@ const BOOK_META = {
   judges:      { title: 'Shoftim · Unidades',    label: 'Shoftim',  path: 'data/nach/judges/index.json',           sefaria: 'Judges',      indexField: 'units'     },
   samuel:      { title: 'Shemuel · Unidades',    label: 'Shemuel',  path: 'data/nach/samuel/index.json',           sefaria: 'I Samuel',    indexField: 'units'     },
   kings:       { title: 'Melachim · Unidades',   label: 'Melachim', path: 'data/nach/kings/index.json',            sefaria: 'I Kings',     indexField: 'units'     },
+  isaiah:      { title: 'Yeshaya · Unidades',    label: 'Yeshaya',  path: 'data/nach/isaiah/index.json',           sefaria: 'Isaiah',      indexField: 'units'     },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
