@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Proverbs",
+    "book_he": "למואל ואשת חיל",
+    "book_sefaria": "Proverbs",
+    "collection": "Proverbs",
+    "unit_index": 6,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "lemuel-woman-valor",
+    "label": "Lemuel e a mulher de valor",
+    "label_pt": "Justiça real e poema final sobre força, sabedoria e temor de Deus",
+    "hebrew": "למואל ואשת חיל",
+    "transliteration": "Lemuel e a mulher de valor"
+  },
+  "range": {
+    "ref_start": "Proverbs 31:1",
+    "ref_end": "Proverbs 31:31",
+    "sefaria_ref": "Proverbs 31:1-31",
+    "chapters_covered": [
+      31
+    ],
+    "chapter_start": 31,
+    "chapter_end": 31,
+    "verse_start": 1,
+    "verse_end_chapter": 31,
+    "verse_end": 31
+  },
+  "timeline": {
+    "period_name": "Lemuel e a mulher de valor",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 3205,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "Mishlei encerra com ensino ao rei e um poema alfabético sobre a mulher de valor."
+  },
+  "summary": {
+    "short": "Mishlei encerra com ensino ao rei e um poema alfabético sobre a mulher de valor.",
+    "medium": "Mishlei encerra com ensino ao rei e um poema alfabético sobre a mulher de valor.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Rei Lemuel",
+      "Mãe de Lemuel",
+      "Mulher de valor"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Realeza",
+      "Justiça",
+      "Família",
+      "Temor de Deus"
+    ]
+  },
+  "facts": [
+    {
+      "id": "pr021",
+      "order": 1,
+      "text": "A mãe de Lemuel adverte o rei e o chama a defender pobres e vulneráveis.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 31:1-9"
+      ],
+      "ref_start": "Proverbs 31:1",
+      "ref_end": "Proverbs 31:9",
+      "chapter": 31,
+      "verse_start": 1,
+      "verse_end": 9,
+      "sefaria_ref": "Proverbs 31:1-9",
+      "tags": [
+        "rei",
+        "justiça",
+        "vulneráveis"
+      ],
+      "topic": "Conselho ao rei"
+    },
+    {
+      "id": "pr022",
+      "order": 2,
+      "text": "A mulher de valor trabalha, negocia e estende a mão ao necessitado.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 31:10-20"
+      ],
+      "ref_start": "Proverbs 31:10",
+      "ref_end": "Proverbs 31:20",
+      "chapter": 31,
+      "verse_start": 10,
+      "verse_end": 20,
+      "sefaria_ref": "Proverbs 31:10-20",
+      "tags": [
+        "trabalho",
+        "generosidade",
+        "força"
+      ],
+      "topic": "Trabalho e generosidade"
+    },
+    {
+      "id": "pr023",
+      "order": 3,
+      "text": "Sua casa é cuidada com diligência, sabedoria e ensino bondoso.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 31:21-27"
+      ],
+      "ref_start": "Proverbs 31:21",
+      "ref_end": "Proverbs 31:27",
+      "chapter": 31,
+      "verse_start": 21,
+      "verse_end": 27,
+      "sefaria_ref": "Proverbs 31:21-27",
+      "tags": [
+        "família",
+        "sabedoria",
+        "bondade"
+      ],
+      "topic": "Sabedoria da casa"
+    },
+    {
+      "id": "pr024",
+      "order": 4,
+      "text": "O poema conclui que o temor de Deus merece louvor acima do encanto passageiro.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 31:28-31"
+      ],
+      "ref_start": "Proverbs 31:28",
+      "ref_end": "Proverbs 31:31",
+      "chapter": 31,
+      "verse_start": 28,
+      "verse_end": 31,
+      "sefaria_ref": "Proverbs 31:28-31",
+      "tags": [
+        "temor-de-deus",
+        "louvor",
+        "valor"
+      ],
+      "topic": "Temor digno de louvor"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Proverbs",
+    "book_he": "חכמה",
+    "book_sefaria": "Proverbs",
+    "collection": "Proverbs",
+    "unit_index": 1,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "instructions-wisdom",
+    "label": "Instruções e Sabedoria",
+    "label_pt": "Chamados paternos, caminhos rivais e voz pública da sabedoria",
+    "hebrew": "חכמה",
+    "transliteration": "Instruções e Sabedoria"
+  },
+  "range": {
+    "ref_start": "Proverbs 1:1",
+    "ref_end": "Proverbs 9:18",
+    "sefaria_ref": "Proverbs 1:1-9:18",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_start": 1,
+    "chapter_end": 9,
+    "verse_start": 1,
+    "verse_end_chapter": 9,
+    "verse_end": 18
+  },
+  "timeline": {
+    "period_name": "Instruções e Sabedoria",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 2924,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "Os capítulos iniciais apresentam a sabedoria como caminho de vida diante de escolhas morais."
+  },
+  "summary": {
+    "short": "Os capítulos iniciais apresentam a sabedoria como caminho de vida diante de escolhas morais.",
+    "medium": "Os capítulos iniciais apresentam a sabedoria como caminho de vida diante de escolhas morais.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Shlomo",
+      "Pai",
+      "Filho",
+      "Sabedoria"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Temor de Deus",
+      "Disciplina",
+      "Caminho",
+      "Sabedoria"
+    ]
+  },
+  "facts": [
+    {
+      "id": "pr001",
+      "order": 1,
+      "text": "Mishlei apresenta seu propósito e declara o temor de Deus como princípio do conhecimento.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 1:1-7"
+      ],
+      "ref_start": "Proverbs 1:1",
+      "ref_end": "Proverbs 1:7",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 7,
+      "sefaria_ref": "Proverbs 1:1-7",
+      "tags": [
+        "temor-de-deus",
+        "conhecimento",
+        "propósito"
+      ],
+      "topic": "Princípio do conhecimento"
+    },
+    {
+      "id": "pr002",
+      "order": 2,
+      "text": "Confiança em Deus, disciplina e sabedoria são descritas como fontes de vida.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 3:1-18"
+      ],
+      "ref_start": "Proverbs 3:1",
+      "ref_end": "Proverbs 3:18",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 18,
+      "sefaria_ref": "Proverbs 3:1-18",
+      "tags": [
+        "confiança",
+        "disciplina",
+        "vida"
+      ],
+      "topic": "Árvore de vida"
+    },
+    {
+      "id": "pr003",
+      "order": 3,
+      "text": "O coração deve ser guardado porque dele procedem as fontes da vida.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 4:20-27"
+      ],
+      "ref_start": "Proverbs 4:20",
+      "ref_end": "Proverbs 4:27",
+      "chapter": 4,
+      "verse_start": 20,
+      "verse_end": 27,
+      "sefaria_ref": "Proverbs 4:20-27",
+      "tags": [
+        "coração",
+        "caminho",
+        "vigilância"
+      ],
+      "topic": "Guardar o coração"
+    },
+    {
+      "id": "pr004",
+      "order": 4,
+      "text": "A Sabedoria fala publicamente e se apresenta como anterior à ordem criada.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 8:1-36"
+      ],
+      "ref_start": "Proverbs 8:1",
+      "ref_end": "Proverbs 8:36",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 36,
+      "sefaria_ref": "Proverbs 8:1-36",
+      "tags": [
+        "sabedoria",
+        "criação",
+        "voz"
+      ],
+      "topic": "Voz da Sabedoria"
+    }
+  ]
+}

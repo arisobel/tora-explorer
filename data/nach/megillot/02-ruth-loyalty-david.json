@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Ruth",
+    "book_he": "רות",
+    "book_sefaria": "Ruth",
+    "collection": "Megillot",
+    "unit_index": 2,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "ruth-loyalty-david",
+    "label": "Rut · Lealdade e David",
+    "label_pt": "Fome, retorno, bondade de Boaz e genealogia davídica",
+    "hebrew": "רות",
+    "transliteration": "Rut · Lealdade e David"
+  },
+  "range": {
+    "ref_start": "Ruth 1:1",
+    "ref_end": "Ruth 4:22",
+    "sefaria_ref": "Ruth 1:1-4:22",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "chapter_start": 1,
+    "chapter_end": 4,
+    "verse_start": 1,
+    "verse_end_chapter": 4,
+    "verse_end": 22
+  },
+  "timeline": {
+    "period_name": "Rut · Lealdade e David",
+    "anno_mundi_start": 2516,
+    "anno_mundi_end": 2884,
+    "era": "nach",
+    "position_pct": 43,
+    "description": "Rut acompanha lealdade familiar, bondade social e a linhagem que conduz a David."
+  },
+  "summary": {
+    "short": "Rut acompanha lealdade familiar, bondade social e a linhagem que conduz a David.",
+    "medium": "Rut acompanha lealdade familiar, bondade social e a linhagem que conduz a David.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Rut",
+      "Naomi",
+      "Boaz",
+      "Oved",
+      "David"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Lealdade",
+      "Chesed",
+      "Colheita",
+      "Redenção",
+      "David"
+    ]
+  },
+  "facts": [
+    {
+      "id": "mg005",
+      "order": 1,
+      "text": "Após perdas em Moav, Rut se compromete com Naomi, seu povo e seu Deus.",
+      "text_he": null,
+      "refs": [
+        "Ruth 1:1-22"
+      ],
+      "ref_start": "Ruth 1:1",
+      "ref_end": "Ruth 1:22",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Ruth 1:1-22",
+      "tags": [
+        "rut",
+        "naomi",
+        "lealdade"
+      ],
+      "topic": "Retorno com Naomi"
+    },
+    {
+      "id": "mg006",
+      "order": 2,
+      "text": "Rut recolhe espigas no campo de Boaz e encontra proteção e generosidade.",
+      "text_he": null,
+      "refs": [
+        "Ruth 2:1-23"
+      ],
+      "ref_start": "Ruth 2:1",
+      "ref_end": "Ruth 2:23",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 23,
+      "sefaria_ref": "Ruth 2:1-23",
+      "tags": [
+        "boaz",
+        "colheita",
+        "chesed"
+      ],
+      "topic": "Campo de Boaz"
+    },
+    {
+      "id": "mg007",
+      "order": 3,
+      "text": "Na eira, Rut pede que Boaz exerça responsabilidade de resgate.",
+      "text_he": null,
+      "refs": [
+        "Ruth 3:1-18"
+      ],
+      "ref_start": "Ruth 3:1",
+      "ref_end": "Ruth 3:18",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 18,
+      "sefaria_ref": "Ruth 3:1-18",
+      "tags": [
+        "eira",
+        "resgate",
+        "responsabilidade"
+      ],
+      "topic": "Pedido de resgate"
+    },
+    {
+      "id": "mg008",
+      "order": 4,
+      "text": "Boaz conclui o resgate, Rut dá à luz Oved e a genealogia chega a David.",
+      "text_he": null,
+      "refs": [
+        "Ruth 4:1-22"
+      ],
+      "ref_start": "Ruth 4:1",
+      "ref_end": "Ruth 4:22",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Ruth 4:1-22",
+      "tags": [
+        "redenção",
+        "oved",
+        "david"
+      ],
+      "topic": "Redenção e linhagem"
+    }
+  ]
+}

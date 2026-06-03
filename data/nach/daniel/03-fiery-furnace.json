@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Daniel",
+    "book_he": "כבשן האש",
+    "book_sefaria": "Daniel",
+    "collection": "Daniel",
+    "unit_index": 3,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "fiery-furnace",
+    "label": "Fornalha ardente",
+    "label_pt": "Imagem de ouro, recusa de adoração e livramento",
+    "hebrew": "כבשן האש",
+    "transliteration": "Fornalha ardente"
+  },
+  "range": {
+    "ref_start": "Daniel 3:1",
+    "ref_end": "Daniel 3:30",
+    "sefaria_ref": "Daniel 3:1-30",
+    "chapters_covered": [
+      3
+    ],
+    "chapter_start": 3,
+    "chapter_end": 3,
+    "verse_start": 1,
+    "verse_end_chapter": 3,
+    "verse_end": 30
+  },
+  "timeline": {
+    "period_name": "Fornalha ardente",
+    "anno_mundi_start": 3342,
+    "anno_mundi_end": 3350,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "Os companheiros de Daniel recusam idolatria estatal e são preservados na fornalha."
+  },
+  "summary": {
+    "short": "Os companheiros de Daniel recusam idolatria estatal e são preservados na fornalha.",
+    "medium": "Os companheiros de Daniel recusam idolatria estatal e são preservados na fornalha.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Chananiah",
+      "Mishael",
+      "Azariah",
+      "Nevuchadnetzar"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Idolatria",
+      "Coragem",
+      "Livramento",
+      "Testemunho"
+    ]
+  },
+  "facts": [
+    {
+      "id": "dn009",
+      "order": 1,
+      "text": "Nevuchadnetzar ergue uma imagem de ouro e exige adoração pública.",
+      "text_he": null,
+      "refs": [
+        "Daniel 3:1-7"
+      ],
+      "ref_start": "Daniel 3:1",
+      "ref_end": "Daniel 3:7",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 7,
+      "sefaria_ref": "Daniel 3:1-7",
+      "tags": [
+        "imagem",
+        "idolatria",
+        "império"
+      ],
+      "topic": "Imagem de ouro"
+    },
+    {
+      "id": "dn010",
+      "order": 2,
+      "text": "Os três companheiros se recusam a adorar, confiando em Deus sem condicionar sua fidelidade ao livramento.",
+      "text_he": null,
+      "refs": [
+        "Daniel 3:8-18"
+      ],
+      "ref_start": "Daniel 3:8",
+      "ref_end": "Daniel 3:18",
+      "chapter": 3,
+      "verse_start": 8,
+      "verse_end": 18,
+      "sefaria_ref": "Daniel 3:8-18",
+      "tags": [
+        "coragem",
+        "fidelidade",
+        "confiança"
+      ],
+      "topic": "Recusa de adoração"
+    },
+    {
+      "id": "dn011",
+      "order": 3,
+      "text": "Eles são lançados na fornalha, mas uma quarta figura é vista com eles e o fogo não os destrói.",
+      "text_he": null,
+      "refs": [
+        "Daniel 3:19-27"
+      ],
+      "ref_start": "Daniel 3:19",
+      "ref_end": "Daniel 3:27",
+      "chapter": 3,
+      "verse_start": 19,
+      "verse_end": 27,
+      "sefaria_ref": "Daniel 3:19-27",
+      "tags": [
+        "fornalha",
+        "livramento",
+        "presença"
+      ],
+      "topic": "Livramento no fogo"
+    },
+    {
+      "id": "dn012",
+      "order": 4,
+      "text": "O rei reconhece sua fidelidade e proíbe insulto ao Deus que os salvou.",
+      "text_he": null,
+      "refs": [
+        "Daniel 3:28-30"
+      ],
+      "ref_start": "Daniel 3:28",
+      "ref_end": "Daniel 3:30",
+      "chapter": 3,
+      "verse_start": 28,
+      "verse_end": 30,
+      "sefaria_ref": "Daniel 3:28-30",
+      "tags": [
+        "testemunho",
+        "rei",
+        "salvação"
+      ],
+      "topic": "Reconhecimento do rei"
+    }
+  ]
+}

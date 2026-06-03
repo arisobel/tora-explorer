@@ -1,0 +1,146 @@
+{
+  "book": "Megillot",
+  "book_he": "חמש מגילות",
+  "book_pt": "Meguilot · Cinco Rolos",
+  "corpus": "nach",
+  "division": "ketuvim",
+  "total_chapters": 39,
+  "timeline": {
+    "anno_mundi_start": 2516,
+    "anno_mundi_end": 3409,
+    "description": "Cinco rolos lidos em momentos do calendário judaico, atravessando amor, lealdade, luto, sabedoria e livramento"
+  },
+  "summary": {
+    "short": "As Cinco Meguilot conectam experiências humanas e memória nacional ao calendário de Israel.",
+    "themes": [
+      "Amor",
+      "Lealdade",
+      "Luto",
+      "Sabedoria",
+      "Purim",
+      "Calendário"
+    ],
+    "characters": [
+      "Shlomo",
+      "Rut",
+      "Naomi",
+      "Kohelet",
+      "Ester",
+      "Mordechai"
+    ]
+  },
+  "units": [
+    {
+      "id": "song-of-songs-love",
+      "index": 1,
+      "label": "Shir HaShirim · Amor",
+      "label_pt": "Poema de desejo, busca, presença e amor forte",
+      "hebrew": "שיר השירים",
+      "ref_start": "Song of Songs 1:1",
+      "ref_end": "Song of Songs 8:14",
+      "sefaria_ref": "Song of Songs 1:1-8:14",
+      "chapter_start": 1,
+      "chapter_end": 8,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 2924,
+      "summary_short": "Shir HaShirim celebra desejo, busca e amor em poesia associada a Shlomo.",
+      "characters": [
+        "Amada",
+        "Amado",
+        "Filhas de Yerushalayim",
+        "Shlomo"
+      ],
+      "data_file": "data/nach/megillot/01-song-of-songs-love.json",
+      "facts_count": 4
+    },
+    {
+      "id": "ruth-loyalty-david",
+      "index": 2,
+      "label": "Rut · Lealdade e David",
+      "label_pt": "Fome, retorno, bondade de Boaz e genealogia davídica",
+      "hebrew": "רות",
+      "ref_start": "Ruth 1:1",
+      "ref_end": "Ruth 4:22",
+      "sefaria_ref": "Ruth 1:1-4:22",
+      "chapter_start": 1,
+      "chapter_end": 4,
+      "anno_mundi_start": 2516,
+      "anno_mundi_end": 2884,
+      "summary_short": "Rut acompanha lealdade familiar, bondade social e a linhagem que conduz a David.",
+      "characters": [
+        "Rut",
+        "Naomi",
+        "Boaz",
+        "Oved",
+        "David"
+      ],
+      "data_file": "data/nach/megillot/02-ruth-loyalty-david.json",
+      "facts_count": 4
+    },
+    {
+      "id": "lamentations-destruction-hope",
+      "index": 3,
+      "label": "Eichah · Destruição e esperança",
+      "label_pt": "Lamento por Yerushalayim, dor coletiva e pedido de retorno",
+      "hebrew": "איכה",
+      "ref_start": "Lamentations 1:1",
+      "ref_end": "Lamentations 5:22",
+      "sefaria_ref": "Lamentations 1:1-5:22",
+      "chapter_start": 1,
+      "chapter_end": 5,
+      "anno_mundi_start": 3339,
+      "anno_mundi_end": 3339,
+      "summary_short": "Eichah lamenta a queda de Yerushalayim e busca linguagem de memória, dor e esperança.",
+      "characters": [
+        "Yerushalayim",
+        "Tzion",
+        "Yehudah"
+      ],
+      "data_file": "data/nach/megillot/03-lamentations-destruction-hope.json",
+      "facts_count": 4
+    },
+    {
+      "id": "ecclesiastes-time-meaning",
+      "index": 4,
+      "label": "Kohelet · Tempo e sentido",
+      "label_pt": "Limites do esforço humano, dádivas da vida e temor de Deus",
+      "hebrew": "קהלת",
+      "ref_start": "Ecclesiastes 1:1",
+      "ref_end": "Ecclesiastes 12:14",
+      "sefaria_ref": "Ecclesiastes 1:1-12:14",
+      "chapter_start": 1,
+      "chapter_end": 12,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 2964,
+      "summary_short": "Kohelet examina trabalho, prazer, tempo e mortalidade, buscando sabedoria dentro dos limites humanos.",
+      "characters": [
+        "Kohelet"
+      ],
+      "data_file": "data/nach/megillot/04-ecclesiastes-time-meaning.json",
+      "facts_count": 4
+    },
+    {
+      "id": "esther-purim-deliverance",
+      "index": 5,
+      "label": "Ester · Purim e livramento",
+      "label_pt": "Palácio persa, decreto de Haman, coragem de Ester e reversão",
+      "hebrew": "אסתר",
+      "ref_start": "Esther 1:1",
+      "ref_end": "Esther 10:3",
+      "sefaria_ref": "Esther 1:1-10:3",
+      "chapter_start": 1,
+      "chapter_end": 10,
+      "anno_mundi_start": 3395,
+      "anno_mundi_end": 3405,
+      "summary_short": "Ester narra ameaça, coragem, reversão e memória comunitária no império persa.",
+      "characters": [
+        "Ester",
+        "Mordechai",
+        "Achashverosh",
+        "Haman"
+      ],
+      "data_file": "data/nach/megillot/05-esther-purim-deliverance.json",
+      "facts_count": 4
+    }
+  ]
+}

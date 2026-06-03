@@ -1,0 +1,171 @@
+{
+  "book": "Job",
+  "book_he": "איוב",
+  "book_pt": "Iyov · Jó",
+  "corpus": "nach",
+  "division": "ketuvim",
+  "total_chapters": 42,
+  "timeline": {
+    "anno_mundi_start": 1948,
+    "anno_mundi_end": 3409,
+    "description": "Drama sapiencial de época narrativa incerta sobre sofrimento, justiça, linguagem humana e encontro com Deus"
+  },
+  "summary": {
+    "short": "Iyov investiga o sofrimento do justo e os limites das explicações humanas diante da criação.",
+    "themes": [
+      "Sofrimento",
+      "Justiça",
+      "Sabedoria",
+      "Criação",
+      "Humildade"
+    ],
+    "characters": [
+      "Iyov",
+      "Elifaz",
+      "Bildad",
+      "Tzofar",
+      "Elihu"
+    ]
+  },
+  "units": [
+    {
+      "id": "prologue-testing",
+      "index": 1,
+      "label": "Prólogo e prova",
+      "label_pt": "Integridade de Iyov, perdas e chegada dos amigos",
+      "hebrew": "פתיחה",
+      "ref_start": "Job 1:1",
+      "ref_end": "Job 2:13",
+      "sefaria_ref": "Job 1:1-2:13",
+      "chapter_start": 1,
+      "chapter_end": 2,
+      "anno_mundi_start": 1948,
+      "anno_mundi_end": 3409,
+      "summary_short": "Iyov é apresentado como íntegro, sofre perdas severas e recebe amigos que se sentam em silêncio.",
+      "characters": [
+        "Iyov",
+        "Esposa de Iyov",
+        "Elifaz",
+        "Bildad",
+        "Tzofar"
+      ],
+      "data_file": "data/nach/job/01-prologue-testing.json",
+      "facts_count": 4
+    },
+    {
+      "id": "first-dialogue-cycle",
+      "index": 2,
+      "label": "Primeiro ciclo de diálogos",
+      "label_pt": "Lamento de Iyov e primeiras respostas dos amigos",
+      "hebrew": "מחזור ראשון",
+      "ref_start": "Job 3:1",
+      "ref_end": "Job 14:22",
+      "sefaria_ref": "Job 3:1-14:22",
+      "chapter_start": 3,
+      "chapter_end": 14,
+      "anno_mundi_start": 1948,
+      "anno_mundi_end": 3409,
+      "summary_short": "Iyov lamenta seu nascimento, e os amigos iniciam explicações baseadas em retribuição.",
+      "characters": [
+        "Iyov",
+        "Elifaz",
+        "Bildad",
+        "Tzofar"
+      ],
+      "data_file": "data/nach/job/02-first-dialogue-cycle.json",
+      "facts_count": 4
+    },
+    {
+      "id": "second-dialogue-cycle",
+      "index": 3,
+      "label": "Segundo ciclo de diálogos",
+      "label_pt": "Conflito crescente sobre destino do ímpio e experiência do justo",
+      "hebrew": "מחזור שני",
+      "ref_start": "Job 15:1",
+      "ref_end": "Job 21:34",
+      "sefaria_ref": "Job 15:1-21:34",
+      "chapter_start": 15,
+      "chapter_end": 21,
+      "anno_mundi_start": 1948,
+      "anno_mundi_end": 3409,
+      "summary_short": "Os amigos endurecem suas teses, enquanto Iyov insiste que a realidade desafia fórmulas simples.",
+      "characters": [
+        "Iyov",
+        "Elifaz",
+        "Bildad",
+        "Tzofar"
+      ],
+      "data_file": "data/nach/job/03-second-dialogue-cycle.json",
+      "facts_count": 4
+    },
+    {
+      "id": "third-cycle-job-closing",
+      "index": 4,
+      "label": "Terceiro ciclo e defesa final",
+      "label_pt": "Busca por Deus, poema da sabedoria e juramento de integridade",
+      "hebrew": "מחזור שלישי",
+      "ref_start": "Job 22:1",
+      "ref_end": "Job 31:40",
+      "sefaria_ref": "Job 22:1-31:40",
+      "chapter_start": 22,
+      "chapter_end": 31,
+      "anno_mundi_start": 1948,
+      "anno_mundi_end": 3409,
+      "summary_short": "O diálogo se esgota, e Iyov formula sua defesa final diante de Deus.",
+      "characters": [
+        "Iyov",
+        "Elifaz",
+        "Bildad"
+      ],
+      "data_file": "data/nach/job/04-third-cycle-job-closing.json",
+      "facts_count": 4
+    },
+    {
+      "id": "elihu-speeches",
+      "index": 5,
+      "label": "Discursos de Elihu",
+      "label_pt": "Nova voz sobre sofrimento, correção e grandeza divina",
+      "hebrew": "דברי אליהוא",
+      "ref_start": "Job 32:1",
+      "ref_end": "Job 37:24",
+      "sefaria_ref": "Job 32:1-37:24",
+      "chapter_start": 32,
+      "chapter_end": 37,
+      "anno_mundi_start": 1948,
+      "anno_mundi_end": 3409,
+      "summary_short": "Elihu intervém, critica Iyov e os amigos e apresenta sofrimento como possível correção.",
+      "characters": [
+        "Elihu",
+        "Iyov",
+        "Elifaz",
+        "Bildad",
+        "Tzofar"
+      ],
+      "data_file": "data/nach/job/05-elihu-speeches.json",
+      "facts_count": 4
+    },
+    {
+      "id": "divine-response-restoration",
+      "index": 6,
+      "label": "Resposta divina e restauração",
+      "label_pt": "Perguntas da criação, humildade de Iyov e desfecho",
+      "hebrew": "מענה ה׳",
+      "ref_start": "Job 38:1",
+      "ref_end": "Job 42:17",
+      "sefaria_ref": "Job 38:1-42:17",
+      "chapter_start": 38,
+      "chapter_end": 42,
+      "anno_mundi_start": 1948,
+      "anno_mundi_end": 3409,
+      "summary_short": "Deus responde a partir da tempestade, ampliando o horizonte de Iyov para a complexidade da criação.",
+      "characters": [
+        "Iyov",
+        "Elifaz",
+        "Bildad",
+        "Tzofar"
+      ],
+      "data_file": "data/nach/job/06-divine-response-restoration.json",
+      "facts_count": 4
+    }
+  ]
+}

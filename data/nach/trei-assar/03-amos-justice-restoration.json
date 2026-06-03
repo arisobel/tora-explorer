@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Amos",
+    "book_he": "עמוס",
+    "book_sefaria": "Amos",
+    "collection": "Trei Asar",
+    "unit_index": 3,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "amos-justice-restoration",
+    "label": "Amos · Justiça e restauração",
+    "label_pt": "Juízo sobre as nações, responsabilidade de Israel e justiça social",
+    "hebrew": "עמוס",
+    "transliteration": "Amos · Justiça e restauração"
+  },
+  "range": {
+    "ref_start": "Amos 1:1",
+    "ref_end": "Amos 9:15",
+    "sefaria_ref": "Amos 1:1-9:15",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_start": 1,
+    "chapter_end": 9,
+    "verse_start": 1,
+    "verse_end_chapter": 9,
+    "verse_end": 15
+  },
+  "timeline": {
+    "period_name": "Amos · Justiça e restauração",
+    "anno_mundi_start": 3140,
+    "anno_mundi_end": 3160,
+    "era": "nach",
+    "position_pct": 54,
+    "description": "Amos denuncia violência, luxo e culto sem justiça, mas encerra com esperança de restauração."
+  },
+  "summary": {
+    "short": "Amos denuncia violência, luxo e culto sem justiça, mas encerra com esperança de restauração.",
+    "medium": "Amos denuncia violência, luxo e culto sem justiça, mas encerra com esperança de restauração.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Amos",
+      "Israel",
+      "Yehudah",
+      "Amatziah"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Justiça",
+      "Responsabilidade",
+      "Culto",
+      "Restauração"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta009",
+      "order": 1,
+      "text": "Amos anuncia que as nações e os reinos de Israel e Yehudah respondem por violência e injustiça.",
+      "text_he": null,
+      "refs": [
+        "Amos 1:1-2:16"
+      ],
+      "ref_start": "Amos 1:1",
+      "ref_end": "Amos 2:16",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end_chapter": 2,
+      "verse_end": 16,
+      "sefaria_ref": "Amos 1:1-2:16",
+      "tags": [
+        "nações",
+        "juízo",
+        "violência"
+      ],
+      "topic": "Oráculos de juízo"
+    },
+    {
+      "id": "ta010",
+      "order": 2,
+      "text": "A eleição de Israel aumenta sua responsabilidade moral diante de Deus.",
+      "text_he": null,
+      "refs": [
+        "Amos 3:1-8"
+      ],
+      "ref_start": "Amos 3:1",
+      "ref_end": "Amos 3:8",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 8,
+      "sefaria_ref": "Amos 3:1-8",
+      "tags": [
+        "eleição",
+        "responsabilidade",
+        "profecia"
+      ],
+      "topic": "Responsabilidade de Israel"
+    },
+    {
+      "id": "ta011",
+      "order": 3,
+      "text": "Deus rejeita festividades sem justiça e pede que retidão corra como um rio.",
+      "text_he": null,
+      "refs": [
+        "Amos 5:21-24"
+      ],
+      "ref_start": "Amos 5:21",
+      "ref_end": "Amos 5:24",
+      "chapter": 5,
+      "verse_start": 21,
+      "verse_end": 24,
+      "sefaria_ref": "Amos 5:21-24",
+      "tags": [
+        "justiça",
+        "culto",
+        "retidão"
+      ],
+      "topic": "Justiça como rio"
+    },
+    {
+      "id": "ta012",
+      "order": 4,
+      "text": "O livro termina prometendo levantar a tenda caída de David e restaurar a terra.",
+      "text_he": null,
+      "refs": [
+        "Amos 9:11-15"
+      ],
+      "ref_start": "Amos 9:11",
+      "ref_end": "Amos 9:15",
+      "chapter": 9,
+      "verse_start": 11,
+      "verse_end": 15,
+      "sefaria_ref": "Amos 9:11-15",
+      "tags": [
+        "david",
+        "restauração",
+        "terra"
+      ],
+      "topic": "Tenda de David"
+    }
+  ]
+}

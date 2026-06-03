@@ -1,0 +1,155 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "I Chronicles",
+    "book_he": "יחס ישראל",
+    "book_sefaria": "I Chronicles",
+    "collection": "Chronicles",
+    "unit_index": 1,
+    "total_units_in_book": 8
+  },
+  "identity": {
+    "id": "genealogies-returned-community",
+    "label": "Genealogias e comunidade retornada",
+    "label_pt": "De Adam às tribos, levitas e habitantes de Yerushalayim",
+    "hebrew": "יחס ישראל",
+    "transliteration": "Genealogias e comunidade retornada"
+  },
+  "range": {
+    "ref_start": "I Chronicles 1:1",
+    "ref_end": "I Chronicles 9:44",
+    "sefaria_ref": "I Chronicles 1:1-9:44",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_start": 1,
+    "chapter_end": 9,
+    "verse_start": 1,
+    "verse_end_chapter": 9,
+    "verse_end": 44
+  },
+  "timeline": {
+    "period_name": "Genealogias e comunidade retornada",
+    "anno_mundi_start": 0,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 0,
+    "description": "As genealogias conectam a comunidade retornada à história ampla de Israel."
+  },
+  "summary": {
+    "short": "As genealogias conectam a comunidade retornada à história ampla de Israel.",
+    "medium": "As genealogias conectam a comunidade retornada à história ampla de Israel.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Adam",
+      "Avraham",
+      "Yaakov",
+      "Yehudah",
+      "Leviim"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Genealogia",
+      "Identidade",
+      "Tribos",
+      "Yerushalayim"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ch001",
+      "order": 1,
+      "text": "A genealogia começa em Adam e atravessa os primeiros ancestrais e povos.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 1:1-54"
+      ],
+      "ref_start": "I Chronicles 1:1",
+      "ref_end": "I Chronicles 1:54",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 54,
+      "sefaria_ref": "I Chronicles 1:1-54",
+      "tags": [
+        "adam",
+        "genealogia",
+        "nações"
+      ],
+      "topic": "De Adam às nações"
+    },
+    {
+      "id": "ch002",
+      "order": 2,
+      "text": "A linhagem de Yehudah recebe atenção especial e conduz à casa de David.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 2:1-4:23"
+      ],
+      "ref_start": "I Chronicles 2:1",
+      "ref_end": "I Chronicles 4:23",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end_chapter": 4,
+      "verse_end": 23,
+      "sefaria_ref": "I Chronicles 2:1-4:23",
+      "tags": [
+        "yehudah",
+        "david",
+        "linhagem"
+      ],
+      "topic": "Yehudah e David"
+    },
+    {
+      "id": "ch003",
+      "order": 3,
+      "text": "As tribos e famílias levíticas são registradas com suas funções e heranças.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 4:24-8:40"
+      ],
+      "ref_start": "I Chronicles 4:24",
+      "ref_end": "I Chronicles 8:40",
+      "chapter": 4,
+      "verse_start": 24,
+      "verse_end_chapter": 8,
+      "verse_end": 40,
+      "sefaria_ref": "I Chronicles 4:24-8:40",
+      "tags": [
+        "tribos",
+        "leviim",
+        "identidade"
+      ],
+      "topic": "Tribos de Israel"
+    },
+    {
+      "id": "ch004",
+      "order": 4,
+      "text": "Os habitantes de Yerushalayim após o retorno são ligados às funções do Templo.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 9:1-44"
+      ],
+      "ref_start": "I Chronicles 9:1",
+      "ref_end": "I Chronicles 9:44",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 44,
+      "sefaria_ref": "I Chronicles 9:1-44",
+      "tags": [
+        "yerushalayim",
+        "retorno",
+        "templo"
+      ],
+      "topic": "Comunidade retornada"
+    }
+  ]
+}

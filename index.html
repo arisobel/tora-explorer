@@ -734,19 +734,19 @@ nav {
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('isaiah')" style="font-size:11px;cursor:pointer">Yeshaya ›<div class="tooltip">Isaías — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('jeremiah')" style="font-size:11px;cursor:pointer">Yirmiya ›<div class="tooltip">Jeremias — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('ezekiel')" style="font-size:11px;cursor:pointer">Yechezkel ›<div class="tooltip">Ezequiel — clique para explorar unidades</div></div>
-            <div class="chip chip-blue" style="font-size:11px">Trei Assar</div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('trei-assar')" style="font-size:11px;cursor:pointer">Trei Assar ›<div class="tooltip">Doze Profetas — clique para explorar unidades</div></div>
           </div>
           <div class="book-chips" style="margin-top:8px">
             <div class="chip chip-blue" style="font-size:11px">Ketuvim · Escrituras</div>
           </div>
           <div class="book-chips" style="margin-top:5px">
-            <div class="chip chip-blue" style="font-size:11px">Tehilim</div>
-            <div class="chip chip-blue" style="font-size:11px">Mishlei</div>
-            <div class="chip chip-blue" style="font-size:11px">Iyov</div>
-            <div class="chip chip-blue" style="font-size:11px">Meguilot</div>
-            <div class="chip chip-blue" style="font-size:11px">Daniel</div>
-            <div class="chip chip-blue" style="font-size:11px">Ezra/Nechemia</div>
-            <div class="chip chip-blue" style="font-size:11px">Divrei Hayamim</div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('psalms')" style="font-size:11px;cursor:pointer">Tehilim ›<div class="tooltip">Salmos — clique para explorar unidades</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('proverbs')" style="font-size:11px;cursor:pointer">Mishlei ›<div class="tooltip">Provérbios — clique para explorar unidades</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('job')" style="font-size:11px;cursor:pointer">Iyov ›<div class="tooltip">Jó — clique para explorar unidades</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('megillot')" style="font-size:11px;cursor:pointer">Meguilot ›<div class="tooltip">Cinco Rolos — clique para explorar unidades</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('daniel')" style="font-size:11px;cursor:pointer">Daniel ›<div class="tooltip">Daniel — clique para explorar unidades</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('ezra-nehemiah')" style="font-size:11px;cursor:pointer">Ezra/Nechemia ›<div class="tooltip">Retorno e reconstrução — clique para explorar unidades</div></div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('chronicles')" style="font-size:11px;cursor:pointer">Divrei Hayamim ›<div class="tooltip">Crônicas — clique para explorar unidades</div></div>
           </div>
         </div>
       </div>
@@ -879,11 +879,11 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event">
+      <div class="tl-event" data-timeline-phase="second-temple-restoration" onclick="timelineTogglePhase('second-temple-restoration', this)">
         <div class="tl-period">3409 – 3830<br>420 anos</div>
         <div class="tl-dot-col"><div class="tl-dot dot-oral"></div><div class="tl-connector connector-oral" style="height:60px"></div></div>
         <div class="tl-content">
-          <div class="tl-era-tag tag-oral">Torá Oral · Mishna</div>
+          <div class="tl-era-tag" style="color:#4a8a6a">Transição · Nach e Torá Oral</div>
           <div class="tl-event-title">Segundo Templo — Chanuka</div>
           <div class="tl-event-gen">420 anos · Anshei Knesset Hagdolá, Zugot</div>
         </div>
@@ -1394,14 +1394,33 @@ nav {
           <option value="Isaiah" data-he="יְשַׁעְיָהוּ" data-chapters="66">Yeshaya · Isaías</option>
           <option value="Jeremiah" data-he="יִרְמְיָהוּ" data-chapters="52">Yirmiya · Jeremias</option>
           <option value="Ezekiel" data-he="יְחֶזְקֵאל" data-chapters="48">Yechezkel · Ezequiel</option>
+          <option value="Hosea" data-he="הוֹשֵׁעַ" data-chapters="14">Hoshea</option>
+          <option value="Joel" data-he="יוֹאֵל" data-chapters="4">Yoel</option>
+          <option value="Amos" data-he="עָמוֹס" data-chapters="9">Amos</option>
+          <option value="Obadiah" data-he="עֹבַדְיָה" data-chapters="1">Ovadiah</option>
+          <option value="Jonah" data-he="יוֹנָה" data-chapters="4">Yonah</option>
+          <option value="Micah" data-he="מִיכָה" data-chapters="7">Michah</option>
+          <option value="Nahum" data-he="נַחוּם" data-chapters="3">Nachum</option>
+          <option value="Habakkuk" data-he="חֲבַקּוּק" data-chapters="3">Chavakuk</option>
+          <option value="Zephaniah" data-he="צְפַנְיָה" data-chapters="3">Tzefaniah</option>
+          <option value="Haggai" data-he="חַגַּי" data-chapters="2">Chagai</option>
+          <option value="Zechariah" data-he="זְכַרְיָה" data-chapters="14">Zecharyah</option>
+          <option value="Malachi" data-he="מַלְאָכִי" data-chapters="3">Malachi</option>
         </optgroup>
         <optgroup label="Nach — נ״ך (Ketuvim)">
           <option value="Psalms" data-he="תְּהִלִּים" data-chapters="150">Tehilim · Salmos</option>
           <option value="Proverbs" data-he="מִשְׁלֵי" data-chapters="31">Mishlei · Provérbios</option>
           <option value="Job" data-he="אִיּוֹב" data-chapters="42">Iyov · Jó</option>
+          <option value="Song of Songs" data-he="שִׁיר הַשִּׁירִים" data-chapters="8">Shir HaShirim</option>
           <option value="Ruth" data-he="רוּת" data-chapters="4">Rut</option>
+          <option value="Lamentations" data-he="אֵיכָה" data-chapters="5">Eichah</option>
+          <option value="Ecclesiastes" data-he="קֹהֶלֶת" data-chapters="12">Kohelet</option>
           <option value="Esther" data-he="אֶסְתֵּר" data-chapters="10">Ester</option>
           <option value="Daniel" data-he="דָּנִיֵּאל" data-chapters="12">Daniel</option>
+          <option value="Ezra" data-he="עֶזְרָא" data-chapters="10">Ezra</option>
+          <option value="Nehemiah" data-he="נְחֶמְיָה" data-chapters="13">Nechemia</option>
+          <option value="I Chronicles" data-he="דִּבְרֵי הַיָּמִים א" data-chapters="29">Divrei Hayamim I</option>
+          <option value="II Chronicles" data-he="דִּבְרֵי הַיָּמִים ב" data-chapters="36">Divrei Hayamim II</option>
         </optgroup>
       </select>
     </div>
@@ -2254,6 +2273,14 @@ const BOOK_META = {
   isaiah:      { title: 'Yeshaya · Unidades',    label: 'Yeshaya',  path: 'data/nach/isaiah/index.json',           sefaria: 'Isaiah',      indexField: 'units'     },
   jeremiah:    { title: 'Yirmiyahu · Unidades',  label: 'Yirmiyahu', path: 'data/nach/jeremiah/index.json',        sefaria: 'Jeremiah',    indexField: 'units'     },
   ezekiel:     { title: 'Yechezkel · Unidades',  label: 'Yechezkel', path: 'data/nach/ezekiel/index.json',         sefaria: 'Ezekiel',     indexField: 'units'     },
+  'trei-assar': { title: 'Trei Assar · Unidades', label: 'Trei Assar', path: 'data/nach/trei-assar/index.json',    sefaria: 'Hosea',       indexField: 'units'     },
+  psalms:      { title: 'Tehilim · Unidades',    label: 'Tehilim',   path: 'data/nach/psalms/index.json',          sefaria: 'Psalms',      indexField: 'units'     },
+  proverbs:    { title: 'Mishlei · Unidades',    label: 'Mishlei',   path: 'data/nach/proverbs/index.json',        sefaria: 'Proverbs',    indexField: 'units'     },
+  job:         { title: 'Iyov · Unidades',       label: 'Iyov',      path: 'data/nach/job/index.json',             sefaria: 'Job',         indexField: 'units'     },
+  megillot:    { title: 'Meguilot · Unidades',   label: 'Meguilot',  path: 'data/nach/megillot/index.json',        sefaria: 'Song of Songs', indexField: 'units'     },
+  daniel:      { title: 'Daniel · Unidades',     label: 'Daniel',    path: 'data/nach/daniel/index.json',          sefaria: 'Daniel',      indexField: 'units'     },
+  'ezra-nehemiah': { title: 'Ezra/Nechemia · Unidades', label: 'Ezra/Nechemia', path: 'data/nach/ezra-nehemiah/index.json', sefaria: 'Ezra', indexField: 'units' },
+  chronicles:  { title: 'Divrei Hayamim · Unidades', label: 'Divrei Hayamim', path: 'data/nach/chronicles/index.json', sefaria: 'I Chronicles', indexField: 'units' },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
@@ -2397,7 +2424,7 @@ async function toggleGroupFacts(phaseId, groupId, cardEl, ev) {
     allFacts.sort((a, b) => factOrder.indexOf(a.id) - factOrder.indexOf(b.id));
 
     const factsHTML = allFacts.map(f => {
-      const chapMatch = (f.ref_start || '').match(/[A-Za-z]+\s+(\d+)/i);
+      const chapMatch = (f.ref_start || '').match(/^.+?\s+(\d+):/);
       const chapNum = chapMatch ? chapMatch[1] : null;
       const passRef = f.sefaria_ref || f.ref_start || null;
       const passBtn = passRef
@@ -2688,7 +2715,7 @@ function _drawerRenderParasha(data, context = null) {
 
   let factsHTML = '';
   for (const f of (facts || [])) {
-    const chapMatch = (f.ref_start || '').match(/[A-Za-z]+\s+(\d+)/i);
+    const chapMatch = (f.ref_start || '').match(/^.+?\s+(\d+):/);
     const chapNum   = chapMatch ? chapMatch[1] : null;
     const tagsHTML  = (f.tags || []).map(t => `<span class="fact-tag">${t}</span>`).join('');
     const passRef  = f.sefaria_ref || f.ref_start || null;

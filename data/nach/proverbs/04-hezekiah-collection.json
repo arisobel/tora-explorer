@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Proverbs",
+    "book_he": "אנשי חזקיה",
+    "book_sefaria": "Proverbs",
+    "collection": "Proverbs",
+    "unit_index": 4,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "hezekiah-collection",
+    "label": "Coleção de Chizkiyahu",
+    "label_pt": "Provérbios de Shlomo copiados pelos homens de Chizkiyahu",
+    "hebrew": "אנשי חזקיה",
+    "transliteration": "Coleção de Chizkiyahu"
+  },
+  "range": {
+    "ref_start": "Proverbs 25:1",
+    "ref_end": "Proverbs 29:27",
+    "sefaria_ref": "Proverbs 25:1-29:27",
+    "chapters_covered": [
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "chapter_start": 25,
+    "chapter_end": 29,
+    "verse_start": 1,
+    "verse_end_chapter": 29,
+    "verse_end": 27
+  },
+  "timeline": {
+    "period_name": "Coleção de Chizkiyahu",
+    "anno_mundi_start": 3190,
+    "anno_mundi_end": 3205,
+    "era": "nach",
+    "position_pct": 55,
+    "description": "A coleção preservada nos dias de Chizkiyahu trata de liderança, conflito, amizade e justiça."
+  },
+  "summary": {
+    "short": "A coleção preservada nos dias de Chizkiyahu trata de liderança, conflito, amizade e justiça.",
+    "medium": "A coleção preservada nos dias de Chizkiyahu trata de liderança, conflito, amizade e justiça.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Shlomo",
+      "Chizkiyahu",
+      "Reis"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Liderança",
+      "Conflito",
+      "Amizade",
+      "Justiça"
+    ]
+  },
+  "facts": [
+    {
+      "id": "pr013",
+      "order": 1,
+      "text": "A coleção é atribuída aos homens de Chizkiyahu e começa com imagens sobre reis e palavra adequada.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 25:1-15"
+      ],
+      "ref_start": "Proverbs 25:1",
+      "ref_end": "Proverbs 25:15",
+      "chapter": 25,
+      "verse_start": 1,
+      "verse_end": 15,
+      "sefaria_ref": "Proverbs 25:1-15",
+      "tags": [
+        "chizkiyahu",
+        "reis",
+        "palavra"
+      ],
+      "topic": "Coleção real"
+    },
+    {
+      "id": "pr014",
+      "order": 2,
+      "text": "Honra ao insensato e confiança imprudente são mostradas como perigosas.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 26:1-12"
+      ],
+      "ref_start": "Proverbs 26:1",
+      "ref_end": "Proverbs 26:12",
+      "chapter": 26,
+      "verse_start": 1,
+      "verse_end": 12,
+      "sefaria_ref": "Proverbs 26:1-12",
+      "tags": [
+        "insensato",
+        "honra",
+        "prudência"
+      ],
+      "topic": "Perigos da insensatez"
+    },
+    {
+      "id": "pr015",
+      "order": 3,
+      "text": "Planejamento, amizade e correção fiel são valorizados acima da bajulação.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 27:1-10"
+      ],
+      "ref_start": "Proverbs 27:1",
+      "ref_end": "Proverbs 27:10",
+      "chapter": 27,
+      "verse_start": 1,
+      "verse_end": 10,
+      "sefaria_ref": "Proverbs 27:1-10",
+      "tags": [
+        "amizade",
+        "correção",
+        "planejamento"
+      ],
+      "topic": "Amizade fiel"
+    },
+    {
+      "id": "pr016",
+      "order": 4,
+      "text": "Liderança sem justiça desordena o povo, enquanto visão e Torá orientam a comunidade.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 29:1-18"
+      ],
+      "ref_start": "Proverbs 29:1",
+      "ref_end": "Proverbs 29:18",
+      "chapter": 29,
+      "verse_start": 1,
+      "verse_end": 18,
+      "sefaria_ref": "Proverbs 29:1-18",
+      "tags": [
+        "liderança",
+        "justiça",
+        "torá"
+      ],
+      "topic": "Visão e justiça"
+    }
+  ]
+}

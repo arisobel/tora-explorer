@@ -15,7 +15,7 @@
 - [ ] Review and refine Isaiah prophetic-unit wording and refs before broader Nach drill-down
 - [ ] Review and refine Jeremiah prophetic-unit wording and refs before broader Nach drill-down
 - [ ] Review and refine Ezekiel prophetic-unit wording and refs before broader Nach drill-down
-- [ ] Decide next Nach JSON set after Ezekiel, likely `Trei Assar`
+- [ ] Review and refine the new Trei Assar and Ketuvim first-pass wording, refs, and timeline placement
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
 - [ ] Add repeatable validation for `data/milestones/chumash.json` and `data/timeline_groups.json` parasha/fact links
@@ -36,6 +36,7 @@
 - [x] **Isaiah/Nach JSON set** — `data/nach/isaiah/index.json` + 8 prophetic-unit JSONs generated and synced to SQLite; Yeshaya chip opens the drawer and First Temple timeline groups link into Isaiah (2026-06-01)
 - [x] **Jeremiah/Nach JSON set** — `data/nach/jeremiah/index.json` + 8 prophetic-unit JSONs generated and synced to SQLite; Yirmiya chip opens the drawer and First Temple/Exile timeline groups link into Jeremiah (2026-06-02)
 - [x] **Ezekiel/Nach JSON set** — `data/nach/ezekiel/index.json` + 8 prophetic-unit JSONs generated and synced to SQLite; Yechezkel chip opens the drawer and Exile timeline groups link into Ezekiel (2026-06-03)
+- [x] **Remaining Nach/Ketuvim JSON sets** — Trei Assar, Tehilim, Mishlei, Iyov, Meguilot, Daniel, Ezra/Nechemia, and Divrei Hayamim indexes + 54 unit JSONs generated and synced to SQLite; Estrutura and Timeline groups open each set (2026-06-03)
 
 ## Short Term
 

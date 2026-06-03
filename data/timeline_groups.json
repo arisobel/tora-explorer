@@ -349,6 +349,78 @@
           "parasha_ids": ["call-and-early-warnings", "temple-sermon-false-security", "yoke-false-prophets-restoration", "final-siege-and-fall"],
           "fact_ids": ["jr001", "jr003", "jr009", "jr010", "jr034", "jr035", "jr041", "jr047", "jr048"],
           "themes": ["templo", "bavel", "queda"]
+        },
+        {
+          "id": "trei-assar-justice-return",
+          "label": "Trei Assar: justiça e retorno",
+          "icon": "📣",
+          "summary": "Vozes proféticas confrontam culto vazio, injustiça, impérios e infidelidade da aliança.",
+          "book_key": "trei-assar",
+          "milestone_id": "trei-assar-justice-return",
+          "primary_parasha_id": "amos-justice-restoration",
+          "parasha_ids": ["hosea-covenant-return", "amos-justice-restoration", "micah-justice-hope", "habakkuk-faith-prayer"],
+          "fact_ids": ["ta003", "ta009", "ta011", "ta021", "ta024", "ta029", "ta031"],
+          "themes": ["profecia", "justiça", "teshuvah"]
+        },
+        {
+          "id": "tehilim-prayer-kingship",
+          "label": "Tehilim: oração e realeza",
+          "icon": "🎵",
+          "summary": "Louvor, confiança, crise nacional e esperança davídica formam a linguagem de oração de Israel.",
+          "book_key": "psalms",
+          "milestone_id": "tehilim-prayer-kingship",
+          "primary_parasha_id": "book-one-davidic-prayer",
+          "parasha_ids": ["book-one-davidic-prayer", "book-two-longing-kingship", "book-three-sanctuary-crisis"],
+          "fact_ids": ["ps001", "ps004", "ps008", "ps012"],
+          "themes": ["oração", "david", "confiança"]
+        },
+        {
+          "id": "mishlei-solomonic-wisdom",
+          "label": "Mishlei: sabedoria de vida",
+          "icon": "🪔",
+          "summary": "Sabedoria, fala, caráter e justiça são ensinados como caminhos práticos diante de Deus.",
+          "book_key": "proverbs",
+          "milestone_id": "mishlei-solomonic-wisdom",
+          "primary_parasha_id": "instructions-wisdom",
+          "parasha_ids": ["instructions-wisdom", "solomonic-proverbs", "hezekiah-collection"],
+          "fact_ids": ["pr001", "pr003", "pr004", "pr005", "pr016"],
+          "themes": ["sabedoria", "caráter", "justiça"]
+        },
+        {
+          "id": "iyov-suffering-wisdom",
+          "label": "Iyov: sofrimento e sabedoria",
+          "icon": "❓",
+          "summary": "O sofrimento do justo desafia explicações simples e conduz aos limites da linguagem humana.",
+          "book_key": "job",
+          "milestone_id": "iyov-suffering-wisdom",
+          "primary_parasha_id": "prologue-testing",
+          "parasha_ids": ["prologue-testing", "third-cycle-job-closing", "divine-response-restoration"],
+          "fact_ids": ["jb001", "jb004", "jb013", "jb015", "jb021", "jb024"],
+          "themes": ["sofrimento", "justiça", "sabedoria"]
+        },
+        {
+          "id": "megillot-land-monarchy-destruction",
+          "label": "Meguilot: terra, amor e lamento",
+          "icon": "📜",
+          "summary": "Rut, Shir HaShirim, Kohelet e Eichah conectam vida humana, realeza e memória da destruição.",
+          "book_key": "megillot",
+          "milestone_id": "megillot-land-monarchy-destruction",
+          "primary_parasha_id": "ruth-loyalty-david",
+          "parasha_ids": ["ruth-loyalty-david", "song-of-songs-love", "ecclesiastes-time-meaning", "lamentations-destruction-hope"],
+          "fact_ids": ["mg005", "mg008", "mg001", "mg013", "mg015"],
+          "themes": ["lealdade", "amor", "lamento"]
+        },
+        {
+          "id": "chronicles-david-temple-memory",
+          "label": "Divrei Hayamim: David e Templo",
+          "icon": "🏛️",
+          "summary": "A história é recontada com foco em linhagem, David, serviço levítico e preparação do Templo.",
+          "book_key": "chronicles",
+          "milestone_id": "chronicles-david-temple-memory",
+          "primary_parasha_id": "david-ark-jerusalem",
+          "parasha_ids": ["david-ark-jerusalem", "davidic-covenant-census", "temple-preparation-david-final", "solomon-temple"],
+          "fact_ids": ["ch005", "ch008", "ch013", "ch016", "ch017", "ch019"],
+          "themes": ["david", "templo", "memória"]
         }
       ]
     },
@@ -419,6 +491,88 @@
           "parasha_ids": ["shepherds-new-heart-dry-bones", "gog-restoration-temple", "temple-service-land-river"],
           "fact_ids": ["ez042", "ez045", "ez046", "ez047", "ez048", "ez055", "ez062", "ez064"],
           "themes": ["novo coração", "templo", "presença"]
+        },
+        {
+          "id": "daniel-exile-fidelity",
+          "label": "Daniel: fidelidade no exílio",
+          "icon": "🦁",
+          "summary": "Daniel e seus companheiros permanecem fiéis entre decretos, impérios e visões.",
+          "book_key": "daniel",
+          "milestone_id": "daniel-exile-fidelity",
+          "primary_parasha_id": "training-fidelity",
+          "parasha_ids": ["training-fidelity", "statue-kingdoms", "fiery-furnace", "lions-den", "visions-empires-end"],
+          "fact_ids": ["dn001", "dn002", "dn005", "dn009", "dn017", "dn021"],
+          "themes": ["exílio", "fidelidade", "impérios"]
+        },
+        {
+          "id": "megillot-lament-purim",
+          "label": "Meguilot: Eichah e Ester",
+          "icon": "🎭",
+          "summary": "Da memória da destruição ao livramento de Purim, os rolos dão linguagem ao exílio.",
+          "book_key": "megillot",
+          "milestone_id": "megillot-lament-purim",
+          "primary_parasha_id": "esther-purim-deliverance",
+          "parasha_ids": ["lamentations-destruction-hope", "esther-purim-deliverance"],
+          "fact_ids": ["mg009", "mg011", "mg013", "mg017", "mg019", "mg020"],
+          "themes": ["lamento", "purim", "livramento"]
+        },
+        {
+          "id": "chronicles-exile-return",
+          "label": "Divrei Hayamim: exílio e retorno",
+          "icon": "📚",
+          "summary": "A releitura da história encerra a queda de Yerushalayim com o chamado de Ciro para reconstruir.",
+          "book_key": "chronicles",
+          "milestone_id": "chronicles-exile-return",
+          "primary_parasha_id": "reforms-exile-cyrus",
+          "parasha_ids": ["reforms-exile-cyrus"],
+          "fact_ids": ["ch029", "ch031", "ch032"],
+          "themes": ["exílio", "ciro", "retorno"]
+        }
+      ]
+    },
+    {
+      "id": "second-temple-restoration",
+      "timeline_event_id": "second-temple",
+      "label": "Retorno e Segundo Templo",
+      "am_start": 3408,
+      "am_end": 3488,
+      "summary": "A comunidade retorna de Bavel, reconstrói o Templo e Yerushalayim e renova sua vida em torno da Torá.",
+      "groups": [
+        {
+          "id": "ezra-nehemiah-return-rebuild",
+          "label": "Ezra/Nechemia: retorno e reconstrução",
+          "icon": "🧱",
+          "summary": "Decreto de Ciro, Segundo Templo, muralhas de Yerushalayim e leitura pública da Torá.",
+          "book_key": "ezra-nehemiah",
+          "milestone_id": "ezra-nehemiah-return-rebuild",
+          "primary_parasha_id": "return-cyrus",
+          "parasha_ids": ["return-cyrus", "temple-rebuilt", "ezra-torah-reform", "nehemiah-walls", "torah-covenant-renewal"],
+          "fact_ids": ["en001", "en005", "en008", "en009", "en013", "en017", "en021"],
+          "themes": ["retorno", "segundo templo", "torá"]
+        },
+        {
+          "id": "trei-assar-second-temple",
+          "label": "Trei Assar: profetas do retorno",
+          "icon": "📣",
+          "summary": "Chagai, Zecharyah e Malachi orientam reconstrução, justiça, culto e fidelidade da aliança.",
+          "book_key": "trei-assar",
+          "milestone_id": "trei-assar-second-temple",
+          "primary_parasha_id": "haggai-temple-priority",
+          "parasha_ids": ["haggai-temple-priority", "zechariah-visions-restoration", "malachi-covenant-messenger"],
+          "fact_ids": ["ta037", "ta038", "ta041", "ta043", "ta045", "ta048"],
+          "themes": ["reconstrução", "aliança", "profecia"]
+        },
+        {
+          "id": "chronicles-retelling-return",
+          "label": "Divrei Hayamim: memória para o retorno",
+          "icon": "📚",
+          "summary": "Genealogias, Templo e decreto de Ciro conectam a comunidade retornada à história de Israel.",
+          "book_key": "chronicles",
+          "milestone_id": "chronicles-retelling-return",
+          "primary_parasha_id": "genealogies-returned-community",
+          "parasha_ids": ["genealogies-returned-community", "solomon-temple", "reforms-exile-cyrus"],
+          "fact_ids": ["ch001", "ch004", "ch017", "ch032"],
+          "themes": ["memória", "templo", "retorno"]
         }
       ]
     }

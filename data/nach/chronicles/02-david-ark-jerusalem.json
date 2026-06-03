@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "I Chronicles",
+    "book_he": "דוד והארון",
+    "book_sefaria": "I Chronicles",
+    "collection": "Chronicles",
+    "unit_index": 2,
+    "total_units_in_book": 8
+  },
+  "identity": {
+    "id": "david-ark-jerusalem",
+    "label": "David, arca e Yerushalayim",
+    "label_pt": "Fim de Shaul, consolidação de David e instalação da arca",
+    "hebrew": "דוד והארון",
+    "transliteration": "David, arca e Yerushalayim"
+  },
+  "range": {
+    "ref_start": "I Chronicles 10:1",
+    "ref_end": "I Chronicles 16:43",
+    "sefaria_ref": "I Chronicles 10:1-16:43",
+    "chapters_covered": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "chapter_start": 10,
+    "chapter_end": 16,
+    "verse_start": 1,
+    "verse_end_chapter": 16,
+    "verse_end": 43
+  },
+  "timeline": {
+    "period_name": "David, arca e Yerushalayim",
+    "anno_mundi_start": 2884,
+    "anno_mundi_end": 2892,
+    "era": "nach",
+    "position_pct": 50,
+    "description": "David consolida o reino, estabelece Yerushalayim e organiza a celebração da arca."
+  },
+  "summary": {
+    "short": "David consolida o reino, estabelece Yerushalayim e organiza a celebração da arca.",
+    "medium": "David consolida o reino, estabelece Yerushalayim e organiza a celebração da arca.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Shaul",
+      "David",
+      "Uzah",
+      "Leviim",
+      "Asaf"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "David",
+      "Yerushalayim",
+      "Arca",
+      "Louvor"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ch005",
+      "order": 1,
+      "text": "A morte de Shaul é interpretada como consequência de sua infidelidade.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 10:1-14"
+      ],
+      "ref_start": "I Chronicles 10:1",
+      "ref_end": "I Chronicles 10:14",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "I Chronicles 10:1-14",
+      "tags": [
+        "shaul",
+        "infidelidade",
+        "queda"
+      ],
+      "topic": "Fim de Shaul"
+    },
+    {
+      "id": "ch006",
+      "order": 2,
+      "text": "Israel reconhece David, e Yerushalayim se torna a cidade de David.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 11:1-12:41"
+      ],
+      "ref_start": "I Chronicles 11:1",
+      "ref_end": "I Chronicles 12:41",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end_chapter": 12,
+      "verse_end": 41,
+      "sefaria_ref": "I Chronicles 11:1-12:41",
+      "tags": [
+        "david",
+        "yerushalayim",
+        "reino"
+      ],
+      "topic": "David reconhecido"
+    },
+    {
+      "id": "ch007",
+      "order": 3,
+      "text": "Uma primeira tentativa de transportar a arca termina com a morte de Uzah.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 13:1-14"
+      ],
+      "ref_start": "I Chronicles 13:1",
+      "ref_end": "I Chronicles 13:14",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "I Chronicles 13:1-14",
+      "tags": [
+        "arca",
+        "uzah",
+        "santidade"
+      ],
+      "topic": "Primeira tentativa com a arca"
+    },
+    {
+      "id": "ch008",
+      "order": 4,
+      "text": "A arca é instalada com levitas, música, ofertas e um salmo de gratidão.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 14:1-16:43"
+      ],
+      "ref_start": "I Chronicles 14:1",
+      "ref_end": "I Chronicles 16:43",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end_chapter": 16,
+      "verse_end": 43,
+      "sefaria_ref": "I Chronicles 14:1-16:43",
+      "tags": [
+        "arca",
+        "leviim",
+        "louvor"
+      ],
+      "topic": "Arca em Yerushalayim"
+    }
+  ]
+}

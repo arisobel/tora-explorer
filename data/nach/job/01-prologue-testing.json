@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Job",
+    "book_he": "פתיחה",
+    "book_sefaria": "Job",
+    "collection": "Job",
+    "unit_index": 1,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "prologue-testing",
+    "label": "Prólogo e prova",
+    "label_pt": "Integridade de Iyov, perdas e chegada dos amigos",
+    "hebrew": "פתיחה",
+    "transliteration": "Prólogo e prova"
+  },
+  "range": {
+    "ref_start": "Job 1:1",
+    "ref_end": "Job 2:13",
+    "sefaria_ref": "Job 1:1-2:13",
+    "chapters_covered": [
+      1,
+      2
+    ],
+    "chapter_start": 1,
+    "chapter_end": 2,
+    "verse_start": 1,
+    "verse_end_chapter": 2,
+    "verse_end": 13
+  },
+  "timeline": {
+    "period_name": "Prólogo e prova",
+    "anno_mundi_start": 1948,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 34,
+    "description": "Iyov é apresentado como íntegro, sofre perdas severas e recebe amigos que se sentam em silêncio."
+  },
+  "summary": {
+    "short": "Iyov é apresentado como íntegro, sofre perdas severas e recebe amigos que se sentam em silêncio.",
+    "medium": "Iyov é apresentado como íntegro, sofre perdas severas e recebe amigos que se sentam em silêncio.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Iyov",
+      "Esposa de Iyov",
+      "Elifaz",
+      "Bildad",
+      "Tzofar"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Integridade",
+      "Perda",
+      "Prova",
+      "Silêncio"
+    ]
+  },
+  "facts": [
+    {
+      "id": "jb001",
+      "order": 1,
+      "text": "Iyov é apresentado como íntegro, temente a Deus e cuidadoso com sua família.",
+      "text_he": null,
+      "refs": [
+        "Job 1:1-5"
+      ],
+      "ref_start": "Job 1:1",
+      "ref_end": "Job 1:5",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 5,
+      "sefaria_ref": "Job 1:1-5",
+      "tags": [
+        "iyov",
+        "integridade",
+        "família"
+      ],
+      "topic": "Integridade de Iyov"
+    },
+    {
+      "id": "jb002",
+      "order": 2,
+      "text": "Em rápida sucessão, Iyov perde bens e filhos, mas não atribui culpa indevida a Deus.",
+      "text_he": null,
+      "refs": [
+        "Job 1:6-22"
+      ],
+      "ref_start": "Job 1:6",
+      "ref_end": "Job 1:22",
+      "chapter": 1,
+      "verse_start": 6,
+      "verse_end": 22,
+      "sefaria_ref": "Job 1:6-22",
+      "tags": [
+        "perda",
+        "prova",
+        "luto"
+      ],
+      "topic": "Primeira prova"
+    },
+    {
+      "id": "jb003",
+      "order": 3,
+      "text": "A segunda prova atinge seu corpo, e Iyov se recusa a abandonar sua integridade.",
+      "text_he": null,
+      "refs": [
+        "Job 2:1-10"
+      ],
+      "ref_start": "Job 2:1",
+      "ref_end": "Job 2:10",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 10,
+      "sefaria_ref": "Job 2:1-10",
+      "tags": [
+        "sofrimento",
+        "integridade",
+        "corpo"
+      ],
+      "topic": "Segunda prova"
+    },
+    {
+      "id": "jb004",
+      "order": 4,
+      "text": "Os amigos chegam, reconhecem a dor e permanecem sete dias em silêncio.",
+      "text_he": null,
+      "refs": [
+        "Job 2:11-13"
+      ],
+      "ref_start": "Job 2:11",
+      "ref_end": "Job 2:13",
+      "chapter": 2,
+      "verse_start": 11,
+      "verse_end": 13,
+      "sefaria_ref": "Job 2:11-13",
+      "tags": [
+        "amigos",
+        "silêncio",
+        "luto"
+      ],
+      "topic": "Silêncio dos amigos"
+    }
+  ]
+}

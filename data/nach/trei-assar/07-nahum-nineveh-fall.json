@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Nahum",
+    "book_he": "נחום",
+    "book_sefaria": "Nahum",
+    "collection": "Trei Asar",
+    "unit_index": 7,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "nahum-nineveh-fall",
+    "label": "Nachum · Queda de Nínive",
+    "label_pt": "Consolo para Yehudah e fim da violência assíria",
+    "hebrew": "נחום",
+    "transliteration": "Nachum · Queda de Nínive"
+  },
+  "range": {
+    "ref_start": "Nahum 1:1",
+    "ref_end": "Nahum 3:19",
+    "sefaria_ref": "Nahum 1:1-3:19",
+    "chapters_covered": [
+      1,
+      2,
+      3
+    ],
+    "chapter_start": 1,
+    "chapter_end": 3,
+    "verse_start": 1,
+    "verse_end_chapter": 3,
+    "verse_end": 19
+  },
+  "timeline": {
+    "period_name": "Nachum · Queda de Nínive",
+    "anno_mundi_start": 3220,
+    "anno_mundi_end": 3300,
+    "era": "nach",
+    "position_pct": 56,
+    "description": "Nachum anuncia o fim de Nínive e apresenta sua queda como alívio para povos oprimidos."
+  },
+  "summary": {
+    "short": "Nachum anuncia o fim de Nínive e apresenta sua queda como alívio para povos oprimidos.",
+    "medium": "Nachum anuncia o fim de Nínive e apresenta sua queda como alívio para povos oprimidos.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Nachum",
+      "Nínive",
+      "Yehudah"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Nínive",
+      "Assíria",
+      "Juízo",
+      "Consolo"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta025",
+      "order": 1,
+      "text": "O poema inicial apresenta poder, justiça e bondade divina em meio à tempestade.",
+      "text_he": null,
+      "refs": [
+        "Nahum 1:1-8"
+      ],
+      "ref_start": "Nahum 1:1",
+      "ref_end": "Nahum 1:8",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 8,
+      "sefaria_ref": "Nahum 1:1-8",
+      "tags": [
+        "poder",
+        "justiça",
+        "refúgio"
+      ],
+      "topic": "Poder e refúgio"
+    },
+    {
+      "id": "ta026",
+      "order": 2,
+      "text": "Yehudah recebe anúncio de alívio do jugo opressor.",
+      "text_he": null,
+      "refs": [
+        "Nahum 1:9-15"
+      ],
+      "ref_start": "Nahum 1:9",
+      "ref_end": "Nahum 1:15",
+      "chapter": 1,
+      "verse_start": 9,
+      "verse_end": 15,
+      "sefaria_ref": "Nahum 1:9-15",
+      "tags": [
+        "yehudah",
+        "alívio",
+        "boas-novas"
+      ],
+      "topic": "Consolo para Yehudah"
+    },
+    {
+      "id": "ta027",
+      "order": 3,
+      "text": "A queda de Nínive é descrita com imagens de cerco e colapso militar.",
+      "text_he": null,
+      "refs": [
+        "Nahum 2:1-14"
+      ],
+      "ref_start": "Nahum 2:1",
+      "ref_end": "Nahum 2:14",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "Nahum 2:1-14",
+      "tags": [
+        "nínive",
+        "cerco",
+        "queda"
+      ],
+      "topic": "Cerco de Nínive"
+    },
+    {
+      "id": "ta028",
+      "order": 4,
+      "text": "A cidade violenta é exposta, e o livro encerra lembrando quantos sofreram sob seu poder.",
+      "text_he": null,
+      "refs": [
+        "Nahum 3:1-19"
+      ],
+      "ref_start": "Nahum 3:1",
+      "ref_end": "Nahum 3:19",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 19,
+      "sefaria_ref": "Nahum 3:1-19",
+      "tags": [
+        "violência",
+        "assíria",
+        "juízo"
+      ],
+      "topic": "Fim da cidade violenta"
+    }
+  ]
+}

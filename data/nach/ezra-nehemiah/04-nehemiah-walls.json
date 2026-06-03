@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Nehemiah",
+    "book_he": "חומת ירושלים",
+    "book_sefaria": "Nehemiah",
+    "collection": "Ezra-Nehemiah",
+    "unit_index": 4,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "nehemiah-walls",
+    "label": "Nechemia e as muralhas",
+    "label_pt": "Chamado, oposição, justiça social e conclusão dos muros",
+    "hebrew": "חומת ירושלים",
+    "transliteration": "Nechemia e as muralhas"
+  },
+  "range": {
+    "ref_start": "Nehemiah 1:1",
+    "ref_end": "Nehemiah 6:19",
+    "sefaria_ref": "Nehemiah 1:1-6:19",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "chapter_start": 1,
+    "chapter_end": 6,
+    "verse_start": 1,
+    "verse_end_chapter": 6,
+    "verse_end": 19
+  },
+  "timeline": {
+    "period_name": "Nechemia e as muralhas",
+    "anno_mundi_start": 3445,
+    "anno_mundi_end": 3445,
+    "era": "nach",
+    "position_pct": 60,
+    "description": "Nechemia lidera a reconstrução das muralhas de Yerushalayim em meio a oposição externa e tensão interna."
+  },
+  "summary": {
+    "short": "Nechemia lidera a reconstrução das muralhas de Yerushalayim em meio a oposição externa e tensão interna.",
+    "medium": "Nechemia lidera a reconstrução das muralhas de Yerushalayim em meio a oposição externa e tensão interna.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Nechemia",
+      "Artachshasta",
+      "Sanbalat",
+      "Toviah"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Yerushalayim",
+      "Muralhas",
+      "Liderança",
+      "Justiça"
+    ]
+  },
+  "facts": [
+    {
+      "id": "en013",
+      "order": 1,
+      "text": "Nechemia recebe notícias sobre Yerushalayim, jejua e ora antes de agir.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 1:1-11"
+      ],
+      "ref_start": "Nehemiah 1:1",
+      "ref_end": "Nehemiah 1:11",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 11,
+      "sefaria_ref": "Nehemiah 1:1-11",
+      "tags": [
+        "nechemia",
+        "oração",
+        "yerushalayim"
+      ],
+      "topic": "Oração de Nechemia"
+    },
+    {
+      "id": "en014",
+      "order": 2,
+      "text": "Com autorização real, Nechemia inspeciona os muros e convoca o povo à reconstrução.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 2:1-20"
+      ],
+      "ref_start": "Nehemiah 2:1",
+      "ref_end": "Nehemiah 2:20",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 20,
+      "sefaria_ref": "Nehemiah 2:1-20",
+      "tags": [
+        "muralhas",
+        "liderança",
+        "reconstrução"
+      ],
+      "topic": "Inspeção e chamado"
+    },
+    {
+      "id": "en015",
+      "order": 3,
+      "text": "A oposição cresce, e os construtores trabalham com vigilância e organização.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 4:1-23"
+      ],
+      "ref_start": "Nehemiah 4:1",
+      "ref_end": "Nehemiah 4:23",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 23,
+      "sefaria_ref": "Nehemiah 4:1-23",
+      "tags": [
+        "oposição",
+        "vigilância",
+        "trabalho"
+      ],
+      "topic": "Construção sob oposição"
+    },
+    {
+      "id": "en016",
+      "order": 4,
+      "text": "Apesar de ameaças e distrações, a muralha é concluída em cinquenta e dois dias.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 6:1-19"
+      ],
+      "ref_start": "Nehemiah 6:1",
+      "ref_end": "Nehemiah 6:19",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 19,
+      "sefaria_ref": "Nehemiah 6:1-19",
+      "tags": [
+        "conclusão",
+        "muralha",
+        "perseverança"
+      ],
+      "topic": "Muralha concluída"
+    }
+  ]
+}

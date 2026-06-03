@@ -1,0 +1,164 @@
+{
+  "book": "Proverbs",
+  "book_he": "משלי",
+  "book_pt": "Mishlei · Provérbios",
+  "corpus": "nach",
+  "division": "ketuvim",
+  "total_chapters": 31,
+  "timeline": {
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 3205,
+    "description": "Coleções de sabedoria associadas a Shlomo e preservadas para formar caráter, discernimento e justiça"
+  },
+  "summary": {
+    "short": "Mishlei ensina sabedoria prática por meio de instruções, provérbios, advertências e poemas.",
+    "themes": [
+      "Sabedoria",
+      "Temor de Deus",
+      "Justiça",
+      "Fala",
+      "Disciplina",
+      "Família"
+    ],
+    "characters": [
+      "Shlomo",
+      "Pai",
+      "Filho",
+      "Sabedoria",
+      "Agur",
+      "Rei Lemuel"
+    ]
+  },
+  "units": [
+    {
+      "id": "instructions-wisdom",
+      "index": 1,
+      "label": "Instruções e Sabedoria",
+      "label_pt": "Chamados paternos, caminhos rivais e voz pública da sabedoria",
+      "hebrew": "חכמה",
+      "ref_start": "Proverbs 1:1",
+      "ref_end": "Proverbs 9:18",
+      "sefaria_ref": "Proverbs 1:1-9:18",
+      "chapter_start": 1,
+      "chapter_end": 9,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 2924,
+      "summary_short": "Os capítulos iniciais apresentam a sabedoria como caminho de vida diante de escolhas morais.",
+      "characters": [
+        "Shlomo",
+        "Pai",
+        "Filho",
+        "Sabedoria"
+      ],
+      "data_file": "data/nach/proverbs/01-instructions-wisdom.json",
+      "facts_count": 4
+    },
+    {
+      "id": "solomonic-proverbs",
+      "index": 2,
+      "label": "Provérbios de Shlomo",
+      "label_pt": "Contrastes entre justo e ímpio na vida cotidiana",
+      "hebrew": "משלי שלמה",
+      "ref_start": "Proverbs 10:1",
+      "ref_end": "Proverbs 22:16",
+      "sefaria_ref": "Proverbs 10:1-22:16",
+      "chapter_start": 10,
+      "chapter_end": 22,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 2924,
+      "summary_short": "Provérbios curtos contrastam fala, trabalho, riqueza, justiça e relações humanas.",
+      "characters": [
+        "Shlomo",
+        "Justo",
+        "Ímpio"
+      ],
+      "data_file": "data/nach/proverbs/02-solomonic-proverbs.json",
+      "facts_count": 4
+    },
+    {
+      "id": "sayings-of-wise",
+      "index": 3,
+      "label": "Ditos dos sábios",
+      "label_pt": "Conselhos sobre prudência, disciplina e responsabilidade",
+      "hebrew": "דברי חכמים",
+      "ref_start": "Proverbs 22:17",
+      "ref_end": "Proverbs 24:34",
+      "sefaria_ref": "Proverbs 22:17-24:34",
+      "chapter_start": 22,
+      "chapter_end": 24,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 3205,
+      "summary_short": "Ditos dos sábios orientam atenção, autocontrole, trabalho e responsabilidade social.",
+      "characters": [
+        "Sábios",
+        "Discípulo"
+      ],
+      "data_file": "data/nach/proverbs/03-sayings-of-wise.json",
+      "facts_count": 4
+    },
+    {
+      "id": "hezekiah-collection",
+      "index": 4,
+      "label": "Coleção de Chizkiyahu",
+      "label_pt": "Provérbios de Shlomo copiados pelos homens de Chizkiyahu",
+      "hebrew": "אנשי חזקיה",
+      "ref_start": "Proverbs 25:1",
+      "ref_end": "Proverbs 29:27",
+      "sefaria_ref": "Proverbs 25:1-29:27",
+      "chapter_start": 25,
+      "chapter_end": 29,
+      "anno_mundi_start": 3190,
+      "anno_mundi_end": 3205,
+      "summary_short": "A coleção preservada nos dias de Chizkiyahu trata de liderança, conflito, amizade e justiça.",
+      "characters": [
+        "Shlomo",
+        "Chizkiyahu",
+        "Reis"
+      ],
+      "data_file": "data/nach/proverbs/04-hezekiah-collection.json",
+      "facts_count": 4
+    },
+    {
+      "id": "agur-sayings",
+      "index": 5,
+      "label": "Palavras de Agur",
+      "label_pt": "Humildade, suficiência e observações da criação",
+      "hebrew": "דברי אגור",
+      "ref_start": "Proverbs 30:1",
+      "ref_end": "Proverbs 30:33",
+      "sefaria_ref": "Proverbs 30:1-33",
+      "chapter_start": 30,
+      "chapter_end": 30,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 3205,
+      "summary_short": "Agur reconhece limites humanos, pede suficiência e aprende por observação do mundo.",
+      "characters": [
+        "Agur"
+      ],
+      "data_file": "data/nach/proverbs/05-agur-sayings.json",
+      "facts_count": 4
+    },
+    {
+      "id": "lemuel-woman-valor",
+      "index": 6,
+      "label": "Lemuel e a mulher de valor",
+      "label_pt": "Justiça real e poema final sobre força, sabedoria e temor de Deus",
+      "hebrew": "למואל ואשת חיל",
+      "ref_start": "Proverbs 31:1",
+      "ref_end": "Proverbs 31:31",
+      "sefaria_ref": "Proverbs 31:1-31",
+      "chapter_start": 31,
+      "chapter_end": 31,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 3205,
+      "summary_short": "Mishlei encerra com ensino ao rei e um poema alfabético sobre a mulher de valor.",
+      "characters": [
+        "Rei Lemuel",
+        "Mãe de Lemuel",
+        "Mulher de valor"
+      ],
+      "data_file": "data/nach/proverbs/06-lemuel-woman-valor.json",
+      "facts_count": 4
+    }
+  ]
+}

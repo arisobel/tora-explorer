@@ -1,0 +1,170 @@
+{
+  "book": "Ezra-Nehemiah",
+  "book_he": "עזרא ונחמיה",
+  "book_pt": "Ezra/Nechemia",
+  "corpus": "nach",
+  "division": "ketuvim",
+  "total_chapters": 23,
+  "timeline": {
+    "anno_mundi_start": 3408,
+    "anno_mundi_end": 3448,
+    "description": "Retorno de Bavel, reconstrução do Templo e de Yerushalayim, leitura da Torá e reorganização comunitária"
+  },
+  "summary": {
+    "short": "Ezra e Nechemia narram o retorno, a reconstrução e a renovação da comunidade em Yehudah.",
+    "themes": [
+      "Retorno",
+      "Segundo Templo",
+      "Yerushalayim",
+      "Torá",
+      "Aliança"
+    ],
+    "characters": [
+      "Ciro",
+      "Zerubavel",
+      "Yehoshua Kohen Gadol",
+      "Ezra",
+      "Nechemia"
+    ]
+  },
+  "units": [
+    {
+      "id": "return-cyrus",
+      "index": 1,
+      "label": "Retorno sob Ciro",
+      "label_pt": "Decreto persa, vasos do Templo e lista dos retornados",
+      "hebrew": "שיבת ציון",
+      "ref_start": "Ezra 1:1",
+      "ref_end": "Ezra 2:70",
+      "sefaria_ref": "Ezra 1:1-2:70",
+      "chapter_start": 1,
+      "chapter_end": 2,
+      "anno_mundi_start": 3408,
+      "anno_mundi_end": 3409,
+      "summary_short": "Ciro autoriza o retorno e a reconstrução, e a comunidade retornada é registrada.",
+      "characters": [
+        "Ciro",
+        "Sheshbatzar",
+        "Zerubavel",
+        "Yehoshua Kohen Gadol"
+      ],
+      "data_file": "data/nach/ezra-nehemiah/01-return-cyrus.json",
+      "facts_count": 4
+    },
+    {
+      "id": "temple-rebuilt",
+      "index": 2,
+      "label": "Segundo Templo reconstruído",
+      "label_pt": "Altar, fundação, oposição e dedicação",
+      "hebrew": "בניין הבית",
+      "ref_start": "Ezra 3:1",
+      "ref_end": "Ezra 6:22",
+      "sefaria_ref": "Ezra 3:1-6:22",
+      "chapter_start": 3,
+      "chapter_end": 6,
+      "anno_mundi_start": 3409,
+      "anno_mundi_end": 3412,
+      "summary_short": "A comunidade restaura o altar, enfrenta oposição e conclui o Segundo Templo.",
+      "characters": [
+        "Zerubavel",
+        "Yehoshua Kohen Gadol",
+        "Chagai",
+        "Zecharyah",
+        "Daryavesh"
+      ],
+      "data_file": "data/nach/ezra-nehemiah/02-temple-rebuilt.json",
+      "facts_count": 4
+    },
+    {
+      "id": "ezra-torah-reform",
+      "index": 3,
+      "label": "Ezra, Torá e reforma",
+      "label_pt": "Chegada do escriba, ensino e crise comunitária",
+      "hebrew": "עזרא הסופר",
+      "ref_start": "Ezra 7:1",
+      "ref_end": "Ezra 10:44",
+      "sefaria_ref": "Ezra 7:1-10:44",
+      "chapter_start": 7,
+      "chapter_end": 10,
+      "anno_mundi_start": 3440,
+      "anno_mundi_end": 3441,
+      "summary_short": "Ezra chega com autoridade para ensinar a Torá e enfrenta uma crise de identidade comunitária.",
+      "characters": [
+        "Ezra",
+        "Artachshasta",
+        "Líderes de Yehudah"
+      ],
+      "data_file": "data/nach/ezra-nehemiah/03-ezra-torah-reform.json",
+      "facts_count": 4
+    },
+    {
+      "id": "nehemiah-walls",
+      "index": 4,
+      "label": "Nechemia e as muralhas",
+      "label_pt": "Chamado, oposição, justiça social e conclusão dos muros",
+      "hebrew": "חומת ירושלים",
+      "ref_start": "Nehemiah 1:1",
+      "ref_end": "Nehemiah 6:19",
+      "sefaria_ref": "Nehemiah 1:1-6:19",
+      "chapter_start": 1,
+      "chapter_end": 6,
+      "anno_mundi_start": 3445,
+      "anno_mundi_end": 3445,
+      "summary_short": "Nechemia lidera a reconstrução das muralhas de Yerushalayim em meio a oposição externa e tensão interna.",
+      "characters": [
+        "Nechemia",
+        "Artachshasta",
+        "Sanbalat",
+        "Toviah"
+      ],
+      "data_file": "data/nach/ezra-nehemiah/04-nehemiah-walls.json",
+      "facts_count": 4
+    },
+    {
+      "id": "torah-covenant-renewal",
+      "index": 5,
+      "label": "Leitura da Torá e aliança",
+      "label_pt": "Assembleia, Sucot, confissão e compromisso comunitário",
+      "hebrew": "קריאת התורה",
+      "ref_start": "Nehemiah 7:1",
+      "ref_end": "Nehemiah 10:40",
+      "sefaria_ref": "Nehemiah 7:1-10:40",
+      "chapter_start": 7,
+      "chapter_end": 10,
+      "anno_mundi_start": 3445,
+      "anno_mundi_end": 3446,
+      "summary_short": "A comunidade reorganizada ouve a Torá, celebra, confessa e renova compromissos.",
+      "characters": [
+        "Ezra",
+        "Nechemia",
+        "Leviim",
+        "Comunidade"
+      ],
+      "data_file": "data/nach/ezra-nehemiah/05-torah-covenant-renewal.json",
+      "facts_count": 4
+    },
+    {
+      "id": "jerusalem-dedication-reforms",
+      "index": 6,
+      "label": "Yerushalayim, dedicação e reformas",
+      "label_pt": "Povoamento, dedicação dos muros e ajustes finais",
+      "hebrew": "חנוכת החומה",
+      "ref_start": "Nehemiah 11:1",
+      "ref_end": "Nehemiah 13:31",
+      "sefaria_ref": "Nehemiah 11:1-13:31",
+      "chapter_start": 11,
+      "chapter_end": 13,
+      "anno_mundi_start": 3446,
+      "anno_mundi_end": 3448,
+      "summary_short": "Yerushalayim é povoada, os muros são dedicados e Nechemia realiza reformas finais.",
+      "characters": [
+        "Nechemia",
+        "Ezra",
+        "Kohanim",
+        "Leviim"
+      ],
+      "data_file": "data/nach/ezra-nehemiah/06-jerusalem-dedication-reforms.json",
+      "facts_count": 4
+    }
+  ]
+}

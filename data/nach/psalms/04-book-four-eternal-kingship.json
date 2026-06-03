@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Psalms",
+    "book_he": "ספר רביעי",
+    "book_sefaria": "Psalms",
+    "collection": "Psalms",
+    "unit_index": 4,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "book-four-eternal-kingship",
+    "label": "Livro IV · Realeza eterna",
+    "label_pt": "Fragilidade humana, Shabat, louvor e compaixão",
+    "hebrew": "ספר רביעי",
+    "transliteration": "Livro IV · Realeza eterna"
+  },
+  "range": {
+    "ref_start": "Psalms 90:1",
+    "ref_end": "Psalms 106:48",
+    "sefaria_ref": "Psalms 90:1-106:48",
+    "chapters_covered": [
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "chapter_start": 90,
+    "chapter_end": 106,
+    "verse_start": 1,
+    "verse_end_chapter": 106,
+    "verse_end": 48
+  },
+  "timeline": {
+    "period_name": "Livro IV · Realeza eterna",
+    "anno_mundi_start": 2448,
+    "anno_mundi_end": 3339,
+    "era": "nach",
+    "position_pct": 42,
+    "description": "O quarto livro desloca a esperança para a realeza divina, a compaixão e o louvor."
+  },
+  "summary": {
+    "short": "O quarto livro desloca a esperança para a realeza divina, a compaixão e o louvor.",
+    "medium": "O quarto livro desloca a esperança para a realeza divina, a compaixão e o louvor.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Moshe",
+      "Israel"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Tempo",
+      "Shabat",
+      "Realeza divina",
+      "Compaixão"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ps013",
+      "order": 1,
+      "text": "Moshe contrasta a eternidade divina com a brevidade da vida humana.",
+      "text_he": null,
+      "refs": [
+        "Psalms 90:1-17"
+      ],
+      "ref_start": "Psalms 90:1",
+      "ref_end": "Psalms 90:17",
+      "chapter": 90,
+      "verse_start": 1,
+      "verse_end": 17,
+      "sefaria_ref": "Psalms 90:1-17",
+      "tags": [
+        "moshe",
+        "tempo",
+        "sabedoria"
+      ],
+      "topic": "Contar os dias"
+    },
+    {
+      "id": "ps014",
+      "order": 2,
+      "text": "O cântico de Shabat celebra bondade, fidelidade e florescimento do justo.",
+      "text_he": null,
+      "refs": [
+        "Psalms 92:1-16"
+      ],
+      "ref_start": "Psalms 92:1",
+      "ref_end": "Psalms 92:16",
+      "chapter": 92,
+      "verse_start": 1,
+      "verse_end": 16,
+      "sefaria_ref": "Psalms 92:1-16",
+      "tags": [
+        "shabat",
+        "justo",
+        "louvor"
+      ],
+      "topic": "Cântico de Shabat"
+    },
+    {
+      "id": "ps015",
+      "order": 3,
+      "text": "Israel é convidado a adorar o Rei e a não endurecer o coração.",
+      "text_he": null,
+      "refs": [
+        "Psalms 95:1-11"
+      ],
+      "ref_start": "Psalms 95:1",
+      "ref_end": "Psalms 95:11",
+      "chapter": 95,
+      "verse_start": 1,
+      "verse_end": 11,
+      "sefaria_ref": "Psalms 95:1-11",
+      "tags": [
+        "realeza",
+        "adoração",
+        "coração"
+      ],
+      "topic": "Adorar o Rei"
+    },
+    {
+      "id": "ps016",
+      "order": 4,
+      "text": "A compaixão divina é celebrada como a de um pai por seus filhos.",
+      "text_he": null,
+      "refs": [
+        "Psalms 103:1-22"
+      ],
+      "ref_start": "Psalms 103:1",
+      "ref_end": "Psalms 103:22",
+      "chapter": 103,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Psalms 103:1-22",
+      "tags": [
+        "compaixão",
+        "perdão",
+        "louvor"
+      ],
+      "topic": "Compaixão e perdão"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Hosea",
+    "book_he": "הושע",
+    "book_sefaria": "Hosea",
+    "collection": "Trei Asar",
+    "unit_index": 1,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "hosea-covenant-return",
+    "label": "Hoshea · Aliança e retorno",
+    "label_pt": "Sinais familiares, infidelidade de Israel e convite à teshuvah",
+    "hebrew": "הושע",
+    "transliteration": "Hoshea · Aliança e retorno"
+  },
+  "range": {
+    "ref_start": "Hosea 1:1",
+    "ref_end": "Hosea 14:10",
+    "sefaria_ref": "Hosea 1:1-14:10",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "chapter_start": 1,
+    "chapter_end": 14,
+    "verse_start": 1,
+    "verse_end_chapter": 14,
+    "verse_end": 10
+  },
+  "timeline": {
+    "period_name": "Hoshea · Aliança e retorno",
+    "anno_mundi_start": 3140,
+    "anno_mundi_end": 3205,
+    "era": "nach",
+    "position_pct": 54,
+    "description": "Hoshea transforma sua vida familiar em sinal da aliança ferida e chama Israel a retornar com palavras."
+  },
+  "summary": {
+    "short": "Hoshea transforma sua vida familiar em sinal da aliança ferida e chama Israel a retornar com palavras.",
+    "medium": "Hoshea transforma sua vida familiar em sinal da aliança ferida e chama Israel a retornar com palavras.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Hoshea",
+      "Gomer",
+      "Israel"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Aliança",
+      "Infidelidade",
+      "Misericórdia",
+      "Teshuvah"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta001",
+      "order": 1,
+      "text": "A família de Hoshea se torna sinal profético da ruptura entre Israel e Deus.",
+      "text_he": null,
+      "refs": [
+        "Hosea 1:2-9"
+      ],
+      "ref_start": "Hosea 1:2",
+      "ref_end": "Hosea 1:9",
+      "chapter": 1,
+      "verse_start": 2,
+      "verse_end": 9,
+      "sefaria_ref": "Hosea 1:2-9",
+      "tags": [
+        "hoshea",
+        "sinal",
+        "aliança"
+      ],
+      "topic": "Família como sinal"
+    },
+    {
+      "id": "ta002",
+      "order": 2,
+      "text": "Mesmo após o juízo, o profeta anuncia reunião, misericórdia e renovação da aliança.",
+      "text_he": null,
+      "refs": [
+        "Hosea 2:1-3:5"
+      ],
+      "ref_start": "Hosea 2:1",
+      "ref_end": "Hosea 3:5",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end_chapter": 3,
+      "verse_end": 5,
+      "sefaria_ref": "Hosea 2:1-3:5",
+      "tags": [
+        "misericórdia",
+        "restauração",
+        "aliança"
+      ],
+      "topic": "Aliança renovada"
+    },
+    {
+      "id": "ta003",
+      "order": 3,
+      "text": "Hoshea afirma que Deus deseja bondade e conhecimento, não culto vazio.",
+      "text_he": null,
+      "refs": [
+        "Hosea 6:1-6"
+      ],
+      "ref_start": "Hosea 6:1",
+      "ref_end": "Hosea 6:6",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Hosea 6:1-6",
+      "tags": [
+        "bondade",
+        "conhecimento",
+        "culto"
+      ],
+      "topic": "Bondade e conhecimento"
+    },
+    {
+      "id": "ta004",
+      "order": 4,
+      "text": "O livro termina convidando Israel a retornar com palavras e prometendo cura e florescimento.",
+      "text_he": null,
+      "refs": [
+        "Hosea 14:2-10"
+      ],
+      "ref_start": "Hosea 14:2",
+      "ref_end": "Hosea 14:10",
+      "chapter": 14,
+      "verse_start": 2,
+      "verse_end": 10,
+      "sefaria_ref": "Hosea 14:2-10",
+      "tags": [
+        "teshuvah",
+        "cura",
+        "retorno"
+      ],
+      "topic": "Retorno com palavras"
+    }
+  ]
+}

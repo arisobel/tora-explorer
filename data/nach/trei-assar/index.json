@@ -1,0 +1,313 @@
+{
+  "book": "Trei Asar",
+  "book_he": "תרי עשר",
+  "book_pt": "Trei Assar · Doze Profetas",
+  "corpus": "nach",
+  "division": "neviim-acharonim",
+  "total_chapters": 67,
+  "timeline": {
+    "anno_mundi_start": 3030,
+    "anno_mundi_end": 3488,
+    "description": "Os Doze Profetas, de vozes do Primeiro Templo aos últimos chamados proféticos do período persa"
+  },
+  "summary": {
+    "short": "Trei Assar reúne doze livros proféticos breves sobre aliança, justiça, juízo, retorno e esperança.",
+    "themes": [
+      "Profecia",
+      "Teshuvah",
+      "Justiça",
+      "Dia de Deus",
+      "Exílio",
+      "Retorno",
+      "Restauração"
+    ],
+    "characters": [
+      "Hoshea",
+      "Yoel",
+      "Amos",
+      "Ovadiah",
+      "Yonah",
+      "Michah",
+      "Nachum",
+      "Chavakuk",
+      "Tzefaniah",
+      "Chagai",
+      "Zecharyah",
+      "Malachi"
+    ]
+  },
+  "units": [
+    {
+      "id": "hosea-covenant-return",
+      "index": 1,
+      "label": "Hoshea · Aliança e retorno",
+      "label_pt": "Sinais familiares, infidelidade de Israel e convite à teshuvah",
+      "hebrew": "הושע",
+      "ref_start": "Hosea 1:1",
+      "ref_end": "Hosea 14:10",
+      "sefaria_ref": "Hosea 1:1-14:10",
+      "chapter_start": 1,
+      "chapter_end": 14,
+      "anno_mundi_start": 3140,
+      "anno_mundi_end": 3205,
+      "summary_short": "Hoshea transforma sua vida familiar em sinal da aliança ferida e chama Israel a retornar com palavras.",
+      "characters": [
+        "Hoshea",
+        "Gomer",
+        "Israel"
+      ],
+      "data_file": "data/nach/trei-assar/01-hosea-covenant-return.json",
+      "facts_count": 4
+    },
+    {
+      "id": "joel-day-spirit-restoration",
+      "index": 2,
+      "label": "Yoel · Dia, espírito e restauração",
+      "label_pt": "Praga, jejum, derramamento do espírito e renovação de Tzion",
+      "hebrew": "יואל",
+      "ref_start": "Joel 1:1",
+      "ref_end": "Joel 4:21",
+      "sefaria_ref": "Joel 1:1-4:21",
+      "chapter_start": 1,
+      "chapter_end": 4,
+      "anno_mundi_start": 3000,
+      "anno_mundi_end": 3205,
+      "summary_short": "Yoel lê uma calamidade nacional como chamado ao retorno e projeta espírito, juízo e restauração.",
+      "characters": [
+        "Yoel",
+        "Kohanim",
+        "Yehudah",
+        "Nações"
+      ],
+      "data_file": "data/nach/trei-assar/02-joel-day-spirit-restoration.json",
+      "facts_count": 4
+    },
+    {
+      "id": "amos-justice-restoration",
+      "index": 3,
+      "label": "Amos · Justiça e restauração",
+      "label_pt": "Juízo sobre as nações, responsabilidade de Israel e justiça social",
+      "hebrew": "עמוס",
+      "ref_start": "Amos 1:1",
+      "ref_end": "Amos 9:15",
+      "sefaria_ref": "Amos 1:1-9:15",
+      "chapter_start": 1,
+      "chapter_end": 9,
+      "anno_mundi_start": 3140,
+      "anno_mundi_end": 3160,
+      "summary_short": "Amos denuncia violência, luxo e culto sem justiça, mas encerra com esperança de restauração.",
+      "characters": [
+        "Amos",
+        "Israel",
+        "Yehudah",
+        "Amatziah"
+      ],
+      "data_file": "data/nach/trei-assar/03-amos-justice-restoration.json",
+      "facts_count": 4
+    },
+    {
+      "id": "obadiah-edom-zion",
+      "index": 4,
+      "label": "Ovadiah · Edom e Tzion",
+      "label_pt": "Orgulho de Edom, violência contra Yehudah e soberania em Tzion",
+      "hebrew": "עובדיה",
+      "ref_start": "Obadiah 1:1",
+      "ref_end": "Obadiah 1:21",
+      "sefaria_ref": "Obadiah 1:1-21",
+      "chapter_start": 1,
+      "chapter_end": 1,
+      "anno_mundi_start": 3339,
+      "anno_mundi_end": 3409,
+      "summary_short": "Ovadiah condena Edom por orgulho e violência no dia da queda de Yerushalayim.",
+      "characters": [
+        "Ovadiah",
+        "Edom",
+        "Yehudah"
+      ],
+      "data_file": "data/nach/trei-assar/04-obadiah-edom-zion.json",
+      "facts_count": 4
+    },
+    {
+      "id": "jonah-mercy-nations",
+      "index": 5,
+      "label": "Yonah · Misericórdia às nações",
+      "label_pt": "Fuga do profeta, teshuvah de Nínive e compaixão divina",
+      "hebrew": "יונה",
+      "ref_start": "Jonah 1:1",
+      "ref_end": "Jonah 4:11",
+      "sefaria_ref": "Jonah 1:1-4:11",
+      "chapter_start": 1,
+      "chapter_end": 4,
+      "anno_mundi_start": 3030,
+      "anno_mundi_end": 3050,
+      "summary_short": "Yonah resiste à missão em Nínive e aprende que a compaixão divina alcança também as nações.",
+      "characters": [
+        "Yonah",
+        "Marinheiros",
+        "Rei de Nínive",
+        "Povo de Nínive"
+      ],
+      "data_file": "data/nach/trei-assar/05-jonah-mercy-nations.json",
+      "facts_count": 4
+    },
+    {
+      "id": "micah-justice-hope",
+      "index": 6,
+      "label": "Michah · Justiça e esperança",
+      "label_pt": "Queda, Tzion futura, liderança davídica e exigência moral",
+      "hebrew": "מיכה",
+      "ref_start": "Micah 1:1",
+      "ref_end": "Micah 7:20",
+      "sefaria_ref": "Micah 1:1-7:20",
+      "chapter_start": 1,
+      "chapter_end": 7,
+      "anno_mundi_start": 3170,
+      "anno_mundi_end": 3205,
+      "summary_short": "Michah combina denúncia de corrupção com esperança de Tzion, liderança e perdão.",
+      "characters": [
+        "Michah",
+        "Shomron",
+        "Yerushalayim",
+        "Governantes"
+      ],
+      "data_file": "data/nach/trei-assar/06-micah-justice-hope.json",
+      "facts_count": 4
+    },
+    {
+      "id": "nahum-nineveh-fall",
+      "index": 7,
+      "label": "Nachum · Queda de Nínive",
+      "label_pt": "Consolo para Yehudah e fim da violência assíria",
+      "hebrew": "נחום",
+      "ref_start": "Nahum 1:1",
+      "ref_end": "Nahum 3:19",
+      "sefaria_ref": "Nahum 1:1-3:19",
+      "chapter_start": 1,
+      "chapter_end": 3,
+      "anno_mundi_start": 3220,
+      "anno_mundi_end": 3300,
+      "summary_short": "Nachum anuncia o fim de Nínive e apresenta sua queda como alívio para povos oprimidos.",
+      "characters": [
+        "Nachum",
+        "Nínive",
+        "Yehudah"
+      ],
+      "data_file": "data/nach/trei-assar/07-nahum-nineveh-fall.json",
+      "facts_count": 4
+    },
+    {
+      "id": "habakkuk-faith-prayer",
+      "index": 8,
+      "label": "Chavakuk · Fé e oração",
+      "label_pt": "Perguntas sobre injustiça, resposta profética e salmo de confiança",
+      "hebrew": "חבקוק",
+      "ref_start": "Habakkuk 1:1",
+      "ref_end": "Habakkuk 3:19",
+      "sefaria_ref": "Habakkuk 1:1-3:19",
+      "chapter_start": 1,
+      "chapter_end": 3,
+      "anno_mundi_start": 3300,
+      "anno_mundi_end": 3339,
+      "summary_short": "Chavakuk dialoga com Deus sobre violência e império, aprendendo a viver pela fidelidade.",
+      "characters": [
+        "Chavakuk",
+        "Caldeus",
+        "Justo"
+      ],
+      "data_file": "data/nach/trei-assar/08-habakkuk-faith-prayer.json",
+      "facts_count": 4
+    },
+    {
+      "id": "zephaniah-day-remnant",
+      "index": 9,
+      "label": "Tzefaniah · Dia e remanescente",
+      "label_pt": "Dia de juízo, busca humilde e alegria da restauração",
+      "hebrew": "צפניה",
+      "ref_start": "Zephaniah 1:1",
+      "ref_end": "Zephaniah 3:20",
+      "sefaria_ref": "Zephaniah 1:1-3:20",
+      "chapter_start": 1,
+      "chapter_end": 3,
+      "anno_mundi_start": 3285,
+      "anno_mundi_end": 3310,
+      "summary_short": "Tzefaniah anuncia o Dia de Deus, chama os humildes a buscar justiça e promete restauração.",
+      "characters": [
+        "Tzefaniah",
+        "Yehudah",
+        "Yerushalayim",
+        "Nações"
+      ],
+      "data_file": "data/nach/trei-assar/09-zephaniah-day-remnant.json",
+      "facts_count": 4
+    },
+    {
+      "id": "haggai-temple-priority",
+      "index": 10,
+      "label": "Chagai · Prioridade do Templo",
+      "label_pt": "Reconstrução, encorajamento e santidade no início do Segundo Templo",
+      "hebrew": "חגי",
+      "ref_start": "Haggai 1:1",
+      "ref_end": "Haggai 2:23",
+      "sefaria_ref": "Haggai 1:1-2:23",
+      "chapter_start": 1,
+      "chapter_end": 2,
+      "anno_mundi_start": 3408,
+      "anno_mundi_end": 3409,
+      "summary_short": "Chagai chama a comunidade retornada a reconstruir o Templo e reorganizar prioridades.",
+      "characters": [
+        "Chagai",
+        "Zerubavel",
+        "Yehoshua Kohen Gadol",
+        "Remanescente"
+      ],
+      "data_file": "data/nach/trei-assar/10-haggai-temple-priority.json",
+      "facts_count": 4
+    },
+    {
+      "id": "zechariah-visions-restoration",
+      "index": 11,
+      "label": "Zecharyah · Visões e restauração",
+      "label_pt": "Visões noturnas, reconstrução, justiça e esperança futura",
+      "hebrew": "זכריה",
+      "ref_start": "Zechariah 1:1",
+      "ref_end": "Zechariah 14:21",
+      "sefaria_ref": "Zechariah 1:1-14:21",
+      "chapter_start": 1,
+      "chapter_end": 14,
+      "anno_mundi_start": 3408,
+      "anno_mundi_end": 3412,
+      "summary_short": "Zecharyah encoraja a reconstrução por meio de visões, chamados éticos e esperança de restauração.",
+      "characters": [
+        "Zecharyah",
+        "Zerubavel",
+        "Yehoshua Kohen Gadol",
+        "Tzion"
+      ],
+      "data_file": "data/nach/trei-assar/11-zechariah-visions-restoration.json",
+      "facts_count": 4
+    },
+    {
+      "id": "malachi-covenant-messenger",
+      "index": 12,
+      "label": "Malachi · Aliança e mensageiro",
+      "label_pt": "Culto, fidelidade, dízimos e o mensageiro antes do grande dia",
+      "hebrew": "מלאכי",
+      "ref_start": "Malachi 1:1",
+      "ref_end": "Malachi 3:24",
+      "sefaria_ref": "Malachi 1:1-3:24",
+      "chapter_start": 1,
+      "chapter_end": 3,
+      "anno_mundi_start": 3440,
+      "anno_mundi_end": 3488,
+      "summary_short": "Malachi confronta negligência cultual e social, chamando a comunidade à fidelidade da aliança.",
+      "characters": [
+        "Malachi",
+        "Kohanim",
+        "Yehudah",
+        "Eliyahu"
+      ],
+      "data_file": "data/nach/trei-assar/12-malachi-covenant-messenger.json",
+      "facts_count": 4
+    }
+  ]
+}

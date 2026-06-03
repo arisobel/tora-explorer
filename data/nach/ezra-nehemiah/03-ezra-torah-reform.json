@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Ezra",
+    "book_he": "עזרא הסופר",
+    "book_sefaria": "Ezra",
+    "collection": "Ezra-Nehemiah",
+    "unit_index": 3,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "ezra-torah-reform",
+    "label": "Ezra, Torá e reforma",
+    "label_pt": "Chegada do escriba, ensino e crise comunitária",
+    "hebrew": "עזרא הסופר",
+    "transliteration": "Ezra, Torá e reforma"
+  },
+  "range": {
+    "ref_start": "Ezra 7:1",
+    "ref_end": "Ezra 10:44",
+    "sefaria_ref": "Ezra 7:1-10:44",
+    "chapters_covered": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_start": 7,
+    "chapter_end": 10,
+    "verse_start": 1,
+    "verse_end_chapter": 10,
+    "verse_end": 44
+  },
+  "timeline": {
+    "period_name": "Ezra, Torá e reforma",
+    "anno_mundi_start": 3440,
+    "anno_mundi_end": 3441,
+    "era": "nach",
+    "position_pct": 59,
+    "description": "Ezra chega com autoridade para ensinar a Torá e enfrenta uma crise de identidade comunitária."
+  },
+  "summary": {
+    "short": "Ezra chega com autoridade para ensinar a Torá e enfrenta uma crise de identidade comunitária.",
+    "medium": "Ezra chega com autoridade para ensinar a Torá e enfrenta uma crise de identidade comunitária.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Ezra",
+      "Artachshasta",
+      "Líderes de Yehudah"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Torá",
+      "Ensino",
+      "Oração",
+      "Reforma"
+    ]
+  },
+  "facts": [
+    {
+      "id": "en009",
+      "order": 1,
+      "text": "Ezra é apresentado como escriba hábil que prepara o coração para estudar, praticar e ensinar a Torá.",
+      "text_he": null,
+      "refs": [
+        "Ezra 7:1-28"
+      ],
+      "ref_start": "Ezra 7:1",
+      "ref_end": "Ezra 7:28",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 28,
+      "sefaria_ref": "Ezra 7:1-28",
+      "tags": [
+        "ezra",
+        "torá",
+        "ensino"
+      ],
+      "topic": "Ezra, escriba da Torá"
+    },
+    {
+      "id": "en010",
+      "order": 2,
+      "text": "A caravana se organiza, jejua e chega a Yerushalayim com ofertas para o Templo.",
+      "text_he": null,
+      "refs": [
+        "Ezra 8:1-36"
+      ],
+      "ref_start": "Ezra 8:1",
+      "ref_end": "Ezra 8:36",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 36,
+      "sefaria_ref": "Ezra 8:1-36",
+      "tags": [
+        "caravana",
+        "jejum",
+        "yerushalayim"
+      ],
+      "topic": "Viagem a Yerushalayim"
+    },
+    {
+      "id": "en011",
+      "order": 3,
+      "text": "Ezra responde à crise comunitária com luto e oração de confissão.",
+      "text_he": null,
+      "refs": [
+        "Ezra 9:1-15"
+      ],
+      "ref_start": "Ezra 9:1",
+      "ref_end": "Ezra 9:15",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 15,
+      "sefaria_ref": "Ezra 9:1-15",
+      "tags": [
+        "oração",
+        "confissão",
+        "crise"
+      ],
+      "topic": "Confissão de Ezra"
+    },
+    {
+      "id": "en012",
+      "order": 4,
+      "text": "A comunidade se reúne para tratar a crise por meio de um processo público e difícil.",
+      "text_he": null,
+      "refs": [
+        "Ezra 10:1-44"
+      ],
+      "ref_start": "Ezra 10:1",
+      "ref_end": "Ezra 10:44",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 44,
+      "sefaria_ref": "Ezra 10:1-44",
+      "tags": [
+        "assembleia",
+        "reforma",
+        "comunidade"
+      ],
+      "topic": "Processo de reforma"
+    }
+  ]
+}

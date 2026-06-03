@@ -1,0 +1,225 @@
+{
+  "book": "Chronicles",
+  "book_he": "דברי הימים",
+  "book_pt": "Divrei Hayamim · Crônicas I/II",
+  "corpus": "nach",
+  "division": "ketuvim",
+  "total_chapters": 65,
+  "timeline": {
+    "anno_mundi_start": 0,
+    "anno_mundi_end": 3409,
+    "description": "Releitura da história de Adam ao decreto de Ciro, com foco em David, Templo, culto e Yehudah"
+  },
+  "summary": {
+    "short": "Divrei Hayamim reconta a história de Israel com atenção especial à linhagem, ao Templo e à busca de Deus.",
+    "themes": [
+      "Genealogia",
+      "David",
+      "Templo",
+      "Culto",
+      "Yehudah",
+      "Retorno"
+    ],
+    "characters": [
+      "Adam",
+      "David",
+      "Shlomo",
+      "Leviim",
+      "Chizkiyahu",
+      "Yoshiyahu",
+      "Ciro"
+    ]
+  },
+  "units": [
+    {
+      "id": "genealogies-returned-community",
+      "index": 1,
+      "label": "Genealogias e comunidade retornada",
+      "label_pt": "De Adam às tribos, levitas e habitantes de Yerushalayim",
+      "hebrew": "יחס ישראל",
+      "ref_start": "I Chronicles 1:1",
+      "ref_end": "I Chronicles 9:44",
+      "sefaria_ref": "I Chronicles 1:1-9:44",
+      "chapter_start": 1,
+      "chapter_end": 9,
+      "anno_mundi_start": 0,
+      "anno_mundi_end": 3409,
+      "summary_short": "As genealogias conectam a comunidade retornada à história ampla de Israel.",
+      "characters": [
+        "Adam",
+        "Avraham",
+        "Yaakov",
+        "Yehudah",
+        "Leviim"
+      ],
+      "data_file": "data/nach/chronicles/01-genealogies-returned-community.json",
+      "facts_count": 4
+    },
+    {
+      "id": "david-ark-jerusalem",
+      "index": 2,
+      "label": "David, arca e Yerushalayim",
+      "label_pt": "Fim de Shaul, consolidação de David e instalação da arca",
+      "hebrew": "דוד והארון",
+      "ref_start": "I Chronicles 10:1",
+      "ref_end": "I Chronicles 16:43",
+      "sefaria_ref": "I Chronicles 10:1-16:43",
+      "chapter_start": 10,
+      "chapter_end": 16,
+      "anno_mundi_start": 2884,
+      "anno_mundi_end": 2892,
+      "summary_short": "David consolida o reino, estabelece Yerushalayim e organiza a celebração da arca.",
+      "characters": [
+        "Shaul",
+        "David",
+        "Uzah",
+        "Leviim",
+        "Asaf"
+      ],
+      "data_file": "data/nach/chronicles/02-david-ark-jerusalem.json",
+      "facts_count": 4
+    },
+    {
+      "id": "davidic-covenant-census",
+      "index": 3,
+      "label": "Aliança davídica e recenseamento",
+      "label_pt": "Promessa à casa de David, vitórias e terreno do futuro Templo",
+      "hebrew": "ברית דוד",
+      "ref_start": "I Chronicles 17:1",
+      "ref_end": "I Chronicles 21:30",
+      "sefaria_ref": "I Chronicles 17:1-21:30",
+      "chapter_start": 17,
+      "chapter_end": 21,
+      "anno_mundi_start": 2892,
+      "anno_mundi_end": 2924,
+      "summary_short": "A promessa à casa de David e o recenseamento conduzem ao local do futuro Templo.",
+      "characters": [
+        "David",
+        "Natan",
+        "Yoav",
+        "Ornan"
+      ],
+      "data_file": "data/nach/chronicles/03-davidic-covenant-census.json",
+      "facts_count": 4
+    },
+    {
+      "id": "temple-preparation-david-final",
+      "index": 4,
+      "label": "Preparação do Templo e fim de David",
+      "label_pt": "Materiais, levitas, liderança e entrega do projeto a Shlomo",
+      "hebrew": "הכנת המקדש",
+      "ref_start": "I Chronicles 22:1",
+      "ref_end": "I Chronicles 29:30",
+      "sefaria_ref": "I Chronicles 22:1-29:30",
+      "chapter_start": 22,
+      "chapter_end": 29,
+      "anno_mundi_start": 2920,
+      "anno_mundi_end": 2924,
+      "summary_short": "David prepara materiais, pessoas e recursos para o Templo que Shlomo construirá.",
+      "characters": [
+        "David",
+        "Shlomo",
+        "Leviim",
+        "Chefes de Israel"
+      ],
+      "data_file": "data/nach/chronicles/04-temple-preparation-david-final.json",
+      "facts_count": 4
+    },
+    {
+      "id": "solomon-temple",
+      "index": 5,
+      "label": "Shlomo e o Templo",
+      "label_pt": "Sabedoria, construção, dedicação e glória do reino",
+      "hebrew": "שלמה והמקדש",
+      "ref_start": "II Chronicles 1:1",
+      "ref_end": "II Chronicles 9:31",
+      "sefaria_ref": "II Chronicles 1:1-9:31",
+      "chapter_start": 1,
+      "chapter_end": 9,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 2964,
+      "summary_short": "Shlomo recebe sabedoria, constrói e dedica o Templo e recebe visitantes de longe.",
+      "characters": [
+        "Shlomo",
+        "Chiram",
+        "Rainha de Sheva",
+        "Kohanim",
+        "Leviim"
+      ],
+      "data_file": "data/nach/chronicles/05-solomon-temple.json",
+      "facts_count": 4
+    },
+    {
+      "id": "divided-kingdom-jehoshaphat",
+      "index": 6,
+      "label": "Reino dividido e Yehoshafat",
+      "label_pt": "Ruptura, reformas e confiança diante de ameaças",
+      "hebrew": "מלכות יהודה",
+      "ref_start": "II Chronicles 10:1",
+      "ref_end": "II Chronicles 20:37",
+      "sefaria_ref": "II Chronicles 10:1-20:37",
+      "chapter_start": 10,
+      "chapter_end": 20,
+      "anno_mundi_start": 2964,
+      "anno_mundi_end": 3055,
+      "summary_short": "A narrativa acompanha Yehudah após a divisão, destacando reforma, busca e confiança.",
+      "characters": [
+        "Rechavam",
+        "Aviyah",
+        "Asa",
+        "Yehoshafat"
+      ],
+      "data_file": "data/nach/chronicles/06-divided-kingdom-jehoshaphat.json",
+      "facts_count": 4
+    },
+    {
+      "id": "judah-decline",
+      "index": 7,
+      "label": "Declínio de Yehudah",
+      "label_pt": "Reis, idolatria, crises e preservação da linhagem davídica",
+      "hebrew": "ירידת יהודה",
+      "ref_start": "II Chronicles 21:1",
+      "ref_end": "II Chronicles 28:27",
+      "sefaria_ref": "II Chronicles 21:1-28:27",
+      "chapter_start": 21,
+      "chapter_end": 28,
+      "anno_mundi_start": 3055,
+      "anno_mundi_end": 3185,
+      "summary_short": "Yehudah atravessa violência, idolatria e instabilidade, embora a linhagem davídica seja preservada.",
+      "characters": [
+        "Yehoram",
+        "Atalyah",
+        "Yoash",
+        "Amatziah",
+        "Uziyahu",
+        "Achaz"
+      ],
+      "data_file": "data/nach/chronicles/07-judah-decline.json",
+      "facts_count": 4
+    },
+    {
+      "id": "reforms-exile-cyrus",
+      "index": 8,
+      "label": "Reformas, exílio e Ciro",
+      "label_pt": "Chizkiyahu, Yoshiyahu, queda de Yerushalayim e chamado ao retorno",
+      "hebrew": "חורבן ושיבה",
+      "ref_start": "II Chronicles 29:1",
+      "ref_end": "II Chronicles 36:23",
+      "sefaria_ref": "II Chronicles 29:1-36:23",
+      "chapter_start": 29,
+      "chapter_end": 36,
+      "anno_mundi_start": 3185,
+      "anno_mundi_end": 3409,
+      "summary_short": "Reformas de Chizkiyahu e Yoshiyahu precedem a queda, mas o livro encerra com o decreto de Ciro.",
+      "characters": [
+        "Chizkiyahu",
+        "Menashe",
+        "Yoshiyahu",
+        "Tzidkiyahu",
+        "Ciro"
+      ],
+      "data_file": "data/nach/chronicles/08-reforms-exile-cyrus.json",
+      "facts_count": 4
+    }
+  ]
+}

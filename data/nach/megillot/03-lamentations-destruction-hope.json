@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Lamentations",
+    "book_he": "איכה",
+    "book_sefaria": "Lamentations",
+    "collection": "Megillot",
+    "unit_index": 3,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "lamentations-destruction-hope",
+    "label": "Eichah · Destruição e esperança",
+    "label_pt": "Lamento por Yerushalayim, dor coletiva e pedido de retorno",
+    "hebrew": "איכה",
+    "transliteration": "Eichah · Destruição e esperança"
+  },
+  "range": {
+    "ref_start": "Lamentations 1:1",
+    "ref_end": "Lamentations 5:22",
+    "sefaria_ref": "Lamentations 1:1-5:22",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "chapter_start": 1,
+    "chapter_end": 5,
+    "verse_start": 1,
+    "verse_end_chapter": 5,
+    "verse_end": 22
+  },
+  "timeline": {
+    "period_name": "Eichah · Destruição e esperança",
+    "anno_mundi_start": 3339,
+    "anno_mundi_end": 3339,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "Eichah lamenta a queda de Yerushalayim e busca linguagem de memória, dor e esperança."
+  },
+  "summary": {
+    "short": "Eichah lamenta a queda de Yerushalayim e busca linguagem de memória, dor e esperança.",
+    "medium": "Eichah lamenta a queda de Yerushalayim e busca linguagem de memória, dor e esperança.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Yerushalayim",
+      "Tzion",
+      "Yehudah"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Destruição",
+      "Yerushalayim",
+      "Lamento",
+      "Esperança"
+    ]
+  },
+  "facts": [
+    {
+      "id": "mg009",
+      "order": 1,
+      "text": "Yerushalayim é retratada como cidade solitária que chora sua perda e exílio.",
+      "text_he": null,
+      "refs": [
+        "Lamentations 1:1-22"
+      ],
+      "ref_start": "Lamentations 1:1",
+      "ref_end": "Lamentations 1:22",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Lamentations 1:1-22",
+      "tags": [
+        "yerushalayim",
+        "exílio",
+        "lamento"
+      ],
+      "topic": "Cidade solitária"
+    },
+    {
+      "id": "mg010",
+      "order": 2,
+      "text": "A destruição é descrita como colapso de muralhas, culto, liderança e vida comunitária.",
+      "text_he": null,
+      "refs": [
+        "Lamentations 2:1-22"
+      ],
+      "ref_start": "Lamentations 2:1",
+      "ref_end": "Lamentations 2:22",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Lamentations 2:1-22",
+      "tags": [
+        "destruição",
+        "templo",
+        "dor"
+      ],
+      "topic": "Colapso de Tzion"
+    },
+    {
+      "id": "mg011",
+      "order": 3,
+      "text": "No centro do sofrimento, o poeta lembra misericórdias renovadas e chama ao exame de caminhos.",
+      "text_he": null,
+      "refs": [
+        "Lamentations 3:21-40"
+      ],
+      "ref_start": "Lamentations 3:21",
+      "ref_end": "Lamentations 3:40",
+      "chapter": 3,
+      "verse_start": 21,
+      "verse_end": 40,
+      "sefaria_ref": "Lamentations 3:21-40",
+      "tags": [
+        "misericórdia",
+        "esperança",
+        "teshuvah"
+      ],
+      "topic": "Esperança no lamento"
+    },
+    {
+      "id": "mg012",
+      "order": 4,
+      "text": "O rolo encerra com oração comunitária para que Deus restaure o povo.",
+      "text_he": null,
+      "refs": [
+        "Lamentations 5:1-22"
+      ],
+      "ref_start": "Lamentations 5:1",
+      "ref_end": "Lamentations 5:22",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Lamentations 5:1-22",
+      "tags": [
+        "oração",
+        "retorno",
+        "restauração"
+      ],
+      "topic": "Faze-nos retornar"
+    }
+  ]
+}

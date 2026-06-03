@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Malachi",
+    "book_he": "מלאכי",
+    "book_sefaria": "Malachi",
+    "collection": "Trei Asar",
+    "unit_index": 12,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "malachi-covenant-messenger",
+    "label": "Malachi · Aliança e mensageiro",
+    "label_pt": "Culto, fidelidade, dízimos e o mensageiro antes do grande dia",
+    "hebrew": "מלאכי",
+    "transliteration": "Malachi · Aliança e mensageiro"
+  },
+  "range": {
+    "ref_start": "Malachi 1:1",
+    "ref_end": "Malachi 3:24",
+    "sefaria_ref": "Malachi 1:1-3:24",
+    "chapters_covered": [
+      1,
+      2,
+      3
+    ],
+    "chapter_start": 1,
+    "chapter_end": 3,
+    "verse_start": 1,
+    "verse_end_chapter": 3,
+    "verse_end": 24
+  },
+  "timeline": {
+    "period_name": "Malachi · Aliança e mensageiro",
+    "anno_mundi_start": 3440,
+    "anno_mundi_end": 3488,
+    "era": "nach",
+    "position_pct": 59,
+    "description": "Malachi confronta negligência cultual e social, chamando a comunidade à fidelidade da aliança."
+  },
+  "summary": {
+    "short": "Malachi confronta negligência cultual e social, chamando a comunidade à fidelidade da aliança.",
+    "medium": "Malachi confronta negligência cultual e social, chamando a comunidade à fidelidade da aliança.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Malachi",
+      "Kohanim",
+      "Yehudah",
+      "Eliyahu"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Aliança",
+      "Culto",
+      "Fidelidade",
+      "Mensageiro"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta045",
+      "order": 1,
+      "text": "O profeta confronta ofertas desprezadas e a falta de honra no serviço do altar.",
+      "text_he": null,
+      "refs": [
+        "Malachi 1:1-14"
+      ],
+      "ref_start": "Malachi 1:1",
+      "ref_end": "Malachi 1:14",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "Malachi 1:1-14",
+      "tags": [
+        "altar",
+        "ofertas",
+        "honra"
+      ],
+      "topic": "Culto desprezado"
+    },
+    {
+      "id": "ta046",
+      "order": 2,
+      "text": "Kohanim e povo são advertidos sobre ensino, fidelidade e ruptura de alianças.",
+      "text_he": null,
+      "refs": [
+        "Malachi 2:1-16"
+      ],
+      "ref_start": "Malachi 2:1",
+      "ref_end": "Malachi 2:16",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 16,
+      "sefaria_ref": "Malachi 2:1-16",
+      "tags": [
+        "kohanim",
+        "fidelidade",
+        "aliança"
+      ],
+      "topic": "Fidelidade da aliança"
+    },
+    {
+      "id": "ta047",
+      "order": 3,
+      "text": "Um mensageiro prepara o caminho, e o povo é chamado a retornar também por meio dos dízimos.",
+      "text_he": null,
+      "refs": [
+        "Malachi 3:1-12"
+      ],
+      "ref_start": "Malachi 3:1",
+      "ref_end": "Malachi 3:12",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 12,
+      "sefaria_ref": "Malachi 3:1-12",
+      "tags": [
+        "mensageiro",
+        "dízimos",
+        "retorno"
+      ],
+      "topic": "Mensageiro e retorno"
+    },
+    {
+      "id": "ta048",
+      "order": 4,
+      "text": "O livro encerra distinguindo os que servem a Deus e lembrando a Torá de Moshe e a missão de Eliyahu.",
+      "text_he": null,
+      "refs": [
+        "Malachi 3:13-24"
+      ],
+      "ref_start": "Malachi 3:13",
+      "ref_end": "Malachi 3:24",
+      "chapter": 3,
+      "verse_start": 13,
+      "verse_end": 24,
+      "sefaria_ref": "Malachi 3:13-24",
+      "tags": [
+        "torá",
+        "eliyahu",
+        "dia-de-deus"
+      ],
+      "topic": "Torá e Eliyahu"
+    }
+  ]
+}

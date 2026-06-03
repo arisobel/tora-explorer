@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "II Chronicles",
+    "book_he": "ירידת יהודה",
+    "book_sefaria": "II Chronicles",
+    "collection": "Chronicles",
+    "unit_index": 7,
+    "total_units_in_book": 8
+  },
+  "identity": {
+    "id": "judah-decline",
+    "label": "Declínio de Yehudah",
+    "label_pt": "Reis, idolatria, crises e preservação da linhagem davídica",
+    "hebrew": "ירידת יהודה",
+    "transliteration": "Declínio de Yehudah"
+  },
+  "range": {
+    "ref_start": "II Chronicles 21:1",
+    "ref_end": "II Chronicles 28:27",
+    "sefaria_ref": "II Chronicles 21:1-28:27",
+    "chapters_covered": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "chapter_start": 21,
+    "chapter_end": 28,
+    "verse_start": 1,
+    "verse_end_chapter": 28,
+    "verse_end": 27
+  },
+  "timeline": {
+    "period_name": "Declínio de Yehudah",
+    "anno_mundi_start": 3055,
+    "anno_mundi_end": 3185,
+    "era": "nach",
+    "position_pct": 53,
+    "description": "Yehudah atravessa violência, idolatria e instabilidade, embora a linhagem davídica seja preservada."
+  },
+  "summary": {
+    "short": "Yehudah atravessa violência, idolatria e instabilidade, embora a linhagem davídica seja preservada.",
+    "medium": "Yehudah atravessa violência, idolatria e instabilidade, embora a linhagem davídica seja preservada.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Yehoram",
+      "Atalyah",
+      "Yoash",
+      "Amatziah",
+      "Uziyahu",
+      "Achaz"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Idolatria",
+      "Linhagem davídica",
+      "Crise",
+      "Profecia"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ch025",
+      "order": 1,
+      "text": "Yehoram abandona caminhos fiéis e recebe advertência profética.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 21:1-20"
+      ],
+      "ref_start": "II Chronicles 21:1",
+      "ref_end": "II Chronicles 21:20",
+      "chapter": 21,
+      "verse_start": 1,
+      "verse_end": 20,
+      "sefaria_ref": "II Chronicles 21:1-20",
+      "tags": [
+        "yehoram",
+        "infidelidade",
+        "profecia"
+      ],
+      "topic": "Queda de Yehoram"
+    },
+    {
+      "id": "ch026",
+      "order": 2,
+      "text": "Atalyah ameaça a linhagem real, mas Yoash é preservado e coroado no Templo.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 22:1-24:27"
+      ],
+      "ref_start": "II Chronicles 22:1",
+      "ref_end": "II Chronicles 24:27",
+      "chapter": 22,
+      "verse_start": 1,
+      "verse_end_chapter": 24,
+      "verse_end": 27,
+      "sefaria_ref": "II Chronicles 22:1-24:27",
+      "tags": [
+        "atalyah",
+        "yoash",
+        "templo"
+      ],
+      "topic": "Linhagem preservada"
+    },
+    {
+      "id": "ch027",
+      "order": 3,
+      "text": "Amatziah e Uziyahu experimentam força, mas também orgulho e queda.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 25:1-26:23"
+      ],
+      "ref_start": "II Chronicles 25:1",
+      "ref_end": "II Chronicles 26:23",
+      "chapter": 25,
+      "verse_start": 1,
+      "verse_end_chapter": 26,
+      "verse_end": 23,
+      "sefaria_ref": "II Chronicles 25:1-26:23",
+      "tags": [
+        "amatziah",
+        "uziyahu",
+        "orgulho"
+      ],
+      "topic": "Força e orgulho"
+    },
+    {
+      "id": "ch028",
+      "order": 4,
+      "text": "Achaz aprofunda a idolatria e a crise de Yehudah.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 27:1-28:27"
+      ],
+      "ref_start": "II Chronicles 27:1",
+      "ref_end": "II Chronicles 28:27",
+      "chapter": 27,
+      "verse_start": 1,
+      "verse_end_chapter": 28,
+      "verse_end": 27,
+      "sefaria_ref": "II Chronicles 27:1-28:27",
+      "tags": [
+        "achaz",
+        "idolatria",
+        "crise"
+      ],
+      "topic": "Crise sob Achaz"
+    }
+  ]
+}

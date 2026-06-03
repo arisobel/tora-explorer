@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Daniel",
+    "book_he": "חזיונות",
+    "book_sefaria": "Daniel",
+    "collection": "Daniel",
+    "unit_index": 6,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "visions-empires-end",
+    "label": "Visões de impérios e fim",
+    "label_pt": "Animais, semanas, conflitos e esperança para o tempo final",
+    "hebrew": "חזיונות",
+    "transliteration": "Visões de impérios e fim"
+  },
+  "range": {
+    "ref_start": "Daniel 7:1",
+    "ref_end": "Daniel 12:13",
+    "sefaria_ref": "Daniel 7:1-12:13",
+    "chapters_covered": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "chapter_start": 7,
+    "chapter_end": 12,
+    "verse_start": 1,
+    "verse_end_chapter": 12,
+    "verse_end": 13
+  },
+  "timeline": {
+    "period_name": "Visões de impérios e fim",
+    "anno_mundi_start": 3345,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "As visões de Daniel interpretam impérios, sofrimento e esperança a partir do tribunal divino."
+  },
+  "summary": {
+    "short": "As visões de Daniel interpretam impérios, sofrimento e esperança a partir do tribunal divino.",
+    "medium": "As visões de Daniel interpretam impérios, sofrimento e esperança a partir do tribunal divino.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Daniel",
+      "Ancião de Dias",
+      "Gabriel",
+      "Micha'el"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Visões",
+      "Impérios",
+      "Juízo",
+      "Esperança"
+    ]
+  },
+  "facts": [
+    {
+      "id": "dn021",
+      "order": 1,
+      "text": "Quatro animais sobem do mar, mas o tribunal do Ancião de Dias estabelece juízo.",
+      "text_he": null,
+      "refs": [
+        "Daniel 7:1-28"
+      ],
+      "ref_start": "Daniel 7:1",
+      "ref_end": "Daniel 7:28",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 28,
+      "sefaria_ref": "Daniel 7:1-28",
+      "tags": [
+        "animais",
+        "tribunal",
+        "impérios"
+      ],
+      "topic": "Quatro animais"
+    },
+    {
+      "id": "dn022",
+      "order": 2,
+      "text": "A visão do carneiro e do bode trata de conflitos entre poderes e profanação.",
+      "text_he": null,
+      "refs": [
+        "Daniel 8:1-27"
+      ],
+      "ref_start": "Daniel 8:1",
+      "ref_end": "Daniel 8:27",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 27,
+      "sefaria_ref": "Daniel 8:1-27",
+      "tags": [
+        "carneiro",
+        "bode",
+        "conflito"
+      ],
+      "topic": "Carneiro e bode"
+    },
+    {
+      "id": "dn023",
+      "order": 3,
+      "text": "Daniel ora pela restauração de Yerushalayim e recebe resposta sobre um período determinado.",
+      "text_he": null,
+      "refs": [
+        "Daniel 9:1-27"
+      ],
+      "ref_start": "Daniel 9:1",
+      "ref_end": "Daniel 9:27",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 27,
+      "sefaria_ref": "Daniel 9:1-27",
+      "tags": [
+        "oração",
+        "yerushalayim",
+        "setenta"
+      ],
+      "topic": "Oração por Yerushalayim"
+    },
+    {
+      "id": "dn024",
+      "order": 4,
+      "text": "As visões finais descrevem conflito prolongado e encerram com esperança para os que perseveram.",
+      "text_he": null,
+      "refs": [
+        "Daniel 10:1-12:13"
+      ],
+      "ref_start": "Daniel 10:1",
+      "ref_end": "Daniel 12:13",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end_chapter": 12,
+      "verse_end": 13,
+      "sefaria_ref": "Daniel 10:1-12:13",
+      "tags": [
+        "conflito",
+        "esperança",
+        "fim"
+      ],
+      "topic": "Esperança final"
+    }
+  ]
+}

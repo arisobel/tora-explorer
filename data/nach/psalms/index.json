@@ -1,0 +1,142 @@
+{
+  "book": "Psalms",
+  "book_he": "תהילים",
+  "book_pt": "Tehilim · Salmos",
+  "corpus": "nach",
+  "division": "ketuvim",
+  "total_chapters": 150,
+  "timeline": {
+    "anno_mundi_start": 2884,
+    "anno_mundi_end": 5785,
+    "description": "Coleção de louvor, lamento, confiança e sabedoria usada por Israel através das gerações"
+  },
+  "summary": {
+    "short": "Tehilim reúne a linguagem de oração de Israel: louvor, lamento, confiança, memória e esperança.",
+    "themes": [
+      "Oração",
+      "Louvor",
+      "Lamento",
+      "Confiança",
+      "Torá",
+      "Realeza"
+    ],
+    "characters": [
+      "David",
+      "Asaf",
+      "Bnei Korach",
+      "Moshe",
+      "Israel"
+    ]
+  },
+  "units": [
+    {
+      "id": "book-one-davidic-prayer",
+      "index": 1,
+      "label": "Livro I · Oração davídica",
+      "label_pt": "Do caminho justo à confiança do pastor",
+      "hebrew": "ספר ראשון",
+      "ref_start": "Psalms 1:1",
+      "ref_end": "Psalms 41:14",
+      "sefaria_ref": "Psalms 1:1-41:14",
+      "chapter_start": 1,
+      "chapter_end": 41,
+      "anno_mundi_start": 2884,
+      "anno_mundi_end": 2924,
+      "summary_short": "O primeiro livro apresenta caminhos de justiça, glória da criação, Torá e confiança pessoal.",
+      "characters": [
+        "David",
+        "Justo",
+        "Ímpio"
+      ],
+      "data_file": "data/nach/psalms/01-book-one-davidic-prayer.json",
+      "facts_count": 4
+    },
+    {
+      "id": "book-two-longing-kingship",
+      "index": 2,
+      "label": "Livro II · Sede e realeza",
+      "label_pt": "Anseio por Deus, arrependimento e oração pelo rei",
+      "hebrew": "ספר שני",
+      "ref_start": "Psalms 42:1",
+      "ref_end": "Psalms 72:20",
+      "sefaria_ref": "Psalms 42:1-72:20",
+      "chapter_start": 42,
+      "chapter_end": 72,
+      "anno_mundi_start": 2884,
+      "anno_mundi_end": 2924,
+      "summary_short": "O segundo livro combina sede espiritual, arrependimento, bênção às nações e justiça real.",
+      "characters": [
+        "David",
+        "Bnei Korach",
+        "Shlomo"
+      ],
+      "data_file": "data/nach/psalms/02-book-two-longing-kingship.json",
+      "facts_count": 4
+    },
+    {
+      "id": "book-three-sanctuary-crisis",
+      "index": 3,
+      "label": "Livro III · Santuário e crise",
+      "label_pt": "Perguntas sobre prosperidade, memória, presença e aliança davídica",
+      "hebrew": "ספר שלישי",
+      "ref_start": "Psalms 73:1",
+      "ref_end": "Psalms 89:53",
+      "sefaria_ref": "Psalms 73:1-89:53",
+      "chapter_start": 73,
+      "chapter_end": 89,
+      "anno_mundi_start": 2924,
+      "anno_mundi_end": 3339,
+      "summary_short": "O terceiro livro enfrenta crise nacional e pessoal a partir do santuário, da memória e da aliança.",
+      "characters": [
+        "Asaf",
+        "Bnei Korach",
+        "David"
+      ],
+      "data_file": "data/nach/psalms/03-book-three-sanctuary-crisis.json",
+      "facts_count": 4
+    },
+    {
+      "id": "book-four-eternal-kingship",
+      "index": 4,
+      "label": "Livro IV · Realeza eterna",
+      "label_pt": "Fragilidade humana, Shabat, louvor e compaixão",
+      "hebrew": "ספר רביעי",
+      "ref_start": "Psalms 90:1",
+      "ref_end": "Psalms 106:48",
+      "sefaria_ref": "Psalms 90:1-106:48",
+      "chapter_start": 90,
+      "chapter_end": 106,
+      "anno_mundi_start": 2448,
+      "anno_mundi_end": 3339,
+      "summary_short": "O quarto livro desloca a esperança para a realeza divina, a compaixão e o louvor.",
+      "characters": [
+        "Moshe",
+        "Israel"
+      ],
+      "data_file": "data/nach/psalms/04-book-four-eternal-kingship.json",
+      "facts_count": 4
+    },
+    {
+      "id": "book-five-return-hallel",
+      "index": 5,
+      "label": "Livro V · Retorno e Hallel",
+      "label_pt": "Gratidão, amor à Torá, retorno a Tzion e louvor final",
+      "hebrew": "ספר חמישי",
+      "ref_start": "Psalms 107:1",
+      "ref_end": "Psalms 150:6",
+      "sefaria_ref": "Psalms 107:1-150:6",
+      "chapter_start": 107,
+      "chapter_end": 150,
+      "anno_mundi_start": 3339,
+      "anno_mundi_end": 5785,
+      "summary_short": "O quinto livro reúne gratidão pelo resgate, amor à Torá, cânticos de subida e Hallel final.",
+      "characters": [
+        "Israel",
+        "Peregrinos",
+        "Servos de Deus"
+      ],
+      "data_file": "data/nach/psalms/05-book-five-return-hallel.json",
+      "facts_count": 4
+    }
+  ]
+}

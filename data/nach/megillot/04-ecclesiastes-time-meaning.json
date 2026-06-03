@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Ecclesiastes",
+    "book_he": "קהלת",
+    "book_sefaria": "Ecclesiastes",
+    "collection": "Megillot",
+    "unit_index": 4,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "ecclesiastes-time-meaning",
+    "label": "Kohelet · Tempo e sentido",
+    "label_pt": "Limites do esforço humano, dádivas da vida e temor de Deus",
+    "hebrew": "קהלת",
+    "transliteration": "Kohelet · Tempo e sentido"
+  },
+  "range": {
+    "ref_start": "Ecclesiastes 1:1",
+    "ref_end": "Ecclesiastes 12:14",
+    "sefaria_ref": "Ecclesiastes 1:1-12:14",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "chapter_start": 1,
+    "chapter_end": 12,
+    "verse_start": 1,
+    "verse_end_chapter": 12,
+    "verse_end": 14
+  },
+  "timeline": {
+    "period_name": "Kohelet · Tempo e sentido",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 2964,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "Kohelet examina trabalho, prazer, tempo e mortalidade, buscando sabedoria dentro dos limites humanos."
+  },
+  "summary": {
+    "short": "Kohelet examina trabalho, prazer, tempo e mortalidade, buscando sabedoria dentro dos limites humanos.",
+    "medium": "Kohelet examina trabalho, prazer, tempo e mortalidade, buscando sabedoria dentro dos limites humanos.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Kohelet"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Tempo",
+      "Trabalho",
+      "Sabedoria",
+      "Mortalidade",
+      "Temor de Deus"
+    ]
+  },
+  "facts": [
+    {
+      "id": "mg013",
+      "order": 1,
+      "text": "Kohelet abre observando ciclos do mundo e a dificuldade de encontrar ganho duradouro.",
+      "text_he": null,
+      "refs": [
+        "Ecclesiastes 1:1-11"
+      ],
+      "ref_start": "Ecclesiastes 1:1",
+      "ref_end": "Ecclesiastes 1:11",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 11,
+      "sefaria_ref": "Ecclesiastes 1:1-11",
+      "tags": [
+        "vaidade",
+        "ciclos",
+        "trabalho"
+      ],
+      "topic": "Ciclos e ganho"
+    },
+    {
+      "id": "mg014",
+      "order": 2,
+      "text": "Há um tempo para diferentes experiências humanas, enquanto a obra divina excede o controle humano.",
+      "text_he": null,
+      "refs": [
+        "Ecclesiastes 3:1-15"
+      ],
+      "ref_start": "Ecclesiastes 3:1",
+      "ref_end": "Ecclesiastes 3:15",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 15,
+      "sefaria_ref": "Ecclesiastes 3:1-15",
+      "tags": [
+        "tempo",
+        "eternidade",
+        "limites"
+      ],
+      "topic": "Tempo para tudo"
+    },
+    {
+      "id": "mg015",
+      "order": 3,
+      "text": "Riqueza não garante satisfação, e desfrutar do trabalho pode ser recebido como dádiva.",
+      "text_he": null,
+      "refs": [
+        "Ecclesiastes 5:9-19"
+      ],
+      "ref_start": "Ecclesiastes 5:9",
+      "ref_end": "Ecclesiastes 5:19",
+      "chapter": 5,
+      "verse_start": 9,
+      "verse_end": 19,
+      "sefaria_ref": "Ecclesiastes 5:9-19",
+      "tags": [
+        "riqueza",
+        "trabalho",
+        "dádiva"
+      ],
+      "topic": "Riqueza e satisfação"
+    },
+    {
+      "id": "mg016",
+      "order": 4,
+      "text": "A juventude deve lembrar o Criador, e o epílogo chama ao temor de Deus e aos mandamentos.",
+      "text_he": null,
+      "refs": [
+        "Ecclesiastes 12:1-14"
+      ],
+      "ref_start": "Ecclesiastes 12:1",
+      "ref_end": "Ecclesiastes 12:14",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "Ecclesiastes 12:1-14",
+      "tags": [
+        "criador",
+        "mandamentos",
+        "temor-de-deus"
+      ],
+      "topic": "Conclusão de Kohelet"
+    }
+  ]
+}

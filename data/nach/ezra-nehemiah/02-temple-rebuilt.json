@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Ezra",
+    "book_he": "בניין הבית",
+    "book_sefaria": "Ezra",
+    "collection": "Ezra-Nehemiah",
+    "unit_index": 2,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "temple-rebuilt",
+    "label": "Segundo Templo reconstruído",
+    "label_pt": "Altar, fundação, oposição e dedicação",
+    "hebrew": "בניין הבית",
+    "transliteration": "Segundo Templo reconstruído"
+  },
+  "range": {
+    "ref_start": "Ezra 3:1",
+    "ref_end": "Ezra 6:22",
+    "sefaria_ref": "Ezra 3:1-6:22",
+    "chapters_covered": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "chapter_start": 3,
+    "chapter_end": 6,
+    "verse_start": 1,
+    "verse_end_chapter": 6,
+    "verse_end": 22
+  },
+  "timeline": {
+    "period_name": "Segundo Templo reconstruído",
+    "anno_mundi_start": 3409,
+    "anno_mundi_end": 3412,
+    "era": "nach",
+    "position_pct": 59,
+    "description": "A comunidade restaura o altar, enfrenta oposição e conclui o Segundo Templo."
+  },
+  "summary": {
+    "short": "A comunidade restaura o altar, enfrenta oposição e conclui o Segundo Templo.",
+    "medium": "A comunidade restaura o altar, enfrenta oposição e conclui o Segundo Templo.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Zerubavel",
+      "Yehoshua Kohen Gadol",
+      "Chagai",
+      "Zecharyah",
+      "Daryavesh"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Altar",
+      "Segundo Templo",
+      "Oposição",
+      "Dedicação"
+    ]
+  },
+  "facts": [
+    {
+      "id": "en005",
+      "order": 1,
+      "text": "O altar é restaurado, Sucot é celebrado e a fundação do Templo provoca alegria e choro.",
+      "text_he": null,
+      "refs": [
+        "Ezra 3:1-13"
+      ],
+      "ref_start": "Ezra 3:1",
+      "ref_end": "Ezra 3:13",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 13,
+      "sefaria_ref": "Ezra 3:1-13",
+      "tags": [
+        "altar",
+        "sucot",
+        "fundação"
+      ],
+      "topic": "Altar e fundação"
+    },
+    {
+      "id": "en006",
+      "order": 2,
+      "text": "Adversários dificultam a obra e enviam acusações contra Yerushalayim.",
+      "text_he": null,
+      "refs": [
+        "Ezra 4:1-24"
+      ],
+      "ref_start": "Ezra 4:1",
+      "ref_end": "Ezra 4:24",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 24,
+      "sefaria_ref": "Ezra 4:1-24",
+      "tags": [
+        "oposição",
+        "acusação",
+        "obra"
+      ],
+      "topic": "Oposição à reconstrução"
+    },
+    {
+      "id": "en007",
+      "order": 3,
+      "text": "Chagai e Zecharyah encorajam a retomada, e a administração persa investiga o decreto.",
+      "text_he": null,
+      "refs": [
+        "Ezra 5:1-17"
+      ],
+      "ref_start": "Ezra 5:1",
+      "ref_end": "Ezra 5:17",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 17,
+      "sefaria_ref": "Ezra 5:1-17",
+      "tags": [
+        "chagai",
+        "zecharyah",
+        "decreto"
+      ],
+      "topic": "Obra retomada"
+    },
+    {
+      "id": "en008",
+      "order": 4,
+      "text": "Daryavesh confirma o decreto, o Templo é concluído e Pesach é celebrado.",
+      "text_he": null,
+      "refs": [
+        "Ezra 6:1-22"
+      ],
+      "ref_start": "Ezra 6:1",
+      "ref_end": "Ezra 6:22",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Ezra 6:1-22",
+      "tags": [
+        "daryavesh",
+        "dedicação",
+        "pesach"
+      ],
+      "topic": "Dedicação do Templo"
+    }
+  ]
+}

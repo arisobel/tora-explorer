@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Obadiah",
+    "book_he": "עובדיה",
+    "book_sefaria": "Obadiah",
+    "collection": "Trei Asar",
+    "unit_index": 4,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "obadiah-edom-zion",
+    "label": "Ovadiah · Edom e Tzion",
+    "label_pt": "Orgulho de Edom, violência contra Yehudah e soberania em Tzion",
+    "hebrew": "עובדיה",
+    "transliteration": "Ovadiah · Edom e Tzion"
+  },
+  "range": {
+    "ref_start": "Obadiah 1:1",
+    "ref_end": "Obadiah 1:21",
+    "sefaria_ref": "Obadiah 1:1-21",
+    "chapters_covered": [
+      1
+    ],
+    "chapter_start": 1,
+    "chapter_end": 1,
+    "verse_start": 1,
+    "verse_end_chapter": 1,
+    "verse_end": 21
+  },
+  "timeline": {
+    "period_name": "Ovadiah · Edom e Tzion",
+    "anno_mundi_start": 3339,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "Ovadiah condena Edom por orgulho e violência no dia da queda de Yerushalayim."
+  },
+  "summary": {
+    "short": "Ovadiah condena Edom por orgulho e violência no dia da queda de Yerushalayim.",
+    "medium": "Ovadiah condena Edom por orgulho e violência no dia da queda de Yerushalayim.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Ovadiah",
+      "Edom",
+      "Yehudah"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Edom",
+      "Orgulho",
+      "Violência",
+      "Tzion"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta013",
+      "order": 1,
+      "text": "Edom é advertido de que sua posição elevada não o protegerá do juízo.",
+      "text_he": null,
+      "refs": [
+        "Obadiah 1:1-9"
+      ],
+      "ref_start": "Obadiah 1:1",
+      "ref_end": "Obadiah 1:9",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 9,
+      "sefaria_ref": "Obadiah 1:1-9",
+      "tags": [
+        "edom",
+        "orgulho",
+        "juízo"
+      ],
+      "topic": "Orgulho de Edom"
+    },
+    {
+      "id": "ta014",
+      "order": 2,
+      "text": "Ovadiah acusa Edom de observar e participar da violência contra seu irmão Yaakov.",
+      "text_he": null,
+      "refs": [
+        "Obadiah 1:10-14"
+      ],
+      "ref_start": "Obadiah 1:10",
+      "ref_end": "Obadiah 1:14",
+      "chapter": 1,
+      "verse_start": 10,
+      "verse_end": 14,
+      "sefaria_ref": "Obadiah 1:10-14",
+      "tags": [
+        "irmãos",
+        "violência",
+        "yaakov"
+      ],
+      "topic": "Violência contra o irmão"
+    },
+    {
+      "id": "ta015",
+      "order": 3,
+      "text": "O Dia de Deus aplica às nações a medida de suas próprias ações.",
+      "text_he": null,
+      "refs": [
+        "Obadiah 1:15-16"
+      ],
+      "ref_start": "Obadiah 1:15",
+      "ref_end": "Obadiah 1:16",
+      "chapter": 1,
+      "verse_start": 15,
+      "verse_end": 16,
+      "sefaria_ref": "Obadiah 1:15-16",
+      "tags": [
+        "dia-de-deus",
+        "nações",
+        "medida"
+      ],
+      "topic": "Dia sobre as nações"
+    },
+    {
+      "id": "ta016",
+      "order": 4,
+      "text": "Tzion recebe libertação e o reino pertence a Deus.",
+      "text_he": null,
+      "refs": [
+        "Obadiah 1:17-21"
+      ],
+      "ref_start": "Obadiah 1:17",
+      "ref_end": "Obadiah 1:21",
+      "chapter": 1,
+      "verse_start": 17,
+      "verse_end": 21,
+      "sefaria_ref": "Obadiah 1:17-21",
+      "tags": [
+        "tzion",
+        "libertação",
+        "reino"
+      ],
+      "topic": "Libertação em Tzion"
+    }
+  ]
+}

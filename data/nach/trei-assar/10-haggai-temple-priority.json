@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Haggai",
+    "book_he": "חגי",
+    "book_sefaria": "Haggai",
+    "collection": "Trei Asar",
+    "unit_index": 10,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "haggai-temple-priority",
+    "label": "Chagai · Prioridade do Templo",
+    "label_pt": "Reconstrução, encorajamento e santidade no início do Segundo Templo",
+    "hebrew": "חגי",
+    "transliteration": "Chagai · Prioridade do Templo"
+  },
+  "range": {
+    "ref_start": "Haggai 1:1",
+    "ref_end": "Haggai 2:23",
+    "sefaria_ref": "Haggai 1:1-2:23",
+    "chapters_covered": [
+      1,
+      2
+    ],
+    "chapter_start": 1,
+    "chapter_end": 2,
+    "verse_start": 1,
+    "verse_end_chapter": 2,
+    "verse_end": 23
+  },
+  "timeline": {
+    "period_name": "Chagai · Prioridade do Templo",
+    "anno_mundi_start": 3408,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 59,
+    "description": "Chagai chama a comunidade retornada a reconstruir o Templo e reorganizar prioridades."
+  },
+  "summary": {
+    "short": "Chagai chama a comunidade retornada a reconstruir o Templo e reorganizar prioridades.",
+    "medium": "Chagai chama a comunidade retornada a reconstruir o Templo e reorganizar prioridades.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Chagai",
+      "Zerubavel",
+      "Yehoshua Kohen Gadol",
+      "Remanescente"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Segundo Templo",
+      "Prioridades",
+      "Santidade",
+      "Encorajamento"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta037",
+      "order": 1,
+      "text": "Chagai confronta a comunidade por cuidar de suas casas enquanto o Templo permanece em ruínas.",
+      "text_he": null,
+      "refs": [
+        "Haggai 1:1-11"
+      ],
+      "ref_start": "Haggai 1:1",
+      "ref_end": "Haggai 1:11",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 11,
+      "sefaria_ref": "Haggai 1:1-11",
+      "tags": [
+        "templo",
+        "prioridades",
+        "seca"
+      ],
+      "topic": "Reconsiderar caminhos"
+    },
+    {
+      "id": "ta038",
+      "order": 2,
+      "text": "Zerubavel, Yehoshua e o remanescente respondem e iniciam o trabalho.",
+      "text_he": null,
+      "refs": [
+        "Haggai 1:12-15"
+      ],
+      "ref_start": "Haggai 1:12",
+      "ref_end": "Haggai 1:15",
+      "chapter": 1,
+      "verse_start": 12,
+      "verse_end": 15,
+      "sefaria_ref": "Haggai 1:12-15",
+      "tags": [
+        "zerubavel",
+        "obediência",
+        "trabalho"
+      ],
+      "topic": "Início da reconstrução"
+    },
+    {
+      "id": "ta039",
+      "order": 3,
+      "text": "Os que lembravam a glória anterior são encorajados a permanecer fortes na obra.",
+      "text_he": null,
+      "refs": [
+        "Haggai 2:1-9"
+      ],
+      "ref_start": "Haggai 2:1",
+      "ref_end": "Haggai 2:9",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 9,
+      "sefaria_ref": "Haggai 2:1-9",
+      "tags": [
+        "glória",
+        "encorajamento",
+        "templo"
+      ],
+      "topic": "Glória futura"
+    },
+    {
+      "id": "ta040",
+      "order": 4,
+      "text": "Chagai relaciona santidade, bênção e o papel de Zerubavel no futuro da comunidade.",
+      "text_he": null,
+      "refs": [
+        "Haggai 2:10-23"
+      ],
+      "ref_start": "Haggai 2:10",
+      "ref_end": "Haggai 2:23",
+      "chapter": 2,
+      "verse_start": 10,
+      "verse_end": 23,
+      "sefaria_ref": "Haggai 2:10-23",
+      "tags": [
+        "santidade",
+        "bênção",
+        "zerubavel"
+      ],
+      "topic": "Santidade e sinal"
+    }
+  ]
+}

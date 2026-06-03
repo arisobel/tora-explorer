@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Job",
+    "book_he": "מחזור שלישי",
+    "book_sefaria": "Job",
+    "collection": "Job",
+    "unit_index": 4,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "third-cycle-job-closing",
+    "label": "Terceiro ciclo e defesa final",
+    "label_pt": "Busca por Deus, poema da sabedoria e juramento de integridade",
+    "hebrew": "מחזור שלישי",
+    "transliteration": "Terceiro ciclo e defesa final"
+  },
+  "range": {
+    "ref_start": "Job 22:1",
+    "ref_end": "Job 31:40",
+    "sefaria_ref": "Job 22:1-31:40",
+    "chapters_covered": [
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "chapter_start": 22,
+    "chapter_end": 31,
+    "verse_start": 1,
+    "verse_end_chapter": 31,
+    "verse_end": 40
+  },
+  "timeline": {
+    "period_name": "Terceiro ciclo e defesa final",
+    "anno_mundi_start": 1948,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 34,
+    "description": "O diálogo se esgota, e Iyov formula sua defesa final diante de Deus."
+  },
+  "summary": {
+    "short": "O diálogo se esgota, e Iyov formula sua defesa final diante de Deus.",
+    "medium": "O diálogo se esgota, e Iyov formula sua defesa final diante de Deus.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Iyov",
+      "Elifaz",
+      "Bildad"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Busca",
+      "Sabedoria",
+      "Integridade",
+      "Justiça"
+    ]
+  },
+  "facts": [
+    {
+      "id": "jb013",
+      "order": 1,
+      "text": "Elifaz formula acusações concretas contra Iyov e o chama a retornar.",
+      "text_he": null,
+      "refs": [
+        "Job 22:1-30"
+      ],
+      "ref_start": "Job 22:1",
+      "ref_end": "Job 22:30",
+      "chapter": 22,
+      "verse_start": 1,
+      "verse_end": 30,
+      "sefaria_ref": "Job 22:1-30",
+      "tags": [
+        "elifaz",
+        "acusação",
+        "retorno"
+      ],
+      "topic": "Acusações finais"
+    },
+    {
+      "id": "jb014",
+      "order": 2,
+      "text": "Iyov deseja encontrar Deus e apresentar sua causa diante dele.",
+      "text_he": null,
+      "refs": [
+        "Job 23:1-24:25"
+      ],
+      "ref_start": "Job 23:1",
+      "ref_end": "Job 24:25",
+      "chapter": 23,
+      "verse_start": 1,
+      "verse_end_chapter": 24,
+      "verse_end": 25,
+      "sefaria_ref": "Job 23:1-24:25",
+      "tags": [
+        "busca",
+        "causa",
+        "justiça"
+      ],
+      "topic": "Busca por Deus"
+    },
+    {
+      "id": "jb015",
+      "order": 3,
+      "text": "O poema da sabedoria pergunta onde ela pode ser encontrada e aponta para o temor de Deus.",
+      "text_he": null,
+      "refs": [
+        "Job 28:1-28"
+      ],
+      "ref_start": "Job 28:1",
+      "ref_end": "Job 28:28",
+      "chapter": 28,
+      "verse_start": 1,
+      "verse_end": 28,
+      "sefaria_ref": "Job 28:1-28",
+      "tags": [
+        "sabedoria",
+        "temor-de-deus",
+        "mistério"
+      ],
+      "topic": "Onde está a sabedoria"
+    },
+    {
+      "id": "jb016",
+      "order": 4,
+      "text": "Iyov encerra sua defesa com um juramento detalhado de integridade moral.",
+      "text_he": null,
+      "refs": [
+        "Job 29:1-31:40"
+      ],
+      "ref_start": "Job 29:1",
+      "ref_end": "Job 31:40",
+      "chapter": 29,
+      "verse_start": 1,
+      "verse_end_chapter": 31,
+      "verse_end": 40,
+      "sefaria_ref": "Job 29:1-31:40",
+      "tags": [
+        "integridade",
+        "juramento",
+        "justiça"
+      ],
+      "topic": "Defesa final"
+    }
+  ]
+}

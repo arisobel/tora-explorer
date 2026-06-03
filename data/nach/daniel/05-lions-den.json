@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Daniel",
+    "book_he": "גוב האריות",
+    "book_sefaria": "Daniel",
+    "collection": "Daniel",
+    "unit_index": 5,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "lions-den",
+    "label": "Cova dos leões",
+    "label_pt": "Oração de Daniel, decreto imperial e livramento",
+    "hebrew": "גוב האריות",
+    "transliteration": "Cova dos leões"
+  },
+  "range": {
+    "ref_start": "Daniel 6:1",
+    "ref_end": "Daniel 6:29",
+    "sefaria_ref": "Daniel 6:1-29",
+    "chapters_covered": [
+      6
+    ],
+    "chapter_start": 6,
+    "chapter_end": 6,
+    "verse_start": 1,
+    "verse_end_chapter": 6,
+    "verse_end": 29
+  },
+  "timeline": {
+    "period_name": "Cova dos leões",
+    "anno_mundi_start": 3389,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 59,
+    "description": "Daniel mantém sua prática de oração apesar do decreto e é preservado na cova dos leões."
+  },
+  "summary": {
+    "short": "Daniel mantém sua prática de oração apesar do decreto e é preservado na cova dos leões.",
+    "medium": "Daniel mantém sua prática de oração apesar do decreto e é preservado na cova dos leões.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Daniel",
+      "Daryavesh",
+      "Sátrapas"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Oração",
+      "Fidelidade",
+      "Livramento",
+      "Império"
+    ]
+  },
+  "facts": [
+    {
+      "id": "dn017",
+      "order": 1,
+      "text": "Daniel se destaca na administração, despertando inveja entre outros oficiais.",
+      "text_he": null,
+      "refs": [
+        "Daniel 6:1-5"
+      ],
+      "ref_start": "Daniel 6:1",
+      "ref_end": "Daniel 6:5",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end": 5,
+      "sefaria_ref": "Daniel 6:1-5",
+      "tags": [
+        "administração",
+        "inveja",
+        "integridade"
+      ],
+      "topic": "Daniel se destaca"
+    },
+    {
+      "id": "dn018",
+      "order": 2,
+      "text": "Um decreto transforma a oração em crime, mas Daniel mantém sua prática diante de Yerushalayim.",
+      "text_he": null,
+      "refs": [
+        "Daniel 6:6-11"
+      ],
+      "ref_start": "Daniel 6:6",
+      "ref_end": "Daniel 6:11",
+      "chapter": 6,
+      "verse_start": 6,
+      "verse_end": 11,
+      "sefaria_ref": "Daniel 6:6-11",
+      "tags": [
+        "oração",
+        "decreto",
+        "yerushalayim"
+      ],
+      "topic": "Oração apesar do decreto"
+    },
+    {
+      "id": "dn019",
+      "order": 3,
+      "text": "Daniel é lançado na cova, enquanto o rei passa a noite em angústia.",
+      "text_he": null,
+      "refs": [
+        "Daniel 6:12-19"
+      ],
+      "ref_start": "Daniel 6:12",
+      "ref_end": "Daniel 6:19",
+      "chapter": 6,
+      "verse_start": 12,
+      "verse_end": 19,
+      "sefaria_ref": "Daniel 6:12-19",
+      "tags": [
+        "leões",
+        "rei",
+        "angústia"
+      ],
+      "topic": "Na cova dos leões"
+    },
+    {
+      "id": "dn020",
+      "order": 4,
+      "text": "Daniel é encontrado vivo, e Daryavesh reconhece o Deus que salva.",
+      "text_he": null,
+      "refs": [
+        "Daniel 6:20-29"
+      ],
+      "ref_start": "Daniel 6:20",
+      "ref_end": "Daniel 6:29",
+      "chapter": 6,
+      "verse_start": 20,
+      "verse_end": 29,
+      "sefaria_ref": "Daniel 6:20-29",
+      "tags": [
+        "livramento",
+        "testemunho",
+        "salvação"
+      ],
+      "topic": "Daniel preservado"
+    }
+  ]
+}

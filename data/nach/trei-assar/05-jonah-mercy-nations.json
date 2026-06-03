@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Jonah",
+    "book_he": "יונה",
+    "book_sefaria": "Jonah",
+    "collection": "Trei Asar",
+    "unit_index": 5,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "jonah-mercy-nations",
+    "label": "Yonah · Misericórdia às nações",
+    "label_pt": "Fuga do profeta, teshuvah de Nínive e compaixão divina",
+    "hebrew": "יונה",
+    "transliteration": "Yonah · Misericórdia às nações"
+  },
+  "range": {
+    "ref_start": "Jonah 1:1",
+    "ref_end": "Jonah 4:11",
+    "sefaria_ref": "Jonah 1:1-4:11",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "chapter_start": 1,
+    "chapter_end": 4,
+    "verse_start": 1,
+    "verse_end_chapter": 4,
+    "verse_end": 11
+  },
+  "timeline": {
+    "period_name": "Yonah · Misericórdia às nações",
+    "anno_mundi_start": 3030,
+    "anno_mundi_end": 3050,
+    "era": "nach",
+    "position_pct": 52,
+    "description": "Yonah resiste à missão em Nínive e aprende que a compaixão divina alcança também as nações."
+  },
+  "summary": {
+    "short": "Yonah resiste à missão em Nínive e aprende que a compaixão divina alcança também as nações.",
+    "medium": "Yonah resiste à missão em Nínive e aprende que a compaixão divina alcança também as nações.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Yonah",
+      "Marinheiros",
+      "Rei de Nínive",
+      "Povo de Nínive"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Missão",
+      "Teshuvah",
+      "Misericórdia",
+      "Nações"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta017",
+      "order": 1,
+      "text": "Yonah foge da missão em Nínive, e uma tempestade leva os marinheiros a reconhecer Deus.",
+      "text_he": null,
+      "refs": [
+        "Jonah 1:1-16"
+      ],
+      "ref_start": "Jonah 1:1",
+      "ref_end": "Jonah 1:16",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 16,
+      "sefaria_ref": "Jonah 1:1-16",
+      "tags": [
+        "yonah",
+        "fuga",
+        "marinheiros"
+      ],
+      "topic": "Fuga e tempestade"
+    },
+    {
+      "id": "ta018",
+      "order": 2,
+      "text": "Do ventre do peixe, Yonah ora e reconhece que a salvação pertence a Deus.",
+      "text_he": null,
+      "refs": [
+        "Jonah 2:1-11"
+      ],
+      "ref_start": "Jonah 2:1",
+      "ref_end": "Jonah 2:11",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 11,
+      "sefaria_ref": "Jonah 2:1-11",
+      "tags": [
+        "oração",
+        "peixe",
+        "salvação"
+      ],
+      "topic": "Oração no peixe"
+    },
+    {
+      "id": "ta019",
+      "order": 3,
+      "text": "Nínive responde à advertência com jejum e mudança, e a calamidade é suspensa.",
+      "text_he": null,
+      "refs": [
+        "Jonah 3:1-10"
+      ],
+      "ref_start": "Jonah 3:1",
+      "ref_end": "Jonah 3:10",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 10,
+      "sefaria_ref": "Jonah 3:1-10",
+      "tags": [
+        "nínive",
+        "jejum",
+        "teshuvah"
+      ],
+      "topic": "Teshuvah de Nínive"
+    },
+    {
+      "id": "ta020",
+      "order": 4,
+      "text": "A planta ensina Yonah sobre a compaixão divina por uma grande cidade.",
+      "text_he": null,
+      "refs": [
+        "Jonah 4:1-11"
+      ],
+      "ref_start": "Jonah 4:1",
+      "ref_end": "Jonah 4:11",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 11,
+      "sefaria_ref": "Jonah 4:1-11",
+      "tags": [
+        "planta",
+        "compaixão",
+        "nações"
+      ],
+      "topic": "Lição de compaixão"
+    }
+  ]
+}

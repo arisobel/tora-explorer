@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Psalms",
+    "book_he": "ספר שלישי",
+    "book_sefaria": "Psalms",
+    "collection": "Psalms",
+    "unit_index": 3,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "book-three-sanctuary-crisis",
+    "label": "Livro III · Santuário e crise",
+    "label_pt": "Perguntas sobre prosperidade, memória, presença e aliança davídica",
+    "hebrew": "ספר שלישי",
+    "transliteration": "Livro III · Santuário e crise"
+  },
+  "range": {
+    "ref_start": "Psalms 73:1",
+    "ref_end": "Psalms 89:53",
+    "sefaria_ref": "Psalms 73:1-89:53",
+    "chapters_covered": [
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89
+    ],
+    "chapter_start": 73,
+    "chapter_end": 89,
+    "verse_start": 1,
+    "verse_end_chapter": 89,
+    "verse_end": 53
+  },
+  "timeline": {
+    "period_name": "Livro III · Santuário e crise",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 3339,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "O terceiro livro enfrenta crise nacional e pessoal a partir do santuário, da memória e da aliança."
+  },
+  "summary": {
+    "short": "O terceiro livro enfrenta crise nacional e pessoal a partir do santuário, da memória e da aliança.",
+    "medium": "O terceiro livro enfrenta crise nacional e pessoal a partir do santuário, da memória e da aliança.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Asaf",
+      "Bnei Korach",
+      "David"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Santuário",
+      "Memória",
+      "Crise",
+      "Aliança"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ps009",
+      "order": 1,
+      "text": "A prosperidade dos ímpios é reinterpretada quando o salmista entra no santuário.",
+      "text_he": null,
+      "refs": [
+        "Psalms 73:1-28"
+      ],
+      "ref_start": "Psalms 73:1",
+      "ref_end": "Psalms 73:28",
+      "chapter": 73,
+      "verse_start": 1,
+      "verse_end": 28,
+      "sefaria_ref": "Psalms 73:1-28",
+      "tags": [
+        "ímpios",
+        "santuário",
+        "discernimento"
+      ],
+      "topic": "Discernimento no santuário"
+    },
+    {
+      "id": "ps010",
+      "order": 2,
+      "text": "A história do êxodo e da rebeldia é narrada para ensinar a próxima geração.",
+      "text_he": null,
+      "refs": [
+        "Psalms 78:1-72"
+      ],
+      "ref_start": "Psalms 78:1",
+      "ref_end": "Psalms 78:72",
+      "chapter": 78,
+      "verse_start": 1,
+      "verse_end": 72,
+      "sefaria_ref": "Psalms 78:1-72",
+      "tags": [
+        "memória",
+        "êxodo",
+        "educação"
+      ],
+      "topic": "Ensinar a geração"
+    },
+    {
+      "id": "ps011",
+      "order": 3,
+      "text": "O salmista expressa desejo intenso pelos pátios de Deus.",
+      "text_he": null,
+      "refs": [
+        "Psalms 84:1-13"
+      ],
+      "ref_start": "Psalms 84:1",
+      "ref_end": "Psalms 84:13",
+      "chapter": 84,
+      "verse_start": 1,
+      "verse_end": 13,
+      "sefaria_ref": "Psalms 84:1-13",
+      "tags": [
+        "templo",
+        "anseio",
+        "presença"
+      ],
+      "topic": "Desejo pelo Templo"
+    },
+    {
+      "id": "ps012",
+      "order": 4,
+      "text": "A crise do rei é colocada diante da promessa feita a David.",
+      "text_he": null,
+      "refs": [
+        "Psalms 89:1-53"
+      ],
+      "ref_start": "Psalms 89:1",
+      "ref_end": "Psalms 89:53",
+      "chapter": 89,
+      "verse_start": 1,
+      "verse_end": 53,
+      "sefaria_ref": "Psalms 89:1-53",
+      "tags": [
+        "david",
+        "aliança",
+        "crise"
+      ],
+      "topic": "Aliança em crise"
+    }
+  ]
+}

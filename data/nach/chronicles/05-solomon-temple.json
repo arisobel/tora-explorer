@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "II Chronicles",
+    "book_he": "שלמה והמקדש",
+    "book_sefaria": "II Chronicles",
+    "collection": "Chronicles",
+    "unit_index": 5,
+    "total_units_in_book": 8
+  },
+  "identity": {
+    "id": "solomon-temple",
+    "label": "Shlomo e o Templo",
+    "label_pt": "Sabedoria, construção, dedicação e glória do reino",
+    "hebrew": "שלמה והמקדש",
+    "transliteration": "Shlomo e o Templo"
+  },
+  "range": {
+    "ref_start": "II Chronicles 1:1",
+    "ref_end": "II Chronicles 9:31",
+    "sefaria_ref": "II Chronicles 1:1-9:31",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "chapter_start": 1,
+    "chapter_end": 9,
+    "verse_start": 1,
+    "verse_end_chapter": 9,
+    "verse_end": 31
+  },
+  "timeline": {
+    "period_name": "Shlomo e o Templo",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 2964,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "Shlomo recebe sabedoria, constrói e dedica o Templo e recebe visitantes de longe."
+  },
+  "summary": {
+    "short": "Shlomo recebe sabedoria, constrói e dedica o Templo e recebe visitantes de longe.",
+    "medium": "Shlomo recebe sabedoria, constrói e dedica o Templo e recebe visitantes de longe.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Shlomo",
+      "Chiram",
+      "Rainha de Sheva",
+      "Kohanim",
+      "Leviim"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Shlomo",
+      "Sabedoria",
+      "Templo",
+      "Dedicação"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ch017",
+      "order": 1,
+      "text": "Shlomo pede sabedoria para governar, e recebe também riqueza e honra.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 1:1-17"
+      ],
+      "ref_start": "II Chronicles 1:1",
+      "ref_end": "II Chronicles 1:17",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 17,
+      "sefaria_ref": "II Chronicles 1:1-17",
+      "tags": [
+        "shlomo",
+        "sabedoria",
+        "reino"
+      ],
+      "topic": "Pedido de sabedoria"
+    },
+    {
+      "id": "ch018",
+      "order": 2,
+      "text": "A construção do Templo é preparada e executada com atenção a materiais e serviço.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 2:1-5:1"
+      ],
+      "ref_start": "II Chronicles 2:1",
+      "ref_end": "II Chronicles 5:1",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end_chapter": 5,
+      "verse_end": 1,
+      "sefaria_ref": "II Chronicles 2:1-5:1",
+      "tags": [
+        "templo",
+        "construção",
+        "chiram"
+      ],
+      "topic": "Construção do Templo"
+    },
+    {
+      "id": "ch019",
+      "order": 3,
+      "text": "A arca é instalada, a glória enche a Casa e Shlomo ora na dedicação.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 5:2-7:22"
+      ],
+      "ref_start": "II Chronicles 5:2",
+      "ref_end": "II Chronicles 7:22",
+      "chapter": 5,
+      "verse_start": 2,
+      "verse_end_chapter": 7,
+      "verse_end": 22,
+      "sefaria_ref": "II Chronicles 5:2-7:22",
+      "tags": [
+        "arca",
+        "glória",
+        "dedicação"
+      ],
+      "topic": "Dedicação do Templo"
+    },
+    {
+      "id": "ch020",
+      "order": 4,
+      "text": "A rainha de Sheva reconhece a sabedoria de Shlomo, e seu reinado é resumido.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 8:1-9:31"
+      ],
+      "ref_start": "II Chronicles 8:1",
+      "ref_end": "II Chronicles 9:31",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end_chapter": 9,
+      "verse_end": 31,
+      "sefaria_ref": "II Chronicles 8:1-9:31",
+      "tags": [
+        "sheva",
+        "sabedoria",
+        "reinado"
+      ],
+      "topic": "Glória do reino"
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Psalms",
+    "book_he": "ספר ראשון",
+    "book_sefaria": "Psalms",
+    "collection": "Psalms",
+    "unit_index": 1,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "book-one-davidic-prayer",
+    "label": "Livro I · Oração davídica",
+    "label_pt": "Do caminho justo à confiança do pastor",
+    "hebrew": "ספר ראשון",
+    "transliteration": "Livro I · Oração davídica"
+  },
+  "range": {
+    "ref_start": "Psalms 1:1",
+    "ref_end": "Psalms 41:14",
+    "sefaria_ref": "Psalms 1:1-41:14",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "chapter_start": 1,
+    "chapter_end": 41,
+    "verse_start": 1,
+    "verse_end_chapter": 41,
+    "verse_end": 14
+  },
+  "timeline": {
+    "period_name": "Livro I · Oração davídica",
+    "anno_mundi_start": 2884,
+    "anno_mundi_end": 2924,
+    "era": "nach",
+    "position_pct": 50,
+    "description": "O primeiro livro apresenta caminhos de justiça, glória da criação, Torá e confiança pessoal."
+  },
+  "summary": {
+    "short": "O primeiro livro apresenta caminhos de justiça, glória da criação, Torá e confiança pessoal.",
+    "medium": "O primeiro livro apresenta caminhos de justiça, glória da criação, Torá e confiança pessoal.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "David",
+      "Justo",
+      "Ímpio"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Justo",
+      "Criação",
+      "Torá",
+      "Confiança"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ps001",
+      "order": 1,
+      "text": "A abertura contrasta o caminho do justo, enraizado na Torá, com o caminho instável dos ímpios.",
+      "text_he": null,
+      "refs": [
+        "Psalms 1:1-6"
+      ],
+      "ref_start": "Psalms 1:1",
+      "ref_end": "Psalms 1:6",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Psalms 1:1-6",
+      "tags": [
+        "justo",
+        "torá",
+        "caminho"
+      ],
+      "topic": "Dois caminhos"
+    },
+    {
+      "id": "ps002",
+      "order": 2,
+      "text": "A grandeza humana é contemplada dentro da majestade da criação divina.",
+      "text_he": null,
+      "refs": [
+        "Psalms 8:1-10"
+      ],
+      "ref_start": "Psalms 8:1",
+      "ref_end": "Psalms 8:10",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 10,
+      "sefaria_ref": "Psalms 8:1-10",
+      "tags": [
+        "criação",
+        "humanidade",
+        "majestade"
+      ],
+      "topic": "Glória na criação"
+    },
+    {
+      "id": "ps003",
+      "order": 3,
+      "text": "A criação e a Torá testemunham a glória e a orientação de Deus.",
+      "text_he": null,
+      "refs": [
+        "Psalms 19:1-15"
+      ],
+      "ref_start": "Psalms 19:1",
+      "ref_end": "Psalms 19:15",
+      "chapter": 19,
+      "verse_start": 1,
+      "verse_end": 15,
+      "sefaria_ref": "Psalms 19:1-15",
+      "tags": [
+        "torá",
+        "criação",
+        "palavra"
+      ],
+      "topic": "Criação e Torá"
+    },
+    {
+      "id": "ps004",
+      "order": 4,
+      "text": "O salmista confia em Deus como pastor mesmo no vale escuro.",
+      "text_he": null,
+      "refs": [
+        "Psalms 23:1-6"
+      ],
+      "ref_start": "Psalms 23:1",
+      "ref_end": "Psalms 23:6",
+      "chapter": 23,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Psalms 23:1-6",
+      "tags": [
+        "pastor",
+        "confiança",
+        "proteção"
+      ],
+      "topic": "Deus como pastor"
+    }
+  ]
+}

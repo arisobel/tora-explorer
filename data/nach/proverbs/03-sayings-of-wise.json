@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Proverbs",
+    "book_he": "דברי חכמים",
+    "book_sefaria": "Proverbs",
+    "collection": "Proverbs",
+    "unit_index": 3,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "sayings-of-wise",
+    "label": "Ditos dos sábios",
+    "label_pt": "Conselhos sobre prudência, disciplina e responsabilidade",
+    "hebrew": "דברי חכמים",
+    "transliteration": "Ditos dos sábios"
+  },
+  "range": {
+    "ref_start": "Proverbs 22:17",
+    "ref_end": "Proverbs 24:34",
+    "sefaria_ref": "Proverbs 22:17-24:34",
+    "chapters_covered": [
+      22,
+      23,
+      24
+    ],
+    "chapter_start": 22,
+    "chapter_end": 24,
+    "verse_start": 17,
+    "verse_end_chapter": 24,
+    "verse_end": 34
+  },
+  "timeline": {
+    "period_name": "Ditos dos sábios",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 3205,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "Ditos dos sábios orientam atenção, autocontrole, trabalho e responsabilidade social."
+  },
+  "summary": {
+    "short": "Ditos dos sábios orientam atenção, autocontrole, trabalho e responsabilidade social.",
+    "medium": "Ditos dos sábios orientam atenção, autocontrole, trabalho e responsabilidade social.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Sábios",
+      "Discípulo"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Prudência",
+      "Disciplina",
+      "Responsabilidade",
+      "Trabalho"
+    ]
+  },
+  "facts": [
+    {
+      "id": "pr009",
+      "order": 1,
+      "text": "O discípulo é convidado a ouvir e guardar palavras sábias para confiar em Deus.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 22:17-29"
+      ],
+      "ref_start": "Proverbs 22:17",
+      "ref_end": "Proverbs 22:29",
+      "chapter": 22,
+      "verse_start": 17,
+      "verse_end": 29,
+      "sefaria_ref": "Proverbs 22:17-29",
+      "tags": [
+        "ensino",
+        "confiança",
+        "excelência"
+      ],
+      "topic": "Ouvir os sábios"
+    },
+    {
+      "id": "pr010",
+      "order": 2,
+      "text": "Autocontrole, disciplina e respeito aos limites protegem a vida.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 23:1-12"
+      ],
+      "ref_start": "Proverbs 23:1",
+      "ref_end": "Proverbs 23:12",
+      "chapter": 23,
+      "verse_start": 1,
+      "verse_end": 12,
+      "sefaria_ref": "Proverbs 23:1-12",
+      "tags": [
+        "autocontrole",
+        "disciplina",
+        "limites"
+      ],
+      "topic": "Disciplina"
+    },
+    {
+      "id": "pr011",
+      "order": 3,
+      "text": "Sabedoria constrói a casa e responsabilidade inclui agir por quem está em perigo.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 24:3-12"
+      ],
+      "ref_start": "Proverbs 24:3",
+      "ref_end": "Proverbs 24:12",
+      "chapter": 24,
+      "verse_start": 3,
+      "verse_end": 12,
+      "sefaria_ref": "Proverbs 24:3-12",
+      "tags": [
+        "casa",
+        "sabedoria",
+        "responsabilidade"
+      ],
+      "topic": "Construir e agir"
+    },
+    {
+      "id": "pr012",
+      "order": 4,
+      "text": "Parcialidade no juízo e preguiça são expostas como caminhos destrutivos.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 24:23-34"
+      ],
+      "ref_start": "Proverbs 24:23",
+      "ref_end": "Proverbs 24:34",
+      "chapter": 24,
+      "verse_start": 23,
+      "verse_end": 34,
+      "sefaria_ref": "Proverbs 24:23-34",
+      "tags": [
+        "juízo",
+        "preguiça",
+        "trabalho"
+      ],
+      "topic": "Juízo e trabalho"
+    }
+  ]
+}

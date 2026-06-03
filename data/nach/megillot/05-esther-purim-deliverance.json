@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Esther",
+    "book_he": "אסתר",
+    "book_sefaria": "Esther",
+    "collection": "Megillot",
+    "unit_index": 5,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "esther-purim-deliverance",
+    "label": "Ester · Purim e livramento",
+    "label_pt": "Palácio persa, decreto de Haman, coragem de Ester e reversão",
+    "hebrew": "אסתר",
+    "transliteration": "Ester · Purim e livramento"
+  },
+  "range": {
+    "ref_start": "Esther 1:1",
+    "ref_end": "Esther 10:3",
+    "sefaria_ref": "Esther 1:1-10:3",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_start": 1,
+    "chapter_end": 10,
+    "verse_start": 1,
+    "verse_end_chapter": 10,
+    "verse_end": 3
+  },
+  "timeline": {
+    "period_name": "Ester · Purim e livramento",
+    "anno_mundi_start": 3395,
+    "anno_mundi_end": 3405,
+    "era": "nach",
+    "position_pct": 59,
+    "description": "Ester narra ameaça, coragem, reversão e memória comunitária no império persa."
+  },
+  "summary": {
+    "short": "Ester narra ameaça, coragem, reversão e memória comunitária no império persa.",
+    "medium": "Ester narra ameaça, coragem, reversão e memória comunitária no império persa.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Ester",
+      "Mordechai",
+      "Achashverosh",
+      "Haman"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Purim",
+      "Coragem",
+      "Reversão",
+      "Memória"
+    ]
+  },
+  "facts": [
+    {
+      "id": "mg017",
+      "order": 1,
+      "text": "A crise com Vashti abre caminho para Ester tornar-se rainha sem revelar sua origem.",
+      "text_he": null,
+      "refs": [
+        "Esther 1:1-2:20"
+      ],
+      "ref_start": "Esther 1:1",
+      "ref_end": "Esther 2:20",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end_chapter": 2,
+      "verse_end": 20,
+      "sefaria_ref": "Esther 1:1-2:20",
+      "tags": [
+        "ester",
+        "vashti",
+        "palácio"
+      ],
+      "topic": "Ester no palácio"
+    },
+    {
+      "id": "mg018",
+      "order": 2,
+      "text": "Haman obtém um decreto contra os judeus após o conflito com Mordechai.",
+      "text_he": null,
+      "refs": [
+        "Esther 3:1-15"
+      ],
+      "ref_start": "Esther 3:1",
+      "ref_end": "Esther 3:15",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 15,
+      "sefaria_ref": "Esther 3:1-15",
+      "tags": [
+        "haman",
+        "mordechai",
+        "decreto"
+      ],
+      "topic": "Decreto de Haman"
+    },
+    {
+      "id": "mg019",
+      "order": 3,
+      "text": "Mordechai chama Ester a agir, e ela se aproxima do rei após jejum coletivo.",
+      "text_he": null,
+      "refs": [
+        "Esther 4:1-5:8"
+      ],
+      "ref_start": "Esther 4:1",
+      "ref_end": "Esther 5:8",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end_chapter": 5,
+      "verse_end": 8,
+      "sefaria_ref": "Esther 4:1-5:8",
+      "tags": [
+        "coragem",
+        "jejum",
+        "ester"
+      ],
+      "topic": "Ester age"
+    },
+    {
+      "id": "mg020",
+      "order": 4,
+      "text": "A narrativa se reverte, Haman cai, os judeus são defendidos e Purim é estabelecido.",
+      "text_he": null,
+      "refs": [
+        "Esther 6:1-10:3"
+      ],
+      "ref_start": "Esther 6:1",
+      "ref_end": "Esther 10:3",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end_chapter": 10,
+      "verse_end": 3,
+      "sefaria_ref": "Esther 6:1-10:3",
+      "tags": [
+        "reversão",
+        "purim",
+        "livramento"
+      ],
+      "topic": "Reversão e Purim"
+    }
+  ]
+}

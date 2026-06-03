@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Job",
+    "book_he": "מענה ה׳",
+    "book_sefaria": "Job",
+    "collection": "Job",
+    "unit_index": 6,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "divine-response-restoration",
+    "label": "Resposta divina e restauração",
+    "label_pt": "Perguntas da criação, humildade de Iyov e desfecho",
+    "hebrew": "מענה ה׳",
+    "transliteration": "Resposta divina e restauração"
+  },
+  "range": {
+    "ref_start": "Job 38:1",
+    "ref_end": "Job 42:17",
+    "sefaria_ref": "Job 38:1-42:17",
+    "chapters_covered": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "chapter_start": 38,
+    "chapter_end": 42,
+    "verse_start": 1,
+    "verse_end_chapter": 42,
+    "verse_end": 17
+  },
+  "timeline": {
+    "period_name": "Resposta divina e restauração",
+    "anno_mundi_start": 1948,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 34,
+    "description": "Deus responde a partir da tempestade, ampliando o horizonte de Iyov para a complexidade da criação."
+  },
+  "summary": {
+    "short": "Deus responde a partir da tempestade, ampliando o horizonte de Iyov para a complexidade da criação.",
+    "medium": "Deus responde a partir da tempestade, ampliando o horizonte de Iyov para a complexidade da criação.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Iyov",
+      "Elifaz",
+      "Bildad",
+      "Tzofar"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Criação",
+      "Humildade",
+      "Behemot",
+      "Leviatan",
+      "Restauração"
+    ]
+  },
+  "facts": [
+    {
+      "id": "jb021",
+      "order": 1,
+      "text": "Deus responde da tempestade com perguntas sobre fundamentos da terra, mar, luz e céu.",
+      "text_he": null,
+      "refs": [
+        "Job 38:1-38"
+      ],
+      "ref_start": "Job 38:1",
+      "ref_end": "Job 38:38",
+      "chapter": 38,
+      "verse_start": 1,
+      "verse_end": 38,
+      "sefaria_ref": "Job 38:1-38",
+      "tags": [
+        "criação",
+        "tempestade",
+        "perguntas"
+      ],
+      "topic": "Fundamentos da criação"
+    },
+    {
+      "id": "jb022",
+      "order": 2,
+      "text": "Animais selvagens revelam uma ordem viva que excede o controle humano.",
+      "text_he": null,
+      "refs": [
+        "Job 38:39-39:30"
+      ],
+      "ref_start": "Job 38:39",
+      "ref_end": "Job 39:30",
+      "chapter": 38,
+      "verse_start": 39,
+      "verse_end_chapter": 39,
+      "verse_end": 30,
+      "sefaria_ref": "Job 38:39-39:30",
+      "tags": [
+        "animais",
+        "ordem",
+        "limites"
+      ],
+      "topic": "Vida além do controle"
+    },
+    {
+      "id": "jb023",
+      "order": 3,
+      "text": "Behemot e Leviatan aprofundam a visão da força e complexidade da criação.",
+      "text_he": null,
+      "refs": [
+        "Job 40:1-41:26"
+      ],
+      "ref_start": "Job 40:1",
+      "ref_end": "Job 41:26",
+      "chapter": 40,
+      "verse_start": 1,
+      "verse_end_chapter": 41,
+      "verse_end": 26,
+      "sefaria_ref": "Job 40:1-41:26",
+      "tags": [
+        "behemot",
+        "leviatan",
+        "força"
+      ],
+      "topic": "Behemot e Leviatan"
+    },
+    {
+      "id": "jb024",
+      "order": 4,
+      "text": "Iyov responde com humildade, os amigos são corrigidos e sua vida é restaurada.",
+      "text_he": null,
+      "refs": [
+        "Job 42:1-17"
+      ],
+      "ref_start": "Job 42:1",
+      "ref_end": "Job 42:17",
+      "chapter": 42,
+      "verse_start": 1,
+      "verse_end": 17,
+      "sefaria_ref": "Job 42:1-17",
+      "tags": [
+        "humildade",
+        "amigos",
+        "restauração"
+      ],
+      "topic": "Humildade e restauração"
+    }
+  ]
+}

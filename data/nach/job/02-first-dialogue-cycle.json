@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Job",
+    "book_he": "מחזור ראשון",
+    "book_sefaria": "Job",
+    "collection": "Job",
+    "unit_index": 2,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "first-dialogue-cycle",
+    "label": "Primeiro ciclo de diálogos",
+    "label_pt": "Lamento de Iyov e primeiras respostas dos amigos",
+    "hebrew": "מחזור ראשון",
+    "transliteration": "Primeiro ciclo de diálogos"
+  },
+  "range": {
+    "ref_start": "Job 3:1",
+    "ref_end": "Job 14:22",
+    "sefaria_ref": "Job 3:1-14:22",
+    "chapters_covered": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "chapter_start": 3,
+    "chapter_end": 14,
+    "verse_start": 1,
+    "verse_end_chapter": 14,
+    "verse_end": 22
+  },
+  "timeline": {
+    "period_name": "Primeiro ciclo de diálogos",
+    "anno_mundi_start": 1948,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 34,
+    "description": "Iyov lamenta seu nascimento, e os amigos iniciam explicações baseadas em retribuição."
+  },
+  "summary": {
+    "short": "Iyov lamenta seu nascimento, e os amigos iniciam explicações baseadas em retribuição.",
+    "medium": "Iyov lamenta seu nascimento, e os amigos iniciam explicações baseadas em retribuição.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Iyov",
+      "Elifaz",
+      "Bildad",
+      "Tzofar"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Lamento",
+      "Retribuição",
+      "Mortalidade",
+      "Esperança"
+    ]
+  },
+  "facts": [
+    {
+      "id": "jb005",
+      "order": 1,
+      "text": "Iyov rompe o silêncio lamentando o dia de seu nascimento.",
+      "text_he": null,
+      "refs": [
+        "Job 3:1-26"
+      ],
+      "ref_start": "Job 3:1",
+      "ref_end": "Job 3:26",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 26,
+      "sefaria_ref": "Job 3:1-26",
+      "tags": [
+        "lamento",
+        "nascimento",
+        "dor"
+      ],
+      "topic": "Lamento inicial"
+    },
+    {
+      "id": "jb006",
+      "order": 2,
+      "text": "Elifaz sugere que sofrimento e culpa estão ligados e apela à experiência.",
+      "text_he": null,
+      "refs": [
+        "Job 4:1-5:27"
+      ],
+      "ref_start": "Job 4:1",
+      "ref_end": "Job 5:27",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end_chapter": 5,
+      "verse_end": 27,
+      "sefaria_ref": "Job 4:1-5:27",
+      "tags": [
+        "elifaz",
+        "retribuição",
+        "experiência"
+      ],
+      "topic": "Resposta de Elifaz"
+    },
+    {
+      "id": "jb007",
+      "order": 3,
+      "text": "Iyov pede que sua dor seja pesada e busca linguagem honesta diante de Deus.",
+      "text_he": null,
+      "refs": [
+        "Job 6:1-7:21"
+      ],
+      "ref_start": "Job 6:1",
+      "ref_end": "Job 7:21",
+      "chapter": 6,
+      "verse_start": 1,
+      "verse_end_chapter": 7,
+      "verse_end": 21,
+      "sefaria_ref": "Job 6:1-7:21",
+      "tags": [
+        "dor",
+        "honestidade",
+        "oração"
+      ],
+      "topic": "Resposta de Iyov"
+    },
+    {
+      "id": "jb008",
+      "order": 4,
+      "text": "O ciclo termina com reflexão sobre fragilidade humana e esperança comparada à de uma árvore.",
+      "text_he": null,
+      "refs": [
+        "Job 14:1-22"
+      ],
+      "ref_start": "Job 14:1",
+      "ref_end": "Job 14:22",
+      "chapter": 14,
+      "verse_start": 1,
+      "verse_end": 22,
+      "sefaria_ref": "Job 14:1-22",
+      "tags": [
+        "mortalidade",
+        "árvore",
+        "esperança"
+      ],
+      "topic": "Fragilidade humana"
+    }
+  ]
+}

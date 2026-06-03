@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Nehemiah",
+    "book_he": "חנוכת החומה",
+    "book_sefaria": "Nehemiah",
+    "collection": "Ezra-Nehemiah",
+    "unit_index": 6,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "jerusalem-dedication-reforms",
+    "label": "Yerushalayim, dedicação e reformas",
+    "label_pt": "Povoamento, dedicação dos muros e ajustes finais",
+    "hebrew": "חנוכת החומה",
+    "transliteration": "Yerushalayim, dedicação e reformas"
+  },
+  "range": {
+    "ref_start": "Nehemiah 11:1",
+    "ref_end": "Nehemiah 13:31",
+    "sefaria_ref": "Nehemiah 11:1-13:31",
+    "chapters_covered": [
+      11,
+      12,
+      13
+    ],
+    "chapter_start": 11,
+    "chapter_end": 13,
+    "verse_start": 1,
+    "verse_end_chapter": 13,
+    "verse_end": 31
+  },
+  "timeline": {
+    "period_name": "Yerushalayim, dedicação e reformas",
+    "anno_mundi_start": 3446,
+    "anno_mundi_end": 3448,
+    "era": "nach",
+    "position_pct": 60,
+    "description": "Yerushalayim é povoada, os muros são dedicados e Nechemia realiza reformas finais."
+  },
+  "summary": {
+    "short": "Yerushalayim é povoada, os muros são dedicados e Nechemia realiza reformas finais.",
+    "medium": "Yerushalayim é povoada, os muros são dedicados e Nechemia realiza reformas finais.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Nechemia",
+      "Ezra",
+      "Kohanim",
+      "Leviim"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Yerushalayim",
+      "Dedicação",
+      "Templo",
+      "Shabat"
+    ]
+  },
+  "facts": [
+    {
+      "id": "en021",
+      "order": 1,
+      "text": "Famílias são designadas para habitar Yerushalayim e fortalecer a cidade.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 11:1-36"
+      ],
+      "ref_start": "Nehemiah 11:1",
+      "ref_end": "Nehemiah 11:36",
+      "chapter": 11,
+      "verse_start": 1,
+      "verse_end": 36,
+      "sefaria_ref": "Nehemiah 11:1-36",
+      "tags": [
+        "yerushalayim",
+        "famílias",
+        "cidade"
+      ],
+      "topic": "Povoamento de Yerushalayim"
+    },
+    {
+      "id": "en022",
+      "order": 2,
+      "text": "Kohanim e levitas participam da dedicação alegre das muralhas.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 12:1-47"
+      ],
+      "ref_start": "Nehemiah 12:1",
+      "ref_end": "Nehemiah 12:47",
+      "chapter": 12,
+      "verse_start": 1,
+      "verse_end": 47,
+      "sefaria_ref": "Nehemiah 12:1-47",
+      "tags": [
+        "dedicação",
+        "muralhas",
+        "leviim"
+      ],
+      "topic": "Dedicação dos muros"
+    },
+    {
+      "id": "en023",
+      "order": 3,
+      "text": "Nechemia corrige abusos relacionados ao Templo e ao sustento dos levitas.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 13:1-14"
+      ],
+      "ref_start": "Nehemiah 13:1",
+      "ref_end": "Nehemiah 13:14",
+      "chapter": 13,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "Nehemiah 13:1-14",
+      "tags": [
+        "templo",
+        "leviim",
+        "reforma"
+      ],
+      "topic": "Reforma do Templo"
+    },
+    {
+      "id": "en024",
+      "order": 4,
+      "text": "O livro encerra com reformas sobre Shabat e identidade comunitária.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 13:15-31"
+      ],
+      "ref_start": "Nehemiah 13:15",
+      "ref_end": "Nehemiah 13:31",
+      "chapter": 13,
+      "verse_start": 15,
+      "verse_end": 31,
+      "sefaria_ref": "Nehemiah 13:15-31",
+      "tags": [
+        "shabat",
+        "comunidade",
+        "memória"
+      ],
+      "topic": "Reformas finais"
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "I Chronicles",
+    "book_he": "ברית דוד",
+    "book_sefaria": "I Chronicles",
+    "collection": "Chronicles",
+    "unit_index": 3,
+    "total_units_in_book": 8
+  },
+  "identity": {
+    "id": "davidic-covenant-census",
+    "label": "Aliança davídica e recenseamento",
+    "label_pt": "Promessa à casa de David, vitórias e terreno do futuro Templo",
+    "hebrew": "ברית דוד",
+    "transliteration": "Aliança davídica e recenseamento"
+  },
+  "range": {
+    "ref_start": "I Chronicles 17:1",
+    "ref_end": "I Chronicles 21:30",
+    "sefaria_ref": "I Chronicles 17:1-21:30",
+    "chapters_covered": [
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "chapter_start": 17,
+    "chapter_end": 21,
+    "verse_start": 1,
+    "verse_end_chapter": 21,
+    "verse_end": 30
+  },
+  "timeline": {
+    "period_name": "Aliança davídica e recenseamento",
+    "anno_mundi_start": 2892,
+    "anno_mundi_end": 2924,
+    "era": "nach",
+    "position_pct": 50,
+    "description": "A promessa à casa de David e o recenseamento conduzem ao local do futuro Templo."
+  },
+  "summary": {
+    "short": "A promessa à casa de David e o recenseamento conduzem ao local do futuro Templo.",
+    "medium": "A promessa à casa de David e o recenseamento conduzem ao local do futuro Templo.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "David",
+      "Natan",
+      "Yoav",
+      "Ornan"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Aliança",
+      "David",
+      "Vitórias",
+      "Templo"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ch009",
+      "order": 1,
+      "text": "David deseja construir uma casa, mas recebe promessa de que Deus edificará sua dinastia.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 17:1-27"
+      ],
+      "ref_start": "I Chronicles 17:1",
+      "ref_end": "I Chronicles 17:27",
+      "chapter": 17,
+      "verse_start": 1,
+      "verse_end": 27,
+      "sefaria_ref": "I Chronicles 17:1-27",
+      "tags": [
+        "david",
+        "aliança",
+        "dinastia"
+      ],
+      "topic": "Promessa a David"
+    },
+    {
+      "id": "ch010",
+      "order": 2,
+      "text": "Vitórias e administração mostram a consolidação do reino.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 18:1-20:8"
+      ],
+      "ref_start": "I Chronicles 18:1",
+      "ref_end": "I Chronicles 20:8",
+      "chapter": 18,
+      "verse_start": 1,
+      "verse_end_chapter": 20,
+      "verse_end": 8,
+      "sefaria_ref": "I Chronicles 18:1-20:8",
+      "tags": [
+        "vitórias",
+        "reino",
+        "administração"
+      ],
+      "topic": "Reino consolidado"
+    },
+    {
+      "id": "ch011",
+      "order": 3,
+      "text": "O recenseamento traz culpa e juízo, levando David à confissão.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 21:1-17"
+      ],
+      "ref_start": "I Chronicles 21:1",
+      "ref_end": "I Chronicles 21:17",
+      "chapter": 21,
+      "verse_start": 1,
+      "verse_end": 17,
+      "sefaria_ref": "I Chronicles 21:1-17",
+      "tags": [
+        "recenseamento",
+        "culpa",
+        "juízo"
+      ],
+      "topic": "Recenseamento e juízo"
+    },
+    {
+      "id": "ch012",
+      "order": 4,
+      "text": "David compra a eira de Ornan e identifica o local do altar e do futuro Templo.",
+      "text_he": null,
+      "refs": [
+        "I Chronicles 21:18-30"
+      ],
+      "ref_start": "I Chronicles 21:18",
+      "ref_end": "I Chronicles 21:30",
+      "chapter": 21,
+      "verse_start": 18,
+      "verse_end": 30,
+      "sefaria_ref": "I Chronicles 21:18-30",
+      "tags": [
+        "ornan",
+        "altar",
+        "templo"
+      ],
+      "topic": "Local do Templo"
+    }
+  ]
+}

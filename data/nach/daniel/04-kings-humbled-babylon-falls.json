@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Daniel",
+    "book_he": "מלכים נשפלים",
+    "book_sefaria": "Daniel",
+    "collection": "Daniel",
+    "unit_index": 4,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "kings-humbled-babylon-falls",
+    "label": "Reis humilhados e queda de Bavel",
+    "label_pt": "Orgulho de Nevuchadnetzar e escrita na parede para Belshatzar",
+    "hebrew": "מלכים נשפלים",
+    "transliteration": "Reis humilhados e queda de Bavel"
+  },
+  "range": {
+    "ref_start": "Daniel 4:1",
+    "ref_end": "Daniel 5:30",
+    "sefaria_ref": "Daniel 4:1-5:30",
+    "chapters_covered": [
+      4,
+      5
+    ],
+    "chapter_start": 4,
+    "chapter_end": 5,
+    "verse_start": 1,
+    "verse_end_chapter": 5,
+    "verse_end": 30
+  },
+  "timeline": {
+    "period_name": "Reis humilhados e queda de Bavel",
+    "anno_mundi_start": 3345,
+    "anno_mundi_end": 3389,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "Dois reis aprendem que soberania e orgulho são julgados pelo governo divino."
+  },
+  "summary": {
+    "short": "Dois reis aprendem que soberania e orgulho são julgados pelo governo divino.",
+    "medium": "Dois reis aprendem que soberania e orgulho são julgados pelo governo divino.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Daniel",
+      "Nevuchadnetzar",
+      "Belshatzar"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Orgulho",
+      "Soberania",
+      "Juízo",
+      "Bavel"
+    ]
+  },
+  "facts": [
+    {
+      "id": "dn013",
+      "order": 1,
+      "text": "Nevuchadnetzar relata um sonho de árvore e recebe advertência para praticar justiça.",
+      "text_he": null,
+      "refs": [
+        "Daniel 4:1-24"
+      ],
+      "ref_start": "Daniel 4:1",
+      "ref_end": "Daniel 4:24",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 24,
+      "sefaria_ref": "Daniel 4:1-24",
+      "tags": [
+        "árvore",
+        "sonho",
+        "justiça"
+      ],
+      "topic": "Sonho da árvore"
+    },
+    {
+      "id": "dn014",
+      "order": 2,
+      "text": "O orgulho do rei é quebrado até que ele reconheça a soberania divina.",
+      "text_he": null,
+      "refs": [
+        "Daniel 4:25-34"
+      ],
+      "ref_start": "Daniel 4:25",
+      "ref_end": "Daniel 4:34",
+      "chapter": 4,
+      "verse_start": 25,
+      "verse_end": 34,
+      "sefaria_ref": "Daniel 4:25-34",
+      "tags": [
+        "orgulho",
+        "humildade",
+        "soberania"
+      ],
+      "topic": "Rei humilhado"
+    },
+    {
+      "id": "dn015",
+      "order": 3,
+      "text": "Belshatzar profana os vasos do Templo e vê uma escrita misteriosa na parede.",
+      "text_he": null,
+      "refs": [
+        "Daniel 5:1-16"
+      ],
+      "ref_start": "Daniel 5:1",
+      "ref_end": "Daniel 5:16",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 16,
+      "sefaria_ref": "Daniel 5:1-16",
+      "tags": [
+        "belshatzar",
+        "templo",
+        "escrita"
+      ],
+      "topic": "Banquete de Belshatzar"
+    },
+    {
+      "id": "dn016",
+      "order": 4,
+      "text": "Daniel interpreta a mensagem como juízo, e o reino babilônico cai naquela noite.",
+      "text_he": null,
+      "refs": [
+        "Daniel 5:17-30"
+      ],
+      "ref_start": "Daniel 5:17",
+      "ref_end": "Daniel 5:30",
+      "chapter": 5,
+      "verse_start": 17,
+      "verse_end": 30,
+      "sefaria_ref": "Daniel 5:17-30",
+      "tags": [
+        "juízo",
+        "bavel",
+        "queda"
+      ],
+      "topic": "Queda de Bavel"
+    }
+  ]
+}

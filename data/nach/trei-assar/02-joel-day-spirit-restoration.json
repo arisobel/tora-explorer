@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "neviim-acharonim",
+    "book": "Joel",
+    "book_he": "יואל",
+    "book_sefaria": "Joel",
+    "collection": "Trei Asar",
+    "unit_index": 2,
+    "total_units_in_book": 12
+  },
+  "identity": {
+    "id": "joel-day-spirit-restoration",
+    "label": "Yoel · Dia, espírito e restauração",
+    "label_pt": "Praga, jejum, derramamento do espírito e renovação de Tzion",
+    "hebrew": "יואל",
+    "transliteration": "Yoel · Dia, espírito e restauração"
+  },
+  "range": {
+    "ref_start": "Joel 1:1",
+    "ref_end": "Joel 4:21",
+    "sefaria_ref": "Joel 1:1-4:21",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "chapter_start": 1,
+    "chapter_end": 4,
+    "verse_start": 1,
+    "verse_end_chapter": 4,
+    "verse_end": 21
+  },
+  "timeline": {
+    "period_name": "Yoel · Dia, espírito e restauração",
+    "anno_mundi_start": 3000,
+    "anno_mundi_end": 3205,
+    "era": "nach",
+    "position_pct": 52,
+    "description": "Yoel lê uma calamidade nacional como chamado ao retorno e projeta espírito, juízo e restauração."
+  },
+  "summary": {
+    "short": "Yoel lê uma calamidade nacional como chamado ao retorno e projeta espírito, juízo e restauração.",
+    "medium": "Yoel lê uma calamidade nacional como chamado ao retorno e projeta espírito, juízo e restauração.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Yoel",
+      "Kohanim",
+      "Yehudah",
+      "Nações"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Dia de Deus",
+      "Jejum",
+      "Teshuvah",
+      "Espírito",
+      "Tzion"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ta005",
+      "order": 1,
+      "text": "Uma devastação de gafanhotos interrompe colheitas e culto, convocando lamento nacional.",
+      "text_he": null,
+      "refs": [
+        "Joel 1:1-20"
+      ],
+      "ref_start": "Joel 1:1",
+      "ref_end": "Joel 1:20",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 20,
+      "sefaria_ref": "Joel 1:1-20",
+      "tags": [
+        "gafanhotos",
+        "lamento",
+        "calamidade"
+      ],
+      "topic": "Praga e lamento"
+    },
+    {
+      "id": "ta006",
+      "order": 2,
+      "text": "Yoel pede jejum, reunião e retorno de coração diante do Dia de Deus.",
+      "text_he": null,
+      "refs": [
+        "Joel 2:1-17"
+      ],
+      "ref_start": "Joel 2:1",
+      "ref_end": "Joel 2:17",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 17,
+      "sefaria_ref": "Joel 2:1-17",
+      "tags": [
+        "jejum",
+        "teshuvah",
+        "dia-de-deus"
+      ],
+      "topic": "Retorno de coração"
+    },
+    {
+      "id": "ta007",
+      "order": 3,
+      "text": "O profeta anuncia derramamento do espírito sobre diferentes gerações e grupos do povo.",
+      "text_he": null,
+      "refs": [
+        "Joel 3:1-5"
+      ],
+      "ref_start": "Joel 3:1",
+      "ref_end": "Joel 3:5",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 5,
+      "sefaria_ref": "Joel 3:1-5",
+      "tags": [
+        "espírito",
+        "profecia",
+        "salvação"
+      ],
+      "topic": "Espírito derramado"
+    },
+    {
+      "id": "ta008",
+      "order": 4,
+      "text": "As nações são julgadas e Tzion é apresentada como fonte de santidade e vida.",
+      "text_he": null,
+      "refs": [
+        "Joel 4:1-21"
+      ],
+      "ref_start": "Joel 4:1",
+      "ref_end": "Joel 4:21",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 21,
+      "sefaria_ref": "Joel 4:1-21",
+      "tags": [
+        "nações",
+        "tzion",
+        "restauração"
+      ],
+      "topic": "Juízo e Tzion"
+    }
+  ]
+}

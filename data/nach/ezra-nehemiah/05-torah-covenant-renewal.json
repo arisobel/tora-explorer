@@ -1,0 +1,147 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Nehemiah",
+    "book_he": "קריאת התורה",
+    "book_sefaria": "Nehemiah",
+    "collection": "Ezra-Nehemiah",
+    "unit_index": 5,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "torah-covenant-renewal",
+    "label": "Leitura da Torá e aliança",
+    "label_pt": "Assembleia, Sucot, confissão e compromisso comunitário",
+    "hebrew": "קריאת התורה",
+    "transliteration": "Leitura da Torá e aliança"
+  },
+  "range": {
+    "ref_start": "Nehemiah 7:1",
+    "ref_end": "Nehemiah 10:40",
+    "sefaria_ref": "Nehemiah 7:1-10:40",
+    "chapters_covered": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "chapter_start": 7,
+    "chapter_end": 10,
+    "verse_start": 1,
+    "verse_end_chapter": 10,
+    "verse_end": 40
+  },
+  "timeline": {
+    "period_name": "Leitura da Torá e aliança",
+    "anno_mundi_start": 3445,
+    "anno_mundi_end": 3446,
+    "era": "nach",
+    "position_pct": 60,
+    "description": "A comunidade reorganizada ouve a Torá, celebra, confessa e renova compromissos."
+  },
+  "summary": {
+    "short": "A comunidade reorganizada ouve a Torá, celebra, confessa e renova compromissos.",
+    "medium": "A comunidade reorganizada ouve a Torá, celebra, confessa e renova compromissos.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Ezra",
+      "Nechemia",
+      "Leviim",
+      "Comunidade"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Torá",
+      "Sucot",
+      "Confissão",
+      "Aliança"
+    ]
+  },
+  "facts": [
+    {
+      "id": "en017",
+      "order": 1,
+      "text": "Após a conclusão dos muros, a comunidade é organizada e registrada.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 7:1-73"
+      ],
+      "ref_start": "Nehemiah 7:1",
+      "ref_end": "Nehemiah 7:73",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 73,
+      "sefaria_ref": "Nehemiah 7:1-73",
+      "tags": [
+        "organização",
+        "genealogia",
+        "cidade"
+      ],
+      "topic": "Comunidade organizada"
+    },
+    {
+      "id": "en018",
+      "order": 2,
+      "text": "Ezra lê a Torá diante do povo, os levitas explicam e Sucot é celebrado com alegria.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 8:1-18"
+      ],
+      "ref_start": "Nehemiah 8:1",
+      "ref_end": "Nehemiah 8:18",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 18,
+      "sefaria_ref": "Nehemiah 8:1-18",
+      "tags": [
+        "ezra",
+        "torá",
+        "sucot"
+      ],
+      "topic": "Leitura pública da Torá"
+    },
+    {
+      "id": "en019",
+      "order": 3,
+      "text": "A assembleia confessa pecados e relembra a fidelidade divina ao longo da história.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 9:1-37"
+      ],
+      "ref_start": "Nehemiah 9:1",
+      "ref_end": "Nehemiah 9:37",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 37,
+      "sefaria_ref": "Nehemiah 9:1-37",
+      "tags": [
+        "confissão",
+        "memória",
+        "fidelidade"
+      ],
+      "topic": "Confissão histórica"
+    },
+    {
+      "id": "en020",
+      "order": 4,
+      "text": "Líderes e povo assumem compromissos ligados à Torá, ao Shabat e ao Templo.",
+      "text_he": null,
+      "refs": [
+        "Nehemiah 10:1-40"
+      ],
+      "ref_start": "Nehemiah 10:1",
+      "ref_end": "Nehemiah 10:40",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 40,
+      "sefaria_ref": "Nehemiah 10:1-40",
+      "tags": [
+        "aliança",
+        "shabat",
+        "templo"
+      ],
+      "topic": "Compromisso comunitário"
+    }
+  ]
+}

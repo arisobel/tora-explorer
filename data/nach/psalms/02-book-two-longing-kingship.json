@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Psalms",
+    "book_he": "ספר שני",
+    "book_sefaria": "Psalms",
+    "collection": "Psalms",
+    "unit_index": 2,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "book-two-longing-kingship",
+    "label": "Livro II · Sede e realeza",
+    "label_pt": "Anseio por Deus, arrependimento e oração pelo rei",
+    "hebrew": "ספר שני",
+    "transliteration": "Livro II · Sede e realeza"
+  },
+  "range": {
+    "ref_start": "Psalms 42:1",
+    "ref_end": "Psalms 72:20",
+    "sefaria_ref": "Psalms 42:1-72:20",
+    "chapters_covered": [
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72
+    ],
+    "chapter_start": 42,
+    "chapter_end": 72,
+    "verse_start": 1,
+    "verse_end_chapter": 72,
+    "verse_end": 20
+  },
+  "timeline": {
+    "period_name": "Livro II · Sede e realeza",
+    "anno_mundi_start": 2884,
+    "anno_mundi_end": 2924,
+    "era": "nach",
+    "position_pct": 50,
+    "description": "O segundo livro combina sede espiritual, arrependimento, bênção às nações e justiça real."
+  },
+  "summary": {
+    "short": "O segundo livro combina sede espiritual, arrependimento, bênção às nações e justiça real.",
+    "medium": "O segundo livro combina sede espiritual, arrependimento, bênção às nações e justiça real.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "David",
+      "Bnei Korach",
+      "Shlomo"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Anseio",
+      "Teshuvah",
+      "Nações",
+      "Realeza"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ps005",
+      "order": 1,
+      "text": "A alma sedenta anseia pela presença divina como a corça pelas águas.",
+      "text_he": null,
+      "refs": [
+        "Psalms 42:1-12"
+      ],
+      "ref_start": "Psalms 42:1",
+      "ref_end": "Psalms 42:12",
+      "chapter": 42,
+      "verse_start": 1,
+      "verse_end": 12,
+      "sefaria_ref": "Psalms 42:1-12",
+      "tags": [
+        "anseio",
+        "presença",
+        "esperança"
+      ],
+      "topic": "Sede por Deus"
+    },
+    {
+      "id": "ps006",
+      "order": 2,
+      "text": "David pede purificação, coração renovado e espírito firme após reconhecer seu pecado.",
+      "text_he": null,
+      "refs": [
+        "Psalms 51:1-21"
+      ],
+      "ref_start": "Psalms 51:1",
+      "ref_end": "Psalms 51:21",
+      "chapter": 51,
+      "verse_start": 1,
+      "verse_end": 21,
+      "sefaria_ref": "Psalms 51:1-21",
+      "tags": [
+        "teshuvah",
+        "purificação",
+        "coração"
+      ],
+      "topic": "Coração puro"
+    },
+    {
+      "id": "ps007",
+      "order": 3,
+      "text": "A bênção de Israel é ligada ao reconhecimento de Deus entre todos os povos.",
+      "text_he": null,
+      "refs": [
+        "Psalms 67:1-8"
+      ],
+      "ref_start": "Psalms 67:1",
+      "ref_end": "Psalms 67:8",
+      "chapter": 67,
+      "verse_start": 1,
+      "verse_end": 8,
+      "sefaria_ref": "Psalms 67:1-8",
+      "tags": [
+        "bênção",
+        "nações",
+        "louvor"
+      ],
+      "topic": "Bênção às nações"
+    },
+    {
+      "id": "ps008",
+      "order": 4,
+      "text": "A oração pelo rei pede justiça aos pobres, paz e bênção ampla.",
+      "text_he": null,
+      "refs": [
+        "Psalms 72:1-20"
+      ],
+      "ref_start": "Psalms 72:1",
+      "ref_end": "Psalms 72:20",
+      "chapter": 72,
+      "verse_start": 1,
+      "verse_end": 20,
+      "sefaria_ref": "Psalms 72:1-20",
+      "tags": [
+        "rei",
+        "justiça",
+        "pobres"
+      ],
+      "topic": "Rei justo"
+    }
+  ]
+}

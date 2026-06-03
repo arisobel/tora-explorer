@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Ezra",
+    "book_he": "שיבת ציון",
+    "book_sefaria": "Ezra",
+    "collection": "Ezra-Nehemiah",
+    "unit_index": 1,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "return-cyrus",
+    "label": "Retorno sob Ciro",
+    "label_pt": "Decreto persa, vasos do Templo e lista dos retornados",
+    "hebrew": "שיבת ציון",
+    "transliteration": "Retorno sob Ciro"
+  },
+  "range": {
+    "ref_start": "Ezra 1:1",
+    "ref_end": "Ezra 2:70",
+    "sefaria_ref": "Ezra 1:1-2:70",
+    "chapters_covered": [
+      1,
+      2
+    ],
+    "chapter_start": 1,
+    "chapter_end": 2,
+    "verse_start": 1,
+    "verse_end_chapter": 2,
+    "verse_end": 70
+  },
+  "timeline": {
+    "period_name": "Retorno sob Ciro",
+    "anno_mundi_start": 3408,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 59,
+    "description": "Ciro autoriza o retorno e a reconstrução, e a comunidade retornada é registrada."
+  },
+  "summary": {
+    "short": "Ciro autoriza o retorno e a reconstrução, e a comunidade retornada é registrada.",
+    "medium": "Ciro autoriza o retorno e a reconstrução, e a comunidade retornada é registrada.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Ciro",
+      "Sheshbatzar",
+      "Zerubavel",
+      "Yehoshua Kohen Gadol"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Ciro",
+      "Retorno",
+      "Templo",
+      "Comunidade"
+    ]
+  },
+  "facts": [
+    {
+      "id": "en001",
+      "order": 1,
+      "text": "Ciro proclama a reconstrução da Casa de Deus em Yerushalayim.",
+      "text_he": null,
+      "refs": [
+        "Ezra 1:1-4"
+      ],
+      "ref_start": "Ezra 1:1",
+      "ref_end": "Ezra 1:4",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 4,
+      "sefaria_ref": "Ezra 1:1-4",
+      "tags": [
+        "ciro",
+        "decreto",
+        "templo"
+      ],
+      "topic": "Decreto de Ciro"
+    },
+    {
+      "id": "en002",
+      "order": 2,
+      "text": "Famílias se levantam para retornar, e os vasos do Templo são entregues a Sheshbatzar.",
+      "text_he": null,
+      "refs": [
+        "Ezra 1:5-11"
+      ],
+      "ref_start": "Ezra 1:5",
+      "ref_end": "Ezra 1:11",
+      "chapter": 1,
+      "verse_start": 5,
+      "verse_end": 11,
+      "sefaria_ref": "Ezra 1:5-11",
+      "tags": [
+        "retorno",
+        "vasos",
+        "sheshbatzar"
+      ],
+      "topic": "Vasos devolvidos"
+    },
+    {
+      "id": "en003",
+      "order": 3,
+      "text": "A lista dos retornados preserva a identidade de famílias, cidades e funções comunitárias.",
+      "text_he": null,
+      "refs": [
+        "Ezra 2:1-67"
+      ],
+      "ref_start": "Ezra 2:1",
+      "ref_end": "Ezra 2:67",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 67,
+      "sefaria_ref": "Ezra 2:1-67",
+      "tags": [
+        "genealogia",
+        "comunidade",
+        "retornados"
+      ],
+      "topic": "Lista dos retornados"
+    },
+    {
+      "id": "en004",
+      "order": 4,
+      "text": "A comunidade se estabelece em suas cidades e contribui para a reconstrução.",
+      "text_he": null,
+      "refs": [
+        "Ezra 2:68-70"
+      ],
+      "ref_start": "Ezra 2:68",
+      "ref_end": "Ezra 2:70",
+      "chapter": 2,
+      "verse_start": 68,
+      "verse_end": 70,
+      "sefaria_ref": "Ezra 2:68-70",
+      "tags": [
+        "ofertas",
+        "cidades",
+        "reconstrução"
+      ],
+      "topic": "Estabelecimento em Yehudah"
+    }
+  ]
+}

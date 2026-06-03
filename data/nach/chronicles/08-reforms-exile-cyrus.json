@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "II Chronicles",
+    "book_he": "חורבן ושיבה",
+    "book_sefaria": "II Chronicles",
+    "collection": "Chronicles",
+    "unit_index": 8,
+    "total_units_in_book": 8
+  },
+  "identity": {
+    "id": "reforms-exile-cyrus",
+    "label": "Reformas, exílio e Ciro",
+    "label_pt": "Chizkiyahu, Yoshiyahu, queda de Yerushalayim e chamado ao retorno",
+    "hebrew": "חורבן ושיבה",
+    "transliteration": "Reformas, exílio e Ciro"
+  },
+  "range": {
+    "ref_start": "II Chronicles 29:1",
+    "ref_end": "II Chronicles 36:23",
+    "sefaria_ref": "II Chronicles 29:1-36:23",
+    "chapters_covered": [
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "chapter_start": 29,
+    "chapter_end": 36,
+    "verse_start": 1,
+    "verse_end_chapter": 36,
+    "verse_end": 23
+  },
+  "timeline": {
+    "period_name": "Reformas, exílio e Ciro",
+    "anno_mundi_start": 3185,
+    "anno_mundi_end": 3409,
+    "era": "nach",
+    "position_pct": 55,
+    "description": "Reformas de Chizkiyahu e Yoshiyahu precedem a queda, mas o livro encerra com o decreto de Ciro."
+  },
+  "summary": {
+    "short": "Reformas de Chizkiyahu e Yoshiyahu precedem a queda, mas o livro encerra com o decreto de Ciro.",
+    "medium": "Reformas de Chizkiyahu e Yoshiyahu precedem a queda, mas o livro encerra com o decreto de Ciro.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Chizkiyahu",
+      "Menashe",
+      "Yoshiyahu",
+      "Tzidkiyahu",
+      "Ciro"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Reforma",
+      "Pesach",
+      "Exílio",
+      "Ciro",
+      "Retorno"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ch029",
+      "order": 1,
+      "text": "Chizkiyahu purifica o Templo e convoca Israel e Yehudah a celebrar Pesach.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 29:1-31:21"
+      ],
+      "ref_start": "II Chronicles 29:1",
+      "ref_end": "II Chronicles 31:21",
+      "chapter": 29,
+      "verse_start": 1,
+      "verse_end_chapter": 31,
+      "verse_end": 21,
+      "sefaria_ref": "II Chronicles 29:1-31:21",
+      "tags": [
+        "chizkiyahu",
+        "templo",
+        "pesach"
+      ],
+      "topic": "Reforma de Chizkiyahu"
+    },
+    {
+      "id": "ch030",
+      "order": 2,
+      "text": "Menashe se humilha após sua queda, enquanto Amon retorna à infidelidade.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 32:1-33:25"
+      ],
+      "ref_start": "II Chronicles 32:1",
+      "ref_end": "II Chronicles 33:25",
+      "chapter": 32,
+      "verse_start": 1,
+      "verse_end_chapter": 33,
+      "verse_end": 25,
+      "sefaria_ref": "II Chronicles 32:1-33:25",
+      "tags": [
+        "menashe",
+        "humildade",
+        "teshuvah"
+      ],
+      "topic": "Menashe e retorno"
+    },
+    {
+      "id": "ch031",
+      "order": 3,
+      "text": "Yoshiyahu renova a aliança após a descoberta do livro da Torá e celebra Pesach.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 34:1-35:27"
+      ],
+      "ref_start": "II Chronicles 34:1",
+      "ref_end": "II Chronicles 35:27",
+      "chapter": 34,
+      "verse_start": 1,
+      "verse_end_chapter": 35,
+      "verse_end": 27,
+      "sefaria_ref": "II Chronicles 34:1-35:27",
+      "tags": [
+        "yoshiyahu",
+        "torá",
+        "aliança"
+      ],
+      "topic": "Reforma de Yoshiyahu"
+    },
+    {
+      "id": "ch032",
+      "order": 4,
+      "text": "Yerushalayim cai, mas o decreto de Ciro encerra o livro com chamado para subir e reconstruir.",
+      "text_he": null,
+      "refs": [
+        "II Chronicles 36:1-23"
+      ],
+      "ref_start": "II Chronicles 36:1",
+      "ref_end": "II Chronicles 36:23",
+      "chapter": 36,
+      "verse_start": 1,
+      "verse_end": 23,
+      "sefaria_ref": "II Chronicles 36:1-23",
+      "tags": [
+        "exílio",
+        "ciro",
+        "retorno"
+      ],
+      "topic": "Queda e decreto de Ciro"
+    }
+  ]
+}

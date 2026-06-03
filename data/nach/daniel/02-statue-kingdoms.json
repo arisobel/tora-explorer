@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Daniel",
+    "book_he": "צלם המלכויות",
+    "book_sefaria": "Daniel",
+    "collection": "Daniel",
+    "unit_index": 2,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "statue-kingdoms",
+    "label": "Estátua e reinos",
+    "label_pt": "Sonho de Nevuchadnetzar, revelação e reino duradouro",
+    "hebrew": "צלם המלכויות",
+    "transliteration": "Estátua e reinos"
+  },
+  "range": {
+    "ref_start": "Daniel 2:1",
+    "ref_end": "Daniel 2:49",
+    "sefaria_ref": "Daniel 2:1-49",
+    "chapters_covered": [
+      2
+    ],
+    "chapter_start": 2,
+    "chapter_end": 2,
+    "verse_start": 1,
+    "verse_end_chapter": 2,
+    "verse_end": 49
+  },
+  "timeline": {
+    "period_name": "Estátua e reinos",
+    "anno_mundi_start": 3342,
+    "anno_mundi_end": 3345,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "Daniel recebe a revelação do sonho da estátua e interpreta a sucessão de reinos."
+  },
+  "summary": {
+    "short": "Daniel recebe a revelação do sonho da estátua e interpreta a sucessão de reinos.",
+    "medium": "Daniel recebe a revelação do sonho da estátua e interpreta a sucessão de reinos.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Daniel",
+      "Nevuchadnetzar",
+      "Arioch",
+      "Sábios de Bavel"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Sonho",
+      "Reinos",
+      "Revelação",
+      "Humildade"
+    ]
+  },
+  "facts": [
+    {
+      "id": "dn005",
+      "order": 1,
+      "text": "Nevuchadnetzar exige que os sábios revelem o sonho e sua interpretação.",
+      "text_he": null,
+      "refs": [
+        "Daniel 2:1-13"
+      ],
+      "ref_start": "Daniel 2:1",
+      "ref_end": "Daniel 2:13",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 13,
+      "sefaria_ref": "Daniel 2:1-13",
+      "tags": [
+        "sonho",
+        "sábios",
+        "crise"
+      ],
+      "topic": "Exigência do rei"
+    },
+    {
+      "id": "dn006",
+      "order": 2,
+      "text": "Daniel e seus companheiros buscam misericórdia, e o mistério é revelado em visão noturna.",
+      "text_he": null,
+      "refs": [
+        "Daniel 2:14-23"
+      ],
+      "ref_start": "Daniel 2:14",
+      "ref_end": "Daniel 2:23",
+      "chapter": 2,
+      "verse_start": 14,
+      "verse_end": 23,
+      "sefaria_ref": "Daniel 2:14-23",
+      "tags": [
+        "oração",
+        "mistério",
+        "revelação"
+      ],
+      "topic": "Mistério revelado"
+    },
+    {
+      "id": "dn007",
+      "order": 3,
+      "text": "A estátua representa reinos sucessivos, enquanto uma pedra aponta para um reino que permanece.",
+      "text_he": null,
+      "refs": [
+        "Daniel 2:24-45"
+      ],
+      "ref_start": "Daniel 2:24",
+      "ref_end": "Daniel 2:45",
+      "chapter": 2,
+      "verse_start": 24,
+      "verse_end": 45,
+      "sefaria_ref": "Daniel 2:24-45",
+      "tags": [
+        "estátua",
+        "reinos",
+        "pedra"
+      ],
+      "topic": "Interpretação da estátua"
+    },
+    {
+      "id": "dn008",
+      "order": 4,
+      "text": "O rei reconhece a revelação e eleva Daniel e seus companheiros.",
+      "text_he": null,
+      "refs": [
+        "Daniel 2:46-49"
+      ],
+      "ref_start": "Daniel 2:46",
+      "ref_end": "Daniel 2:49",
+      "chapter": 2,
+      "verse_start": 46,
+      "verse_end": 49,
+      "sefaria_ref": "Daniel 2:46-49",
+      "tags": [
+        "rei",
+        "honra",
+        "serviço"
+      ],
+      "topic": "Daniel elevado"
+    }
+  ]
+}

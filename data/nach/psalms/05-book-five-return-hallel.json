@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Psalms",
+    "book_he": "ספר חמישי",
+    "book_sefaria": "Psalms",
+    "collection": "Psalms",
+    "unit_index": 5,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "book-five-return-hallel",
+    "label": "Livro V · Retorno e Hallel",
+    "label_pt": "Gratidão, amor à Torá, retorno a Tzion e louvor final",
+    "hebrew": "ספר חמישי",
+    "transliteration": "Livro V · Retorno e Hallel"
+  },
+  "range": {
+    "ref_start": "Psalms 107:1",
+    "ref_end": "Psalms 150:6",
+    "sefaria_ref": "Psalms 107:1-150:6",
+    "chapters_covered": [
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150
+    ],
+    "chapter_start": 107,
+    "chapter_end": 150,
+    "verse_start": 1,
+    "verse_end_chapter": 150,
+    "verse_end": 6
+  },
+  "timeline": {
+    "period_name": "Livro V · Retorno e Hallel",
+    "anno_mundi_start": 3339,
+    "anno_mundi_end": 5785,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "O quinto livro reúne gratidão pelo resgate, amor à Torá, cânticos de subida e Hallel final."
+  },
+  "summary": {
+    "short": "O quinto livro reúne gratidão pelo resgate, amor à Torá, cânticos de subida e Hallel final.",
+    "medium": "O quinto livro reúne gratidão pelo resgate, amor à Torá, cânticos de subida e Hallel final.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Israel",
+      "Peregrinos",
+      "Servos de Deus"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Gratidão",
+      "Torá",
+      "Retorno",
+      "Hallel"
+    ]
+  },
+  "facts": [
+    {
+      "id": "ps017",
+      "order": 1,
+      "text": "Os resgatados são chamados a agradecer por livramentos em diferentes crises.",
+      "text_he": null,
+      "refs": [
+        "Psalms 107:1-43"
+      ],
+      "ref_start": "Psalms 107:1",
+      "ref_end": "Psalms 107:43",
+      "chapter": 107,
+      "verse_start": 1,
+      "verse_end": 43,
+      "sefaria_ref": "Psalms 107:1-43",
+      "tags": [
+        "gratidão",
+        "resgate",
+        "bondade"
+      ],
+      "topic": "Agradecer pelo resgate"
+    },
+    {
+      "id": "ps018",
+      "order": 2,
+      "text": "O grande poema alfabético celebra a Torá como caminho, consolo e sabedoria.",
+      "text_he": null,
+      "refs": [
+        "Psalms 119:1-176"
+      ],
+      "ref_start": "Psalms 119:1",
+      "ref_end": "Psalms 119:176",
+      "chapter": 119,
+      "verse_start": 1,
+      "verse_end": 176,
+      "sefaria_ref": "Psalms 119:1-176",
+      "tags": [
+        "torá",
+        "sabedoria",
+        "caminho"
+      ],
+      "topic": "Amor à Torá"
+    },
+    {
+      "id": "ps019",
+      "order": 3,
+      "text": "O retorno a Tzion é lembrado como sonho transformado em alegria.",
+      "text_he": null,
+      "refs": [
+        "Psalms 126:1-6"
+      ],
+      "ref_start": "Psalms 126:1",
+      "ref_end": "Psalms 126:6",
+      "chapter": 126,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Psalms 126:1-6",
+      "tags": [
+        "tzion",
+        "retorno",
+        "alegria"
+      ],
+      "topic": "Retorno a Tzion"
+    },
+    {
+      "id": "ps020",
+      "order": 4,
+      "text": "Tehilim encerra convocando tudo o que respira a louvar Deus.",
+      "text_he": null,
+      "refs": [
+        "Psalms 150:1-6"
+      ],
+      "ref_start": "Psalms 150:1",
+      "ref_end": "Psalms 150:6",
+      "chapter": 150,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Psalms 150:1-6",
+      "tags": [
+        "hallel",
+        "música",
+        "louvor"
+      ],
+      "topic": "Louvor final"
+    }
+  ]
+}

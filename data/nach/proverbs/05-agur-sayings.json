@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Proverbs",
+    "book_he": "דברי אגור",
+    "book_sefaria": "Proverbs",
+    "collection": "Proverbs",
+    "unit_index": 5,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "agur-sayings",
+    "label": "Palavras de Agur",
+    "label_pt": "Humildade, suficiência e observações da criação",
+    "hebrew": "דברי אגור",
+    "transliteration": "Palavras de Agur"
+  },
+  "range": {
+    "ref_start": "Proverbs 30:1",
+    "ref_end": "Proverbs 30:33",
+    "sefaria_ref": "Proverbs 30:1-33",
+    "chapters_covered": [
+      30
+    ],
+    "chapter_start": 30,
+    "chapter_end": 30,
+    "verse_start": 1,
+    "verse_end_chapter": 30,
+    "verse_end": 33
+  },
+  "timeline": {
+    "period_name": "Palavras de Agur",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 3205,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "Agur reconhece limites humanos, pede suficiência e aprende por observação do mundo."
+  },
+  "summary": {
+    "short": "Agur reconhece limites humanos, pede suficiência e aprende por observação do mundo.",
+    "medium": "Agur reconhece limites humanos, pede suficiência e aprende por observação do mundo.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Agur"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Humildade",
+      "Suficiência",
+      "Criação",
+      "Autocontrole"
+    ]
+  },
+  "facts": [
+    {
+      "id": "pr017",
+      "order": 1,
+      "text": "Agur reconhece seus limites e afirma a pureza da palavra divina.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 30:1-9"
+      ],
+      "ref_start": "Proverbs 30:1",
+      "ref_end": "Proverbs 30:9",
+      "chapter": 30,
+      "verse_start": 1,
+      "verse_end": 9,
+      "sefaria_ref": "Proverbs 30:1-9",
+      "tags": [
+        "agur",
+        "humildade",
+        "palavra"
+      ],
+      "topic": "Limites e suficiência"
+    },
+    {
+      "id": "pr018",
+      "order": 2,
+      "text": "Advertências sobre honra familiar e arrogância expõem desordens morais.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 30:10-17"
+      ],
+      "ref_start": "Proverbs 30:10",
+      "ref_end": "Proverbs 30:17",
+      "chapter": 30,
+      "verse_start": 10,
+      "verse_end": 17,
+      "sefaria_ref": "Proverbs 30:10-17",
+      "tags": [
+        "família",
+        "arrogância",
+        "honra"
+      ],
+      "topic": "Desordens morais"
+    },
+    {
+      "id": "pr019",
+      "order": 3,
+      "text": "Agur contempla caminhos surpreendentes que escapam à compreensão simples.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 30:18-23"
+      ],
+      "ref_start": "Proverbs 30:18",
+      "ref_end": "Proverbs 30:23",
+      "chapter": 30,
+      "verse_start": 18,
+      "verse_end": 23,
+      "sefaria_ref": "Proverbs 30:18-23",
+      "tags": [
+        "mistério",
+        "observação",
+        "caminhos"
+      ],
+      "topic": "Coisas maravilhosas"
+    },
+    {
+      "id": "pr020",
+      "order": 4,
+      "text": "Pequenas criaturas ensinam sabedoria, e o autocontrole evita conflito.",
+      "text_he": null,
+      "refs": [
+        "Proverbs 30:24-33"
+      ],
+      "ref_start": "Proverbs 30:24",
+      "ref_end": "Proverbs 30:33",
+      "chapter": 30,
+      "verse_start": 24,
+      "verse_end": 33,
+      "sefaria_ref": "Proverbs 30:24-33",
+      "tags": [
+        "criação",
+        "sabedoria",
+        "autocontrole"
+      ],
+      "topic": "Sabedoria na criação"
+    }
+  ]
+}

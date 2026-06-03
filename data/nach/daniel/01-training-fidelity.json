@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Daniel",
+    "book_he": "דניאל וחבריו",
+    "book_sefaria": "Daniel",
+    "collection": "Daniel",
+    "unit_index": 1,
+    "total_units_in_book": 6
+  },
+  "identity": {
+    "id": "training-fidelity",
+    "label": "Formação e fidelidade",
+    "label_pt": "Jovens de Yehudah na corte babilônica",
+    "hebrew": "דניאל וחבריו",
+    "transliteration": "Formação e fidelidade"
+  },
+  "range": {
+    "ref_start": "Daniel 1:1",
+    "ref_end": "Daniel 1:21",
+    "sefaria_ref": "Daniel 1:1-21",
+    "chapters_covered": [
+      1
+    ],
+    "chapter_start": 1,
+    "chapter_end": 1,
+    "verse_start": 1,
+    "verse_end_chapter": 1,
+    "verse_end": 21
+  },
+  "timeline": {
+    "period_name": "Formação e fidelidade",
+    "anno_mundi_start": 3339,
+    "anno_mundi_end": 3342,
+    "era": "nach",
+    "position_pct": 58,
+    "description": "Daniel e seus companheiros preservam identidade e fidelidade enquanto são formados para a corte."
+  },
+  "summary": {
+    "short": "Daniel e seus companheiros preservam identidade e fidelidade enquanto são formados para a corte.",
+    "medium": "Daniel e seus companheiros preservam identidade e fidelidade enquanto são formados para a corte.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Daniel",
+      "Chananiah",
+      "Mishael",
+      "Azariah",
+      "Ashpenaz"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Identidade",
+      "Fidelidade",
+      "Sabedoria",
+      "Exílio"
+    ]
+  },
+  "facts": [
+    {
+      "id": "dn001",
+      "order": 1,
+      "text": "Jovens de Yehudah são levados a Bavel e selecionados para formação na corte.",
+      "text_he": null,
+      "refs": [
+        "Daniel 1:1-7"
+      ],
+      "ref_start": "Daniel 1:1",
+      "ref_end": "Daniel 1:7",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 7,
+      "sefaria_ref": "Daniel 1:1-7",
+      "tags": [
+        "exílio",
+        "corte",
+        "jovens"
+      ],
+      "topic": "Jovens na corte"
+    },
+    {
+      "id": "dn002",
+      "order": 2,
+      "text": "Daniel decide não se contaminar com a porção real e propõe uma prova alimentar.",
+      "text_he": null,
+      "refs": [
+        "Daniel 1:8-16"
+      ],
+      "ref_start": "Daniel 1:8",
+      "ref_end": "Daniel 1:16",
+      "chapter": 1,
+      "verse_start": 8,
+      "verse_end": 16,
+      "sefaria_ref": "Daniel 1:8-16",
+      "tags": [
+        "fidelidade",
+        "alimento",
+        "identidade"
+      ],
+      "topic": "Decisão de Daniel"
+    },
+    {
+      "id": "dn003",
+      "order": 3,
+      "text": "Os quatro recebem conhecimento e sabedoria, e Daniel recebe entendimento de visões.",
+      "text_he": null,
+      "refs": [
+        "Daniel 1:17-17"
+      ],
+      "ref_start": "Daniel 1:17",
+      "ref_end": "Daniel 1:17",
+      "chapter": 1,
+      "verse_start": 17,
+      "verse_end": 17,
+      "sefaria_ref": "Daniel 1:17-17",
+      "tags": [
+        "sabedoria",
+        "visões",
+        "dom"
+      ],
+      "topic": "Sabedoria recebida"
+    },
+    {
+      "id": "dn004",
+      "order": 4,
+      "text": "O rei os encontra superiores aos demais conselheiros de seu reino.",
+      "text_he": null,
+      "refs": [
+        "Daniel 1:18-21"
+      ],
+      "ref_start": "Daniel 1:18",
+      "ref_end": "Daniel 1:21",
+      "chapter": 1,
+      "verse_start": 18,
+      "verse_end": 21,
+      "sefaria_ref": "Daniel 1:18-21",
+      "tags": [
+        "rei",
+        "conselho",
+        "excelência"
+      ],
+      "topic": "Serviço na corte"
+    }
+  ]
+}

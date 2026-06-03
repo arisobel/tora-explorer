@@ -1,0 +1,171 @@
+{
+  "book": "Daniel",
+  "book_he": "דניאל",
+  "book_pt": "Daniel",
+  "corpus": "nach",
+  "division": "ketuvim",
+  "total_chapters": 12,
+  "timeline": {
+    "anno_mundi_start": 3339,
+    "anno_mundi_end": 3409,
+    "description": "Daniel e seus companheiros vivem no exílio babilônico e persa, entre fidelidade, corte imperial e visões"
+  },
+  "summary": {
+    "short": "Daniel combina narrativas de fidelidade no exílio com visões sobre impérios, juízo e esperança.",
+    "themes": [
+      "Exílio",
+      "Fidelidade",
+      "Impérios",
+      "Visões",
+      "Oração"
+    ],
+    "characters": [
+      "Daniel",
+      "Chananiah",
+      "Mishael",
+      "Azariah",
+      "Nevuchadnetzar",
+      "Belshatzar",
+      "Daryavesh"
+    ]
+  },
+  "units": [
+    {
+      "id": "training-fidelity",
+      "index": 1,
+      "label": "Formação e fidelidade",
+      "label_pt": "Jovens de Yehudah na corte babilônica",
+      "hebrew": "דניאל וחבריו",
+      "ref_start": "Daniel 1:1",
+      "ref_end": "Daniel 1:21",
+      "sefaria_ref": "Daniel 1:1-21",
+      "chapter_start": 1,
+      "chapter_end": 1,
+      "anno_mundi_start": 3339,
+      "anno_mundi_end": 3342,
+      "summary_short": "Daniel e seus companheiros preservam identidade e fidelidade enquanto são formados para a corte.",
+      "characters": [
+        "Daniel",
+        "Chananiah",
+        "Mishael",
+        "Azariah",
+        "Ashpenaz"
+      ],
+      "data_file": "data/nach/daniel/01-training-fidelity.json",
+      "facts_count": 4
+    },
+    {
+      "id": "statue-kingdoms",
+      "index": 2,
+      "label": "Estátua e reinos",
+      "label_pt": "Sonho de Nevuchadnetzar, revelação e reino duradouro",
+      "hebrew": "צלם המלכויות",
+      "ref_start": "Daniel 2:1",
+      "ref_end": "Daniel 2:49",
+      "sefaria_ref": "Daniel 2:1-49",
+      "chapter_start": 2,
+      "chapter_end": 2,
+      "anno_mundi_start": 3342,
+      "anno_mundi_end": 3345,
+      "summary_short": "Daniel recebe a revelação do sonho da estátua e interpreta a sucessão de reinos.",
+      "characters": [
+        "Daniel",
+        "Nevuchadnetzar",
+        "Arioch",
+        "Sábios de Bavel"
+      ],
+      "data_file": "data/nach/daniel/02-statue-kingdoms.json",
+      "facts_count": 4
+    },
+    {
+      "id": "fiery-furnace",
+      "index": 3,
+      "label": "Fornalha ardente",
+      "label_pt": "Imagem de ouro, recusa de adoração e livramento",
+      "hebrew": "כבשן האש",
+      "ref_start": "Daniel 3:1",
+      "ref_end": "Daniel 3:30",
+      "sefaria_ref": "Daniel 3:1-30",
+      "chapter_start": 3,
+      "chapter_end": 3,
+      "anno_mundi_start": 3342,
+      "anno_mundi_end": 3350,
+      "summary_short": "Os companheiros de Daniel recusam idolatria estatal e são preservados na fornalha.",
+      "characters": [
+        "Chananiah",
+        "Mishael",
+        "Azariah",
+        "Nevuchadnetzar"
+      ],
+      "data_file": "data/nach/daniel/03-fiery-furnace.json",
+      "facts_count": 4
+    },
+    {
+      "id": "kings-humbled-babylon-falls",
+      "index": 4,
+      "label": "Reis humilhados e queda de Bavel",
+      "label_pt": "Orgulho de Nevuchadnetzar e escrita na parede para Belshatzar",
+      "hebrew": "מלכים נשפלים",
+      "ref_start": "Daniel 4:1",
+      "ref_end": "Daniel 5:30",
+      "sefaria_ref": "Daniel 4:1-5:30",
+      "chapter_start": 4,
+      "chapter_end": 5,
+      "anno_mundi_start": 3345,
+      "anno_mundi_end": 3389,
+      "summary_short": "Dois reis aprendem que soberania e orgulho são julgados pelo governo divino.",
+      "characters": [
+        "Daniel",
+        "Nevuchadnetzar",
+        "Belshatzar"
+      ],
+      "data_file": "data/nach/daniel/04-kings-humbled-babylon-falls.json",
+      "facts_count": 4
+    },
+    {
+      "id": "lions-den",
+      "index": 5,
+      "label": "Cova dos leões",
+      "label_pt": "Oração de Daniel, decreto imperial e livramento",
+      "hebrew": "גוב האריות",
+      "ref_start": "Daniel 6:1",
+      "ref_end": "Daniel 6:29",
+      "sefaria_ref": "Daniel 6:1-29",
+      "chapter_start": 6,
+      "chapter_end": 6,
+      "anno_mundi_start": 3389,
+      "anno_mundi_end": 3409,
+      "summary_short": "Daniel mantém sua prática de oração apesar do decreto e é preservado na cova dos leões.",
+      "characters": [
+        "Daniel",
+        "Daryavesh",
+        "Sátrapas"
+      ],
+      "data_file": "data/nach/daniel/05-lions-den.json",
+      "facts_count": 4
+    },
+    {
+      "id": "visions-empires-end",
+      "index": 6,
+      "label": "Visões de impérios e fim",
+      "label_pt": "Animais, semanas, conflitos e esperança para o tempo final",
+      "hebrew": "חזיונות",
+      "ref_start": "Daniel 7:1",
+      "ref_end": "Daniel 12:13",
+      "sefaria_ref": "Daniel 7:1-12:13",
+      "chapter_start": 7,
+      "chapter_end": 12,
+      "anno_mundi_start": 3345,
+      "anno_mundi_end": 3409,
+      "summary_short": "As visões de Daniel interpretam impérios, sofrimento e esperança a partir do tribunal divino.",
+      "characters": [
+        "Daniel",
+        "Ancião de Dias",
+        "Gabriel",
+        "Micha'el"
+      ],
+      "data_file": "data/nach/daniel/06-visions-empires-end.json",
+      "facts_count": 4
+    }
+  ]
+}

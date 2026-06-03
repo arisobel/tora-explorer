@@ -82,7 +82,7 @@
       "am_start": 2928,
       "am_end": 3338,
       "color": "#72c494",
-      "books": ["Joshua","Judges","Samuel","Kings","Isaiah","Jeremiah","Ezekiel"],
+      "books": ["Joshua","Judges","Samuel","Kings","Isaiah","Jeremiah","Ezekiel","Trei Assar","Psalms","Proverbs","Job","Megillot","Chronicles"],
       "parashiot": []
     },
     {
@@ -92,7 +92,7 @@
       "am_start": 3338,
       "am_end": 3408,
       "color": "#8a6abf",
-      "books": ["Esther","Daniel","Ezra","Nehemiah"],
+      "books": ["Lamentations","Esther","Daniel","Ezra","Nehemiah","Trei Assar","Chronicles"],
       "parashiot": []
     },
     {
@@ -102,7 +102,7 @@
       "am_start": 3408,
       "am_end": 3828,
       "color": "#4a8a6a",
-      "books": [],
+      "books": ["Haggai","Zechariah","Malachi","Ezra","Nehemiah","Chronicles"],
       "parashiot": []
     },
     {
@@ -264,8 +264,24 @@
       }
     },
     { "id": "first-temple", "am": 2928, "label": "1º Templo", "label_he": "בֵּית רִאשׁוֹן", "book": "I Kings 6" },
-    { "id": "first-temple-destruction", "am": 3338, "label": "Destruição 1º Templo", "label_he": "חֻרְבַּן רִאשׁוֹן", "book": "II Kings 25" },
-    { "id": "second-temple", "am": 3408, "label": "2º Templo", "label_he": "בֵּית שֵׁנִי", "book": "Ezra 1" },
+    {
+      "id": "first-temple-destruction", "am": 3338,
+      "label": "Destruição 1º Templo", "label_he": "חֻרְבַּן רִאשׁוֹן", "book": "Lamentations 1",
+      "links": {
+        "book_key": "megillot", "parasha_id": "lamentations-destruction-hope",
+        "fact_ids": ["mg009", "mg010", "mg011", "mg012"],
+        "sefaria_ref": "Lamentations 1:1-5:22"
+      }
+    },
+    {
+      "id": "second-temple", "am": 3408,
+      "label": "2º Templo", "label_he": "בֵּית שֵׁנִי", "book": "Ezra 1",
+      "links": {
+        "book_key": "ezra-nehemiah", "parasha_id": "return-cyrus",
+        "fact_ids": ["en001", "en002", "en003", "en004"],
+        "sefaria_ref": "Ezra 1:1-2:70"
+      }
+    },
     { "id": "second-temple-destruction", "am": 3828, "label": "Destruição 2º Templo", "label_he": "חֻרְבַּן שֵׁנִי", "book": null },
     { "id": "state-of-israel", "am": 5708, "label": "Estado de Israel", "label_he": "מְדִינַת יִשְׂרָאֵל", "book": null }
   ]

@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "corpus": "nach",
+    "division": "ketuvim",
+    "book": "Song of Songs",
+    "book_he": "שיר השירים",
+    "book_sefaria": "Song of Songs",
+    "collection": "Megillot",
+    "unit_index": 1,
+    "total_units_in_book": 5
+  },
+  "identity": {
+    "id": "song-of-songs-love",
+    "label": "Shir HaShirim · Amor",
+    "label_pt": "Poema de desejo, busca, presença e amor forte",
+    "hebrew": "שיר השירים",
+    "transliteration": "Shir HaShirim · Amor"
+  },
+  "range": {
+    "ref_start": "Song of Songs 1:1",
+    "ref_end": "Song of Songs 8:14",
+    "sefaria_ref": "Song of Songs 1:1-8:14",
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "chapter_start": 1,
+    "chapter_end": 8,
+    "verse_start": 1,
+    "verse_end_chapter": 8,
+    "verse_end": 14
+  },
+  "timeline": {
+    "period_name": "Shir HaShirim · Amor",
+    "anno_mundi_start": 2924,
+    "anno_mundi_end": 2924,
+    "era": "nach",
+    "position_pct": 51,
+    "description": "Shir HaShirim celebra desejo, busca e amor em poesia associada a Shlomo."
+  },
+  "summary": {
+    "short": "Shir HaShirim celebra desejo, busca e amor em poesia associada a Shlomo.",
+    "medium": "Shir HaShirim celebra desejo, busca e amor em poesia associada a Shlomo.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "characters_main": [
+      "Amada",
+      "Amado",
+      "Filhas de Yerushalayim",
+      "Shlomo"
+    ],
+    "characters_secondary": [],
+    "themes": [
+      "Amor",
+      "Desejo",
+      "Busca",
+      "Primavera"
+    ]
+  },
+  "facts": [
+    {
+      "id": "mg001",
+      "order": 1,
+      "text": "O rolo se abre com desejo, perfume e convite à proximidade.",
+      "text_he": null,
+      "refs": [
+        "Song of Songs 1:1-4"
+      ],
+      "ref_start": "Song of Songs 1:1",
+      "ref_end": "Song of Songs 1:4",
+      "chapter": 1,
+      "verse_start": 1,
+      "verse_end": 4,
+      "sefaria_ref": "Song of Songs 1:1-4",
+      "tags": [
+        "amor",
+        "desejo",
+        "perfume"
+      ],
+      "topic": "Desejo inicial"
+    },
+    {
+      "id": "mg002",
+      "order": 2,
+      "text": "A chegada da primavera acompanha o chamado do amado para sair e contemplar a renovação.",
+      "text_he": null,
+      "refs": [
+        "Song of Songs 2:8-17"
+      ],
+      "ref_start": "Song of Songs 2:8",
+      "ref_end": "Song of Songs 2:17",
+      "chapter": 2,
+      "verse_start": 8,
+      "verse_end": 17,
+      "sefaria_ref": "Song of Songs 2:8-17",
+      "tags": [
+        "primavera",
+        "amado",
+        "renovação"
+      ],
+      "topic": "Voz do amado"
+    },
+    {
+      "id": "mg003",
+      "order": 3,
+      "text": "Busca noturna, cortejo e jardim fechado desenvolvem imagens de presença e intimidade.",
+      "text_he": null,
+      "refs": [
+        "Song of Songs 3:6-5:1"
+      ],
+      "ref_start": "Song of Songs 3:6",
+      "ref_end": "Song of Songs 5:1",
+      "chapter": 3,
+      "verse_start": 6,
+      "verse_end_chapter": 5,
+      "verse_end": 1,
+      "sefaria_ref": "Song of Songs 3:6-5:1",
+      "tags": [
+        "busca",
+        "jardim",
+        "presença"
+      ],
+      "topic": "Busca e jardim"
+    },
+    {
+      "id": "mg004",
+      "order": 4,
+      "text": "O amor é descrito como forte e impossível de comprar, e o poema encerra com novo chamado.",
+      "text_he": null,
+      "refs": [
+        "Song of Songs 8:6-14"
+      ],
+      "ref_start": "Song of Songs 8:6",
+      "ref_end": "Song of Songs 8:14",
+      "chapter": 8,
+      "verse_start": 6,
+      "verse_end": 14,
+      "sefaria_ref": "Song of Songs 8:6-14",
+      "tags": [
+        "amor",
+        "força",
+        "chamado"
+      ],
+      "topic": "Amor forte"
+    }
+  ]
+}
