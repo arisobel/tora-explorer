@@ -395,6 +395,30 @@
           "parasha_ids": ["comfort-cyrus-servant", "servant-zion-restoration"],
           "fact_ids": ["ys049", "ys050", "ys055", "ys056", "ys057", "ys062", "ys064"],
           "themes": ["consolo", "retorno", "servo"]
+        },
+        {
+          "id": "yechezkel-glory-exile",
+          "label": "Yechezkel, glória e exílio",
+          "icon": "🛞",
+          "summary": "Visão da carruagem, sinais do cerco, partida da glória e interpretação da queda entre os exilados.",
+          "book_key": "ezekiel",
+          "milestone_id": "ezekiel-glory-exile",
+          "primary_parasha_id": "chariot-call-watchman",
+          "parasha_ids": ["chariot-call-watchman", "siege-signs-judgment", "temple-abominations-glory-departs", "jerusalem-sins-nations-fall"],
+          "fact_ids": ["ez001", "ez004", "ez008", "ez009", "ez017", "ez022", "ez024", "ez037", "ez040"],
+          "themes": ["glória", "exílio", "queda"]
+        },
+        {
+          "id": "yechezkel-restoration-temple",
+          "label": "Yechezkel e restauração",
+          "icon": "🌊",
+          "summary": "Novo coração, ossos secos, reunificação, retorno da glória e rio de vida do Templo.",
+          "book_key": "ezekiel",
+          "milestone_id": "ezekiel-restoration-temple",
+          "primary_parasha_id": "shepherds-new-heart-dry-bones",
+          "parasha_ids": ["shepherds-new-heart-dry-bones", "gog-restoration-temple", "temple-service-land-river"],
+          "fact_ids": ["ez042", "ez045", "ez046", "ez047", "ez048", "ez055", "ez062", "ez064"],
+          "themes": ["novo coração", "templo", "presença"]
         }
       ]
     }

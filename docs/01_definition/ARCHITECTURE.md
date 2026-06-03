@@ -198,7 +198,7 @@ Response shape used:
 | Timeline → drawer cross-link | Timeline | Pilots for Genesis groups and Kings/First Temple groups |
 | Timeline phase drill-down groups | Timeline | Implemented via `data/timeline_groups.json` |
 | Chumash Atlas milestones | Chumash | Implemented via `data/milestones/chumash.json` |
-| Nach data model | Data | Implemented for `data/nach/joshua/`, `data/nach/judges/`, `data/nach/samuel/`, `data/nach/kings/`, `data/nach/isaiah/`, and `data/nach/jeremiah/` |
+| Nach data model | Data | Implemented for `data/nach/joshua/`, `data/nach/judges/`, `data/nach/samuel/`, `data/nach/kings/`, `data/nach/isaiah/`, `data/nach/jeremiah/`, and `data/nach/ezekiel/` |
 | SQLite authoring database | Authoring | Schema + import implemented; export script not yet written |
 | Data validation script | Data | Not implemented |
 | Visual markers for facts/parashiot | Data/UI | Planned |

@@ -269,3 +269,13 @@
 **Decision:** Add `data/nach/jeremiah/` with `index.json` plus 8 prophetic-unit files. Connect Yirmiya in Estrutura, add a final-warning group inside `first-temple-kings`, and make the existing Exile of Babylon timeline event expandable through `babylon-exile-prophets`.
 
 **Impact:** Jeremiah contributes 1 book, 8 prophetic units, and 64 facts to SQLite. The Timeline now has an organic bridge from Malachim's destruction narrative into prophetic interpretation of exile and remnant life.
+
+---
+
+## 2026-06-03 — Ezekiel anchors the Babylonian exile drill-down
+
+**Context:** Yechezkel is the natural continuation after Yirmiyahu because his prophetic ministry occurs among the Babylonian exiles and interprets the destruction, divine presence outside the land, restoration, and future Temple.
+
+**Decision:** Add `data/nach/ezekiel/` with `index.json` plus 8 prophetic-unit files. Connect Yechezkel in Estrutura and add two groups to `babylon-exile-prophets`: glory/exile and restoration/Temple.
+
+**Impact:** Ezekiel contributes 1 book, 8 prophetic units, and 64 facts to SQLite. The Exile timeline phase now combines Yirmiyahu's remnant perspective, Yeshaya's consolation, and Yechezkel's exilic visions without changing the main timeline layout.

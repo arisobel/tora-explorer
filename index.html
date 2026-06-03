@@ -733,7 +733,7 @@ nav {
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('kings')" style="font-size:11px;cursor:pointer">Malachim I/II ›<div class="tooltip">Reis — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('isaiah')" style="font-size:11px;cursor:pointer">Yeshaya ›<div class="tooltip">Isaías — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('jeremiah')" style="font-size:11px;cursor:pointer">Yirmiya ›<div class="tooltip">Jeremias — clique para explorar unidades</div></div>
-            <div class="chip chip-blue" style="font-size:11px">Yechezkel</div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('ezekiel')" style="font-size:11px;cursor:pointer">Yechezkel ›<div class="tooltip">Ezequiel — clique para explorar unidades</div></div>
             <div class="chip chip-blue" style="font-size:11px">Trei Assar</div>
           </div>
           <div class="book-chips" style="margin-top:8px">
@@ -2253,6 +2253,7 @@ const BOOK_META = {
   kings:       { title: 'Melachim · Unidades',   label: 'Melachim', path: 'data/nach/kings/index.json',            sefaria: 'I Kings',     indexField: 'units'     },
   isaiah:      { title: 'Yeshaya · Unidades',    label: 'Yeshaya',  path: 'data/nach/isaiah/index.json',           sefaria: 'Isaiah',      indexField: 'units'     },
   jeremiah:    { title: 'Yirmiyahu · Unidades',  label: 'Yirmiyahu', path: 'data/nach/jeremiah/index.json',        sefaria: 'Jeremiah',    indexField: 'units'     },
+  ezekiel:     { title: 'Yechezkel · Unidades',  label: 'Yechezkel', path: 'data/nach/ezekiel/index.json',         sefaria: 'Ezekiel',     indexField: 'units'     },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
