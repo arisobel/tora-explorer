@@ -732,7 +732,7 @@ nav {
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('samuel')" style="font-size:11px;cursor:pointer">Shmuel I/II ›<div class="tooltip">Samuel — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('kings')" style="font-size:11px;cursor:pointer">Malachim I/II ›<div class="tooltip">Reis — clique para explorar unidades</div></div>
             <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('isaiah')" style="font-size:11px;cursor:pointer">Yeshaya ›<div class="tooltip">Isaías — clique para explorar unidades</div></div>
-            <div class="chip chip-blue" style="font-size:11px">Yirmiya</div>
+            <div class="chip chip-blue tooltip-wrap" onclick="drawerOpen('jeremiah')" style="font-size:11px;cursor:pointer">Yirmiya ›<div class="tooltip">Jeremias — clique para explorar unidades</div></div>
             <div class="chip chip-blue" style="font-size:11px">Yechezkel</div>
             <div class="chip chip-blue" style="font-size:11px">Trei Assar</div>
           </div>
@@ -869,7 +869,7 @@ nav {
         </div>
       </div>
 
-      <div class="tl-event">
+      <div class="tl-event" data-timeline-phase="babylon-exile-prophets" onclick="timelineTogglePhase('babylon-exile-prophets', this)">
         <div class="tl-period">3339 – 3409<br>70 anos</div>
         <div class="tl-dot-col"><div class="tl-dot dot-escrita" style="background: #8a6abf"></div><div class="tl-connector" style="height:60px; background:linear-gradient(180deg,#8a6abf,var(--green));"></div></div>
         <div class="tl-content">
@@ -2252,6 +2252,7 @@ const BOOK_META = {
   samuel:      { title: 'Shemuel · Unidades',    label: 'Shemuel',  path: 'data/nach/samuel/index.json',           sefaria: 'I Samuel',    indexField: 'units'     },
   kings:       { title: 'Melachim · Unidades',   label: 'Melachim', path: 'data/nach/kings/index.json',            sefaria: 'I Kings',     indexField: 'units'     },
   isaiah:      { title: 'Yeshaya · Unidades',    label: 'Yeshaya',  path: 'data/nach/isaiah/index.json',           sefaria: 'Isaiah',      indexField: 'units'     },
+  jeremiah:    { title: 'Yirmiyahu · Unidades',  label: 'Yirmiyahu', path: 'data/nach/jeremiah/index.json',        sefaria: 'Jeremiah',    indexField: 'units'     },
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };

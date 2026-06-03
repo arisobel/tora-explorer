@@ -259,3 +259,13 @@
 **Decision:** Add `data/nach/isaiah/` with `index.json` plus 8 prophetic-unit files. Keep the same runtime contract used by other Nach books (`units[]` plus fact files), and connect Yeshaya to both Estrutura and the `first-temple-kings` timeline phase.
 
 **Impact:** Isaiah contributes 1 book, 8 prophetic units, and 64 facts to SQLite. The Timeline now links First Temple history and prophetic interpretation without changing the current `index.html` timeline structure.
+
+---
+
+## 2026-06-02 — Jeremiah extends Neviim Acharonim into the exile transition
+
+**Context:** After Yeshaya, Yirmiyahu is the natural next Neviim Acharonim dataset because it directly covers the last kings of Yehudá, the fall of Yerushalayim, the remnant after destruction, and the Babylonian exile frame.
+
+**Decision:** Add `data/nach/jeremiah/` with `index.json` plus 8 prophetic-unit files. Connect Yirmiya in Estrutura, add a final-warning group inside `first-temple-kings`, and make the existing Exile of Babylon timeline event expandable through `babylon-exile-prophets`.
+
+**Impact:** Jeremiah contributes 1 book, 8 prophetic units, and 64 facts to SQLite. The Timeline now has an organic bridge from Malachim's destruction narrative into prophetic interpretation of exile and remnant life.

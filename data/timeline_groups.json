@@ -337,6 +337,64 @@
           "parasha_ids": ["oracles-against-nations", "world-judgment-zion-songs", "comfort-cyrus-servant", "servant-zion-restoration"],
           "fact_ids": ["ys017", "ys022", "ys029", "ys049", "ys053", "ys055", "ys057", "ys061", "ys064"],
           "themes": ["consolo", "servo", "redenção"]
+        },
+        {
+          "id": "yirmiyahu-final-warning",
+          "label": "Yirmiyahu e a queda de Yehudá",
+          "icon": "📜",
+          "summary": "Chamado profético, sermão do Templo, jugo de Bavel, cerco final e queda de Yerushalayim.",
+          "book_key": "jeremiah",
+          "milestone_id": "jeremiah-final-warning",
+          "primary_parasha_id": "final-siege-and-fall",
+          "parasha_ids": ["call-and-early-warnings", "temple-sermon-false-security", "yoke-false-prophets-restoration", "final-siege-and-fall"],
+          "fact_ids": ["jr001", "jr003", "jr009", "jr010", "jr034", "jr035", "jr041", "jr047", "jr048"],
+          "themes": ["templo", "bavel", "queda"]
+        }
+      ]
+    },
+    {
+      "id": "babylon-exile-prophets",
+      "timeline_event_id": "babylon-exile",
+      "label": "Exílio da Babilônia e profetas",
+      "am_start": 3339,
+      "am_end": 3409,
+      "summary": "Do trauma da destruição à vida no exílio, com Yirmiyahu interpretando o remanescente e Yeshaya projetando consolo e retorno.",
+      "groups": [
+        {
+          "id": "yirmiyahu-remnant-egypt",
+          "label": "Remanescente, Egito e Baruch",
+          "icon": "🧭",
+          "summary": "Gedalyahu, fuga para o Egito, persistência da idolatria e palavra pessoal a Baruch.",
+          "book_key": "jeremiah",
+          "milestone_id": "jeremiah-remnant-egypt",
+          "primary_parasha_id": "after-destruction-egypt",
+          "parasha_ids": ["after-destruction-egypt"],
+          "fact_ids": ["jr049", "jr050", "jr051", "jr052", "jr053", "jr054", "jr055", "jr056"],
+          "themes": ["remanescente", "egito", "baruch"]
+        },
+        {
+          "id": "yirmiyahu-nations-bavel",
+          "label": "Nações, Bavel e memória do exílio",
+          "icon": "🏺",
+          "summary": "Oráculos contra as nações, queda futura de Bavel e apêndice histórico da destruição.",
+          "book_key": "jeremiah",
+          "milestone_id": "jeremiah-nations-bavel",
+          "primary_parasha_id": "nations-and-historical-appendix",
+          "parasha_ids": ["nations-and-historical-appendix"],
+          "fact_ids": ["jr057", "jr059", "jr061", "jr062", "jr063", "jr064"],
+          "themes": ["nações", "bavel", "esperança"]
+        },
+        {
+          "id": "yeshaya-exile-comfort",
+          "label": "Yeshaya e consolo do exílio",
+          "icon": "🕊️",
+          "summary": "Consolo de Tzion, soberania sobre Bavel, Ciro e missão do servo.",
+          "book_key": "isaiah",
+          "milestone_id": "isaiah-exile-comfort",
+          "primary_parasha_id": "comfort-cyrus-servant",
+          "parasha_ids": ["comfort-cyrus-servant", "servant-zion-restoration"],
+          "fact_ids": ["ys049", "ys050", "ys055", "ys056", "ys057", "ys062", "ys064"],
+          "themes": ["consolo", "retorno", "servo"]
         }
       ]
     }

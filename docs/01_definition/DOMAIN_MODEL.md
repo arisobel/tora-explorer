@@ -166,7 +166,7 @@ Chumash
             └── Connections { prev, next, thematic_links[] }
 
 Nach
-  └── Book[] (Joshua, Judges, Samuel, Kings, Isaiah)
+  └── Book[] (Joshua, Judges, Samuel, Kings, Isaiah, Jeremiah)
        └── NarrativeUnit[] (stored as milestone nodes)
             └── Fact[] (ordered narrative moments with Sefaria refs)
 
@@ -204,6 +204,8 @@ Sefaria API (external)
 | `data/nach/kings/01-solomon-consolidation-wisdom.json` through `08-judah-reform-exile.json` | Full Kings first-pass data; all `facts_count` values match actual `facts[]` length |
 | `data/nach/isaiah/index.json` | Yeshaya/Isaiah metadata and 8 prophetic-unit summaries |
 | `data/nach/isaiah/01-zion-indictment-call.json` through `08-servant-zion-restoration.json` | Full Isaiah first-pass data; all `facts_count` values match actual `facts[]` length |
+| `data/nach/jeremiah/index.json` | Yirmiyahu/Jeremiah metadata and 8 prophetic-unit summaries |
+| `data/nach/jeremiah/01-call-and-early-warnings.json` through `08-nations-and-historical-appendix.json` | Full Jeremiah first-pass data; all `facts_count` values match actual `facts[]` length |
 | `data/milestones/chumash.json` | Chumash Atlas milestones across the 5 books |
 | `assets/` | Planned folder for visual icons/images referenced by JSON; not implemented yet |
 
