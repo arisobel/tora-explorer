@@ -18,7 +18,7 @@
 
 ## BUG-02 — Timeline phase for Moshe → Shlomo is too broad
 
-**Symptom:** The Timeline event `Saída do Egito — Sinai — Israel` spans `2448–2928` and currently opens the `exodus-sinai` drill-down, which only covers Exodus/Sinai groups.
+**Symptom:** The Timeline event `Saída do Egito — Sinai — Israel` spans `2448–2928` and currently opens the broad `exodus-sinai` drill-down, which contains Exodus, Yehoshua, Shoftim, and Shemuel groups.
 
 **Root cause:** The timeline was originally event-first. Nach books were later added horizontally, so Yehoshua, Shoftim, and Shemuel are currently represented as groups inside one broad phase instead of generated book/period lanes.
 
@@ -30,7 +30,7 @@
 
 ## BUG-03 — Timeline groups are still hand-authored runtime projections
 
-**Symptom:** `data/timeline_groups.json` now includes Chumash groups plus Kings/Isaiah/Jeremiah/Ezekiel First Temple and Exile pilots, but it is still manually maintained.
+**Symptom:** `data/timeline_groups.json` now includes Chumash plus all exposed Nach/Ketuvim timeline groups, but it is still manually maintained.
 
 **Root cause:** SQLite import exists, but the SQLite→JSON export pipeline is not implemented yet.
 
@@ -40,13 +40,13 @@
 
 ---
 
-## DEV-01 — Git status/diff blocked by safe.directory
+## DEV-01 — Git status/diff requires safe.directory handling
 
-**Symptom:** Running `git status --short` fails with Git's `dubious ownership` error.
+**Symptom:** Git commands may fail with Git's `dubious ownership` error unless an explicit `safe.directory` override is used.
 
 **Root cause:** The repository directory is owned by a different Windows SID than the current process user.
 
-**Impact:** Git-based verification and diff reporting are blocked until the workspace is marked safe for this user.
+**Impact:** Git-based verification and diff reporting are less reliable unless the workspace is marked safe or commands consistently pass the repository-specific override.
 
 **Fix:** Configure Git safe directory for this repository when appropriate:
 `git config --global --add safe.directory C:/Users/Sobel/projetos/claude/tora-explorer`

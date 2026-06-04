@@ -64,6 +64,8 @@
 
 ## 2026-05-31 — JSON-first visual content strategy
 
+**Status:** Partially superseded by the 2026-06-03 SQLite authoring-layer decision below. Static JSON remains the public runtime format.
+
 **Context:** The project needs richer drill-down views and sensory visual markers, including icons or images for narrative facts. A database could support editing, but would add backend, deployment, authentication, migrations, and storage complexity before those needs are proven.
 
 **Decision:** Keep static JSON as the public app runtime format. Add optional visual metadata to facts, parashiot, books, and timeline events. Store images/icons as separate static files under a future `assets/` folder and reference them from JSON. Defer database usage until a real authoring workflow requires it.
@@ -279,3 +281,23 @@
 **Decision:** Add `data/nach/ezekiel/` with `index.json` plus 8 prophetic-unit files. Connect Yechezkel in Estrutura and add two groups to `babylon-exile-prophets`: glory/exile and restoration/Temple.
 
 **Impact:** Ezekiel contributes 1 book, 8 prophetic units, and 64 facts to SQLite. The Exile timeline phase now combines Yirmiyahu's remnant perspective, Yeshaya's consolation, and Yechezkel's exilic visions without changing the main timeline layout.
+
+---
+
+## 2026-06-03 — Remaining Nach and Ketuvim use the same horizontal drill model
+
+**Context:** After Yechezkel, the Estrutura and Timeline views still exposed book chips without equivalent first-pass unit data for Trei Assar and most Ketuvim.
+
+**Decision:** Add first-pass JSON unit sets for Trei Assar, Tehilim, Mishlei, Iyov, Meguilot, Daniel, Ezra/Nechemia, and Divrei Hayamim. Reuse the existing `book -> milestone/narrative unit -> fact` SQLite model and the generic drawer instead of introducing separate screen-owned schemas.
+
+**Impact:** Every Nach/Ketuvim chip currently exposed in Estrutura has a drawer-backed data set and is reachable from Timeline groups. SQLite was re-imported with 3707 nodes, 8152 node edges, 1397 source refs, 220 time ranges, 94 visual markers, 1523 view projections, and 296 skipped edges.
+
+---
+
+## 2026-06-03 — SQLite is the implemented authoring layer, JSON remains the runtime
+
+**Context:** Earlier documentation deferred database usage, but the project now has migrations, initialization, and JSON import scripts while the public app still fetches static JSON.
+
+**Decision:** Treat SQLite as the implemented local authoring and integration layer. Keep static JSON as the publication and public runtime format until an SQLite-to-JSON export pipeline and generated projections are ready.
+
+**Impact:** Documentation and backlog items should distinguish between local database authoring, which exists, and a live database-backed public runtime, which remains out of scope.

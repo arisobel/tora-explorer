@@ -3,18 +3,9 @@
 ## Immediate (Next Cycle)
 
 - [ ] Create `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` (drawer 404s for these)
-- [ ] Add Exodus era labels/styles to the drawer `ERA` map (`egito`, `saida-egito`) — currently falls back to `patriarcas` color
-- [ ] Make fact chapter parsing work for any Chumash book (regex currently correct, but `drawerGoToPessukim` now fixed)
-- [ ] Review and refine Vayikra fact wording and refs before exposing drawer for that book
-- [ ] Review and refine Bamidbar fact wording and refs before exposing drawer for that book
-- [ ] Review and refine Devarim fact wording and refs before exposing drawer for that book
-- [ ] Review and refine Joshua narrative-unit wording and refs before exposing Nach drill-down
-- [ ] Review and refine Judges narrative-unit wording and refs before exposing Nach drill-down
-- [ ] Review and refine Samuel narrative-unit wording and refs before exposing Nach drill-down
-- [ ] Review and refine Kings narrative-unit wording and refs before broader Nach drill-down
-- [ ] Review and refine Isaiah prophetic-unit wording and refs before broader Nach drill-down
-- [ ] Review and refine Jeremiah prophetic-unit wording and refs before broader Nach drill-down
-- [ ] Review and refine Ezekiel prophetic-unit wording and refs before broader Nach drill-down
+- [ ] Add regression tests for fact chapter parsing and Pessukim routing across Chumash and multi-book Nach/Ketuvim sets
+- [ ] Review and refine Vayikra, Bamidbar, and Devarim fact wording and refs after first-pass exposure
+- [ ] Review and refine Joshua, Judges, Samuel, Kings, Isaiah, Jeremiah, and Ezekiel unit wording and refs after first-pass exposure
 - [ ] Review and refine the new Trei Assar and Ketuvim first-pass wording, refs, and timeline placement
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
 - [ ] Extend timeline links beyond the Genesis pilot (`brit-milah`, `yitzchak-born`, `yaakov-born`, `yosef-born`, `yaakov-egypt`)
@@ -52,15 +43,13 @@
 - [ ] Add validation for visual marker shape, missing assets, and missing captions
 - [ ] Add visual markers to one Genesis pilot parasha before broad rollout
 - [ ] Render fact-level visual markers inside the existing parasha drawer
-- [ ] Make drawer titles, ruler labels, and total AM ranges book-aware
-- [ ] Add Exodus era labels/styles to the drawer `ERA` map (`egito`, `saida-egito`)
-- [ ] Make fact chapter parsing work for any Chumash book, not only `Genesis`
+- [ ] Refine the drawer visual language for additional books and historical periods
 - [ ] Update drawer passage buttons so labels and behavior match the schema wording consistently
 - [ ] Add a lightweight validation script or documented checklist for `facts_count`, missing files, required schema keys, and ref formatting
 
 ## Mid Term
 
-- [ ] Refine drawer support for Vayikra, Bamidbar, Devarim, Joshua, Judges, Samuel, Kings, Isaiah, Jeremiah, and Ezekiel after UI review
+- [ ] Refine drawer support for all exposed Chumash, Nach, and Ketuvim sets after UI review
 - [ ] Replace static Chumash event lists with parasha-driven book views
 - [ ] Build a Nach atlas/drill view using `data/nach/*` narrative units
 - [ ] Build the Chumash visual atlas view with book lanes, event lanes, character lanes, and visual markers
@@ -76,17 +65,17 @@
 - [ ] Mishna & Guemara tab: clicking a sage opens a bio panel
 - [ ] Offline mode / service worker cache for JSON files and Sefaria responses
 - [ ] Portuguese translation layer for verse text where available
-- [ ] Consider a database-backed authoring system only if local JSON editing becomes insufficient
-- [ ] If a database is introduced, keep static JSON export as the public app runtime format
+- [ ] Decide when SQLite should become the authoritative authoring source instead of an imported integration layer
+- [ ] Keep static JSON export as the public app runtime format as SQLite authoring evolves
 
 ---
 
 ## Corrections Registered From Current State
 
-- [ ] Remove remaining Genesis-only assumptions from the drawer implementation
-- [ ] Complete remaining Exodus JSON files before exposing all Exodus parashiot in the UI
-- [ ] Prioritize timeline/parasha cross-interaction before further bulk parasha population
+- [ ] Remove remaining parasha-centric naming assumptions from the generic Chumash/Nach/Ketuvim drawer
+- [ ] Complete remaining Exodus JSON files to eliminate drawer 404s
+- [ ] Refine timeline boundaries and replace manually maintained projections with generated views
 - [ ] Keep `docs/02_execution/07_progress.md` as the operational source of truth
 - [ ] Keep `docs/02_execution/KNOWN_ISSUES.md` limited to real, verified issues
-- [ ] Resolve local Git `dubious ownership` before relying on Git status/diff workflows
+- [ ] Standardize the local Git `safe.directory` workflow for reliable status/diff verification
 - [ ] Preserve JSON-first content publication while adding visual marker support

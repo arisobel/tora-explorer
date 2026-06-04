@@ -10,6 +10,7 @@
 | Styles | Inline CSS with CSS custom properties |
 | Logic | Vanilla JS (ES6, inline `<script>` blocks) |
 | Data | Static JSON files under `data/` |
+| Authoring | SQLite local database under `db/`, populated from JSON |
 | Visual Assets | Planned static files under `assets/` |
 | Deployment | CapRover tar package with Nginx Dockerfile |
 | External API | Sefaria REST API (read-only, no auth) |
@@ -17,9 +18,9 @@
 
 No npm, no bundler, no framework. Open `index.html` directly in any browser.
 
-The public runtime should remain static-file based. A database is deferred until
-there is a real authoring workflow need; even then, the preferred public output
-is exported JSON consumed by the static app.
+The public runtime remains static-file based. SQLite is already available as a
+local authoring and integration layer, while the preferred public output remains
+exported JSON consumed by the static app.
 
 ---
 
@@ -30,14 +31,21 @@ tora-explorer/
 ├── index.html                         # Entire app
 ├── data/
 │   ├── timeline.json                  # Eras + key events (global ruler)
+│   ├── timeline_groups.json           # Timeline phase drill-down projection
 │   ├── SCHEMA.md                      # Parasha JSON schema spec
-│   └── parashiot/
-│       ├── genesis/
-│       │   ├── index.json             # Lightweight index (12 parashiot metadata)
-│       │   └── 01-bereshit.json ... 12-vayechi.json
-│       └── exodus/
-│           ├── index.json             # Lightweight index (11 parashiot metadata)
-│           └── 01-shemot.json ... 08-tetzaveh.json
+│   ├── milestones/
+│   │   └── chumash.json               # Strategic Chumash aggregators
+│   ├── parashiot/
+│   │   ├── genesis/
+│   │   │   ├── index.json             # Lightweight index (12 parashiot metadata)
+│   │   │   └── 01-bereshit.json ... 12-vayechi.json
+│   │   └── exodus/ ... deuteronomy/   # Chumash book indexes and parasha files
+│   └── nach/
+│       ├── joshua/ ... trei-assar/    # Neviim unit indexes and files
+│       └── psalms/ ... chronicles/    # Ketuvim unit indexes and files
+├── db/
+│   ├── migrations/                    # SQLite authoring schema
+│   └── tora-explorer.sqlite           # Local generated authoring database
 ├── assets/                            # Planned visual icons/images referenced by JSON
 │   ├── icons/
 │   ├── facts/
@@ -45,7 +53,9 @@ tora-explorer/
 ├── captain-definition                 # CapRover manifest
 ├── Dockerfile                         # Nginx static hosting image
 ├── scripts/
-│   └── build-caprover.ps1             # Generates dist/*.tar, keeps last 5
+│   ├── build-caprover.ps1             # Generates dist/*.tar, keeps last 5
+│   ├── init-sqlite.ps1                # Creates the local SQLite database
+│   └── import-json-to-sqlite.ps1      # Imports runtime JSON into SQLite
 ├── dist/                              # Generated CapRover tar packages
 └── docs/
     ├── 00_meta/                       # Orchestration skill
@@ -69,10 +79,10 @@ Tab switching: `showPage(id, btn)` toggles `.active` class.
 Book switching (Chumash tab): `showBook(id, btn)` same pattern.
 Verse view toggle: `pkSetView(mode, btn)` adds class to `#pk-reader`.
 
-Future drill-down levels:
+Drill-down levels:
 - Level 1: canonical structure map
-- Level 2: Chumash five-book visual overview
-- Level 3: book/parasha overview
+- Level 2: book-family and five-book visual overview
+- Level 3: milestone, parasha, or Nach/Ketuvim narrative-unit overview
 - Level 4: fact detail with Sefaria passage and optional visual marker
 
 Timeline/parasha cross-interaction is a first-class architectural concern:
@@ -84,12 +94,13 @@ should expose their related global timeline markers.
 ## Data Flow: Parasha Drawer
 
 ```
-User clicks "Bereshit ›" or "Shemot ›" chip
+User clicks a Chumash, Nach, or Ketuvim book chip
   → drawerOpen({ bookKey })
-  → fetch("data/parashiot/{bookKey}/index.json")
-  → render parashiot list with summary_short and mini-ruler
-  → user clicks a parasha
-  → fetch(parasha.data_file)    ← e.g. "data/parashiot/genesis/01-bereshit.json"
+  → resolve index path via BOOK_META[bookKey]
+  → fetch Chumash parashiot or Nach/Ketuvim units index
+  → render unit list with summary_short and mini-ruler
+  → user clicks a parasha or narrative unit
+  → fetch(unit.data_file)
   → render facts[]
   → each fact has "→ Capítulo N" button
   → click → drawerGoToPessukim(chapter, bookKey)
@@ -98,11 +109,12 @@ User clicks "Bereshit ›" or "Shemot ›" chip
 ```
 
 Current status:
-- Drawer is book-aware: implemented for Genesis and Exodus.
+- Drawer is book-aware for all Chumash, Nach, and Ketuvim chips exposed in
+  Estrutura.
 - `drawerOpen()` accepts `{ bookKey, parashaId?, factIds? }`.
 - Drawer-to-Pessukim navigation is book-aware (fixed 2026-06-01).
-- Exodus ERA colors in the drawer (`egito`, `saida-egito`) still fall back to
-  `patriarcas` style — a known cosmetic gap.
+- `ERA` includes core Genesis, Exodus, journey, land-entry, and Nach styles;
+  richer period-specific visual polish remains possible.
 
 Next step:
 ```
@@ -174,12 +186,13 @@ Response shape used:
 ## Design Tokens (CSS Custom Properties)
 
 ```css
---bg: #0e0d0b          /* darkest background */
+--bg: #fbfaf7           /* light atlas background */
+--surface: #ffffff      /* primary reading surface */
 --gold / --gold2 / --gold3   /* primary accent — Torah Oral */
 --blue / --blue2              /* Torah Escrita */
 --green / --green2            /* Oral Law */
 --text / --text2 / --text3    /* text hierarchy */
---border / --border2          /* gold-tinted borders */
+--border / --border2          /* restrained atlas borders */
 ```
 
 ---
@@ -195,10 +208,10 @@ Response shape used:
 | ERA color styling — Exodus and Nach | Estrutura Drawer | Core eras are mapped in `ERA`; additional book-specific polish remains possible |
 | Facts panel with inline Sefaria passages | Estrutura Drawer | Implemented |
 | Book-aware drawer-to-Pessukim navigation | Estrutura/Pessukim | Implemented (2026-06-01) |
-| Timeline → drawer cross-link | Timeline | Pilots for Genesis groups and Kings/First Temple groups |
+| Timeline → drawer cross-link | Timeline | Implemented for Chumash and exposed Nach/Ketuvim timeline groups |
 | Timeline phase drill-down groups | Timeline | Implemented via `data/timeline_groups.json` |
 | Chumash Atlas milestones | Chumash | Implemented via `data/milestones/chumash.json` |
-| Nach data model | Data | Implemented for `data/nach/joshua/`, `data/nach/judges/`, `data/nach/samuel/`, `data/nach/kings/`, `data/nach/isaiah/`, `data/nach/jeremiah/`, and `data/nach/ezekiel/` |
+| Nach/Ketuvim data model | Data | Implemented for all Estrutura chips from Joshua through Chronicles |
 | SQLite authoring database | Authoring | Schema + import implemented; export script not yet written |
 | Data validation script | Data | Not implemented |
 | Visual markers for facts/parashiot | Data/UI | Planned |
@@ -208,17 +221,15 @@ Response shape used:
 
 ## Content Authoring Direction
 
-The current source-of-truth for runtime data remains static JSON. Visual
-metadata should be added as optional fields that reference static files under
-`assets/`.
+The runtime source-of-truth remains static JSON. Visual metadata should be added
+as optional fields that reference static files under `assets/`.
 
-Near-term authoring stays manual. Later, a local `editor.html` or `admin.html`
-can provide forms for editing JSON fields and exporting or saving files through
-browser-supported local file APIs.
-
-Database-backed authoring remains a future option, not the current runtime
-architecture. If introduced, it should export the same JSON format the app
-already consumes.
+SQLite authoring is implemented through `db/migrations/`,
+`scripts/init-sqlite.ps1`, and `scripts/import-json-to-sqlite.ps1`. The next
+authoring step is an SQLite-to-JSON export pipeline so generated runtime
+projections can replace manually synchronized files without changing the public
+static architecture. A future local `editor.html` or `admin.html` can edit that
+authoring model.
 
 Detailed strategy:
 `docs/04_technical/CONTENT_VISUAL_STRATEGY.md`

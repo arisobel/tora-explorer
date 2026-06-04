@@ -1,16 +1,16 @@
 # Project Progress
 
 ## Current State
-- **Phase:** Timeline/parasha interaction model + drawer generalization
-- **Last update:** 2026-06-01
-- **Reality check:** Documentation was reconciled with the actual repository state on 2026-05-31.
+- **Phase:** Full Nach/Ketuvim first pass + timeline drill-down refinement
+- **Last update:** 2026-06-03
+- **Reality check:** Documentation was reconciled with the actual repository state on 2026-06-03.
 
 ---
 
 ## Completed
 
 - [x] `index.html` - full 5-tab SPA (Estrutura, Timeline, Mishna/Guemara, Chumash, Pessukim)
-- [x] CSS design system with tokens, responsive layout, dark theme
+- [x] CSS design system with tokens, responsive layout, and light atlas theme
 - [x] Tab 1 (Estrutura): Written + Oral Torah visual map, flow diagram, book chips
 - [x] Tab 2 (Linha do Tempo): Vertical timeline + oral-law horizontal bar
 - [x] Tab 3 (Mishna & Guemara): Tanaim/Amoraim panels, academies, braitot
@@ -83,7 +83,7 @@
 - [x] Estrutura tab chips for Trei Assar, Tehilim, Mishlei, Iyov, Meguilot, Daniel, Ezra/Nechemia, and Divrei Hayamim open their drawers
 - [x] Timeline phases expose all new Nach sets through clickable groups, including a new `second-temple-restoration` phase
 - [x] Pessukim selector includes all Sefaria books referenced by Trei Assar, Meguilot, Ezra/Nechemia, and Divrei Hayamim
-- [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, defer database until authoring needs justify it
+- [x] Content/visual strategy documented: keep JSON as runtime format, add optional icons/images, and use SQLite as the local authoring/integration layer
 - [x] CapRover deploy packaging added: `captain-definition`, `Dockerfile`, `scripts/build-caprover.ps1`, and `dist/` output folder
 - [x] Production Sefaria CORS fixed with same-origin Nginx proxy at `/api/sefaria/`
 - [x] Timeline/parasha cross-interaction strategy documented
@@ -117,7 +117,7 @@
 ## In Progress
 
 - [ ] Refine Timeline period boundaries beyond the Genesis/Nach pilots
-- [ ] Finish drawer behavior for books beyond Genesis (ERA colors, missing Exodus files)
+- [ ] Finish remaining drawer refinements and missing Exodus files
 
 ---
 
@@ -127,7 +127,7 @@
 2. Review and refine the new Nach/Ketuvim first-pass data and timeline grouping
 3. Define generated `data/views/structure.json` and `data/views/timeline.json`
 4. Create export script from SQLite back to runtime JSON
-5. Expose/refine Vayikra, Bamidbar, Devarim, Joshua, Judges, Samuel, Kings, Isaiah, Jeremiah, and Ezekiel after UI review
+5. Review and refine all exposed Chumash, Nach, and Ketuvim drawers after UI review
 6. Add selected-state breadcrumb across book, milestone, timeline group, parasha/unit, and fact levels
 7. Validate milestone, timeline group, parasha, and Nach unit links in a repeatable script/check
 8. Add selected/highlight state from drawer back to the Timeline tab
@@ -139,8 +139,8 @@
 - Sefaria API access depends on a public external service.
 - Local development may still use `corsproxy.io`; production uses the same-origin Nginx proxy.
 - `data/parashiot/exodus/index.json` currently references 2 files that do not exist, so an Exodus drawer would 404 for Vayakhel and Pekudei until those files are created.
-- Chumash data is complete except for the two remaining Exodus files; Nach now has first-pass sets for all structure chips. The UI still needs book/unit-aware drawer refinements and content review before broader exposure.
-- Git commands are blocked in this workspace by Git's `dubious ownership` safety check until `safe.directory` is configured.
+- Chumash data is complete except for the two remaining Exodus files; Nach now has first-pass sets for all structure chips. The UI still needs book/unit-aware drawer refinements and content review.
+- Git commands in this workspace may require an explicit `safe.directory` override because the repository directory is owned by a different Windows SID.
 
 ---
 
@@ -148,8 +148,8 @@
 
 - Drawer is now book-aware, but still uses the parasha naming internally for both Chumash parashiot and Nach narrative units.
 - `ERA` styling has basic Genesis/Exodus/Nach support; it still needs a richer visual language per book/period.
-- Fact chapter detection and Pessukim routing now read the current book/ref, but need a repeatable regression test for `I/II Samuel`, `I/II Kings`, Isaiah, Jeremiah, and Ezekiel.
-- No validation script checks missing files, `facts_count` drift, Sefaria ref shape, or required schema fields.
+- Fact chapter detection and Pessukim routing now read the current book/ref, but need a repeatable regression test for multi-book sets such as `I/II Samuel`, `I/II Kings`, Trei Assar, Meguilot, Ezra/Nechemia, and Divrei Hayamim.
+- No committed repeatable validation script checks missing files, `facts_count` drift, Sefaria ref shape, or required schema fields.
 - Timeline key events have stable IDs, but routing metadata is still partial.
 - Timeline tab and parasha drawer do not yet share selected/highlight state.
 - Milestone validation is manual; no script checks broken milestone-to-fact links yet.

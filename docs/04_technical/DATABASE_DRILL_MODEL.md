@@ -221,7 +221,7 @@ Long term, if needed, replace static JSON fetches with API reads.
 1. Keep current JSON runtime unchanged.
 2. Define the database schema in SQL/migrations. **Done in `db/migrations/001_initial_drill_model.sql`.**
 3. Initialize a local SQLite database. **Done through `scripts/init-sqlite.ps1`.**
-4. Import existing JSON into database tables.
+4. Import existing JSON into database tables. **Done through `scripts/import-json-to-sqlite.ps1`.**
 5. Build export scripts that regenerate the JSON files.
 6. Use the exported JSON in the existing frontend.
 7. Only then consider a live admin/editor UI.
@@ -248,17 +248,19 @@ Current JSON import command:
 powershell -ExecutionPolicy Bypass -File .\scripts\import-json-to-sqlite.ps1 -Reset
 ```
 
-The first import created:
+The latest documented import after the Nach/Ketuvim expansion created:
 
-- 1430 nodes
-- 2534 node edges
-- 353 source refs
-- 59 time ranges
-- 67 visual markers
-- 416 view projections
+- 3707 nodes
+- 8152 node edges
+- 1397 source refs
+- 220 time ranges
+- 94 visual markers
+- 1523 view projections
+- 296 skipped edges
 
 Some relations may be skipped when current JSON references content that is not
-present yet, such as parashiot/facts still planned for later population.
+present yet or when transitional projections refer to content outside the
+current import contract.
 
 ## Open Decision
 

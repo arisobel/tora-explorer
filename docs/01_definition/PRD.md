@@ -20,14 +20,16 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
 - Visual map of Written Torah (Chumash + Nach) and Oral Torah (Mishna, Guemara, Halacha)
 - Flow diagram: Mikra → Talmud → Halachá
 - Chips for each book, with tooltips
-- **Bereshit and Shemot chips open the parasha drawer** (lateral panel)
+- Chumash chips open the parasha drawer; Nach/Ketuvim chips open the reusable
+  narrative-unit drawer
 - Future visual drill-down: macro tradition map → Chumash overview → book/parasha overview → fact detail
 
 ### Tab 2 — Linha do Tempo
 - Vertical timeline from Creation (0 AM) to Acharonim (today)
 - Color-coded: blue = Written Torah, green = Oral Torah, purple = Transition
 - Horizontal bar showing Oral Torah periods by century CE
-- Events are clickable (currently no action)
+- Large phases expand into subject/milestone groups that can open linked
+  parashiot or Nach/Ketuvim units
 - Future event markers may include icons or images for key narrative moments
 
 ### Tab 3 — Mishna & Guemara
@@ -79,15 +81,17 @@ The intended drill-down hierarchy is:
 5. Fact detail: text, Sefaria ref, people/themes, and visual marker
 6. Pessukim: source text and chapter-level reading
 
-Authoring should remain JSON-first for now. A future local `editor.html` /
-`admin.html` may edit or export JSON files through forms before any database is
-introduced.
+The public runtime remains JSON-first. SQLite is available as a local authoring
+and integration layer, and a future `editor.html` / `admin.html` may edit that
+model or export JSON files through forms.
 
 ---
 
 ## Success Criteria
 - All 12 Gênesis parashiot have populated JSON data files
 - Drawer opens with facts and links to Pessukim tab for each parasha
+- Estrutura and Timeline can reach the same Chumash, Nach, and Ketuvim content
+  through reusable drill-down links
 - Historical ruler renders inside the drawer
 - App loads with zero build step (pure HTML/CSS/JS)
 - Visual markers can be added to facts without changing the static hosting model

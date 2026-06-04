@@ -304,19 +304,22 @@ The atlas should not be a separate data universe.
 
 ---
 
-## Implementation Order
+## Current Implementation Status
 
-1. Add IDs to `timeline.json.key_events[]`.
-2. Add optional `links` object to selected key events.
-3. Create a small pilot linking Genesis global events to Genesis parashiot:
-   - Criação -> Bereshit
-   - Dilúvio -> Noach
-   - Avraham / Lech-Lecha -> Lech Lecha
-4. Refactor drawer open functions to accept `{ bookKey, parashaId, factIds }`.
-5. Make timeline event clicks open the drawer with the correct selection.
-6. Add selected/highlight state to timeline and drawer.
-7. Extend pilot to Exodus once drawer supports multiple books.
-8. Only after the interaction model is stable, resume bulk parasha population.
+The original Genesis pilot is complete. Timeline phases now expand through
+`data/timeline_groups.json`, and groups can open Chumash, Nach, and Ketuvim
+content through the same drawer. The drawer accepts
+`{ bookKey, parashaId, factIds }` and resolves book-aware Pessukim navigation.
+
+## Next Implementation Order
+
+1. Add selected/highlight state shared by Timeline and drawer.
+2. Show linked global events and timeline groups inside the drawer.
+3. Validate timeline group links against book indexes, units, parashiot, and
+   facts in a repeatable script.
+4. Replace the hand-authored `data/timeline_groups.json` projection with a
+   generated SQLite-to-JSON view.
+5. Refine broad phase boundaries such as Exodus through early monarchy.
 
 ---
 

@@ -91,4 +91,5 @@ This should be treated as a runtime projection, not a long-term data silo.
 
 - Runtime remains static HTML/CSS/JS.
 - JSON remains the public content format.
-- Database-backed editing is deferred until authoring volume justifies it.
+- SQLite may support local authoring and generated projections, but the public
+  runtime remains static JSON.

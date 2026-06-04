@@ -28,10 +28,11 @@ modeled as:
 Nach Book → Narrative Unit → Fact → Pessukim
 ```
 
-The first implemented Nach books are:
-- Yehoshua (Joshua): 8 narrative units — complete first pass
-- Shoftim (Judges): 7 narrative units — complete first pass
-- Shemuel (Samuel I/II): 8 narrative units — complete first pass
+The implemented post-Chumash first-pass sets are:
+- Neviim Rishonim: Yehoshua, Shoftim, Shemuel, and Melachim
+- Neviim Acharonim: Yeshaya, Yirmiyahu, Yechezkel, and Trei Assar
+- Ketuvim: Tehilim, Mishlei, Iyov, Meguilot, Daniel, Ezra/Nechemia, and
+  Divrei Hayamim
 
 ### Parasha
 The atomic content unit. Each parasha has:
@@ -165,8 +166,8 @@ Chumash
             ├── Haftarah
             └── Connections { prev, next, thematic_links[] }
 
-Nach
-  └── Book[] (Joshua, Judges, Samuel, Kings, Isaiah, Jeremiah, Ezekiel)
+Nach / Ketuvim
+  └── BookSet[] (Joshua through Chronicles, including grouped multi-book sets)
        └── NarrativeUnit[] (stored as milestone nodes)
             └── Fact[] (ordered narrative moments with Sefaria refs)
 
@@ -208,6 +209,10 @@ Sefaria API (external)
 | `data/nach/jeremiah/01-call-and-early-warnings.json` through `08-nations-and-historical-appendix.json` | Full Jeremiah first-pass data; all `facts_count` values match actual `facts[]` length |
 | `data/nach/ezekiel/index.json` | Yechezkel/Ezekiel metadata and 8 prophetic-unit summaries |
 | `data/nach/ezekiel/01-chariot-call-watchman.json` through `08-temple-service-land-river.json` | Full Ezekiel first-pass data; all `facts_count` values match actual `facts[]` length |
+| `data/nach/trei-assar/` | Trei Assar index and 12 prophetic-book units |
+| `data/nach/psalms/`, `data/nach/proverbs/`, `data/nach/job/` | Tehilim, Mishlei, and Iyov indexes and wisdom/poetry units |
+| `data/nach/megillot/`, `data/nach/daniel/` | Meguilot and Daniel indexes and narrative units |
+| `data/nach/ezra-nehemiah/`, `data/nach/chronicles/` | Restoration and historical Ketuvim indexes and narrative units |
 | `data/milestones/chumash.json` | Chumash Atlas milestones across the 5 books |
 | `assets/` | Planned folder for visual icons/images referenced by JSON; not implemented yet |
 
@@ -230,15 +235,11 @@ Sefaria API (external)
 
 ## Current Implementation Boundary
 
-The data model supports all 5 books through parallel folders under
-`data/parashiot/`. The drawer is book-aware for Genesis and Exodus.
-Drawer-to-Pessukim navigation is also book-aware (fixed 2026-06-01).
+The data model supports all 5 Chumash books under `data/parashiot/` and all
+Estrutura Nach/Ketuvim chips under `data/nach/`. The drawer and
+drawer-to-Pessukim navigation are book-aware.
 
-Remaining drawer gaps: ERA color styling for Exodus-specific eras (`egito`,
-`saida-egito`); Leviticus/Numbers/Deuteronomy chips not yet exposed in the UI
-drawer even though data files exist.
-
-The next content-model evolution is documented in
-`docs/04_technical/DATABASE_DRILL_MODEL.md`: keep JSON as the app runtime
-format, but introduce a database authoring/source-of-truth model with reusable
-nodes and typed edges.
+SQLite authoring with reusable nodes and typed edges is implemented as described
+in `docs/04_technical/DATABASE_DRILL_MODEL.md`. The next content-model evolution
+is the SQLite-to-JSON export pipeline and generated structure/timeline
+projections, while JSON remains the app runtime format.

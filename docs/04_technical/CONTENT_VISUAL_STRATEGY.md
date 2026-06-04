@@ -2,27 +2,27 @@
 
 ## Decision
 
-Keep static JSON files as the publication format for the app. Do not move the
-project to a database yet.
+Keep static JSON files as the publication and public runtime format for the app.
+Use SQLite as a local authoring and integration layer.
 
 The content model will evolve to support richer drill-down views, visual
-markers, icons, images, and future local authoring tools. A database may become
-useful later as an authoring backend, but the browser app should continue to
-consume static JSON for portability and zero-build deployment.
+markers, icons, images, and future local authoring tools. The browser app should
+continue to consume static JSON for portability and zero-build deployment.
 
 ---
 
-## Why Not a Database Yet
+## Why JSON Remains the Runtime Format
 
 The current project benefits from being simple:
 - no backend
-- no deployment pipeline
 - no authentication
-- no migrations
 - no server-side storage
 - easy sharing as static files
 
-A database would be justified only when the project needs one or more of these:
+SQLite is useful for local authoring because it enables reusable nodes, typed
+edges, validation, and future generated projections without introducing a
+public backend. A hosted database would be justified only when the project
+needs one or more of these:
 - multi-user editing
 - authenticated editorial workflow
 - image uploads through a hosted admin panel
@@ -30,7 +30,8 @@ A database would be justified only when the project needs one or more of these:
 - audit history beyond Git
 - large enough content volume that JSON loading becomes a real bottleneck
 
-Until then, JSON keeps the content inspectable, versionable, and portable.
+Until then, JSON keeps the deployed content inspectable, versionable, and
+portable.
 
 ---
 
@@ -162,9 +163,10 @@ Rules:
 
 ## Authoring Strategy
 
-### Phase 1 - Manual JSON
+### Phase 1 - Manual JSON + SQLite Import
 
-Continue editing JSON files directly while the schema is still evolving.
+Continue editing JSON files directly while the schema is still evolving, then
+import them into SQLite through `scripts/import-json-to-sqlite.ps1`.
 
 Needed support:
 - schema documentation
@@ -173,7 +175,15 @@ Needed support:
 - missing-file detection
 - visual marker field conventions
 
-### Phase 2 - Local Content Studio
+### Phase 2 - SQLite Export and Generated Projections
+
+Implement `scripts/export-sqlite-to-json.ps1` and generate runtime JSON views
+for structure, timeline, and other drill-down entry points.
+
+This allows SQLite to mature into the authoring source without changing the
+static browser runtime.
+
+### Phase 3 - Local Content Studio
 
 Build a local `editor.html` or `admin.html` that reads JSON and helps edit:
 - parasha metadata
@@ -188,10 +198,11 @@ updated JSON for manual replacement.
 
 This keeps the app backend-free while reducing editing friction.
 
-### Phase 3 - Database as Authoring Backend
+### Phase 4 - Hosted Editorial Backend
 
-Introduce a database only if authoring needs outgrow local files. In that model:
-- the database is the editing backend
+Introduce a hosted database only if authoring needs outgrow local files and
+SQLite. In that model:
+- the hosted database is the editing backend
 - static JSON export remains the app runtime format
 - the public app can still be hosted as static files
 
@@ -215,15 +226,17 @@ Possible entities:
 3. Add validation for missing assets and required captions.
 4. Add visual markers to a small Genesis pilot, probably Noach or Lech Lecha.
 5. Render visual markers in the existing drawer.
-6. Create a book-level visual atlas view after the data proves stable.
-7. Build a local editor only after the schema stops moving.
+6. Implement SQLite-to-JSON export and generated runtime projections.
+7. Create a book-level visual atlas view after the data proves stable.
+8. Build a local editor only after the schema stops moving.
 
 ---
 
 ## Guardrails
 
 - Do not store images as base64 inside JSON.
-- Do not introduce a database before there is a real editing workflow need.
+- Do not make the public runtime depend on a live database or API before there
+  is a real hosted editing workflow need.
 - Do not let visual assets replace source refs; each fact remains anchored to
   Sefaria-compatible refs.
 - Do not make the first visual pass too broad. Pilot one parasha or one book
