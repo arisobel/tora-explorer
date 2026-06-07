@@ -53,6 +53,7 @@
 - [ ] Replace static Chumash event lists with parasha-driven book views
 - [ ] Build a Nach atlas/drill view using `data/nach/*` narrative units
 - [ ] Build the Chumash visual atlas view with book lanes, event lanes, character lanes, and visual markers
+- [ ] Define the future image model for the Atlas: decide whether images attach to books, milestones, parashiot/units, facts, or multiple node types; store at least image addressing/metadata in SQLite and export JSON references for the static runtime
 - [ ] Build a book/parasha overview view for Genesis using the complete Genesis data
 - [ ] Add search/filter across facts, characters, themes, and refs
 - [ ] Prototype a local `editor.html` / `admin.html` for editing or exporting JSON through forms

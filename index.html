@@ -586,6 +586,301 @@ nav {
 .milestone-label { color: var(--text2); font-size: 12px; line-height: 1.3; }
 .milestone-meta { color: var(--text3); font-size: 10px; margin-top: 2px; }
 
+/* 2D DRILL ATLAS */
+#page-atlas { max-width: 1280px; }
+.atlas2d-shell {
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,241,233,0.64));
+  overflow: hidden;
+  box-shadow: 0 18px 48px rgba(82,65,35,0.08);
+}
+.atlas2d-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.78);
+}
+.atlas2d-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .35rem;
+  color: var(--text3);
+  font-size: 12px;
+}
+.atlas2d-crumb {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--gold2);
+  cursor: pointer;
+  font: inherit;
+  padding: 1px 2px;
+}
+.atlas2d-crumb:hover { text-decoration: underline; }
+.atlas2d-zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.atlas2d-zoom-btn, .atlas2d-action-btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text2);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px 12px;
+}
+.atlas2d-zoom-btn:hover, .atlas2d-action-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold2);
+}
+.atlas2d-zoom-label {
+  color: var(--text3);
+  font-size: 11px;
+  min-width: 92px;
+  text-align: center;
+}
+.atlas2d-viewport {
+  position: relative;
+  min-height: 620px;
+  padding: 1.25rem 17rem 6.4rem 1.25rem;
+  overflow: hidden;
+}
+.atlas2d-map {
+  min-height: 465px;
+  border: 1px solid rgba(92,76,47,0.12);
+  border-radius: var(--r);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(47,120,168,0.08), transparent 28%),
+    radial-gradient(circle at 72% 28%, rgba(184,138,36,0.09), transparent 30%),
+    linear-gradient(90deg, rgba(92,76,47,0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(92,76,47,0.055) 1px, transparent 1px),
+    rgba(255,255,255,0.7);
+  background-size: auto, auto, 52px 52px, 52px 52px, auto;
+  padding: 1.2rem;
+}
+.atlas2d-map-title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.atlas2d-map-title h3 {
+  font-family: 'Crimson Pro', serif;
+  font-size: 24px;
+  color: var(--gold2);
+  line-height: 1.15;
+}
+.atlas2d-map-title p {
+  max-width: 560px;
+  color: var(--text2);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.atlas2d-node-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: .75rem;
+  align-items: stretch;
+}
+.atlas2d-node {
+  appearance: none;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-left: 3px solid rgba(47,120,168,0.45);
+  border-radius: var(--r);
+  background: rgba(255,255,255,0.88);
+  cursor: pointer;
+  padding: .85rem .9rem;
+  min-height: 116px;
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.atlas2d-node:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184,138,36,0.45);
+  box-shadow: 0 12px 28px rgba(82,65,35,0.10);
+}
+.atlas2d-node.selected {
+  border-color: rgba(184,138,36,0.6);
+  border-left-color: var(--gold);
+  background: rgba(255,250,238,0.96);
+}
+.atlas2d-node.hover-target {
+  border-color: rgba(184,138,36,0.42);
+  border-left-color: var(--gold);
+  background: rgba(255,250,238,0.78);
+}
+.atlas2d-node-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-bottom: .45rem;
+  background: rgba(47,120,168,0.12);
+  color: var(--blue2);
+  font-size: 14px;
+}
+.atlas2d-node-label {
+  font-family: 'Crimson Pro', serif;
+  font-size: 19px;
+  line-height: 1.15;
+  color: var(--text);
+}
+.atlas2d-node-sub {
+  color: var(--text2);
+  font-size: 12px;
+  line-height: 1.35;
+  margin-top: .3rem;
+}
+.atlas2d-node-meta {
+  color: var(--text3);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: .65rem;
+}
+.atlas2d-empty {
+  border: 1px dashed var(--border2);
+  border-radius: var(--r);
+  color: var(--text3);
+  padding: 1.5rem;
+  font-size: 13px;
+  text-align: center;
+}
+.atlas2d-layer-panel {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 244px;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: rgba(255,255,255,0.94);
+  box-shadow: 0 18px 34px rgba(82,65,35,0.10);
+  padding: .85rem;
+}
+.atlas2d-panel-title {
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: .5rem;
+}
+.atlas2d-person-list, .atlas2d-theme-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+.atlas2d-person-chip, .atlas2d-theme-chip {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  color: var(--text2);
+  font-size: 11px;
+  padding: 3px 8px;
+}
+.atlas2d-person-chip strong {
+  color: var(--gold2);
+  font-weight: 500;
+}
+.atlas2d-filter-row {
+  display: grid;
+  gap: .35rem;
+  margin-top: .9rem;
+  color: var(--text2);
+  font-size: 12px;
+}
+.atlas2d-filter-row label {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+}
+.atlas2d-floating-timeline {
+  position: absolute;
+  left: 1.25rem;
+  right: 17rem;
+  bottom: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 18px 34px rgba(82,65,35,0.10);
+  padding: .8rem .95rem .7rem;
+}
+.atlas2d-time-head {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text3);
+  font-size: 11px;
+  margin-bottom: .55rem;
+}
+.atlas2d-time-bar {
+  position: relative;
+  height: 22px;
+  border-radius: 14px;
+  background: var(--surface2);
+  overflow: hidden;
+}
+.atlas2d-time-seg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-right: 1px solid rgba(255,255,255,0.75);
+  opacity: .72;
+  cursor: pointer;
+}
+.atlas2d-time-focus {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  min-width: 4px;
+  border: 2px solid var(--gold);
+  border-radius: 18px;
+  background: rgba(184,138,36,0.12);
+  pointer-events: none;
+}
+.atlas2d-time-labels {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text3);
+  font-size: 10px;
+  margin-top: .35rem;
+}
+.atlas2d-facts {
+  display: grid;
+  gap: .55rem;
+  margin-top: 1rem;
+}
+.atlas2d-fact {
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  background: rgba(255,255,255,0.82);
+  padding: .7rem .8rem;
+}
+.atlas2d-fact-topic {
+  color: var(--text3);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+}
+.atlas2d-fact-text {
+  color: var(--text2);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.atlas2d-fact button {
+  margin-top: .45rem;
+}
+
 /* SHARED COMPONENTS */
 .badge {
   display: inline-block; padding: 2px 8px; border-radius: 20px;
@@ -623,6 +918,16 @@ nav {
   .events-chars-grid { grid-template-columns: 1fr; }
   .atlas-grid { grid-template-columns: 1fr; }
   .drill-path { grid-template-columns: 1fr; }
+  .atlas2d-viewport { padding: 1rem 1rem 12rem; }
+  .atlas2d-layer-panel {
+    position: static;
+    width: auto;
+    margin-top: 1rem;
+  }
+  .atlas2d-floating-timeline {
+    left: 1rem;
+    right: 1rem;
+  }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
 }
@@ -642,6 +947,7 @@ nav {
   <div class="nav-tabs">
     <button class="nav-tab active" onclick="showPage('estrutura', this)">Estrutura</button>
     <button class="nav-tab" onclick="showPage('timeline', this)">Linha do Tempo</button>
+    <button class="nav-tab" onclick="showPage('atlas', this)">Atlas 2D</button>
     <button class="nav-tab" onclick="showPage('mishna', this)">Mishna &amp; Guemara</button>
     <button class="nav-tab" onclick="showPage('chumash', this)">Chumash — 5 Livros</button>
     <button class="nav-tab" onclick="showPage('pessukim', this)">Pessukim — Versículos</button>
@@ -954,6 +1260,68 @@ nav {
     <div class="oral-bar-labels">
       <span>-200</span><span>0</span><span>200</span><span>400</span><span>600</span><span>800</span>
       <span>1000</span><span>1200</span><span>1400</span><span>1600</span><span>1800</span><span>2000</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ PAGE 3: ATLAS 2D ════════════════════════ -->
+<div id="page-atlas" class="page">
+  <div class="sec-title">Atlas 2D</div>
+  <div class="sec-sub">Drill-down visual por estrutura, tempo, milestones, personagens e fatos</div>
+
+  <div class="atlas2d-shell">
+    <div class="atlas2d-toolbar">
+      <div id="atlas-breadcrumb" class="atlas2d-breadcrumb"></div>
+      <div class="atlas2d-zoom-controls">
+        <button class="atlas2d-zoom-btn" onclick="atlasZoom(-1)">−</button>
+        <span id="atlas-zoom-label" class="atlas2d-zoom-label">Macro</span>
+        <button class="atlas2d-zoom-btn" onclick="atlasZoom(1)">+</button>
+        <button class="atlas2d-action-btn" onclick="atlasReset()">Reset</button>
+      </div>
+    </div>
+
+    <div id="atlas-viewport" class="atlas2d-viewport" onwheel="atlasHandleWheel(event)">
+      <div class="atlas2d-map">
+        <div class="atlas2d-map-title">
+          <div>
+            <h3 id="atlas-map-title">Carregando atlas…</h3>
+            <p id="atlas-map-sub">Preparando as camadas de drill a partir dos milestones e agrupadores existentes.</p>
+          </div>
+          <button class="atlas2d-action-btn" onclick="atlasOpenCurrentDrawer()">Abrir contexto</button>
+        </div>
+        <div id="atlas-node-grid" class="atlas2d-node-grid">
+          <div class="atlas2d-empty">Carregando dados…</div>
+        </div>
+        <div id="atlas-facts" class="atlas2d-facts"></div>
+      </div>
+
+      <aside class="atlas2d-layer-panel">
+        <div class="atlas2d-panel-title">Personagens em foco</div>
+        <div id="atlas-people" class="atlas2d-person-list">
+          <span class="atlas2d-person-chip">Aguardando seleção</span>
+        </div>
+
+        <div class="atlas2d-panel-title" style="margin-top:1rem">Temas</div>
+        <div id="atlas-themes" class="atlas2d-theme-list">
+          <span class="atlas2d-theme-chip">camadas</span>
+        </div>
+
+        <div class="atlas2d-panel-title" style="margin-top:1rem">Camadas</div>
+        <div class="atlas2d-filter-row">
+          <label><input id="atlas-layer-people" type="checkbox" checked onchange="atlasToggleLayer('people', this.checked)"> Personagens</label>
+          <label><input id="atlas-layer-themes" type="checkbox" checked onchange="atlasToggleLayer('themes', this.checked)"> Temas</label>
+          <label><input id="atlas-layer-facts" type="checkbox" checked onchange="atlasToggleLayer('facts', this.checked)"> Fatos</label>
+        </div>
+      </aside>
+
+      <div class="atlas2d-floating-timeline">
+        <div class="atlas2d-time-head">
+          <span id="atlas-time-title">Régua histórica contextual</span>
+          <span id="atlas-time-range">0–5785 AM</span>
+        </div>
+        <div id="atlas-time-bar" class="atlas2d-time-bar"></div>
+        <div class="atlas2d-time-labels"><span>0 AM</span><span>2448</span><span>3339</span><span>5785</span></div>
+      </div>
     </div>
   </div>
 </div>
@@ -1621,6 +1989,7 @@ function showPage(id, btn) {
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   btn.classList.add('active');
+  if (id === 'atlas') initAtlas();
   if (id === 'chumash') initDrill();
 }
 
@@ -1633,6 +2002,7 @@ function drillGo(pageId, bookKey = null) {
   if (tab) tab.classList.add('active');
 
   if (pageId === 'chumash') initDrill();
+  if (pageId === 'atlas') initAtlas();
 
   if (pageId === 'chumash' && bookKey) {
     const btn = [...document.querySelectorAll('.book-btn')]
@@ -1709,6 +2079,614 @@ async function openMilestone(bookKey, milestoneId) {
     factIds: milestone.fact_ids || [],
     milestoneId: milestone.id
   });
+}
+
+/* ═══════ 2D DRILL ATLAS ═══════ */
+
+const atlasState = {
+  ready: false,
+  lens: 'macro',
+  zoom: 0,
+  selectedBookKey: null,
+  selectedPhaseId: null,
+  selectedMilestoneId: null,
+  selectedGroupId: null,
+  layers: { people: true, themes: true, facts: true },
+  wheelAt: 0,
+  hoverTarget: null
+};
+
+const ATLAS_ZOOM_LABELS = ['Macro', '5 livros', 'Milestones', 'Unidades', 'Fatos'];
+
+function atlasEsc(value) {
+  return String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+async function initAtlas() {
+  if (!document.getElementById('page-atlas')) return;
+  try {
+    await Promise.all([loadChumashMilestones(), loadTimelineGroups()]);
+    atlasState.ready = true;
+    await atlasRender();
+  } catch(e) {
+    document.getElementById('atlas-node-grid').innerHTML =
+      `<div class="atlas2d-empty">Erro ao carregar o Atlas: ${atlasEsc(e.message)}</div>`;
+  }
+}
+
+function atlasReset() {
+  atlasState.lens = 'macro';
+  atlasState.zoom = 0;
+  atlasState.selectedBookKey = null;
+  atlasState.selectedPhaseId = null;
+  atlasState.selectedMilestoneId = null;
+  atlasState.selectedGroupId = null;
+  atlasRender();
+}
+
+function atlasZoom(delta) {
+  const nextZoom = Math.max(0, Math.min(4, atlasState.zoom + delta));
+  if (atlasState.zoom === 0 && nextZoom === 1 && atlasState.lens === 'macro') {
+    atlasState.lens = 'chumash';
+  }
+  if (nextZoom === 0) {
+    atlasState.lens = 'macro';
+    atlasState.selectedBookKey = null;
+    atlasState.selectedPhaseId = null;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+  }
+  atlasState.zoom = nextZoom;
+  atlasRender();
+}
+
+function atlasHandleWheel(ev) {
+  const now = Date.now();
+  if (now - atlasState.wheelAt < 260) return;
+  atlasState.wheelAt = now;
+  ev.preventDefault();
+  if (ev.deltaY < 0 && atlasState.hoverTarget && atlasCanHoverDrill(atlasState.hoverTarget.kind, atlasState.hoverTarget.id)) {
+    atlasSelect(atlasState.hoverTarget.kind, atlasState.hoverTarget.id);
+    return;
+  }
+  atlasZoom(ev.deltaY < 0 ? 1 : -1);
+}
+
+function atlasToggleLayer(layer, isOn) {
+  atlasState.layers[layer] = isOn;
+  atlasRender();
+}
+
+function atlasSetHoverTarget(kind, id) {
+  atlasState.hoverTarget = atlasCanHoverDrill(kind, id) ? { kind, id } : null;
+  atlasMarkHoverTarget();
+}
+
+function atlasClearHoverTarget(kind = null, id = null) {
+  if (!kind || !atlasState.hoverTarget || (atlasState.hoverTarget.kind === kind && atlasState.hoverTarget.id === id)) {
+    atlasState.hoverTarget = null;
+    atlasMarkHoverTarget();
+  }
+}
+
+function atlasMarkHoverTarget() {
+  document.querySelectorAll('.atlas2d-node.hover-target').forEach(node => node.classList.remove('hover-target'));
+  const target = atlasState.hoverTarget;
+  if (!target) return;
+  document.querySelectorAll('.atlas2d-node').forEach(node => {
+    if (node.dataset.atlasKind === target.kind && node.dataset.atlasId === target.id) {
+      node.classList.add('hover-target');
+    }
+  });
+}
+
+function atlasCanHoverDrill(kind, id) {
+  if (kind === 'macro-oral' || kind === 'unit') return false;
+  if (kind === 'book' && atlasState.selectedBookKey === id && atlasState.zoom >= 2) return false;
+  if (kind === 'phase' && atlasState.selectedPhaseId === id && atlasState.zoom >= 2) return false;
+  if (kind === 'milestone' && atlasState.selectedMilestoneId === id && atlasState.zoom >= 3) return false;
+  if (kind === 'group' && atlasState.selectedGroupId === id && atlasState.zoom >= 3) return false;
+  return ['macro-chumash', 'macro-nach', 'book', 'phase', 'milestone', 'group'].includes(kind);
+}
+
+function atlasFindBook(data, bookKey) {
+  return (data.books || []).find(b => b.book_key === bookKey);
+}
+
+function atlasFindMilestone(data, milestoneId) {
+  for (const book of (data.books || [])) {
+    const milestone = (book.milestones || []).find(m => m.id === milestoneId);
+    if (milestone) return { book, milestone };
+  }
+  return { book: null, milestone: null };
+}
+
+function atlasFindPhase(data, phaseId) {
+  return (data.phases || []).find(p => p.id === phaseId);
+}
+
+function atlasFindGroup(data, groupId) {
+  for (const phase of (data.phases || [])) {
+    const group = (phase.groups || []).find(g => g.id === groupId);
+    if (group) return { phase, group };
+  }
+  return { phase: null, group: null };
+}
+
+async function atlasSelect(kind, id) {
+  atlasState.hoverTarget = null;
+  if (kind === 'macro-chumash') {
+    atlasState.lens = 'chumash';
+    atlasState.zoom = 1;
+    atlasState.selectedBookKey = null;
+    atlasState.selectedPhaseId = null;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+  } else if (kind === 'macro-nach') {
+    atlasState.lens = 'timeline';
+    atlasState.zoom = 1;
+    atlasState.selectedBookKey = null;
+    atlasState.selectedPhaseId = null;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+  } else if (kind === 'macro-oral') {
+    drillGo('mishna');
+    return;
+  } else if (kind === 'book') {
+    atlasState.lens = 'chumash';
+    atlasState.zoom = 2;
+    atlasState.selectedBookKey = id;
+    atlasState.selectedPhaseId = null;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+  } else if (kind === 'phase') {
+    atlasState.lens = 'timeline';
+    atlasState.zoom = 2;
+    atlasState.selectedPhaseId = id;
+    atlasState.selectedBookKey = null;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+  } else if (kind === 'milestone') {
+    atlasState.zoom = 3;
+    atlasState.selectedMilestoneId = id;
+    atlasState.selectedGroupId = null;
+  } else if (kind === 'group') {
+    atlasState.zoom = 3;
+    atlasState.selectedGroupId = id;
+    atlasState.selectedMilestoneId = null;
+  } else if (kind === 'unit') {
+    const [bookKey, parashaId, factIdsRaw] = id.split('|');
+    const factIds = factIdsRaw ? factIdsRaw.split(',').filter(Boolean) : [];
+    drawerOpen({ bookKey, parashaId, factIds });
+    return;
+  }
+  await atlasRender();
+}
+
+function atlasCrumb(level) {
+  if (level === 0) atlasReset();
+  if (level === 1) {
+    atlasState.zoom = 1;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+    atlasRender();
+  }
+  if (level === 2) {
+    atlasState.zoom = 2;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+    atlasRender();
+  }
+}
+
+async function atlasRender() {
+  if (!atlasState.ready) return;
+  const [milestoneData, groupData] = await Promise.all([loadChumashMilestones(), loadTimelineGroups()]);
+  const ctx = await atlasBuildContext(milestoneData, groupData);
+
+  document.getElementById('atlas-map-title').textContent = ctx.title;
+  document.getElementById('atlas-map-sub').textContent = ctx.sub;
+  document.getElementById('atlas-zoom-label').textContent = atlasZoomLabel();
+  atlasRenderBreadcrumb(ctx);
+  atlasRenderNodes(ctx.nodes || []);
+  atlasRenderSidePanel(ctx);
+  atlasRenderTimeline(groupData, ctx.focusRange);
+  await atlasRenderFacts(ctx);
+}
+
+function atlasZoomLabel() {
+  if (atlasState.zoom === 1 && atlasState.lens === 'timeline') return 'Fases AM';
+  if (atlasState.zoom === 2 && atlasState.lens === 'timeline') return 'Agrupadores';
+  return ATLAS_ZOOM_LABELS[atlasState.zoom] || 'Atlas';
+}
+
+async function atlasBuildContext(milestoneData, groupData) {
+  const ctx = {
+    title: 'Mapa macro da tradição',
+    sub: 'Use scroll ou os botões de zoom para aprofundar. Clique em um nó para selecionar uma área.',
+    nodes: [],
+    people: [],
+    themes: [],
+    focusRange: { start: 0, end: 5785, label: 'Toda a linha histórica' },
+    factsContext: null
+  };
+
+  if (atlasState.zoom === 0) {
+    ctx.nodes = [
+      { kind: 'macro-chumash', id: 'chumash', icon: 'ח', label: 'Chumash', sub: 'Cinco livros, parashiot, milestones e fatos.', meta: 'Torá Escrita' },
+      { kind: 'macro-nach', id: 'nach', icon: 'AM', label: 'Linha histórica / Nach', sub: 'Fases AM com agrupadores de Chumash, Nach e Ketuvim.', meta: 'Eixo do tempo' },
+      { kind: 'macro-oral', id: 'oral', icon: 'ת', label: 'Torá Oral', sub: 'Mishna, Guemara e Halachá permanecem como camada futura do Atlas.', meta: 'Modelo futuro' }
+    ];
+    ctx.people = atlasCountList(['Adam', 'Noach', 'Avraham', 'Moshe', 'David']);
+    ctx.themes = atlasCountList(['criação', 'aliança', 'terra', 'revelação', 'templo']);
+    return ctx;
+  }
+
+  if (atlasState.zoom === 1) {
+    if (atlasState.lens === 'timeline') {
+      ctx.title = 'Fases históricas';
+      ctx.sub = 'Essa lente usa o eixo AM. Clique em uma fase para abrir seus agrupadores históricos.';
+      ctx.nodes = (groupData.phases || []).map(phase => ({
+        kind: 'phase',
+        id: phase.id,
+        icon: 'AM',
+        label: phase.label,
+        sub: phase.summary,
+        meta: `${phase.am_start}–${phase.am_end} AM · ${(phase.groups || []).length} grupos`,
+        selected: atlasState.selectedPhaseId === phase.id
+      }));
+      ctx.themes = atlasCountList((groupData.phases || []).flatMap(p => (p.groups || []).flatMap(g => g.themes || [])));
+      ctx.people = atlasCountList(['Adam', 'Noach', 'Avraham', 'Moshe', 'David', 'Shlomo', 'Ester', 'Ezra']);
+      return ctx;
+    }
+
+    atlasState.lens = 'chumash';
+    ctx.title = 'Chumash · 5 livros';
+    ctx.sub = 'Este é o primeiro nível de drill: escolha um livro para abrir seus milestones.';
+    ctx.focusRange = { start: 0, end: 2488, label: 'Chumash' };
+    ctx.nodes = (milestoneData.books || []).map(book => ({
+        kind: 'book',
+        id: book.book_key,
+        icon: book.label_he || 'ספר',
+        label: book.label,
+        sub: `${(book.milestones || []).length} milestones disponíveis`,
+        meta: 'Livro do Chumash',
+        selected: atlasState.selectedBookKey === book.book_key
+    }));
+    ctx.people = atlasCountList((milestoneData.books || []).flatMap(b => (b.milestones || []).flatMap(m => m.characters || [])));
+    ctx.themes = atlasCountList((milestoneData.books || []).flatMap(b => (b.milestones || []).flatMap(m => m.themes || [])));
+    return ctx;
+  }
+
+  const selectedBook = atlasState.selectedBookKey
+    ? atlasFindBook(milestoneData, atlasState.selectedBookKey)
+    : null;
+  let selectedPhase = atlasState.selectedPhaseId
+    ? atlasFindPhase(groupData, atlasState.selectedPhaseId)
+    : null;
+  if (atlasState.lens === 'timeline' && !selectedPhase) {
+    selectedPhase = (groupData.phases || [])[0] || null;
+    atlasState.selectedPhaseId = selectedPhase ? selectedPhase.id : null;
+  }
+
+  if (atlasState.zoom === 2) {
+    if (selectedPhase) {
+      ctx.title = selectedPhase.label;
+      ctx.sub = selectedPhase.summary || 'Fase histórica com agrupadores ligados ao drawer.';
+      ctx.focusRange = { start: selectedPhase.am_start, end: selectedPhase.am_end, label: selectedPhase.label };
+      ctx.nodes = (selectedPhase.groups || []).map(group => ({
+        kind: 'group',
+        id: group.id,
+        icon: group.icon || '•',
+        label: group.label,
+        sub: group.summary,
+        meta: `${group.book_key || ''} · ${(group.parasha_ids || []).length} unidades · ${(group.fact_ids || []).length} fatos`,
+        selected: atlasState.selectedGroupId === group.id
+      }));
+      await atlasAttachPeopleFromGroups(ctx, selectedPhase.groups || []);
+      ctx.themes = atlasCountList((selectedPhase.groups || []).flatMap(g => g.themes || []));
+      return ctx;
+    }
+
+    const book = selectedBook || (milestoneData.books || [])[0];
+    atlasState.selectedBookKey = book ? book.book_key : null;
+    ctx.title = book ? `${book.label} · milestones` : 'Milestones';
+    ctx.sub = 'Agregadores estratégicos do Chumash. Clique em um milestone para ver parashiot e fatos relacionados.';
+    ctx.nodes = ((book && book.milestones) || []).map(m => ({
+      kind: 'milestone',
+      id: m.id,
+      icon: m.icon || '•',
+      label: m.label,
+      sub: (m.themes || []).slice(0, 3).join(' · '),
+      meta: `${(m.parasha_ids || []).length || 'sem'} parashiot · ${(m.fact_ids || []).length || 0} fatos`,
+      selected: atlasState.selectedMilestoneId === m.id
+    }));
+    await atlasAttachBookRangeAndMeta(ctx, book);
+    return ctx;
+  }
+
+  if (atlasState.zoom >= 3) {
+    const selectedMilestone = atlasState.selectedMilestoneId
+      ? atlasFindMilestone(milestoneData, atlasState.selectedMilestoneId)
+      : { book: null, milestone: null };
+    const selectedGroup = atlasState.selectedGroupId
+      ? atlasFindGroup(groupData, atlasState.selectedGroupId)
+      : { phase: null, group: null };
+
+    if (selectedGroup.group) {
+      const group = selectedGroup.group;
+      ctx.title = group.label;
+      ctx.sub = group.summary || 'Agrupador de timeline com unidades e fatos relacionados.';
+      ctx.focusRange = selectedGroup.phase
+        ? { start: selectedGroup.phase.am_start, end: selectedGroup.phase.am_end, label: selectedGroup.phase.label }
+        : ctx.focusRange;
+      ctx.nodes = await atlasBuildUnitNodes(group.book_key, group.parasha_ids || [], group.fact_ids || []);
+      ctx.factsContext = { bookKey: group.book_key, parashaIds: group.parasha_ids || [], factIds: group.fact_ids || [] };
+      await atlasAttachPeopleFromGroups(ctx, [group]);
+      ctx.themes = atlasCountList(group.themes || []);
+      return ctx;
+    }
+
+    const { book, milestone } = selectedMilestone.milestone
+      ? selectedMilestone
+      : atlasFindMilestone(milestoneData, ((selectedBook || (milestoneData.books || [])[0])?.milestones || [])[0]?.id);
+    if (!milestone || !book) return ctx;
+
+    atlasState.selectedBookKey = book.book_key;
+    atlasState.selectedMilestoneId = milestone.id;
+    ctx.title = milestone.label;
+    ctx.sub = 'Milestone selecionado: aproxime para revisar fatos ou abra o contexto textual no drawer.';
+    ctx.nodes = await atlasBuildUnitNodes(book.book_key, milestone.parasha_ids || [], milestone.fact_ids || []);
+    ctx.factsContext = { bookKey: book.book_key, parashaIds: milestone.parasha_ids || [], factIds: milestone.fact_ids || [] };
+    ctx.people = atlasCountList(milestone.characters || []);
+    ctx.themes = atlasCountList(milestone.themes || []);
+    await atlasAttachRangeFromUnits(ctx, book.book_key, milestone.parasha_ids || []);
+    return ctx;
+  }
+
+  return ctx;
+}
+
+async function atlasAttachBookRangeAndMeta(ctx, book) {
+  if (!book) return;
+  ctx.people = atlasCountList((book.milestones || []).flatMap(m => m.characters || []));
+  ctx.themes = atlasCountList((book.milestones || []).flatMap(m => m.themes || []));
+  try {
+    const mart = await loadParashaMart(book.book_key);
+    const range = mart.index && mart.index.timeline;
+    if (range) ctx.focusRange = { start: range.anno_mundi_start || 0, end: range.anno_mundi_end || 5785, label: book.label };
+  } catch(e) {}
+}
+
+async function atlasAttachRangeFromUnits(ctx, bookKey, unitIds) {
+  try {
+    const mart = await loadParashaMart(bookKey);
+    const units = unitIds.map(id => mart.byId[id]).filter(Boolean);
+    if (!units.length) return;
+    const start = Math.min(...units.map(u => u.anno_mundi_start || 0));
+    const end = Math.max(...units.map(u => u.anno_mundi_end || start));
+    ctx.focusRange = { start, end, label: units.map(u => u.name).join(' · ') };
+  } catch(e) {}
+}
+
+async function atlasAttachPeopleFromGroups(ctx, groups) {
+  const people = [];
+  for (const group of groups) {
+    if (!group.book_key) continue;
+    try {
+      const mart = await loadParashaMart(group.book_key);
+      for (const unitId of (group.parasha_ids || [])) {
+        const unit = mart.byId[unitId];
+        people.push(...(unit?.characters || []));
+      }
+    } catch(e) {}
+  }
+  ctx.people = atlasCountList(people);
+}
+
+async function atlasBuildUnitNodes(bookKey, unitIds, factIds) {
+  try {
+    const mart = await loadParashaMart(bookKey);
+    return unitIds.map(unitId => {
+      const unit = mart.byId[unitId];
+      if (!unit) return null;
+      return {
+        kind: 'unit',
+        id: `${bookKey}|${unit.id}|${(factIds || []).join(',')}`,
+        icon: unit.index || '§',
+        label: unit.name,
+        sub: unit.summary_short || `${unit.ref_start || ''} – ${unit.ref_end || ''}`,
+        meta: `${unit.anno_mundi_start || '?'}–${unit.anno_mundi_end || '?'} AM · ${unit.facts_count || 0} fatos`
+      };
+    }).filter(Boolean);
+  } catch(e) {
+    return [];
+  }
+}
+
+function atlasCountList(items) {
+  const counts = new Map();
+  for (const item of items || []) {
+    if (!item) continue;
+    counts.set(item, (counts.get(item) || 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, 12)
+    .map(([label, count]) => ({ label, count }));
+}
+
+function atlasRenderBreadcrumb(ctx) {
+  const parts = [
+    `<button class="atlas2d-crumb" onclick="atlasCrumb(0)">Atlas</button>`
+  ];
+  if (atlasState.zoom >= 1) {
+    const lensLabel = atlasState.lens === 'timeline' ? 'Fases AM' : 'Chumash · 5 livros';
+    parts.push(`<span>›</span><button class="atlas2d-crumb" onclick="atlasCrumb(1)">${lensLabel}</button>`);
+  }
+  if (atlasState.zoom >= 2) parts.push(`<span>›</span><button class="atlas2d-crumb" onclick="atlasCrumb(2)">${atlasEsc(ctx.focusRange?.label || 'Agregadores')}</button>`);
+  if (atlasState.zoom >= 3) parts.push(`<span>›</span><span>${atlasEsc(ctx.title)}</span>`);
+  document.getElementById('atlas-breadcrumb').innerHTML = parts.join('');
+}
+
+function atlasRenderNodes(nodes) {
+  const root = document.getElementById('atlas-node-grid');
+  if (!nodes.length) {
+    root.innerHTML = '<div class="atlas2d-empty">Nenhum nó disponível para este nível.</div>';
+    return;
+  }
+  root.innerHTML = nodes.map(node => `
+    <button class="atlas2d-node ${node.selected ? 'selected' : ''} ${atlasState.hoverTarget?.kind === node.kind && atlasState.hoverTarget?.id === node.id ? 'hover-target' : ''}" data-atlas-kind="${atlasEsc(node.kind)}" data-atlas-id="${atlasEsc(node.id)}" onclick="atlasSelect('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseenter="atlasSetHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseleave="atlasClearHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')">
+      <span class="atlas2d-node-icon">${atlasEsc(node.icon || '•')}</span>
+      <span class="atlas2d-node-label">${atlasEsc(node.label)}</span>
+      <span class="atlas2d-node-sub">${atlasEsc(node.sub || '')}</span>
+      <span class="atlas2d-node-meta">${atlasEsc(node.meta || '')}</span>
+    </button>
+  `).join('');
+}
+
+function atlasRenderSidePanel(ctx) {
+  const peopleRoot = document.getElementById('atlas-people');
+  const themeRoot = document.getElementById('atlas-themes');
+
+  if (!atlasState.layers.people) {
+    peopleRoot.innerHTML = '<span class="atlas2d-person-chip">camada oculta</span>';
+  } else if (ctx.people && ctx.people.length) {
+    peopleRoot.innerHTML = ctx.people.map(p =>
+      `<span class="atlas2d-person-chip">${atlasEsc(p.label)} <strong>${p.count}</strong></span>`
+    ).join('');
+  } else {
+    peopleRoot.innerHTML = '<span class="atlas2d-person-chip">sem personagens estruturados</span>';
+  }
+
+  if (!atlasState.layers.themes) {
+    themeRoot.innerHTML = '<span class="atlas2d-theme-chip">camada oculta</span>';
+  } else if (ctx.themes && ctx.themes.length) {
+    themeRoot.innerHTML = ctx.themes.map(t =>
+      `<span class="atlas2d-theme-chip">${atlasEsc(t.label)}</span>`
+    ).join('');
+  } else {
+    themeRoot.innerHTML = '<span class="atlas2d-theme-chip">sem temas</span>';
+  }
+}
+
+function atlasRenderTimeline(groupData, focusRange) {
+  const root = document.getElementById('atlas-time-bar');
+  const total = 5785;
+  const colors = ['rgba(47,120,168,0.58)', 'rgba(61,139,98,0.52)', 'rgba(184,138,36,0.56)', 'rgba(138,106,191,0.52)'];
+  const segments = (groupData.phases || []).map((phase, i) => {
+    const left = Math.max(0, (phase.am_start / total) * 100);
+    const width = Math.max(((phase.am_end - phase.am_start) / total) * 100, 0.7);
+    return `<button class="atlas2d-time-seg" title="${atlasEsc(phase.label)}" onclick="atlasSelect('phase','${atlasEsc(phase.id)}')" style="left:${left.toFixed(2)}%;width:${width.toFixed(2)}%;background:${colors[i % colors.length]}"></button>`;
+  }).join('');
+
+  const start = Math.max(0, Math.min(total, focusRange?.start ?? 0));
+  const end = Math.max(start, Math.min(total, focusRange?.end ?? total));
+  const focusLeft = (start / total) * 100;
+  const focusWidth = Math.max(((end - start) / total) * 100, 0.6);
+  root.innerHTML = `${segments}<div class="atlas2d-time-focus" style="left:${focusLeft.toFixed(2)}%;width:${focusWidth.toFixed(2)}%"></div>`;
+
+  document.getElementById('atlas-time-title').textContent = focusRange?.label || 'Régua histórica contextual';
+  document.getElementById('atlas-time-range').textContent = `${start}–${end} AM`;
+}
+
+async function atlasRenderFacts(ctx) {
+  const root = document.getElementById('atlas-facts');
+  root.innerHTML = '';
+  if (!atlasState.layers.facts || !ctx.factsContext || atlasState.zoom < 3) return;
+
+  const facts = await atlasLoadFacts(ctx.factsContext);
+  if (!facts.length) {
+    root.innerHTML = '<div class="atlas2d-empty">Nenhum fato carregável para este contexto.</div>';
+    return;
+  }
+  root.innerHTML = facts.slice(0, atlasState.zoom >= 4 ? 12 : 5).map(f => `
+    <div class="atlas2d-fact">
+      <div class="atlas2d-fact-topic">${atlasEsc(f._unitName || '')}${f.topic ? ' · ' + atlasEsc(f.topic) : ''}</div>
+      <div class="atlas2d-fact-text">${atlasEsc(f.text || '')}</div>
+      <button class="atlas2d-action-btn" onclick="drawerOpen({bookKey:'${atlasEsc(ctx.factsContext.bookKey)}',parashaId:'${atlasEsc(f._unitId)}',factIds:['${atlasEsc(f.id)}']})">Abrir fato</button>
+    </div>
+  `).join('');
+}
+
+async function atlasLoadFacts(context) {
+  const mart = await loadParashaMart(context.bookKey);
+  const factOrder = context.factIds || [];
+  const factSet = new Set(factOrder);
+  const facts = [];
+
+  for (const unitId of (context.parashaIds || [])) {
+    const unit = mart.byId[unitId];
+    if (!unit?.data_file) continue;
+    const cacheKey = `${context.bookKey}:${unitId}`;
+    if (!_drawer.cache[cacheKey]) {
+      const r = await fetch(unit.data_file);
+      if (r.ok) _drawer.cache[cacheKey] = await r.json();
+    }
+    const full = _drawer.cache[cacheKey];
+    for (const f of (full?.facts || [])) {
+      if (!factSet.size || factSet.has(f.id)) facts.push({ ...f, _unitId: unitId, _unitName: unit.name });
+    }
+  }
+
+  return facts.sort((a, b) => {
+    const ia = factOrder.indexOf(a.id);
+    const ib = factOrder.indexOf(b.id);
+    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+  });
+}
+
+async function atlasOpenCurrentDrawer() {
+  const [milestoneData, groupData] = await Promise.all([loadChumashMilestones(), loadTimelineGroups()]);
+  if (atlasState.selectedGroupId) {
+    const { group } = atlasFindGroup(groupData, atlasState.selectedGroupId);
+    if (group?.book_key) {
+      drawerOpen({
+        bookKey: group.book_key,
+        parashaId: group.primary_parasha_id || (group.parasha_ids || [])[0],
+        factIds: group.fact_ids || [],
+        timelineGroupId: group.id,
+        milestoneId: group.milestone_id || null
+      });
+      return;
+    }
+  }
+  if (atlasState.selectedMilestoneId) {
+    const { book, milestone } = atlasFindMilestone(milestoneData, atlasState.selectedMilestoneId);
+    if (book && milestone) {
+      drawerOpen({
+        bookKey: book.book_key,
+        parashaId: (milestone.parasha_ids || [])[0],
+        factIds: milestone.fact_ids || [],
+        milestoneId: milestone.id
+      });
+      return;
+    }
+  }
+  if (atlasState.selectedBookKey) {
+    drawerOpen(atlasState.selectedBookKey);
+    return;
+  }
+  if (atlasState.selectedPhaseId) {
+    const phase = atlasFindPhase(groupData, atlasState.selectedPhaseId);
+    const group = phase && (phase.groups || [])[0];
+    if (group) {
+      drawerOpen({
+        bookKey: group.book_key,
+        parashaId: group.primary_parasha_id || (group.parasha_ids || [])[0],
+        factIds: group.fact_ids || [],
+        timelinePhaseId: phase.id,
+        timelineGroupId: group.id
+      });
+      return;
+    }
+  }
+  drawerOpen('genesis');
 }
 
 /* ═══════ PESSUKIM / SEFARIA INTEGRATION ═══════ */
