@@ -1,21 +1,22 @@
 # Project Progress
 
 ## Current State
-- **Phase:** Full Nach/Ketuvim first pass + timeline drill-down refinement
-- **Last update:** 2026-06-03
-- **Reality check:** Documentation was reconciled with the actual repository state on 2026-06-03.
+- **Phase:** Atlas 2D interaction refinement + timeline drill-down refinement
+- **Last update:** 2026-06-07
+- **Reality check:** Documentation was reconciled with the actual repository state on 2026-06-07.
 
 ---
 
 ## Completed
 
-- [x] `index.html` - full 5-tab SPA (Estrutura, Timeline, Mishna/Guemara, Chumash, Pessukim)
+- [x] `index.html` - full 6-tab SPA (Estrutura, Timeline, Atlas 2D, Mishna/Guemara, Chumash, Pessukim)
 - [x] CSS design system with tokens, responsive layout, and light atlas theme
 - [x] Tab 1 (Estrutura): Written + Oral Torah visual map, flow diagram, book chips
 - [x] Tab 2 (Linha do Tempo): Vertical timeline + oral-law horizontal bar
-- [x] Tab 3 (Mishna & Guemara): Tanaim/Amoraim panels, academies, braitot
-- [x] Tab 4 (Chumash): All 5 books with events + characters
-- [x] Tab 5 (Pessukim): live Sefaria reader with parallel view, chapter nav, verse jump, and visible fetch errors
+- [x] Tab 3 (Atlas 2D): semantic drill map with Chumash and timeline/Nach lenses, hover candidate selection, scroll-depth navigation, background grab, and fixed bottom AM ruler
+- [x] Tab 4 (Mishna & Guemara): Tanaim/Amoraim panels, academies, braitot
+- [x] Tab 5 (Chumash): All 5 books with events + characters
+- [x] Tab 6 (Pessukim): live Sefaria reader with parallel view, chapter nav, verse jump, and visible fetch errors
 - [x] `data/timeline.json` - 14 eras, 16 key events
 - [x] `data/SCHEMA.md` - parasha JSON schema documented
 - [x] `data/parashiot/genesis/index.json` - all 12 Genesis parashiot metadata
@@ -93,7 +94,7 @@
 - [x] Timeline pilot events open the parasha drawer with linked fact highlights
 - [x] `drawerOpen()` accepts book/deep-link context: `{ bookKey, parashaId, factIds }`
 - [x] `data/milestones/chumash.json` added as the Chumash Atlas milestone layer
-- [x] Chumash tab renders a 5-book milestone atlas; Genesis/Exodus milestones can open the drawer
+- [x] Chumash tab renders a 5-book milestone atlas; all five books have milestone-to-parasha drawer routing
 - [x] Estrutura tab chips for Bereshit and Shemot open their respective parasha drawers
 - [x] White UI foundation added through global theme tokens
 - [x] Estrutura page now has a 5-level drill rail

@@ -67,7 +67,7 @@ tora-explorer/
 
 ---
 
-## UI Architecture: 5-Tab SPA
+## UI Architecture: 6-Tab SPA
 
 ```
 <nav>                          ← sticky, tab buttons
@@ -78,12 +78,21 @@ tora-explorer/
 Tab switching: `showPage(id, btn)` toggles `.active` class.
 Book switching (Chumash tab): `showBook(id, btn)` same pattern.
 Verse view toggle: `pkSetView(mode, btn)` adds class to `#pk-reader`.
+Atlas view initialization: `initAtlas()` loads `data/milestones/chumash.json`
+and `data/timeline_groups.json` and renders a runtime 2D projection.
 
 Drill-down levels:
 - Level 1: canonical structure map
 - Level 2: book-family and five-book visual overview
 - Level 3: milestone, parasha, or Nach/Ketuvim narrative-unit overview
 - Level 4: fact detail with Sefaria passage and optional visual marker
+
+Atlas 2D uses hover as a drill candidate selector and scroll as the drill
+confirmation gesture. Scroll-up enters the hovered candidate; scroll-down moves
+back one level. Because the mouse wheel is reserved for drill depth, the Atlas
+background supports grab/pan to navigate vertically overflowing content. Its AM
+ruler is fixed to the viewport bottom, full-width like the top nav, and updates
+to the current focus range.
 
 Timeline/parasha cross-interaction is a first-class architectural concern:
 global timeline events should route into parashiot/facts, and parasha/fact views
@@ -210,7 +219,8 @@ Response shape used:
 | Book-aware drawer-to-Pessukim navigation | Estrutura/Pessukim | Implemented (2026-06-01) |
 | Timeline → drawer cross-link | Timeline | Implemented for Chumash and exposed Nach/Ketuvim timeline groups |
 | Timeline phase drill-down groups | Timeline | Implemented via `data/timeline_groups.json` |
-| Chumash Atlas milestones | Chumash | Implemented via `data/milestones/chumash.json` |
+| Atlas 2D drill map | Atlas 2D | Implemented as a runtime projection over Chumash milestones and timeline groups; includes hover-target drill, scroll depth, background grab, and fixed bottom AM ruler |
+| Chumash Atlas milestones | Chumash | Implemented via `data/milestones/chumash.json`; all five books route milestones to parashiot, with fact-level highlights present where `fact_ids` exist |
 | Nach/Ketuvim data model | Data | Implemented for all Estrutura chips from Joshua through Chronicles |
 | SQLite authoring database | Authoring | Schema + import implemented; export script not yet written |
 | Data validation script | Data | Not implemented |

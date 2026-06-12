@@ -5,6 +5,7 @@
 - [ ] Create `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` (drawer 404s for these)
 - [ ] Add regression tests for fact chapter parsing and Pessukim routing across Chumash and multi-book Nach/Ketuvim sets
 - [ ] Review and refine Vayikra, Bamidbar, and Devarim fact wording and refs after first-pass exposure
+- [ ] Add `fact_ids` to Vayikra, Bamidbar, and Devarim Chumash milestones so drawer highlights match Genesis/Exodus depth
 - [ ] Review and refine Joshua, Judges, Samuel, Kings, Isaiah, Jeremiah, and Ezekiel unit wording and refs after first-pass exposure
 - [ ] Review and refine the new Trei Assar and Ketuvim first-pass wording, refs, and timeline placement
 - [ ] Add selected-state breadcrumb across structure, book, milestone, parasha, and fact
@@ -16,6 +17,7 @@
 
 ## Recently Completed
 
+- [x] **Chumash milestone routing for all 5 books** — Vayikra, Bamidbar, and Devarim milestones now include `parasha_ids`, so Chumash and Atlas 2D drill paths can open the drawer beyond Genesis/Exodus (2026-06-08)
 - [x] **drawer→Pessukim book-aware** — `drawerGoToPessukim(chapterNum, bookKey)` now resolves Sefaria book name from bookKey; button in `_drawerRenderParasha` passes `bookKey` captured at render time (2026-06-01)
 - [x] **Devarim JSON set** — `data/parashiot/deuteronomy/index.json` + all 11 individual parasha JSONs generated and synced to SQLite (2026-06-01)
 - [x] **Joshua/Nach pilot JSON set** — `data/nach/joshua/index.json` + 8 narrative-unit JSONs generated and synced to SQLite (2026-06-01)

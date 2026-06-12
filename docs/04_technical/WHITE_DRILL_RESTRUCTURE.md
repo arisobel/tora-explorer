@@ -57,6 +57,13 @@ The first implementation adds:
 - navigation from the drill rail into Estrutura, Chumash, Genesis milestones,
   the Genesis parasha drawer, and Pessukim
 - white drawer styling to match the new visual direction
+- an Atlas 2D tab that renders a runtime semantic drill projection over
+  `data/milestones/chumash.json` and `data/timeline_groups.json`
+- Atlas 2D interaction rules: hover marks the candidate, scroll-up drills into
+  that candidate, scroll-down moves back one level, and background grab/pan
+  handles vertical navigation when content overflows
+- a fixed bottom AM ruler in the Atlas 2D tab, visually analogous to the sticky
+  top navigation, showing the current historical focus range
 
 ## Data Principle
 
@@ -80,7 +87,7 @@ This should be treated as a runtime projection, not a long-term data silo.
 ## Next Design Iterations
 
 - Replace the static Estrutura flow with a data-driven drill view.
-- Make the Chumash Atlas the primary level-2/level-3 experience.
+- Refine the Atlas 2D into the primary level-2/level-3 experience.
 - Add a selected-state breadcrumb when a user enters a book, milestone, parasha,
   or fact.
 - Make milestone cards show visual markers more prominently.

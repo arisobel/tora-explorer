@@ -168,14 +168,14 @@
       "label": "Levítico",
       "label_he": "וַיִּקְרָא",
       "milestones": [
-        { "id": "lev-offerings", "label": "Tipos de korbanot", "icon": "🔥", "themes": ["sacrifícios"], "sefaria_ref": "Leviticus 1:1-7:38", "importance": 5 },
-        { "id": "lev-priests", "label": "Inauguração dos cohanim", "icon": "👑", "themes": ["sacerdócio"], "sefaria_ref": "Leviticus 8:1-10:20", "importance": 5 },
-        { "id": "lev-kashrut", "label": "Kashrut: animais permitidos", "icon": "🐑", "themes": ["pureza"], "sefaria_ref": "Leviticus 11:1-47", "importance": 4 },
-        { "id": "lev-purity", "label": "Tazria-Metzora: pureza e cura", "icon": "💧", "themes": ["pureza", "fala"], "sefaria_ref": "Leviticus 12:1-15:33", "importance": 4 },
-        { "id": "lev-yom-kippur", "label": "Yom Kippur", "icon": "⚖️", "themes": ["expiação"], "sefaria_ref": "Leviticus 16:1-34", "importance": 5 },
-        { "id": "lev-holiness", "label": "Kedoshim: santidade social", "icon": "✨", "themes": ["santidade"], "sefaria_ref": "Leviticus 19:1-20:27", "importance": 5 },
-        { "id": "lev-festivals", "label": "Festas do calendário", "icon": "📅", "themes": ["moedim"], "sefaria_ref": "Leviticus 23:1-44", "importance": 5 },
-        { "id": "lev-shemita-yovel", "label": "Shemitá e Yovel", "icon": "🌾", "themes": ["terra", "liberdade"], "sefaria_ref": "Leviticus 25:1-55", "importance": 5 }
+        { "id": "lev-offerings", "label": "Tipos de korbanot", "icon": "🔥", "parasha_ids": ["vayikra", "tzav"], "themes": ["sacrifícios"], "sefaria_ref": "Leviticus 1:1-7:38", "importance": 5 },
+        { "id": "lev-priests", "label": "Inauguração dos cohanim", "icon": "👑", "parasha_ids": ["tzav", "shemini"], "themes": ["sacerdócio"], "sefaria_ref": "Leviticus 8:1-10:20", "importance": 5 },
+        { "id": "lev-kashrut", "label": "Kashrut: animais permitidos", "icon": "🐑", "parasha_ids": ["shemini"], "themes": ["pureza"], "sefaria_ref": "Leviticus 11:1-47", "importance": 4 },
+        { "id": "lev-purity", "label": "Tazria-Metzora: pureza e cura", "icon": "💧", "parasha_ids": ["tazria", "metzora"], "themes": ["pureza", "fala"], "sefaria_ref": "Leviticus 12:1-15:33", "importance": 4 },
+        { "id": "lev-yom-kippur", "label": "Yom Kippur", "icon": "⚖️", "parasha_ids": ["achrei-mot"], "themes": ["expiação"], "sefaria_ref": "Leviticus 16:1-34", "importance": 5 },
+        { "id": "lev-holiness", "label": "Kedoshim: santidade social", "icon": "✨", "parasha_ids": ["kedoshim"], "themes": ["santidade"], "sefaria_ref": "Leviticus 19:1-20:27", "importance": 5 },
+        { "id": "lev-festivals", "label": "Festas do calendário", "icon": "📅", "parasha_ids": ["emor"], "themes": ["moedim"], "sefaria_ref": "Leviticus 23:1-44", "importance": 5 },
+        { "id": "lev-shemita-yovel", "label": "Shemitá e Yovel", "icon": "🌾", "parasha_ids": ["behar"], "themes": ["terra", "liberdade"], "sefaria_ref": "Leviticus 25:1-55", "importance": 5 }
       ]
     },
     {
@@ -184,16 +184,16 @@
       "label": "Números",
       "label_he": "בְּמִדְבַּר",
       "milestones": [
-        { "id": "num-census", "label": "Contagem do povo", "icon": "📊", "themes": ["organização"], "sefaria_ref": "Numbers 1:1-4:49", "importance": 5 },
-        { "id": "num-camp", "label": "Acampamento e marcha", "icon": "⛺", "themes": ["ordem"], "sefaria_ref": "Numbers 2:1-10:36", "importance": 4 },
-        { "id": "num-complaints", "label": "Reclamações no deserto", "icon": "😤", "themes": ["teste"], "sefaria_ref": "Numbers 11:1-35", "importance": 4 },
-        { "id": "num-miriam", "label": "Miriam e a fala contra Moshe", "icon": "💬", "themes": ["liderança", "fala"], "sefaria_ref": "Numbers 12:1-16", "importance": 4 },
-        { "id": "num-spies", "label": "Espiões e 40 anos", "icon": "🕵️", "themes": ["terra", "medo"], "sefaria_ref": "Numbers 13:1-14:45", "importance": 5 },
-        { "id": "num-korach", "label": "Rebelião de Korach", "icon": "🔥", "themes": ["autoridade"], "sefaria_ref": "Numbers 16:1-18:32", "importance": 5 },
-        { "id": "num-bronze-serpent", "label": "Cobra de cobre", "icon": "🐍", "themes": ["cura"], "sefaria_ref": "Numbers 21:4-9", "importance": 4 },
-        { "id": "num-bilam", "label": "Bilam e Balak", "icon": "🗣️", "themes": ["bênção"], "sefaria_ref": "Numbers 22:2-24:25", "importance": 5 },
-        { "id": "num-pinchas", "label": "Pinchas", "icon": "⚔️", "themes": ["zelo", "aliança"], "sefaria_ref": "Numbers 25:1-18", "importance": 4 },
-        { "id": "num-daughters", "label": "Filhas de Tzelofchad", "icon": "👩", "themes": ["herança"], "sefaria_ref": "Numbers 27:1-11", "importance": 4 }
+        { "id": "num-census", "label": "Contagem do povo", "icon": "📊", "parasha_ids": ["bamidbar"], "themes": ["organização"], "sefaria_ref": "Numbers 1:1-4:49", "importance": 5 },
+        { "id": "num-camp", "label": "Acampamento e marcha", "icon": "⛺", "parasha_ids": ["bamidbar", "nasso", "behaalotecha"], "themes": ["ordem"], "sefaria_ref": "Numbers 2:1-10:36", "importance": 4 },
+        { "id": "num-complaints", "label": "Reclamações no deserto", "icon": "😤", "parasha_ids": ["behaalotecha"], "themes": ["teste"], "sefaria_ref": "Numbers 11:1-35", "importance": 4 },
+        { "id": "num-miriam", "label": "Miriam e a fala contra Moshe", "icon": "💬", "parasha_ids": ["behaalotecha"], "themes": ["liderança", "fala"], "sefaria_ref": "Numbers 12:1-16", "importance": 4 },
+        { "id": "num-spies", "label": "Espiões e 40 anos", "icon": "🕵️", "parasha_ids": ["shelach"], "themes": ["terra", "medo"], "sefaria_ref": "Numbers 13:1-14:45", "importance": 5 },
+        { "id": "num-korach", "label": "Rebelião de Korach", "icon": "🔥", "parasha_ids": ["korach"], "themes": ["autoridade"], "sefaria_ref": "Numbers 16:1-18:32", "importance": 5 },
+        { "id": "num-bronze-serpent", "label": "Cobra de cobre", "icon": "🐍", "parasha_ids": ["chukat"], "themes": ["cura"], "sefaria_ref": "Numbers 21:4-9", "importance": 4 },
+        { "id": "num-bilam", "label": "Bilam e Balak", "icon": "🗣️", "parasha_ids": ["balak"], "themes": ["bênção"], "sefaria_ref": "Numbers 22:2-24:25", "importance": 5 },
+        { "id": "num-pinchas", "label": "Pinchas", "icon": "⚔️", "parasha_ids": ["balak", "pinchas"], "themes": ["zelo", "aliança"], "sefaria_ref": "Numbers 25:1-18", "importance": 4 },
+        { "id": "num-daughters", "label": "Filhas de Tzelofchad", "icon": "👩", "parasha_ids": ["pinchas"], "themes": ["herança"], "sefaria_ref": "Numbers 27:1-11", "importance": 4 }
       ]
     },
     {
@@ -202,16 +202,16 @@
       "label": "Deuteronômio",
       "label_he": "דְּבָרִים",
       "milestones": [
-        { "id": "deut-review", "label": "Revisão da jornada", "icon": "📖", "themes": ["memória"], "sefaria_ref": "Deuteronomy 1:1-3:22", "importance": 5 },
-        { "id": "deut-ten-commandments", "label": "Repetição dos 10 Mandamentos", "icon": "📜", "themes": ["aliança"], "sefaria_ref": "Deuteronomy 5:1-33", "importance": 5 },
-        { "id": "deut-shema", "label": "Shema Yisrael", "icon": "👂", "themes": ["fé", "amor"], "sefaria_ref": "Deuteronomy 6:4-9", "importance": 5 },
-        { "id": "deut-land-warning", "label": "Advertência antes da terra", "icon": "⛰️", "themes": ["terra", "memória"], "sefaria_ref": "Deuteronomy 8:1-20", "importance": 4 },
-        { "id": "deut-central-place", "label": "Lugar escolhido", "icon": "🏛️", "themes": ["culto"], "sefaria_ref": "Deuteronomy 12:1-28", "importance": 4 },
-        { "id": "deut-justice", "label": "Justiça, reis e profetas", "icon": "⚖️", "themes": ["sociedade"], "sefaria_ref": "Deuteronomy 16:18-18:22", "importance": 5 },
-        { "id": "deut-blessings-curses", "label": "Bênçãos e maldições", "icon": "⚡", "themes": ["aliança"], "sefaria_ref": "Deuteronomy 27:1-30:20", "importance": 5 },
-        { "id": "deut-haazinu", "label": "Shirat Haazinu", "icon": "🎵", "themes": ["cântico"], "sefaria_ref": "Deuteronomy 32:1-52", "importance": 4 },
-        { "id": "deut-final-blessing", "label": "Bênção final de Moshe", "icon": "🤲", "themes": ["tribos"], "sefaria_ref": "Deuteronomy 33:1-29", "importance": 4 },
-        { "id": "deut-moshe-death", "label": "Morte de Moshe", "icon": "🕯️", "themes": ["liderança", "transição"], "sefaria_ref": "Deuteronomy 34:1-12", "importance": 5 }
+        { "id": "deut-review", "label": "Revisão da jornada", "icon": "📖", "parasha_ids": ["devarim"], "themes": ["memória"], "sefaria_ref": "Deuteronomy 1:1-3:22", "importance": 5 },
+        { "id": "deut-ten-commandments", "label": "Repetição dos 10 Mandamentos", "icon": "📜", "parasha_ids": ["vaetchanan"], "themes": ["aliança"], "sefaria_ref": "Deuteronomy 5:1-33", "importance": 5 },
+        { "id": "deut-shema", "label": "Shema Yisrael", "icon": "👂", "parasha_ids": ["vaetchanan"], "themes": ["fé", "amor"], "sefaria_ref": "Deuteronomy 6:4-9", "importance": 5 },
+        { "id": "deut-land-warning", "label": "Advertência antes da terra", "icon": "⛰️", "parasha_ids": ["eikev"], "themes": ["terra", "memória"], "sefaria_ref": "Deuteronomy 8:1-20", "importance": 4 },
+        { "id": "deut-central-place", "label": "Lugar escolhido", "icon": "🏛️", "parasha_ids": ["reeh"], "themes": ["culto"], "sefaria_ref": "Deuteronomy 12:1-28", "importance": 4 },
+        { "id": "deut-justice", "label": "Justiça, reis e profetas", "icon": "⚖️", "parasha_ids": ["shoftim"], "themes": ["sociedade"], "sefaria_ref": "Deuteronomy 16:18-18:22", "importance": 5 },
+        { "id": "deut-blessings-curses", "label": "Bênçãos e maldições", "icon": "⚡", "parasha_ids": ["ki-tavo", "nitzavim"], "themes": ["aliança"], "sefaria_ref": "Deuteronomy 27:1-30:20", "importance": 5 },
+        { "id": "deut-haazinu", "label": "Shirat Haazinu", "icon": "🎵", "parasha_ids": ["haazinu"], "themes": ["cântico"], "sefaria_ref": "Deuteronomy 32:1-52", "importance": 4 },
+        { "id": "deut-final-blessing", "label": "Bênção final de Moshe", "icon": "🤲", "parasha_ids": ["vezot-haberakhah"], "themes": ["tribos"], "sefaria_ref": "Deuteronomy 33:1-29", "importance": 4 },
+        { "id": "deut-moshe-death", "label": "Morte de Moshe", "icon": "🕯️", "parasha_ids": ["vezot-haberakhah"], "themes": ["liderança", "transição"], "sefaria_ref": "Deuteronomy 34:1-12", "importance": 5 }
       ]
     }
   ]

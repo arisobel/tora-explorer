@@ -302,6 +302,11 @@ model:
 
 The atlas should not be a separate data universe.
 
+Current Chumash milestone routing covers all five books at parasha level.
+Genesis and Exodus also include fact-level highlight IDs; Vayikra, Bamidbar,
+and Devarim need `fact_ids` enrichment before milestone cards can highlight
+individual facts inside the drawer.
+
 ---
 
 ## Current Implementation Status

@@ -14,7 +14,7 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
 
 ---
 
-## Feature Set (5 tabs)
+## Feature Set (6 tabs)
 
 ### Tab 1 — Estrutura
 - Visual map of Written Torah (Chumash + Nach) and Oral Torah (Mishna, Guemara, Halacha)
@@ -32,18 +32,30 @@ The Torah tradition spans thousands of years and dozens of texts. There is no si
   parashiot or Nach/Ketuvim units
 - Future event markers may include icons or images for key narrative moments
 
-### Tab 3 — Mishna & Guemara
+### Tab 3 — Atlas 2D
+- Semantic 2D drill-down map over the existing data projections
+- Macro lenses: Chumash, historical/Nach timeline, and future Torah Oral
+- Chumash drill path: macro → 5 books → milestones → parashiot/units → facts
+- Timeline/Nach drill path: macro → AM phases → timeline groups → units/facts
+- Scroll-up confirms drill into the currently hovered candidate; scroll-down returns
+  one level
+- Background grab/pan lets users navigate overflowing content while the mouse
+  wheel remains reserved for drill depth
+- A fixed bottom AM ruler stays visible like the top navigation bar and reflects
+  the current historical focus
+
+### Tab 4 — Mishna & Guemara
 - Two-column panel: Tanaim (Mishna) and Amoraim (Guemara) with key figures
 - Academies section (Israel + Babylon)
 - Braitot & parallel works
 
-### Tab 4 — Chumash — 5 Livros
+### Tab 5 — Chumash — 5 Livros
 - Sub-navigation per book
 - Key events list + character roster per book
 - Static content, not API-driven
 - Future visual atlas: event lanes, character lanes, book markers, and parasha-level drill-down
 
-### Tab 5 — Pessukim — Versículos
+### Tab 6 — Pessukim — Versículos
 - Live reader: selects book + chapter, fetches from Sefaria API
 - View modes: Parallel (Hebrew + English), Hebrew only, English only
 - Chapter navigation, verse jump, link to Sefaria

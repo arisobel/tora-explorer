@@ -81,10 +81,10 @@ nav {
 /* SECTION TITLE */
 .sec-title {
   font-family: 'Crimson Pro', serif;
-  font-size: 30px; font-weight: 600;
-  color: var(--gold2); margin-bottom: 0.4rem;
+  font-size: 24px; font-weight: 600;
+  color: var(--gold2); margin-bottom: 0.2rem;
 }
-.sec-sub { color: var(--text2); margin-bottom: 2rem; }
+.sec-sub { color: var(--text2); margin-bottom: 1.2rem; }
 
 /* ═══════════════════════════════════════
    PAGE 1: ESTRUTURA (Tora Escrita/Oral)
@@ -587,7 +587,7 @@ nav {
 .milestone-meta { color: var(--text3); font-size: 10px; margin-top: 2px; }
 
 /* 2D DRILL ATLAS */
-#page-atlas { max-width: 1280px; }
+#page-atlas { max-width: 1280px; padding-bottom: 7.5rem; }
 .atlas2d-shell {
   border: 1px solid var(--border);
   border-radius: var(--r2);
@@ -652,6 +652,7 @@ nav {
   min-height: 620px;
   padding: 1.25rem 17rem 6.4rem 1.25rem;
   overflow: hidden;
+  cursor: grab;
 }
 .atlas2d-map {
   min-height: 465px;
@@ -665,6 +666,11 @@ nav {
     rgba(255,255,255,0.7);
   background-size: auto, auto, 52px 52px, 52px 52px, auto;
   padding: 1.2rem;
+  cursor: grab;
+}
+body.atlas-grabbing, body.atlas-grabbing * {
+  cursor: grabbing !important;
+  user-select: none;
 }
 .atlas2d-map-title {
   display: flex;
@@ -702,6 +708,24 @@ nav {
   padding: .85rem .9rem;
   min-height: 116px;
   transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.atlas2d-toolbar,
+.atlas2d-layer-panel,
+.atlas2d-floating-timeline,
+.atlas2d-action-btn,
+.atlas2d-zoom-btn,
+.atlas2d-crumb,
+.atlas2d-filter-row label,
+.atlas2d-filter-row input {
+  cursor: default;
+}
+.atlas2d-action-btn,
+.atlas2d-zoom-btn,
+.atlas2d-crumb,
+.atlas2d-filter-row label,
+.atlas2d-filter-row input,
+.atlas2d-time-seg {
+  cursor: pointer;
 }
 .atlas2d-node:hover {
   transform: translateY(-2px);
@@ -805,15 +829,22 @@ nav {
   gap: .45rem;
 }
 .atlas2d-floating-timeline {
-  position: absolute;
-  left: 1.25rem;
-  right: 17rem;
-  bottom: 1.25rem;
-  border: 1px solid var(--border);
-  border-radius: var(--r);
-  background: rgba(255,255,255,0.96);
-  box-shadow: 0 18px 34px rgba(82,65,35,0.10);
-  padding: .8rem .95rem .7rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 95;
+  width: auto;
+  margin-top: 0;
+  border-top: 1px solid var(--border);
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 -14px 34px rgba(82,65,35,0.10);
+  padding: .65rem max(2rem, calc((100vw - 1280px) / 2 + 2rem)) .7rem;
 }
 .atlas2d-time-head {
   display: flex;
@@ -925,8 +956,7 @@ nav {
     margin-top: 1rem;
   }
   .atlas2d-floating-timeline {
-    left: 1rem;
-    right: 1rem;
+    padding: .65rem 1rem .7rem;
   }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
@@ -938,6 +968,7 @@ nav {
   to { opacity: 1; transform: translateY(0); }
 }
 .page.active > * { animation: fadeUp .35s ease forwards; }
+#page-atlas.active > .atlas2d-floating-timeline { animation: none; }
 </style>
 </head>
 <body>
@@ -1280,7 +1311,7 @@ nav {
       </div>
     </div>
 
-    <div id="atlas-viewport" class="atlas2d-viewport" onwheel="atlasHandleWheel(event)">
+    <div id="atlas-viewport" class="atlas2d-viewport" onwheel="atlasHandleWheel(event)" onmousedown="atlasGrabStart(event)">
       <div class="atlas2d-map">
         <div class="atlas2d-map-title">
           <div>
@@ -1314,15 +1345,16 @@ nav {
         </div>
       </aside>
 
-      <div class="atlas2d-floating-timeline">
-        <div class="atlas2d-time-head">
-          <span id="atlas-time-title">Régua histórica contextual</span>
-          <span id="atlas-time-range">0–5785 AM</span>
-        </div>
-        <div id="atlas-time-bar" class="atlas2d-time-bar"></div>
-        <div class="atlas2d-time-labels"><span>0 AM</span><span>2448</span><span>3339</span><span>5785</span></div>
-      </div>
     </div>
+  </div>
+
+  <div class="atlas2d-floating-timeline">
+    <div class="atlas2d-time-head">
+      <span id="atlas-time-title">Régua histórica contextual</span>
+      <span id="atlas-time-range">0–5785 AM</span>
+    </div>
+    <div id="atlas-time-bar" class="atlas2d-time-bar"></div>
+    <div class="atlas2d-time-labels"><span>0 AM</span><span>2448</span><span>3339</span><span>5785</span></div>
   </div>
 </div>
 
@@ -2093,7 +2125,8 @@ const atlasState = {
   selectedGroupId: null,
   layers: { people: true, themes: true, facts: true },
   wheelAt: 0,
-  hoverTarget: null
+  hoverTarget: null,
+  grab: null
 };
 
 const ATLAS_ZOOM_LABELS = ['Macro', '5 livros', 'Milestones', 'Unidades', 'Fatos'];
@@ -2155,6 +2188,42 @@ function atlasHandleWheel(ev) {
     return;
   }
   atlasZoom(ev.deltaY < 0 ? 1 : -1);
+}
+
+function atlasGrabStart(ev) {
+  if (!atlasCanGrab(ev)) return;
+  ev.preventDefault();
+  atlasState.grab = {
+    x: ev.clientX,
+    y: ev.clientY,
+    scrollX: window.scrollX || 0,
+    scrollY: window.scrollY || 0
+  };
+  document.body.classList.add('atlas-grabbing');
+  document.addEventListener('mousemove', atlasGrabMove);
+  document.addEventListener('mouseup', atlasGrabEnd);
+}
+
+function atlasCanGrab(ev) {
+  if (ev.button !== 0) return false;
+  const blocked = ev.target.closest(
+    '.atlas2d-node, .atlas2d-layer-panel, .atlas2d-floating-timeline, button, input, label, a, select, textarea'
+  );
+  return !blocked;
+}
+
+function atlasGrabMove(ev) {
+  if (!atlasState.grab) return;
+  const dx = ev.clientX - atlasState.grab.x;
+  const dy = ev.clientY - atlasState.grab.y;
+  window.scrollTo(atlasState.grab.scrollX - dx, atlasState.grab.scrollY - dy);
+}
+
+function atlasGrabEnd() {
+  atlasState.grab = null;
+  document.body.classList.remove('atlas-grabbing');
+  document.removeEventListener('mousemove', atlasGrabMove);
+  document.removeEventListener('mouseup', atlasGrabEnd);
 }
 
 function atlasToggleLayer(layer, isOn) {
