@@ -122,6 +122,13 @@
 
 ---
 
+## Strategic Objectives (added 2026-06-12)
+
+- [ ] **Visual layer at every level** — user-added images/icons attached both to broad layers (structure areas, books, eras/timeline phases — *lato sensu*) and to strict elements (milestones, parashiot/units, facts, people — *stricto sensu*), serving as icons or visual references. Implementation path defined in `docs/04_technical/CONTENT_VISUAL_STRATEGY.md` (optional `visual` JSON metadata + `assets/` folder + Genesis pilot first).
+- [ ] **Design/appearance improvement pass** — typography, spacing, color hierarchy, per-era visual language, Atlas 2D polish, drawer refinement, responsive review across the 6 tabs.
+
+---
+
 ## Next Actions (Short Horizon)
 
 1. Resume parasha JSON population, starting with remaining Exodus files (`10-vayakhel.json`, `11-pekudei.json`)
@@ -132,6 +139,8 @@
 6. Add selected-state breadcrumb across book, milestone, timeline group, parasha/unit, and fact levels
 7. Validate milestone, timeline group, parasha, and Nach unit links in a repeatable script/check
 8. Add selected/highlight state from drawer back to the Timeline tab
+9. Start the visual-layer pilot: extend the parasha schema with optional `visual` metadata, create the `assets/` folder convention, add markers to one Genesis parasha, render them in the drawer
+10. Scope and execute the design improvement pass (tokens review first, then per-tab polish)
 
 ---
 

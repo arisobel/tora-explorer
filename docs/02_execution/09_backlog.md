@@ -1,5 +1,10 @@
 # Backlog
 
+## Strategic Objectives (2026-06-12)
+
+- [ ] **Visual layer at every level** — allow user-added images/icons attached to nodes both broadly (structure areas, books, eras/timeline phases — *lato sensu*) and strictly (milestones, parashiot/units, facts, people — *stricto sensu*), used as icons or visual references. Follow `docs/04_technical/CONTENT_VISUAL_STRATEGY.md`: optional `visual` metadata in JSON, binary files under `assets/`, pilot before broad rollout.
+- [ ] **Design/appearance improvement pass** — raise the visual quality of the whole app: typography scale, spacing rhythm, color hierarchy, per-era visual language, Atlas 2D polish, drawer refinement, and responsive review across the 6 tabs.
+
 ## Immediate (Next Cycle)
 
 - [ ] Create `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` (drawer 404s for these)
@@ -45,6 +50,10 @@
 - [ ] Add validation for visual marker shape, missing assets, and missing captions
 - [ ] Add visual markers to one Genesis pilot parasha before broad rollout
 - [ ] Render fact-level visual markers inside the existing parasha drawer
+- [ ] Extend `visual` metadata beyond facts to the broad layers: structure areas, books, eras/timeline phases, milestones, and people
+- [ ] Define the user-facing workflow for adding images (documented drop-into-`assets/` convention now; local editor with File System Access API later)
+- [ ] Design pass: typography scale, spacing rhythm, and color hierarchy tokens reviewed across all 6 tabs
+- [ ] Design pass: per-era/book visual language (colors, icons) consistent across Estrutura, Timeline, Atlas 2D, and drawer
 - [ ] Refine the drawer visual language for additional books and historical periods
 - [ ] Update drawer passage buttons so labels and behavior match the schema wording consistently
 - [ ] Add a lightweight validation script or documented checklist for `facts_count`, missing files, required schema keys, and ref formatting
