@@ -100,7 +100,8 @@
       "sefaria_ref": "Exodus 18:13-22",
       "day_of_creation": null,
       "tags": ["juízes", "delegação", "hierarquia", "administração", "yitro"],
-      "topic": "O Conselho de Yitro — Delegação da Justiça"
+      "topic": "O Conselho de Yitro — Delegação da Justiça",
+      "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "O conselho de Yitro", "importance": 3 }
     },
     {
       "id": "yt004",
@@ -116,7 +117,8 @@
       "sefaria_ref": "Exodus 19:1-2",
       "day_of_creation": null,
       "tags": ["sinai", "terceiro-mês", "acampamento", "montanha"],
-      "topic": "Israel Chega ao Sinai — Terceiro Mês"
+      "topic": "Israel Chega ao Sinai — Terceiro Mês",
+      "visual": { "marker_type": "icon", "icon": "mountains", "asset": "assets/icons/mountains.svg", "caption": "Ao pé do Sinai", "importance": 4 }
     },
     {
       "id": "yt005",
@@ -180,7 +182,8 @@
       "sefaria_ref": "Exodus 20:2-14",
       "day_of_creation": null,
       "tags": ["dez-mandamentos", "aseret-hadibrot", "shabat", "ídolos", "honrar-pais"],
-      "topic": "Os Dez Mandamentos — Aseret HaDibrot"
+      "topic": "Os Dez Mandamentos — Aseret HaDibrot",
+      "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "Os Dez Mandamentos", "importance": 5 }
     },
     {
       "id": "yt009",

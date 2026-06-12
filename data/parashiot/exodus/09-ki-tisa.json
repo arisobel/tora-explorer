@@ -68,7 +68,8 @@
       "sefaria_ref": "Exodus 30:11-16",
       "day_of_creation": null,
       "tags": ["meio-shekel", "censo", "resgate", "igualdade", "mishkan"],
-      "topic": "Machatzit HaShekel — O Meio-Shekel do Censo"
+      "topic": "Machatzit HaShekel — O Meio-Shekel do Censo",
+      "visual": { "marker_type": "icon", "icon": "coins", "asset": "assets/icons/coins.svg", "caption": "O meio-shekel", "importance": 3 }
     },
     {
       "id": "kt002",
@@ -164,7 +165,8 @@
       "sefaria_ref": "Exodus 31:18",
       "day_of_creation": null,
       "tags": ["tábuas", "sinai", "testemunho", "dedo-de-deus"],
-      "topic": "As Primeiras Tábuas — Escritas pelo Dedo de Deus"
+      "topic": "As Primeiras Tábuas — Escritas pelo Dedo de Deus",
+      "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "As primeiras Tábuas", "importance": 5 }
     },
     {
       "id": "kt008",
@@ -180,7 +182,8 @@
       "sefaria_ref": "Exodus 32:1-6",
       "day_of_creation": null,
       "tags": ["bezerro-de-ouro", "aharon", "idolatria", "ouro", "impaciência"],
-      "topic": "O Bezerro de Ouro — Um Deus Visível"
+      "topic": "O Bezerro de Ouro — Um Deus Visível",
+      "visual": { "marker_type": "icon", "icon": "calf", "asset": "assets/icons/calf.svg", "caption": "O bezerro de ouro", "importance": 5 }
     },
     {
       "id": "kt009",
@@ -276,7 +279,8 @@
       "sefaria_ref": "Exodus 34:1-9",
       "day_of_creation": null,
       "tags": ["segundas-tábuas", "13-atributos", "misericórdia", "perdão", "aliança"],
-      "topic": "Os 13 Atributos de Misericórdia"
+      "topic": "Os 13 Atributos de Misericórdia",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Os 13 atributos", "importance": 4 }
     },
     {
       "id": "kt015",

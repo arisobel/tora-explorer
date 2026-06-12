@@ -2080,9 +2080,12 @@ async function renderChumashAtlas(activeBookKey = 'genesis') {
         const click = hasDrawer
           ? `onclick="openMilestone('${book.book_key}','${m.id}')"`
           : '';
+        const mIcon = (m.visual && m.visual.asset)
+          ? `<span class="icon-mask" style="--icon:url('${m.visual.asset}')"></span>`
+          : (m.icon || '•');
         return `
           <div class="milestone-card ${hasDrawer ? 'interactive' : ''}" ${click} title="${m.sefaria_ref || ''}">
-            <div class="milestone-icon">${m.icon || '•'}</div>
+            <div class="milestone-icon">${mIcon}</div>
             <div>
               <div class="milestone-label">${m.label}</div>
               <div class="milestone-meta">${meta}</div>
@@ -2454,6 +2457,7 @@ async function atlasBuildContext(milestoneData, groupData) {
         kind: 'group',
         id: group.id,
         icon: group.icon || '•',
+        visual: group.visual || null,
         label: group.label,
         sub: group.summary,
         meta: `${group.book_key || ''} · ${(group.parasha_ids || []).length} unidades · ${(group.fact_ids || []).length} fatos`,
@@ -2472,6 +2476,7 @@ async function atlasBuildContext(milestoneData, groupData) {
       kind: 'milestone',
       id: m.id,
       icon: m.icon || '•',
+      visual: m.visual || null,
       label: m.label,
       sub: (m.themes || []).slice(0, 3).join(' · '),
       meta: `${(m.parasha_ids || []).length || 'sem'} parashiot · ${(m.fact_ids || []).length || 0} fatos`,
@@ -2613,7 +2618,7 @@ function atlasRenderNodes(nodes) {
   }
   root.innerHTML = nodes.map(node => `
     <button class="atlas2d-node ${node.selected ? 'selected' : ''} ${atlasState.hoverTarget?.kind === node.kind && atlasState.hoverTarget?.id === node.id ? 'hover-target' : ''}" data-atlas-kind="${atlasEsc(node.kind)}" data-atlas-id="${atlasEsc(node.id)}" onclick="atlasSelect('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseenter="atlasSetHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseleave="atlasClearHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')">
-      <span class="atlas2d-node-icon">${atlasEsc(node.icon || '•')}</span>
+      <span class="atlas2d-node-icon">${node.visual && node.visual.asset ? `<span class="icon-mask" style="--icon:url('${node.visual.asset}')"></span>` : atlasEsc(node.icon || '•')}</span>
       <span class="atlas2d-node-label">${atlasEsc(node.label)}</span>
       <span class="atlas2d-node-sub">${atlasEsc(node.sub || '')}</span>
       <span class="atlas2d-node-meta">${atlasEsc(node.meta || '')}</span>
@@ -3254,6 +3259,8 @@ document.addEventListener('keydown', e => {
 }
 .dp-visual .icon-mask { width: 30px; height: 30px; background-color: var(--gold); }
 .icon-mask.mini { width: 13px; height: 13px; vertical-align: -2px; margin-right: 5px; }
+.milestone-icon .icon-mask { width: 18px; height: 18px; }
+.atlas2d-node-icon .icon-mask { width: 17px; height: 17px; }
 .fact-flex { display: flex; gap: 11px; align-items: flex-start; }
 .fact-main { flex: 1; min-width: 0; }
 .fact-visual { flex-shrink: 0; padding-top: 1px; }

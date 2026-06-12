@@ -68,7 +68,8 @@
       "sefaria_ref": "Exodus 6:2-8",
       "day_of_creation": null,
       "tags": ["nome-divino", "havayah", "aliança", "redenção", "el-shadai"],
-      "topic": "Revelação do Nome יהוה — A Aliança Renovada"
+      "topic": "Revelação do Nome יהוה — A Aliança Renovada",
+      "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "A aliança renovada", "importance": 4 }
     },
     {
       "id": "ve002",
@@ -100,7 +101,8 @@
       "sefaria_ref": "Exodus 7:10-12",
       "day_of_creation": null,
       "tags": ["bastão", "serpente", "magos", "engoliu", "faraó"],
-      "topic": "O Bastão-Serpente — Sinal Inicial"
+      "topic": "O Bastão-Serpente — Sinal Inicial",
+      "visual": { "marker_type": "icon", "icon": "staff", "asset": "assets/icons/staff.svg", "caption": "O bastão de Moshe", "importance": 4 }
     },
     {
       "id": "ve004",
@@ -116,7 +118,8 @@
       "sefaria_ref": "Exodus 7:20-21",
       "day_of_creation": null,
       "tags": ["praga-1", "sangue", "nilo", "peixes", "dam"],
-      "topic": "Praga 1 — Sangue (Dam)"
+      "topic": "Praga 1 — Sangue (Dam)",
+      "visual": { "marker_type": "icon", "icon": "drop", "asset": "assets/icons/drop.svg", "caption": "As águas em sangue", "importance": 5 }
     },
     {
       "id": "ve005",

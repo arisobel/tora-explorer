@@ -84,7 +84,8 @@
       "sefaria_ref": "Exodus 1:11-14",
       "day_of_creation": null,
       "tags": ["escravidão", "trabalho-forçado", "pitom", "ramsés", "opressão"],
-      "topic": "A Escravidão — Trabalho Forçado"
+      "topic": "A Escravidão — Trabalho Forçado",
+      "visual": { "marker_type": "icon", "icon": "chains", "asset": "assets/icons/chains.svg", "caption": "A escravidão no Egito", "importance": 4 }
     },
     {
       "id": "sm003",
@@ -132,7 +133,8 @@
       "sefaria_ref": "Exodus 2:2-4",
       "day_of_creation": null,
       "tags": ["moshe", "cesta", "nilo", "yocheved", "miriam"],
-      "topic": "Nascimento de Moshe — A Cesta no Nilo"
+      "topic": "Nascimento de Moshe — A Cesta no Nilo",
+      "visual": { "marker_type": "icon", "icon": "basket", "asset": "assets/icons/basket.svg", "caption": "O cesto no Nilo", "importance": 5 }
     },
     {
       "id": "sm006",
@@ -245,7 +247,8 @@
       "sefaria_ref": "Exodus 3:13-15",
       "day_of_creation": null,
       "tags": ["nome-divino", "ehyeh", "havayah", "tetragramaton", "eterno"],
-      "topic": "Revelação do Nome Divino — Ehyeh Asher Ehyeh"
+      "topic": "Revelação do Nome Divino — Ehyeh Asher Ehyeh",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Ehyeh Asher Ehyeh", "importance": 4 }
     },
     {
       "id": "sm013",

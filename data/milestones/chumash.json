@@ -10,6 +10,7 @@
       "milestones": [
         {
           "id": "gen-creation",
+          "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Criação do Mundo" },
           "label": "Criação do Mundo",
           "icon": "🌍",
           "parasha_ids": ["bereshit"],
@@ -21,6 +22,7 @@
         },
         {
           "id": "gen-eden-fall",
+          "visual": { "marker_type": "icon", "icon": "tree", "asset": "assets/icons/tree.svg", "caption": "Eden e a queda" },
           "label": "Eden, livre-arbítrio e queda",
           "icon": "🍎",
           "parasha_ids": ["bereshit"],
@@ -32,6 +34,7 @@
         },
         {
           "id": "gen-cain-abel",
+          "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "Kayin e Hevel" },
           "label": "Kayin e Hevel",
           "icon": "🩸",
           "parasha_ids": ["bereshit"],
@@ -43,6 +46,7 @@
         },
         {
           "id": "gen-flood",
+          "visual": { "marker_type": "icon", "icon": "ark", "asset": "assets/icons/ark.svg", "caption": "Dilúvio e Teivá" },
           "label": "Dilúvio e Arca de Noach",
           "icon": "🌊",
           "parasha_ids": ["noach"],
@@ -54,6 +58,7 @@
         },
         {
           "id": "gen-babel",
+          "visual": { "marker_type": "icon", "icon": "tower", "asset": "assets/icons/tower.svg", "caption": "Torre de Babel" },
           "label": "Torre de Babel",
           "icon": "🏗️",
           "parasha_ids": ["noach"],
@@ -65,6 +70,7 @@
         },
         {
           "id": "gen-avraham-call",
+          "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Chamado de Avraham" },
           "label": "Lech Lecha: chamado de Avraham",
           "icon": "🚶",
           "parasha_ids": ["lech-lecha"],
@@ -76,6 +82,7 @@
         },
         {
           "id": "gen-brit-milah",
+          "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "Brit Milá" },
           "label": "Brit Milah e promessa de Yitzchak",
           "icon": "✡",
           "parasha_ids": ["lech-lecha"],
@@ -87,6 +94,7 @@
         },
         {
           "id": "gen-sedom-akedah",
+          "visual": { "marker_type": "icon", "icon": "shofar", "asset": "assets/icons/shofar.svg", "caption": "Sedom e Akedá" },
           "label": "Sedom e Akedah",
           "icon": "🔥",
           "parasha_ids": ["vayera"],
@@ -98,6 +106,7 @@
         },
         {
           "id": "gen-rivka-toldot",
+          "visual": { "marker_type": "icon", "icon": "bowl", "asset": "assets/icons/bowl.svg", "caption": "Rivka, Yaakov e Essav" },
           "label": "Rivka, Yaakov e Essav",
           "icon": "👥",
           "parasha_ids": ["toldot"],
@@ -109,6 +118,7 @@
         },
         {
           "id": "gen-yaakov-tribes",
+          "visual": { "marker_type": "icon", "icon": "ladder", "asset": "assets/icons/ladder.svg", "caption": "As 12 tribos" },
           "label": "Yaakov, Rachel, Lea e as 12 tribos",
           "icon": "12",
           "parasha_ids": ["vayetze"],
@@ -120,6 +130,7 @@
         },
         {
           "id": "gen-yosef",
+          "visual": { "marker_type": "icon", "icon": "coat", "asset": "assets/icons/coat.svg", "caption": "Yossef" },
           "label": "Yossef: sonhos, queda e ascensão",
           "icon": "👑",
           "parasha_ids": ["vayeshev", "miketz"],
@@ -131,6 +142,7 @@
         },
         {
           "id": "gen-egypt-descent",
+          "visual": { "marker_type": "icon", "icon": "wagon", "asset": "assets/icons/wagon.svg", "caption": "Descida ao Egito" },
           "label": "Reconciliação e descida ao Egito",
           "icon": "🐪",
           "parasha_ids": ["vayigash", "vayechi"],
@@ -148,18 +160,18 @@
       "label": "Êxodo",
       "label_he": "שְׁמוֹת",
       "milestones": [
-        { "id": "exo-slavery", "label": "Escravidão do povo", "icon": "⛓️", "parasha_ids": ["shemot"], "fact_ids": ["sm001", "sm002"], "themes": ["exílio", "opressão"], "characters": ["Bnei Israel", "Faraó"], "sefaria_ref": "Exodus 1:1-22", "importance": 5 },
-        { "id": "exo-moshe-born", "label": "Nascimento de Moshe", "icon": "👶", "parasha_ids": ["shemot"], "fact_ids": ["sm004", "sm005", "sm006"], "themes": ["salvação", "liderança"], "characters": ["Moshe", "Yocheved", "Miriam"], "sefaria_ref": "Exodus 2:1-10", "importance": 5 },
-        { "id": "exo-burning-bush", "label": "Sarça ardente", "icon": "🔥", "parasha_ids": ["shemot"], "fact_ids": ["sm010", "sm011", "sm012"], "themes": ["missão", "revelação"], "characters": ["Moshe"], "sefaria_ref": "Exodus 3:1-4:17", "importance": 5 },
-        { "id": "exo-plagues", "label": "10 pragas", "icon": "🐸", "parasha_ids": ["vaera", "bo"], "fact_ids": ["ve004", "ve005", "ve006", "bo001", "bo002", "bo003"], "themes": ["juízo", "libertação"], "characters": ["Moshe", "Aharon", "Faraó"], "sefaria_ref": "Exodus 7:14-12:30", "importance": 5 },
-        { "id": "exo-pesach", "label": "Pessach e saída do Egito", "icon": "🚪", "parasha_ids": ["bo"], "fact_ids": ["bo004", "bo005", "bo006", "bo007"], "themes": ["liberdade", "memória"], "characters": ["Bnei Israel"], "sefaria_ref": "Exodus 12:1-13:16", "importance": 5 },
-        { "id": "exo-sea", "label": "Abertura do mar", "icon": "🌊", "parasha_ids": ["beshalach"], "fact_ids": ["bs002", "bs003", "bs004"], "themes": ["salvação", "fé"], "characters": ["Moshe", "Miriam"], "sefaria_ref": "Exodus 14:1-15:21", "importance": 5 },
-        { "id": "exo-manna", "label": "Maná e água no deserto", "icon": "🍞", "parasha_ids": ["beshalach"], "fact_ids": ["bs007", "bs008", "bs009"], "themes": ["sustento", "teste"], "characters": ["Bnei Israel"], "sefaria_ref": "Exodus 16:1-17:7", "importance": 4 },
-        { "id": "exo-sinai", "label": "Sinai e 10 mandamentos", "icon": "📜", "parasha_ids": ["yitro"], "fact_ids": ["yt005", "yt006", "yt007", "yt008"], "themes": ["aliança", "revelação"], "characters": ["Moshe", "Bnei Israel"], "sefaria_ref": "Exodus 19:1-20:23", "importance": 5 },
-        { "id": "exo-laws", "label": "Mishpatim: leis da aliança", "icon": "⚖️", "parasha_ids": ["mishpatim"], "fact_ids": ["mp001", "mp002", "mp003", "mp009"], "themes": ["justiça", "sociedade"], "characters": ["Moshe"], "sefaria_ref": "Exodus 21:1-24:18", "importance": 4 },
-        { "id": "exo-mishkan-design", "label": "Projeto do Mishkan", "icon": "🏛️", "parasha_ids": ["terumah", "tetzaveh"], "fact_ids": ["tr001", "tr002", "tr003", "tz002", "tz003"], "themes": ["presença", "arte sagrada"], "characters": ["Moshe", "Betzalel"], "sefaria_ref": "Exodus 25:1-30:10", "importance": 5 },
-        { "id": "exo-golden-calf", "label": "Bezerro de Ouro", "icon": "🐄", "parasha_ids": ["ki-tisa"], "fact_ids": ["kt008", "kt009", "kt010", "kt011"], "themes": ["idolatria", "intercessão"], "characters": ["Moshe", "Aharon", "Bnei Israel"], "sefaria_ref": "Exodus 32:1-35", "importance": 5 },
-        { "id": "exo-second-tablets", "label": "Segundas Tábuas", "icon": "💎", "parasha_ids": ["ki-tisa"], "fact_ids": ["kt014", "kt015"], "themes": ["perdão", "aliança renovada"], "characters": ["Moshe"], "sefaria_ref": "Exodus 34:1-35", "importance": 5 }
+        { "id": "exo-slavery", "visual": { "marker_type": "icon", "icon": "chains", "asset": "assets/icons/chains.svg", "caption": "Escravidão" }, "label": "Escravidão do povo", "icon": "⛓️", "parasha_ids": ["shemot"], "fact_ids": ["sm001", "sm002"], "themes": ["exílio", "opressão"], "characters": ["Bnei Israel", "Faraó"], "sefaria_ref": "Exodus 1:1-22", "importance": 5 },
+        { "id": "exo-moshe-born", "visual": { "marker_type": "icon", "icon": "basket", "asset": "assets/icons/basket.svg", "caption": "Nascimento de Moshe" }, "label": "Nascimento de Moshe", "icon": "👶", "parasha_ids": ["shemot"], "fact_ids": ["sm004", "sm005", "sm006"], "themes": ["salvação", "liderança"], "characters": ["Moshe", "Yocheved", "Miriam"], "sefaria_ref": "Exodus 2:1-10", "importance": 5 },
+        { "id": "exo-burning-bush", "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "Sarça ardente" }, "label": "Sarça ardente", "icon": "🔥", "parasha_ids": ["shemot"], "fact_ids": ["sm010", "sm011", "sm012"], "themes": ["missão", "revelação"], "characters": ["Moshe"], "sefaria_ref": "Exodus 3:1-4:17", "importance": 5 },
+        { "id": "exo-plagues", "visual": { "marker_type": "icon", "icon": "staff", "asset": "assets/icons/staff.svg", "caption": "As 10 pragas" }, "label": "10 pragas", "icon": "🐸", "parasha_ids": ["vaera", "bo"], "fact_ids": ["ve004", "ve005", "ve006", "bo001", "bo002", "bo003"], "themes": ["juízo", "libertação"], "characters": ["Moshe", "Aharon", "Faraó"], "sefaria_ref": "Exodus 7:14-12:30", "importance": 5 },
+        { "id": "exo-pesach", "visual": { "marker_type": "icon", "icon": "door", "asset": "assets/icons/door.svg", "caption": "Pessach" }, "label": "Pessach e saída do Egito", "icon": "🚪", "parasha_ids": ["bo"], "fact_ids": ["bo004", "bo005", "bo006", "bo007"], "themes": ["liberdade", "memória"], "characters": ["Bnei Israel"], "sefaria_ref": "Exodus 12:1-13:16", "importance": 5 },
+        { "id": "exo-sea", "visual": { "marker_type": "icon", "icon": "sea", "asset": "assets/icons/sea.svg", "caption": "Abertura do mar" }, "label": "Abertura do mar", "icon": "🌊", "parasha_ids": ["beshalach"], "fact_ids": ["bs002", "bs003", "bs004"], "themes": ["salvação", "fé"], "characters": ["Moshe", "Miriam"], "sefaria_ref": "Exodus 14:1-15:21", "importance": 5 },
+        { "id": "exo-manna", "visual": { "marker_type": "icon", "icon": "wheat", "asset": "assets/icons/wheat.svg", "caption": "Maná" }, "label": "Maná e água no deserto", "icon": "🍞", "parasha_ids": ["beshalach"], "fact_ids": ["bs007", "bs008", "bs009"], "themes": ["sustento", "teste"], "characters": ["Bnei Israel"], "sefaria_ref": "Exodus 16:1-17:7", "importance": 4 },
+        { "id": "exo-sinai", "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "Sinai" }, "label": "Sinai e 10 mandamentos", "icon": "📜", "parasha_ids": ["yitro"], "fact_ids": ["yt005", "yt006", "yt007", "yt008"], "themes": ["aliança", "revelação"], "characters": ["Moshe", "Bnei Israel"], "sefaria_ref": "Exodus 19:1-20:23", "importance": 5 },
+        { "id": "exo-laws", "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "Mishpatim" }, "label": "Mishpatim: leis da aliança", "icon": "⚖️", "parasha_ids": ["mishpatim"], "fact_ids": ["mp001", "mp002", "mp003", "mp009"], "themes": ["justiça", "sociedade"], "characters": ["Moshe"], "sefaria_ref": "Exodus 21:1-24:18", "importance": 4 },
+        { "id": "exo-mishkan-design", "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "O Mishkan" }, "label": "Projeto do Mishkan", "icon": "🏛️", "parasha_ids": ["terumah", "tetzaveh"], "fact_ids": ["tr001", "tr002", "tr003", "tz002", "tz003"], "themes": ["presença", "arte sagrada"], "characters": ["Moshe", "Betzalel"], "sefaria_ref": "Exodus 25:1-30:10", "importance": 5 },
+        { "id": "exo-golden-calf", "visual": { "marker_type": "icon", "icon": "calf", "asset": "assets/icons/calf.svg", "caption": "Bezerro de Ouro" }, "label": "Bezerro de Ouro", "icon": "🐄", "parasha_ids": ["ki-tisa"], "fact_ids": ["kt008", "kt009", "kt010", "kt011"], "themes": ["idolatria", "intercessão"], "characters": ["Moshe", "Aharon", "Bnei Israel"], "sefaria_ref": "Exodus 32:1-35", "importance": 5 },
+        { "id": "exo-second-tablets", "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "Segundas Tábuas" }, "label": "Segundas Tábuas", "icon": "💎", "parasha_ids": ["ki-tisa"], "fact_ids": ["kt014", "kt015"], "themes": ["perdão", "aliança renovada"], "characters": ["Moshe"], "sefaria_ref": "Exodus 34:1-35", "importance": 5 }
       ]
     },
     {
@@ -168,14 +180,14 @@
       "label": "Levítico",
       "label_he": "וַיִּקְרָא",
       "milestones": [
-        { "id": "lev-offerings", "label": "Tipos de korbanot", "icon": "🔥", "parasha_ids": ["vayikra", "tzav"], "themes": ["sacrifícios"], "sefaria_ref": "Leviticus 1:1-7:38", "importance": 5 },
-        { "id": "lev-priests", "label": "Inauguração dos cohanim", "icon": "👑", "parasha_ids": ["tzav", "shemini"], "themes": ["sacerdócio"], "sefaria_ref": "Leviticus 8:1-10:20", "importance": 5 },
+        { "id": "lev-offerings", "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "Korbanot" }, "label": "Tipos de korbanot", "icon": "🔥", "parasha_ids": ["vayikra", "tzav"], "themes": ["sacrifícios"], "sefaria_ref": "Leviticus 1:1-7:38", "importance": 5 },
+        { "id": "lev-priests", "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Os cohanim" }, "label": "Inauguração dos cohanim", "icon": "👑", "parasha_ids": ["tzav", "shemini"], "themes": ["sacerdócio"], "sefaria_ref": "Leviticus 8:1-10:20", "importance": 5 },
         { "id": "lev-kashrut", "label": "Kashrut: animais permitidos", "icon": "🐑", "parasha_ids": ["shemini"], "themes": ["pureza"], "sefaria_ref": "Leviticus 11:1-47", "importance": 4 },
-        { "id": "lev-purity", "label": "Tazria-Metzora: pureza e cura", "icon": "💧", "parasha_ids": ["tazria", "metzora"], "themes": ["pureza", "fala"], "sefaria_ref": "Leviticus 12:1-15:33", "importance": 4 },
-        { "id": "lev-yom-kippur", "label": "Yom Kippur", "icon": "⚖️", "parasha_ids": ["achrei-mot"], "themes": ["expiação"], "sefaria_ref": "Leviticus 16:1-34", "importance": 5 },
-        { "id": "lev-holiness", "label": "Kedoshim: santidade social", "icon": "✨", "parasha_ids": ["kedoshim"], "themes": ["santidade"], "sefaria_ref": "Leviticus 19:1-20:27", "importance": 5 },
-        { "id": "lev-festivals", "label": "Festas do calendário", "icon": "📅", "parasha_ids": ["emor"], "themes": ["moedim"], "sefaria_ref": "Leviticus 23:1-44", "importance": 5 },
-        { "id": "lev-shemita-yovel", "label": "Shemitá e Yovel", "icon": "🌾", "parasha_ids": ["behar"], "themes": ["terra", "liberdade"], "sefaria_ref": "Leviticus 25:1-55", "importance": 5 }
+        { "id": "lev-purity", "visual": { "marker_type": "icon", "icon": "drop", "asset": "assets/icons/drop.svg", "caption": "Pureza e cura" }, "label": "Tazria-Metzora: pureza e cura", "icon": "💧", "parasha_ids": ["tazria", "metzora"], "themes": ["pureza", "fala"], "sefaria_ref": "Leviticus 12:1-15:33", "importance": 4 },
+        { "id": "lev-yom-kippur", "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "Yom Kipur" }, "label": "Yom Kippur", "icon": "⚖️", "parasha_ids": ["achrei-mot"], "themes": ["expiação"], "sefaria_ref": "Leviticus 16:1-34", "importance": 5 },
+        { "id": "lev-holiness", "visual": { "marker_type": "icon", "icon": "tzaddik", "asset": "assets/icons/tzaddik.svg", "caption": "Kedoshim" }, "label": "Kedoshim: santidade social", "icon": "✨", "parasha_ids": ["kedoshim"], "themes": ["santidade"], "sefaria_ref": "Leviticus 19:1-20:27", "importance": 5 },
+        { "id": "lev-festivals", "visual": { "marker_type": "icon", "icon": "candles", "asset": "assets/icons/candles.svg", "caption": "As festas" }, "label": "Festas do calendário", "icon": "📅", "parasha_ids": ["emor"], "themes": ["moedim"], "sefaria_ref": "Leviticus 23:1-44", "importance": 5 },
+        { "id": "lev-shemita-yovel", "visual": { "marker_type": "icon", "icon": "shofar", "asset": "assets/icons/shofar.svg", "caption": "Shemitá e Yovel" }, "label": "Shemitá e Yovel", "icon": "🌾", "parasha_ids": ["behar"], "themes": ["terra", "liberdade"], "sefaria_ref": "Leviticus 25:1-55", "importance": 5 }
       ]
     },
     {
@@ -184,16 +196,16 @@
       "label": "Números",
       "label_he": "בְּמִדְבַּר",
       "milestones": [
-        { "id": "num-census", "label": "Contagem do povo", "icon": "📊", "parasha_ids": ["bamidbar"], "themes": ["organização"], "sefaria_ref": "Numbers 1:1-4:49", "importance": 5 },
-        { "id": "num-camp", "label": "Acampamento e marcha", "icon": "⛺", "parasha_ids": ["bamidbar", "nasso", "behaalotecha"], "themes": ["ordem"], "sefaria_ref": "Numbers 2:1-10:36", "importance": 4 },
-        { "id": "num-complaints", "label": "Reclamações no deserto", "icon": "😤", "parasha_ids": ["behaalotecha"], "themes": ["teste"], "sefaria_ref": "Numbers 11:1-35", "importance": 4 },
+        { "id": "num-census", "visual": { "marker_type": "icon", "icon": "banner", "asset": "assets/icons/banner.svg", "caption": "O censo" }, "label": "Contagem do povo", "icon": "📊", "parasha_ids": ["bamidbar"], "themes": ["organização"], "sefaria_ref": "Numbers 1:1-4:49", "importance": 5 },
+        { "id": "num-camp", "visual": { "marker_type": "icon", "icon": "tent", "asset": "assets/icons/tent.svg", "caption": "O acampamento" }, "label": "Acampamento e marcha", "icon": "⛺", "parasha_ids": ["bamidbar", "nasso", "behaalotecha"], "themes": ["ordem"], "sefaria_ref": "Numbers 2:1-10:36", "importance": 4 },
+        { "id": "num-complaints", "visual": { "marker_type": "icon", "icon": "bowl", "asset": "assets/icons/bowl.svg", "caption": "Reclamações" }, "label": "Reclamações no deserto", "icon": "😤", "parasha_ids": ["behaalotecha"], "themes": ["teste"], "sefaria_ref": "Numbers 11:1-35", "importance": 4 },
         { "id": "num-miriam", "label": "Miriam e a fala contra Moshe", "icon": "💬", "parasha_ids": ["behaalotecha"], "themes": ["liderança", "fala"], "sefaria_ref": "Numbers 12:1-16", "importance": 4 },
-        { "id": "num-spies", "label": "Espiões e 40 anos", "icon": "🕵️", "parasha_ids": ["shelach"], "themes": ["terra", "medo"], "sefaria_ref": "Numbers 13:1-14:45", "importance": 5 },
-        { "id": "num-korach", "label": "Rebelião de Korach", "icon": "🔥", "parasha_ids": ["korach"], "themes": ["autoridade"], "sefaria_ref": "Numbers 16:1-18:32", "importance": 5 },
-        { "id": "num-bronze-serpent", "label": "Cobra de cobre", "icon": "🐍", "parasha_ids": ["chukat"], "themes": ["cura"], "sefaria_ref": "Numbers 21:4-9", "importance": 4 },
-        { "id": "num-bilam", "label": "Bilam e Balak", "icon": "🗣️", "parasha_ids": ["balak"], "themes": ["bênção"], "sefaria_ref": "Numbers 22:2-24:25", "importance": 5 },
-        { "id": "num-pinchas", "label": "Pinchas", "icon": "⚔️", "parasha_ids": ["balak", "pinchas"], "themes": ["zelo", "aliança"], "sefaria_ref": "Numbers 25:1-18", "importance": 4 },
-        { "id": "num-daughters", "label": "Filhas de Tzelofchad", "icon": "👩", "parasha_ids": ["pinchas"], "themes": ["herança"], "sefaria_ref": "Numbers 27:1-11", "importance": 4 }
+        { "id": "num-spies", "visual": { "marker_type": "icon", "icon": "vine", "asset": "assets/icons/vine.svg", "caption": "Os espiões" }, "label": "Espiões e 40 anos", "icon": "🕵️", "parasha_ids": ["shelach"], "themes": ["terra", "medo"], "sefaria_ref": "Numbers 13:1-14:45", "importance": 5 },
+        { "id": "num-korach", "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "Korach" }, "label": "Rebelião de Korach", "icon": "🔥", "parasha_ids": ["korach"], "themes": ["autoridade"], "sefaria_ref": "Numbers 16:1-18:32", "importance": 5 },
+        { "id": "num-bronze-serpent", "visual": { "marker_type": "icon", "icon": "serpent", "asset": "assets/icons/serpent.svg", "caption": "Serpente de cobre" }, "label": "Cobra de cobre", "icon": "🐍", "parasha_ids": ["chukat"], "themes": ["cura"], "sefaria_ref": "Numbers 21:4-9", "importance": 4 },
+        { "id": "num-bilam", "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "Bilam" }, "label": "Bilam e Balak", "icon": "🗣️", "parasha_ids": ["balak"], "themes": ["bênção"], "sefaria_ref": "Numbers 22:2-24:25", "importance": 5 },
+        { "id": "num-pinchas", "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "Pinchas" }, "label": "Pinchas", "icon": "⚔️", "parasha_ids": ["balak", "pinchas"], "themes": ["zelo", "aliança"], "sefaria_ref": "Numbers 25:1-18", "importance": 4 },
+        { "id": "num-daughters", "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "Filhas de Tzelofchad" }, "label": "Filhas de Tzelofchad", "icon": "👩", "parasha_ids": ["pinchas"], "themes": ["herança"], "sefaria_ref": "Numbers 27:1-11", "importance": 4 }
       ]
     },
     {
@@ -202,16 +214,16 @@
       "label": "Deuteronômio",
       "label_he": "דְּבָרִים",
       "milestones": [
-        { "id": "deut-review", "label": "Revisão da jornada", "icon": "📖", "parasha_ids": ["devarim"], "themes": ["memória"], "sefaria_ref": "Deuteronomy 1:1-3:22", "importance": 5 },
-        { "id": "deut-ten-commandments", "label": "Repetição dos 10 Mandamentos", "icon": "📜", "parasha_ids": ["vaetchanan"], "themes": ["aliança"], "sefaria_ref": "Deuteronomy 5:1-33", "importance": 5 },
-        { "id": "deut-shema", "label": "Shema Yisrael", "icon": "👂", "parasha_ids": ["vaetchanan"], "themes": ["fé", "amor"], "sefaria_ref": "Deuteronomy 6:4-9", "importance": 5 },
-        { "id": "deut-land-warning", "label": "Advertência antes da terra", "icon": "⛰️", "parasha_ids": ["eikev"], "themes": ["terra", "memória"], "sefaria_ref": "Deuteronomy 8:1-20", "importance": 4 },
-        { "id": "deut-central-place", "label": "Lugar escolhido", "icon": "🏛️", "parasha_ids": ["reeh"], "themes": ["culto"], "sefaria_ref": "Deuteronomy 12:1-28", "importance": 4 },
-        { "id": "deut-justice", "label": "Justiça, reis e profetas", "icon": "⚖️", "parasha_ids": ["shoftim"], "themes": ["sociedade"], "sefaria_ref": "Deuteronomy 16:18-18:22", "importance": 5 },
-        { "id": "deut-blessings-curses", "label": "Bênçãos e maldições", "icon": "⚡", "parasha_ids": ["ki-tavo", "nitzavim"], "themes": ["aliança"], "sefaria_ref": "Deuteronomy 27:1-30:20", "importance": 5 },
-        { "id": "deut-haazinu", "label": "Shirat Haazinu", "icon": "🎵", "parasha_ids": ["haazinu"], "themes": ["cântico"], "sefaria_ref": "Deuteronomy 32:1-52", "importance": 4 },
-        { "id": "deut-final-blessing", "label": "Bênção final de Moshe", "icon": "🤲", "parasha_ids": ["vezot-haberakhah"], "themes": ["tribos"], "sefaria_ref": "Deuteronomy 33:1-29", "importance": 4 },
-        { "id": "deut-moshe-death", "label": "Morte de Moshe", "icon": "🕯️", "parasha_ids": ["vezot-haberakhah"], "themes": ["liderança", "transição"], "sefaria_ref": "Deuteronomy 34:1-12", "importance": 5 }
+        { "id": "deut-review", "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Revisão da jornada" }, "label": "Revisão da jornada", "icon": "📖", "parasha_ids": ["devarim"], "themes": ["memória"], "sefaria_ref": "Deuteronomy 1:1-3:22", "importance": 5 },
+        { "id": "deut-ten-commandments", "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "Os 10 Mandamentos" }, "label": "Repetição dos 10 Mandamentos", "icon": "📜", "parasha_ids": ["vaetchanan"], "themes": ["aliança"], "sefaria_ref": "Deuteronomy 5:1-33", "importance": 5 },
+        { "id": "deut-shema", "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Shemá Yisrael" }, "label": "Shema Yisrael", "icon": "👂", "parasha_ids": ["vaetchanan"], "themes": ["fé", "amor"], "sefaria_ref": "Deuteronomy 6:4-9", "importance": 5 },
+        { "id": "deut-land-warning", "visual": { "marker_type": "icon", "icon": "wheat", "asset": "assets/icons/wheat.svg", "caption": "A terra boa" }, "label": "Advertência antes da terra", "icon": "⛰️", "parasha_ids": ["eikev"], "themes": ["terra", "memória"], "sefaria_ref": "Deuteronomy 8:1-20", "importance": 4 },
+        { "id": "deut-central-place", "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "O lugar escolhido" }, "label": "Lugar escolhido", "icon": "🏛️", "parasha_ids": ["reeh"], "themes": ["culto"], "sefaria_ref": "Deuteronomy 12:1-28", "importance": 4 },
+        { "id": "deut-justice", "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "Justiça" }, "label": "Justiça, reis e profetas", "icon": "⚖️", "parasha_ids": ["shoftim"], "themes": ["sociedade"], "sefaria_ref": "Deuteronomy 16:18-18:22", "importance": 5 },
+        { "id": "deut-blessings-curses", "visual": { "marker_type": "icon", "icon": "mountains", "asset": "assets/icons/mountains.svg", "caption": "Bênçãos e maldições" }, "label": "Bênçãos e maldições", "icon": "⚡", "parasha_ids": ["ki-tavo", "nitzavim"], "themes": ["aliança"], "sefaria_ref": "Deuteronomy 27:1-30:20", "importance": 5 },
+        { "id": "deut-haazinu", "visual": { "marker_type": "icon", "icon": "harp", "asset": "assets/icons/harp.svg", "caption": "Haazinu" }, "label": "Shirat Haazinu", "icon": "🎵", "parasha_ids": ["haazinu"], "themes": ["cântico"], "sefaria_ref": "Deuteronomy 32:1-52", "importance": 4 },
+        { "id": "deut-final-blessing", "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "A bênção final" }, "label": "Bênção final de Moshe", "icon": "🤲", "parasha_ids": ["vezot-haberakhah"], "themes": ["tribos"], "sefaria_ref": "Deuteronomy 33:1-29", "importance": 4 },
+        { "id": "deut-moshe-death", "visual": { "marker_type": "icon", "icon": "mountains", "asset": "assets/icons/mountains.svg", "caption": "Morte de Moshe" }, "label": "Morte de Moshe", "icon": "🕯️", "parasha_ids": ["vezot-haberakhah"], "themes": ["liderança", "transição"], "sefaria_ref": "Deuteronomy 34:1-12", "importance": 5 }
       ]
     }
   ]

@@ -148,7 +148,8 @@
       "sefaria_ref": "Exodus 12:2-6",
       "day_of_creation": null,
       "tags": ["pessach", "nissan", "primeiro-mandamento", "calendário", "cordeiro"],
-      "topic": "O Primeiro Mandamento — Qidush HaChodesh"
+      "topic": "O Primeiro Mandamento — Qidush HaChodesh",
+      "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "Qidush HaChodesh", "importance": 3 }
     },
     {
       "id": "bo007",
@@ -164,7 +165,8 @@
       "sefaria_ref": "Exodus 12:7-11",
       "day_of_creation": null,
       "tags": ["pessach", "sangue", "umbrais", "matzá", "maror", "korban-pessach"],
-      "topic": "O Korban Pessach — Sangue, Maror e Matzá"
+      "topic": "O Korban Pessach — Sangue, Maror e Matzá",
+      "visual": { "marker_type": "icon", "icon": "door", "asset": "assets/icons/door.svg", "caption": "O Korban Pessach", "importance": 5 }
     },
     {
       "id": "bo008",
@@ -228,7 +230,8 @@
       "sefaria_ref": "Exodus 12:37-38",
       "day_of_creation": null,
       "tags": ["êxodo", "600-mil", "sucot", "erev-rav", "ossos-de-yossef"],
-      "topic": "O Êxodo — 600 Mil Homens Partem"
+      "topic": "O Êxodo — 600 Mil Homens Partem",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "A saída do Egito", "importance": 5 }
     },
     {
       "id": "bo012",

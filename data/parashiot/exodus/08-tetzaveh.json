@@ -68,7 +68,8 @@
       "sefaria_ref": "Exodus 27:20-21",
       "day_of_creation": null,
       "tags": ["menorá", "azeite", "ner-tamid", "aharon", "luz-permanente"],
-      "topic": "O Azeite Puro — Luz Permanente da Menorá"
+      "topic": "O Azeite Puro — Luz Permanente da Menorá",
+      "visual": { "marker_type": "icon", "icon": "menorah", "asset": "assets/icons/menorah.svg", "caption": "Ner tamid", "importance": 4 }
     },
     {
       "id": "tz002",
@@ -100,7 +101,8 @@
       "sefaria_ref": "Exodus 28:15-30",
       "day_of_creation": null,
       "tags": ["choshen", "12-pedras", "urim-vetumim", "julgamento", "coração"],
-      "topic": "O Choshen — Peitoral com Urim e Tumim"
+      "topic": "O Choshen — Peitoral com Urim e Tumim",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "O Choshen do Cohen Gadol", "importance": 4 }
     },
     {
       "id": "tz004",
@@ -180,7 +182,8 @@
       "sefaria_ref": "Exodus 29:38-46",
       "day_of_creation": null,
       "tags": ["tamid", "oferta-diária", "dois-cordeiros", "presença", "habitação"],
-      "topic": "A Oferta Tamid — Dois Cordeiros Diários"
+      "topic": "A Oferta Tamid — Dois Cordeiros Diários",
+      "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "A oferta Tamid", "importance": 3 }
     },
     {
       "id": "tz009",

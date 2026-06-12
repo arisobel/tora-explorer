@@ -84,7 +84,8 @@
       "sefaria_ref": "Exodus 13:21-22",
       "day_of_creation": null,
       "tags": ["nuvem", "fogo", "guia", "providência", "presença-divina"],
-      "topic": "Coluna de Nuvem e de Fogo"
+      "topic": "Coluna de Nuvem e de Fogo",
+      "visual": { "marker_type": "icon", "icon": "cloud", "asset": "assets/icons/cloud.svg", "caption": "Coluna de nuvem e fogo", "importance": 4 }
     },
     {
       "id": "bs003",
@@ -132,7 +133,8 @@
       "sefaria_ref": "Exodus 14:21-22",
       "day_of_creation": null,
       "tags": ["divisão-do-mar", "vento", "paredes-de-água", "milagre", "terra-seca"],
-      "topic": "A Divisão do Mar dos Juncos"
+      "topic": "A Divisão do Mar dos Juncos",
+      "visual": { "marker_type": "icon", "icon": "sea", "asset": "assets/icons/sea.svg", "caption": "O mar se abre", "importance": 5 }
     },
     {
       "id": "bs006",
@@ -164,7 +166,8 @@
       "sefaria_ref": "Exodus 15:1-19",
       "day_of_creation": null,
       "tags": ["shirat-hayam", "cântico", "louvor", "fé", "az-yashir"],
-      "topic": "Shirat HaYam — O Cântico do Mar"
+      "topic": "Shirat HaYam — O Cântico do Mar",
+      "visual": { "marker_type": "icon", "icon": "harp", "asset": "assets/icons/harp.svg", "caption": "O Cântico do Mar", "importance": 4 }
     },
     {
       "id": "bs008",
@@ -212,7 +215,8 @@
       "sefaria_ref": "Exodus 16:4-5",
       "day_of_creation": null,
       "tags": ["maná", "pão-do-céu", "codornizes", "teste", "torá"],
-      "topic": "O Maná — Pão do Céu"
+      "topic": "O Maná — Pão do Céu",
+      "visual": { "marker_type": "icon", "icon": "wheat", "asset": "assets/icons/wheat.svg", "caption": "O maná", "importance": 4 }
     },
     {
       "id": "bs011",

@@ -84,7 +84,8 @@
       "sefaria_ref": "Exodus 25:8-9",
       "day_of_creation": null,
       "tags": ["mishkan", "presença-divina", "shechina", "habitação", "propósito"],
-      "topic": "'Farão para Mim um Santuário' — A Shechina entre Israel"
+      "topic": "'Farão para Mim um Santuário' — A Shechina entre Israel",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "A Shechiná entre Israel", "importance": 4 }
     },
     {
       "id": "tr003",
@@ -100,7 +101,8 @@
       "sefaria_ref": "Exodus 25:10-15",
       "day_of_creation": null,
       "tags": ["arca", "aron-habrit", "ouro", "acácia", "dimensões", "varas"],
-      "topic": "A Arca da Aliança — Aron HaBrit"
+      "topic": "A Arca da Aliança — Aron HaBrit",
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "O Aron HaBrit", "importance": 5 }
     },
     {
       "id": "tr004",
@@ -148,7 +150,8 @@
       "sefaria_ref": "Exodus 25:31-40",
       "day_of_creation": null,
       "tags": ["menorá", "sete-braços", "ouro", "flor-de-amêndoa", "luz"],
-      "topic": "A Menorá — Sete Braços de Ouro Puro"
+      "topic": "A Menorá — Sete Braços de Ouro Puro",
+      "visual": { "marker_type": "icon", "icon": "menorah", "asset": "assets/icons/menorah.svg", "caption": "A Menorá", "importance": 4 }
     },
     {
       "id": "tr007",
