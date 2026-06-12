@@ -4,6 +4,13 @@
   "range": { "ref_start": "Leviticus 25:1", "ref_end": "Leviticus 26:2", "sefaria_ref": "Leviticus 25:1-26:2", "chapters_covered": [25,26], "chapter_start": 25, "chapter_end": 26, "verse_start": 1, "verse_end": 2 },
   "timeline": { "period_name": "Shemitá, Yovel e liberdade econômica", "anno_mundi_start": 2449, "anno_mundi_end": 2450, "era": "saida-egito", "position_pct": 42, "description": "No Sinai, a Torá estabelece ciclos de descanso da terra, liberação, redenção patrimonial e cuidado econômico." },
   "summary": { "short": "Shemitá, Yovel, redenção da terra, apoio ao pobre e liberdade.", "medium": "Behar amplia a santidade para a economia e a terra. A terra descansa no sétimo ano, e no Yovel propriedades retornam e servidão é limitada.\n\nA parashá insiste que a terra pertence a Deus e que Israel vive nela como residente e guardião. Por isso, comércio, empréstimo e trabalho devem refletir liberdade e responsabilidade.", "characters_main": ["Moshe", "Bnei Israel"], "characters_secondary": ["Pobre", "Parente redentor", "Servo hebreu"], "themes": ["Shemitá", "Yovel", "Terra", "Liberdade", "Justiça econômica"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "shofar",
+    "asset": "assets/icons/shofar.svg",
+    "caption": "O Yovel"
+  },
+
   "facts": [
     { "id": "bh001", "order": 1, "text": "No Sinai, Deus ordena que a terra descanse no sétimo ano: é Shabat para a terra.", "text_he": null, "refs": ["Leviticus 25:1-7"], "ref_start": "Leviticus 25:1", "ref_end": "Leviticus 25:7", "chapter": 25, "verse_start": 1, "verse_end": 7, "sefaria_ref": "Leviticus 25:1-7", "day_of_creation": null, "tags": ["shemitá", "terra", "shabat"], "topic": "Shemitá — Descanso da terra" },
     { "id": "bh002", "order": 2, "text": "Após sete ciclos de sete anos, o Yovel é proclamado com shofar no Yom Kippur.", "text_he": null, "refs": ["Leviticus 25:8-10"], "ref_start": "Leviticus 25:8", "ref_end": "Leviticus 25:10", "chapter": 25, "verse_start": 8, "verse_end": 10, "sefaria_ref": "Leviticus 25:8-10", "day_of_creation": null, "tags": ["yovel", "shofar", "yom-kippur"], "topic": "Yovel — Liberdade proclamada" },

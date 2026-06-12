@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 33:1", "ref_end": "Deuteronomy 34:12", "sefaria_ref": "Deuteronomy 33:1-34:12", "chapters_covered": [33,34], "chapter_start": 33, "chapter_end": 34, "verse_start": 1, "verse_end_chapter": 34, "verse_end": 12 },
   "timeline": { "period_name": "Bênção final e morte de Moshe", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "Moshe abençoa as tribos, vê a terra de longe e morre; Yehoshua assume e a Torá se encerra." },
   "summary": { "short": "Moshe abençoa as tribos, vê a terra e morre; Yehoshua assume e a Torá conclui.", "medium": "Vezot Haberakhah fecha a Torá com bênção, visão e despedida. Moshe, homem de Deus, abençoa as tribos uma a uma, situando cada uma dentro do futuro coletivo de Israel.\n\nDepois, Moshe sobe ao Nebo, vê a terra prometida e morre ali. Yehoshua é cheio de espírito de sabedoria, mas a Torá conclui afirmando que nunca mais se levantou profeta como Moshe.", "characters_main": ["Moshe", "Yehoshua", "Bnei Israel", "Tribos"], "characters_secondary": ["Levi", "Yosef", "Gad", "Dan", "Naftali"], "themes": ["Bênção", "Tribos", "Morte de Moshe", "Yehoshua", "Conclusão da Torá"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "mountains",
+    "asset": "assets/icons/mountains.svg",
+    "caption": "Moshe no monte Nevo"
+  },
+
   "facts": [
     { "id": "vh001", "order": 1, "text": "Moshe é apresentado como homem de Deus antes de abençoar Israel.", "text_he": null, "refs": ["Deuteronomy 33:1-5"], "ref_start": "Deuteronomy 33:1", "ref_end": "Deuteronomy 33:5", "chapter": 33, "verse_start": 1, "verse_end": 5, "sefaria_ref": "Deuteronomy 33:1-5", "day_of_creation": null, "tags": ["moshe", "bênção", "sinai"], "topic": "Abertura da bênção" },
     { "id": "vh002", "order": 2, "text": "Reuven, Yehudah e Levi recebem bênçãos que tratam de vida, liderança e serviço sagrado.", "text_he": null, "refs": ["Deuteronomy 33:6-11"], "ref_start": "Deuteronomy 33:6", "ref_end": "Deuteronomy 33:11", "chapter": 33, "verse_start": 6, "verse_end": 11, "sefaria_ref": "Deuteronomy 33:6-11", "day_of_creation": null, "tags": ["reuven", "yehudah", "levi"], "topic": "Primeiras tribos" },

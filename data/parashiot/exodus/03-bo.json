@@ -46,6 +46,13 @@
     "themes": ["As pragas finais", "O Pessach — primeiro mandamento", "A morte dos primogênitos", "O Êxodo", "Memória e transmissão", "Tefilin"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "door",
+    "asset": "assets/icons/door.svg",
+    "caption": "Pessach — o sangue nos umbrais"
+  },
+
   "facts": [
     {
       "id": "bo001",

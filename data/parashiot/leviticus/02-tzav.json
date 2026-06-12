@@ -4,6 +4,13 @@
   "range": { "ref_start": "Leviticus 6:1", "ref_end": "Leviticus 8:36", "sefaria_ref": "Leviticus 6:1-8:36", "chapters_covered": [6,7,8], "chapter_start": 6, "chapter_end": 8, "verse_start": 1, "verse_end": 36 },
   "timeline": { "period_name": "Serviço sacerdotal e inauguração", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "A parashá ensina o lado sacerdotal dos korbanot e narra a consagração de Aharon e seus filhos durante sete dias." },
   "summary": { "short": "Instruções sacerdotais dos korbanot e os sete dias de inauguração dos cohanim.", "medium": "Tzav desloca o foco do ofertante para os cohanim. O fogo do altar deve permanecer aceso; os sacrifícios recebem regras precisas de consumo, queima e santidade.\n\nA segunda metade descreve a consagração de Aharon e seus filhos. Moshe veste, unge e purifica os cohanim, inaugurando uma liderança ritual que deve servir com disciplina e santidade.", "characters_main": ["Moshe", "Aharon", "Nadav", "Avihu", "Elazar", "Itamar"], "characters_secondary": ["Bnei Israel", "Cohanim"], "themes": ["Cohanim", "Korbanot", "Fogo contínuo", "Consagração", "Disciplina"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "fire",
+    "asset": "assets/icons/fire.svg",
+    "caption": "O fogo perpétuo"
+  },
+
   "facts": [
     { "id": "tzv001", "order": 1, "text": "A torat ha-olah determina que o fogo do altar permaneça aceso continuamente e que as cinzas sejam retiradas com vestes sacerdotais.", "text_he": null, "refs": ["Leviticus 6:1-6"], "ref_start": "Leviticus 6:1", "ref_end": "Leviticus 6:6", "chapter": 6, "verse_start": 1, "verse_end": 6, "sefaria_ref": "Leviticus 6:1-6", "day_of_creation": null, "tags": ["olah", "altar", "fogo-contínuo"], "topic": "Fogo contínuo do altar" },
     { "id": "tzv002", "order": 2, "text": "A minchah dos cohanim é comida em lugar santo, sem fermento, e tratada como santidade elevada.", "text_he": null, "refs": ["Leviticus 6:7-16"], "ref_start": "Leviticus 6:7", "ref_end": "Leviticus 6:16", "chapter": 6, "verse_start": 7, "verse_end": 16, "sefaria_ref": "Leviticus 6:7-16", "day_of_creation": null, "tags": ["minchah", "cohanim", "santidade"], "topic": "Minchah sacerdotal" },

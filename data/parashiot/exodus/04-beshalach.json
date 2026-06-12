@@ -46,6 +46,13 @@
     "themes": ["Fé no deserto", "A divisão do mar", "O louvor a Deus", "Alimento miraculoso", "O Shabat", "A primeira guerra"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "sea",
+    "asset": "assets/icons/sea.svg",
+    "caption": "O mar se abre"
+  },
+
   "facts": [
     {
       "id": "bs001",

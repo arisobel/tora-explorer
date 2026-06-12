@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 11:26", "ref_end": "Deuteronomy 16:17", "sefaria_ref": "Deuteronomy 11:26-16:17", "chapters_covered": [11,12,13,14,15,16], "chapter_start": 11, "chapter_end": 16, "verse_start": 26, "verse_end_chapter": 16, "verse_end": 17 },
   "timeline": { "period_name": "Escolha, centralização e vida sagrada", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "Moshe apresenta bênção e maldição e organiza uma vida nacional em torno do lugar escolhido, justiça social e festas." },
   "summary": { "short": "Bênção e maldição, lugar escolhido, kashrut, tsedakah, shemitah e festas de peregrinação.", "medium": "Re'eh abre com uma escolha colocada diante de Israel: bênção ou maldição. A vida na terra deve se ordenar ao redor do lugar que Deus escolher para fazer habitar Seu nome.\n\nA parashá trata da destruição da idolatria, regras de consumo de carne, falsos profetas, kashrut, dízimos, shemitah, cuidado com pobres e as três festas de peregrinação.", "characters_main": ["Moshe", "Bnei Israel", "Leviim", "Pobres"], "characters_secondary": ["Falso profeta", "Servo hebreu", "Primogênitos"], "themes": ["Bênção e maldição", "Lugar escolhido", "Kashrut", "Tsedakah", "Festas"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "mountains",
+    "asset": "assets/icons/mountains.svg",
+    "caption": "Bênção e maldição — Grizim e Eival"
+  },
+
   "facts": [
     { "id": "rh001", "order": 1, "text": "Moshe coloca diante de Israel bênção e maldição, associadas à escuta ou abandono dos mandamentos.", "text_he": null, "refs": ["Deuteronomy 11:26-32"], "ref_start": "Deuteronomy 11:26", "ref_end": "Deuteronomy 11:32", "chapter": 11, "verse_start": 26, "verse_end": 32, "sefaria_ref": "Deuteronomy 11:26-32", "day_of_creation": null, "tags": ["bênção", "maldição", "escolha"], "topic": "Escolha diante de Israel" },
     { "id": "rh002", "order": 2, "text": "Israel deve destruir lugares de idolatria e servir a Deus no lugar que Ele escolher.", "text_he": null, "refs": ["Deuteronomy 12:1-14"], "ref_start": "Deuteronomy 12:1", "ref_end": "Deuteronomy 12:14", "chapter": 12, "verse_start": 1, "verse_end": 14, "sefaria_ref": "Deuteronomy 12:1-14", "day_of_creation": null, "tags": ["idolatria", "templo", "lugar-escolhido"], "topic": "Lugar escolhido" },

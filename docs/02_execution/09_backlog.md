@@ -22,6 +22,7 @@
 
 ## Recently Completed
 
+- [x] **Chumash + Timeline visual layer** — 14 new SVGs (45 total); book + parasha icons for Exodus/Leviticus/Numbers/Deuteronomy (index.json + parasha files); `timeline_groups.json` carries `visual` on all 7 phases and 34/41 groups with emoji fallback; Timeline group cards and phase panels render SVG icons (2026-06-12)
 - [x] **Genesis visual layer complete** — 23 new semantic SVGs (31 total in `assets/icons/`); all 12 parashiot carry parasha-level + fact-level `visual` markers (67 blocks); `genesis/index.json` has book-level + per-parasha icons; drawer renders mini icons in the index list and the book icon in the ruler label (2026-06-12)
 - [x] **Visual-layer pilot (Noach)** — `visual` block documented in `data/SCHEMA.md` (parasha + fact levels), `assets/icons/` with 8 semantic SVGs (ark, flood, rainbow, olive-branch, altar, vine, tower, tzaddik), markers in `02-noach.json`, drawer renders theme-colored icon badges via CSS mask; `build-caprover.ps1` already packages `assets/` (2026-06-12)
 - [x] **Chumash milestone routing for all 5 books** — Vayikra, Bamidbar, and Devarim milestones now include `parasha_ids`, so Chumash and Atlas 2D drill paths can open the drawer beyond Genesis/Exodus (2026-06-08)

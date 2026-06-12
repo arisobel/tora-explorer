@@ -4,6 +4,7 @@
   "phases": [
     {
       "id": "early-world",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Criação até Noach" },
       "timeline_event_id": "creation",
       "label": "Criação até Noach",
       "am_start": 0,
@@ -12,6 +13,7 @@
       "groups": [
         {
           "id": "creation-order",
+          "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Ordem da criação" },
           "label": "Ordem da criação",
           "icon": "🌍",
           "summary": "Criação do céu, terra, luz, separações, vida e Shabat.",
@@ -24,6 +26,7 @@
         },
         {
           "id": "eden-fall",
+          "visual": { "marker_type": "icon", "icon": "tree", "asset": "assets/icons/tree.svg", "caption": "Gan Eden e queda" },
           "label": "Gan Eden e queda",
           "icon": "🌳",
           "summary": "Livre-arbítrio, transgressão e consequências humanas.",
@@ -36,6 +39,7 @@
         },
         {
           "id": "first-violence",
+          "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "Kayin e Hevel" },
           "label": "Primeira violência",
           "icon": "⚖️",
           "summary": "Kayin e Hevel introduzem responsabilidade moral e ruptura familiar.",
@@ -50,6 +54,7 @@
     },
     {
       "id": "flood-babel",
+      "visual": { "marker_type": "icon", "icon": "ark", "asset": "assets/icons/ark.svg", "caption": "Dilúvio e dispersão" },
       "timeline_event_id": "flood",
       "label": "Dilúvio e dispersão",
       "am_start": 1656,
@@ -58,6 +63,7 @@
       "groups": [
         {
           "id": "flood-covenant",
+          "visual": { "marker_type": "icon", "icon": "ark", "asset": "assets/icons/ark.svg", "caption": "Dilúvio e nova aliança" },
           "label": "Dilúvio e nova aliança",
           "icon": "🌊",
           "summary": "Noach, arca, destruição, salvação e pacto pós-Dilúvio.",
@@ -70,6 +76,7 @@
         },
         {
           "id": "babel-dispersion",
+          "visual": { "marker_type": "icon", "icon": "tower", "asset": "assets/icons/tower.svg", "caption": "Torre de Babel" },
           "label": "Torre de Babel",
           "icon": "🧱",
           "summary": "A humanidade concentrada é dispersa em línguas e povos.",
@@ -84,6 +91,7 @@
     },
     {
       "id": "patriarchs",
+      "visual": { "marker_type": "icon", "icon": "tent", "asset": "assets/icons/tent.svg", "caption": "Os Patriarcas" },
       "timeline_event_id": "avraham-lech-lecha",
       "label": "Patriarcas",
       "am_start": 1948,
@@ -92,6 +100,7 @@
       "groups": [
         {
           "id": "avraham-call",
+          "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Chamado de Avraham" },
           "label": "Chamado de Avraham",
           "icon": "⛺",
           "summary": "Missão, terra prometida e início da aliança.",
@@ -104,6 +113,7 @@
         },
         {
           "id": "covenant-akedah",
+          "visual": { "marker_type": "icon", "icon": "shofar", "asset": "assets/icons/shofar.svg", "caption": "Aliança e Akedah" },
           "label": "Aliança, Sedom e Akedah",
           "icon": "🔥",
           "summary": "Justiça, hospitalidade, teste e promessa.",
@@ -116,6 +126,7 @@
         },
         {
           "id": "birthright-blessings",
+          "visual": { "marker_type": "icon", "icon": "bowl", "asset": "assets/icons/bowl.svg", "caption": "Primogenitura e bênçãos" },
           "label": "Primogenitura e bênçãos",
           "icon": "12",
           "summary": "Rivka, Yaakov e Essav estruturam a continuidade patriarcal.",
@@ -128,6 +139,7 @@
         },
         {
           "id": "tribes-formation",
+          "visual": { "marker_type": "icon", "icon": "ladder", "asset": "assets/icons/ladder.svg", "caption": "Formação das tribos" },
           "label": "Formação das tribos",
           "icon": "👥",
           "summary": "Yaakov em exílio, casamento, filhos e retorno.",
@@ -140,6 +152,7 @@
         },
         {
           "id": "yosef-egypt",
+          "visual": { "marker_type": "icon", "icon": "wheat", "asset": "assets/icons/wheat.svg", "caption": "Yossef e providência" },
           "label": "Yossef e providência",
           "icon": "🌾",
           "summary": "Conflito familiar, sonhos, Egito e preparação para o exílio.",
@@ -154,6 +167,7 @@
     },
     {
       "id": "exodus-sinai",
+      "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "Saída do Egito e Sinai" },
       "timeline_event_id": "exodus-sinai",
       "label": "Saída, Terra e monarquia",
       "am_start": 2238,
@@ -162,6 +176,7 @@
       "groups": [
         {
           "id": "slavery-moshe",
+          "visual": { "marker_type": "icon", "icon": "basket", "asset": "assets/icons/basket.svg", "caption": "Escravidão e Moshe" },
           "label": "Escravidão e nascimento de Moshe",
           "icon": "🧺",
           "summary": "Opressão do povo e surgimento do libertador.",
@@ -174,6 +189,7 @@
         },
         {
           "id": "plagues-pesach",
+          "visual": { "marker_type": "icon", "icon": "door", "asset": "assets/icons/door.svg", "caption": "Pragas e Pessach" },
           "label": "Pragas, Pessach e saída",
           "icon": "🚪",
           "summary": "Juízo sobre o Egito, Pessach e saída nacional.",
@@ -186,6 +202,7 @@
         },
         {
           "id": "sea-manna-war",
+          "visual": { "marker_type": "icon", "icon": "sea", "asset": "assets/icons/sea.svg", "caption": "Mar e maná" },
           "label": "Mar, maná e primeiras provas",
           "icon": "🌊",
           "summary": "Abertura do mar, canto, sustento e aprendizado no deserto.",
@@ -198,6 +215,7 @@
         },
         {
           "id": "sinai-laws",
+          "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "Sinai e leis" },
           "label": "Sinai e leis da aliança",
           "icon": "📜",
           "summary": "Revelação dos mandamentos e estrutura jurídica da aliança.",
@@ -210,6 +228,7 @@
         },
         {
           "id": "mishkan-crisis",
+          "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "Mishkan e crise" },
           "label": "Mishkan, crise e reconciliação",
           "icon": "🏛️",
           "summary": "Projeto do Mishkan, Bezerro de Ouro e renovação das tábuas.",
@@ -222,6 +241,7 @@
         },
         {
           "id": "yehoshua-entry-land",
+          "visual": { "marker_type": "icon", "icon": "banner", "asset": "assets/icons/banner.svg", "caption": "Entrada na terra" },
           "label": "Yehoshua e entrada na terra",
           "icon": "🪨",
           "summary": "Liderança após Moshe, travessia do Jordão, conquista inicial, heranças e aliança em Shechem.",
@@ -234,6 +254,7 @@
         },
         {
           "id": "shoftim-cycle",
+          "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "Ciclos dos Shoftim" },
           "label": "Shoftim e ciclos de queda",
           "icon": "⚖️",
           "summary": "Conquista incompleta, esquecimento geracional, opressão, clamor e libertadores regionais.",
@@ -246,6 +267,7 @@
         },
         {
           "id": "shemuel-monarchy-transition",
+          "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Nascimento da monarquia" },
           "label": "Shemuel e nascimento da monarquia",
           "icon": "👑",
           "summary": "Renovação profética, pedido por rei, Shaul, David e consolidação de Yerushalayim.",
@@ -260,6 +282,7 @@
     },
     {
       "id": "first-temple-kings",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Monarquia e Primeiro Templo" },
       "timeline_event_id": "first-temple",
       "label": "Monarquia e Primeiro Templo",
       "am_start": 2924,
@@ -268,6 +291,7 @@
       "groups": [
         {
           "id": "solomon-temple",
+          "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "Shlomo e o Templo" },
           "label": "Shlomo e o Templo",
           "icon": "🏛️",
           "summary": "Sucessão davídica, sabedoria real, construção e dedicação do Beit HaMikdash.",
@@ -292,6 +316,7 @@
         },
         {
           "id": "elijah-elisha-prophetic-axis",
+          "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "Eliyahu e Elisha" },
           "label": "Eliyahu e Elisha",
           "icon": "🔥",
           "summary": "Profetas confrontam Baal, injustiça real, fome, guerra e crise espiritual.",
@@ -328,6 +353,7 @@
         },
         {
           "id": "yeshaya-comfort-restoration",
+          "visual": { "marker_type": "icon", "icon": "olive-branch", "asset": "assets/icons/olive-branch.svg", "caption": "Consolo de Tzion" },
           "label": "Yeshaya e consolo de Tzion",
           "icon": "🕊️",
           "summary": "Queda dos impérios, consolo do exílio, missão do servo e restauração final de Tzion.",
@@ -340,6 +366,7 @@
         },
         {
           "id": "yirmiyahu-final-warning",
+          "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Queda de Yehudá" },
           "label": "Yirmiyahu e a queda de Yehudá",
           "icon": "📜",
           "summary": "Chamado profético, sermão do Templo, jugo de Bavel, cerco final e queda de Yerushalayim.",
@@ -352,6 +379,7 @@
         },
         {
           "id": "trei-assar-justice-return",
+          "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "Justiça e retorno" },
           "label": "Trei Assar: justiça e retorno",
           "icon": "📣",
           "summary": "Vozes proféticas confrontam culto vazio, injustiça, impérios e infidelidade da aliança.",
@@ -364,6 +392,7 @@
         },
         {
           "id": "tehilim-prayer-kingship",
+          "visual": { "marker_type": "icon", "icon": "harp", "asset": "assets/icons/harp.svg", "caption": "Tehilim" },
           "label": "Tehilim: oração e realeza",
           "icon": "🎵",
           "summary": "Louvor, confiança, crise nacional e esperança davídica formam a linguagem de oração de Israel.",
@@ -376,6 +405,7 @@
         },
         {
           "id": "mishlei-solomonic-wisdom",
+          "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Sabedoria de Mishlei" },
           "label": "Mishlei: sabedoria de vida",
           "icon": "🪔",
           "summary": "Sabedoria, fala, caráter e justiça são ensinados como caminhos práticos diante de Deus.",
@@ -400,6 +430,7 @@
         },
         {
           "id": "megillot-land-monarchy-destruction",
+          "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Meguilot" },
           "label": "Meguilot: terra, amor e lamento",
           "icon": "📜",
           "summary": "Rut, Shir HaShirim, Kohelet e Eichah conectam vida humana, realeza e memória da destruição.",
@@ -412,6 +443,7 @@
         },
         {
           "id": "chronicles-david-temple-memory",
+          "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "David e o Templo" },
           "label": "Divrei Hayamim: David e Templo",
           "icon": "🏛️",
           "summary": "A história é recontada com foco em linhagem, David, serviço levítico e preparação do Templo.",
@@ -426,6 +458,7 @@
     },
     {
       "id": "babylon-exile-prophets",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Exílio da Babilônia" },
       "timeline_event_id": "babylon-exile",
       "label": "Exílio da Babilônia e profetas",
       "am_start": 3339,
@@ -434,6 +467,7 @@
       "groups": [
         {
           "id": "yirmiyahu-remnant-egypt",
+          "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Remanescente e Egito" },
           "label": "Remanescente, Egito e Baruch",
           "icon": "🧭",
           "summary": "Gedalyahu, fuga para o Egito, persistência da idolatria e palavra pessoal a Baruch.",
@@ -458,6 +492,7 @@
         },
         {
           "id": "yeshaya-exile-comfort",
+          "visual": { "marker_type": "icon", "icon": "olive-branch", "asset": "assets/icons/olive-branch.svg", "caption": "Consolo do exílio" },
           "label": "Yeshaya e consolo do exílio",
           "icon": "🕊️",
           "summary": "Consolo de Tzion, soberania sobre Bavel, Ciro e missão do servo.",
@@ -470,6 +505,7 @@
         },
         {
           "id": "yechezkel-glory-exile",
+          "visual": { "marker_type": "icon", "icon": "cloud", "asset": "assets/icons/cloud.svg", "caption": "A glória e o exílio" },
           "label": "Yechezkel, glória e exílio",
           "icon": "🛞",
           "summary": "Visão da carruagem, sinais do cerco, partida da glória e interpretação da queda entre os exilados.",
@@ -482,6 +518,7 @@
         },
         {
           "id": "yechezkel-restoration-temple",
+          "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "Restauração e Templo" },
           "label": "Yechezkel e restauração",
           "icon": "🌊",
           "summary": "Novo coração, ossos secos, reunificação, retorno da glória e rio de vida do Templo.",
@@ -506,6 +543,7 @@
         },
         {
           "id": "megillot-lament-purim",
+          "visual": { "marker_type": "icon", "icon": "goblet", "asset": "assets/icons/goblet.svg", "caption": "Eichah e Ester" },
           "label": "Meguilot: Eichah e Ester",
           "icon": "🎭",
           "summary": "Da memória da destruição ao livramento de Purim, os rolos dão linguagem ao exílio.",
@@ -532,6 +570,7 @@
     },
     {
       "id": "second-temple-restoration",
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "Retorno e Segundo Templo" },
       "timeline_event_id": "second-temple",
       "label": "Retorno e Segundo Templo",
       "am_start": 3408,
@@ -552,6 +591,7 @@
         },
         {
           "id": "trei-assar-second-temple",
+          "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Profetas do retorno" },
           "label": "Trei Assar: profetas do retorno",
           "icon": "📣",
           "summary": "Chagai, Zecharyah e Malachi orientam reconstrução, justiça, culto e fidelidade da aliança.",
@@ -564,6 +604,7 @@
         },
         {
           "id": "chronicles-retelling-return",
+          "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Memória para o retorno" },
           "label": "Divrei Hayamim: memória para o retorno",
           "icon": "📚",
           "summary": "Genealogias, Templo e decreto de Ciro conectam a comunidade retornada à história de Israel.",

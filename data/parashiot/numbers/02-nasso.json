@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 4:21", "ref_end": "Numbers 7:89", "sefaria_ref": "Numbers 4:21-7:89", "chapters_covered": [4,5,6,7], "chapter_start": 4, "chapter_end": 7, "verse_start": 21, "verse_end_chapter": 7, "verse_end": 89 },
   "timeline": { "period_name": "Pureza, bênção e inauguração", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "A organização do acampamento se aprofunda com serviço levítico, leis sociais e rituais, bênção sacerdotal e ofertas dos líderes." },
   "summary": { "short": "Serviço dos levitas, leis de pureza, sotah, nazir, bênção sacerdotal e ofertas dos líderes.", "medium": "Nasso amplia a estrutura do acampamento. As famílias levíticas recebem tarefas, a pureza do espaço comunitário é preservada e danos sociais exigem confissão e reparação.\n\nA parashá também traz a sotah, o nazir, a bênção sacerdotal e as ofertas dos líderes tribais. O acampamento aparece como espaço em que corpo, fala, voto, família, liderança e presença divina se conectam.", "characters_main": ["Moshe", "Aharon", "Leviim", "Nesiim"], "characters_secondary": ["Sotah", "Nazir", "Cohanim"], "themes": ["Pureza", "Reparação", "Nazir", "Bênção sacerdotal", "Inauguração"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "light",
+    "asset": "assets/icons/light.svg",
+    "caption": "A bênção dos cohanim"
+  },
+
   "facts": [
     { "id": "ns001", "order": 1, "text": "Gershon e Merari são contados e recebem suas tarefas no transporte das cortinas, estruturas e utensílios do Mishkan.", "text_he": null, "refs": ["Numbers 4:21-49"], "ref_start": "Numbers 4:21", "ref_end": "Numbers 4:49", "chapter": 4, "verse_start": 21, "verse_end": 49, "sefaria_ref": "Numbers 4:21-49", "day_of_creation": null, "tags": ["leviim", "gershon", "merari"], "topic": "Serviço levítico" },
     { "id": "ns002", "order": 2, "text": "Pessoas em estados de impureza são afastadas temporariamente do acampamento para preservar sua santidade.", "text_he": null, "refs": ["Numbers 5:1-4"], "ref_start": "Numbers 5:1", "ref_end": "Numbers 5:4", "chapter": 5, "verse_start": 1, "verse_end": 4, "sefaria_ref": "Numbers 5:1-4", "day_of_creation": null, "tags": ["pureza", "acampamento", "santidade"], "topic": "Pureza do acampamento" },

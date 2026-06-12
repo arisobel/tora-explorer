@@ -4,6 +4,13 @@
   "range": { "ref_start": "Leviticus 12:1", "ref_end": "Leviticus 13:59", "sefaria_ref": "Leviticus 12:1-13:59", "chapters_covered": [12,13], "chapter_start": 12, "chapter_end": 13, "verse_start": 1, "verse_end": 59 },
   "timeline": { "period_name": "Nascimento, brit milah e diagnóstico de tzaraat", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "A parashá conecta nascimento, retorno à pureza ritual e procedimentos cuidadosos para diagnosticar tzaraat no corpo, cabelo, pele e roupas." },
   "summary": { "short": "Pureza após o parto, brit milah e diagnóstico de tzaraat.", "medium": "Tazria começa com as leis da mulher que dá à luz e inclui a mitzvá da brit milah no oitavo dia. O nascimento é tratado dentro do sistema de pureza e retorno ao santuário.\n\nDepois, a parashá apresenta longos procedimentos de diagnóstico de tzaraat. O cohen não é apenas julgador; ele observa, espera, isola e distingue entre sintomas, cura e impureza.", "characters_main": ["Moshe", "Aharon", "Cohanim", "Bnei Israel"], "characters_secondary": ["Yoledet", "Metzora"], "themes": ["Nascimento", "Brit Milah", "Pureza", "Tzaraat", "Diagnóstico"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "drop",
+    "asset": "assets/icons/drop.svg",
+    "caption": "Pureza e impureza"
+  },
+
   "facts": [
     { "id": "tzr001", "order": 1, "text": "Após o nascimento de um menino ou menina, a mãe entra em um processo de pureza ritual com tempos diferentes até trazer seu korban.", "text_he": null, "refs": ["Leviticus 12:1-5"], "ref_start": "Leviticus 12:1", "ref_end": "Leviticus 12:5", "chapter": 12, "verse_start": 1, "verse_end": 5, "sefaria_ref": "Leviticus 12:1-5", "day_of_creation": null, "tags": ["parto", "pureza", "yoledet"], "topic": "Pureza após o nascimento" },
     { "id": "tzr002", "order": 2, "text": "A brit milah é ordenada para o oitavo dia de vida do menino.", "text_he": null, "refs": ["Leviticus 12:3"], "ref_start": "Leviticus 12:3", "ref_end": "Leviticus 12:3", "chapter": 12, "verse_start": 3, "verse_end": 3, "sefaria_ref": "Leviticus 12:3", "day_of_creation": null, "tags": ["brit-milah", "oitavo-dia", "aliança"], "topic": "Brit Milah no oitavo dia" },

@@ -4,6 +4,13 @@
   "range": { "ref_start": "Leviticus 16:1", "ref_end": "Leviticus 18:30", "sefaria_ref": "Leviticus 16:1-18:30", "chapters_covered": [16,17,18], "chapter_start": 16, "chapter_end": 18, "verse_start": 1, "verse_end": 30 },
   "timeline": { "period_name": "Yom Kippur e santidade de vida", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "Depois da morte de Nadav e Avihu, Deus regula a entrada no Santo dos Santos e define limites sobre sangue, sacrifícios e relações proibidas." },
   "summary": { "short": "O serviço de Yom Kippur, sangue, santidade sexual e separação do Egito/Canaã.", "medium": "Achrei Mot começa lembrando a morte dos filhos de Aharon e estabelece a ordem de entrada do Cohen Gadol no Santo dos Santos em Yom Kippur. O dia organiza expiação para sacerdote, santuário e povo.\n\nA parashá também proíbe sacrifícios fora do local autorizado, reforça a proibição de sangue e estabelece limites de santidade sexual, separando Israel das práticas do Egito e de Canaã.", "characters_main": ["Moshe", "Aharon", "Cohen Gadol", "Bnei Israel"], "characters_secondary": ["Nadav", "Avihu"], "themes": ["Yom Kippur", "Expiação", "Sangue", "Santidade sexual", "Separação"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scales",
+    "asset": "assets/icons/scales.svg",
+    "caption": "Yom Kipur — expiação"
+  },
+
   "facts": [
     { "id": "am001", "order": 1, "text": "Após a morte de Nadav e Avihu, Aharon é advertido a não entrar livremente no Santo dos Santos.", "text_he": null, "refs": ["Leviticus 16:1-2"], "ref_start": "Leviticus 16:1", "ref_end": "Leviticus 16:2", "chapter": 16, "verse_start": 1, "verse_end": 2, "sefaria_ref": "Leviticus 16:1-2", "day_of_creation": null, "tags": ["nadav-avihu", "santo-dos-santos", "limite"], "topic": "Limite de entrada no sagrado" },
     { "id": "am002", "order": 2, "text": "O Cohen Gadol entra com vestes especiais, imersão e korbanot próprios para iniciar o serviço de Yom Kippur.", "text_he": null, "refs": ["Leviticus 16:3-10"], "ref_start": "Leviticus 16:3", "ref_end": "Leviticus 16:10", "chapter": 16, "verse_start": 3, "verse_end": 10, "sefaria_ref": "Leviticus 16:3-10", "day_of_creation": null, "tags": ["cohen-gadol", "yom-kippur", "vestes"], "topic": "Preparação do Cohen Gadol" },

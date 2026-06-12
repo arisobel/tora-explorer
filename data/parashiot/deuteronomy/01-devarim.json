@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 1:1", "ref_end": "Deuteronomy 3:22", "sefaria_ref": "Deuteronomy 1:1-3:22", "chapters_covered": [1,2,3], "chapter_start": 1, "chapter_end": 3, "verse_start": 1, "verse_end_chapter": 3, "verse_end": 22 },
   "timeline": { "period_name": "Discursos finais nas planícies de Moav", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "Moshe começa sua revisão histórica antes da entrada na terra, reinterpretando a jornada como preparação moral e nacional." },
   "summary": { "short": "Moshe revisa a jornada, a nomeação de juízes, a crise dos espiões e as vitórias a leste do Jordão.", "medium": "Devarim abre o último livro da Torá como discurso de despedida de Moshe. A memória da jornada não é neutra: ela serve para corrigir, orientar e preparar a geração que entrará na terra.\n\nMoshe relembra a criação de uma estrutura judicial, a ruptura dos espiões, os anos de deserto e as vitórias sobre Sichon e Og. Yehoshua é fortalecido para continuar a missão.", "characters_main": ["Moshe", "Bnei Israel", "Yehoshua", "Calev"], "characters_secondary": ["Sichon", "Og", "Edom", "Moav", "Amon"], "themes": ["Memória", "Liderança", "Justiça", "Espiões", "Conquista"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scroll",
+    "asset": "assets/icons/scroll.svg",
+    "caption": "As palavras de Moshe"
+  },
+
   "facts": [
     { "id": "dv001", "order": 1, "text": "Moshe fala a Israel nas planícies de Moav, no quadragésimo ano, preparando seu discurso final.", "text_he": null, "refs": ["Deuteronomy 1:1-5"], "ref_start": "Deuteronomy 1:1", "ref_end": "Deuteronomy 1:5", "chapter": 1, "verse_start": 1, "verse_end": 5, "sefaria_ref": "Deuteronomy 1:1-5", "day_of_creation": null, "tags": ["moshe", "moav", "discurso"], "topic": "Abertura dos discursos" },
     { "id": "dv002", "order": 2, "text": "Moshe relembra a ordem de deixar o Chorev e avançar rumo à terra prometida aos patriarcas.", "text_he": null, "refs": ["Deuteronomy 1:6-8"], "ref_start": "Deuteronomy 1:6", "ref_end": "Deuteronomy 1:8", "chapter": 1, "verse_start": 6, "verse_end": 8, "sefaria_ref": "Deuteronomy 1:6-8", "day_of_creation": null, "tags": ["chorev", "terra", "patriarcas"], "topic": "Partida do Sinai" },

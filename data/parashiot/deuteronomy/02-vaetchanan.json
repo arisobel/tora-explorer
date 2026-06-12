@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 3:23", "ref_end": "Deuteronomy 7:11", "sefaria_ref": "Deuteronomy 3:23-7:11", "chapters_covered": [3,4,5,6,7], "chapter_start": 3, "chapter_end": 7, "verse_start": 23, "verse_end_chapter": 7, "verse_end": 11 },
   "timeline": { "period_name": "Sinai, unidade divina e fidelidade", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "Moshe suplica para entrar na terra, relembra a revelação e ensina os fundamentos da fé e da aliança." },
   "summary": { "short": "Moshe relembra Sinai, ensina o Shema e adverte contra idolatria e esquecimento.", "medium": "Vaetchanan combina desejo pessoal de Moshe, advertência nacional e formulações centrais da fé judaica. Moshe não atravessará o Jordão, mas prepara Israel para viver a Torá dentro da terra.\n\nA parashá reconta Sinai, os Dez Mandamentos e o Shema. O foco é preservar memória, evitar idolatria, ensinar os filhos e amar Deus com todo coração.", "characters_main": ["Moshe", "Bnei Israel", "Yehoshua"], "characters_secondary": ["Filhos", "Nações", "Testemunhas"], "themes": ["Shema", "Sinai", "Dez Mandamentos", "Amor a Deus", "Idolatria"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "tablets",
+    "asset": "assets/icons/tablets.svg",
+    "caption": "Shemá e os Dez Mandamentos"
+  },
+
   "facts": [
     { "id": "ve001", "order": 1, "text": "Moshe suplica para atravessar o Jordão, mas Deus o instrui a subir e ver a terra de longe.", "text_he": null, "refs": ["Deuteronomy 3:23-29"], "ref_start": "Deuteronomy 3:23", "ref_end": "Deuteronomy 3:29", "chapter": 3, "verse_start": 23, "verse_end": 29, "sefaria_ref": "Deuteronomy 3:23-29", "day_of_creation": null, "tags": ["moshe", "súplica", "terra"], "topic": "Súplica de Moshe" },
     { "id": "ve002", "order": 2, "text": "Moshe exorta Israel a guardar as leis sem acrescentar nem diminuir, pois nelas está sua sabedoria diante das nações.", "text_he": null, "refs": ["Deuteronomy 4:1-14"], "ref_start": "Deuteronomy 4:1", "ref_end": "Deuteronomy 4:14", "chapter": 4, "verse_start": 1, "verse_end": 14, "sefaria_ref": "Deuteronomy 4:1-14", "day_of_creation": null, "tags": ["mitzvot", "sabedoria", "nações"], "topic": "Guardar a Torá" },

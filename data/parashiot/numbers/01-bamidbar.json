@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 1:1", "ref_end": "Numbers 4:20", "sefaria_ref": "Numbers 1:1-4:20", "chapters_covered": [1,2,3,4], "chapter_start": 1, "chapter_end": 4, "verse_start": 1, "verse_end_chapter": 4, "verse_end": 20 },
   "timeline": { "period_name": "Organização do acampamento", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "No segundo ano após a saída do Egito, Israel é contado e organizado como acampamento em torno do Mishkan." },
   "summary": { "short": "Israel é contado, organizado por tribos e posicionado ao redor do Mishkan.", "medium": "Bamidbar transforma a multidão que saiu do Egito em um acampamento ordenado. Cada tribo é contada, cada líder é nomeado e o Mishkan passa a ocupar o centro físico e simbólico da vida nacional.\n\nOs levitas são separados para o serviço sagrado em lugar dos primogênitos. O livro começa, portanto, com uma arquitetura de povo: tribos, bandeiras, funções, limites e proximidade com o sagrado.", "characters_main": ["Moshe", "Aharon", "Bnei Israel", "Leviim"], "characters_secondary": ["Nesiim", "Gershon", "Kehat", "Merari"], "themes": ["Censo", "Acampamento", "Tribos", "Mishkan", "Leviim"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "banner",
+    "asset": "assets/icons/banner.svg",
+    "caption": "O censo e os estandartes"
+  },
+
   "facts": [
     { "id": "bm001", "order": 1, "text": "Deus ordena que Moshe e Aharon contem os homens de Israel por famílias e casas paternas.", "text_he": null, "refs": ["Numbers 1:1-19"], "ref_start": "Numbers 1:1", "ref_end": "Numbers 1:19", "chapter": 1, "verse_start": 1, "verse_end": 19, "sefaria_ref": "Numbers 1:1-19", "day_of_creation": null, "tags": ["censo", "tribos", "deserto"], "topic": "Censo nacional" },
     { "id": "bm002", "order": 2, "text": "Os resultados do censo são registrados por tribo, formando a contagem militar de Israel.", "text_he": null, "refs": ["Numbers 1:20-46"], "ref_start": "Numbers 1:20", "ref_end": "Numbers 1:46", "chapter": 1, "verse_start": 20, "verse_end": 46, "sefaria_ref": "Numbers 1:20-46", "day_of_creation": null, "tags": ["censo", "tribos", "exército"], "topic": "Tribos contadas" },

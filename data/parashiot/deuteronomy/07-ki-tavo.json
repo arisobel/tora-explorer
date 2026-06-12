@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 26:1", "ref_end": "Deuteronomy 29:8", "sefaria_ref": "Deuteronomy 26:1-29:8", "chapters_covered": [26,27,28,29], "chapter_start": 26, "chapter_end": 29, "verse_start": 1, "verse_end_chapter": 29, "verse_end": 8 },
   "timeline": { "period_name": "Entrada, gratidão e aliança", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "A entrada na terra deve começar com gratidão, declaração histórica e renovação pública da aliança." },
   "summary": { "short": "Bikkurim, dízimos, aliança em Eival e Gerizim, bênçãos e advertências da aliança.", "medium": "Ki Tavo liga posse da terra à memória da origem. Os primeiros frutos são trazidos com uma declaração que resume a história de Israel desde o patriarca errante até a terra boa.\n\nA parashá organiza uma cerimônia de aliança em Eival e Gerizim, seguida de bênçãos e severas advertências. A vida nacional é apresentada como resposta contínua à aliança.", "characters_main": ["Moshe", "Bnei Israel", "Leviim", "Cohanim"], "characters_secondary": ["Pobre", "Estrangeiro", "Órfão", "Viúva"], "themes": ["Bikkurim", "Dízimos", "Aliança", "Bênçãos", "Advertências"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "basket",
+    "asset": "assets/icons/basket.svg",
+    "caption": "Os bikurim"
+  },
+
   "facts": [
     { "id": "ktv001", "order": 1, "text": "Ao entrar na terra, Israel deve trazer os primeiros frutos ao lugar escolhido por Deus.", "text_he": null, "refs": ["Deuteronomy 26:1-4"], "ref_start": "Deuteronomy 26:1", "ref_end": "Deuteronomy 26:4", "chapter": 26, "verse_start": 1, "verse_end": 4, "sefaria_ref": "Deuteronomy 26:1-4", "day_of_creation": null, "tags": ["bikkurim", "terra", "templo"], "topic": "Primeiros frutos" },
     { "id": "ktv002", "order": 2, "text": "A declaração dos bikkurim narra descida ao Egito, opressão, redenção e chegada à terra.", "text_he": null, "refs": ["Deuteronomy 26:5-11"], "ref_start": "Deuteronomy 26:5", "ref_end": "Deuteronomy 26:11", "chapter": 26, "verse_start": 5, "verse_end": 11, "sefaria_ref": "Deuteronomy 26:5-11", "day_of_creation": null, "tags": ["memória", "êxodo", "gratidão"], "topic": "Declaração histórica" },

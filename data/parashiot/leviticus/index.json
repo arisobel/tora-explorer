@@ -4,6 +4,7 @@
   "book_pt": "Vayikrá · Levítico",
   "total_chapters": 27,
   "total_parashiot": 10,
+  "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "Vayikrá — o serviço sagrado" },
   "timeline": {
     "anno_mundi_start": 2449,
     "anno_mundi_end": 2450,
@@ -28,7 +29,8 @@
       "summary_short": "Os principais korbanot: olah, minchah, shelamim, chatat e asham.",
       "characters": ["Moshe", "Aharon", "Bnei Israel", "Cohanim"],
       "data_file": "data/parashiot/leviticus/01-vayikra.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "As ofertas" }
     },
     {
       "id": "tzav",
@@ -48,7 +50,8 @@
       "summary_short": "Instruções sacerdotais dos korbanot e os sete dias de inauguração dos cohanim.",
       "characters": ["Moshe", "Aharon", "Nadav", "Avihu", "Elazar", "Itamar"],
       "data_file": "data/parashiot/leviticus/02-tzav.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "O fogo perpétuo" }
     },
     {
       "id": "shemini",
@@ -68,7 +71,8 @@
       "summary_short": "A inauguração do Mishkan, a morte de Nadav e Avihu e as leis de kashrut.",
       "characters": ["Moshe", "Aharon", "Nadav", "Avihu", "Elazar", "Itamar"],
       "data_file": "data/parashiot/leviticus/03-shemini.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "O oitavo dia — a glória revelada" }
     },
     {
       "id": "tazria",
@@ -88,7 +92,8 @@
       "summary_short": "Pureza após o parto, brit milah e diagnóstico de tzaraat.",
       "characters": ["Moshe", "Aharon", "Cohanim", "Bnei Israel"],
       "data_file": "data/parashiot/leviticus/04-tazria.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "drop", "asset": "assets/icons/drop.svg", "caption": "Pureza e impureza" }
     },
     {
       "id": "metzora",
@@ -108,7 +113,8 @@
       "summary_short": "Purificação do metzora, tzaraat nas casas e impurezas corporais.",
       "characters": ["Moshe", "Aharon", "Cohanim", "Metzora"],
       "data_file": "data/parashiot/leviticus/05-metzora.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "olive-branch", "asset": "assets/icons/olive-branch.svg", "caption": "A purificação do metzorá" }
     },
     {
       "id": "achrei-mot",
@@ -128,7 +134,8 @@
       "summary_short": "O serviço de Yom Kippur, sangue, santidade sexual e separação do Egito/Canaã.",
       "characters": ["Moshe", "Aharon", "Cohanim", "Bnei Israel"],
       "data_file": "data/parashiot/leviticus/06-achrei-mot.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "Yom Kipur — expiação" }
     },
     {
       "id": "kedoshim",
@@ -148,7 +155,8 @@
       "summary_short": "Santidade social: respeito, justiça, amor ao próximo e separação moral.",
       "characters": ["Moshe", "Bnei Israel"],
       "data_file": "data/parashiot/leviticus/07-kedoshim.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "tzaddik", "asset": "assets/icons/tzaddik.svg", "caption": "Sede santos" }
     },
     {
       "id": "emor",
@@ -168,7 +176,8 @@
       "summary_short": "Santidade dos cohanim, festas do calendário, Menorá, lechem hapanim e blasfêmia.",
       "characters": ["Moshe", "Aharon", "Cohanim", "Bnei Israel"],
       "data_file": "data/parashiot/leviticus/08-emor.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "candles", "asset": "assets/icons/candles.svg", "caption": "As festas de Hashem" }
     },
     {
       "id": "behar",
@@ -188,7 +197,8 @@
       "summary_short": "Shemitá, Yovel, redenção da terra, apoio ao pobre e liberdade.",
       "characters": ["Moshe", "Bnei Israel"],
       "data_file": "data/parashiot/leviticus/09-behar.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "shofar", "asset": "assets/icons/shofar.svg", "caption": "O Yovel" }
     },
     {
       "id": "bechukotai",
@@ -208,7 +218,8 @@
       "summary_short": "Bênçãos, advertências da aliança, arrependimento e leis de votos/consagrações.",
       "characters": ["Moshe", "Bnei Israel"],
       "data_file": "data/parashiot/leviticus/10-bechukotai.json",
-      "facts_count": 8
+      "facts_count": 8,
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Bênçãos e admoestação" }
     }
   ]
 }

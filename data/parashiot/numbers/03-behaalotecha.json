@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 8:1", "ref_end": "Numbers 12:16", "sefaria_ref": "Numbers 8:1-12:16", "chapters_covered": [8,9,10,11,12], "chapter_start": 8, "chapter_end": 12, "verse_start": 1, "verse_end_chapter": 12, "verse_end": 16 },
   "timeline": { "period_name": "Da ordem do Mishkan à crise da marcha", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "A marcha pelo deserto começa com luz, consagração e nuvem, mas rapidamente revela tensões de liderança, desejo e fala." },
   "summary": { "short": "A menorah, os levitas, a marcha pelo deserto, queixas do povo e a fala de Miriam e Aharon contra Moshe.", "medium": "Behaalotecha começa com acendimento da menorah e purificação dos levitas. A presença divina guia o acampamento pela nuvem, e as trombetas organizam deslocamento, assembleia e guerra.\n\nQuando Israel parte, surgem queixas, desejo pela comida do Egito e sobrecarga de Moshe. A parashá termina com Miriam e Aharon falando contra Moshe, mostrando que a crise do deserto também atinge os níveis mais altos de liderança.", "characters_main": ["Moshe", "Aharon", "Miriam", "Bnei Israel"], "characters_secondary": ["Leviim", "Yitro/Hovav", "Setenta anciãos"], "themes": ["Luz", "Marcha", "Nuvem", "Queixa", "Liderança"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "menorah",
+    "asset": "assets/icons/menorah.svg",
+    "caption": "Ao acenderes as lâmpadas"
+  },
+
   "facts": [
     { "id": "bhlt001", "order": 1, "text": "Aharon acende a menorah, e suas lâmpadas iluminam diante dela conforme a ordem divina.", "text_he": null, "refs": ["Numbers 8:1-4"], "ref_start": "Numbers 8:1", "ref_end": "Numbers 8:4", "chapter": 8, "verse_start": 1, "verse_end": 4, "sefaria_ref": "Numbers 8:1-4", "day_of_creation": null, "tags": ["menorah", "aharon", "luz"], "topic": "Acendimento da menorah" },
     { "id": "bhlt002", "order": 2, "text": "Os levitas são purificados e consagrados para servir no lugar dos primogênitos de Israel.", "text_he": null, "refs": ["Numbers 8:5-26"], "ref_start": "Numbers 8:5", "ref_end": "Numbers 8:26", "chapter": 8, "verse_start": 5, "verse_end": 26, "sefaria_ref": "Numbers 8:5-26", "day_of_creation": null, "tags": ["leviim", "purificação", "serviço"], "topic": "Consagração dos levitas" },

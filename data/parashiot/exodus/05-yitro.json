@@ -46,6 +46,13 @@
     "themes": ["Administração e delegação", "Chegada ao Sinai", "A aliança coletiva", "Revelação divina", "Os Dez Mandamentos", "O medo sagrado"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "tablets",
+    "asset": "assets/icons/tablets.svg",
+    "caption": "As Tábuas da Lei"
+  },
+
   "facts": [
     {
       "id": "yt001",

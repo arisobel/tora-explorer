@@ -3430,9 +3430,12 @@ async function renderTimelineDrilldowns() {
           .map(t => `<span class="tl-group-theme">${t}</span>`)
           .join('');
         const range = _parashaRangeLabel(g.parasha_ids, g.book_key);
+        const gIcon = (g.visual && g.visual.asset)
+          ? `<span class="icon-mask mini" style="--icon:url('${g.visual.asset}')" title="${(g.visual.caption || '').replace(/"/g, '&quot;')}"></span>`
+          : (g.icon || '•');
         return `
           <div class="tl-group-card" data-group-id="${g.id}" onclick="toggleGroupFacts('${phase.id}','${g.id}', this, event)">
-            <div class="tl-group-head"><span class="tl-group-icon">${g.icon || '•'}</span>${g.label}</div>
+            <div class="tl-group-head"><span class="tl-group-icon">${gIcon}</span>${g.label}</div>
             <div class="tl-group-summary">${g.summary || ''}</div>
             ${range ? `<div class="tl-group-parasha-range">${range}</div>` : ''}
             ${themes ? `<div class="tl-group-themes">${themes}</div>` : ''}
@@ -3443,7 +3446,7 @@ async function renderTimelineDrilldowns() {
       content.insertAdjacentHTML('beforeend', `
         <div class="tl-drill-hint">＋ Eventos e agrupadores</div>
         <div class="tl-drill-panel">
-          <div class="tl-drill-summary">${phase.summary || ''}</div>
+          <div class="tl-drill-summary">${phase.visual && phase.visual.asset ? `<span class="icon-mask mini" style="--icon:url('${phase.visual.asset}')"></span>` : ''}${phase.summary || ''}</div>
           ${eventsHTML}
           <div class="tl-group-grid">${cards}</div>
         </div>

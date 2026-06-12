@@ -46,6 +46,13 @@
     "themes": ["Revelação do Nome Divino", "Coração endurecido", "As pragas como julgamento", "Fé versus incredulidade", "A distinção de Israel"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "staff",
+    "asset": "assets/icons/staff.svg",
+    "caption": "O cajado e as pragas"
+  },
+
   "facts": [
     {
       "id": "ve001",

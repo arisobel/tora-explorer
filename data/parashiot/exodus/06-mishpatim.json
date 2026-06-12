@@ -46,6 +46,13 @@
     "themes": ["Direito civil", "Proteção dos vulneráveis", "Integridade judicial", "Calendário sagrado", "Aliança de sangue", "A Lei Oral começa"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scales",
+    "asset": "assets/icons/scales.svg",
+    "caption": "As leis da aliança"
+  },
+
   "facts": [
     {
       "id": "mp001",

@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 13:1", "ref_end": "Numbers 15:41", "sefaria_ref": "Numbers 13:1-15:41", "chapters_covered": [13,14,15], "chapter_start": 13, "chapter_end": 15, "verse_start": 1, "verse_end_chapter": 15, "verse_end": 41 },
   "timeline": { "period_name": "Crise dos espiões", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "A missão dos espiões transforma a aproximação à terra em crise de confiança e determina o destino da geração do deserto." },
   "summary": { "short": "Os espiões exploram Canaã, o povo recua com medo e a geração do deserto recebe sua sentença.", "medium": "Shelach é o ponto de ruptura da primeira geração. Os representantes das tribos veem a terra, confirmam sua fertilidade, mas interpretam seus habitantes como ameaça impossível.\n\nCalev e Yehoshua tentam reorientar o povo para confiança, porém a comunidade chora, deseja voltar ao Egito e rejeita a entrada. A resposta divina transforma quarenta dias de exploração em quarenta anos de jornada.", "characters_main": ["Moshe", "Aharon", "Yehoshua", "Calev", "Meraglim"], "characters_secondary": ["Bnei Israel", "Canaanim"], "themes": ["Terra prometida", "Medo", "Confiança", "Calev", "Tzitzit"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "vine",
+    "asset": "assets/icons/vine.svg",
+    "caption": "O cacho dos espiões"
+  },
+
   "facts": [
     { "id": "sl001", "order": 1, "text": "Deus permite que Moshe envie líderes tribais para explorar a terra de Canaã.", "text_he": null, "refs": ["Numbers 13:1-16"], "ref_start": "Numbers 13:1", "ref_end": "Numbers 13:16", "chapter": 13, "verse_start": 1, "verse_end": 16, "sefaria_ref": "Numbers 13:1-16", "day_of_creation": null, "tags": ["espiões", "tribos", "canaã"], "topic": "Envio dos espiões" },
     { "id": "sl002", "order": 2, "text": "Moshe instrui os espiões a observar o povo, as cidades, a terra e seus frutos.", "text_he": null, "refs": ["Numbers 13:17-20"], "ref_start": "Numbers 13:17", "ref_end": "Numbers 13:20", "chapter": 13, "verse_start": 17, "verse_end": 20, "sefaria_ref": "Numbers 13:17-20", "day_of_creation": null, "tags": ["missão", "observação", "terra"], "topic": "Instruções da missão" },

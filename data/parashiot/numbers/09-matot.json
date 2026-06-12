@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 30:2", "ref_end": "Numbers 32:42", "sefaria_ref": "Numbers 30:2-32:42", "chapters_covered": [30,31,32], "chapter_start": 30, "chapter_end": 32, "verse_start": 2, "verse_end_chapter": 32, "verse_end": 42 },
   "timeline": { "period_name": "Votos, Midian e terras a leste", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "jornada-deserto", "position_pct": 43, "description": "Antes da entrada na terra, a Torá trata de palavra comprometida, acerto com Midian e responsabilidade das tribos que desejam permanecer a leste do Jordão." },
   "summary": { "short": "Leis de votos, guerra contra Midian e o pedido de Reuven, Gad e meia tribo de Menashe por terras a leste do Jordão.", "medium": "Matot começa com leis de votos, reforçando que a palavra cria obrigação. Em seguida, Israel executa guerra contra Midian como resposta à crise de Baal Peor.\n\nReuven e Gad pedem terras a leste do Jordão por causa de seus rebanhos. Moshe teme uma repetição da crise dos espiões, mas aceita o acordo quando as tribos se comprometem a lutar junto com Israel antes de voltar às suas terras.", "characters_main": ["Moshe", "Elazar", "Reuven", "Gad", "Midian"], "characters_secondary": ["Menashe", "Bilam", "Pinchas", "Chefes das tribos"], "themes": ["Votos", "Guerra", "Midian", "Responsabilidade", "Transjordânia"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scroll",
+    "asset": "assets/icons/scroll.svg",
+    "caption": "Os votos"
+  },
+
   "facts": [
     { "id": "mt001", "order": 1, "text": "Moshe ensina aos chefes das tribos que votos e juramentos obrigam a pessoa a cumprir sua palavra.", "text_he": null, "refs": ["Numbers 30:2-17"], "ref_start": "Numbers 30:2", "ref_end": "Numbers 30:17", "chapter": 30, "verse_start": 2, "verse_end": 17, "sefaria_ref": "Numbers 30:2-17", "day_of_creation": null, "tags": ["votos", "fala", "compromisso"], "topic": "Leis de votos" },
     { "id": "mt002", "order": 2, "text": "Deus ordena a Moshe que vingue Israel de Midian antes de sua morte.", "text_he": null, "refs": ["Numbers 31:1-6"], "ref_start": "Numbers 31:1", "ref_end": "Numbers 31:6", "chapter": 31, "verse_start": 1, "verse_end": 6, "sefaria_ref": "Numbers 31:1-6", "day_of_creation": null, "tags": ["midian", "guerra", "pinchas"], "topic": "Guerra contra Midian" },

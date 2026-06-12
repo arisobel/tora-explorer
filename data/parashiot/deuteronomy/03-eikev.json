@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 7:12", "ref_end": "Deuteronomy 11:25", "sefaria_ref": "Deuteronomy 7:12-11:25", "chapters_covered": [7,8,9,10,11], "chapter_start": 7, "chapter_end": 11, "verse_start": 12, "verse_end_chapter": 11, "verse_end": 25 },
   "timeline": { "period_name": "Humildade, memória e consequência", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "Moshe ensina que prosperidade na terra deve produzir gratidão, não arrogância; a memória do deserto protege a aliança." },
   "summary": { "short": "Moshe ensina que bênção, sustento e posse da terra dependem de fidelidade e humildade.", "medium": "Eikev insiste na ligação entre escuta, consequência e vida na terra. A terra é boa, mas a abundância pode gerar esquecimento; por isso Moshe relembra o maná, o deserto e as rebeliões.\n\nA posse da terra não é mérito automático. Israel deve circuncidar o coração, amar o estrangeiro, temer e amar Deus, e ensinar continuamente as palavras da aliança.", "characters_main": ["Moshe", "Bnei Israel", "Aharon", "Leviim"], "characters_secondary": ["Estrangeiro", "Geração do deserto"], "themes": ["Humildade", "Maná", "Bezerro de ouro", "Terra boa", "Segundo Shema"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "wheat",
+    "asset": "assets/icons/wheat.svg",
+    "caption": "A terra boa"
+  },
+
   "facts": [
     { "id": "ek001", "order": 1, "text": "A obediência à aliança traz amor, bênção, multiplicação e proteção na terra.", "text_he": null, "refs": ["Deuteronomy 7:12-26"], "ref_start": "Deuteronomy 7:12", "ref_end": "Deuteronomy 7:26", "chapter": 7, "verse_start": 12, "verse_end": 26, "sefaria_ref": "Deuteronomy 7:12-26", "day_of_creation": null, "tags": ["bênção", "aliança", "terra"], "topic": "Consequência da escuta" },
     { "id": "ek002", "order": 2, "text": "Moshe relembra o deserto e o maná para ensinar que a vida depende da palavra de Deus.", "text_he": null, "refs": ["Deuteronomy 8:1-10"], "ref_start": "Deuteronomy 8:1", "ref_end": "Deuteronomy 8:10", "chapter": 8, "verse_start": 1, "verse_end": 10, "sefaria_ref": "Deuteronomy 8:1-10", "day_of_creation": null, "tags": ["maná", "deserto", "sustento"], "topic": "Maná e dependência" },

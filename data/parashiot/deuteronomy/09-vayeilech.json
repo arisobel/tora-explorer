@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 31:1", "ref_end": "Deuteronomy 31:30", "sefaria_ref": "Deuteronomy 31:1-31:30", "chapters_covered": [31], "chapter_start": 31, "chapter_end": 31, "verse_start": 1, "verse_end": 30 },
   "timeline": { "period_name": "Transição de liderança e testemunho escrito", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "Moshe encerra sua liderança pública, fortalece Yehoshua, entrega a Torá e prepara o cântico como testemunho." },
   "summary": { "short": "Moshe passa liderança a Yehoshua, entrega a Torá e ordena Hakhel e o cântico-testemunha.", "medium": "Vayeilech é breve e concentrada. Moshe afirma que não atravessará o Jordão e transfere a liderança operacional a Yehoshua, repetindo a ordem de ser forte e corajoso.\n\nA Torá escrita é entregue aos levitas e anciãos, com a mitzvah de Hakhel a cada sete anos. Deus revela que Israel se desviará, e Moshe deve ensinar um cântico que servirá como testemunha.", "characters_main": ["Moshe", "Yehoshua", "Bnei Israel", "Leviim"], "characters_secondary": ["Anciãos", "Crianças", "Estrangeiros"], "themes": ["Sucessão", "Torá escrita", "Hakhel", "Cântico", "Testemunho"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scroll",
+    "asset": "assets/icons/scroll.svg",
+    "caption": "A Torá escrita e entregue"
+  },
+
   "facts": [
     { "id": "vl001", "order": 1, "text": "Moshe declara que tem 120 anos e não atravessará o Jordão.", "text_he": null, "refs": ["Deuteronomy 31:1-2"], "ref_start": "Deuteronomy 31:1", "ref_end": "Deuteronomy 31:2", "chapter": 31, "verse_start": 1, "verse_end": 2, "sefaria_ref": "Deuteronomy 31:1-2", "day_of_creation": null, "tags": ["moshe", "120", "jordão"], "topic": "Fim da liderança de Moshe" },
     { "id": "vl002", "order": 2, "text": "Moshe encoraja Israel a ser forte, pois Deus passará à frente deles.", "text_he": null, "refs": ["Deuteronomy 31:3-6"], "ref_start": "Deuteronomy 31:3", "ref_end": "Deuteronomy 31:6", "chapter": 31, "verse_start": 3, "verse_end": 6, "sefaria_ref": "Deuteronomy 31:3-6", "day_of_creation": null, "tags": ["força", "coragem", "entrada"], "topic": "Força para o povo" },

@@ -4,6 +4,13 @@
   "range": { "ref_start": "Leviticus 21:1", "ref_end": "Leviticus 24:23", "sefaria_ref": "Leviticus 21:1-24:23", "chapters_covered": [21,22,23,24], "chapter_start": 21, "chapter_end": 24, "verse_start": 1, "verse_end": 23 },
   "timeline": { "period_name": "Cohanim, festas e santidade pública", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "Emor organiza a santidade dos cohanim, a integridade dos korbanot, o calendário das festas e casos públicos de luz, pão e blasfêmia." },
   "summary": { "short": "Santidade dos cohanim, festas do calendário, Menorá, lechem hapanim e blasfêmia.", "medium": "Emor começa com a santidade especial dos cohanim e do Cohen Gadol, incluindo limites de impureza e casamento. Também regula quem pode comer das porções sagradas e que tipo de animal pode ser oferecido.\n\nO centro da parashá é o calendário: Shabat, Pessach, Omer, Shavuot, Rosh Hashaná, Yom Kippur e Sukkot. A santidade ganha ritmo no tempo.", "characters_main": ["Moshe", "Aharon", "Cohanim", "Bnei Israel"], "characters_secondary": ["Cohen Gadol", "Blasfemador"], "themes": ["Cohanim", "Moedim", "Tempo sagrado", "Korbanot", "Justiça"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "candles",
+    "asset": "assets/icons/candles.svg",
+    "caption": "As festas de Hashem"
+  },
+
   "facts": [
     { "id": "em001", "order": 1, "text": "Os cohanim recebem limites específicos de impureza por contato com mortos, preservando sua função no serviço.", "text_he": null, "refs": ["Leviticus 21:1-9"], "ref_start": "Leviticus 21:1", "ref_end": "Leviticus 21:9", "chapter": 21, "verse_start": 1, "verse_end": 9, "sefaria_ref": "Leviticus 21:1-9", "day_of_creation": null, "tags": ["cohanim", "impureza", "luto"], "topic": "Santidade dos cohanim" },
     { "id": "em002", "order": 2, "text": "O Cohen Gadol recebe exigências ainda mais elevadas, por carregar a unção e as vestes sagradas.", "text_he": null, "refs": ["Leviticus 21:10-15"], "ref_start": "Leviticus 21:10", "ref_end": "Leviticus 21:15", "chapter": 21, "verse_start": 10, "verse_end": 15, "sefaria_ref": "Leviticus 21:10-15", "day_of_creation": null, "tags": ["cohen-gadol", "unção", "santidade"], "topic": "Santidade do Cohen Gadol" },

@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 25:10", "ref_end": "Numbers 30:1", "sefaria_ref": "Numbers 25:10-30:1", "chapters_covered": [25,26,27,28,29,30], "chapter_start": 25, "chapter_end": 30, "verse_start": 10, "verse_end_chapter": 30, "verse_end": 1 },
   "timeline": { "period_name": "Nova geração e sucessão", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "jornada-deserto", "position_pct": 43, "description": "Após Baal Peor, a nova geração é contada, heranças são organizadas, Yehoshua é nomeado e o calendário sacrificial prepara a vida nacional." },
   "summary": { "short": "Pinchas recebe aliança de paz, Israel é recenseado, Yehoshua é nomeado e as ofertas festivas são organizadas.", "medium": "Pinchas recebe uma aliança de paz após deter a praga. Em seguida, Israel é contado novamente, agora como geração preparada para entrar na terra.\n\nAs filhas de Tzelofchad levantam uma questão de herança e recebem resposta afirmativa. Moshe vê a terra de longe, Yehoshua é nomeado diante do povo, e a parashá fecha com a ordem diária, semanal e festiva das ofertas públicas.", "characters_main": ["Pinchas", "Moshe", "Yehoshua", "Bnot Tzelofchad", "Bnei Israel"], "characters_secondary": ["Elazar", "Tzelofchad", "Zimri", "Cozbi"], "themes": ["Aliança", "Censo", "Herança", "Sucessão", "Festas"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "covenant",
+    "asset": "assets/icons/covenant.svg",
+    "caption": "A aliança de paz"
+  },
+
   "facts": [
     { "id": "pn001", "order": 1, "text": "Pinchas recebe aliança de paz e sacerdócio por ter interrompido a profanação em Baal Peor.", "text_he": null, "refs": ["Numbers 25:10-15"], "ref_start": "Numbers 25:10", "ref_end": "Numbers 25:15", "chapter": 25, "verse_start": 10, "verse_end": 15, "sefaria_ref": "Numbers 25:10-15", "day_of_creation": null, "tags": ["pinchas", "aliança", "paz"], "topic": "Aliança de Pinchas" },
     { "id": "pn002", "order": 2, "text": "Deus ordena hostilidade contra Midian por sua participação na sedução de Israel.", "text_he": null, "refs": ["Numbers 25:16-18"], "ref_start": "Numbers 25:16", "ref_end": "Numbers 25:18", "chapter": 25, "verse_start": 16, "verse_end": 18, "sefaria_ref": "Numbers 25:16-18", "day_of_creation": null, "tags": ["midian", "baal-peor", "conflito"], "topic": "Conflito com Midian" },

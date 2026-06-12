@@ -46,6 +46,13 @@
     "themes": ["Intercessão", "Idolatria", "Misericórdia divina", "Renovação da aliança", "Shabat", "Santidade do Mishkan"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "calf",
+    "asset": "assets/icons/calf.svg",
+    "caption": "O bezerro de ouro"
+  },
+
   "facts": [
     {
       "id": "kt001",

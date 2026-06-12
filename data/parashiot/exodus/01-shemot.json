@@ -46,6 +46,13 @@
     "themes": ["Opressão e resistência", "Providência divina", "O chamado profético", "Resistência ao poder", "A missão de Moshe", "O Nome Divino"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "basket",
+    "asset": "assets/icons/basket.svg",
+    "caption": "O cesto no Nilo"
+  },
+
   "facts": [
     {
       "id": "sm001",

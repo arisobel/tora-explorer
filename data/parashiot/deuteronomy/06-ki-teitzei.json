@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 21:10", "ref_end": "Deuteronomy 25:19", "sefaria_ref": "Deuteronomy 21:10-25:19", "chapters_covered": [21,22,23,24,25], "chapter_start": 21, "chapter_end": 25, "verse_start": 10, "verse_end_chapter": 25, "verse_end": 19 },
   "timeline": { "period_name": "Mitzvot de dignidade cotidiana", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "A Torá regula guerra, família, propriedade, trabalho, sexualidade, economia e memória histórica com foco em dignidade e responsabilidade." },
   "summary": { "short": "Diversas mitzvot regulam família, guerra, trabalho, dignidade, justiça econômica e memória de Amalek.", "medium": "Ki Teitzei reúne uma grande concentração de mitzvot práticas. A parashá mostra que a santidade da terra se manifesta em relações familiares, proteção do vulnerável, honestidade econômica e limites à violência.\n\nOs temas variam de guerra e casamento a restituição, pesos justos, proteção do trabalhador, levirato e memória de Amalek.", "characters_main": ["Moshe", "Bnei Israel", "Famílias", "Trabalhadores", "Amalek"], "characters_secondary": ["Viúva", "Órfão", "Estrangeiro", "Irmãos"], "themes": ["Família", "Dignidade", "Trabalho", "Justiça econômica", "Amalek"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "olive-branch",
+    "asset": "assets/icons/olive-branch.svg",
+    "caption": "O ninho de pássaros — mitzvot do caminho"
+  },
+
   "facts": [
     { "id": "ktz001", "order": 1, "text": "A lei da mulher capturada na guerra impõe limites ao poder do soldado e protege sua dignidade.", "text_he": null, "refs": ["Deuteronomy 21:10-14"], "ref_start": "Deuteronomy 21:10", "ref_end": "Deuteronomy 21:14", "chapter": 21, "verse_start": 10, "verse_end": 14, "sefaria_ref": "Deuteronomy 21:10-14", "day_of_creation": null, "tags": ["guerra", "dignidade", "família"], "topic": "Mulher cativa" },
     { "id": "ktz002", "order": 2, "text": "Leis de primogenitura e filho rebelde tratam de ordem familiar, herança e responsabilidade comunitária.", "text_he": null, "refs": ["Deuteronomy 21:15-23"], "ref_start": "Deuteronomy 21:15", "ref_end": "Deuteronomy 21:23", "chapter": 21, "verse_start": 15, "verse_end": 23, "sefaria_ref": "Deuteronomy 21:15-23", "day_of_creation": null, "tags": ["primogênito", "filho-rebelde", "família"], "topic": "Família e herança" },

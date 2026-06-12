@@ -46,6 +46,13 @@
     "themes": ["A presença divina entre Israel", "Voluntariedade e generosidade", "Arte e arquitetura sagrada", "Simbolismo do Mishkan", "O Santo dos Santos"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "mishkan",
+    "asset": "assets/icons/mishkan.svg",
+    "caption": "O Mishkan"
+  },
+
   "facts": [
     {
       "id": "tr001",

@@ -4,6 +4,13 @@
   "range": { "ref_start": "Leviticus 26:3", "ref_end": "Leviticus 27:34", "sefaria_ref": "Leviticus 26:3-27:34", "chapters_covered": [26,27], "chapter_start": 26, "chapter_end": 27, "verse_start": 3, "verse_end": 34 },
   "timeline": { "period_name": "Bênçãos, advertências e votos", "anno_mundi_start": 2450, "anno_mundi_end": 2450, "era": "saida-egito", "position_pct": 42, "description": "O livro de Vayikrá se encerra com bênçãos por fidelidade, advertências por abandono da aliança, lembrança dos patriarcas e leis de consagrações." },
   "summary": { "short": "Bênçãos, advertências da aliança, arrependimento e leis de votos/consagrações.", "medium": "Bechukotai apresenta o horizonte da aliança: se Israel anda nos estatutos de Deus, a terra dá fruto, há paz e a Presença divina habita no meio do povo.\n\nA parashá também descreve consequências crescentes de abandono, exílio e desolação da terra. Mesmo assim, termina com memória da aliança e leis de votos, mostrando que retorno e consagração continuam possíveis.", "characters_main": ["Moshe", "Bnei Israel"], "characters_secondary": ["Avot"], "themes": ["Aliança", "Bênção", "Advertência", "Teshuvá", "Votos"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scroll",
+    "asset": "assets/icons/scroll.svg",
+    "caption": "Bênçãos e admoestação"
+  },
+
   "facts": [
     { "id": "bc001", "order": 1, "text": "Se Israel andar nos estatutos de Deus, a chuva virá no tempo certo e a terra dará sua produção.", "text_he": null, "refs": ["Leviticus 26:3-5"], "ref_start": "Leviticus 26:3", "ref_end": "Leviticus 26:5", "chapter": 26, "verse_start": 3, "verse_end": 5, "sefaria_ref": "Leviticus 26:3-5", "day_of_creation": null, "tags": ["bênção", "chuva", "terra"], "topic": "Chuva e abundância" },
     { "id": "bc002", "order": 2, "text": "A bênção inclui paz na terra, segurança, vitória sobre inimigos e ausência de medo.", "text_he": null, "refs": ["Leviticus 26:6-8"], "ref_start": "Leviticus 26:6", "ref_end": "Leviticus 26:8", "chapter": 26, "verse_start": 6, "verse_end": 8, "sefaria_ref": "Leviticus 26:6-8", "day_of_creation": null, "tags": ["paz", "segurança", "vitória"], "topic": "Paz e proteção" },

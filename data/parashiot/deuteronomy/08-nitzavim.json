@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 29:9", "ref_end": "Deuteronomy 30:20", "sefaria_ref": "Deuteronomy 29:9-30:20", "chapters_covered": [29,30], "chapter_start": 29, "chapter_end": 30, "verse_start": 9, "verse_end": 20 },
   "timeline": { "period_name": "Aliança, retorno e escolha da vida", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "Toda Israel, incluindo gerações futuras, fica de pé diante da aliança e recebe a possibilidade de retorno." },
   "summary": { "short": "Toda a comunidade entra na aliança; teshuvah, escolha e vida são colocadas diante de Israel.", "medium": "Nitzavim reúne todos os níveis da comunidade diante de Deus: líderes, crianças, mulheres, estrangeiros e trabalhadores. A aliança inclui também quem não está fisicamente presente.\n\nMoshe descreve queda, exílio e retorno, afirmando que a Torá não está distante. A escolha entre vida e morte é apresentada como decisão concreta de amar Deus e seguir Seus caminhos.", "characters_main": ["Moshe", "Bnei Israel", "Gerações futuras"], "characters_secondary": ["Líderes", "Crianças", "Estrangeiros"], "themes": ["Aliança", "Teshuvah", "Escolha", "Vida", "Responsabilidade"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "covenant",
+    "asset": "assets/icons/covenant.svg",
+    "caption": "Estais todos diante de Hashem"
+  },
+
   "facts": [
     { "id": "nz001", "order": 1, "text": "Toda a comunidade fica de pé diante de Deus para entrar na aliança.", "text_he": null, "refs": ["Deuteronomy 29:9-14"], "ref_start": "Deuteronomy 29:9", "ref_end": "Deuteronomy 29:14", "chapter": 29, "verse_start": 9, "verse_end": 14, "sefaria_ref": "Deuteronomy 29:9-14", "day_of_creation": null, "tags": ["aliança", "comunidade", "todos"], "topic": "Todos de pé" },
     { "id": "nz002", "order": 2, "text": "A aliança inclui também quem não está presente, projetando responsabilidade para gerações futuras.", "text_he": null, "refs": ["Deuteronomy 29:15-20"], "ref_start": "Deuteronomy 29:15", "ref_end": "Deuteronomy 29:20", "chapter": 29, "verse_start": 15, "verse_end": 20, "sefaria_ref": "Deuteronomy 29:15-20", "day_of_creation": null, "tags": ["gerações", "futuro", "responsabilidade"], "topic": "Gerações futuras" },

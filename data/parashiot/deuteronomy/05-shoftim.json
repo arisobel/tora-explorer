@@ -4,6 +4,13 @@
   "range": { "ref_start": "Deuteronomy 16:18", "ref_end": "Deuteronomy 21:9", "sefaria_ref": "Deuteronomy 16:18-21:9", "chapters_covered": [16,17,18,19,20,21], "chapter_start": 16, "chapter_end": 21, "verse_start": 18, "verse_end_chapter": 21, "verse_end": 9 },
   "timeline": { "period_name": "Instituições de justiça e liderança", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "entrada-terra", "position_pct": 43, "description": "A vida na terra exige juízes, limites ao poder, profecia verdadeira, justiça criminal e ética de guerra." },
   "summary": { "short": "Estruturas de justiça, liderança, profecia, cidades de refúgio, guerra e responsabilidade coletiva.", "medium": "Shoftim organiza as instituições públicas de Israel. Justiça local, tribunal central, rei, cohanim e profetas são apresentados com limites e responsabilidades.\n\nA parashá também trata de cidades de refúgio, testemunhas, guerra e o ritual da eglah arufah, mostrando que a terra não pode tolerar sangue inocente nem corrupção da justiça.", "characters_main": ["Moshe", "Juízes", "Cohanim", "Rei", "Profeta"], "characters_secondary": ["Testemunhas", "Anciãos", "Soldados"], "themes": ["Justiça", "Rei", "Profecia", "Cidades de refúgio", "Guerra"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scales",
+    "asset": "assets/icons/scales.svg",
+    "caption": "Justiça, justiça perseguirás"
+  },
+
   "facts": [
     { "id": "sf001", "order": 1, "text": "Juízes e oficiais devem ser colocados em todas as cidades para julgar com justiça, sem suborno.", "text_he": null, "refs": ["Deuteronomy 16:18-20"], "ref_start": "Deuteronomy 16:18", "ref_end": "Deuteronomy 16:20", "chapter": 16, "verse_start": 18, "verse_end": 20, "sefaria_ref": "Deuteronomy 16:18-20", "day_of_creation": null, "tags": ["juízes", "justiça", "suborno"], "topic": "Justiça local" },
     { "id": "sf002", "order": 2, "text": "Idolatria é rejeitada, e casos difíceis sobem ao lugar escolhido para decisão dos cohanim e juízes.", "text_he": null, "refs": ["Deuteronomy 16:21-17:13"], "ref_start": "Deuteronomy 16:21", "ref_end": "Deuteronomy 17:13", "chapter": 16, "verse_start": 21, "verse_end_chapter": 17, "verse_end": 13, "sefaria_ref": "Deuteronomy 16:21-17:13", "day_of_creation": null, "tags": ["tribunal", "cohanim", "idolatria"], "topic": "Tribunal central" },

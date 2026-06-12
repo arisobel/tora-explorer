@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 33:1", "ref_end": "Numbers 36:13", "sefaria_ref": "Numbers 33:1-36:13", "chapters_covered": [33,34,35,36], "chapter_start": 33, "chapter_end": 36, "verse_start": 1, "verse_end_chapter": 36, "verse_end": 13 },
   "timeline": { "period_name": "Mapa de chegada e preparação territorial", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "jornada-deserto", "position_pct": 43, "description": "O livro encerra registrando as jornadas e preparando a ocupação da terra com fronteiras, cidades levíticas, refúgio e regras de herança." },
   "summary": { "short": "As jornadas do deserto são listadas e a entrada na terra é preparada com fronteiras, levitas, cidades de refúgio e herança.", "medium": "Masei recapitula as etapas desde a saída do Egito até as planícies de Moav. A lista de jornadas transforma o deserto em memória ordenada e prepara o povo para cruzar o Jordão.\n\nA parashá define fronteiras da terra, líderes responsáveis pela distribuição, cidades levíticas, cidades de refúgio e limites jurídicos para homicídio. O caso das filhas de Tzelofchad retorna para equilibrar herança familiar e tribal.", "characters_main": ["Moshe", "Aharon", "Elazar", "Yehoshua", "Bnei Israel"], "characters_secondary": ["Leviim", "Goel hadam", "Bnot Tzelofchad", "Chefes das tribos"], "themes": ["Jornadas", "Fronteiras", "Cidades de refúgio", "Herança", "Terra prometida"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "journey",
+    "asset": "assets/icons/journey.svg",
+    "caption": "As jornadas no deserto"
+  },
+
   "facts": [
     { "id": "ms001", "order": 1, "text": "Moshe registra as jornadas de Israel desde a saída do Egito, etapa por etapa, conforme a ordem divina.", "text_he": null, "refs": ["Numbers 33:1-2"], "ref_start": "Numbers 33:1", "ref_end": "Numbers 33:2", "chapter": 33, "verse_start": 1, "verse_end": 2, "sefaria_ref": "Numbers 33:1-2", "day_of_creation": null, "tags": ["jornadas", "memória", "moshe"], "topic": "Registro das jornadas" },
     { "id": "ms002", "order": 2, "text": "A lista percorre desde Ramsés e a saída do Egito até as etapas finais nas planícies de Moav.", "text_he": null, "refs": ["Numbers 33:3-49"], "ref_start": "Numbers 33:3", "ref_end": "Numbers 33:49", "chapter": 33, "verse_start": 3, "verse_end": 49, "sefaria_ref": "Numbers 33:3-49", "day_of_creation": null, "tags": ["ramsés", "moav", "deserto"], "topic": "Mapa do deserto" },

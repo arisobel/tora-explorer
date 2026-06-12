@@ -4,6 +4,13 @@
   "range": { "ref_start": "Numbers 22:2", "ref_end": "Numbers 25:9", "sefaria_ref": "Numbers 22:2-25:9", "chapters_covered": [22,23,24,25], "chapter_start": 22, "chapter_end": 25, "verse_start": 2, "verse_end_chapter": 25, "verse_end": 9 },
   "timeline": { "period_name": "Bênção no limiar de Moav", "anno_mundi_start": 2488, "anno_mundi_end": 2488, "era": "jornada-deserto", "position_pct": 43, "description": "Moav tenta combater Israel por meio de maldição profética, mas Deus transforma a ameaça em bênção." },
   "summary": { "short": "Balak contrata Bilam para amaldiçoar Israel, mas as maldições se tornam bênçãos.", "medium": "Balak, rei de Moav, teme Israel e convoca Bilam para amaldiçoar o povo. Bilam é advertido por Deus, confrontado por sua jumenta e obrigado a falar apenas o que Deus colocar em sua boca.\n\nEm três ciclos, o plano de maldição se converte em bênçãos sobre Israel. A parashá termina com uma queda moral em Shitim, quando idolatria e imoralidade provocam uma praga.", "characters_main": ["Balak", "Bilam", "Bnei Israel", "Moav"], "characters_secondary": ["Anjo", "Jumenta", "Pinchas", "Zimri", "Cozbi"], "themes": ["Maldição", "Bênção", "Profecia", "Moav", "Praga"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "star",
+    "asset": "assets/icons/star.svg",
+    "caption": "A estrela de Yaakov"
+  },
+
   "facts": [
     { "id": "blk001", "order": 1, "text": "Balak teme Israel após suas vitórias e envia mensageiros para contratar Bilam.", "text_he": null, "refs": ["Numbers 22:2-7"], "ref_start": "Numbers 22:2", "ref_end": "Numbers 22:7", "chapter": 22, "verse_start": 2, "verse_end": 7, "sefaria_ref": "Numbers 22:2-7", "day_of_creation": null, "tags": ["balak", "moav", "medo"], "topic": "Medo de Moav" },
     { "id": "blk002", "order": 2, "text": "Deus proíbe Bilam de amaldiçoar Israel, pois o povo é abençoado.", "text_he": null, "refs": ["Numbers 22:8-14"], "ref_start": "Numbers 22:8", "ref_end": "Numbers 22:14", "chapter": 22, "verse_start": 8, "verse_end": 14, "sefaria_ref": "Numbers 22:8-14", "day_of_creation": null, "tags": ["bilam", "bênção", "proibição"], "topic": "Israel abençoado" },

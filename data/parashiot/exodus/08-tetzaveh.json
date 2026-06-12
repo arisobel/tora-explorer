@@ -46,6 +46,13 @@
     "themes": ["Sacerdócio", "Vestes sagradas", "Kedushah visível", "Urim e Tumim", "Inauguração", "O Altar do Incenso"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "menorah",
+    "asset": "assets/icons/menorah.svg",
+    "caption": "A Menorá e as vestes"
+  },
+
   "facts": [
     {
       "id": "tz001",

@@ -4,6 +4,7 @@
   "book_pt": "Shemot · Êxodo",
   "total_chapters": 40,
   "total_parashiot": 11,
+  "visual": { "marker_type": "icon", "icon": "sea", "asset": "assets/icons/sea.svg", "caption": "Shemot — da escravidão à liberdade" },
   "timeline": {
     "anno_mundi_start": 2238,
     "anno_mundi_end": 2450,
@@ -28,7 +29,8 @@
       "summary_short": "Israel escravizado, o nascimento de Moshe, a sarça ardente e o início da missão redentora.",
       "characters": ["Moshe", "Aharon", "Faraó", "Shifra", "Puah", "Yocheved", "Miriam", "Tziporah"],
       "data_file": "data/parashiot/exodus/01-shemot.json",
-      "facts_count": 13
+      "facts_count": 13,
+      "visual": { "marker_type": "icon", "icon": "basket", "asset": "assets/icons/basket.svg", "caption": "O cesto no Nilo" }
     },
     {
       "id": "vaera",
@@ -48,7 +50,8 @@
       "summary_short": "Deus revela o nome יהוה e envia as primeiras sete pragas sobre o Egito.",
       "characters": ["Moshe", "Aharon", "Faraó", "os magos egípcios"],
       "data_file": "data/parashiot/exodus/02-vaera.json",
-      "facts_count": 11
+      "facts_count": 11,
+      "visual": { "marker_type": "icon", "icon": "staff", "asset": "assets/icons/staff.svg", "caption": "O cajado e as pragas" }
     },
     {
       "id": "bo",
@@ -68,7 +71,8 @@
       "summary_short": "As últimas três pragas, o Pessach, a morte dos primogênitos e a saída do Egito.",
       "characters": ["Moshe", "Aharon", "Faraó", "Bnei Israel"],
       "data_file": "data/parashiot/exodus/03-bo.json",
-      "facts_count": 13
+      "facts_count": 13,
+      "visual": { "marker_type": "icon", "icon": "door", "asset": "assets/icons/door.svg", "caption": "Pessach — o sangue nos umbrais" }
     },
     {
       "id": "beshalach",
@@ -88,7 +92,8 @@
       "summary_short": "A divisão do mar, o Cântico do Mar, o maná, a água da rocha e a batalha contra Amalek.",
       "characters": ["Moshe", "Miriam", "Faraó", "Amalek", "Yehoshua"],
       "data_file": "data/parashiot/exodus/04-beshalach.json",
-      "facts_count": 14
+      "facts_count": 14,
+      "visual": { "marker_type": "icon", "icon": "sea", "asset": "assets/icons/sea.svg", "caption": "O mar se abre" }
     },
     {
       "id": "yitro",
@@ -108,7 +113,8 @@
       "summary_short": "Yitro visita Moshe, a delegação do julgamento e os Dez Mandamentos no Sinai.",
       "characters": ["Moshe", "Yitro", "Tziporah", "Aharon", "Bnei Israel"],
       "data_file": "data/parashiot/exodus/05-yitro.json",
-      "facts_count": 11
+      "facts_count": 11,
+      "visual": { "marker_type": "icon", "icon": "tablets", "asset": "assets/icons/tablets.svg", "caption": "As Tábuas da Lei" }
     },
     {
       "id": "mishpatim",
@@ -128,7 +134,8 @@
       "summary_short": "O código civil e ético de Israel: leis de escravidão, danos, propriedade, as três festas e a ratificação da aliança.",
       "characters": ["Moshe", "Aharon", "Nadav", "Avihu", "os 70 anciãos"],
       "data_file": "data/parashiot/exodus/06-mishpatim.json",
-      "facts_count": 12
+      "facts_count": 12,
+      "visual": { "marker_type": "icon", "icon": "scales", "asset": "assets/icons/scales.svg", "caption": "As leis da aliança" }
     },
     {
       "id": "terumah",
@@ -148,7 +155,8 @@
       "summary_short": "O projeto divino do Mishkan: a Arca, o Kapporet, a Menorá, a Mesa e o Altar — para que Deus habite entre Israel.",
       "characters": ["Moshe", "Betzalel"],
       "data_file": "data/parashiot/exodus/07-terumah.json",
-      "facts_count": 11
+      "facts_count": 11,
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "O Mishkan" }
     },
     {
       "id": "tetzaveh",
@@ -168,7 +176,8 @@
       "summary_short": "O azeite da Menorá, as vestes sacerdotais e o ritual de sete dias de inauguração do sacerdócio.",
       "characters": ["Moshe", "Aharon", "Nadav", "Avihu", "Elazar", "Itamar"],
       "data_file": "data/parashiot/exodus/08-tetzaveh.json",
-      "facts_count": 10
+      "facts_count": 10,
+      "visual": { "marker_type": "icon", "icon": "menorah", "asset": "assets/icons/menorah.svg", "caption": "A Menorá e as vestes" }
     },
     {
       "id": "ki-tisa",
@@ -188,7 +197,8 @@
       "summary_short": "O meio-shekel, o Bezerro de Ouro, as Tábuas quebradas, os 13 Atributos de Misericórdia e as segundas Tábuas.",
       "characters": ["Moshe", "Aharon", "Betzalel", "Oholiav", "Bnei Israel"],
       "data_file": "data/parashiot/exodus/09-ki-tisa.json",
-      "facts_count": 15
+      "facts_count": 15,
+      "visual": { "marker_type": "icon", "icon": "calf", "asset": "assets/icons/calf.svg", "caption": "O bezerro de ouro" }
     },
     {
       "id": "vayakhel",
@@ -208,7 +218,8 @@
       "summary_short": "Moshe convoca Israel, relembra o Shabat e o povo traz ofertas generosas para a construção do Mishkan.",
       "characters": ["Moshe", "Betzalel", "Oholiav", "as mulheres habilidosas"],
       "data_file": "data/parashiot/exodus/10-vayakhel.json",
-      "facts_count": 11
+      "facts_count": 11,
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "A construção do Mishkan" }
     },
     {
       "id": "pekudei",
@@ -228,7 +239,8 @@
       "summary_short": "A prestação de contas dos materiais, a montagem do Mishkan e a nuvem da Presença Divina que o preenche.",
       "characters": ["Moshe", "Betzalel", "Oholiav", "Aharon"],
       "data_file": "data/parashiot/exodus/11-pekudei.json",
-      "facts_count": 10
+      "facts_count": 10,
+      "visual": { "marker_type": "icon", "icon": "cloud", "asset": "assets/icons/cloud.svg", "caption": "A nuvem sobre o Mishkan" }
     }
   ]
 }

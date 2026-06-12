@@ -4,6 +4,13 @@
   "range": { "ref_start": "Leviticus 9:1", "ref_end": "Leviticus 11:47", "sefaria_ref": "Leviticus 9:1-11:47", "chapters_covered": [9,10,11], "chapter_start": 9, "chapter_end": 11, "verse_start": 1, "verse_end": 47 },
   "timeline": { "period_name": "Inauguração, tragédia e kashrut", "anno_mundi_start": 2449, "anno_mundi_end": 2449, "era": "saida-egito", "position_pct": 42, "description": "No oitavo dia, o Mishkan começa seu serviço público. A alegria é atravessada pela morte de Nadav e Avihu, e a parashá termina definindo animais permitidos e proibidos." },
   "summary": { "short": "A inauguração do Mishkan, a morte de Nadav e Avihu e as leis de kashrut.", "medium": "Shemini mostra o momento em que a presença divina se manifesta no Mishkan. Aharon oferece os korbanot inaugurais e fogo sai de diante de Deus.\n\nA tragédia de Nadav e Avihu revela o perigo de aproximar-se do sagrado sem ordem. A parashá fecha com kashrut, ligando santidade ritual à vida cotidiana e à alimentação.", "characters_main": ["Moshe", "Aharon", "Nadav", "Avihu", "Elazar", "Itamar"], "characters_secondary": ["Bnei Israel"], "themes": ["Inauguração", "Santidade", "Kashrut", "Limites", "Pureza"] },
+  "visual": {
+    "marker_type": "icon",
+    "icon": "light",
+    "asset": "assets/icons/light.svg",
+    "caption": "O oitavo dia — a glória revelada"
+  },
+
   "facts": [
     { "id": "shm001", "order": 1, "text": "No oitavo dia, Moshe chama Aharon, seus filhos e os anciãos para iniciar o serviço público do Mishkan.", "text_he": null, "refs": ["Leviticus 9:1-7"], "ref_start": "Leviticus 9:1", "ref_end": "Leviticus 9:7", "chapter": 9, "verse_start": 1, "verse_end": 7, "sefaria_ref": "Leviticus 9:1-7", "day_of_creation": null, "tags": ["oitavo-dia", "mishkan", "inauguração"], "topic": "O oitavo dia" },
     { "id": "shm002", "order": 2, "text": "Aharon oferece sua chatat e sua olah, iniciando o serviço sacerdotal em nome próprio.", "text_he": null, "refs": ["Leviticus 9:8-14"], "ref_start": "Leviticus 9:8", "ref_end": "Leviticus 9:14", "chapter": 9, "verse_start": 8, "verse_end": 14, "sefaria_ref": "Leviticus 9:8-14", "day_of_creation": null, "tags": ["aharon", "chatat", "olah"], "topic": "Korbanot de Aharon" },

@@ -4,6 +4,7 @@
   "book_pt": "Devarim · Deuteronômio",
   "total_chapters": 34,
   "total_parashiot": 11,
+  "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Devarim — Mishné Torá" },
   "timeline": {
     "anno_mundi_start": 2488,
     "anno_mundi_end": 2488,

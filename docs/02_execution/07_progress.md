@@ -114,6 +114,7 @@
 - [x] `ARCHITECTURE.md`, `DOMAIN_MODEL.md`, `db/README.md` updated to reflect current state
 - [x] Visual-layer pilot (Noach): optional `visual` block documented in `data/SCHEMA.md`, `assets/icons/` created with 8 semantic SVG icons, `02-noach.json` carries parasha-level + 8 fact-level markers, drawer renders icon badges (CSS mask, theme-colored) with caption tooltips; `--shadow-1/2` tokens added (2026-06-12)
 - [x] Visual layer rolled out to all 12 Genesis parashiot: 23 new SVG icons (31 total), every parasha JSON has a parasha-level marker + 2-5 fact-level markers (67 visual blocks total), `genesis/index.json` carries book-level + per-parasha icons, drawer index list shows mini icons per parasha and the book icon in the ruler label; all asset paths validated (2026-06-12)
+- [x] Visual layer extended to the whole Chumash + Timeline broad layers: 14 new SVGs (45 total); Exodus/Leviticus/Numbers/Deuteronomy index.json files carry book-level + per-parasha icons and every existing parasha JSON has a top-level marker; `timeline_groups.json` has `visual` on all 7 phases and 34 of 41 groups (emoji remains the fallback where no SVG fits); Timeline cards and phase panels render the SVG icons; 183 visual blocks across 184 JSONs validated (2026-06-12)
 
 ---
 
@@ -141,7 +142,7 @@
 6. Add selected-state breadcrumb across book, milestone, timeline group, parasha/unit, and fact levels
 7. Validate milestone, timeline group, parasha, and Nach unit links in a repeatable script/check
 8. Add selected/highlight state from drawer back to the Timeline tab
-9. Extend visual markers to the remaining broad layers: eras and timeline phases (Genesis book + parasha + fact levels are done); then other Chumash books and Nach
+9. Extend visual markers to Nach books (book + unit levels) and add fact-level markers to Exodus-Deuteronomy key facts; create SVGs for the 7 remaining timeline groups still on emoji (sword, chains, lion, mask, jug, compass, question)
 10. Scope and execute the design improvement pass (tokens review first, then per-tab polish)
 11. Decide the CapRover image-serving strategy for user-added assets (baked into the deploy tar vs. persistent volume mapped over `/usr/share/nginx/html/assets/`)
 
