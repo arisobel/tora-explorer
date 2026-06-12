@@ -46,6 +46,13 @@
     "themes": ["Luta e transformação", "Nome e identidade", "Reconciliação", "Honra e vingança", "Morte e vida", "A família completa"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "dawn",
+    "asset": "assets/icons/dawn.svg",
+    "caption": "A luta até o amanhecer"
+  },
+
   "facts": [
     {
       "id": "vs001",
@@ -93,7 +100,8 @@
       "sefaria_ref": "Genesis 32:25-26",
       "day_of_creation": null,
       "tags": ["luta", "anjo", "bênção", "nervo", "coxa"],
-      "topic": "A Luta de Yaakov com o Anjo"
+      "topic": "A Luta de Yaakov com o Anjo",
+      "visual": { "marker_type": "icon", "icon": "dawn", "asset": "assets/icons/dawn.svg", "caption": "A luta com o anjo", "importance": 5 }
     },
     {
       "id": "vs004",
@@ -109,7 +117,8 @@
       "sefaria_ref": "Genesis 32:29",
       "day_of_creation": null,
       "tags": ["yisrael", "nome", "luta", "transformação", "bênção"],
-      "topic": "Yaakov Torna-se Yisrael"
+      "topic": "Yaakov Torna-se Yisrael",
+      "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "Yisrael — o novo nome", "importance": 5 }
     },
     {
       "id": "vs005",
@@ -205,7 +214,8 @@
       "sefaria_ref": "Genesis 35:2-4",
       "day_of_creation": null,
       "tags": ["bet-el", "purificação", "ídolos", "altar", "renovação"],
-      "topic": "Renovação Espiritual — Enterrando os Ídolos"
+      "topic": "Renovação Espiritual — Enterrando os Ídolos",
+      "visual": { "marker_type": "icon", "icon": "tree", "asset": "assets/icons/tree.svg", "caption": "Os ídolos enterrados sob o carvalho", "importance": 2 }
     },
     {
       "id": "vs011",

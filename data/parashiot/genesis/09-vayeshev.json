@@ -46,6 +46,13 @@
     "themes": ["Sonhos e destino", "Inveja e irmandade", "Providência oculta", "Fidelidade moral", "Falsa acusação", "A história de Yehuda"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "coat",
+    "asset": "assets/icons/coat.svg",
+    "caption": "A túnica de Yossef"
+  },
+
   "facts": [
     {
       "id": "vsh001",
@@ -61,7 +68,8 @@
       "sefaria_ref": "Genesis 37:3-4",
       "day_of_creation": null,
       "tags": ["yossef", "ketonet-passim", "amor", "ódio", "irmãos"],
-      "topic": "A Túnica de Yossef — Favorito de Yaakov"
+      "topic": "A Túnica de Yossef — Favorito de Yaakov",
+      "visual": { "marker_type": "icon", "icon": "coat", "asset": "assets/icons/coat.svg", "caption": "A túnica listrada", "importance": 5 }
     },
     {
       "id": "vsh002",
@@ -77,7 +85,8 @@
       "sefaria_ref": "Genesis 37:5-11",
       "day_of_creation": null,
       "tags": ["sonhos", "feixes", "estrelas", "profecias", "inveja"],
-      "topic": "Os Dois Sonhos de Yossef"
+      "topic": "Os Dois Sonhos de Yossef",
+      "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "Os sonhos de Yossef", "importance": 4 }
     },
     {
       "id": "vsh003",
@@ -109,7 +118,8 @@
       "sefaria_ref": "Genesis 37:26-28",
       "day_of_creation": null,
       "tags": ["venda", "yehuda", "20-pratas", "ismaelitas", "egito"],
-      "topic": "A Venda de Yossef — 20 Moedas de Prata"
+      "topic": "A Venda de Yossef — 20 Moedas de Prata",
+      "visual": { "marker_type": "icon", "icon": "coins", "asset": "assets/icons/coins.svg", "caption": "Vendido por vinte moedas de prata", "importance": 5 }
     },
     {
       "id": "vsh005",

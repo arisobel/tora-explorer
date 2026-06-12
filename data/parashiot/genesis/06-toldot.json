@@ -46,6 +46,13 @@
     "themes": ["Predestinação e livre-arbítrio", "Primogenitura e identidade", "Engano e bênção", "Conflito de irmãos", "Continuidade da aliança"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "bowl",
+    "asset": "assets/icons/bowl.svg",
+    "caption": "A primogenitura e a bênção"
+  },
+
   "facts": [
     {
       "id": "tl001",
@@ -109,7 +116,8 @@
       "sefaria_ref": "Genesis 25:31-34",
       "day_of_creation": null,
       "tags": ["primogenitura", "lentilhas", "venda", "essav", "yaakov"],
-      "topic": "A Venda da Primogenitura — Lentilhas"
+      "topic": "A Venda da Primogenitura — Lentilhas",
+      "visual": { "marker_type": "icon", "icon": "bowl", "asset": "assets/icons/bowl.svg", "caption": "O guisado de lentilhas", "importance": 5 }
     },
     {
       "id": "tl005",
@@ -157,7 +165,8 @@
       "sefaria_ref": "Genesis 26:19-22",
       "day_of_creation": null,
       "tags": ["poços", "filisteus", "esek", "sitnah", "rechovot", "paz"],
-      "topic": "Os Poços de Yitzchak — Disputas e Paz"
+      "topic": "Os Poços de Yitzchak — Disputas e Paz",
+      "visual": { "marker_type": "icon", "icon": "well", "asset": "assets/icons/well.svg", "caption": "Os poços de Yitzchak", "importance": 3 }
     },
     {
       "id": "tl008",
@@ -205,7 +214,8 @@
       "sefaria_ref": "Genesis 27:28-29",
       "day_of_creation": null,
       "tags": ["bênção", "orvalho", "abundância", "domínio", "yitzchak"],
-      "topic": "A Bênção de Yitzchak a Yaakov"
+      "topic": "A Bênção de Yitzchak a Yaakov",
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "A bênção de Yitzchak", "importance": 5 }
     },
     {
       "id": "tl011",

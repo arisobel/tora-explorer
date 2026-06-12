@@ -22,6 +22,8 @@
 
 ## Recently Completed
 
+- [x] **Genesis visual layer complete** — 23 new semantic SVGs (31 total in `assets/icons/`); all 12 parashiot carry parasha-level + fact-level `visual` markers (67 blocks); `genesis/index.json` has book-level + per-parasha icons; drawer renders mini icons in the index list and the book icon in the ruler label (2026-06-12)
+- [x] **Visual-layer pilot (Noach)** — `visual` block documented in `data/SCHEMA.md` (parasha + fact levels), `assets/icons/` with 8 semantic SVGs (ark, flood, rainbow, olive-branch, altar, vine, tower, tzaddik), markers in `02-noach.json`, drawer renders theme-colored icon badges via CSS mask; `build-caprover.ps1` already packages `assets/` (2026-06-12)
 - [x] **Chumash milestone routing for all 5 books** — Vayikra, Bamidbar, and Devarim milestones now include `parasha_ids`, so Chumash and Atlas 2D drill paths can open the drawer beyond Genesis/Exodus (2026-06-08)
 - [x] **drawer→Pessukim book-aware** — `drawerGoToPessukim(chapterNum, bookKey)` now resolves Sefaria book name from bookKey; button in `_drawerRenderParasha` passes `bookKey` captured at render time (2026-06-01)
 - [x] **Devarim JSON set** — `data/parashiot/deuteronomy/index.json` + all 11 individual parasha JSONs generated and synced to SQLite (2026-06-01)
@@ -45,11 +47,8 @@
 - [ ] Remove remaining dark-theme assumptions from inline styles
 - [ ] Add a fallback/error message that distinguishes Sefaria failure from proxy/CORS failure
 - [ ] Add a smoke-check step after CapRover package generation to verify the tar contents
-- [ ] Extend the parasha schema with optional `visual` metadata for facts, parashiot, books, and timeline events
-- [ ] Define the initial `assets/` folder convention for icons, fact images, and book images
 - [ ] Add validation for visual marker shape, missing assets, and missing captions
-- [ ] Add visual markers to one Genesis pilot parasha before broad rollout
-- [ ] Render fact-level visual markers inside the existing parasha drawer
+- [ ] Extend `visual` metadata to books (index.json) and timeline events (schema currently covers parasha + fact levels)
 - [ ] Extend `visual` metadata beyond facts to the broad layers: structure areas, books, eras/timeline phases, milestones, and people
 - [ ] Define the user-facing workflow for adding images (documented drop-into-`assets/` convention now; local editor with File System Access API later)
 - [ ] Design pass: typography scale, spacing rhythm, and color hierarchy tokens reviewed across all 6 tabs

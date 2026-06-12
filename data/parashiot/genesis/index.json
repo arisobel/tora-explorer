@@ -3,6 +3,12 @@
   "book_he": "בְּרֵאשִׁית",
   "total_chapters": 50,
   "total_parashiot": 12,
+  "visual": {
+    "marker_type": "icon",
+    "icon": "tree",
+    "asset": "assets/icons/tree.svg",
+    "caption": "Bereshit — o livro das origens"
+  },
   "timeline": {
     "anno_mundi_start": 0,
     "anno_mundi_end": 2255,
@@ -27,7 +33,8 @@
       "summary_short": "Da Criação até as gerações que precedem o Dilúvio.",
       "characters": ["Adam", "Chavah", "Kayin", "Hevel", "Noach"],
       "data_file": "data/parashiot/genesis/01-bereshit.json",
-      "facts_count": 20
+      "facts_count": 20,
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "A Criação" }
     },
     {
       "id": "noach",
@@ -47,7 +54,8 @@
       "summary_short": "O Dilúvio, a Arca, o arco-íris e a Torre de Babel.",
       "characters": ["Noach", "Shem", "Cham", "Yafet", "Nimrod"],
       "data_file": "data/parashiot/genesis/02-noach.json",
-      "facts_count": 21
+      "facts_count": 21,
+      "visual": { "marker_type": "icon", "icon": "ark", "asset": "assets/icons/ark.svg", "caption": "A Teivá" }
     },
     {
       "id": "lech-lecha",
@@ -67,7 +75,8 @@
       "summary_short": "A chamada de Avraham, sua jornada, Brit Milah e a promessa de Yitzchak.",
       "characters": ["Avraham", "Sara", "Lot", "Hagar", "Yishmael"],
       "data_file": "data/parashiot/genesis/03-lech-lecha.json",
-      "facts_count": 17
+      "facts_count": 17,
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "A jornada de Avraham" }
     },
     {
       "id": "vayera",
@@ -87,7 +96,8 @@
       "summary_short": "Visita dos anjos, destruição de Sedom, nascimento de Yitzchak e Akeda.",
       "characters": ["Avraham", "Sara", "Lot", "Yitzchak", "Yishmael"],
       "data_file": "data/parashiot/genesis/04-vayera.json",
-      "facts_count": 15
+      "facts_count": 15,
+      "visual": { "marker_type": "icon", "icon": "tent", "asset": "assets/icons/tent.svg", "caption": "A tenda de Avraham" }
     },
     {
       "id": "chayei-sarah",
@@ -107,7 +117,8 @@
       "summary_short": "Morte de Sara, casamento de Yitzchak e Rivka, morte de Avraham.",
       "characters": ["Avraham", "Sara", "Yitzchak", "Rivka", "Eliezer"],
       "data_file": "data/parashiot/genesis/05-chayei-sarah.json",
-      "facts_count": 12
+      "facts_count": 12,
+      "visual": { "marker_type": "icon", "icon": "well", "asset": "assets/icons/well.svg", "caption": "O poço de Rivka" }
     },
     {
       "id": "toldot",
@@ -127,7 +138,8 @@
       "summary_short": "Nascimento de Yaakov e Essav, venda da primogenitura e as bênçãos.",
       "characters": ["Yitzchak", "Rivka", "Yaakov", "Essav"],
       "data_file": "data/parashiot/genesis/06-toldot.json",
-      "facts_count": 14
+      "facts_count": 14,
+      "visual": { "marker_type": "icon", "icon": "bowl", "asset": "assets/icons/bowl.svg", "caption": "A primogenitura" }
     },
     {
       "id": "vayetze",
@@ -147,7 +159,8 @@
       "summary_short": "Sonho da escada, Yaakov em Charan, casamento com Lea e Rachel, as 12 tribos.",
       "characters": ["Yaakov", "Lea", "Rachel", "Lavan", "Bilha", "Zilpa"],
       "data_file": "data/parashiot/genesis/07-vayetze.json",
-      "facts_count": 12
+      "facts_count": 12,
+      "visual": { "marker_type": "icon", "icon": "ladder", "asset": "assets/icons/ladder.svg", "caption": "A escada de Yaakov" }
     },
     {
       "id": "vayishlach",
@@ -167,7 +180,8 @@
       "summary_short": "Retorno de Yaakov, luta com o anjo, reencontro com Essav, caso Dina.",
       "characters": ["Yaakov", "Essav", "Dina", "Shechem", "Rachel"],
       "data_file": "data/parashiot/genesis/08-vayishlach.json",
-      "facts_count": 13
+      "facts_count": 13,
+      "visual": { "marker_type": "icon", "icon": "dawn", "asset": "assets/icons/dawn.svg", "caption": "A luta até o amanhecer" }
     },
     {
       "id": "vayeshev",
@@ -187,7 +201,8 @@
       "summary_short": "Yossef e seus irmãos, venda para o Egito, Yehuda e Tamar, prisão.",
       "characters": ["Yossef", "Yaakov", "Yehuda", "Tamar", "Potifar"],
       "data_file": "data/parashiot/genesis/09-vayeshev.json",
-      "facts_count": 12
+      "facts_count": 12,
+      "visual": { "marker_type": "icon", "icon": "coat", "asset": "assets/icons/coat.svg", "caption": "A túnica de Yossef" }
     },
     {
       "id": "miketz",
@@ -207,7 +222,8 @@
       "summary_short": "Yossef interpreta sonhos do Faraó, torna-se vice-rei e reencontra irmãos.",
       "characters": ["Yossef", "Faraó", "Binyamin", "Yehuda"],
       "data_file": "data/parashiot/genesis/10-miketz.json",
-      "facts_count": 12
+      "facts_count": 12,
+      "visual": { "marker_type": "icon", "icon": "wheat", "asset": "assets/icons/wheat.svg", "caption": "Os sonhos de Faraó" }
     },
     {
       "id": "vayigash",
@@ -227,7 +243,8 @@
       "summary_short": "Yossef revela sua identidade, Yaakov desce ao Egito com toda a família.",
       "characters": ["Yossef", "Yehuda", "Yaakov", "Faraó"],
       "data_file": "data/parashiot/genesis/11-vayigash.json",
-      "facts_count": 9
+      "facts_count": 9,
+      "visual": { "marker_type": "icon", "icon": "wagon", "asset": "assets/icons/wagon.svg", "caption": "A descida ao Egito" }
     },
     {
       "id": "vayechi",
@@ -247,7 +264,8 @@
       "summary_short": "Bênçãos de Yaakov às 12 tribos, sua morte e a de Yossef no Egito.",
       "characters": ["Yaakov", "Yossef", "Efraim", "Menashe"],
       "data_file": "data/parashiot/genesis/12-vayechi.json",
-      "facts_count": 11
+      "facts_count": 11,
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "As bênçãos de Yaakov" }
     }
   ]
 }

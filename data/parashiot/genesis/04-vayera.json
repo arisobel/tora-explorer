@@ -46,6 +46,13 @@
     "themes": ["Hospitalidade", "Intercessão", "Destruição e salvação", "Nascimento miraculoso", "Expulsão e misericórdia", "Fé suprema", "A Akeda"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "tent",
+    "asset": "assets/icons/tent.svg",
+    "caption": "A tenda aberta de Avraham"
+  },
+
   "facts": [
     {
       "id": "va001",
@@ -61,7 +68,8 @@
       "sefaria_ref": "Genesis 18:1-5",
       "day_of_creation": null,
       "tags": ["hospitalidade", "hachnasat-orchim", "anjos", "visita"],
-      "topic": "A Visita dos Três Anjos — Hospitalidade de Avraham"
+      "topic": "A Visita dos Três Anjos — Hospitalidade de Avraham",
+      "visual": { "marker_type": "icon", "icon": "tent", "asset": "assets/icons/tent.svg", "caption": "Os três visitantes", "importance": 5 }
     },
     {
       "id": "va002",
@@ -125,7 +133,8 @@
       "sefaria_ref": "Genesis 19:24-26",
       "day_of_creation": null,
       "tags": ["destruição", "sedom", "fogo", "sal", "lot"],
-      "topic": "Destruição de Sedom — A Mulher de Sal"
+      "topic": "Destruição de Sedom — A Mulher de Sal",
+      "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "A destruição de Sedom", "importance": 4 }
     },
     {
       "id": "va006",
@@ -269,7 +278,8 @@
       "sefaria_ref": "Genesis 22:10-13",
       "day_of_creation": null,
       "tags": ["akeda", "anjo", "carneiro", "faca", "substituição"],
-      "topic": "O Anjo Detém Avraham — O Carneiro Substituto"
+      "topic": "O Anjo Detém Avraham — O Carneiro Substituto",
+      "visual": { "marker_type": "icon", "icon": "shofar", "asset": "assets/icons/shofar.svg", "caption": "O carneiro da Akedá", "importance": 5 }
     },
     {
       "id": "va015",

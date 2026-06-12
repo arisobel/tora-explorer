@@ -215,6 +215,46 @@ Quando o fato atravessa capítulos (ex: Gen 4:17 → Gen 6:8), use:
 
 ---
 
+## Marcadores visuais (`visual`) — opcional
+
+Qualquer parasha (nível raiz do JSON) e qualquer `fact` pode ter um bloco
+`visual` opcional. O JSON guarda apenas **referências**; os arquivos binários
+vivem em `assets/` (nunca base64 dentro do JSON).
+
+```json
+"visual": {
+  "marker_type": "icon",                  // "icon" | "image" | "none"
+  "icon": "ark",                          // id semântico estável
+  "asset": "assets/icons/ark.svg",        // caminho relativo ao app
+  "caption": "A Teivá de Noach",          // obrigatório se houver asset (alt/tooltip)
+  "importance": 5                         // 1-5, para layouts densos (opcional)
+}
+```
+
+| Campo | Uso |
+|-------|-----|
+| `marker_type` | `icon` (SVG colorido via CSS mask), `image` (`<img>` PNG/JPG/WebP), `none` |
+| `icon` | id simbólico estável (`ark`, `rainbow`, `tower`, `altar`…) |
+| `asset` | caminho relativo dentro de `assets/` |
+| `caption` | texto curto — vira `aria-label`/`title` no drawer |
+| `importance` | prioridade 1-5 para visões densas (atlas/overview) |
+
+Convenção de pastas:
+
+```
+assets/
+  icons/          ← SVGs simbólicos reutilizáveis (stroke currentColor)
+  facts/[livro]/[parasha]/   ← ilustrações específicas (PNG/JPG/WebP)
+  books/          ← imagem por livro
+```
+
+Regras:
+- SVG de ícone deve usar `stroke="currentColor"` (o drawer colore via CSS mask)
+- Todo asset referenciado precisa de `caption`
+- Piloto de referência: `data/parashiot/genesis/02-noach.json` (8 facts + parasha)
+
+---
+
 ## Como adicionar uma nova parasha
 
 1. Copie o template acima

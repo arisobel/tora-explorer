@@ -28,6 +28,8 @@
   --border2: rgba(92,76,47,0.28);
   --r: 8px;
   --r2: 14px;
+  --shadow-1: 0 1px 2px rgba(60,48,24,0.06), 0 1px 4px rgba(60,48,24,0.05);
+  --shadow-2: 0 2px 6px rgba(60,48,24,0.08), 0 4px 14px rgba(60,48,24,0.07);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -3195,9 +3197,17 @@ document.addEventListener('keydown', e => {
 
 /* DETALHE DA PARASHÁ */
 .dp-header {
+  position: relative;
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border);
   background: rgba(201,168,76,0.025);
+}
+.dp-visual {
+  position: absolute; top: 1.4rem; right: 1.5rem;
+  width: 54px; height: 54px; border-radius: var(--r2);
+  background: var(--surface); border: 1px solid var(--border);
+  box-shadow: var(--shadow-1);
+  display: flex; align-items: center; justify-content: center;
 }
 .dp-he   { font-family: 'Crimson Pro', serif; font-size: 18px; color: var(--text3); }
 .dp-name { font-family: 'Crimson Pro', serif; font-size: 28px; font-weight: 600; color: var(--gold2); margin-bottom: 4px; }
@@ -3233,6 +3243,30 @@ document.addEventListener('keydown', e => {
 .fact-tag {
   font-size: 10px; padding: 1px 7px; border-radius: 20px;
   background: var(--surface2); color: var(--text3); border: 1px solid var(--border);
+}
+
+/* MARCADORES VISUAIS (facts/parasha) */
+.icon-mask {
+  display: inline-block;
+  background-color: var(--gold2);
+  -webkit-mask: var(--icon) no-repeat center / contain;
+          mask: var(--icon) no-repeat center / contain;
+}
+.dp-visual .icon-mask { width: 30px; height: 30px; background-color: var(--gold); }
+.icon-mask.mini { width: 13px; height: 13px; vertical-align: -2px; margin-right: 5px; }
+.fact-flex { display: flex; gap: 11px; align-items: flex-start; }
+.fact-main { flex: 1; min-width: 0; }
+.fact-visual { flex-shrink: 0; padding-top: 1px; }
+.fact-visual-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  box-shadow: var(--shadow-1);
+  display: flex; align-items: center; justify-content: center;
+}
+.fact-visual-icon .icon-mask { width: 21px; height: 21px; }
+.fact-visual-img {
+  width: 36px; height: 36px; border-radius: 10px;
+  object-fit: cover; border: 1px solid var(--border); display: block;
 }
 .fact-verse-btn {
   padding: 4px 12px; border-radius: var(--r);
@@ -3688,7 +3722,7 @@ function drawerShowIndex() {
       <div class="parasha-item" onclick="drawerShowParasha('${p.id}','${p.data_file}')">
         <div class="parasha-idx">${p.index}</div>
         <div>
-          <div class="parasha-name-he">${p.name} <span>${p.hebrew}</span></div>
+          <div class="parasha-name-he">${p.visual && p.visual.asset ? `<span class="icon-mask mini" style="--icon:url('${p.visual.asset}')"></span>` : ''}${p.name} <span>${p.hebrew}</span></div>
           <div class="parasha-meta">${p.ref_start} – ${p.ref_end} &nbsp;·&nbsp; ${p.anno_mundi_start}–${p.anno_mundi_end} AM</div>
           <div class="parasha-mini-ruler">
             <div class="parasha-mini-seg" style="left:${left}%;width:${width}%;background:${ec.bg}"></div>
@@ -3703,7 +3737,7 @@ function drawerShowIndex() {
 
   _drawerSetBody(`
     <div class="drawer-ruler">
-      <div class="ruler-label">Régua histórica — ${meta.label} (0 – ${total} AM)</div>
+      <div class="ruler-label">${idx.visual && idx.visual.asset ? `<span class="icon-mask mini" style="--icon:url('${idx.visual.asset}')"></span>` : ''}Régua histórica — ${meta.label} (0 – ${total} AM)</div>
       ${ruler}
     </div>
     <div style="padding:.5rem 1.5rem .15rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)">${idx.total_parashiot || idx.parashiot.length} ${itemLabel}</div>
@@ -3743,6 +3777,15 @@ async function drawerShowParasha(id, dataFile, context = null) {
   }
 }
 
+function visualMarkerHTML(v) {
+  if (!v || v.marker_type === 'none' || !v.asset) return '';
+  const cap = (v.caption || '').replace(/"/g, '&quot;');
+  if (v.marker_type === 'image') {
+    return `<img class="fact-visual-img" src="${v.asset}" alt="${cap}" title="${cap}" loading="lazy" onerror="this.style.display='none'">`;
+  }
+  return `<span class="icon-mask" role="img" aria-label="${cap}" title="${cap}" style="--icon:url('${v.asset}')"></span>`;
+}
+
 function _drawerRenderParasha(data, context = null) {
   const { range, timeline, summary, facts } = data;
   const identity = { ...data.identity, name: data.identity.name || data.identity.label || data.identity.id };
@@ -3775,14 +3818,23 @@ function _drawerRenderParasha(data, context = null) {
     const btnsHTML = (passBtn || chapBtn)
       ? `<div style="display:flex;gap:5px;flex-shrink:0">${passBtn}${chapBtn}</div>`
       : '';
+    const visMarker = visualMarkerHTML(f.visual);
+    const visHTML   = visMarker
+      ? `<div class="fact-visual"><div class="fact-visual-icon">${visMarker}</div></div>`
+      : '';
     factsHTML += `
       <div class="fact-item ${highlightedFacts.has(f.id) ? 'highlighted' : ''}" id="fact-${f.id}">
         ${f.topic ? `<div class="fact-topic">${f.topic}</div>` : ''}
-        <div class="fact-text">${f.text}</div>
-        ${f.text_he ? `<div class="fact-he">${f.text_he}</div>` : ''}
-        <div class="fact-bottom">
-          <div class="fact-tags">${tagsHTML}</div>
-          ${btnsHTML}
+        <div class="fact-flex">
+          ${visHTML}
+          <div class="fact-main">
+            <div class="fact-text">${f.text}</div>
+            ${f.text_he ? `<div class="fact-he">${f.text_he}</div>` : ''}
+            <div class="fact-bottom">
+              <div class="fact-tags">${tagsHTML}</div>
+              ${btnsHTML}
+            </div>
+          </div>
         </div>
         ${passRef ? `<div class="fact-passage-area"></div>` : ''}
       </div>`;
@@ -3791,6 +3843,7 @@ function _drawerRenderParasha(data, context = null) {
   const spanAM = timeline.anno_mundi_end - timeline.anno_mundi_start;
   _drawerSetBody(`
     <div class="dp-header">
+      ${data.visual && visualMarkerHTML(data.visual) ? `<div class="dp-visual">${visualMarkerHTML(data.visual)}</div>` : ''}
       <div class="dp-he">${identity.hebrew || ''}</div>
       <div class="dp-name">${identity.name}</div>
       <div class="dp-range">${range.ref_start} – ${range.ref_end} &nbsp;·&nbsp; ${timeline.anno_mundi_start}–${timeline.anno_mundi_end} AM</div>

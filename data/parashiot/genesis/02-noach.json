@@ -36,6 +36,13 @@
     "themes": ["Julgamento divino", "Fé e obediência", "Dilúvio e salvação", "Aliança", "Pureza e impureza", "Dispersão dos povos", "Arrogância humana"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "ark",
+    "asset": "assets/icons/ark.svg",
+    "caption": "A Teivá — símbolo da parashá"
+  },
+
   "facts": [
     {
       "id": "n001",
@@ -46,7 +53,8 @@
       "ref_end": "Genesis 6:10",
       "sefaria_ref": "Genesis 6:9-10",
       "tags": ["tzaddik", "retidão", "fé", "geração-corrupta"],
-      "topic": "Noach — O Homem Justo"
+      "topic": "Noach — O Homem Justo",
+      "visual": { "marker_type": "icon", "icon": "tzaddik", "asset": "assets/icons/tzaddik.svg", "caption": "Noach caminhava com Deus", "importance": 4 }
     },
     {
       "id": "n002",
@@ -79,7 +87,8 @@
       "ref_end": "Genesis 6:16",
       "sefaria_ref": "Genesis 6:14-16",
       "tags": ["teivá", "construção", "madeira", "instrução"],
-      "topic": "A Construção da Teivá"
+      "topic": "A Construção da Teivá",
+      "visual": { "marker_type": "icon", "icon": "ark", "asset": "assets/icons/ark.svg", "caption": "A Teivá de Noach", "importance": 5 }
     },
     {
       "id": "n005",
@@ -123,7 +132,8 @@
       "ref_end": "Genesis 7:12",
       "sefaria_ref": "Genesis 7:11-12",
       "tags": ["dilúvio", "abismo", "chuva", "quarenta-dias"],
-      "topic": "O Início do Dilúvio"
+      "topic": "O Início do Dilúvio",
+      "visual": { "marker_type": "icon", "icon": "flood", "asset": "assets/icons/flood.svg", "caption": "As águas do Dilúvio", "importance": 5 }
     },
     {
       "id": "n009",
@@ -167,7 +177,8 @@
       "ref_end": "Genesis 8:11",
       "sefaria_ref": "Genesis 8:11",
       "tags": ["pomba", "oliveira", "paz", "renovação"],
-      "topic": "A Folha de Oliveira — Sinal de Esperança"
+      "topic": "A Folha de Oliveira — Sinal de Esperança",
+      "visual": { "marker_type": "icon", "icon": "olive-branch", "asset": "assets/icons/olive-branch.svg", "caption": "A pomba e a folha de oliveira", "importance": 4 }
     },
     {
       "id": "n013",
@@ -189,7 +200,8 @@
       "ref_end": "Genesis 8:20",
       "sefaria_ref": "Genesis 8:20",
       "tags": ["altar", "sacrifício", "gratidão", "culto"],
-      "topic": "Noach Constrói um Altar"
+      "topic": "Noach Constrói um Altar",
+      "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "O altar de Noach", "importance": 3 }
     },
     {
       "id": "n015",
@@ -222,7 +234,8 @@
       "ref_end": "Genesis 9:17",
       "sefaria_ref": "Genesis 9:13-17",
       "tags": ["arco-íris", "aliança", "sinal", "eterno"],
-      "topic": "O Arco-Íris — Sinal da Aliança"
+      "topic": "O Arco-Íris — Sinal da Aliança",
+      "visual": { "marker_type": "icon", "icon": "rainbow", "asset": "assets/icons/rainbow.svg", "caption": "O arco-íris da aliança", "importance": 5 }
     },
     {
       "id": "n018",
@@ -233,7 +246,8 @@
       "ref_end": "Genesis 9:24",
       "sefaria_ref": "Genesis 9:20-24",
       "tags": ["vinho", "embriaguez", "cham", "honra-dos-pais"],
-      "topic": "Noach, o Vinho e Cham"
+      "topic": "Noach, o Vinho e Cham",
+      "visual": { "marker_type": "icon", "icon": "vine", "asset": "assets/icons/vine.svg", "caption": "A vinha de Noach", "importance": 2 }
     },
     {
       "id": "n019",
@@ -255,7 +269,8 @@
       "ref_end": "Genesis 11:9",
       "sefaria_ref": "Genesis 11:1-9",
       "tags": ["babel", "língua", "dispersão", "arrogância"],
-      "topic": "A Torre de Bavel"
+      "topic": "A Torre de Bavel",
+      "visual": { "marker_type": "icon", "icon": "tower", "asset": "assets/icons/tower.svg", "caption": "A Torre de Bavel", "importance": 5 }
     },
     {
       "id": "n021",

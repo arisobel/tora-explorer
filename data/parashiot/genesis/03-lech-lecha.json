@@ -46,6 +46,13 @@
     "themes": ["Chamado e resposta", "Fé e obediência", "Promessa da terra", "Aliança", "Identidade e nome", "Hospitalidade", "Circuncisão"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "journey",
+    "asset": "assets/icons/journey.svg",
+    "caption": "Lech Lecha — a jornada de Avraham"
+  },
+
   "facts": [
     {
       "id": "ll001",
@@ -61,7 +68,8 @@
       "sefaria_ref": "Genesis 12:1",
       "day_of_creation": null,
       "tags": ["chamado", "lech-lecha", "obediência", "separação"],
-      "topic": "O Chamado Divino — Lech Lecha"
+      "topic": "O Chamado Divino — Lech Lecha",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Vai-te da tua terra", "importance": 5 }
     },
     {
       "id": "ll002",
@@ -221,7 +229,8 @@
       "sefaria_ref": "Genesis 15:1-6",
       "day_of_creation": null,
       "tags": ["fé", "herdeiro", "tzedaká", "emunah"],
-      "topic": "Fé de Avram — Contada como Justiça"
+      "topic": "Fé de Avram — Contada como Justiça",
+      "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "Conta as estrelas — assim será tua descendência", "importance": 4 }
     },
     {
       "id": "ll012",
@@ -237,7 +246,8 @@
       "sefaria_ref": "Genesis 15:17-21",
       "day_of_creation": null,
       "tags": ["brit", "aliança", "terra", "tocha"],
-      "topic": "Brit bein HaBetarim — A Aliança entre os Pedaços"
+      "topic": "Brit bein HaBetarim — A Aliança entre os Pedaços",
+      "visual": { "marker_type": "icon", "icon": "torch", "asset": "assets/icons/torch.svg", "caption": "A tocha entre os pedaços", "importance": 4 }
     },
     {
       "id": "ll013",
@@ -317,7 +327,8 @@
       "sefaria_ref": "Genesis 17:10-27",
       "day_of_creation": null,
       "tags": ["brit-milah", "circuncisão", "sinal", "aliança", "99-anos"],
-      "topic": "A Brit Milah — Sinal da Aliança"
+      "topic": "A Brit Milah — Sinal da Aliança",
+      "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "Brit Milah — sinal da aliança", "importance": 5 }
     }
   ],
 

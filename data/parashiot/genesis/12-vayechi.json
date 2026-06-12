@@ -46,6 +46,13 @@
     "themes": ["Bênção e transmissão", "Primogenitura invertida", "Profecia das tribos", "Morte e sepultamento", "Perdão e reconciliação", "A promessa de retorno"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "scroll",
+    "asset": "assets/icons/scroll.svg",
+    "caption": "As bênçãos de Yaakov"
+  },
+
   "facts": [
     {
       "id": "vc001",
@@ -141,7 +148,8 @@
       "sefaria_ref": "Genesis 49:1-28",
       "day_of_creation": null,
       "tags": ["bênçãos", "12-tribos", "profecia", "cetro-yehuda", "mashiach"],
-      "topic": "As 12 Bênçãos — Profecia sobre as Tribos"
+      "topic": "As 12 Bênçãos — Profecia sobre as Tribos",
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "As bênçãos das doze tribos", "importance": 5 }
     },
     {
       "id": "vc007",
@@ -189,7 +197,8 @@
       "sefaria_ref": "Genesis 50:13",
       "day_of_creation": null,
       "tags": ["cortejo", "machpelah", "sepultamento", "canaã", "funeral"],
-      "topic": "Sepultamento de Yaakov em Machpelah"
+      "topic": "Sepultamento de Yaakov em Machpelah",
+      "visual": { "marker_type": "icon", "icon": "cave", "asset": "assets/icons/cave.svg", "caption": "Yaakov sepultado em Machpelah", "importance": 4 }
     },
     {
       "id": "vc010",
@@ -221,7 +230,8 @@
       "sefaria_ref": "Genesis 50:24-26",
       "day_of_creation": null,
       "tags": ["yossef", "110-anos", "ossos", "juramento", "êxodo-futuro"],
-      "topic": "Morte de Yossef — 'Fareis Subir Meus Ossos'"
+      "topic": "Morte de Yossef — 'Fareis Subir Meus Ossos'",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Fareis subir meus ossos — a promessa do retorno", "importance": 4 }
     }
   ],
 

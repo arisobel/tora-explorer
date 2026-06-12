@@ -46,6 +46,13 @@
     "themes": ["Fuga e exílio", "Sonho e revelação", "Amor e trabalho", "Engano e recompensa", "As 12 tribos", "Aliança familiar", "Retorno"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "ladder",
+    "asset": "assets/icons/ladder.svg",
+    "caption": "O sonho da escada"
+  },
+
   "facts": [
     {
       "id": "vtz001",
@@ -61,7 +68,8 @@
       "sefaria_ref": "Genesis 28:12",
       "day_of_creation": null,
       "tags": ["sonho", "escada", "anjos", "sulam", "bet-el"],
-      "topic": "O Sonho da Escada — Sulam Bet-El"
+      "topic": "O Sonho da Escada — Sulam Bet-El",
+      "visual": { "marker_type": "icon", "icon": "ladder", "asset": "assets/icons/ladder.svg", "caption": "A escada de Yaakov", "importance": 5 }
     },
     {
       "id": "vtz002",
@@ -109,7 +117,8 @@
       "sefaria_ref": "Genesis 29:10",
       "day_of_creation": null,
       "tags": ["rachel", "poço", "pedra", "força", "encontro"],
-      "topic": "Yaakov Encontra Rachel no Poço"
+      "topic": "Yaakov Encontra Rachel no Poço",
+      "visual": { "marker_type": "icon", "icon": "well", "asset": "assets/icons/well.svg", "caption": "Rachel no poço", "importance": 4 }
     },
     {
       "id": "vtz005",

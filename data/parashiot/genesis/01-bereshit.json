@@ -46,6 +46,13 @@
     "themes": ["Criação", "Livre-arbítrio", "Pecado e consequência", "Morte e vida", "Corrupção moral", "Shabat"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "light",
+    "asset": "assets/icons/light.svg",
+    "caption": "A Criação — Que haja luz"
+  },
+
   "facts": [
     {
       "id": "b001",
@@ -77,7 +84,8 @@
       "sefaria_ref": "Genesis 1:3-5",
       "day_of_creation": 1,
       "tags": ["luz", "criação", "yom-rishon"],
-      "topic": "Criação — Yom 1 (luz)"
+      "topic": "Criação — Yom 1 (luz)",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Que haja luz", "importance": 5 }
     },
     {
       "id": "b003",
@@ -189,7 +197,8 @@
       "sefaria_ref": "Genesis 2:1-3",
       "day_of_creation": 7,
       "tags": ["shabat", "descanso", "santificação", "kedusha"],
-      "topic": "Yom 7 — Shabat (descanso e santificação)"
+      "topic": "Yom 7 — Shabat (descanso e santificação)",
+      "visual": { "marker_type": "icon", "icon": "candles", "asset": "assets/icons/candles.svg", "caption": "O Shabat da Criação", "importance": 5 }
     },
     {
       "id": "b010",
@@ -221,7 +230,8 @@
       "sefaria_ref": "Genesis 2:8-15",
       "day_of_creation": null,
       "tags": ["gan-eden", "paraíso", "árvore-da-vida", "árvore-do-conhecimento"],
-      "topic": "O Gan Eden — jardim e missão de Adam"
+      "topic": "O Gan Eden — jardim e missão de Adam",
+      "visual": { "marker_type": "icon", "icon": "tree", "asset": "assets/icons/tree.svg", "caption": "O Gan Eden", "importance": 4 }
     },
     {
       "id": "b012",
@@ -269,7 +279,8 @@
       "sefaria_ref": "Genesis 3:1-6",
       "day_of_creation": null,
       "tags": ["serpente", "pecado", "fruto-proibido", "chet-adam"],
-      "topic": "O pecado — a serpente e o fruto proibido"
+      "topic": "O pecado — a serpente e o fruto proibido",
+      "visual": { "marker_type": "icon", "icon": "serpent", "asset": "assets/icons/serpent.svg", "caption": "A serpente e o fruto proibido", "importance": 5 }
     },
     {
       "id": "b015",
@@ -333,7 +344,8 @@
       "sefaria_ref": "Genesis 4:1-5",
       "day_of_creation": null,
       "tags": ["kayin", "hevel", "sacrifício", "oferta", "inveja"],
-      "topic": "Kayin e Hevel — as duas ofertas"
+      "topic": "Kayin e Hevel — as duas ofertas",
+      "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "As ofertas de Kayin e Hevel", "importance": 3 }
     },
     {
       "id": "b019",

@@ -46,6 +46,13 @@
     "themes": ["Sonhos e interpretação", "Ascensão ao poder", "Providência divina", "Reencontro disfarçado", "Arrependimento dos irmãos", "O teste de Binyamin"]
   },
 
+  "visual": {
+    "marker_type": "icon",
+    "icon": "wheat",
+    "asset": "assets/icons/wheat.svg",
+    "caption": "Os sonhos de Faraó"
+  },
+
   "facts": [
     {
       "id": "mk001",
@@ -61,7 +68,8 @@
       "sefaria_ref": "Genesis 41:1-8",
       "day_of_creation": null,
       "tags": ["faraó", "sonhos", "vacas", "espigas", "sete-anos"],
-      "topic": "Os Dois Sonhos de Faraó"
+      "topic": "Os Dois Sonhos de Faraó",
+      "visual": { "marker_type": "icon", "icon": "wheat", "asset": "assets/icons/wheat.svg", "caption": "Sete espigas, sete vacas", "importance": 5 }
     },
     {
       "id": "mk002",
@@ -109,7 +117,8 @@
       "sefaria_ref": "Genesis 41:37-41",
       "day_of_creation": null,
       "tags": ["vice-rei", "faraó", "nomeação", "espírito-divino", "poder"],
-      "topic": "Yossef Nomeado Vice-Rei do Egito"
+      "topic": "Yossef Nomeado Vice-Rei do Egito",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Yossef, vice-rei do Egito", "importance": 5 }
     },
     {
       "id": "mk005",
@@ -237,7 +246,8 @@
       "sefaria_ref": "Genesis 44:2-12",
       "day_of_creation": null,
       "tags": ["cálice", "binyamin", "bolsa", "acusação", "roupas-rasgadas"],
-      "topic": "O Cálice na Bolsa de Binyamin"
+      "topic": "O Cálice na Bolsa de Binyamin",
+      "visual": { "marker_type": "icon", "icon": "goblet", "asset": "assets/icons/goblet.svg", "caption": "O cálice de prata", "importance": 4 }
     }
   ],
 
