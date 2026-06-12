@@ -233,7 +233,7 @@ vivem em `assets/` (nunca base64 dentro do JSON).
 
 | Campo | Uso |
 |-------|-----|
-| `marker_type` | `icon` (SVG colorido via CSS mask), `image` (`<img>` PNG/JPG/WebP), `none` |
+| `marker_type` | `icon` (badge SVG via CSS mask) · `image` (ilustração: bloco com legenda no fato, banner no topo do drawer quando no nível da parashá) · `none` |
 | `icon` | id simbólico estável (`ark`, `rainbow`, `tower`, `altar`…) |
 | `asset` | caminho relativo dentro de `assets/` |
 | `caption` | texto curto — vira `aria-label`/`title` no drawer |
@@ -244,7 +244,7 @@ Convenção de pastas:
 ```
 assets/
   icons/          ← SVGs simbólicos reutilizáveis (stroke currentColor)
-  facts/[livro]/[parasha]/   ← ilustrações específicas (PNG/JPG/WebP)
+  facts/[livro]/[parasha]/   ← ilustrações específicas (PNG/JPG/WebP) — ver assets/facts/README.md
   books/          ← imagem por livro
 ```
 

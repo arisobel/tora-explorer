@@ -3268,6 +3268,17 @@ document.addEventListener('keydown', e => {
   width: 36px; height: 36px; border-radius: 10px;
   object-fit: cover; border: 1px solid var(--border); display: block;
 }
+.fact-illus {
+  margin: 7px 0 9px; border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--border); box-shadow: var(--shadow-1);
+}
+.fact-illus img { display: block; width: 100%; max-height: 230px; object-fit: cover; }
+.fact-illus figcaption {
+  font-size: 11px; font-style: italic; color: var(--text3);
+  padding: 5px 11px; background: var(--surface); border-top: 1px solid var(--border);
+}
+.dp-banner { margin: -1.25rem -1.5rem 1rem; }
+.dp-banner img { display: block; width: 100%; max-height: 210px; object-fit: cover; }
 .fact-verse-btn {
   padding: 4px 12px; border-radius: var(--r);
   background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
@@ -3789,6 +3800,15 @@ function visualMarkerHTML(v) {
   return `<span class="icon-mask" role="img" aria-label="${cap}" title="${cap}" style="--icon:url('${v.asset}')"></span>`;
 }
 
+function illustrationHTML(v) {
+  if (!v || v.marker_type !== 'image' || !v.asset) return '';
+  const cap = (v.caption || '').replace(/"/g, '&quot;');
+  return `<figure class="fact-illus">
+    <img src="${v.asset}" alt="${cap}" loading="lazy" onerror="this.closest('figure').style.display='none'">
+    ${v.caption ? `<figcaption>${v.caption}</figcaption>` : ''}
+  </figure>`;
+}
+
 function _drawerRenderParasha(data, context = null) {
   const { range, timeline, summary, facts } = data;
   const identity = { ...data.identity, name: data.identity.name || data.identity.label || data.identity.id };
@@ -3821,7 +3841,9 @@ function _drawerRenderParasha(data, context = null) {
     const btnsHTML = (passBtn || chapBtn)
       ? `<div style="display:flex;gap:5px;flex-shrink:0">${passBtn}${chapBtn}</div>`
       : '';
-    const visMarker = visualMarkerHTML(f.visual);
+    const isImg     = f.visual && f.visual.marker_type === 'image';
+    const illusHTML = isImg ? illustrationHTML(f.visual) : '';
+    const visMarker = isImg ? '' : visualMarkerHTML(f.visual);
     const visHTML   = visMarker
       ? `<div class="fact-visual"><div class="fact-visual-icon">${visMarker}</div></div>`
       : '';
@@ -3833,6 +3855,7 @@ function _drawerRenderParasha(data, context = null) {
           <div class="fact-main">
             <div class="fact-text">${f.text}</div>
             ${f.text_he ? `<div class="fact-he">${f.text_he}</div>` : ''}
+            ${illusHTML}
             <div class="fact-bottom">
               <div class="fact-tags">${tagsHTML}</div>
               ${btnsHTML}
@@ -3846,7 +3869,9 @@ function _drawerRenderParasha(data, context = null) {
   const spanAM = timeline.anno_mundi_end - timeline.anno_mundi_start;
   _drawerSetBody(`
     <div class="dp-header">
-      ${data.visual && visualMarkerHTML(data.visual) ? `<div class="dp-visual">${visualMarkerHTML(data.visual)}</div>` : ''}
+      ${data.visual && data.visual.marker_type === 'image'
+        ? `<div class="dp-banner"><img src="${data.visual.asset}" alt="${(data.visual.caption || '').replace(/"/g, '&quot;')}" onerror="this.closest('.dp-banner').style.display='none'"></div>`
+        : (data.visual && visualMarkerHTML(data.visual) ? `<div class="dp-visual">${visualMarkerHTML(data.visual)}</div>` : '')}
       <div class="dp-he">${identity.hebrew || ''}</div>
       <div class="dp-name">${identity.name}</div>
       <div class="dp-range">${range.ref_start} – ${range.ref_end} &nbsp;·&nbsp; ${timeline.anno_mundi_start}–${timeline.anno_mundi_end} AM</div>

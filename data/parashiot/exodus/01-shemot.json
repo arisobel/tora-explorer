@@ -212,7 +212,8 @@
       "sefaria_ref": "Exodus 3:2-5",
       "day_of_creation": null,
       "tags": ["sarça-ardente", "sinai", "horev", "revelação", "terra-sagrada"],
-      "topic": "A Sarça Ardente — A Revelação no Horev"
+      "topic": "A Sarça Ardente — A Revelação no Horev",
+      "visual": { "marker_type": "image", "icon": "burning-bush", "asset": "assets/facts/exodus/shemot/sarca-ardente.jpg", "caption": "A sarça que arde e não se consome — Horev", "importance": 5 }
     },
     {
       "id": "sm011",
