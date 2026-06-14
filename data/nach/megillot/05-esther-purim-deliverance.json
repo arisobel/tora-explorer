@@ -49,108 +49,513 @@
   },
   "summary": {
     "short": "Ester narra ameaça, coragem, reversão e memória comunitária no império persa.",
-    "medium": "Ester narra ameaça, coragem, reversão e memória comunitária no império persa.\n\nEsta unidade oferece uma primeira seleção de fatos e referências para navegação no texto-fonte.",
+    "medium": "Ester narra como uma ameaça de extermínio na Pérsia de Achashverosh se converte em livramento. Vashti cai, Ester ascende ao trono escondendo sua origem, Haman compra um decreto contra os judeus, e a coragem de Ester junto à providência oculta reverte a sentença — fundando a festa de Purim.",
     "characters_main": [
       "Ester",
       "Mordechai",
       "Achashverosh",
       "Haman"
     ],
-    "characters_secondary": [],
+    "characters_secondary": [
+      "Vashti",
+      "Memuchan",
+      "Bigtan",
+      "Teresh",
+      "Zeresh",
+      "Charvona",
+      "Os dez filhos de Haman"
+    ],
     "themes": [
       "Purim",
       "Coragem",
       "Reversão",
-      "Memória"
+      "Memória",
+      "Providência oculta",
+      "Identidade"
     ]
   },
   "facts": [
     {
       "id": "mg017",
       "order": 1,
-      "text": "A crise com Vashti abre caminho para Ester tornar-se rainha sem revelar sua origem.",
+      "text": "No terceiro ano de seu reinado, Achashverosh — que governa de Hodu (Índia) a Kush sobre 127 províncias — oferece um banquete de 180 dias aos nobres do império, seguido de outro de 7 dias para todos em Shushan, a capital. A rainha Vashti faz um banquete paralelo para as mulheres.",
       "text_he": null,
       "refs": [
-        "Esther 1:1-2:20"
+        "Esther 1:1-9"
       ],
       "ref_start": "Esther 1:1",
-      "ref_end": "Esther 2:20",
+      "ref_end": "Esther 1:9",
       "chapter": 1,
       "verse_start": 1,
-      "verse_end_chapter": 2,
-      "verse_end": 20,
-      "sefaria_ref": "Esther 1:1-2:20",
+      "verse_end": 9,
+      "sefaria_ref": "Esther 1:1-9",
       "tags": [
-        "ester",
-        "vashti",
-        "palácio"
+        "achashverosh",
+        "banquete",
+        "shushan",
+        "vashti"
       ],
-      "topic": "Ester no palácio"
+      "topic": "O banquete de Achashverosh"
     },
     {
       "id": "mg018",
       "order": 2,
-      "text": "Haman obtém um decreto contra os judeus após o conflito com Mordechai.",
+      "text": "No sétimo dia, embriagado, o rei manda os sete eunucos trazerem Vashti para exibir sua beleza aos convivas. A rainha se recusa a comparecer, e o rei se enche de fúria.",
       "text_he": null,
       "refs": [
-        "Esther 3:1-15"
+        "Esther 1:10-12"
       ],
-      "ref_start": "Esther 3:1",
-      "ref_end": "Esther 3:15",
-      "chapter": 3,
-      "verse_start": 1,
-      "verse_end": 15,
-      "sefaria_ref": "Esther 3:1-15",
+      "ref_start": "Esther 1:10",
+      "ref_end": "Esther 1:12",
+      "chapter": 1,
+      "verse_start": 10,
+      "verse_end": 12,
+      "sefaria_ref": "Esther 1:10-12",
       "tags": [
-        "haman",
-        "mordechai",
-        "decreto"
+        "vashti",
+        "recusa",
+        "ira"
       ],
-      "topic": "Decreto de Haman"
+      "topic": "A recusa de Vashti"
     },
     {
       "id": "mg019",
       "order": 3,
-      "text": "Mordechai chama Ester a agir, e ela se aproxima do rei após jejum coletivo.",
+      "text": "O rei consulta os sete sábios da Pérsia e Média. Memuchan argumenta que a desobediência de Vashti se espalhará entre todas as mulheres do reino; aconselha depô-la e enviar decretos a todas as 127 províncias ordenando que cada homem governe sua casa.",
       "text_he": null,
       "refs": [
-        "Esther 4:1-5:8"
+        "Esther 1:13-22"
       ],
-      "ref_start": "Esther 4:1",
-      "ref_end": "Esther 5:8",
-      "chapter": 4,
-      "verse_start": 1,
-      "verse_end_chapter": 5,
-      "verse_end": 8,
-      "sefaria_ref": "Esther 4:1-5:8",
+      "ref_start": "Esther 1:13",
+      "ref_end": "Esther 1:22",
+      "chapter": 1,
+      "verse_start": 13,
+      "verse_end": 22,
+      "sefaria_ref": "Esther 1:13-22",
       "tags": [
-        "coragem",
-        "jejum",
-        "ester"
+        "memuchan",
+        "conselheiros",
+        "decreto",
+        "vashti"
       ],
-      "topic": "Ester age"
+      "topic": "O conselho de Memuchan e o decreto"
     },
     {
       "id": "mg020",
       "order": 4,
-      "text": "A narrativa se reverte, Haman cai, os judeus são defendidos e Purim é estabelecido.",
+      "text": "Buscam-se jovens belas de todo o reino para escolher uma nova rainha. Mordechai, judeu de Shushan, cria sua prima órfã Hadassa — Ester. Ela é levada ao palácio e, a conselho de Mordechai, não revela sua origem nem seu povo.",
       "text_he": null,
       "refs": [
-        "Esther 6:1-10:3"
+        "Esther 2:1-11"
+      ],
+      "ref_start": "Esther 2:1",
+      "ref_end": "Esther 2:11",
+      "chapter": 2,
+      "verse_start": 1,
+      "verse_end": 11,
+      "sefaria_ref": "Esther 2:1-11",
+      "tags": [
+        "ester",
+        "mordechai",
+        "identidade",
+        "palácio"
+      ],
+      "topic": "Ester levada ao palácio"
+    },
+    {
+      "id": "mg021",
+      "order": 5,
+      "text": "Após o período de preparação, Ester é apresentada ao rei. Achashverosh a ama mais que todas as outras e põe a coroa real em sua cabeça, fazendo-a rainha no lugar de Vashti; celebra-se o banquete de Ester.",
+      "text_he": null,
+      "refs": [
+        "Esther 2:12-18"
+      ],
+      "ref_start": "Esther 2:12",
+      "ref_end": "Esther 2:18",
+      "chapter": 2,
+      "verse_start": 12,
+      "verse_end": 18,
+      "sefaria_ref": "Esther 2:12-18",
+      "tags": [
+        "ester",
+        "rainha",
+        "coroa"
+      ],
+      "topic": "Ester torna-se rainha"
+    },
+    {
+      "id": "mg022",
+      "order": 6,
+      "text": "Sentado à porta do rei, Mordechai descobre a conspiração dos eunucos Bigtan e Teresh contra a vida de Achashverosh. Avisa Ester, que informa em nome de Mordechai; os culpados são enforcados e o ato é registrado nas crônicas reais.",
+      "text_he": null,
+      "refs": [
+        "Esther 2:19-23"
+      ],
+      "ref_start": "Esther 2:19",
+      "ref_end": "Esther 2:23",
+      "chapter": 2,
+      "verse_start": 19,
+      "verse_end": 23,
+      "sefaria_ref": "Esther 2:19-23",
+      "tags": [
+        "mordechai",
+        "bigtan",
+        "teresh",
+        "conspiração",
+        "crônicas"
+      ],
+      "topic": "A conspiração contra o rei"
+    },
+    {
+      "id": "mg023",
+      "order": 7,
+      "text": "Achashverosh promove Haman, o agagita, acima de todos os ministros, e ordena que todos se curvem diante dele. Mordechai recusa-se a curvar-se; ao saber que ele é judeu, Haman planeja destruir não só Mordechai, mas todo o seu povo.",
+      "text_he": null,
+      "refs": [
+        "Esther 3:1-6"
+      ],
+      "ref_start": "Esther 3:1",
+      "ref_end": "Esther 3:6",
+      "chapter": 3,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Esther 3:1-6",
+      "tags": [
+        "haman",
+        "mordechai",
+        "recusa",
+        "ódio"
+      ],
+      "topic": "Haman promovido e o ódio a Mordechai"
+    },
+    {
+      "id": "mg024",
+      "order": 8,
+      "text": "Haman lança o pur (a sorte) para escolher o dia, e convence o rei a decretar o extermínio de todos os judeus — homens, mulheres e crianças — no dia 13 de Adar, oferecendo dez mil talentos de prata. Cartas selam o decreto em todas as províncias; a cidade de Shushan fica perplexa.",
+      "text_he": null,
+      "refs": [
+        "Esther 3:7-15"
+      ],
+      "ref_start": "Esther 3:7",
+      "ref_end": "Esther 3:15",
+      "chapter": 3,
+      "verse_start": 7,
+      "verse_end": 15,
+      "sefaria_ref": "Esther 3:7-15",
+      "tags": [
+        "haman",
+        "pur",
+        "decreto",
+        "extermínio",
+        "adar"
+      ],
+      "topic": "O pur e o decreto de extermínio"
+    },
+    {
+      "id": "mg025",
+      "order": 9,
+      "text": "Ao saber do decreto, Mordechai rasga suas vestes, veste saco e cinzas e clama em alta voz no meio da cidade. Em cada província onde o decreto chega, há grande luto, jejum e pranto entre os judeus.",
+      "text_he": null,
+      "refs": [
+        "Esther 4:1-3"
+      ],
+      "ref_start": "Esther 4:1",
+      "ref_end": "Esther 4:3",
+      "chapter": 4,
+      "verse_start": 1,
+      "verse_end": 3,
+      "sefaria_ref": "Esther 4:1-3",
+      "tags": [
+        "mordechai",
+        "luto",
+        "saco",
+        "jejum"
+      ],
+      "topic": "O luto dos judeus"
+    },
+    {
+      "id": "mg026",
+      "order": 10,
+      "text": "Por meio do eunuco Hatach, Mordechai comunica o decreto a Ester e pede que ela interceda junto ao rei. Diante da hesitação dela, declara: 'Quem sabe se não foi para um tempo como este que chegaste à realeza?'. Ester pede um jejum de três dias e decide arriscar a vida.",
+      "text_he": null,
+      "refs": [
+        "Esther 4:4-17"
+      ],
+      "ref_start": "Esther 4:4",
+      "ref_end": "Esther 4:17",
+      "chapter": 4,
+      "verse_start": 4,
+      "verse_end": 17,
+      "sefaria_ref": "Esther 4:4-17",
+      "tags": [
+        "ester",
+        "mordechai",
+        "coragem",
+        "jejum"
+      ],
+      "topic": "Para um tempo como este"
+    },
+    {
+      "id": "mg027",
+      "order": 11,
+      "text": "Ao terceiro dia, Ester se apresenta sem ser chamada no pátio interno. O rei estende o cetro de ouro, poupando-lhe a vida, e oferece até metade do reino. Ela convida o rei e Haman a um banquete e, ali, pede que voltem a um segundo banquete no dia seguinte.",
+      "text_he": null,
+      "refs": [
+        "Esther 5:1-8"
+      ],
+      "ref_start": "Esther 5:1",
+      "ref_end": "Esther 5:8",
+      "chapter": 5,
+      "verse_start": 1,
+      "verse_end": 8,
+      "sefaria_ref": "Esther 5:1-8",
+      "tags": [
+        "ester",
+        "cetro",
+        "banquete"
+      ],
+      "topic": "Ester diante do rei e o primeiro banquete"
+    },
+    {
+      "id": "mg028",
+      "order": 12,
+      "text": "Haman sai eufórico, mas a visão de Mordechai, que não se levanta diante dele, o enche de ira. Em casa, gabando-se de sua glória a Zeresh, sua esposa, e aos amigos, é aconselhado a erguer uma forca de cinquenta côvados e pedir ao rei que Mordechai seja enforcado nela.",
+      "text_he": null,
+      "refs": [
+        "Esther 5:9-14"
+      ],
+      "ref_start": "Esther 5:9",
+      "ref_end": "Esther 5:14",
+      "chapter": 5,
+      "verse_start": 9,
+      "verse_end": 14,
+      "sefaria_ref": "Esther 5:9-14",
+      "tags": [
+        "haman",
+        "zeresh",
+        "forca",
+        "ira"
+      ],
+      "topic": "A forca de Haman"
+    },
+    {
+      "id": "mg029",
+      "order": 13,
+      "text": "Naquela noite o sono foge do rei. Ele manda ler as crônicas reais e descobre que Mordechai, que o salvara da conspiração, jamais fora recompensado.",
+      "text_he": null,
+      "refs": [
+        "Esther 6:1-5"
       ],
       "ref_start": "Esther 6:1",
-      "ref_end": "Esther 10:3",
+      "ref_end": "Esther 6:5",
       "chapter": 6,
       "verse_start": 1,
-      "verse_end_chapter": 10,
-      "verse_end": 3,
-      "sefaria_ref": "Esther 6:1-10:3",
+      "verse_end": 5,
+      "sefaria_ref": "Esther 6:1-5",
+      "tags": [
+        "achashverosh",
+        "crônicas",
+        "mordechai",
+        "reversão"
+      ],
+      "topic": "A noite insone do rei"
+    },
+    {
+      "id": "mg030",
+      "order": 14,
+      "text": "Haman entra para pedir a morte de Mordechai, mas o rei lhe pergunta como honrar 'o homem que o rei deseja honrar'. Pensando ser ele próprio, Haman descreve vestes e cavalo reais — e é obrigado a conduzir Mordechai assim honrado pelas ruas, proclamando sua glória.",
+      "text_he": null,
+      "refs": [
+        "Esther 6:6-11"
+      ],
+      "ref_start": "Esther 6:6",
+      "ref_end": "Esther 6:11",
+      "chapter": 6,
+      "verse_start": 6,
+      "verse_end": 11,
+      "sefaria_ref": "Esther 6:6-11",
+      "tags": [
+        "haman",
+        "mordechai",
+        "honra",
+        "reversão"
+      ],
+      "topic": "Haman honra Mordechai"
+    },
+    {
+      "id": "mg031",
+      "order": 15,
+      "text": "Humilhado, Haman volta para casa de cabeça coberta. Zeresh e os sábios lhe predizem a queda: 'se Mordechai, diante de quem começaste a cair, é da semente dos judeus, não prevalecerás'. Os eunucos chegam para levá-lo ao banquete de Ester.",
+      "text_he": null,
+      "refs": [
+        "Esther 6:12-14"
+      ],
+      "ref_start": "Esther 6:12",
+      "ref_end": "Esther 6:14",
+      "chapter": 6,
+      "verse_start": 12,
+      "verse_end": 14,
+      "sefaria_ref": "Esther 6:12-14",
+      "tags": [
+        "haman",
+        "zeresh",
+        "presságio",
+        "queda"
+      ],
+      "topic": "O presságio da queda"
+    },
+    {
+      "id": "mg032",
+      "order": 16,
+      "text": "No segundo banquete, o rei renova a oferta de até metade do reino. Ester então revela: ela e seu povo foram vendidos para a destruição — e o inimigo é 'este Haman, o malvado'.",
+      "text_he": null,
+      "refs": [
+        "Esther 7:1-6"
+      ],
+      "ref_start": "Esther 7:1",
+      "ref_end": "Esther 7:6",
+      "chapter": 7,
+      "verse_start": 1,
+      "verse_end": 6,
+      "sefaria_ref": "Esther 7:1-6",
+      "tags": [
+        "ester",
+        "haman",
+        "revelação",
+        "banquete"
+      ],
+      "topic": "Ester desmascara Haman"
+    },
+    {
+      "id": "mg033",
+      "order": 17,
+      "text": "O rei sai furioso ao jardim; Haman, suplicando por sua vida, cai sobre o leito de Ester. Charvona, o eunuco, aponta a forca que Haman erguera para Mordechai — e nela o próprio Haman é enforcado. A ira do rei se acalma.",
+      "text_he": null,
+      "refs": [
+        "Esther 7:7-10"
+      ],
+      "ref_start": "Esther 7:7",
+      "ref_end": "Esther 7:10",
+      "chapter": 7,
+      "verse_start": 7,
+      "verse_end": 10,
+      "sefaria_ref": "Esther 7:7-10",
+      "tags": [
+        "haman",
+        "charvona",
+        "forca",
+        "justiça"
+      ],
+      "topic": "A queda de Haman"
+    },
+    {
+      "id": "mg034",
+      "order": 18,
+      "text": "Ester revela que Mordechai é seu parente, e o rei lhe entrega o anel-selo tirado de Haman. Como um decreto real persa não pode ser revogado, o rei autoriza Ester e Mordechai a redigirem novas cartas: os judeus têm direito de se reunir e defender suas vidas no dia marcado.",
+      "text_he": null,
+      "refs": [
+        "Esther 8:1-14"
+      ],
+      "ref_start": "Esther 8:1",
+      "ref_end": "Esther 8:14",
+      "chapter": 8,
+      "verse_start": 1,
+      "verse_end": 14,
+      "sefaria_ref": "Esther 8:1-14",
+      "tags": [
+        "mordechai",
+        "anel",
+        "decreto",
+        "defesa"
+      ],
+      "topic": "Mordechai elevado e o novo decreto"
+    },
+    {
+      "id": "mg035",
+      "order": 19,
+      "text": "Mordechai sai diante do rei em vestes reais de azul e branco e manto de púrpura; Shushan exulta. Há luz, alegria e honra para os judeus em cada província, e muitos dos povos da terra passam a se identificar com eles, tomados de temor.",
+      "text_he": null,
+      "refs": [
+        "Esther 8:15-17"
+      ],
+      "ref_start": "Esther 8:15",
+      "ref_end": "Esther 8:17",
+      "chapter": 8,
+      "verse_start": 15,
+      "verse_end": 17,
+      "sefaria_ref": "Esther 8:15-17",
+      "tags": [
+        "mordechai",
+        "alegria",
+        "shushan"
+      ],
+      "topic": "Alegria em Shushan"
+    },
+    {
+      "id": "mg036",
+      "order": 20,
+      "text": "No dia 13 de Adar, a sorte se inverte: em vez de serem destruídos, os judeus se defendem e prevalecem sobre seus inimigos. Os dez filhos de Haman caem, e em Shushan a luta se estende ao dia 14, sem que os judeus toquem no saque.",
+      "text_he": null,
+      "refs": [
+        "Esther 9:1-19"
+      ],
+      "ref_start": "Esther 9:1",
+      "ref_end": "Esther 9:19",
+      "chapter": 9,
+      "verse_start": 1,
+      "verse_end": 19,
+      "sefaria_ref": "Esther 9:1-19",
       "tags": [
         "reversão",
-        "purim",
-        "livramento"
+        "defesa",
+        "filhos-de-haman",
+        "adar"
       ],
-      "topic": "Reversão e Purim"
+      "topic": "A defesa dos judeus"
+    },
+    {
+      "id": "mg037",
+      "order": 21,
+      "text": "Mordechai e a rainha Ester registram esses dias e instituem Purim — nome derivado do 'pur' de Haman — como festa anual nos dias 14 e 15 de Adar: dias de banquete e alegria, de enviar porções aos amigos (mishloach manot) e presentes aos pobres (matanot la'evyonim).",
+      "text_he": null,
+      "refs": [
+        "Esther 9:20-32"
+      ],
+      "ref_start": "Esther 9:20",
+      "ref_end": "Esther 9:32",
+      "chapter": 9,
+      "verse_start": 20,
+      "verse_end": 32,
+      "sefaria_ref": "Esther 9:20-32",
+      "tags": [
+        "purim",
+        "mordechai",
+        "ester",
+        "festa",
+        "tzedacá"
+      ],
+      "topic": "A instituição de Purim"
+    },
+    {
+      "id": "mg038",
+      "order": 22,
+      "text": "O livro encerra registrando a grandeza de Achashverosh e a ascensão de Mordechai, o judeu, segundo no reino: buscado pelo bem de seu povo e falando paz a toda a sua descendência.",
+      "text_he": null,
+      "refs": [
+        "Esther 10:1-3"
+      ],
+      "ref_start": "Esther 10:1",
+      "ref_end": "Esther 10:3",
+      "chapter": 10,
+      "verse_start": 1,
+      "verse_end": 3,
+      "sefaria_ref": "Esther 10:1-3",
+      "tags": [
+        "mordechai",
+        "grandeza",
+        "epílogo"
+      ],
+      "topic": "A grandeza de Mordechai"
     }
   ]
 }

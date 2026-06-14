@@ -1843,7 +1843,13 @@ body.atlas-grabbing, body.atlas-grabbing * {
     <span style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3); margin-right:4px;">Visualização</span>
     <button class="pk-view-btn active" id="vbtn-parallel" onclick="pkSetView('parallel', this)">Paralelo ↔</button>
     <button class="pk-view-btn" id="vbtn-hebrew" onclick="pkSetView('hebrew', this)">Só Hebraico</button>
-    <button class="pk-view-btn" id="vbtn-english" onclick="pkSetView('english', this)">Só Inglês</button>
+    <button class="pk-view-btn" id="vbtn-english" onclick="pkSetView('english', this)">Só tradução</button>
+    <span style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3); margin-left:8px;">Tradução</span>
+    <select id="pk-trans-lang" onchange="pkSetTransLang(this.value)" style="background:var(--surface); color:var(--text); border:1px solid var(--border2); border-radius:var(--r); padding:5px 10px; font-size:12px;">
+      <option value="english">English · Inglês</option>
+      <option value="portuguese">Português</option>
+      <option value="spanish">Español</option>
+    </select>
     <div style="flex:1"></div>
     <span id="pk-ref-label" style="font-size:12px; color:var(--text3);"></span>
   </div>
@@ -2767,7 +2773,26 @@ async function atlasOpenCurrentDrawer() {
 
 /* ═══════ PESSUKIM / SEFARIA INTEGRATION ═══════ */
 
-let pkState = { book: 'Genesis', chapter: 1, heTexts: [], enTexts: [], view: 'parallel' };
+// Traduções disponíveis na Sefaria v3 (nome da língua por extenso em inglês como `version`)
+const PK_TRANS = {
+  english:    { version: 'english',    label: 'English · Inglês', short: 'Inglês' },
+  portuguese: { version: 'portuguese', label: 'Português',        short: 'Português' },
+  spanish:    { version: 'spanish',    label: 'Español',          short: 'Español' },
+};
+
+let pkState = {
+  book: 'Genesis', chapter: 1, heTexts: [], trTexts: [], view: 'parallel',
+  transLang: localStorage.getItem('pk-trans-lang') || 'english',
+  transFallback: null
+};
+
+function pkSetTransLang(lang) {
+  if (!PK_TRANS[lang]) return;
+  pkState.transLang = lang;
+  localStorage.setItem('pk-trans-lang', lang);
+  // Recarrega se já houver capítulo na tela
+  if (document.getElementById('pk-reader').style.display !== 'none') pkLoad();
+}
 
 function sefariaTextUrl(ref, version) {
   const path = encodeURIComponent(ref);
@@ -2818,21 +2843,33 @@ async function pkLoad() {
   document.getElementById('pk-loading').style.display = 'flex';
 
   const ref = `${book} ${chapter}`;
-  const urlHe = sefariaTextUrl(ref, 'hebrew');
-  const urlEn = sefariaTextUrl(ref, 'english');
+  pkState.transFallback = null;
+  const transLang = pkState.transLang;
+
+  // Busca uma versão e devolve o array achatado de versículos (vazio se ausente)
+  const fetchVersion = async (version) => {
+    const res = await fetch(sefariaTextUrl(ref, version));
+    const data = await res.json();
+    const ver = data.versions && data.versions[0];
+    if (!ver || ver.text == null) return [];
+    return Array.isArray(ver.text) ? ver.text.flat() : [ver.text];
+  };
 
   try {
-    const [resHe, resEn] = await Promise.all([fetch(urlHe), fetch(urlEn)]);
-    const [dataHe, dataEn] = await Promise.all([resHe.json(), resEn.json()]);
+    const [heArr, trInit] = await Promise.all([
+      fetchVersion('hebrew'),
+      fetchVersion(PK_TRANS[transLang].version)
+    ]);
 
-    const heVer = dataHe.versions && dataHe.versions[0];
-    const enVer = dataEn.versions && dataEn.versions[0];
-
-    let heArr = heVer ? (Array.isArray(heVer.text) ? heVer.text.flat() : [heVer.text]) : [];
-    let enArr = enVer ? (Array.isArray(enVer.text) ? enVer.text.flat() : [enVer.text]) : [];
+    let trArr = trInit;
+    // Fallback: tradução escolhida ausente neste livro/capítulo → Inglês
+    if (trArr.length === 0 && transLang !== 'english') {
+      trArr = await fetchVersion('english');
+      if (trArr.length) pkState.transFallback = 'english';
+    }
 
     pkState.heTexts = heArr;
-    pkState.enTexts = enArr;
+    pkState.trTexts = trArr;
 
     // Build title
     const heTitle = opt.getAttribute('data-he') || '';
@@ -2841,7 +2878,10 @@ async function pkLoad() {
        &nbsp;·&nbsp; Capítulo ${chapter}
        &nbsp;<span style="font-size:16px; opacity:.5; direction:rtl;">${heTitle} פֶּרֶק ${toHebNum(chapter)}</span>`;
 
-    document.getElementById('pk-ref-label').textContent = `${book} ${chapter} · ${heArr.length} versículos`;
+    const fbNote = pkState.transFallback
+      ? ` · tradução ${PK_TRANS[transLang].short} indisponível, exibindo Inglês`
+      : '';
+    document.getElementById('pk-ref-label').textContent = `${book} ${chapter} · ${heArr.length} versículos${fbNote}`;
     document.getElementById('pk-sefaria-link').href = `https://www.sefaria.org/${book}.${chapter}`;
 
     pkRender();
@@ -2858,22 +2898,26 @@ async function pkLoad() {
 function pkRender() {
   const container = document.getElementById('pk-verses');
   container.className = 'view-' + pkState.view;
-  const len = Math.max(pkState.heTexts.length, pkState.enTexts.length);
+  const len = Math.max(pkState.heTexts.length, pkState.trTexts.length);
+
+  // Idioma efetivamente exibido na coluna de tradução (considera fallback)
+  const shownLang = pkState.transFallback || pkState.transLang;
+  const trHeader = PK_TRANS[shownLang].label;
 
   let html = `<div id="pk-verses-header" class="verses-header view-${pkState.view}">
     <div class="vh-num"></div>
     <div class="vh-he">עִבְרִית · Hebraico</div>
-    <div class="vh-en">English · Inglês</div>
+    <div class="vh-en">${trHeader}</div>
   </div>`;
 
   for (let i = 0; i < len; i++) {
     const he = (pkState.heTexts[i] || '').replace(/<[^>]*>/g, '').trim();
-    const en = (pkState.enTexts[i] || '').replace(/<[^>]*>/g, '').trim();
+    const tr = (pkState.trTexts[i] || '').replace(/<[^>]*>/g, '').trim();
     const vNum = i + 1;
     html += `<div class="verse-row" id="verse-${vNum}" onclick="pkHighlight(${vNum})">
       <div class="verse-num">${vNum}</div>
       <div class="verse-he">${he || '<span style="opacity:.3">—</span>'}</div>
-      <div class="verse-en">${en || '<span style="opacity:.3">—</span>'}</div>
+      <div class="verse-en">${tr || '<span style="opacity:.3">—</span>'}</div>
     </div>`;
   }
 
@@ -2911,6 +2955,8 @@ function toHebNum(n) {
 // Init data-driven controls on load
 document.addEventListener('DOMContentLoaded', () => {
   pkUpdateChapters();
+  const tl = document.getElementById('pk-trans-lang');
+  if (tl) tl.value = pkState.transLang;
   renderChumashAtlas('genesis');
   renderTimelineDrilldowns();
 });

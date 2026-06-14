@@ -63,6 +63,11 @@
 - [ ] Define the user-facing workflow for adding images (documented drop-into-`assets/` convention now; local editor with File System Access API later)
 - [ ] Design pass: typography scale, spacing rhythm, and color hierarchy tokens reviewed across all 6 tabs
 - [ ] Design pass: per-era/book visual language (colors, icons) consistent across Estrutura, Timeline, Atlas 2D, and drawer
+
+> **Padrões de layout extraídos dos documentos de referência (2026-06-14).** Do mock "Stories Across the Sky": (1) **herói ilustração + texto lado a lado** com bastante respiro — evolução do `dp-banner`; (2) **caixa de destaque colorida** (estilo "PR Angle") → reusar como bloco "Drash / Comentário" no fato: fundo suave, ícone à esquerda, uma frase-chave; (3) **três colunas com borda-accent à esquerda** para listar personagens/temas de forma escaneável. Da Meguilá autoral do usuário (protótipo de unidade plenamente realizada): ilustração embutida no fluxo por cena, **três camadas de texto empilhadas** (hebraico c/ nikud → transliteração → vernáculo) e **marginália** (resumos laterais). A camada **transliteração** não vem da Sefaria — é autoral; merece um campo próprio no schema (`text_translit`).
+- [ ] Design pass: bloco "Drash/Comentário" colorido por fato (padrão "PR Angle")
+- [ ] Design pass: layout cena = ilustração inline + texto (modelo Meguilá autoral)
+- [ ] Schema: avaliar campo `text_translit` (transliteração autoral, não disponível na Sefaria)
 - [ ] Refine the drawer visual language for additional books and historical periods
 - [ ] Update drawer passage buttons so labels and behavior match the schema wording consistently
 - [ ] Add a lightweight validation script or documented checklist for `facts_count`, missing files, required schema keys, and ref formatting
@@ -75,6 +80,9 @@
 - [ ] Handle Hebrew RTL layout (dir attribute, mirrored components) when HE is active
 - [ ] Extend the content schema for per-language fields (e.g. `text_i18n`, `summary_i18n`, `caption_i18n`) with PT as canonical fallback; document in `data/SCHEMA.md`
 - [ ] Decide content-translation pipeline (manual vs assisted) and stage by book
+
+> **Sefaria multilíngue a nível de versículo — CONFIRMADO (2026-06-14).** A v3 Texts API serve HE/EN/PT/ES. Sintaxe: `version=<nome da língua em inglês>` (`hebrew`, `english`, `portuguese`, `spanish` — o código curto `pt`/`es` retorna vazio). Múltiplos `version=` por chamada são aceitos. Esther tem as 4: PT = *Publicado em 5784, Saymon Pires da Silva*; ES = *Meguilá Ester — Seminario Rabínico*. **Quick win:** parametrizar `version` em `sefariaTextUrl()` (index.html:2772) + seletor de idioma na aba Pessukim → conteúdo bíblico nas 4 línguas sem traduzir nada. **Ressalva:** cobertura PT/ES varia por livro; detectar `warnings` (código 102 = língua ausente) e cair para EN/HE.
+- [ ] Quick win Pessukim: parametrizar `version` por língua + seletor de idioma + fallback via `warnings`
 
 ### User image uploads (CapRover volume)
 - [ ] Configure a CapRover persistent volume mounted over a subdir (e.g. `assets/user/`) and document the path convention
