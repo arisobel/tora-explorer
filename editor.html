@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Torá Explorer — Editor de imagens (autor)</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf7; --surface:#fff; --gold:#b88a24; --gold2:#8f691a;
+    --text:#24211c; --text2:#5f5547; --text3:#8a7d68;
+    --border:rgba(92,76,47,0.16); --border2:rgba(92,76,47,0.28);
+    --green2:#2f754f; --red:#c0492f; --r:8px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:linear-gradient(180deg,#fff 0%,var(--bg) 280px);color:var(--text);
+    font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.6;min-height:100vh;padding:2.5rem 2rem}
+  .wrap{max-width:980px;margin:0 auto}
+  h1{font-family:'Crimson Pro',serif;font-size:28px;color:var(--gold2);font-weight:600;letter-spacing:-.01em}
+  .sub{color:var(--text2);font-size:15.5px;margin-bottom:.4rem}
+  .note{color:var(--text3);font-size:12.5px;border-bottom:1px solid var(--border);padding-bottom:1.5rem;margin-bottom:2rem}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;
+    box-shadow:0 1px 2px rgba(60,48,24,.06),0 1px 4px rgba(60,48,24,.05)}
+  label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin:1rem 0 .35rem}
+  label:first-child{margin-top:0}
+  input,select,textarea{width:100%;background:var(--surface);color:var(--text);border:1px solid var(--border2);
+    border-radius:var(--r);padding:8px 12px;font-size:13px;font-family:inherit}
+  textarea{resize:vertical;min-height:54px}
+  .row{display:flex;gap:10px}.row>*{flex:1}
+  .drop{border:1.5px dashed var(--border2);border-radius:var(--r);padding:1.25rem;text-align:center;
+    color:var(--text3);font-size:13px;cursor:pointer;transition:all .15s;margin-bottom:.5rem}
+  .drop:hover,.drop.over{border-color:var(--gold);color:var(--gold2);background:rgba(184,138,36,.05)}
+  .preview{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--bg);
+    min-height:180px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12.5px;text-align:center;padding:1rem}
+  .preview img{max-width:100%;max-height:340px;display:block}
+  figure{margin-top:1rem}
+  figcaption{font-size:12.5px;color:var(--text2);margin-top:.4rem;font-style:italic}
+  pre{background:#2b2722;color:#f3efe7;border-radius:var(--r);padding:1rem;font-size:12.5px;
+    overflow:auto;line-height:1.5;font-family:ui-monospace,Menlo,Consolas,monospace}
+  .btn{margin-top:.75rem;padding:8px 18px;background:rgba(184,138,36,.12);border:1px solid var(--gold);
+    border-radius:var(--r);color:var(--gold2);font-size:13px;cursor:pointer;transition:all .15s}
+  .btn:hover{background:rgba(184,138,36,.2)}
+  .ok{color:var(--green2)}.err{color:var(--red)}
+  .hint{font-size:12px;color:var(--text3);margin-top:.5rem;line-height:1.5}
+  code{background:rgba(92,76,47,.08);padding:1px 5px;border-radius:4px;font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Editor de imagens · autor</h1>
+  <div class="sub">Gera o bloco <code>visual</code> para colar num JSON, e pré-visualiza a imagem do volume.</div>
+  <div class="note">Ferramenta local (não vai para o deploy). Fluxo: otimize → suba pelo filebrowser → gere o bloco aqui → cole no JSON.
+    Ver <code>docs/04_technical/USER_IMAGE_UPLOADS.md</code>.</div>
+
+  <div class="grid">
+    <!-- FORM -->
+    <div class="card">
+      <div class="drop" id="drop">Arraste uma imagem aqui (só para pré-visualizar localmente e sugerir o nome)</div>
+      <div class="hint" id="localHint"></div>
+
+      <label>Nome do arquivo (em <code>assets/user/</code>)</label>
+      <input id="file" placeholder="ester-banquete-achashverosh.jpg" autocomplete="off">
+
+      <label>Tipo</label>
+      <select id="mtype">
+        <option value="image">image — ilustração (com legenda)</option>
+        <option value="icon">icon — ícone (mask colorido pelo tema)</option>
+      </select>
+
+      <label>Legenda (caption)</label>
+      <textarea id="caption" placeholder="O banquete de Achashverosh — Shushan"></textarea>
+
+      <div class="row">
+        <div>
+          <label>Importância (1–5)</label>
+          <input id="importance" type="number" min="1" max="5" value="4">
+        </div>
+        <div>
+          <label>Base URL (preview)</label>
+          <input id="base" placeholder="https://tora-explorer.lion.app.br">
+        </div>
+      </div>
+      <div class="hint">A pré-visualização da direita carrega <code>BASE/assets/user/NOME</code> — útil para confirmar que o upload no filebrowser funcionou.</div>
+    </div>
+
+    <!-- PREVIEW + OUTPUT -->
+    <div class="card">
+      <label>Pré-visualização (do volume)</label>
+      <div class="preview" id="preview">— informe o nome do arquivo —</div>
+
+      <label style="margin-top:1.25rem">Bloco <code>visual</code> para colar</label>
+      <pre id="out">{ }</pre>
+      <button class="btn" id="copy">Copiar bloco</button>
+      <span id="copied" class="hint"></span>
+
+      <div class="hint" style="margin-top:1rem">
+        Otimize antes de subir:<br>
+        <code>pwsh scripts/optimize-image.ps1 -In "C:\…\foto.png" -Out "nome.jpg"</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const els = ['file','mtype','caption','importance','base'].map($);
+const baseEl = $('base');
+baseEl.value = localStorage.getItem('editor-base') || 'https://tora-explorer.lion.app.br';
+
+function slugify(s){
+  return s.normalize('NFD').replace(/[̀-ͯ]/g,'')
+    .toLowerCase().replace(/\.[^.]+$/,'')
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+}
+
+function render(){
+  const file = $('file').value.trim();
+  const mtype = $('mtype').value;
+  const caption = $('caption').value.trim();
+  const imp = parseInt($('importance').value) || 4;
+  const base = baseEl.value.trim().replace(/\/$/,'');
+  localStorage.setItem('editor-base', base);
+
+  // JSON block
+  const obj = { marker_type: mtype, asset: file ? `assets/user/${file}` : 'assets/user/' };
+  if (caption) obj.caption = caption;
+  obj.importance = Math.min(5, Math.max(1, imp));
+  const lines = ['"visual": {'];
+  const entries = Object.entries(obj);
+  entries.forEach(([k,v],i)=>{
+    const val = typeof v === 'number' ? v : `"${String(v).replace(/"/g,'\\"')}"`;
+    lines.push(`  "${k}": ${val}${i<entries.length-1?',':''}`);
+  });
+  lines.push('}');
+  $('out').textContent = lines.join('\n');
+
+  // preview from volume
+  const pv = $('preview');
+  if (!file) { pv.innerHTML = '— informe o nome do arquivo —'; return; }
+  const url = `${base}/assets/user/${encodeURIComponent(file)}`;
+  pv.innerHTML = '';
+  const img = new Image();
+  img.onload = ()=>{ pv.innerHTML=''; const f=document.createElement('figure');
+    f.appendChild(img); if(caption){const c=document.createElement('figcaption');c.textContent=caption;f.appendChild(c);} pv.appendChild(f); };
+  img.onerror = ()=>{ pv.innerHTML = `<span class="err">não encontrada em<br>${url}<br><br>(suba pelo filebrowser primeiro)</span>`; };
+  img.src = url;
+}
+
+els.forEach(e=>{ e.addEventListener('input',render); e.addEventListener('change',render); });
+
+// drag/drop — preview LOCAL apenas + sugere nome (não faz upload)
+const drop = $('drop');
+['dragover','dragenter'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
+['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
+drop.addEventListener('click',()=>{ const i=document.createElement('input');i.type='file';i.accept='image/*';
+  i.onchange=()=>i.files[0]&&handleLocal(i.files[0]); i.click(); });
+drop.addEventListener('drop',e=>{ const f=e.dataTransfer.files[0]; if(f) handleLocal(f); });
+
+function handleLocal(f){
+  const suggested = slugify(f.name)+'.jpg';
+  if(!$('file').value.trim()) $('file').value = suggested;
+  const objUrl = URL.createObjectURL(f);
+  const kb = Math.round(f.size/1024);
+  $('localHint').innerHTML = `Local: <b>${f.name}</b> (${kb} KB) → nome sugerido <code>${suggested}</code>.
+    ${kb>500?'<span class="err">⚠ otimize antes de subir</span>':'<span class="ok">tamanho ok</span>'}`;
+  const pv=$('preview'); pv.innerHTML='';
+  const img=new Image(); img.onload=()=>{const f2=document.createElement('figure');f2.appendChild(img);
+    const c=document.createElement('figcaption');c.textContent='(pré-visualização local — ainda não enviada)';f2.appendChild(c);pv.appendChild(f2);};
+  img.src=objUrl;
+  render();
+}
+
+$('copy').addEventListener('click',()=>{
+  navigator.clipboard.writeText($('out').textContent).then(()=>{
+    $('copied').textContent='copiado ✓'; $('copied').className='hint ok';
+    setTimeout(()=>$('copied').textContent='',1800);
+  });
+});
+
+render();
+</script>
+</body>
+</html>

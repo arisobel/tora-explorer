@@ -90,9 +90,11 @@
 - [x] Quick win Pessukim: parametrizar `version` por língua + seletor de idioma + fallback via `warnings` (2026-06-14)
 
 ### User image uploads (CapRover volume)
-- [ ] Configure a CapRover persistent volume mounted over a subdir (e.g. `assets/user/`) and document the path convention
-- [ ] Define how uploaded images are referenced from JSON and how captions/style are tagged
-- [ ] Add a smoke-check that a referenced image path resolves (icons baked in image vs user volume)
+**Decision (2026-06-14): author-only + filebrowser sidecar.** App stays pure-static; a separate password-protected filebrowser container writes to a shared host volume; the app serves/references `assets/user/`. Repo side scaffolded; CapRover dashboard side is the author's to do. See `docs/04_technical/USER_IMAGE_UPLOADS.md`.
+- [x] Repo scaffolding — `assets/user/.gitkeep` + `assets/user/README.md` (convention), `scripts/optimize-image.ps1` (resize/compress, tested), nginx `^~ /assets/user/` no-cache block, full setup doc with CapRover steps (2026-06-14)
+- [x] How uploaded images are referenced — confirmed **zero app code**: existing `visualMarkerHTML`/`illustrationHTML` already render any `visual.asset` path; reference `assets/user/<file>.jpg` in a `visual` block (2026-06-14)
+- [ ] **Author to do in CapRover dashboard** — shared persistent dir on both apps (host path e.g. `/captain/data/tora-user-images`), deploy `filebrowser/filebrowser`, set password + subdomain (steps in the doc)
+- [ ] Add a smoke-check that a referenced `assets/user/...` path resolves (today a 404 silently hides via `onerror`)
 
 ### Visual identity themes
 - [ ] Design the theme registry: map `(theme, semantic-id)` → asset path; make the current gold line-art the default theme
@@ -107,7 +109,7 @@
 - [ ] Define the future image model for the Atlas: decide whether images attach to books, milestones, parashiot/units, facts, or multiple node types; store at least image addressing/metadata in SQLite and export JSON references for the static runtime
 - [ ] Build a book/parasha overview view for Genesis using the complete Genesis data
 - [ ] Add search/filter across facts, characters, themes, and refs
-- [ ] Prototype a local `editor.html` / `admin.html` for editing or exporting JSON through forms
+- [~] Prototype a local `editor.html` / `admin.html` for editing or exporting JSON through forms — **first version done (2026-06-14)**: `editor.html` (local-only, not deployed by the selective build) generates a `visual` block to paste, previews the image from the live volume (`BASE/assets/user/…`), and drag-drops a local file for offline preview + slug suggestion + size warning. Future: list volume contents, edit facts/summaries
 
 ## Long Term
 
