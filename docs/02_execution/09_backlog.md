@@ -5,6 +5,12 @@
 - [ ] **Visual layer at every level** — allow user-added images/icons attached to nodes both broadly (structure areas, books, eras/timeline phases — *lato sensu*) and strictly (milestones, parashiot/units, facts, people — *stricto sensu*), used as icons or visual references. Follow `docs/04_technical/CONTENT_VISUAL_STRATEGY.md`: optional `visual` metadata in JSON, binary files under `assets/`, pilot before broad rollout.
 - [ ] **Design/appearance improvement pass** — raise the visual quality of the whole app: typography scale, spacing rhythm, color hierarchy, per-era visual language, Atlas 2D polish, drawer refinement, and responsive review across the 6 tabs.
 
+## Strategic Objectives (2026-06-14)
+
+- [ ] **Internationalization (multi-language site)** — support PT-BR (base), English, Hebrew (RTL), Spanish, and possibly more (user flagged an additional language via "Other" — to confirm). **Scope: interface + curated content** (facts, summaries, captions, themes), not only UI strings. Verse text already arrives HE/EN from Sefaria. Implies: a language switcher; an i18n key system for UI strings; content schema holding per-language fields (e.g. `text` becomes `text_i18n.{lang}` or parallel localized files) with **fallback to PT** when a translation is missing; RTL layout handling for Hebrew. This is a large content-translation effort — stage UI first, then content field-by-field.
+- [ ] **User image uploads via CapRover persistent volume** — let the user add passage illustrations (like the burning bush) without a redeploy. **Mechanism: a CapRover persistent volume mounted over a subdirectory** (e.g. `assets/user/`), NOT over all of `assets/` (that would hide the baked-in icons shipped in the image). Open points to design: how the JSON references the uploaded file, how captions/metadata are entered, and whether a small local `editor.html` helps tag images. Each uploaded image must declare a visual style (ties into the themes objective below) so the gallery keeps a consistent identity.
+- [ ] **Visual identity themes (selectable global styles)** — group both SVG icons and illustration images into **named, globally selectable themes**. The JSON keeps only a *semantic id* (e.g. `ark`, `burning-bush`); a theme registry resolves which file/style actually renders. The current gold line-art SVG set becomes the default theme (e.g. `linha`); future sets (e.g. `preenchido`, `pintura clássica`) swap the whole look at once. The same mechanism tags uploaded images by style so a chosen theme stays coherent across icons and photos. Needs: a theme registry, asset resolution by `(theme, semantic-id)`, and a UI control to switch the active theme.
+
 ## Immediate (Next Cycle)
 
 - [ ] Create `data/parashiot/exodus/10-vayakhel.json` and `11-pekudei.json` (drawer 404s for these)
@@ -62,6 +68,24 @@
 - [ ] Add a lightweight validation script or documented checklist for `facts_count`, missing files, required schema keys, and ref formatting
 
 ## Mid Term
+
+### i18n (multi-language)
+- [ ] Add a UI string catalog (`data/i18n/{lang}.json`) and a `t(key)` helper; extract hardcoded PT strings from `index.html`
+- [ ] Add a language switcher control (persist choice in localStorage) and PT fallback for missing keys
+- [ ] Handle Hebrew RTL layout (dir attribute, mirrored components) when HE is active
+- [ ] Extend the content schema for per-language fields (e.g. `text_i18n`, `summary_i18n`, `caption_i18n`) with PT as canonical fallback; document in `data/SCHEMA.md`
+- [ ] Decide content-translation pipeline (manual vs assisted) and stage by book
+
+### User image uploads (CapRover volume)
+- [ ] Configure a CapRover persistent volume mounted over a subdir (e.g. `assets/user/`) and document the path convention
+- [ ] Define how uploaded images are referenced from JSON and how captions/style are tagged
+- [ ] Add a smoke-check that a referenced image path resolves (icons baked in image vs user volume)
+
+### Visual identity themes
+- [ ] Design the theme registry: map `(theme, semantic-id)` → asset path; make the current gold line-art the default theme
+- [ ] Refactor render to resolve assets by semantic id + active theme instead of hardcoded `assets/icons/<id>.svg` paths in JSON
+- [ ] Add a second icon set as proof of concept (e.g. filled style) and a theme switcher
+- [ ] Tag illustration images by style so a theme stays coherent across icons and photos
 
 - [ ] Refine drawer support for all exposed Chumash, Nach, and Ketuvim sets after UI review
 - [ ] Replace static Chumash event lists with parasha-driven book views

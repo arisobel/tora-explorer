@@ -130,6 +130,11 @@
 - [ ] **Visual layer at every level** — user-added images/icons attached both to broad layers (structure areas, books, eras/timeline phases — *lato sensu*) and to strict elements (milestones, parashiot/units, facts, people — *stricto sensu*), serving as icons or visual references. Implementation path defined in `docs/04_technical/CONTENT_VISUAL_STRATEGY.md` (optional `visual` JSON metadata + `assets/` folder + Genesis pilot first).
 - [ ] **Design/appearance improvement pass** — typography, spacing, color hierarchy, per-era visual language, Atlas 2D polish, drawer refinement, responsive review across the 6 tabs.
 
+### Added 2026-06-14
+- [ ] **Internationalization** — multi-language site: PT-BR (base), EN, HE (RTL), ES (+ possible others). Scope = interface **+ curated content** with PT fallback. Stage UI strings first, then content fields. See backlog for tactical breakdown.
+- [ ] **User image uploads via CapRover persistent volume** — add passage illustrations without redeploy; volume mounted over a subdir (e.g. `assets/user/`), never over all of `assets/`. JSON still references the file; images tagged by visual style.
+- [ ] **Visual identity themes** — group SVG icons + illustration images into named, globally selectable themes; JSON keeps a semantic id and a theme registry resolves the rendered file/style. Current gold line-art becomes the default theme.
+
 ---
 
 ## Next Actions (Short Horizon)
