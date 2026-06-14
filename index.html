@@ -30,6 +30,32 @@
   --r2: 14px;
   --shadow-1: 0 1px 2px rgba(60,48,24,0.06), 0 1px 4px rgba(60,48,24,0.05);
   --shadow-2: 0 2px 6px rgba(60,48,24,0.08), 0 4px 14px rgba(60,48,24,0.07);
+
+  /* Escala tipográfica (base 14px, razão ~1.25) */
+  --text-xs: 11px;
+  --text-sm: 12.5px;
+  --text-base: 14px;
+  --text-md: 15.5px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 34px;
+
+  /* Alturas de linha */
+  --lh-tight: 1.18;
+  --lh-snug: 1.45;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.75;
+
+  /* Escala de espaçamento (ritmo de 4px) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -93,16 +119,23 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 /* HERO */
 
 /* PAGES */
-.page { display: none; padding: 2.5rem 2rem; max-width: 1100px; margin: 0 auto; }
+.page { display: none; padding: var(--space-7) var(--space-6) var(--space-8); max-width: 1100px; margin: 0 auto; }
 .page.active { display: block; }
 
 /* SECTION TITLE */
 .sec-title {
   font-family: 'Crimson Pro', serif;
-  font-size: 24px; font-weight: 600;
-  color: var(--gold2); margin-bottom: 0.2rem;
+  font-size: var(--text-2xl); font-weight: 600;
+  letter-spacing: -0.01em; line-height: var(--lh-tight);
+  color: var(--gold2); margin-bottom: var(--space-2);
 }
-.sec-sub { color: var(--text2); margin-bottom: 1.2rem; }
+.sec-sub {
+  font-size: var(--text-md); color: var(--text2);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--border);
+}
 
 /* ═══════════════════════════════════════
    PAGE 1: ESTRUTURA (Tora Escrita/Oral)
