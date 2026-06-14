@@ -142,8 +142,8 @@
 6. Add selected-state breadcrumb across book, milestone, timeline group, parasha/unit, and fact levels
 7. Validate milestone, timeline group, parasha, and Nach unit links in a repeatable script/check
 8. Add selected/highlight state from drawer back to the Timeline tab
-9. Extend visual markers to Nach books (book + unit levels) and add fact-level markers to Exodus-Deuteronomy key facts; create SVGs for the 7 remaining timeline groups still on emoji (sword, chains, lion, mask, jug, compass, question)
-10. Scope and execute the design improvement pass (tokens review first, then per-tab polish)
+9. (done) Visual layer now covers Chumash (book/parasha/fact) and Nach (book/unit). Optional next visual step: fact-level markers inside Nach units, plus SVGs for the few timeline groups/milestones still on emoji (kashrut, miriam)
+10. Scope and execute the design improvement pass (tokens review first, then per-tab polish) — the other strategic objective, not yet started
 11. Decide the CapRover image-serving strategy for user-added assets (baked into the deploy tar vs. persistent volume mapped over `/usr/share/nginx/html/assets/`)
 
 ---

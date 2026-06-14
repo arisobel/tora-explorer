@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "neviim-acharonim",
   "total_chapters": 66,
+  "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Yeshaya — o profeta da consolação" },
   "timeline": {
     "anno_mundi_start": 3140,
     "anno_mundi_end": 3205,
@@ -18,6 +19,7 @@
   "units": [
     {
       "id": "zion-indictment-call",
+      "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "A brasa nos lábios do profeta" },
       "index": 1,
       "label": "Acusação de Tzion e chamado profético",
       "label_pt": "Crítica moral, visão de Tzion, cântico da vinha e envio de Yeshaya",
@@ -35,6 +37,7 @@
     },
     {
       "id": "immanuel-davidic-hope",
+      "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "Immanuel — o sinal" },
       "index": 2,
       "label": "Immanuel e esperança davídica",
       "label_pt": "Achaz, ameaça aramita, sinal de Immanuel e promessa de governo justo",
@@ -52,6 +55,7 @@
     },
     {
       "id": "oracles-against-nations",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "Oráculos contra as nações" },
       "index": 3,
       "label": "Oráculos contra as nações",
       "label_pt": "Bavel, Assíria, Moav, Damasco, Egito, Tzor e o Dia de Deus",
@@ -69,6 +73,7 @@
     },
     {
       "id": "world-judgment-zion-songs",
+      "visual": { "marker_type": "icon", "icon": "mountains", "asset": "assets/icons/mountains.svg", "caption": "Os cânticos de Tzion" },
       "index": 4,
       "label": "Julgamento universal e cânticos de Tzion",
       "label_pt": "A terra abalada, cidade forte, banquete futuro e ressurreição simbólica",
@@ -86,6 +91,7 @@
     },
     {
       "id": "woes-assyria-trust",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Confiar em Hashem" },
       "index": 5,
       "label": "Ais, Assíria e confiança",
       "label_pt": "Advertências contra alianças falsas, promessa de rei justo e retorno a Tzion",
@@ -103,6 +109,7 @@
     },
     {
       "id": "hezekiah-assyria-babylon",
+      "visual": { "marker_type": "icon", "icon": "wall", "asset": "assets/icons/wall.svg", "caption": "O cerco de Yerushalayim" },
       "index": 6,
       "label": "Chizkiyahu, Assíria e Bavel",
       "label_pt": "Cerco de Sancheriv, oração de Chizkiyahu, cura e sinal de Bavel",
@@ -120,6 +127,7 @@
     },
     {
       "id": "comfort-cyrus-servant",
+      "visual": { "marker_type": "icon", "icon": "olive-branch", "asset": "assets/icons/olive-branch.svg", "caption": "Consolai meu povo" },
       "index": 7,
       "label": "Consolo, Ciro e o servo",
       "label_pt": "Consolação de Israel, unicidade divina, queda dos ídolos e missão do servo",
@@ -137,6 +145,7 @@
     },
     {
       "id": "servant-zion-restoration",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Luz para as nações" },
       "index": 8,
       "label": "Servo, Tzion e restauração final",
       "label_pt": "Servo sofredor, retorno, nova aliança, justiça social e novos céus e terra",

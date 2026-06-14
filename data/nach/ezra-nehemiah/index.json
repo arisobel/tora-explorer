@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "ketuvim",
   "total_chapters": 23,
+  "visual": { "marker_type": "icon", "icon": "wall", "asset": "assets/icons/wall.svg", "caption": "Ezra e Nechemia — o retorno e as muralhas" },
   "timeline": {
     "anno_mundi_start": 3408,
     "anno_mundi_end": 3448,
@@ -30,6 +31,7 @@
   "units": [
     {
       "id": "return-cyrus",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "O retorno sob Ciro" },
       "index": 1,
       "label": "Retorno sob Ciro",
       "label_pt": "Decreto persa, vasos do Templo e lista dos retornados",
@@ -53,6 +55,7 @@
     },
     {
       "id": "temple-rebuilt",
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "O Segundo Templo" },
       "index": 2,
       "label": "Segundo Templo reconstruído",
       "label_pt": "Altar, fundação, oposição e dedicação",
@@ -77,6 +80,7 @@
     },
     {
       "id": "ezra-torah-reform",
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Ezra lê a Torá" },
       "index": 3,
       "label": "Ezra, Torá e reforma",
       "label_pt": "Chegada do escriba, ensino e crise comunitária",
@@ -99,6 +103,7 @@
     },
     {
       "id": "nehemiah-walls",
+      "visual": { "marker_type": "icon", "icon": "wall", "asset": "assets/icons/wall.svg", "caption": "A reconstrução das muralhas" },
       "index": 4,
       "label": "Nechemia e as muralhas",
       "label_pt": "Chamado, oposição, justiça social e conclusão dos muros",
@@ -122,6 +127,7 @@
     },
     {
       "id": "torah-covenant-renewal",
+      "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "A renovação da aliança" },
       "index": 5,
       "label": "Leitura da Torá e aliança",
       "label_pt": "Assembleia, Sucot, confissão e compromisso comunitário",
@@ -145,6 +151,7 @@
     },
     {
       "id": "jerusalem-dedication-reforms",
+      "visual": { "marker_type": "icon", "icon": "shofar", "asset": "assets/icons/shofar.svg", "caption": "A dedicação de Yerushalayim" },
       "index": 6,
       "label": "Yerushalayim, dedicação e reformas",
       "label_pt": "Povoamento, dedicação dos muros e ajustes finais",

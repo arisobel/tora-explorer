@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "neviim-rishonim",
   "total_chapters": 55,
+  "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Shemuel — o nascimento da monarquia" },
   "timeline": {
     "anno_mundi_start": 2830,
     "anno_mundi_end": 2924,
@@ -18,6 +19,7 @@
   "units": [
     {
       "id": "samuel-birth-ark-crisis",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "O chamado de Shemuel" },
       "index": 1,
       "label": "Nascimento de Shemuel e crise da arca",
       "label_pt": "Channah, Eli, o chamado profético e a arca entre os pelishtim",
@@ -35,6 +37,7 @@
     },
     {
       "id": "saul-chosen-king",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Shaul é escolhido rei" },
       "index": 2,
       "label": "Shaul é escolhido rei",
       "label_pt": "Pedido por rei, unção de Shaul e renovação da monarquia",
@@ -52,6 +55,7 @@
     },
     {
       "id": "saul-rejected-david-anointed",
+      "visual": { "marker_type": "icon", "icon": "drop", "asset": "assets/icons/drop.svg", "caption": "David é ungido" },
       "index": 3,
       "label": "Shaul rejeitado e David ungido",
       "label_pt": "Falhas de Shaul, Amalek, unção de David e Golias",
@@ -69,6 +73,7 @@
     },
     {
       "id": "david-saul-conflict",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "David e Golias" },
       "index": 4,
       "label": "David perseguido por Shaul",
       "label_pt": "Amizade com Yonatan, fuga, perseguição e misericórdia de David",
@@ -86,6 +91,7 @@
     },
     {
       "id": "david-exile-saul-fall",
+      "visual": { "marker_type": "icon", "icon": "cave", "asset": "assets/icons/cave.svg", "caption": "David foge para as cavernas" },
       "index": 5,
       "label": "Exílio de David e queda de Shaul",
       "label_pt": "Avigayil, Ziklag, consulta proibida e morte de Shaul",
@@ -103,6 +109,7 @@
     },
     {
       "id": "david-king-jerusalem-covenant",
+      "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "A aliança davídica" },
       "index": 6,
       "label": "David rei, Jerusalém e aliança",
       "label_pt": "De Chevron a Jerusalém, arca e promessa davídica",
@@ -120,6 +127,7 @@
     },
     {
       "id": "david-house-crisis",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "A crise na casa de David" },
       "index": 7,
       "label": "Vitórias e crise da casa de David",
       "label_pt": "Bat Sheva, Natan, Amnon, Tamar e Avshalom",
@@ -137,6 +145,7 @@
     },
     {
       "id": "david-restoration-final-appendix",
+      "visual": { "marker_type": "icon", "icon": "harp", "asset": "assets/icons/harp.svg", "caption": "Os cânticos de David" },
       "index": 8,
       "label": "Restauração e apêndices finais",
       "label_pt": "Retorno de David, cântico, últimas palavras e censo",

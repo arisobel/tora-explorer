@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "ketuvim",
   "total_chapters": 31,
+  "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Mishlei — o livro da sabedoria" },
   "timeline": {
     "anno_mundi_start": 2924,
     "anno_mundi_end": 3205,
@@ -32,6 +33,7 @@
   "units": [
     {
       "id": "instructions-wisdom",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "O chamado da sabedoria" },
       "index": 1,
       "label": "Instruções e Sabedoria",
       "label_pt": "Chamados paternos, caminhos rivais e voz pública da sabedoria",
@@ -55,6 +57,7 @@
     },
     {
       "id": "solomonic-proverbs",
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Provérbios de Shlomo" },
       "index": 2,
       "label": "Provérbios de Shlomo",
       "label_pt": "Contrastes entre justo e ímpio na vida cotidiana",
@@ -77,6 +80,7 @@
     },
     {
       "id": "sayings-of-wise",
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Os ditos dos sábios" },
       "index": 3,
       "label": "Ditos dos sábios",
       "label_pt": "Conselhos sobre prudência, disciplina e responsabilidade",
@@ -98,6 +102,7 @@
     },
     {
       "id": "hezekiah-collection",
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "A coleção de Chizkiyahu" },
       "index": 4,
       "label": "Coleção de Chizkiyahu",
       "label_pt": "Provérbios de Shlomo copiados pelos homens de Chizkiyahu",
@@ -120,6 +125,7 @@
     },
     {
       "id": "agur-sayings",
+      "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "As palavras de Agur" },
       "index": 5,
       "label": "Palavras de Agur",
       "label_pt": "Humildade, suficiência e observações da criação",
@@ -140,6 +146,7 @@
     },
     {
       "id": "lemuel-woman-valor",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Eshet Chayil — a mulher de valor" },
       "index": 6,
       "label": "Lemuel e a mulher de valor",
       "label_pt": "Justiça real e poema final sobre força, sabedoria e temor de Deus",

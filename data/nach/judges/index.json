@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "neviim-rishonim",
   "total_chapters": 21,
+  "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "Shoftim — os ciclos dos juízes" },
   "timeline": {
     "anno_mundi_start": 2516,
     "anno_mundi_end": 2881,
@@ -18,6 +19,7 @@
   "units": [
     {
       "id": "transition-and-first-judges",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "Os primeiros juízes" },
       "index": 1,
       "label": "Transição e primeiros juízes",
       "label_pt": "Da geração pós-Yehoshua a Otniel, Ehud e Shamgar",
@@ -35,6 +37,7 @@
     },
     {
       "id": "deborah-barak-yael",
+      "visual": { "marker_type": "icon", "icon": "tree", "asset": "assets/icons/tree.svg", "caption": "Devorah sob a tamareira" },
       "index": 2,
       "label": "Devorah, Barak e Yael",
       "label_pt": "Vitória sobre Sisera e cântico de Devorah",
@@ -52,6 +55,7 @@
     },
     {
       "id": "gideon-cycle",
+      "visual": { "marker_type": "icon", "icon": "torch", "asset": "assets/icons/torch.svg", "caption": "As tochas de Gidon" },
       "index": 3,
       "label": "O ciclo de Gidon",
       "label_pt": "Chamado, vitória sobre Midian e ambiguidade pós-vitória",
@@ -69,6 +73,7 @@
     },
     {
       "id": "abimelech-minor-judges-jephthah",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Avimelech e Yiftach" },
       "index": 4,
       "label": "Avimelech, juízes menores e Yiftach",
       "label_pt": "Violência interna, crise com Amon e voto de Yiftach",
@@ -86,6 +91,7 @@
     },
     {
       "id": "samson-cycle",
+      "visual": { "marker_type": "icon", "icon": "lion", "asset": "assets/icons/lion.svg", "caption": "Shimshon e o leão" },
       "index": 5,
       "label": "O ciclo de Shimshon",
       "label_pt": "Nascimento anunciado, conflitos com Pelishtim e queda em Gaza",
@@ -103,6 +109,7 @@
     },
     {
       "id": "micah-idol-dan-migration",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "A migração de Dan" },
       "index": 6,
       "label": "O ídolo de Michah e a migração de Dan",
       "label_pt": "Culto privado, levita contratado e santuário irregular em Dan",
@@ -120,6 +127,7 @@
     },
     {
       "id": "gibeah-civil-war",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "A guerra civil de Givah" },
       "index": 7,
       "label": "Givah e guerra civil",
       "label_pt": "A concubina em Givah, guerra contra Binyamin e reconstrução tribal",

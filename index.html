@@ -3830,6 +3830,10 @@ function _drawerRenderParasha(data, context = null) {
   const ec    = eraOf(timeline.era);
   const ruler = _buildRuler(idx.parashiot, total, identity.id);
 
+  // visual do cabeçalho: o do próprio arquivo tem precedência; senão usa o do índice (Nach define no index.json)
+  const idxEntry = (idx.parashiot || []).find(p => p.id === identity.id);
+  const headerVisual = data.visual || (idxEntry && idxEntry.visual) || null;
+
   const themesHTML = (summary.themes || []).map(t => `<span class="dp-theme">${t}</span>`).join('');
   const highlightedFacts = new Set((context && context.factIds) || []);
 
@@ -3876,9 +3880,9 @@ function _drawerRenderParasha(data, context = null) {
   const spanAM = timeline.anno_mundi_end - timeline.anno_mundi_start;
   _drawerSetBody(`
     <div class="dp-header">
-      ${data.visual && data.visual.marker_type === 'image'
-        ? `<div class="dp-banner"><img src="${data.visual.asset}" alt="${(data.visual.caption || '').replace(/"/g, '&quot;')}" onerror="this.closest('.dp-banner').style.display='none'"></div>`
-        : (data.visual && visualMarkerHTML(data.visual) ? `<div class="dp-visual">${visualMarkerHTML(data.visual)}</div>` : '')}
+      ${headerVisual && headerVisual.marker_type === 'image'
+        ? `<div class="dp-banner"><img src="${headerVisual.asset}" alt="${(headerVisual.caption || '').replace(/"/g, '&quot;')}" onerror="this.closest('.dp-banner').style.display='none'"></div>`
+        : (headerVisual && visualMarkerHTML(headerVisual) ? `<div class="dp-visual">${visualMarkerHTML(headerVisual)}</div>` : '')}
       <div class="dp-he">${identity.hebrew || ''}</div>
       <div class="dp-name">${identity.name}</div>
       <div class="dp-range">${range.ref_start} – ${range.ref_end} &nbsp;·&nbsp; ${timeline.anno_mundi_start}–${timeline.anno_mundi_end} AM</div>

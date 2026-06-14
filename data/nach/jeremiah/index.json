@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "neviim-acharonim",
   "total_chapters": 52,
+  "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "Yirmiyahu — o profeta das lágrimas" },
   "timeline": {
     "anno_mundi_start": 3298,
     "anno_mundi_end": 3339,
@@ -18,6 +19,7 @@
   "units": [
     {
       "id": "call-and-early-warnings",
+      "visual": { "marker_type": "icon", "icon": "tree", "asset": "assets/icons/tree.svg", "caption": "A vara de amendoeira" },
       "index": 1,
       "label": "Chamado e advertências iniciais",
       "label_pt": "Vocação de Yirmiyahu, infidelidade de Yehudá e primeiros apelos à teshuvah",
@@ -35,6 +37,7 @@
     },
     {
       "id": "temple-sermon-false-security",
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "O sermão do Templo" },
       "index": 2,
       "label": "Sermão do Templo e falsa segurança",
       "label_pt": "Crítica ao culto vazio, idolatria e confiança automática no Templo",
@@ -52,6 +55,7 @@
     },
     {
       "id": "broken-covenant-confessions",
+      "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "A aliança quebrada" },
       "index": 3,
       "label": "Aliança quebrada e confissões",
       "label_pt": "Conspiração, dores do profeta, seca, sinais pessoais e chamado ao Shabat",
@@ -69,6 +73,7 @@
     },
     {
       "id": "potter-scroll-and-conflict",
+      "visual": { "marker_type": "icon", "icon": "bowl", "asset": "assets/icons/bowl.svg", "caption": "O oleiro e o vaso" },
       "index": 4,
       "label": "Oleiro, rolo e conflito",
       "label_pt": "Sinais do oleiro, vaso quebrado, prisão, rolo queimado e anúncio dos 70 anos",
@@ -86,6 +91,7 @@
     },
     {
       "id": "yoke-false-prophets-restoration",
+      "visual": { "marker_type": "icon", "icon": "chains", "asset": "assets/icons/chains.svg", "caption": "O jugo do profeta" },
       "index": 5,
       "label": "Jugo, falsos profetas e restauração",
       "label_pt": "Aceitar Bavel, carta aos exilados, promessa de retorno e nova aliança",
@@ -103,6 +109,7 @@
     },
     {
       "id": "final-siege-and-fall",
+      "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "A queda de Yerushalayim" },
       "index": 6,
       "label": "Cerco final e queda",
       "label_pt": "Tzidkiyahu, quebra de libertação, prisão de Yirmiyahu e queda de Yerushalayim",
@@ -120,6 +127,7 @@
     },
     {
       "id": "after-destruction-egypt",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "A descida ao Egito" },
       "index": 7,
       "label": "Depois da destruição e descida ao Egito",
       "label_pt": "Gedalyahu, fuga para o Egito, últimos avisos e palavra a Baruch",
@@ -137,6 +145,7 @@
     },
     {
       "id": "nations-and-historical-appendix",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "Oráculos contra as nações" },
       "index": 8,
       "label": "Nações e apêndice histórico",
       "label_pt": "Oráculos contra nações, queda de Bavel e relato final da destruição",

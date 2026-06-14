@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "ketuvim",
   "total_chapters": 150,
+  "visual": { "marker_type": "icon", "icon": "harp", "asset": "assets/icons/harp.svg", "caption": "Tehilim — o livro dos louvores" },
   "timeline": {
     "anno_mundi_start": 2884,
     "anno_mundi_end": 5785,
@@ -31,6 +32,7 @@
   "units": [
     {
       "id": "book-one-davidic-prayer",
+      "visual": { "marker_type": "icon", "icon": "harp", "asset": "assets/icons/harp.svg", "caption": "Livro I — orações de David" },
       "index": 1,
       "label": "Livro I · Oração davídica",
       "label_pt": "Do caminho justo à confiança do pastor",
@@ -53,6 +55,7 @@
     },
     {
       "id": "book-two-longing-kingship",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Livro II — sede e realeza" },
       "index": 2,
       "label": "Livro II · Sede e realeza",
       "label_pt": "Anseio por Deus, arrependimento e oração pelo rei",
@@ -75,6 +78,7 @@
     },
     {
       "id": "book-three-sanctuary-crisis",
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "Livro III — santuário e crise" },
       "index": 3,
       "label": "Livro III · Santuário e crise",
       "label_pt": "Perguntas sobre prosperidade, memória, presença e aliança davídica",
@@ -97,6 +101,7 @@
     },
     {
       "id": "book-four-eternal-kingship",
+      "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Livro IV — realeza eterna" },
       "index": 4,
       "label": "Livro IV · Realeza eterna",
       "label_pt": "Fragilidade humana, Shabat, louvor e compaixão",
@@ -118,6 +123,7 @@
     },
     {
       "id": "book-five-return-hallel",
+      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Livro V — retorno e Hallel" },
       "index": 5,
       "label": "Livro V · Retorno e Hallel",
       "label_pt": "Gratidão, amor à Torá, retorno a Tzion e louvor final",

@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "ketuvim",
   "total_chapters": 39,
+  "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "As Cinco Meguilot" },
   "timeline": {
     "anno_mundi_start": 2516,
     "anno_mundi_end": 3409,
@@ -32,6 +33,7 @@
   "units": [
     {
       "id": "song-of-songs-love",
+      "visual": { "marker_type": "icon", "icon": "heart", "asset": "assets/icons/heart.svg", "caption": "Shir HaShirim — o cântico do amor" },
       "index": 1,
       "label": "Shir HaShirim · Amor",
       "label_pt": "Poema de desejo, busca, presença e amor forte",
@@ -55,6 +57,7 @@
     },
     {
       "id": "ruth-loyalty-david",
+      "visual": { "marker_type": "icon", "icon": "wheat", "asset": "assets/icons/wheat.svg", "caption": "Rut nos campos de Boaz" },
       "index": 2,
       "label": "Rut · Lealdade e David",
       "label_pt": "Fome, retorno, bondade de Boaz e genealogia davídica",
@@ -79,6 +82,7 @@
     },
     {
       "id": "lamentations-destruction-hope",
+      "visual": { "marker_type": "icon", "icon": "drop", "asset": "assets/icons/drop.svg", "caption": "As lágrimas de Eichah" },
       "index": 3,
       "label": "Eichah · Destruição e esperança",
       "label_pt": "Lamento por Yerushalayim, dor coletiva e pedido de retorno",
@@ -101,6 +105,7 @@
     },
     {
       "id": "ecclesiastes-time-meaning",
+      "visual": { "marker_type": "icon", "icon": "hourglass", "asset": "assets/icons/hourglass.svg", "caption": "Kohelet — tempo e sentido" },
       "index": 4,
       "label": "Kohelet · Tempo e sentido",
       "label_pt": "Limites do esforço humano, dádivas da vida e temor de Deus",
@@ -121,6 +126,7 @@
     },
     {
       "id": "esther-purim-deliverance",
+      "visual": { "marker_type": "icon", "icon": "mask", "asset": "assets/icons/mask.svg", "caption": "Ester e o milagre de Purim" },
       "index": 5,
       "label": "Ester · Purim e livramento",
       "label_pt": "Palácio persa, decreto de Haman, coragem de Ester e reversão",

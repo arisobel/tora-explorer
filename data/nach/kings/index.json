@@ -5,6 +5,7 @@
   "corpus": "nach",
   "division": "neviim-rishonim",
   "total_chapters": 47,
+  "visual": { "marker_type": "icon", "icon": "crown", "asset": "assets/icons/crown.svg", "caption": "Melachim — os reis e o Templo" },
   "timeline": {
     "anno_mundi_start": 2924,
     "anno_mundi_end": 3339,
@@ -18,6 +19,7 @@
   "units": [
     {
       "id": "solomon-consolidation-wisdom",
+      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "A sabedoria de Shlomo" },
       "index": 1,
       "label": "Shlomo consolida o reino",
       "label_pt": "Sucessão de David, sabedoria de Shlomo e organização do reino",
@@ -35,6 +37,7 @@
     },
     {
       "id": "temple-built-dedicated",
+      "visual": { "marker_type": "icon", "icon": "mishkan", "asset": "assets/icons/mishkan.svg", "caption": "O Primeiro Templo" },
       "index": 2,
       "label": "Construção e dedicação do Templo",
       "label_pt": "Aliança com Chiram, construção, objetos sagrados e oração de dedicação",
@@ -52,6 +55,7 @@
     },
     {
       "id": "solomon-decline-kingdom-split",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "A divisão do reino" },
       "index": 3,
       "label": "Declínio de Shlomo e divisão do reino",
       "label_pt": "Riqueza, idolatria, profecia de ruptura e cisão entre Yehudá e Israel",
@@ -69,6 +73,7 @@
     },
     {
       "id": "northern-southern-kings-elijah",
+      "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "Eliyahu e o fogo do céu" },
       "index": 4,
       "label": "Reinos divididos e Eliyahu",
       "label_pt": "Profetas, reis de Yehudá e Israel, Achav, Izevel e o desafio no Carmel",
@@ -86,6 +91,7 @@
     },
     {
       "id": "ahab-elisha-transition",
+      "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "Eliyahu sobe ao céu" },
       "index": 5,
       "label": "Achav, queda e transição para Elisha",
       "label_pt": "Guerras de Achav, vinha de Navot, morte de Achav e ascensão de Elisha",
@@ -103,6 +109,7 @@
     },
     {
       "id": "elisha-and-jehu",
+      "visual": { "marker_type": "icon", "icon": "sword", "asset": "assets/icons/sword.svg", "caption": "A revolução de Yehu" },
       "index": 6,
       "label": "Elisha e a revolução de Yehu",
       "label_pt": "Milagres de Elisha, Naaman, cerco de Shomron e queda da casa de Achav",
@@ -120,6 +127,7 @@
     },
     {
       "id": "kingdoms-to-israel-exile",
+      "visual": { "marker_type": "icon", "icon": "chains", "asset": "assets/icons/chains.svg", "caption": "O exílio de Israel" },
       "index": 7,
       "label": "Dos reis posteriores ao exílio de Israel",
       "label_pt": "Atalyah, Yoash, instabilidade dos reinos e queda de Shomron",
@@ -137,6 +145,7 @@
     },
     {
       "id": "judah-reform-exile",
+      "visual": { "marker_type": "icon", "icon": "scroll", "asset": "assets/icons/scroll.svg", "caption": "O rolo achado no Templo" },
       "index": 8,
       "label": "Yehudá: reformas, cerco e exílio",
       "label_pt": "Chizkiyahu, Menashe, Yoshiyahu, queda de Yerushalayim e exílio babilônico",
