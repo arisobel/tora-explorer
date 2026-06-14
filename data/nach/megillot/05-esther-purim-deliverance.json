@@ -148,7 +148,12 @@
         "decreto",
         "vashti"
       ],
-      "topic": "O conselho de Memuchan e o decreto"
+      "topic": "O conselho de Memuchan e o decreto",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/conselho-memuchan.jpg",
+        "importance": 4
+      }
     },
     {
       "id": "mg020",
@@ -196,7 +201,12 @@
         "rainha",
         "coroa"
       ],
-      "topic": "Ester torna-se rainha"
+      "topic": "Ester torna-se rainha",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/ester-coroada.jpg",
+        "importance": 4
+      }
     },
     {
       "id": "mg022",
@@ -219,7 +229,12 @@
         "conspiração",
         "crônicas"
       ],
-      "topic": "A conspiração contra o rei"
+      "topic": "A conspiração contra o rei",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/conspiracao-relatada.jpg",
+        "importance": 4
+      }
     },
     {
       "id": "mg023",
@@ -241,7 +256,12 @@
         "recusa",
         "ódio"
       ],
-      "topic": "Haman promovido e o ódio a Mordechai"
+      "topic": "Haman promovido e o ódio a Mordechai",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/haman-ofendido.jpg",
+        "importance": 4
+      }
     },
     {
       "id": "mg024",
