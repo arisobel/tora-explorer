@@ -3263,6 +3263,17 @@ document.addEventListener('keydown', e => {
 }
 .drawer.open { transform: translateX(0); }
 
+/* Em HE/RTL o drawer abre pela ESQUERDA (coerência de navegação RTL).
+   O conteúdo segue LTR pois ainda está em PT, mas o painel é espelhado. */
+body.rtl #drawer { direction: ltr; }
+body.rtl .drawer {
+  left: 0; right: auto;
+  border-left: none; border-right: 1px solid var(--border2);
+  transform: translateX(-100%);
+  box-shadow: 18px 0 46px rgba(62,48,24,0.14);
+}
+body.rtl .drawer.open { transform: translateX(0); }
+
 .drawer-head {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
