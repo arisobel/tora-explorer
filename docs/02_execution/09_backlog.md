@@ -75,9 +75,10 @@
 ## Mid Term
 
 ### i18n (multi-language)
-- [ ] Add a UI string catalog (`data/i18n/{lang}.json`) and a `t(key)` helper; extract hardcoded PT strings from `index.html`
-- [ ] Add a language switcher control (persist choice in localStorage) and PT fallback for missing keys
-- [ ] Handle Hebrew RTL layout (dir attribute, mirrored components) when HE is active
+- [x] Add a UI string catalog (`data/i18n/{lang}.json`) and a `t(key)` helper; extract hardcoded PT strings from `index.html` — PT is canonical (inline text); EN/ES/HE catalogs (81 keys each) keyed by exact PT string; selector-based engine translates static chrome via text nodes (preserves badges/icons); `t(key, ptDefault)` for dynamic strings (2026-06-14)
+- [x] Add a language switcher control (persist choice in localStorage) and PT fallback for missing keys — global 🌐 PT/EN/ES/עב switch in `<nav>`; `setLang()` persists `site-lang`; unknown keys fall back to PT automatically (2026-06-14)
+- [~] Handle Hebrew RTL layout — basic `dir=rtl` + `body.rtl` tweaks done; deeper mirrored components (drawer, atlas, timeline spine) still to review
+- [ ] **Interface coverage gaps (deferred from first slice)** — translate via `t()` the dynamically-rendered chrome (atlas map title/sub, zoom label Macro/Meso/Micro, person/theme placeholders, pk-error/ref-label, drawer button labels) and the dense reference text treated as content for now (Estrutura chip tooltips, Timeline event titles/gerações, rabbi names' Hebrew forms)
 - [ ] Extend the content schema for per-language fields (e.g. `text_i18n`, `summary_i18n`, `caption_i18n`) with PT as canonical fallback; document in `data/SCHEMA.md`
 - [ ] Decide content-translation pipeline (manual vs assisted) and stage by book
 

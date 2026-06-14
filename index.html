@@ -74,6 +74,22 @@ nav {
 .nav-tab:hover { color: var(--gold2); }
 .nav-tab.active { color: var(--gold2); border-bottom-color: var(--gold); }
 
+/* Seletor global de idioma */
+.lang-switch { display: flex; align-items: center; gap: 2px; margin-left: 1rem; flex-shrink: 0; }
+.lang-switch .lang-globe { font-size: 13px; opacity: .55; margin-right: 4px; }
+.lang-btn {
+  padding: 3px 8px; border-radius: 14px; font-size: 11px; font-weight: 600;
+  letter-spacing: .04em; cursor: pointer; color: var(--text3);
+  background: none; border: 1px solid transparent; transition: all .15s;
+}
+.lang-btn:hover { color: var(--gold2); }
+.lang-btn.active { color: var(--gold2); background: rgba(201,168,76,0.12); border-color: var(--gold); }
+
+/* RTL (hebraico) */
+body.rtl .sec-title, body.rtl .sec-sub { direction: rtl; text-align: right; }
+body.rtl .drill-path { direction: rtl; }
+body.rtl .verse-en { direction: rtl; text-align: right; }
+
 /* HERO */
 
 /* PAGES */
@@ -978,12 +994,19 @@ body.atlas-grabbing, body.atlas-grabbing * {
 <nav>
   <a class="nav-logo" href="#">תּוֹרָה Explorer</a>
   <div class="nav-tabs">
-    <button class="nav-tab active" onclick="showPage('estrutura', this)">Estrutura</button>
-    <button class="nav-tab" onclick="showPage('timeline', this)">Linha do Tempo</button>
-    <button class="nav-tab" onclick="showPage('atlas', this)">Atlas 2D</button>
-    <button class="nav-tab" onclick="showPage('mishna', this)">Mishna &amp; Guemara</button>
-    <button class="nav-tab" onclick="showPage('chumash', this)">Chumash — 5 Livros</button>
-    <button class="nav-tab" onclick="showPage('pessukim', this)">Pessukim — Versículos</button>
+    <button class="nav-tab active" data-page="estrutura" onclick="showPage('estrutura', this)">Estrutura</button>
+    <button class="nav-tab" data-page="timeline" onclick="showPage('timeline', this)">Linha do Tempo</button>
+    <button class="nav-tab" data-page="atlas" onclick="showPage('atlas', this)">Atlas 2D</button>
+    <button class="nav-tab" data-page="mishna" onclick="showPage('mishna', this)">Mishna &amp; Guemara</button>
+    <button class="nav-tab" data-page="chumash" onclick="showPage('chumash', this)">Chumash — 5 Livros</button>
+    <button class="nav-tab" data-page="pessukim" onclick="showPage('pessukim', this)">Pessukim — Versículos</button>
+  </div>
+  <div class="lang-switch" role="group" aria-label="Idioma do site">
+    <span class="lang-globe" aria-hidden="true">🌐</span>
+    <button class="lang-btn active" data-lang="pt" onclick="setLang('pt')">PT</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+    <button class="lang-btn" data-lang="he" onclick="setLang('he')">עב</button>
   </div>
 </nav>
 
@@ -1777,7 +1800,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   <!-- Book / Chapter selector -->
   <div style="display:flex; gap:12px; align-items:flex-end; flex-wrap:wrap; margin-bottom:1.5rem;">
     <div style="display:flex; flex-direction:column; gap:5px;">
-      <label style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3)">Livro</label>
+      <label class="i18n-t" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3)">Livro</label>
       <select id="pk-book" onchange="pkUpdateChapters()" style="background:var(--surface); color:var(--text); border:1px solid var(--border2); border-radius:var(--r); padding:6px 12px; font-size:13px; min-width:180px;">
         <optgroup label="Chumash — תּוֹרָה">
           <option value="Genesis" data-he="בְּרֵאשִׁית" data-chapters="50">Bereshit · Gênesis</option>
@@ -1827,24 +1850,24 @@ body.atlas-grabbing, body.atlas-grabbing * {
       </select>
     </div>
     <div style="display:flex; flex-direction:column; gap:5px;">
-      <label style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3)">Capítulo</label>
+      <label class="i18n-t" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3)">Capítulo</label>
       <select id="pk-chapter" style="background:var(--surface); color:var(--text); border:1px solid var(--border2); border-radius:var(--r); padding:6px 12px; font-size:13px; min-width:90px;"></select>
     </div>
-    <button onclick="pkLoad()" style="padding:8px 20px; background:rgba(201,168,76,0.12); border:1px solid var(--gold); border-radius:var(--r); color:var(--gold2); font-size:13px; cursor:pointer; transition:all .2s; height:36px;">
+    <button class="i18n-t" onclick="pkLoad()" style="padding:8px 20px; background:rgba(201,168,76,0.12); border:1px solid var(--gold); border-radius:var(--r); color:var(--gold2); font-size:13px; cursor:pointer; transition:all .2s; height:36px;">
       Carregar Pessukim
     </button>
     <div id="pk-loading" style="display:none; font-size:12px; color:var(--text3); align-self:center;">
-      <span id="pk-loading-dots">Buscando da Sefaria…</span>
+      <span id="pk-loading-dots" class="i18n-t">Buscando da Sefaria…</span>
     </div>
   </div>
 
   <!-- View toggle -->
   <div style="display:flex; gap:8px; margin-bottom:1.5rem; align-items:center; flex-wrap:wrap;">
-    <span style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3); margin-right:4px;">Visualização</span>
+    <span class="i18n-t" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3); margin-right:4px;">Visualização</span>
     <button class="pk-view-btn active" id="vbtn-parallel" onclick="pkSetView('parallel', this)">Paralelo ↔</button>
     <button class="pk-view-btn" id="vbtn-hebrew" onclick="pkSetView('hebrew', this)">Só Hebraico</button>
     <button class="pk-view-btn" id="vbtn-english" onclick="pkSetView('english', this)">Só tradução</button>
-    <span style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3); margin-left:8px;">Tradução</span>
+    <span class="i18n-t" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3); margin-left:8px;">Tradução</span>
     <select id="pk-trans-lang" onchange="pkSetTransLang(this.value)" style="background:var(--surface); color:var(--text); border:1px solid var(--border2); border-radius:var(--r); padding:5px 10px; font-size:12px;">
       <option value="english">English · Inglês</option>
       <option value="portuguese">Português</option>
@@ -1858,9 +1881,9 @@ body.atlas-grabbing, body.atlas-grabbing * {
   <div id="pk-reader" style="display:none;">
     <!-- Chapter nav -->
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:1.5rem;">
-      <button onclick="pkNavChapter(-1)" style="padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); color:var(--text2); font-size:12px; cursor:pointer;">‹ Anterior</button>
+      <button class="i18n-t" onclick="pkNavChapter(-1)" style="padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); color:var(--text2); font-size:12px; cursor:pointer;">‹ Anterior</button>
       <div id="pk-chapter-title" style="font-family:'Crimson Pro',serif; font-size:22px; color:var(--gold2); flex:1; text-align:center;"></div>
-      <button onclick="pkNavChapter(1)" style="padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); color:var(--text2); font-size:12px; cursor:pointer;">Próximo ›</button>
+      <button class="i18n-t" onclick="pkNavChapter(1)" style="padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); color:var(--text2); font-size:12px; cursor:pointer;">Próximo ›</button>
     </div>
 
     <!-- Verses container -->
@@ -1868,11 +1891,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
 
     <!-- Jump to verse -->
     <div style="display:flex; gap:10px; align-items:center; margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border);">
-      <span style="font-size:12px; color:var(--text3);">Ir para versículo</span>
+      <span class="i18n-t" style="font-size:12px; color:var(--text3);">Ir para versículo</span>
       <input id="pk-jump-input" type="number" min="1" placeholder="nº" style="width:70px; background:var(--surface); color:var(--text); border:1px solid var(--border2); border-radius:var(--r); padding:5px 8px; font-size:13px;">
-      <button onclick="pkJumpToVerse()" style="padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); color:var(--text2); font-size:12px; cursor:pointer;">Ir</button>
+      <button class="i18n-t" onclick="pkJumpToVerse()" style="padding:5px 12px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); color:var(--text2); font-size:12px; cursor:pointer;">Ir</button>
       <span style="font-size:11px; color:var(--text3); margin-left:4px;">
-        <a id="pk-sefaria-link" href="#" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none; font-size:11px;">↗ Abrir na Sefaria</a>
+        <a id="pk-sefaria-link" class="i18n-t" href="#" target="_blank" rel="noopener" style="color:var(--gold); text-decoration:none; font-size:11px;">↗ Abrir na Sefaria</a>
       </span>
     </div>
   </div>
@@ -1880,7 +1903,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   <!-- Empty state -->
   <div id="pk-empty" style="text-align:center; padding:3rem 0; color:var(--text3);">
     <div style="font-family:'Crimson Pro',serif; font-size:40px; margin-bottom:0.5rem; opacity:0.3;">פְּסוּקִים</div>
-    <div style="font-size:14px;">Escolha um livro e capítulo acima para carregar os versículos.</div>
+    <div class="i18n-t" style="font-size:14px;">Escolha um livro e capítulo acima para carregar os versículos.</div>
   </div>
 
   <!-- Error state -->
@@ -2024,6 +2047,83 @@ body.atlas-grabbing, body.atlas-grabbing * {
 </style>
 
 <script>
+/* ═══════════════════════════════════════════════════════════
+   i18n — seletor global de idioma (interface)
+   PT é a fonte canônica (texto inline). EN/ES/HE vêm de
+   data/i18n/<lang>.json, com a chave = texto PT exato.
+   Conteúdo (fatos/resumos nos JSONs) permanece em PT por ora.
+═══════════════════════════════════════════════════════════ */
+const I18N_LANGS = ['pt', 'en', 'es', 'he'];
+let currentLang = localStorage.getItem('site-lang') || 'pt';
+const _i18nCat = { pt: {} };
+
+// Chrome estático traduzido automaticamente (chave = texto PT)
+const I18N_SELECTORS = [
+  '.nav-tab', '.sec-title', '.sec-sub',
+  '.drill-step-kicker', '.drill-step-title', '.drill-step-sub',
+  '.flow-box-title', '.flow-box-sub',
+  '.pillar-header > span:first-child',
+  '.book-group-title', '.oral-sub',
+  '.gen-label', '.acad-location', '.braitot-title',
+  '.legend-item', '.oral-bar-title',
+  '.atlas-title', '.atlas-sub',
+  '.atlas2d-panel-title', '.atlas2d-action-btn',
+  '.atlas2d-filter-row label',
+  '.book-btn', '.pk-view-btn',
+  '.i18n-t'
+];
+
+async function loadCatalog(lang) {
+  if (lang === 'pt') return {};
+  if (_i18nCat[lang]) return _i18nCat[lang];
+  try {
+    const r = await fetch(`data/i18n/${lang}.json`);
+    _i18nCat[lang] = r.ok ? await r.json() : {};
+  } catch (e) { _i18nCat[lang] = {}; }
+  return _i18nCat[lang];
+}
+
+// Helper para strings geradas dinamicamente em JS
+function t(key, ptDefault) {
+  const k = (ptDefault != null) ? ptDefault : key;
+  if (currentLang === 'pt') return k;
+  const cat = _i18nCat[currentLang] || {};
+  return (cat[k] != null) ? cat[k] : k;
+}
+
+// Traduz os nós de texto de um elemento, preservando filhos (badges, ícones)
+function _i18nTranslateEl(el, cat) {
+  el.childNodes.forEach(n => {
+    if (n.nodeType !== 3) return;                 // apenas nós de texto
+    const key = n.nodeValue.trim();
+    if (!key) return;
+    if (n._ptRaw == null) n._ptRaw = n.nodeValue;  // guarda o PT original uma vez
+    if (currentLang === 'pt') { n.nodeValue = n._ptRaw; return; }
+    const tr = cat[key];
+    n.nodeValue = (tr != null) ? n._ptRaw.replace(key, tr) : n._ptRaw;
+  });
+}
+
+function applyI18n() {
+  const cat = _i18nCat[currentLang] || {};
+  document.querySelectorAll(I18N_SELECTORS.join(',')).forEach(el => _i18nTranslateEl(el, cat));
+}
+
+async function setLang(lang) {
+  if (!I18N_LANGS.includes(lang)) return;
+  currentLang = lang;
+  localStorage.setItem('site-lang', lang);
+  await loadCatalog(lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === 'he') ? 'rtl' : 'ltr';
+  document.body.classList.toggle('rtl', lang === 'he');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  applyI18n();
+  // Re-render do chrome dinâmico que usa t()
+  const reader = document.getElementById('pk-reader');
+  if (typeof pkState !== 'undefined' && reader && reader.style.display !== 'none') pkRender();
+}
+
 function showPage(id, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -2959,6 +3059,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tl) tl.value = pkState.transLang;
   renderChumashAtlas('genesis');
   renderTimelineDrilldowns();
+  setLang(currentLang); // aplica idioma persistido na interface
 });
 
 /* ═══════════════════════════════════════════════════════════
@@ -4025,7 +4126,7 @@ async function drawerLoadPassage(btn, ref) {
 function drawerGoToPessukim(chapterNum, bookKey, refStart = null) {
   drawerClose();
 
-  const pkTab = [...document.querySelectorAll('.nav-tab')].find(t => t.textContent.includes('Pessukim'));
+  const pkTab = document.querySelector('.nav-tab[data-page="pessukim"]');
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.getElementById('page-pessukim').classList.add('active');
