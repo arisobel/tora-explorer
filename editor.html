@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Torá Explorer — Editor de imagens (autor)</title>
+<title>Torá Explorer — Editor (autor)</title>
 <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -14,172 +14,259 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:linear-gradient(180deg,#fff 0%,var(--bg) 280px);color:var(--text);
-    font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.6;min-height:100vh;padding:2.5rem 2rem}
-  .wrap{max-width:980px;margin:0 auto}
+    font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.6;min-height:100vh;padding:2.2rem 2rem}
+  .wrap{max-width:1080px;margin:0 auto}
   h1{font-family:'Crimson Pro',serif;font-size:28px;color:var(--gold2);font-weight:600;letter-spacing:-.01em}
-  .sub{color:var(--text2);font-size:15.5px;margin-bottom:.4rem}
-  .note{color:var(--text3);font-size:12.5px;border-bottom:1px solid var(--border);padding-bottom:1.5rem;margin-bottom:2rem}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
-  @media(max-width:760px){.grid{grid-template-columns:1fr}}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;
+  h2{font-family:'Crimson Pro',serif;font-size:20px;color:var(--gold2);font-weight:600;margin-bottom:.6rem}
+  .sub{color:var(--text2);font-size:15.5px}
+  .note{color:var(--text3);font-size:12.5px;border-bottom:1px solid var(--border);padding-bottom:1.3rem;margin-bottom:1.6rem}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.4rem;margin-bottom:1.5rem;
     box-shadow:0 1px 2px rgba(60,48,24,.06),0 1px 4px rgba(60,48,24,.05)}
-  label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin:1rem 0 .35rem}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;align-items:start}
+  @media(max-width:780px){.grid{grid-template-columns:1fr}}
+  label{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin:.9rem 0 .3rem}
   label:first-child{margin-top:0}
   input,select,textarea{width:100%;background:var(--surface);color:var(--text);border:1px solid var(--border2);
     border-radius:var(--r);padding:8px 12px;font-size:13px;font-family:inherit}
-  textarea{resize:vertical;min-height:54px}
+  textarea{resize:vertical;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.5}
   .row{display:flex;gap:10px}.row>*{flex:1}
-  .drop{border:1.5px dashed var(--border2);border-radius:var(--r);padding:1.25rem;text-align:center;
-    color:var(--text3);font-size:13px;cursor:pointer;transition:all .15s;margin-bottom:.5rem}
+  .drop{border:1.5px dashed var(--border2);border-radius:var(--r);padding:1.1rem;text-align:center;
+    color:var(--text3);font-size:13px;cursor:pointer;transition:all .15s;margin-bottom:.6rem}
   .drop:hover,.drop.over{border-color:var(--gold);color:var(--gold2);background:rgba(184,138,36,.05)}
   .preview{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:var(--bg);
-    min-height:180px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12.5px;text-align:center;padding:1rem}
-  .preview img{max-width:100%;max-height:340px;display:block}
-  figure{margin-top:1rem}
-  figcaption{font-size:12.5px;color:var(--text2);margin-top:.4rem;font-style:italic}
-  pre{background:#2b2722;color:#f3efe7;border-radius:var(--r);padding:1rem;font-size:12.5px;
-    overflow:auto;line-height:1.5;font-family:ui-monospace,Menlo,Consolas,monospace}
-  .btn{margin-top:.75rem;padding:8px 18px;background:rgba(184,138,36,.12);border:1px solid var(--gold);
-    border-radius:var(--r);color:var(--gold2);font-size:13px;cursor:pointer;transition:all .15s}
+    min-height:150px;display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12.5px;text-align:center;padding:1rem}
+  .preview img{max-width:100%;max-height:300px;display:block}
+  pre{background:#2b2722;color:#f3efe7;border-radius:var(--r);padding:.9rem;font-size:12px;overflow:auto;line-height:1.5;
+    font-family:ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word}
+  .btn{margin-top:.6rem;margin-right:.4rem;padding:8px 16px;background:rgba(184,138,36,.12);border:1px solid var(--gold);
+    border-radius:var(--r);color:var(--gold2);font-size:13px;cursor:pointer;transition:all .15s;display:inline-block;text-decoration:none}
   .btn:hover{background:rgba(184,138,36,.2)}
+  .btn[disabled]{opacity:.4;cursor:not-allowed}
+  .btn.ghost{background:none}
   .ok{color:var(--green2)}.err{color:var(--red)}
   .hint{font-size:12px;color:var(--text3);margin-top:.5rem;line-height:1.5}
   code{background:rgba(92,76,47,.08);padding:1px 5px;border-radius:4px;font-size:12px}
+  .warn{background:rgba(192,73,47,.08);border:1px solid rgba(192,73,47,.25);border-radius:var(--r);
+    padding:.7rem .9rem;font-size:12.5px;color:#9a3b26;margin-bottom:1rem}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Editor de imagens · autor</h1>
-  <div class="sub">Gera o bloco <code>visual</code> para colar num JSON, e pré-visualiza a imagem do volume.</div>
-  <div class="note">Ferramenta local (não vai para o deploy). Fluxo: otimize → suba pelo filebrowser → gere o bloco aqui → cole no JSON.
-    Ver <code>docs/04_technical/USER_IMAGE_UPLOADS.md</code>.</div>
+  <h1>Editor · autor</h1>
+  <div class="sub">Otimiza imagens e edita os JSON do projeto — tudo local, sem servidor.</div>
+  <div class="note">Ferramenta local (não vai para o deploy). Fluxo: otimizar imagem → subir pelo filebrowser → editar o JSON aqui e salvar.</div>
 
-  <div class="grid">
-    <!-- FORM -->
-    <div class="card">
-      <div class="drop" id="drop">Arraste uma imagem aqui (só para pré-visualizar localmente e sugerir o nome)</div>
-      <div class="hint" id="localHint"></div>
-
-      <label>Nome do arquivo (em <code>assets/user/</code>)</label>
-      <input id="file" placeholder="ester-banquete-achashverosh.jpg" autocomplete="off">
-
-      <label>Tipo</label>
-      <select id="mtype">
-        <option value="image">image — ilustração (com legenda)</option>
-        <option value="icon">icon — ícone (mask colorido pelo tema)</option>
-      </select>
-
-      <label>Legenda (caption)</label>
-      <textarea id="caption" placeholder="O banquete de Achashverosh — Shushan"></textarea>
-
-      <div class="row">
-        <div>
-          <label>Importância (1–5)</label>
-          <input id="importance" type="number" min="1" max="5" value="4">
+  <!-- ════════ 1. OTIMIZAR IMAGEM ════════ -->
+  <div class="card">
+    <h2>1 · Otimizar imagem</h2>
+    <div class="grid">
+      <div>
+        <div class="drop" id="drop">Arraste uma imagem aqui (ou clique para escolher)</div>
+        <div class="row">
+          <div><label>Maior aresta (px)</label><input id="maxedge" type="number" value="1024" min="256" max="4096"></div>
+          <div><label>Qualidade (0–100)</label><input id="quality" type="number" value="82" min="40" max="100"></div>
         </div>
-        <div>
-          <label>Base URL (preview)</label>
-          <input id="base" placeholder="https://tora-explorer.lion.app.br">
+        <label>Nome de saída (vira <code>assets/user/…</code>)</label>
+        <input id="outname" placeholder="ester-banquete.jpg" autocomplete="off">
+        <div class="row" style="margin-top:.4rem">
+          <div><label>Legenda (caption)</label><input id="caption" placeholder="O banquete de Achashverosh"></div>
+          <div><label>Importância 1–5</label><input id="importance" type="number" value="4" min="1" max="5"></div>
         </div>
+        <a class="btn" id="dl" download>Baixar otimizada</a>
+        <div class="hint" id="optinfo">Solte uma imagem para otimizar.</div>
       </div>
-      <div class="hint">A pré-visualização da direita carrega <code>BASE/assets/user/NOME</code> — útil para confirmar que o upload no filebrowser funcionou.</div>
+      <div>
+        <label>Pré-visualização</label>
+        <div class="preview" id="preview">—</div>
+        <label style="margin-top:1rem">Bloco <code>visual</code> (copie para o JSON)</label>
+        <pre id="vblock">{ }</pre>
+        <button class="btn" id="copyv">Copiar bloco</button>
+        <span class="hint" id="copied"></span>
+      </div>
     </div>
+  </div>
 
-    <!-- PREVIEW + OUTPUT -->
-    <div class="card">
-      <label>Pré-visualização (do volume)</label>
-      <div class="preview" id="preview">— informe o nome do arquivo —</div>
+  <!-- ════════ 2. EDITAR JSON ════════ -->
+  <div class="card">
+    <h2>2 · Editar os JSON do projeto</h2>
+    <div id="fsa-warn" class="warn" style="display:none"></div>
+    <button class="btn" id="opendir">Abrir pasta <code>data/</code>…</button>
+    <span class="hint" id="dirinfo">Autorize a pasta <code>data/</code> do projeto para listar e editar os JSON.</span>
 
-      <label style="margin-top:1.25rem">Bloco <code>visual</code> para colar</label>
-      <pre id="out">{ }</pre>
-      <button class="btn" id="copy">Copiar bloco</button>
-      <span id="copied" class="hint"></span>
+    <div id="editor-area" style="display:none;margin-top:1rem">
+      <label>Arquivo</label>
+      <select id="filelist"></select>
 
-      <div class="hint" style="margin-top:1rem">
-        Otimize antes de subir:<br>
-        <code>pwsh scripts/optimize-image.ps1 -In "C:\…\foto.png" -Out "nome.jpg"</code>
+      <label style="margin-top:.8rem">Anexar o bloco visual (da seção 1) a:</label>
+      <div class="row">
+        <select id="target"></select>
+        <button class="btn" id="attach" style="flex:0 0 auto;margin-top:0">Anexar ao alvo</button>
       </div>
+
+      <label style="margin-top:.8rem">Conteúdo (edite e salve)</label>
+      <textarea id="json" rows="20" spellcheck="false"></textarea>
+      <button class="btn" id="validate">Validar JSON</button>
+      <button class="btn" id="save" disabled>Salvar no arquivo</button>
+      <span class="hint" id="jstatus"></span>
     </div>
   </div>
 </div>
 
 <script>
 const $ = id => document.getElementById(id);
-const els = ['file','mtype','caption','importance','base'].map($);
-const baseEl = $('base');
-baseEl.value = localStorage.getItem('editor-base') || 'https://tora-explorer.lion.app.br';
 
+/* ───────── slug ───────── */
 function slugify(s){
   return s.normalize('NFD').replace(/[̀-ͯ]/g,'')
     .toLowerCase().replace(/\.[^.]+$/,'')
     .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 }
 
-function render(){
-  const file = $('file').value.trim();
-  const mtype = $('mtype').value;
-  const caption = $('caption').value.trim();
-  const imp = parseInt($('importance').value) || 4;
-  const base = baseEl.value.trim().replace(/\/$/,'');
-  localStorage.setItem('editor-base', base);
-
-  // JSON block
-  const obj = { marker_type: mtype, asset: file ? `assets/user/${file}` : 'assets/user/' };
-  if (caption) obj.caption = caption;
-  obj.importance = Math.min(5, Math.max(1, imp));
-  const lines = ['"visual": {'];
-  const entries = Object.entries(obj);
-  entries.forEach(([k,v],i)=>{
-    const val = typeof v === 'number' ? v : `"${String(v).replace(/"/g,'\\"')}"`;
-    lines.push(`  "${k}": ${val}${i<entries.length-1?',':''}`);
-  });
-  lines.push('}');
-  $('out').textContent = lines.join('\n');
-
-  // preview from volume
-  const pv = $('preview');
-  if (!file) { pv.innerHTML = '— informe o nome do arquivo —'; return; }
-  const url = `${base}/assets/user/${encodeURIComponent(file)}`;
-  pv.innerHTML = '';
-  const img = new Image();
-  img.onload = ()=>{ pv.innerHTML=''; const f=document.createElement('figure');
-    f.appendChild(img); if(caption){const c=document.createElement('figcaption');c.textContent=caption;f.appendChild(c);} pv.appendChild(f); };
-  img.onerror = ()=>{ pv.innerHTML = `<span class="err">não encontrada em<br>${url}<br><br>(suba pelo filebrowser primeiro)</span>`; };
-  img.src = url;
-}
-
-els.forEach(e=>{ e.addEventListener('input',render); e.addEventListener('change',render); });
-
-// drag/drop — preview LOCAL apenas + sugere nome (não faz upload)
+/* ───────── 1. otimizador (canvas) ───────── */
+let optimizedBlob = null;
 const drop = $('drop');
 ['dragover','dragenter'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
 ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
-drop.addEventListener('click',()=>{ const i=document.createElement('input');i.type='file';i.accept='image/*';
-  i.onchange=()=>i.files[0]&&handleLocal(i.files[0]); i.click(); });
-drop.addEventListener('drop',e=>{ const f=e.dataTransfer.files[0]; if(f) handleLocal(f); });
+drop.addEventListener('click',()=>{const i=document.createElement('input');i.type='file';i.accept='image/*';
+  i.onchange=()=>i.files[0]&&optimize(i.files[0]);i.click();});
+drop.addEventListener('drop',e=>{const f=e.dataTransfer.files[0];if(f)optimize(f);});
+['maxedge','quality','outname','caption','importance'].forEach(id=>$(id).addEventListener('input',()=>{ if(lastFile)optimize(lastFile); else renderBlock(); }));
 
-function handleLocal(f){
-  const suggested = slugify(f.name)+'.jpg';
-  if(!$('file').value.trim()) $('file').value = suggested;
-  const objUrl = URL.createObjectURL(f);
-  const kb = Math.round(f.size/1024);
-  $('localHint').innerHTML = `Local: <b>${f.name}</b> (${kb} KB) → nome sugerido <code>${suggested}</code>.
-    ${kb>500?'<span class="err">⚠ otimize antes de subir</span>':'<span class="ok">tamanho ok</span>'}`;
-  const pv=$('preview'); pv.innerHTML='';
-  const img=new Image(); img.onload=()=>{const f2=document.createElement('figure');f2.appendChild(img);
-    const c=document.createElement('figcaption');c.textContent='(pré-visualização local — ainda não enviada)';f2.appendChild(c);pv.appendChild(f2);};
-  img.src=objUrl;
-  render();
+let lastFile=null;
+function optimize(file){
+  lastFile=file;
+  if(!$('outname').value.trim()) $('outname').value = slugify(file.name)+'.jpg';
+  const maxEdge=parseInt($('maxedge').value)||1024;
+  const q=Math.min(100,Math.max(40,parseInt($('quality').value)||82))/100;
+  const img=new Image();
+  img.onload=()=>{
+    const scale=Math.min(1,maxEdge/Math.max(img.width,img.height));
+    const w=Math.round(img.width*scale), h=Math.round(img.height*scale);
+    const c=document.createElement('canvas'); c.width=w; c.height=h;
+    const ctx=c.getContext('2d'); ctx.imageSmoothingEnabled=true; ctx.imageSmoothingQuality='high';
+    ctx.drawImage(img,0,0,w,h);
+    c.toBlob(blob=>{
+      optimizedBlob=blob;
+      const url=URL.createObjectURL(blob);
+      $('preview').innerHTML=''; const im=new Image(); im.src=url; $('preview').appendChild(im);
+      const dl=$('dl'); dl.href=url; dl.download=$('outname').value.trim()||'imagem.jpg';
+      const origKB=Math.round(file.size/1024), newKB=Math.round(blob.size/1024);
+      $('optinfo').innerHTML=`${file.name}: ${origKB} KB → <b>${newKB} KB</b> (${w}×${h}) `
+        + (newKB<500?'<span class="ok">✓ leve</span>':'<span class="err">ainda grande — reduza a aresta/qualidade</span>');
+      renderBlock();
+    },'image/jpeg',q);
+  };
+  img.src=URL.createObjectURL(file);
 }
 
-$('copy').addEventListener('click',()=>{
-  navigator.clipboard.writeText($('out').textContent).then(()=>{
-    $('copied').textContent='copiado ✓'; $('copied').className='hint ok';
-    setTimeout(()=>$('copied').textContent='',1800);
-  });
+function getVisualObject(){
+  const name=$('outname').value.trim()||'arquivo.jpg';
+  const cap=$('caption').value.trim();
+  const imp=Math.min(5,Math.max(1,parseInt($('importance').value)||4));
+  const o={marker_type:'image',asset:`assets/user/${name}`};
+  if(cap)o.caption=cap; o.importance=imp; return o;
+}
+function renderBlock(){
+  const ents=Object.entries(getVisualObject());
+  const lines=['"visual": {'];
+  ents.forEach(([k,v],i)=>{const val=typeof v==='number'?v:`"${String(v).replace(/"/g,'\\"')}"`;
+    lines.push(`  "${k}": ${val}${i<ents.length-1?',':''}`);});
+  lines.push('}');
+  $('vblock').textContent=lines.join('\n');
+}
+$('copyv').addEventListener('click',()=>navigator.clipboard.writeText($('vblock').textContent)
+  .then(()=>{$('copied').textContent='copiado ✓';$('copied').className='hint ok';setTimeout(()=>$('copied').textContent='',1600);}));
+renderBlock();
+
+/* ───────── 2. editor de JSON (File System Access API) ───────── */
+const handles = new Map(); // path -> FileSystemFileHandle
+let currentHandle = null;
+
+if(!('showDirectoryPicker' in window)){
+  $('fsa-warn').style.display='block';
+  $('fsa-warn').innerHTML='Seu navegador não suporta a edição direta de arquivos (File System Access API). '
+    +'Use <b>Chrome ou Edge</b>. Se estiver abrindo via <code>file://</code> e não funcionar, sirva a pasta localmente '
+    +'(<code>python -m http.server</code>) e abra <code>http://localhost:8000/editor.html</code>.';
+  $('opendir').disabled=true;
+}
+
+$('opendir').addEventListener('click', async ()=>{
+  try{
+    const dir = await window.showDirectoryPicker({mode:'readwrite'});
+    handles.clear();
+    await walk(dir,'');
+    const sel=$('filelist'); sel.innerHTML='';
+    [...handles.keys()].sort().forEach(p=>{const o=document.createElement('option');o.value=p;o.textContent=p;sel.appendChild(o);});
+    $('editor-area').style.display='block';
+    $('dirinfo').innerHTML=`<span class="ok">${handles.size} arquivos .json</span> carregados.`;
+    if(handles.size) loadFile(sel.value);
+  }catch(e){ $('dirinfo').innerHTML=`<span class="err">${e.message}</span>`; }
 });
 
-render();
+async function walk(dirHandle, prefix){
+  for await (const [name, h] of dirHandle.entries()){
+    if(h.kind==='directory') await walk(h, prefix+name+'/');
+    else if(name.endsWith('.json')) handles.set(prefix+name, h);
+  }
+}
+
+$('filelist').addEventListener('change', e=>loadFile(e.target.value));
+
+async function loadFile(path){
+  currentHandle = handles.get(path);
+  const file = await currentHandle.getFile();
+  const text = await file.text();
+  try{ const o=JSON.parse(text); $('json').value=JSON.stringify(o,null,2); populateTargets(o);
+       $('jstatus').innerHTML='<span class="ok">JSON válido</span>'; $('save').disabled=false; }
+  catch(err){ $('json').value=text; $('target').innerHTML=''; $('jstatus').innerHTML=`<span class="err">JSON inválido: ${err.message}</span>`; $('save').disabled=true; }
+}
+
+function populateTargets(obj){
+  const sel=$('target'); sel.innerHTML='';
+  const u=document.createElement('option'); u.value='unit'; u.textContent='Unidade (visual no topo / banner)'; sel.appendChild(u);
+  (obj.facts||[]).forEach((f,i)=>{
+    const o=document.createElement('option'); o.value='fact:'+i;
+    o.textContent=`${f.id||('#'+i)} · ${f.topic||(f.text||'').slice(0,45)}`;
+    sel.appendChild(o);
+  });
+}
+
+$('validate').addEventListener('click', ()=>{
+  try{ const o=JSON.parse($('json').value); $('json').value=JSON.stringify(o,null,2);
+    $('jstatus').innerHTML='<span class="ok">JSON válido ✓</span>'; $('save').disabled=false; }
+  catch(err){ $('jstatus').innerHTML=`<span class="err">${err.message}</span>`; $('save').disabled=true; }
+});
+
+$('attach').addEventListener('click', ()=>{
+  let obj;
+  try{ obj=JSON.parse($('json').value); }
+  catch(err){ $('jstatus').innerHTML=`<span class="err">não dá para anexar — JSON inválido: ${err.message}</span>`; return; }
+  const v=getVisualObject();
+  const t=$('target').value;
+  let where='';
+  if(t==='unit'){ obj.visual=v; where='no topo da unidade'; }
+  else if(t.startsWith('fact:')){
+    const i=+t.split(':')[1];
+    if(obj.facts && obj.facts[i]){ const had=!!obj.facts[i].visual; obj.facts[i].visual=v; where=`no fato ${obj.facts[i].id||('#'+i)}${had?' (substituído)':''}`; }
+  }
+  $('json').value=JSON.stringify(obj,null,2);
+  $('jstatus').innerHTML=`<span class="ok">bloco visual inserido ${where} — confira e clique em Salvar</span>`;
+  $('save').disabled=false;
+});
+
+$('save').addEventListener('click', async ()=>{
+  if(!currentHandle) return;
+  let text=$('json').value;
+  try{ JSON.parse(text); }catch(err){ $('jstatus').innerHTML=`<span class="err">não salvo — ${err.message}</span>`; return; }
+  try{
+    if(currentHandle.queryPermission){
+      const p=await currentHandle.queryPermission({mode:'readwrite'});
+      if(p!=='granted') await currentHandle.requestPermission({mode:'readwrite'});
+    }
+    const w=await currentHandle.createWritable(); await w.write(text); await w.close();
+    $('jstatus').innerHTML='<span class="ok">salvo ✓</span>';
+  }catch(err){ $('jstatus').innerHTML=`<span class="err">erro ao salvar: ${err.message}</span>`; }
+});
 </script>
 </body>
 </html>

@@ -109,7 +109,7 @@
 - [ ] Define the future image model for the Atlas: decide whether images attach to books, milestones, parashiot/units, facts, or multiple node types; store at least image addressing/metadata in SQLite and export JSON references for the static runtime
 - [ ] Build a book/parasha overview view for Genesis using the complete Genesis data
 - [ ] Add search/filter across facts, characters, themes, and refs
-- [~] Prototype a local `editor.html` / `admin.html` for editing or exporting JSON through forms — **first version done (2026-06-14)**: `editor.html` (local-only, not deployed by the selective build) generates a `visual` block to paste, previews the image from the live volume (`BASE/assets/user/…`), and drag-drops a local file for offline preview + slug suggestion + size warning. Future: list volume contents, edit facts/summaries
+- [~] Prototype a local `editor.html` / `admin.html` for editing or exporting JSON through forms — **v2 done (2026-06-14)**: (1) **in-browser image optimizer** (canvas resize + JPEG compress, replaces the PowerShell step — drop image → download optimized jpg + auto `visual` block); (2) **direct JSON editing** via File System Access API — authorize `data/`, list all `.json`, open/validate/**save in place**. Chromium-only; may need `http://localhost` instead of `file://`. Future: structured fact-level editing, list volume contents
 
 ## Long Term
 
