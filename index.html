@@ -2123,6 +2123,8 @@ async function setLang(lang) {
   // Re-render do chrome dinâmico que usa t()
   const reader = document.getElementById('pk-reader');
   if (typeof pkState !== 'undefined' && reader && reader.style.display !== 'none') pkRender();
+  const atlasPage = document.getElementById('page-atlas');
+  if (typeof atlasRender === 'function' && atlasPage && atlasPage.classList.contains('active')) atlasRender();
 }
 
 function showPage(id, btn) {
@@ -2470,9 +2472,9 @@ async function atlasRender() {
   const [milestoneData, groupData] = await Promise.all([loadChumashMilestones(), loadTimelineGroups()]);
   const ctx = await atlasBuildContext(milestoneData, groupData);
 
-  document.getElementById('atlas-map-title').textContent = ctx.title;
-  document.getElementById('atlas-map-sub').textContent = ctx.sub;
-  document.getElementById('atlas-zoom-label').textContent = atlasZoomLabel();
+  document.getElementById('atlas-map-title').textContent = t(ctx.title);
+  document.getElementById('atlas-map-sub').textContent = t(ctx.sub);
+  document.getElementById('atlas-zoom-label').textContent = t(atlasZoomLabel());
   atlasRenderBreadcrumb(ctx);
   atlasRenderNodes(ctx.nodes || []);
   atlasRenderSidePanel(ctx);
@@ -2706,13 +2708,13 @@ function atlasCountList(items) {
 
 function atlasRenderBreadcrumb(ctx) {
   const parts = [
-    `<button class="atlas2d-crumb" onclick="atlasCrumb(0)">Atlas</button>`
+    `<button class="atlas2d-crumb" onclick="atlasCrumb(0)">${t('Atlas')}</button>`
   ];
   if (atlasState.zoom >= 1) {
-    const lensLabel = atlasState.lens === 'timeline' ? 'Fases AM' : 'Chumash · 5 livros';
+    const lensLabel = t(atlasState.lens === 'timeline' ? 'Fases AM' : 'Chumash · 5 livros');
     parts.push(`<span>›</span><button class="atlas2d-crumb" onclick="atlasCrumb(1)">${lensLabel}</button>`);
   }
-  if (atlasState.zoom >= 2) parts.push(`<span>›</span><button class="atlas2d-crumb" onclick="atlasCrumb(2)">${atlasEsc(ctx.focusRange?.label || 'Agregadores')}</button>`);
+  if (atlasState.zoom >= 2) parts.push(`<span>›</span><button class="atlas2d-crumb" onclick="atlasCrumb(2)">${atlasEsc(t(ctx.focusRange?.label || 'Agregadores'))}</button>`);
   if (atlasState.zoom >= 3) parts.push(`<span>›</span><span>${atlasEsc(ctx.title)}</span>`);
   document.getElementById('atlas-breadcrumb').innerHTML = parts.join('');
 }
@@ -2720,7 +2722,7 @@ function atlasRenderBreadcrumb(ctx) {
 function atlasRenderNodes(nodes) {
   const root = document.getElementById('atlas-node-grid');
   if (!nodes.length) {
-    root.innerHTML = '<div class="atlas2d-empty">Nenhum nó disponível para este nível.</div>';
+    root.innerHTML = `<div class="atlas2d-empty">${t('Nenhum nó disponível para este nível.')}</div>`;
     return;
   }
   root.innerHTML = nodes.map(node => `
@@ -2774,7 +2776,7 @@ function atlasRenderTimeline(groupData, focusRange) {
   const focusWidth = Math.max(((end - start) / total) * 100, 0.6);
   root.innerHTML = `${segments}<div class="atlas2d-time-focus" style="left:${focusLeft.toFixed(2)}%;width:${focusWidth.toFixed(2)}%"></div>`;
 
-  document.getElementById('atlas-time-title').textContent = focusRange?.label || 'Régua histórica contextual';
+  document.getElementById('atlas-time-title').textContent = t(focusRange?.label || 'Régua histórica contextual');
   document.getElementById('atlas-time-range').textContent = `${start}–${end} AM`;
 }
 
@@ -2785,14 +2787,14 @@ async function atlasRenderFacts(ctx) {
 
   const facts = await atlasLoadFacts(ctx.factsContext);
   if (!facts.length) {
-    root.innerHTML = '<div class="atlas2d-empty">Nenhum fato carregável para este contexto.</div>';
+    root.innerHTML = `<div class="atlas2d-empty">${t('Nenhum fato carregável para este contexto.')}</div>`;
     return;
   }
   root.innerHTML = facts.slice(0, atlasState.zoom >= 4 ? 12 : 5).map(f => `
     <div class="atlas2d-fact">
       <div class="atlas2d-fact-topic">${atlasEsc(f._unitName || '')}${f.topic ? ' · ' + atlasEsc(f.topic) : ''}</div>
       <div class="atlas2d-fact-text">${atlasEsc(f.text || '')}</div>
-      <button class="atlas2d-action-btn" onclick="drawerOpen({bookKey:'${atlasEsc(ctx.factsContext.bookKey)}',parashaId:'${atlasEsc(f._unitId)}',factIds:['${atlasEsc(f.id)}']})">Abrir fato</button>
+      <button class="atlas2d-action-btn" onclick="drawerOpen({bookKey:'${atlasEsc(ctx.factsContext.bookKey)}',parashaId:'${atlasEsc(f._unitId)}',factIds:['${atlasEsc(f.id)}']})">${t('Abrir fato')}</button>
     </div>
   `).join('');
 }
@@ -2980,9 +2982,9 @@ async function pkLoad() {
        &nbsp;<span style="font-size:16px; opacity:.5; direction:rtl;">${heTitle} פֶּרֶק ${toHebNum(chapter)}</span>`;
 
     const fbNote = pkState.transFallback
-      ? ` · tradução ${PK_TRANS[transLang].short} indisponível, exibindo Inglês`
+      ? ` · ${t('tradução indisponível neste livro, exibindo Inglês')}`
       : '';
-    document.getElementById('pk-ref-label').textContent = `${book} ${chapter} · ${heArr.length} versículos${fbNote}`;
+    document.getElementById('pk-ref-label').textContent = `${book} ${chapter} · ${heArr.length} ${t('versículos')}${fbNote}`;
     document.getElementById('pk-sefaria-link').href = `https://www.sefaria.org/${book}.${chapter}`;
 
     pkRender();
@@ -2992,7 +2994,7 @@ async function pkLoad() {
     document.getElementById('pk-loading').style.display = 'none';
     const errEl = document.getElementById('pk-error');
     errEl.style.display = 'block';
-    errEl.textContent = `Erro ao buscar da Sefaria: ${e.message}. Verifique sua conexão ou tente outro capítulo.`;
+    errEl.textContent = `${t('Erro ao buscar da Sefaria')}: ${e.message}. ${t('Verifique sua conexão ou tente outro capítulo.')}`;
   }
 }
 
@@ -3187,7 +3189,7 @@ function drillRenderCard() {
   const counter = document.getElementById('drill-counter');
 
   if (!deck.length) {
-    card.innerHTML = '<div class="drill-empty">Nenhum fato para este período.</div>';
+    card.innerHTML = `<div class="drill-empty">${t('Nenhum fato para este período.')}</div>`;
     counter.textContent = '— / —';
     return;
   }
@@ -3654,7 +3656,7 @@ async function toggleGroupFacts(phaseId, groupId, cardEl, ev) {
 
   if (panel.dataset.loaded) return;
   panel.dataset.loaded = '1';
-  panel.innerHTML = '<div class="tl-group-facts-loading">Carregando fatos…</div>';
+  panel.innerHTML = `<div class="tl-group-facts-loading">${t('Carregando fatos…')}</div>`;
 
   try {
     const data = await loadTimelineGroups();
@@ -3689,10 +3691,10 @@ async function toggleGroupFacts(phaseId, groupId, cardEl, ev) {
       const chapNum = chapMatch ? chapMatch[1] : null;
       const passRef = f.sefaria_ref || f.ref_start || null;
       const passBtn = passRef
-        ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">Ver passagem</button>`
+        ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">${t('Ver passagem')}</button>`
         : '';
       const chapBtn = chapNum
-        ? `<button class="fact-verse-btn" style="font-size:11px;padding:3px 9px" onclick="drawerGoToPessukim(${chapNum},'${group.book_key}','${f.ref_start || ''}')">→ Cap. ${chapNum}</button>`
+        ? `<button class="fact-verse-btn" style="font-size:11px;padding:3px 9px" onclick="drawerGoToPessukim(${chapNum},'${group.book_key}','${f.ref_start || ''}')">→ ${t('Cap.')} ${chapNum}</button>`
         : '';
       return `
         <div class="tl-group-fact-item fact-item" id="tl-fact-${f.id}">
@@ -3704,9 +3706,9 @@ async function toggleGroupFacts(phaseId, groupId, cardEl, ev) {
     }).join('');
 
     panel.innerHTML = `
-      ${factsHTML || '<div style="color:var(--text3);font-size:12px;padding:.4rem 0">Nenhum fato mapeado.</div>'}
+      ${factsHTML || ('<div style="color:var(--text3);font-size:12px;padding:.4rem 0">' + t('Nenhum fato mapeado.') + '</div>')}
       <button class="tl-group-drawer-btn" onclick="openTimelineGroup('${phaseId}','${groupId}',event)">
-        Parasha completa ›
+        ${t('Parasha completa ›')}
       </button>`;
   } catch(e) {
     panel.innerHTML = `<div class="tl-group-facts-loading" style="color:#e07060">Erro: ${e.message}</div>`;
@@ -3819,7 +3821,7 @@ function drawerClose() {
 
 async function _drawerFetchIndex(bookKey = _drawer.bookKey, opts = { render: true }) {
   if (_drawer.indices[bookKey]) return _drawer.indices[bookKey];
-  if (opts.render) _drawerSetBody('<div style="padding:2rem 1.5rem;color:var(--text3);font-size:13px;">Carregando…</div>');
+  if (opts.render) _drawerSetBody(`<div style="padding:2rem 1.5rem;color:var(--text3);font-size:13px;">${t('Carregando…')}</div>`);
   try {
     const meta = BOOK_META[bookKey] || BOOK_META.genesis;
     const r = await fetch(meta.path);
@@ -3917,7 +3919,7 @@ function drawerShowIndex() {
 
   _drawerSetBody(`
     <div class="drawer-ruler">
-      <div class="ruler-label">${idx.visual && idx.visual.asset ? `<span class="icon-mask mini" style="--icon:url('${idx.visual.asset}')"></span>` : ''}Régua histórica — ${meta.label} (0 – ${total} AM)</div>
+      <div class="ruler-label">${idx.visual && idx.visual.asset ? `<span class="icon-mask mini" style="--icon:url('${idx.visual.asset}')"></span>` : ''}${t('Régua histórica')} — ${meta.label} (0 – ${total} AM)</div>
       ${ruler}
     </div>
     <div style="padding:.5rem 1.5rem .15rem;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)">${idx.total_parashiot || idx.parashiot.length} ${itemLabel}</div>
@@ -3928,7 +3930,7 @@ function drawerShowIndex() {
 async function drawerShowParasha(id, dataFile, context = null) {
   document.getElementById('drawer-back').style.display = 'block';
   document.getElementById('drawer-head-title').textContent = '…';
-  _drawerSetBody('<div style="padding:2rem 1.5rem;color:var(--text3);font-size:13px;">Carregando…</div>');
+  _drawerSetBody(`<div style="padding:2rem 1.5rem;color:var(--text3);font-size:13px;">${t('Carregando…')}</div>`);
 
   try {
     const cacheKey = `${_drawer.bookKey}:${id}`;
@@ -4003,10 +4005,10 @@ function _drawerRenderParasha(data, context = null) {
     const tagsHTML  = (f.tags || []).map(t => `<span class="fact-tag">${t}</span>`).join('');
     const passRef  = f.sefaria_ref || f.ref_start || null;
     const passBtn  = passRef
-      ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">Ver passagem</button>`
+      ? `<button class="fact-passage-btn" onclick="drawerLoadPassage(this,'${passRef}')">${t('Ver passagem')}</button>`
       : '';
     const chapBtn  = chapNum
-      ? `<button class="fact-verse-btn" onclick="drawerGoToPessukim(${chapNum}, '${bookKey}', '${f.ref_start || ''}')">→ Capítulo ${chapNum}</button>`
+      ? `<button class="fact-verse-btn" onclick="drawerGoToPessukim(${chapNum}, '${bookKey}', '${f.ref_start || ''}')">→ ${t('Capítulo')} ${chapNum}</button>`
       : '';
     const btnsHTML = (passBtn || chapBtn)
       ? `<div style="display:flex;gap:5px;flex-shrink:0">${passBtn}${chapBtn}</div>`
@@ -4079,7 +4081,7 @@ async function drawerLoadPassage(btn, ref) {
 
   if (area.classList.contains('open')) {
     area.classList.remove('open');
-    btn.textContent = 'Ver passagem';
+    btn.textContent = t('Ver passagem');
     return;
   }
 
@@ -4090,8 +4092,8 @@ async function drawerLoadPassage(btn, ref) {
     return;
   }
 
-  area.innerHTML = '<div class="passage-loading">Carregando da Sefaria…</div>';
-  btn.textContent = 'Carregando…';
+  area.innerHTML = `<div class="passage-loading">${t('Carregando da Sefaria…')}</div>`;
+  btn.textContent = t('Carregando…');
 
   const urlHe = sefariaTextUrl(ref, 'hebrew');
   const urlEn = sefariaTextUrl(ref, 'english');
@@ -4128,10 +4130,10 @@ async function drawerLoadPassage(btn, ref) {
 
     _passageCache[ref] = html;
     area.innerHTML    = html;
-    btn.textContent   = 'Ver passagem';
+    btn.textContent   = t('Ver passagem');
   } catch(e) {
     area.innerHTML  = `<div class="passage-loading" style="color:#e07060">Erro: ${e.message}</div>`;
-    btn.textContent = 'Ver passagem';
+    btn.textContent = t('Ver passagem');
   }
 }
 
