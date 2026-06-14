@@ -82,7 +82,7 @@
 - [ ] Decide content-translation pipeline (manual vs assisted) and stage by book
 
 > **Sefaria multilíngue a nível de versículo — CONFIRMADO (2026-06-14).** A v3 Texts API serve HE/EN/PT/ES. Sintaxe: `version=<nome da língua em inglês>` (`hebrew`, `english`, `portuguese`, `spanish` — o código curto `pt`/`es` retorna vazio). Múltiplos `version=` por chamada são aceitos. Esther tem as 4: PT = *Publicado em 5784, Saymon Pires da Silva*; ES = *Meguilá Ester — Seminario Rabínico*. **Quick win:** parametrizar `version` em `sefariaTextUrl()` (index.html:2772) + seletor de idioma na aba Pessukim → conteúdo bíblico nas 4 línguas sem traduzir nada. **Ressalva:** cobertura PT/ES varia por livro; detectar `warnings` (código 102 = língua ausente) e cair para EN/HE.
-- [ ] Quick win Pessukim: parametrizar `version` por língua + seletor de idioma + fallback via `warnings`
+- [x] Quick win Pessukim: parametrizar `version` por língua + seletor de idioma + fallback via `warnings` (2026-06-14)
 
 ### User image uploads (CapRover volume)
 - [ ] Configure a CapRover persistent volume mounted over a subdir (e.g. `assets/user/`) and document the path convention
