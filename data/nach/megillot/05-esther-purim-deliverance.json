@@ -95,7 +95,12 @@
         "shushan",
         "vashti"
       ],
-      "topic": "O banquete de Achashverosh"
+      "topic": "O banquete de Achashverosh",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/primeiro-banquete.jpg",
+        "importance": 3
+      }
     },
     {
       "id": "mg018",
@@ -116,7 +121,12 @@
         "recusa",
         "ira"
       ],
-      "topic": "A recusa de Vashti"
+      "topic": "A recusa de Vashti",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/recusa-vashti.jpg",
+        "importance": 3
+      }
     },
     {
       "id": "mg019",
@@ -160,7 +170,12 @@
         "identidade",
         "palácio"
       ],
-      "topic": "Ester levada ao palácio"
+      "topic": "Ester levada ao palácio",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/ester-levada.jpg",
+        "importance": 4
+      }
     },
     {
       "id": "mg021",
