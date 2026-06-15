@@ -48,6 +48,11 @@
   code{background:rgba(92,76,47,.08);padding:1px 5px;border-radius:4px;font-size:12px}
   .warn{background:rgba(192,73,47,.08);border:1px solid rgba(192,73,47,.25);border-radius:var(--r);
     padding:.7rem .9rem;font-size:12.5px;color:#9a3b26;margin-bottom:1rem}
+  #cropwrap{display:none;position:relative;margin:.6rem 0;user-select:none;touch-action:none;line-height:0;max-width:460px}
+  #cropimg{display:block;max-width:100%;border-radius:6px}
+  #cropbox{position:absolute;border:2px solid #fff;box-shadow:0 0 0 9999px rgba(0,0,0,.45);cursor:move;box-sizing:border-box}
+  #crophandle{position:absolute;right:-8px;bottom:-8px;width:15px;height:15px;background:var(--gold);
+    border:2px solid #fff;border-radius:3px;cursor:nwse-resize}
 </style>
 </head>
 <body>
@@ -62,9 +67,21 @@
     <div class="grid">
       <div>
         <div class="drop" id="drop">Arraste uma imagem aqui (ou clique para escolher)</div>
+        <div id="cropwrap"><img id="cropimg" alt=""><div id="cropbox"><div id="crophandle"></div></div></div>
         <div class="row">
-          <div><label>Maior aresta (px)</label><input id="maxedge" type="number" value="1024" min="256" max="4096"></div>
-          <div><label>Qualidade (0–100)</label><input id="quality" type="number" value="82" min="40" max="100"></div>
+          <div><label>Formato (crop)</label>
+            <select id="aspect">
+              <option value="">Livre</option>
+              <option value="1.5">Paisagem 3:2</option>
+              <option value="1.7778">Paisagem 16:9</option>
+              <option value="1.3333">Paisagem 4:3</option>
+              <option value="1">Quadrado 1:1</option>
+              <option value="0.6667">Retrato 2:3</option>
+              <option value="0.75">Retrato 3:4</option>
+            </select>
+          </div>
+          <div><label>Maior aresta</label><input id="maxedge" type="number" value="1024" min="256" max="4096"></div>
+          <div><label>Qualidade</label><input id="quality" type="number" value="82" min="40" max="100"></div>
         </div>
         <label>Nome de saída (vira <code>assets/user/…</code>)</label>
         <input id="outname" placeholder="ester-banquete.jpg" autocomplete="off">
@@ -72,8 +89,9 @@
           <div><label>Legenda (caption)</label><input id="caption" placeholder="O banquete de Achashverosh"></div>
           <div><label>Importância 1–5</label><input id="importance" type="number" value="4" min="1" max="5"></div>
         </div>
-        <a class="btn" id="dl" download>Baixar otimizada</a>
-        <div class="hint" id="optinfo">Solte uma imagem para otimizar.</div>
+        <button class="btn" id="apply">Aplicar crop + otimizar</button>
+        <a class="btn ghost" id="dl" download>Baixar otimizada</a>
+        <div class="hint" id="optinfo">Solte uma imagem para começar.</div>
       </div>
       <div>
         <label>Pré-visualização</label>
@@ -122,41 +140,92 @@ function slugify(s){
     .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 }
 
-/* ───────── 1. otimizador (canvas) ───────── */
-let optimizedBlob = null;
-const drop = $('drop');
+/* ───────── 1. otimizador + crop (canvas) ───────── */
+let optimizedBlob=null, lastFile=null, cropState=null, drag=null;
+const drop=$('drop');
 ['dragover','dragenter'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('over');}));
 ['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('over');}));
 drop.addEventListener('click',()=>{const i=document.createElement('input');i.type='file';i.accept='image/*';
-  i.onchange=()=>i.files[0]&&optimize(i.files[0]);i.click();});
-drop.addEventListener('drop',e=>{const f=e.dataTransfer.files[0];if(f)optimize(f);});
-['maxedge','quality','outname','caption','importance'].forEach(id=>$(id).addEventListener('input',()=>{ if(lastFile)optimize(lastFile); else renderBlock(); }));
+  i.onchange=()=>i.files[0]&&setupCrop(i.files[0]);i.click();});
+drop.addEventListener('drop',e=>{const f=e.dataTransfer.files[0];if(f)setupCrop(f);});
 
-let lastFile=null;
-function optimize(file){
-  lastFile=file;
-  if(!$('outname').value.trim()) $('outname').value = slugify(file.name)+'.jpg';
-  const maxEdge=parseInt($('maxedge').value)||1024;
-  const q=Math.min(100,Math.max(40,parseInt($('quality').value)||82))/100;
+$('aspect').addEventListener('change',resetBox);
+['maxedge','quality'].forEach(id=>$(id).addEventListener('input',()=>{ if(optimizedBlob) cropAndOptimize(); }));
+['outname','caption','importance'].forEach(id=>$(id).addEventListener('input',()=>{ renderBlock();
+  if(id==='outname') $('dl').download=$('outname').value.trim()||'imagem.jpg'; }));
+$('apply').addEventListener('click',cropAndOptimize);
+
+function setupCrop(file){
+  lastFile=file; optimizedBlob=null;
+  if(!$('outname').value.trim()) $('outname').value=slugify(file.name)+'.jpg';
   const img=new Image();
   img.onload=()=>{
-    const scale=Math.min(1,maxEdge/Math.max(img.width,img.height));
-    const w=Math.round(img.width*scale), h=Math.round(img.height*scale);
-    const c=document.createElement('canvas'); c.width=w; c.height=h;
-    const ctx=c.getContext('2d'); ctx.imageSmoothingEnabled=true; ctx.imageSmoothingQuality='high';
-    ctx.drawImage(img,0,0,w,h);
-    c.toBlob(blob=>{
-      optimizedBlob=blob;
-      const url=URL.createObjectURL(blob);
-      $('preview').innerHTML=''; const im=new Image(); im.src=url; $('preview').appendChild(im);
-      const dl=$('dl'); dl.href=url; dl.download=$('outname').value.trim()||'imagem.jpg';
-      const origKB=Math.round(file.size/1024), newKB=Math.round(blob.size/1024);
-      $('optinfo').innerHTML=`${file.name}: ${origKB} KB → <b>${newKB} KB</b> (${w}×${h}) `
-        + (newKB<500?'<span class="ok">✓ leve</span>':'<span class="err">ainda grande — reduza a aresta/qualidade</span>');
-      renderBlock();
-    },'image/jpeg',q);
+    $('cropimg').src=img.src; $('cropwrap').style.display='block';
+    requestAnimationFrame(()=>{
+      cropState={img, dispW:$('cropimg').clientWidth, dispH:$('cropimg').clientHeight,
+                 natW:img.naturalWidth, natH:img.naturalHeight};
+      resetBox();
+      $('optinfo').innerHTML='Ajuste o quadro e clique em <b>Aplicar crop + otimizar</b>.';
+    });
   };
   img.src=URL.createObjectURL(file);
+}
+
+function resetBox(){
+  if(!cropState)return;
+  const {dispW,dispH}=cropState;
+  const a=parseFloat($('aspect').value)||(dispW/dispH);
+  let w=dispW, h=w/a; if(h>dispH){ h=dispH; w=h*a; }
+  cropState.box={x:(dispW-w)/2, y:(dispH-h)/2, w, h};
+  drawBox();
+}
+function drawBox(){
+  const b=cropState.box, el=$('cropbox');
+  el.style.left=b.x+'px'; el.style.top=b.y+'px'; el.style.width=b.w+'px'; el.style.height=b.h+'px';
+}
+
+$('cropbox').addEventListener('pointerdown',e=>{
+  if(!cropState)return;
+  drag={mode:e.target===$('crophandle')?'resize':'move', sx:e.clientX, sy:e.clientY, box:{...cropState.box}};
+  e.target.setPointerCapture(e.pointerId); e.preventDefault();
+});
+window.addEventListener('pointermove',e=>{
+  if(!drag||!cropState)return;
+  const {dispW,dispH}=cropState, dx=e.clientX-drag.sx, dy=e.clientY-drag.sy, a=parseFloat($('aspect').value)||0;
+  let b={...drag.box};
+  if(drag.mode==='move'){
+    b.x=Math.max(0,Math.min(dispW-b.w, drag.box.x+dx));
+    b.y=Math.max(0,Math.min(dispH-b.h, drag.box.y+dy));
+  }else{
+    let w=Math.max(40, drag.box.w+dx), h=a?w/a:Math.max(40,drag.box.h+dy);
+    if(b.x+w>dispW){ w=dispW-b.x; if(a)h=w/a; }
+    if(b.y+h>dispH){ h=dispH-b.y; if(a)w=h*a; }
+    b.w=w; b.h=h;
+  }
+  cropState.box=b; drawBox();
+});
+window.addEventListener('pointerup',()=>{drag=null;});
+
+function cropAndOptimize(){
+  if(!cropState)return;
+  const {box,dispW,dispH,natW,natH,img}=cropState;
+  const sx=box.x/dispW*natW, sy=box.y/dispH*natH, sw=box.w/dispW*natW, sh=box.h/dispH*natH;
+  const maxEdge=parseInt($('maxedge').value)||1024;
+  const q=Math.min(100,Math.max(40,parseInt($('quality').value)||82))/100;
+  const scale=Math.min(1, maxEdge/Math.max(sw,sh));
+  const w=Math.round(sw*scale), h=Math.round(sh*scale);
+  const c=document.createElement('canvas'); c.width=w; c.height=h;
+  const ctx=c.getContext('2d'); ctx.imageSmoothingEnabled=true; ctx.imageSmoothingQuality='high';
+  ctx.drawImage(img, sx,sy,sw,sh, 0,0,w,h);
+  c.toBlob(blob=>{
+    optimizedBlob=blob; const url=URL.createObjectURL(blob);
+    $('preview').innerHTML=''; const im=new Image(); im.src=url; $('preview').appendChild(im);
+    const d=$('dl'); d.href=url; d.download=$('outname').value.trim()||'imagem.jpg';
+    const newKB=Math.round(blob.size/1024), origKB=lastFile?Math.round(lastFile.size/1024):'?';
+    $('optinfo').innerHTML=`${origKB} KB → <b>${newKB} KB</b> (${w}×${h} · ${w>=h?'paisagem':'retrato'}) `
+      +(newKB<500?'<span class="ok">✓ leve</span>':'<span class="err">reduza aresta/qualidade</span>');
+    renderBlock();
+  },'image/jpeg',q);
 }
 
 function getVisualObject(){
