@@ -451,7 +451,13 @@
         "honra",
         "reversão"
       ],
-      "topic": "Haman honra Mordechai"
+      "topic": "Haman honra Mordechai",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/mordechai-honrado.jpg",
+        "caption": "Haman guia Mordechai pelas ruas clamando: \"Assim deve ser feito para aquele que o Rei deseja honrar\"",
+        "importance": 4
+      }
     },
     {
       "id": "mg031",
