@@ -204,7 +204,7 @@
       "topic": "Ester torna-se rainha",
       "visual": {
         "marker_type": "image",
-        "asset": "assets/user/ester-coroada.jpg",
+        "asset": "assets/user/ester_coroada.jpg",
         "importance": 4
       }
     },
@@ -284,7 +284,13 @@
         "extermínio",
         "adar"
       ],
-      "topic": "O pur e o decreto de extermínio"
+      "topic": "O pur e o decreto de extermínio",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/sorteio-de-haman.jpg",
+        "caption": "Sorteio de Haman - Pur",
+        "importance": 4
+      }
     },
     {
       "id": "mg025",
@@ -306,7 +312,13 @@
         "saco",
         "jejum"
       ],
-      "topic": "O luto dos judeus"
+      "topic": "O luto dos judeus",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/luto-judeus.jpg",
+        "caption": "Mordechai rasga as roupas",
+        "importance": 4
+      }
     },
     {
       "id": "mg026",
@@ -328,7 +340,13 @@
         "coragem",
         "jejum"
       ],
-      "topic": "Para um tempo como este"
+      "topic": "Para um tempo como este",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/ester-assume.jpg",
+        "caption": "Ester Assume Arriscar a Vida",
+        "importance": 4
+      }
     },
     {
       "id": "mg027",
@@ -349,7 +367,13 @@
         "cetro",
         "banquete"
       ],
-      "topic": "Ester diante do rei e o primeiro banquete"
+      "topic": "Ester diante do rei e o primeiro banquete",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/rei-estende-cetro.jpg",
+        "caption": "Rei estende cetro salvando Ester",
+        "importance": 1
+      }
     },
     {
       "id": "mg028",
@@ -371,7 +395,13 @@
         "forca",
         "ira"
       ],
-      "topic": "A forca de Haman"
+      "topic": "A forca de Haman",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/haman-ignorado.jpg",
+        "caption": "Ao sair do primeiro banquete, Haman é novamente ignorado",
+        "importance": 1
+      }
     },
     {
       "id": "mg029",
@@ -393,7 +423,13 @@
         "mordechai",
         "reversão"
       ],
-      "topic": "A noite insone do rei"
+      "topic": "A noite insone do rei",
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/rei-insone.jpg",
+        "caption": "Rei sem dormir convoca leitura de memórias",
+        "importance": 1
+      }
     },
     {
       "id": "mg030",
