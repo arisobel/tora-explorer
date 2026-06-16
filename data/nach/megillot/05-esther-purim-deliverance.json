@@ -72,7 +72,18 @@
       "Memória",
       "Providência oculta",
       "Identidade"
-    ]
+    ],
+    "i18n": {
+      "en": {
+        "short": "Esther tells of threat, courage, reversal, and communal memory in the Persian Empire."
+      },
+      "es": {
+        "short": "Ester narra amenaza, coraje, reversión y memoria comunitaria en el Imperio Persa."
+      },
+      "he": {
+        "short": "מְגִלַּת אֶסְתֵּר מְסַפֶּרֶת עַל אִיּוּם, אֹמֶץ, הִתְהַפְּכוּת וְזִכָּרוֹן קְהִלָּתִי בָּאִימְפֶּרְיָה הַפַּרְסִית."
+      }
+    }
   },
   "facts": [
     {
@@ -100,6 +111,20 @@
         "marker_type": "image",
         "asset": "assets/user/primeiro-banquete.jpg",
         "importance": 3
+      },
+      "i18n": {
+        "en": {
+          "text": "In the third year of his reign, Ahasuerus — who rules over 127 provinces from Hodu (India) to Cush — holds a 180-day banquet for the empire's nobles, followed by a 7-day feast for everyone in Shushan, the capital. Queen Vashti holds a parallel banquet for the women.",
+          "topic": "The banquet of Ahasuerus"
+        },
+        "es": {
+          "text": "En el tercer año de su reinado, Asuero — que gobierna sobre 127 provincias desde Hodu (India) hasta Cus — ofrece un banquete de 180 días a los nobles del imperio, seguido de otro de 7 días para todos en Susa, la capital. La reina Vasti ofrece un banquete paralelo para las mujeres.",
+          "topic": "El banquete de Asuero"
+        },
+        "he": {
+          "text": "בַּשָּׁנָה הַשְּׁלִישִׁית לְמַלְכוּתוֹ, אֲחַשְׁוֵרוֹשׁ — הַמּוֹלֵךְ מֵהֹדּוּ וְעַד כּוּשׁ עַל 127 מְדִינוֹת — עוֹרֵךְ מִשְׁתֶּה בֶּן 180 יוֹם לְשָׂרֵי הָאִימְפֶּרְיָה, וְאַחֲרָיו מִשְׁתֶּה בֶּן 7 יָמִים לְכָל אֲשֶׁר בְּשׁוּשַׁן הַבִּירָה. הַמַּלְכָּה וַשְׁתִּי עוֹרֶכֶת מִשְׁתֶּה מַקְבִּיל לַנָּשִׁים.",
+          "topic": "מִשְׁתֵּה אֲחַשְׁוֵרוֹשׁ"
+        }
       }
     },
     {
@@ -126,6 +151,20 @@
         "marker_type": "image",
         "asset": "assets/user/recusa-vashti.jpg",
         "importance": 3
+      },
+      "i18n": {
+        "en": {
+          "text": "On the seventh day, drunk, the king orders the seven eunuchs to bring Vashti to display her beauty to the guests. The queen refuses to come, and the king is filled with rage.",
+          "topic": "Vashti's refusal"
+        },
+        "es": {
+          "text": "Al séptimo día, ebrio, el rey ordena a los siete eunucos traer a Vasti para exhibir su belleza ante los invitados. La reina se niega a comparecer, y el rey se llena de furia.",
+          "topic": "La negativa de Vasti"
+        },
+        "he": {
+          "text": "בַּיּוֹם הַשְּׁבִיעִי, בְּהֵיוֹתוֹ שִׁכּוֹר, מְצַוֶּה הַמֶּלֶךְ עַל שִׁבְעַת הַסָּרִיסִים לְהָבִיא אֶת וַשְׁתִּי לְהַרְאוֹת אֶת יָפְיָהּ לַקְּרוּאִים. הַמַּלְכָּה מְסָרֶבֶת לָבוֹא, וַחֲמַת הַמֶּלֶךְ בּוֹעֶרֶת בּוֹ.",
+          "topic": "סֵרוּב וַשְׁתִּי"
+        }
       }
     },
     {
@@ -153,6 +192,20 @@
         "marker_type": "image",
         "asset": "assets/user/conselho-memuchan.jpg",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "The king consults the seven wise men of Persia and Media. Memucan argues that Vashti's disobedience will spread among all the women of the kingdom; he advises deposing her and sending decrees to all 127 provinces ordering that every man rule his household.",
+          "topic": "Memucan's counsel and the decree"
+        },
+        "es": {
+          "text": "El rey consulta a los siete sabios de Persia y Media. Memucán argumenta que la desobediencia de Vasti se extenderá entre todas las mujeres del reino; aconseja deponerla y enviar decretos a las 127 provincias ordenando que cada hombre gobierne su casa.",
+          "topic": "El consejo de Memucán y el decreto"
+        },
+        "he": {
+          "text": "הַמֶּלֶךְ נוֹעָץ בְּשִׁבְעַת חַכְמֵי פָּרַס וּמָדַי. מְמוּכָן טוֹעֵן כִּי מִרְיָהּ שֶׁל וַשְׁתִּי יִתְפַּשֵּׁט בֵּין כָּל נְשׁוֹת הַמַּלְכוּת; וְיוֹעֵץ לְהָדִיחַ אוֹתָהּ וְלִשְׁלֹחַ דָּתִים לְכָל 127 הַמְּדִינוֹת, לֵאמֹר שֶׁכָּל אִישׁ יִשְׂרֹר בְּבֵיתוֹ.",
+          "topic": "עֲצַת מְמוּכָן וְהַדָּת"
+        }
       }
     },
     {
@@ -180,6 +233,20 @@
         "marker_type": "image",
         "asset": "assets/user/ester-levada.jpg",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Beautiful young women are sought from across the kingdom to choose a new queen. Mordecai, a Jew of Shushan, is raising his orphaned cousin Hadassah — Esther. She is taken to the palace and, on Mordecai's advice, does not reveal her origin or her people.",
+          "topic": "Esther taken to the palace"
+        },
+        "es": {
+          "text": "Se buscan jóvenes hermosas de todo el reino para elegir una nueva reina. Mardoqueo, judío de Susa, cría a su prima huérfana Hadasa — Ester. Ella es llevada al palacio y, por consejo de Mardoqueo, no revela su origen ni su pueblo.",
+          "topic": "Ester llevada al palacio"
+        },
+        "he": {
+          "text": "מְחַפְּשִׂים נְעָרוֹת יָפוֹת מִכָּל הַמַּלְכוּת כְּדֵי לִבְחֹר מַלְכָּה חֲדָשָׁה. מָרְדֳּכַי, יְהוּדִי מִשּׁוּשַׁן, מְגַדֵּל אֶת בַּת דּוֹדוֹ הַיְתוֹמָה הֲדַסָּה — הִיא אֶסְתֵּר. הִיא נִלְקַחַת אֶל הָאַרְמוֹן, וּבַעֲצַת מָרְדֳּכַי אֵינָהּ מְגַלָּה אֶת מוֹצָאָהּ וְאֶת עַמָּהּ.",
+          "topic": "אֶסְתֵּר נִלְקַחַת אֶל הָאַרְמוֹן"
+        }
       }
     },
     {
@@ -206,6 +273,20 @@
         "marker_type": "image",
         "asset": "assets/user/ester_coroada.jpg",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "After the period of preparation, Esther is presented to the king. Ahasuerus loves her more than all the others and sets the royal crown on her head, making her queen in place of Vashti; the feast of Esther is celebrated.",
+          "topic": "Esther becomes queen"
+        },
+        "es": {
+          "text": "Tras el período de preparación, Ester es presentada al rey. Asuero la ama más que a todas las demás y coloca la corona real sobre su cabeza, haciéndola reina en lugar de Vasti; se celebra el banquete de Ester.",
+          "topic": "Ester se convierte en reina"
+        },
+        "he": {
+          "text": "לְאַחַר תְּקוּפַת הַהֲכָנָה, אֶסְתֵּר מוּבֵאת אֶל הַמֶּלֶךְ. אֲחַשְׁוֵרוֹשׁ אוֹהֵב אוֹתָהּ מִכָּל הַנָּשִׁים וְשָׂם אֶת כֶּתֶר הַמַּלְכוּת עַל רֹאשָׁהּ, וַיַּמְלִיכֶהָ תַּחַת וַשְׁתִּי; וְנֶעֱרָךְ מִשְׁתֵּה אֶסְתֵּר.",
+          "topic": "אֶסְתֵּר נַעֲשֵׂית מַלְכָּה"
+        }
       }
     },
     {
@@ -234,6 +315,20 @@
         "marker_type": "image",
         "asset": "assets/user/conspiracao-relatada.jpg",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Sitting at the king's gate, Mordecai uncovers the plot of the eunuchs Bigthan and Teresh against Ahasuerus's life. He warns Esther, who reports it in Mordecai's name; the guilty are hanged and the deed is recorded in the royal chronicles.",
+          "topic": "The plot against the king"
+        },
+        "es": {
+          "text": "Sentado a la puerta del rey, Mardoqueo descubre la conspiración de los eunucos Bigtán y Teres contra la vida de Asuero. Avisa a Ester, que lo informa en nombre de Mardoqueo; los culpables son ahorcados y el hecho queda registrado en las crónicas reales.",
+          "topic": "La conspiración contra el rey"
+        },
+        "he": {
+          "text": "בְּשִׁבְתּוֹ בְּשַׁעַר הַמֶּלֶךְ, מְגַלֶּה מָרְדֳּכַי אֶת מְזִמַּת הַסָּרִיסִים בִּגְתָן וָתֶרֶשׁ עַל נֶפֶשׁ אֲחַשְׁוֵרוֹשׁ. הוּא מַזְהִיר אֶת אֶסְתֵּר, וְהִיא מוֹסֶרֶת זֹאת בְּשֵׁם מָרְדֳּכַי; הָאֲשֵׁמִים נִתְלִים וְהַדָּבָר נִכְתָּב בְּסֵפֶר דִּבְרֵי הַיָּמִים.",
+          "topic": "הַמְּזִמָּה נֶגֶד הַמֶּלֶךְ"
+        }
       }
     },
     {
@@ -261,6 +356,20 @@
         "marker_type": "image",
         "asset": "assets/user/haman-ofendido.jpg",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Ahasuerus promotes Haman the Agagite above all the ministers and commands that everyone bow before him. Mordecai refuses to bow; on learning that he is a Jew, Haman plots to destroy not only Mordecai but his entire people.",
+          "topic": "Haman promoted and his hatred of Mordecai"
+        },
+        "es": {
+          "text": "Asuero promueve a Amán el agagueo por encima de todos los ministros y ordena que todos se inclinen ante él. Mardoqueo se niega a inclinarse; al saber que es judío, Amán planea destruir no solo a Mardoqueo, sino a todo su pueblo.",
+          "topic": "Amán promovido y el odio a Mardoqueo"
+        },
+        "he": {
+          "text": "אֲחַשְׁוֵרוֹשׁ מְרוֹמֵם אֶת הָמָן הָאֲגָגִי מֵעַל כָּל הַשָּׂרִים, וּמְצַוֶּה שֶׁהַכֹּל יִכְרְעוּ לְפָנָיו. מָרְדֳּכַי מְסָרֵב לִכְרֹעַ; וּכְשֶׁנּוֹדָע לְהָמָן כִּי יְהוּדִי הוּא, זוֹמֵם הוּא לְהַשְׁמִיד לֹא רַק אֶת מָרְדֳּכַי אֶלָּא אֶת כָּל עַמּוֹ.",
+          "topic": "הָמָן מְרוֹמָם וְשִׂנְאָתוֹ לְמָרְדֳּכַי"
+        }
       }
     },
     {
@@ -290,6 +399,23 @@
         "asset": "assets/user/sorteio-de-haman.jpg",
         "caption": "Sorteio de Haman - Pur",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Haman casts the pur (the lot) to choose the day, and persuades the king to decree the extermination of all the Jews — men, women, and children — on the 13th of Adar, offering ten thousand talents of silver. Letters seal the decree in every province; the city of Shushan is bewildered.",
+          "topic": "The pur and the decree of annihilation",
+          "caption": "Haman casts the pur (the lot)"
+        },
+        "es": {
+          "text": "Amán echa el pur (la suerte) para escoger el día, y convence al rey de decretar el exterminio de todos los judíos — hombres, mujeres y niños — el día 13 de Adar, ofreciendo diez mil talentos de plata. Cartas sellan el decreto en todas las provincias; la ciudad de Susa queda perpleja.",
+          "topic": "El pur y el decreto de exterminio",
+          "caption": "El sorteo de Amán — el pur"
+        },
+        "he": {
+          "text": "הָמָן מַפִּיל אֶת הַפּוּר (הַגּוֹרָל) לִבְחֹר אֶת הַיּוֹם, וּמְשַׁכְנֵעַ אֶת הַמֶּלֶךְ לִגְזֹר עַל הַשְׁמָדַת כָּל הַיְּהוּדִים — אֲנָשִׁים, נָשִׁים וָטַף — בְּי״ג בַּאֲדָר, וּמַצִּיעַ עֲשֶׂרֶת אֲלָפִים כִּכַּר כֶּסֶף. אִגְּרוֹת חוֹתְמוֹת אֶת הַגְּזֵרָה בְּכָל הַמְּדִינוֹת; וְהָעִיר שׁוּשַׁן נָבוֹכָה.",
+          "topic": "הַפּוּר וּגְזֵרַת הַהַשְׁמָדָה",
+          "caption": "הֲטָלַת הַפּוּר בִּידֵי הָמָן"
+        }
       }
     },
     {
@@ -318,6 +444,23 @@
         "asset": "assets/user/luto-judeus.jpg",
         "caption": "Mordechai rasga as roupas",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "On learning of the decree, Mordecai tears his garments, dons sackcloth and ashes, and cries out loudly in the midst of the city. In every province the decree reaches, there is great mourning, fasting, and weeping among the Jews.",
+          "topic": "The mourning of the Jews",
+          "caption": "Mordecai tears his garments"
+        },
+        "es": {
+          "text": "Al enterarse del decreto, Mardoqueo rasga sus vestiduras, se viste de saco y ceniza y clama a gran voz en medio de la ciudad. En cada provincia donde llega el decreto, hay gran duelo, ayuno y llanto entre los judíos.",
+          "topic": "El duelo de los judíos",
+          "caption": "Mardoqueo rasga sus vestiduras"
+        },
+        "he": {
+          "text": "כְּשֶׁנּוֹדָע לְמָרְדֳּכַי דְּבַר הַגְּזֵרָה, הוּא קוֹרֵעַ אֶת בְּגָדָיו, לוֹבֵשׁ שַׂק וָאֵפֶר וְזוֹעֵק זְעָקָה גְדוֹלָה בְּתוֹךְ הָעִיר. בְּכָל מְדִינָה שֶׁהַגְּזֵרָה מַגִּיעָה אֵלֶיהָ, אֵבֶל גָּדוֹל, צוֹם וּבְכִי בֵּין הַיְּהוּדִים.",
+          "topic": "אֵבֶל הַיְּהוּדִים",
+          "caption": "מָרְדֳּכַי קוֹרֵעַ אֶת בְּגָדָיו"
+        }
       }
     },
     {
@@ -346,6 +489,23 @@
         "asset": "assets/user/ester-assume.jpg",
         "caption": "Ester Assume Arriscar a Vida",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Through the eunuch Hathach, Mordecai relays the decree to Esther and asks her to intercede with the king. Faced with her hesitation, he declares: 'Who knows whether you have not attained royalty for a time such as this?' Esther calls for a three-day fast and resolves to risk her life.",
+          "topic": "For a time such as this",
+          "caption": "Esther resolves to risk her life"
+        },
+        "es": {
+          "text": "Por medio del eunuco Hatac, Mardoqueo comunica el decreto a Ester y le pide que interceda ante el rey. Ante su vacilación, declara: '¿Quién sabe si no has llegado a la realeza para un tiempo como este?'. Ester pide un ayuno de tres días y decide arriesgar la vida.",
+          "topic": "Para un tiempo como este",
+          "caption": "Ester decide arriesgar su vida"
+        },
+        "he": {
+          "text": "בְּאֶמְצָעוּת הַסָּרִיס הֲתָךְ, מוֹסֵר מָרְדֳּכַי אֶת דְּבַר הַגְּזֵרָה לְאֶסְתֵּר וּמְבַקֵּשׁ שֶׁתַּפְצִיר בַּמֶּלֶךְ. לְנֹכַח הִסּוּסָהּ הוּא מַכְרִיז: ׳וּמִי יוֹדֵעַ אִם לְעֵת כָּזֹאת הִגַּעַתְּ לַמַּלְכוּת׳. אֶסְתֵּר מְבַקֶּשֶׁת צוֹם שְׁלֹשֶׁת יָמִים וּמַחְלִיטָה לְסַכֵּן אֶת חַיֶּיהָ.",
+          "topic": "לְעֵת כָּזֹאת",
+          "caption": "אֶסְתֵּר מַחְלִיטָה לְסַכֵּן אֶת חַיֶּיהָ"
+        }
       }
     },
     {
@@ -373,6 +533,23 @@
         "asset": "assets/user/rei-estende-cetro.jpg",
         "caption": "Rei estende cetro salvando Ester",
         "importance": 1
+      },
+      "i18n": {
+        "en": {
+          "text": "On the third day, Esther appears unsummoned in the inner court. The king extends the golden scepter, sparing her life, and offers up to half the kingdom. She invites the king and Haman to a banquet and there asks them to return for a second banquet the next day.",
+          "topic": "Esther before the king and the first banquet",
+          "caption": "The king extends the scepter, sparing Esther"
+        },
+        "es": {
+          "text": "Al tercer día, Ester se presenta sin ser llamada en el patio interior. El rey extiende el cetro de oro, perdonándole la vida, y le ofrece hasta la mitad del reino. Ella invita al rey y a Amán a un banquete y allí les pide que vuelvan a un segundo banquete al día siguiente.",
+          "topic": "Ester ante el rey y el primer banquete",
+          "caption": "El rey extiende el cetro y salva a Ester"
+        },
+        "he": {
+          "text": "בַּיּוֹם הַשְּׁלִישִׁי, אֶסְתֵּר נִצֶּבֶת בֶּחָצֵר הַפְּנִימִית מִבְּלִי שֶׁנִּקְרְאָה. הַמֶּלֶךְ מוֹשִׁיט אֶת שַׁרְבִיט הַזָּהָב וּמַצִּיל אֶת חַיֶּיהָ, וּמַצִּיעַ עַד חֲצִי הַמַּלְכוּת. הִיא מַזְמִינָה אֶת הַמֶּלֶךְ וְאֶת הָמָן לְמִשְׁתֶּה, וְשָׁם מְבַקֶּשֶׁת כִּי יָשׁוּבוּ לְמִשְׁתֶּה שֵׁנִי לַמָּחֳרָת.",
+          "topic": "אֶסְתֵּר לִפְנֵי הַמֶּלֶךְ וְהַמִּשְׁתֶּה הָרִאשׁוֹן",
+          "caption": "הַמֶּלֶךְ מוֹשִׁיט אֶת הַשַּׁרְבִיט וּמַצִּיל אֶת אֶסְתֵּר"
+        }
       }
     },
     {
@@ -401,6 +578,23 @@
         "asset": "assets/user/haman-ignorado.jpg",
         "caption": "Ao sair do primeiro banquete, Haman é novamente ignorado",
         "importance": 1
+      },
+      "i18n": {
+        "en": {
+          "text": "Haman leaves elated, but the sight of Mordecai, who does not rise before him, fills him with rage. At home, boasting of his glory to his wife Zeresh and his friends, he is advised to erect a gallows fifty cubits high and ask the king that Mordecai be hanged upon it.",
+          "topic": "Haman's gallows",
+          "caption": "Leaving the first banquet, Haman is again ignored by Mordecai"
+        },
+        "es": {
+          "text": "Amán sale eufórico, pero la visión de Mardoqueo, que no se levanta ante él, lo llena de ira. En casa, jactándose de su gloria ante Zeres, su esposa, y sus amigos, le aconsejan erigir una horca de cincuenta codos y pedir al rey que Mardoqueo sea colgado en ella.",
+          "topic": "La horca de Amán",
+          "caption": "Al salir del primer banquete, Amán es de nuevo ignorado"
+        },
+        "he": {
+          "text": "הָמָן יוֹצֵא שָׂמֵחַ, אַךְ מַרְאֵה מָרְדֳּכַי, שֶׁאֵינוֹ קָם מִפָּנָיו, מְמַלֵּא אוֹתוֹ חֵמָה. בְּבֵיתוֹ, בְּהִתְפָּאֲרוֹ בִּכְבוֹדוֹ לִפְנֵי זֶרֶשׁ אִשְׁתּוֹ וַחֲבֵרָיו, מְיַעֲצִים לוֹ לְהָקִים עֵץ גָּבוֹהַּ חֲמִשִּׁים אַמָּה וּלְבַקֵּשׁ מֵהַמֶּלֶךְ שֶׁמָּרְדֳּכַי יִתָּלֶה עָלָיו.",
+          "topic": "הָעֵץ שֶׁל הָמָן",
+          "caption": "בְּצֵאתוֹ מֵהַמִּשְׁתֶּה הָרִאשׁוֹן, הָמָן שׁוּב נִתְעַלָּם בִּידֵי מָרְדֳּכַי"
+        }
       }
     },
     {
@@ -429,6 +623,23 @@
         "asset": "assets/user/rei-insone.jpg",
         "caption": "Rei sem dormir convoca leitura de memórias",
         "importance": 1
+      },
+      "i18n": {
+        "en": {
+          "text": "That night sleep eludes the king. He orders the royal chronicles read and discovers that Mordecai, who had saved him from the plot, was never rewarded.",
+          "topic": "The king's sleepless night",
+          "caption": "Sleepless, the king summons a reading of the chronicles"
+        },
+        "es": {
+          "text": "Aquella noche el sueño huye del rey. Manda leer las crónicas reales y descubre que Mardoqueo, que lo había salvado de la conspiración, nunca fue recompensado.",
+          "topic": "La noche en vela del rey",
+          "caption": "Sin dormir, el rey ordena leer las crónicas"
+        },
+        "he": {
+          "text": "בַּלַּיְלָה הַהוּא נָדְדָה שְׁנַת הַמֶּלֶךְ. הוּא מְצַוֶּה לִקְרֹא בְּסֵפֶר דִּבְרֵי הַיָּמִים וּמְגַלֶּה כִּי מָרְדֳּכַי, אֲשֶׁר הִצִּילוֹ מִן הַמְּזִמָּה, מֵעוֹלָם לֹא זָכָה לִגְמוּל.",
+          "topic": "לֵיל נְדוּדֵי שְׁנַת הַמֶּלֶךְ",
+          "caption": "הַמֶּלֶךְ נְדוּד שֵׁנָה מְצַוֶּה לִקְרֹא בְּדִבְרֵי הַיָּמִים"
+        }
       }
     },
     {
@@ -457,6 +668,23 @@
         "asset": "assets/user/mordechai-honrado.jpg",
         "caption": "Haman guia Mordechai pelas ruas clamando: \"Assim deve ser feito para aquele que o Rei deseja honrar\"",
         "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Haman enters to ask for Mordecai's death, but the king asks him how to honor 'the man the king wishes to honor.' Thinking it is himself, Haman describes royal robes and a royal horse — and is forced to lead Mordecai, so honored, through the streets, proclaiming his glory.",
+          "topic": "Haman honors Mordecai",
+          "caption": "Haman leads Mordecai through the streets, crying out: \"Thus shall be done for the man whom the King wishes to honor\""
+        },
+        "es": {
+          "text": "Amán entra para pedir la muerte de Mardoqueo, pero el rey le pregunta cómo honrar 'al hombre que el rey desea honrar'. Creyendo que es él mismo, Amán describe vestiduras y un caballo reales — y es obligado a conducir a Mardoqueo, así honrado, por las calles, proclamando su gloria.",
+          "topic": "Amán honra a Mardoqueo",
+          "caption": "Amán guía a Mardoqueo por las calles clamando: \"Así se hará al hombre que el Rey desea honrar\""
+        },
+        "he": {
+          "text": "הָמָן נִכְנָס לְבַקֵּשׁ אֶת מוֹת מָרְדֳּכַי, אַךְ הַמֶּלֶךְ שׁוֹאֵל אוֹתוֹ כֵּיצַד לִנְהֹג ׳בָּאִישׁ אֲשֶׁר הַמֶּלֶךְ חָפֵץ בִּיקָרוֹ׳. בְּחָשְׁבוֹ כִּי הוּא עַצְמוֹ, מְתָאֵר הָמָן לְבוּשׁ מַלְכוּת וְסוּס מַלְכוּת — וְנֶאֱלָץ לְהוֹלִיךְ אֶת מָרְדֳּכַי הַמְכֻבָּד בָּרְחוֹבוֹת וְלִקְרֹא לְפָנָיו אֶת כְּבוֹדוֹ.",
+          "topic": "הָמָן מְכַבֵּד אֶת מָרְדֳּכַי",
+          "caption": "הָמָן מוֹלִיךְ אֶת מָרְדֳּכַי בָּרְחוֹבוֹת וְקוֹרֵא: ׳כָּכָה יֵעָשֶׂה לָאִישׁ אֲשֶׁר הַמֶּלֶךְ חָפֵץ בִּיקָרוֹ׳"
+        }
       }
     },
     {
@@ -479,7 +707,21 @@
         "presságio",
         "queda"
       ],
-      "topic": "O presságio da queda"
+      "topic": "O presságio da queda",
+      "i18n": {
+        "en": {
+          "text": "Humiliated, Haman returns home with his head covered. Zeresh and the wise men foretell his fall: 'if Mordecai, before whom you have begun to fall, is of Jewish descent, you will not prevail.' The eunuchs arrive to take him to Esther's banquet.",
+          "topic": "The omen of the fall"
+        },
+        "es": {
+          "text": "Humillado, Amán vuelve a casa con la cabeza cubierta. Zeres y los sabios le predicen su caída: 'si Mardoqueo, ante quien has comenzado a caer, es de la simiente de los judíos, no prevalecerás'. Los eunucos llegan para llevarlo al banquete de Ester.",
+          "topic": "El presagio de la caída"
+        },
+        "he": {
+          "text": "מֻשְׁפָּל, חוֹזֵר הָמָן לְבֵיתוֹ חֲפוּי רֹאשׁ. זֶרֶשׁ וְהַחֲכָמִים מְנַבְּאִים לוֹ אֶת נְפִילָתוֹ: ׳אִם מִזֶּרַע הַיְּהוּדִים מָרְדֳּכַי אֲשֶׁר הַחִלּוֹתָ לִנְפֹּל לְפָנָיו, לֹא תוּכַל לוֹ׳. הַסָּרִיסִים מַגִּיעִים לְהוֹבִילוֹ אֶל מִשְׁתֵּה אֶסְתֵּר.",
+          "topic": "סִימָן הַנְּפִילָה"
+        }
+      }
     },
     {
       "id": "mg032",
@@ -501,7 +743,21 @@
         "revelação",
         "banquete"
       ],
-      "topic": "Ester desmascara Haman"
+      "topic": "Ester desmascara Haman",
+      "i18n": {
+        "en": {
+          "text": "At the second banquet, the king renews his offer of up to half the kingdom. Esther then reveals: she and her people have been sold for destruction — and the enemy is 'this wicked Haman.'",
+          "topic": "Esther unmasks Haman"
+        },
+        "es": {
+          "text": "En el segundo banquete, el rey renueva la oferta de hasta la mitad del reino. Ester entonces revela: ella y su pueblo han sido vendidos para la destrucción — y el enemigo es 'este Amán, el malvado'.",
+          "topic": "Ester desenmascara a Amán"
+        },
+        "he": {
+          "text": "בַּמִּשְׁתֶּה הַשֵּׁנִי, מְחַדֵּשׁ הַמֶּלֶךְ אֶת הַצָּעָתוֹ לְעַד חֲצִי הַמַּלְכוּת. אָז מְגַלָּה אֶסְתֵּר: הִיא וְעַמָּהּ נִמְכְּרוּ לְהַשְׁמָדָה — וְהָאוֹיֵב הוּא ׳הָמָן הָרָע הַזֶּה׳.",
+          "topic": "אֶסְתֵּר חוֹשֶׂפֶת אֶת הָמָן"
+        }
+      }
     },
     {
       "id": "mg033",
@@ -523,7 +779,21 @@
         "forca",
         "justiça"
       ],
-      "topic": "A queda de Haman"
+      "topic": "A queda de Haman",
+      "i18n": {
+        "en": {
+          "text": "The king storms out to the garden; Haman, pleading for his life, falls upon Esther's couch. Harbonah the eunuch points out the gallows Haman had built for Mordecai — and on it Haman himself is hanged. The king's wrath subsides.",
+          "topic": "The fall of Haman"
+        },
+        "es": {
+          "text": "El rey sale furioso al jardín; Amán, suplicando por su vida, cae sobre el lecho de Ester. Harboná, el eunuco, señala la horca que Amán había erigido para Mardoqueo — y en ella el propio Amán es colgado. La ira del rey se apacigua.",
+          "topic": "La caída de Amán"
+        },
+        "he": {
+          "text": "הַמֶּלֶךְ יוֹצֵא בַּחֲמָתוֹ אֶל הַגִּנָּה; הָמָן, מִתְחַנֵּן עַל נַפְשׁוֹ, נוֹפֵל עַל מִטַּת אֶסְתֵּר. חַרְבוֹנָה הַסָּרִיס מַצְבִּיעַ עַל הָעֵץ שֶׁהֵכִין הָמָן לְמָרְדֳּכַי — וְעָלָיו נִתְלֶה הָמָן עַצְמוֹ. וַחֲמַת הַמֶּלֶךְ שָׁכָכָה.",
+          "topic": "נְפִילַת הָמָן"
+        }
+      }
     },
     {
       "id": "mg034",
@@ -545,7 +815,21 @@
         "decreto",
         "defesa"
       ],
-      "topic": "Mordechai elevado e o novo decreto"
+      "topic": "Mordechai elevado e o novo decreto",
+      "i18n": {
+        "en": {
+          "text": "Esther reveals that Mordecai is her kinsman, and the king gives him the signet ring taken from Haman. Since a Persian royal decree cannot be revoked, the king authorizes Esther and Mordecai to write new letters: the Jews have the right to assemble and defend their lives on the appointed day.",
+          "topic": "Mordecai elevated and the new decree"
+        },
+        "es": {
+          "text": "Ester revela que Mardoqueo es su pariente, y el rey le entrega el anillo de sello quitado a Amán. Como un decreto real persa no puede revocarse, el rey autoriza a Ester y Mardoqueo a redactar nuevas cartas: los judíos tienen derecho a reunirse y defender sus vidas en el día señalado.",
+          "topic": "Mardoqueo enaltecido y el nuevo decreto"
+        },
+        "he": {
+          "text": "אֶסְתֵּר מְגַלָּה כִּי מָרְדֳּכַי קְרוֹבָהּ, וְהַמֶּלֶךְ נוֹתֵן לוֹ אֶת טַבַּעַת הַחוֹתָם שֶׁהֶעֱבִיר מֵהָמָן. הוֹאִיל וְאֵין לְהָשִׁיב דָּת מַלְכוּת פַּרְסִית, מַרְשֶׁה הַמֶּלֶךְ לְאֶסְתֵּר וּלְמָרְדֳּכַי לִכְתֹּב אִגְּרוֹת חֲדָשׁוֹת: לַיְּהוּדִים נְתוּנָה הַזְּכוּת לְהִקָּהֵל וּלְהָגֵן עַל נַפְשָׁם בַּיּוֹם הַמְיֻעָד.",
+          "topic": "מָרְדֳּכַי מְרוֹמָם וְהַדָּת הַחֲדָשָׁה"
+        }
+      }
     },
     {
       "id": "mg035",
@@ -566,7 +850,21 @@
         "alegria",
         "shushan"
       ],
-      "topic": "Alegria em Shushan"
+      "topic": "Alegria em Shushan",
+      "i18n": {
+        "en": {
+          "text": "Mordecai goes out before the king in royal robes of blue and white and a purple mantle; Shushan rejoices. There is light, joy, and honor for the Jews in every province, and many of the peoples of the land come to identify with them, seized with fear.",
+          "topic": "Joy in Shushan"
+        },
+        "es": {
+          "text": "Mardoqueo sale ante el rey con vestiduras reales de azul y blanco y un manto de púrpura; Susa se regocija. Hay luz, alegría y honra para los judíos en cada provincia, y muchos de los pueblos de la tierra llegan a identificarse con ellos, sobrecogidos de temor.",
+          "topic": "Alegría en Susa"
+        },
+        "he": {
+          "text": "מָרְדֳּכַי יוֹצֵא לִפְנֵי הַמֶּלֶךְ בִּלְבוּשׁ מַלְכוּת תְּכֵלֶת וָחוּר וְתַכְרִיךְ אַרְגָּמָן; וְשׁוּשַׁן צָהֲלָה. אוֹרָה, שִׂמְחָה וִיקָר לַיְּהוּדִים בְּכָל מְדִינָה, וְרַבִּים מֵעַמֵּי הָאָרֶץ מִתְיַהֲדִים מִפַּחַד הַיְּהוּדִים.",
+          "topic": "שִׂמְחָה בְּשׁוּשַׁן"
+        }
+      }
     },
     {
       "id": "mg036",
@@ -588,7 +886,21 @@
         "filhos-de-haman",
         "adar"
       ],
-      "topic": "A defesa dos judeus"
+      "topic": "A defesa dos judeus",
+      "i18n": {
+        "en": {
+          "text": "On the 13th of Adar, the lot is reversed: instead of being destroyed, the Jews defend themselves and prevail over their enemies. Haman's ten sons fall, and in Shushan the fighting extends to the 14th, with the Jews not laying a hand on the spoil.",
+          "topic": "The Jews defend themselves"
+        },
+        "es": {
+          "text": "El día 13 de Adar, la suerte se invierte: en vez de ser destruidos, los judíos se defienden y prevalecen sobre sus enemigos. Los diez hijos de Amán caen, y en Susa la lucha se extiende al día 14, sin que los judíos toquen el botín.",
+          "topic": "La defensa de los judíos"
+        },
+        "he": {
+          "text": "בְּי״ג בַּאֲדָר מִתְהַפֵּךְ הַגּוֹרָל: בִּמְקוֹם לְהִשָּׁמֵד, מְגִנִּים הַיְּהוּדִים עַל עַצְמָם וְגוֹבְרִים עַל אוֹיְבֵיהֶם. עֲשֶׂרֶת בְּנֵי הָמָן נוֹפְלִים, וּבְשׁוּשַׁן נִמְשֶׁכֶת הַמִּלְחָמָה גַּם בְּי״ד, וְהַיְּהוּדִים אֵינָם שׁוֹלְחִים יָד בַּבִּזָּה.",
+          "topic": "הֲגַנַּת הַיְּהוּדִים"
+        }
+      }
     },
     {
       "id": "mg037",
@@ -611,7 +923,21 @@
         "festa",
         "tzedacá"
       ],
-      "topic": "A instituição de Purim"
+      "topic": "A instituição de Purim",
+      "i18n": {
+        "en": {
+          "text": "Mordecai and Queen Esther record these days and establish Purim — named after Haman's 'pur' — as an annual festival on the 14th and 15th of Adar: days of feasting and joy, of sending portions to friends (mishloach manot) and gifts to the poor (matanot la'evyonim).",
+          "topic": "The institution of Purim"
+        },
+        "es": {
+          "text": "Mardoqueo y la reina Ester registran estos días e instituyen Purim — nombre derivado del 'pur' de Amán — como fiesta anual los días 14 y 15 de Adar: días de banquete y alegría, de enviar porciones a los amigos (mishloach manot) y regalos a los pobres (matanot la'evyonim).",
+          "topic": "La institución de Purim"
+        },
+        "he": {
+          "text": "מָרְדֳּכַי וְהַמַּלְכָּה אֶסְתֵּר רוֹשְׁמִים אֶת הַיָּמִים הָאֵלֶּה וּמְכוֹנְנִים אֶת פּוּרִים — שֵׁם הַנִּגְזָר מִן ׳הַפּוּר׳ שֶׁל הָמָן — כְּחַג שְׁנָתִי בְּי״ד וּבְט״ו בַּאֲדָר: יְמֵי מִשְׁתֶּה וְשִׂמְחָה, מִשְׁלוֹחַ מָנוֹת לָרֵעִים וּמַתָּנוֹת לָאֶבְיוֹנִים.",
+          "topic": "תַּקָּנַת פּוּרִים"
+        }
+      }
     },
     {
       "id": "mg038",
@@ -632,7 +958,21 @@
         "grandeza",
         "epílogo"
       ],
-      "topic": "A grandeza de Mordechai"
+      "topic": "A grandeza de Mordechai",
+      "i18n": {
+        "en": {
+          "text": "The book closes by recording the greatness of Ahasuerus and the rise of Mordecai the Jew, second in the kingdom: sought for the good of his people and speaking peace to all his offspring.",
+          "topic": "The greatness of Mordecai"
+        },
+        "es": {
+          "text": "El libro concluye registrando la grandeza de Asuero y el ascenso de Mardoqueo, el judío, segundo en el reino: buscado por el bien de su pueblo y hablando paz a toda su descendencia.",
+          "topic": "La grandeza de Mardoqueo"
+        },
+        "he": {
+          "text": "הַסֵּפֶר חוֹתֵם בְּתִעוּד גְּדֻלַּת אֲחַשְׁוֵרוֹשׁ וַעֲלִיַּת מָרְדֳּכַי הַיְּהוּדִי, מִשְׁנֶה לַמֶּלֶךְ: דּוֹרֵשׁ טוֹב לְעַמּוֹ וְדוֹבֵר שָׁלוֹם לְכָל זַרְעוֹ.",
+          "topic": "גְּדֻלַּת מָרְדֳּכַי"
+        }
+      }
     }
   ]
 }
