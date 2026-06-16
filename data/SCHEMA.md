@@ -279,7 +279,8 @@ objeto que tem o texto: cada `fact` (para `text`, `topic` e `caption`) e o
 Regras:
 - `i18n.{lang}` só precisa conter os campos traduzidos; o que faltar **cai no PT**.
 - `caption` traduzido fica em `fact.i18n.{lang}.caption` (não dentro de `visual`);
-  o PT canônico continua em `visual.caption`.
+  o PT canônico continua em `visual.caption`. Vale para `marker_type` `image`
+  (legenda da ilustração) **e** `icon` (tooltip do ícone).
 - `summary.i18n.{lang}.short` traduz o resumo do cabeçalho do drawer.
 - `text_he` (passuk hebraico) é **outra coisa** — não é a tradução do resumo.
 - Idiomas suportados: `en`, `es`, `he`. PT não vai no `i18n` (é o default).

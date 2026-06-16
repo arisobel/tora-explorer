@@ -4029,9 +4029,10 @@ async function drawerShowParasha(id, dataFile, context = null) {
   }
 }
 
-function visualMarkerHTML(v) {
+function visualMarkerHTML(v, capOverride) {
   if (!v || v.marker_type === 'none' || !v.asset) return '';
-  const cap = (v.caption || '').replace(/"/g, '&quot;');
+  const capText = (capOverride != null && capOverride !== '') ? capOverride : (v.caption || '');
+  const cap = capText.replace(/"/g, '&quot;');
   if (v.marker_type === 'image') {
     return `<img class="fact-visual-img" src="${v.asset}" alt="${cap}" title="${cap}" loading="lazy" onerror="this.style.display='none'">`;
   }
@@ -4086,7 +4087,7 @@ function _drawerRenderParasha(data, context = null) {
       : '';
     const isImg     = f.visual && f.visual.marker_type === 'image';
     const illusHTML = isImg ? illustrationHTML(f.visual, trContent(f, 'caption')) : '';
-    const visMarker = isImg ? '' : visualMarkerHTML(f.visual);
+    const visMarker = isImg ? '' : visualMarkerHTML(f.visual, trContent(f, 'caption'));
     const visHTML   = visMarker
       ? `<div class="fact-visual"><div class="fact-visual-icon">${visMarker}</div></div>`
       : '';

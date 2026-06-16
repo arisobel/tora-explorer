@@ -376,8 +376,8 @@ function trResolve(obj,target){
       {key:'text', label:'Texto do fato (text)', pt:f.text||''},
       {key:'topic',label:'Tópico (topic)',       pt:f.topic||''},
     ];
-    if(f.visual && f.visual.marker_type==='image')
-      fields.push({key:'caption',label:'Legenda da imagem (caption)',pt:f.visual.caption||''});
+    if(f.visual && f.visual.caption)
+      fields.push({key:'caption',label:'Legenda (caption)',pt:f.visual.caption});
     return {host:f, fields};
   }
   return null;

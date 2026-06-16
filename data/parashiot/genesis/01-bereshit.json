@@ -8,7 +8,6 @@
     "parasha_of_book": 1,
     "total_parashiot_in_book": 12
   },
-
   "identity": {
     "id": "bereshit",
     "name": "Bereshit",
@@ -17,18 +16,23 @@
     "transliteration": "Bereshit",
     "aliyot_count": 7
   },
-
   "range": {
     "ref_start": "Genesis 1:1",
     "ref_end": "Genesis 6:8",
     "sefaria_ref": "Genesis 1:1-6:8",
-    "chapters_covered": [1, 2, 3, 4, 5, 6],
+    "chapters_covered": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
     "chapter_start": 1,
     "chapter_end": 6,
     "verse_start": 1,
     "verse_end": 8
   },
-
   "timeline": {
     "period_name": "Criação e primeiras gerações",
     "anno_mundi_start": 0,
@@ -37,29 +41,58 @@
     "position_pct": 0,
     "description": "Do início da Criação até a geração de Noach, quando a humanidade já está corrompida."
   },
-
   "summary": {
     "short": "Da Criação do mundo até as primeiras gerações humanas, culminando com a corrupção que precede o Dilúvio.",
     "medium": "A parashá abre com a criação do universo em seis dias e o descanso do Shabat. Relata a criação de Adam e Chavah, sua vida no Gan Eden, o pecado do fruto proibido e a expulsão do jardim. Narra o primeiro assassinato — Kayin matando Hevel — e termina com as gerações de Adam até Noach, enquanto a humanidade se corrompe.",
-    "characters_main": ["Adam", "Chavah", "Kayin", "Hevel", "Noach"],
-    "characters_secondary": ["Chanoch", "Lemech", "Adah", "Tzilah", "Naama"],
-    "themes": ["Criação", "Livre-arbítrio", "Pecado e consequência", "Morte e vida", "Corrupção moral", "Shabat"]
+    "characters_main": [
+      "Adam",
+      "Chavah",
+      "Kayin",
+      "Hevel",
+      "Noach"
+    ],
+    "characters_secondary": [
+      "Chanoch",
+      "Lemech",
+      "Adah",
+      "Tzilah",
+      "Naama"
+    ],
+    "themes": [
+      "Criação",
+      "Livre-arbítrio",
+      "Pecado e consequência",
+      "Morte e vida",
+      "Corrupção moral",
+      "Shabat"
+    ],
+    "i18n": {
+      "en": {
+        "short": "From the creation of the world to the first human generations, culminating in the corruption that precedes the Flood."
+      },
+      "es": {
+        "short": "Desde la creación del mundo hasta las primeras generaciones humanas, culminando en la corrupción que precede al Diluvio."
+      },
+      "he": {
+        "short": "מִבְּרִיאַת הָעוֹלָם וְעַד הַדּוֹרוֹת הָאֱנוֹשִׁיִּים הָרִאשׁוֹנִים, עַד הַשְׁחָתַת הָאָרֶץ שֶׁקָּדְמָה לַמַּבּוּל."
+      }
+    }
   },
-
   "visual": {
     "marker_type": "icon",
     "icon": "light",
     "asset": "assets/icons/light.svg",
     "caption": "A Criação — Que haja luz"
   },
-
   "facts": [
     {
       "id": "b001",
       "order": 1,
       "text": "Deus cria o céu e a terra, quando o mundo ainda estava vazio, escuro e coberto pelas águas primordiais.",
       "text_he": "בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ",
-      "refs": ["Genesis 1:1-2"],
+      "refs": [
+        "Genesis 1:1-2"
+      ],
       "ref_start": "Genesis 1:1",
       "ref_end": "Genesis 1:2",
       "chapter": 1,
@@ -67,15 +100,35 @@
       "verse_end": 2,
       "sefaria_ref": "Genesis 1:1-2",
       "day_of_creation": null,
-      "tags": ["criação", "cosmologia", "tohu-vavohu"],
-      "topic": "Criação — Yom 1 (preparação)"
+      "tags": [
+        "criação",
+        "cosmologia",
+        "tohu-vavohu"
+      ],
+      "topic": "Criação — Yom 1 (preparação)",
+      "i18n": {
+        "en": {
+          "text": "God creates the heavens and the earth, when the world was still void, dark, and covered by the primordial waters.",
+          "topic": "Creation — Day 1 (preparation)"
+        },
+        "es": {
+          "text": "Dios crea los cielos y la tierra, cuando el mundo aún estaba vacío, oscuro y cubierto por las aguas primordiales.",
+          "topic": "Creación — Yom 1 (preparación)"
+        },
+        "he": {
+          "text": "אֱלֹהִים בּוֹרֵא אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ, כַּאֲשֶׁר הָעוֹלָם עוֹדֶנּוּ תֹהוּ וָבֹהוּ, חָשׁוּךְ וּמְכֻסֶּה בְּמֵימֵי הַתְּהוֹם.",
+          "topic": "בְּרִיאָה — יוֹם א׳ (הֲכָנָה)"
+        }
+      }
     },
     {
       "id": "b002",
       "order": 2,
       "text": "Deus cria a luz e a separa da escuridão, estabelecendo o primeiro dia da Criação.",
       "text_he": "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי אוֹר",
-      "refs": ["Genesis 1:3-5"],
+      "refs": [
+        "Genesis 1:3-5"
+      ],
       "ref_start": "Genesis 1:3",
       "ref_end": "Genesis 1:5",
       "chapter": 1,
@@ -83,16 +136,45 @@
       "verse_end": 5,
       "sefaria_ref": "Genesis 1:3-5",
       "day_of_creation": 1,
-      "tags": ["luz", "criação", "yom-rishon"],
+      "tags": [
+        "luz",
+        "criação",
+        "yom-rishon"
+      ],
       "topic": "Criação — Yom 1 (luz)",
-      "visual": { "marker_type": "icon", "icon": "light", "asset": "assets/icons/light.svg", "caption": "Que haja luz", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "light",
+        "asset": "assets/icons/light.svg",
+        "caption": "Que haja luz",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "God creates light and separates it from darkness, establishing the first day of Creation.",
+          "topic": "Creation — Day 1 (light)",
+          "caption": "Let there be light"
+        },
+        "es": {
+          "text": "Dios crea la luz y la separa de la oscuridad, estableciendo el primer día de la Creación.",
+          "topic": "Creación — Yom 1 (luz)",
+          "caption": "Que haya luz"
+        },
+        "he": {
+          "text": "אֱלֹהִים בּוֹרֵא אֶת הָאוֹר וּמַבְדִּיל בֵּינוֹ לְבֵין הַחֹשֶׁךְ, וּמְכוֹנֵן אֶת הַיּוֹם הָרִאשׁוֹן שֶׁל הַבְּרִיאָה.",
+          "topic": "בְּרִיאָה — יוֹם א׳ (אוֹר)",
+          "caption": "יְהִי אוֹר"
+        }
+      }
     },
     {
       "id": "b003",
       "order": 3,
       "text": "No segundo dia, Deus cria o firmamento, separando as águas superiores das inferiores.",
       "text_he": "וַיַּעַשׂ אֱלֹהִים אֶת הָרָקִיעַ",
-      "refs": ["Genesis 1:6-8"],
+      "refs": [
+        "Genesis 1:6-8"
+      ],
       "ref_start": "Genesis 1:6",
       "ref_end": "Genesis 1:8",
       "chapter": 1,
@@ -100,15 +182,35 @@
       "verse_end": 8,
       "sefaria_ref": "Genesis 1:6-8",
       "day_of_creation": 2,
-      "tags": ["firmamento", "rakia", "criação"],
-      "topic": "Criação — Yom 2 (firmamento)"
+      "tags": [
+        "firmamento",
+        "rakia",
+        "criação"
+      ],
+      "topic": "Criação — Yom 2 (firmamento)",
+      "i18n": {
+        "en": {
+          "text": "On the second day, God creates the firmament, separating the upper waters from the lower.",
+          "topic": "Creation — Day 2 (firmament)"
+        },
+        "es": {
+          "text": "En el segundo día, Dios crea el firmamento, separando las aguas superiores de las inferiores.",
+          "topic": "Creación — Yom 2 (firmamento)"
+        },
+        "he": {
+          "text": "בַּיּוֹם הַשֵּׁנִי, אֱלֹהִים בּוֹרֵא אֶת הָרָקִיעַ, וּמַבְדִּיל בֵּין הַמַּיִם הָעֶלְיוֹנִים לַתַּחְתּוֹנִים.",
+          "topic": "בְּרִיאָה — יוֹם ב׳ (רָקִיעַ)"
+        }
+      }
     },
     {
       "id": "b004",
       "order": 4,
       "text": "No terceiro dia surgem a terra seca e os mares, e a vegetação brota da terra.",
       "text_he": "וַיֹּאמֶר אֱלֹהִים יִקָּווּ הַמַּיִם",
-      "refs": ["Genesis 1:9-13"],
+      "refs": [
+        "Genesis 1:9-13"
+      ],
       "ref_start": "Genesis 1:9",
       "ref_end": "Genesis 1:13",
       "chapter": 1,
@@ -116,15 +218,35 @@
       "verse_end": 13,
       "sefaria_ref": "Genesis 1:9-13",
       "day_of_creation": 3,
-      "tags": ["terra", "vegetação", "criação"],
-      "topic": "Criação — Yom 3 (terra e plantas)"
+      "tags": [
+        "terra",
+        "vegetação",
+        "criação"
+      ],
+      "topic": "Criação — Yom 3 (terra e plantas)",
+      "i18n": {
+        "en": {
+          "text": "On the third day, the dry land and the seas appear, and vegetation sprouts from the earth.",
+          "topic": "Creation — Day 3 (land and plants)"
+        },
+        "es": {
+          "text": "En el tercer día surgen la tierra seca y los mares, y la vegetación brota de la tierra.",
+          "topic": "Creación — Yom 3 (tierra y plantas)"
+        },
+        "he": {
+          "text": "בַּיּוֹם הַשְּׁלִישִׁי מוֹפִיעִים הַיַּבָּשָׁה וְהַיַּמִּים, וְהַצֻּמְחִיָּה מַצְמִיחָה מִן הָאָרֶץ.",
+          "topic": "בְּרִיאָה — יוֹם ג׳ (יַבָּשָׁה וּצְמָחִים)"
+        }
+      }
     },
     {
       "id": "b005",
       "order": 5,
       "text": "No quarto dia são criados o sol, a lua e as estrelas, para marcar tempos, dias e estações.",
       "text_he": "וַיַּעַשׂ אֱלֹהִים אֶת שְׁנֵי הַמְּאֹרֹת הַגְּדֹלִים",
-      "refs": ["Genesis 1:14-19"],
+      "refs": [
+        "Genesis 1:14-19"
+      ],
       "ref_start": "Genesis 1:14",
       "ref_end": "Genesis 1:19",
       "chapter": 1,
@@ -132,15 +254,36 @@
       "verse_end": 19,
       "sefaria_ref": "Genesis 1:14-19",
       "day_of_creation": 4,
-      "tags": ["sol", "lua", "estrelas", "calendário"],
-      "topic": "Criação — Yom 4 (luminares)"
+      "tags": [
+        "sol",
+        "lua",
+        "estrelas",
+        "calendário"
+      ],
+      "topic": "Criação — Yom 4 (luminares)",
+      "i18n": {
+        "en": {
+          "text": "On the fourth day, the sun, moon, and stars are created, to mark times, days, and seasons.",
+          "topic": "Creation — Day 4 (luminaries)"
+        },
+        "es": {
+          "text": "En el cuarto día son creados el sol, la luna y las estrellas, para marcar tiempos, días y estaciones.",
+          "topic": "Creación — Yom 4 (luminarias)"
+        },
+        "he": {
+          "text": "בַּיּוֹם הָרְבִיעִי נִבְרָאִים הַשֶּׁמֶשׁ, הַיָּרֵחַ וְהַכּוֹכָבִים, לְסַמֵּן עִתִּים, יָמִים וְעוֹנוֹת.",
+          "topic": "בְּרִיאָה — יוֹם ד׳ (מְאוֹרוֹת)"
+        }
+      }
     },
     {
       "id": "b006",
       "order": 6,
       "text": "No quinto dia Deus cria peixes e aves, povoando os mares e os céus com vida.",
       "text_he": "וַיִּבְרָא אֱלֹהִים אֶת הַתַּנִּינִם הַגְּדֹלִים",
-      "refs": ["Genesis 1:20-23"],
+      "refs": [
+        "Genesis 1:20-23"
+      ],
       "ref_start": "Genesis 1:20",
       "ref_end": "Genesis 1:23",
       "chapter": 1,
@@ -148,15 +291,36 @@
       "verse_end": 23,
       "sefaria_ref": "Genesis 1:20-23",
       "day_of_creation": 5,
-      "tags": ["peixes", "aves", "animais", "criação"],
-      "topic": "Criação — Yom 5 (criaturas aquáticas e aéreas)"
+      "tags": [
+        "peixes",
+        "aves",
+        "animais",
+        "criação"
+      ],
+      "topic": "Criação — Yom 5 (criaturas aquáticas e aéreas)",
+      "i18n": {
+        "en": {
+          "text": "On the fifth day, God creates fish and birds, filling the seas and skies with life.",
+          "topic": "Creation — Day 5 (creatures of water and air)"
+        },
+        "es": {
+          "text": "En el quinto día, Dios crea peces y aves, poblando los mares y los cielos de vida.",
+          "topic": "Creación — Yom 5 (criaturas acuáticas y aéreas)"
+        },
+        "he": {
+          "text": "בַּיּוֹם הַחֲמִישִׁי אֱלֹהִים בּוֹרֵא דָּגִים וְעוֹפוֹת, וּמְמַלֵּא אֶת הַיַּמִּים וְאֶת הַשָּׁמַיִם בְּחַיִּים.",
+          "topic": "בְּרִיאָה — יוֹם ה׳ (בְּרִיּוֹת הַמַּיִם וְהָאֲוִיר)"
+        }
+      }
     },
     {
       "id": "b007",
       "order": 7,
       "text": "No sexto dia são criados os animais terrestres e, por fim, o ser humano à imagem divina.",
       "text_he": "וַיֹּאמֶר אֱלֹהִים נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ",
-      "refs": ["Genesis 1:24-27"],
+      "refs": [
+        "Genesis 1:24-27"
+      ],
       "ref_start": "Genesis 1:24",
       "ref_end": "Genesis 1:27",
       "chapter": 1,
@@ -164,15 +328,36 @@
       "verse_end": 27,
       "sefaria_ref": "Genesis 1:24-27",
       "day_of_creation": 6,
-      "tags": ["adam", "tzelem-elohim", "humanidade", "criação"],
-      "topic": "Criação — Yom 6 (humano à imagem divina)"
+      "tags": [
+        "adam",
+        "tzelem-elohim",
+        "humanidade",
+        "criação"
+      ],
+      "topic": "Criação — Yom 6 (humano à imagem divina)",
+      "i18n": {
+        "en": {
+          "text": "On the sixth day, the land animals are created and, finally, the human being in the divine image.",
+          "topic": "Creation — Day 6 (humankind in the divine image)"
+        },
+        "es": {
+          "text": "En el sexto día son creados los animales terrestres y, por fin, el ser humano a imagen divina.",
+          "topic": "Creación — Yom 6 (el ser humano a imagen divina)"
+        },
+        "he": {
+          "text": "בַּיּוֹם הַשִּׁשִּׁי נִבְרָאִים בַּעֲלֵי הַחַיִּים שֶׁבַּיַּבָּשָׁה, וּלְבַסּוֹף הָאָדָם בְּצֶלֶם אֱלֹהִים.",
+          "topic": "בְּרִיאָה — יוֹם ו׳ (הָאָדָם בְּצֶלֶם אֱלֹהִים)"
+        }
+      }
     },
     {
       "id": "b008",
       "order": 8,
       "text": "Adam e Chavah recebem a missão de dominar a criação, multiplicar-se e cuidar do mundo.",
       "text_he": "פְּרוּ וּרְבוּ וּמִלְאוּ אֶת הָאָרֶץ",
-      "refs": ["Genesis 1:28-31"],
+      "refs": [
+        "Genesis 1:28-31"
+      ],
       "ref_start": "Genesis 1:28",
       "ref_end": "Genesis 1:31",
       "chapter": 1,
@@ -180,15 +365,36 @@
       "verse_end": 31,
       "sefaria_ref": "Genesis 1:28-31",
       "day_of_creation": 6,
-      "tags": ["mitzvá", "peru-urvu", "domínio", "missão-humana"],
-      "topic": "Missão humana e conclusão do Yom 6"
+      "tags": [
+        "mitzvá",
+        "peru-urvu",
+        "domínio",
+        "missão-humana"
+      ],
+      "topic": "Missão humana e conclusão do Yom 6",
+      "i18n": {
+        "en": {
+          "text": "Adam and Eve receive the mission to master creation, be fruitful, and care for the world.",
+          "topic": "The human mission and the close of Day 6"
+        },
+        "es": {
+          "text": "Adán y Eva reciben la misión de dominar la creación, multiplicarse y cuidar del mundo.",
+          "topic": "La misión humana y la conclusión del Yom 6"
+        },
+        "he": {
+          "text": "אָדָם וְחַוָּה מְקַבְּלִים אֶת הַיִּעוּד לִרְדּוֹת בַּבְּרִיאָה, לִפְרוֹת וְלִרְבּוֹת וְלִשְׁמֹר עַל הָעוֹלָם.",
+          "topic": "יִעוּד הָאָדָם וְסִיּוּם יוֹם ו׳"
+        }
+      }
     },
     {
       "id": "b009",
       "order": 9,
       "text": "No sétimo dia Deus conclui Sua obra e descansa, santificando o Shabat como dia de descanso.",
       "text_he": "וַיְבָרֶךְ אֱלֹהִים אֶת יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ",
-      "refs": ["Genesis 2:1-3"],
+      "refs": [
+        "Genesis 2:1-3"
+      ],
       "ref_start": "Genesis 2:1",
       "ref_end": "Genesis 2:3",
       "chapter": 2,
@@ -196,16 +402,46 @@
       "verse_end": 3,
       "sefaria_ref": "Genesis 2:1-3",
       "day_of_creation": 7,
-      "tags": ["shabat", "descanso", "santificação", "kedusha"],
+      "tags": [
+        "shabat",
+        "descanso",
+        "santificação",
+        "kedusha"
+      ],
       "topic": "Yom 7 — Shabat (descanso e santificação)",
-      "visual": { "marker_type": "icon", "icon": "candles", "asset": "assets/icons/candles.svg", "caption": "O Shabat da Criação", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "candles",
+        "asset": "assets/icons/candles.svg",
+        "caption": "O Shabat da Criação",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "On the seventh day, God completes His work and rests, sanctifying the Sabbath as a day of rest.",
+          "topic": "Day 7 — Sabbath (rest and sanctification)",
+          "caption": "The Sabbath of Creation"
+        },
+        "es": {
+          "text": "En el séptimo día, Dios concluye Su obra y descansa, santificando el Shabat como día de descanso.",
+          "topic": "Yom 7 — Shabat (descanso y santificación)",
+          "caption": "El Shabat de la Creación"
+        },
+        "he": {
+          "text": "בַּיּוֹם הַשְּׁבִיעִי אֱלֹהִים מַשְׁלִים אֶת מְלַאכְתּוֹ וְשׁוֹבֵת, וּמְקַדֵּשׁ אֶת הַשַּׁבָּת כְּיוֹם מְנוּחָה.",
+          "topic": "יוֹם ז׳ — שַׁבָּת (מְנוּחָה וּקְדֻשָּׁה)",
+          "caption": "שַׁבַּת בְּרֵאשִׁית"
+        }
+      }
     },
     {
       "id": "b010",
       "order": 10,
       "text": "A Torá retorna ao relato da criação de Adam, formado do pó da terra e vivificado pelo sopro divino.",
       "text_he": "וַיִּיצֶר ה׳ אֱלֹהִים אֶת הָאָדָם עָפָר מִן הָאֲדָמָה",
-      "refs": ["Genesis 2:4-7"],
+      "refs": [
+        "Genesis 2:4-7"
+      ],
       "ref_start": "Genesis 2:4",
       "ref_end": "Genesis 2:7",
       "chapter": 2,
@@ -213,15 +449,36 @@
       "verse_end": 7,
       "sefaria_ref": "Genesis 2:4-7",
       "day_of_creation": null,
-      "tags": ["adam", "neshama", "pó", "criação-do-homem"],
-      "topic": "Criação de Adam — perspectiva íntima"
+      "tags": [
+        "adam",
+        "neshama",
+        "pó",
+        "criação-do-homem"
+      ],
+      "topic": "Criação de Adam — perspectiva íntima",
+      "i18n": {
+        "en": {
+          "text": "The Torah returns to the account of Adam's creation, formed from the dust of the earth and given life by the divine breath.",
+          "topic": "The creation of Adam — an intimate perspective"
+        },
+        "es": {
+          "text": "La Torá vuelve al relato de la creación de Adán, formado del polvo de la tierra y vivificado por el aliento divino.",
+          "topic": "La creación de Adán — perspectiva íntima"
+        },
+        "he": {
+          "text": "הַתּוֹרָה שָׁבָה אֶל סִפּוּר בְּרִיאַת הָאָדָם, אֲשֶׁר נוֹצַר מֵעֲפַר הָאֲדָמָה וְקִבֵּל חַיִּים מִנִּשְׁמַת אֱלֹהִים.",
+          "topic": "בְּרִיאַת הָאָדָם — מַבָּט אִישִׁי"
+        }
+      }
     },
     {
       "id": "b011",
       "order": 11,
       "text": "Deus planta o Gan Eden, colocando ali Adam e permitindo-lhe usufruir de todas as árvores.",
       "text_he": "וַיִּטַּע ה׳ אֱלֹהִים גַּן בְּעֵדֶן",
-      "refs": ["Genesis 2:8-15"],
+      "refs": [
+        "Genesis 2:8-15"
+      ],
       "ref_start": "Genesis 2:8",
       "ref_end": "Genesis 2:15",
       "chapter": 2,
@@ -229,16 +486,46 @@
       "verse_end": 15,
       "sefaria_ref": "Genesis 2:8-15",
       "day_of_creation": null,
-      "tags": ["gan-eden", "paraíso", "árvore-da-vida", "árvore-do-conhecimento"],
+      "tags": [
+        "gan-eden",
+        "paraíso",
+        "árvore-da-vida",
+        "árvore-do-conhecimento"
+      ],
       "topic": "O Gan Eden — jardim e missão de Adam",
-      "visual": { "marker_type": "icon", "icon": "tree", "asset": "assets/icons/tree.svg", "caption": "O Gan Eden", "importance": 4 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "tree",
+        "asset": "assets/icons/tree.svg",
+        "caption": "O Gan Eden",
+        "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "God plants the Garden of Eden, placing Adam there and allowing him to enjoy all the trees.",
+          "topic": "The Garden of Eden — the garden and Adam's mission",
+          "caption": "The Garden of Eden"
+        },
+        "es": {
+          "text": "Dios planta el Jardín del Edén, colocando allí a Adán y permitiéndole disfrutar de todos los árboles.",
+          "topic": "El Jardín del Edén — el jardín y la misión de Adán",
+          "caption": "El Jardín del Edén"
+        },
+        "he": {
+          "text": "אֱלֹהִים נוֹטֵעַ אֶת גַּן עֵדֶן, מַנִּיחַ שָׁם אֶת הָאָדָם וּמַתִּיר לוֹ לֵהָנוֹת מִכָּל הָעֵצִים.",
+          "topic": "גַּן עֵדֶן — הַגַּן וְיִעוּד הָאָדָם",
+          "caption": "גַּן עֵדֶן"
+        }
+      }
     },
     {
       "id": "b012",
       "order": 12,
       "text": "Adam recebe o mandamento de não comer da Árvore do Conhecimento, única restrição do jardim.",
       "text_he": "וּמֵעֵץ הַדַּעַת טוֹב וָרָע לֹא תֹאכַל מִמֶּנּוּ",
-      "refs": ["Genesis 2:16-17"],
+      "refs": [
+        "Genesis 2:16-17"
+      ],
       "ref_start": "Genesis 2:16",
       "ref_end": "Genesis 2:17",
       "chapter": 2,
@@ -246,15 +533,36 @@
       "verse_end": 17,
       "sefaria_ref": "Genesis 2:16-17",
       "day_of_creation": null,
-      "tags": ["mitzvá", "proibição", "livre-arbítrio", "eitz-hadaat"],
-      "topic": "A única proibição — o livre-arbítrio"
+      "tags": [
+        "mitzvá",
+        "proibição",
+        "livre-arbítrio",
+        "eitz-hadaat"
+      ],
+      "topic": "A única proibição — o livre-arbítrio",
+      "i18n": {
+        "en": {
+          "text": "Adam receives the commandment not to eat from the Tree of Knowledge, the garden's only restriction.",
+          "topic": "The single prohibition — free will"
+        },
+        "es": {
+          "text": "Adán recibe el mandamiento de no comer del Árbol del Conocimiento, única restricción del jardín.",
+          "topic": "La única prohibición — el libre albedrío"
+        },
+        "he": {
+          "text": "הָאָדָם מְקַבֵּל אֶת הַצִּוּוּי שֶׁלֹּא לֶאֱכֹל מֵעֵץ הַדַּעַת, הָאִסּוּר הַיָּחִיד בַּגַּן.",
+          "topic": "הָאִסּוּר הַיָּחִיד — בְּחִירָה חָפְשִׁית"
+        }
+      }
     },
     {
       "id": "b013",
       "order": 13,
       "text": "Chavah é criada a partir de Adam, tornando-se sua companheira e completando a criação humana.",
       "text_he": "וַיִּבֶן ה׳ אֱלֹהִים אֶת הַצֵּלָע אֲשֶׁר לָקַח מִן הָאָדָם לְאִשָּׁה",
-      "refs": ["Genesis 2:18-25"],
+      "refs": [
+        "Genesis 2:18-25"
+      ],
       "ref_start": "Genesis 2:18",
       "ref_end": "Genesis 2:25",
       "chapter": 2,
@@ -262,15 +570,36 @@
       "verse_end": 25,
       "sefaria_ref": "Genesis 2:18-25",
       "day_of_creation": null,
-      "tags": ["chavah", "ezer-kenegdo", "casamento", "unidade"],
-      "topic": "Criação de Chavah — complementaridade"
+      "tags": [
+        "chavah",
+        "ezer-kenegdo",
+        "casamento",
+        "unidade"
+      ],
+      "topic": "Criação de Chavah — complementaridade",
+      "i18n": {
+        "en": {
+          "text": "Eve is created from Adam, becoming his companion and completing the human creation.",
+          "topic": "The creation of Eve — complementarity"
+        },
+        "es": {
+          "text": "Eva es creada a partir de Adán, convirtiéndose en su compañera y completando la creación humana.",
+          "topic": "La creación de Eva — complementariedad"
+        },
+        "he": {
+          "text": "חַוָּה נִבְרֵאת מִן הָאָדָם, וְנַעֲשֵׂית בַּת זוּגוֹ וּמַשְׁלִימָה אֶת בְּרִיאַת הָאָדָם.",
+          "topic": "בְּרִיאַת חַוָּה — הַשְׁלָמָה הֲדָדִית"
+        }
+      }
     },
     {
       "id": "b014",
       "order": 14,
       "text": "A serpente convence Chavah a comer do fruto proibido, e Adam também participa.",
       "text_he": "וַתֵּרֶא הָאִשָּׁה כִּי טוֹב הָעֵץ לְמַאֲכָל",
-      "refs": ["Genesis 3:1-6"],
+      "refs": [
+        "Genesis 3:1-6"
+      ],
       "ref_start": "Genesis 3:1",
       "ref_end": "Genesis 3:6",
       "chapter": 3,
@@ -278,16 +607,46 @@
       "verse_end": 6,
       "sefaria_ref": "Genesis 3:1-6",
       "day_of_creation": null,
-      "tags": ["serpente", "pecado", "fruto-proibido", "chet-adam"],
+      "tags": [
+        "serpente",
+        "pecado",
+        "fruto-proibido",
+        "chet-adam"
+      ],
       "topic": "O pecado — a serpente e o fruto proibido",
-      "visual": { "marker_type": "icon", "icon": "serpent", "asset": "assets/icons/serpent.svg", "caption": "A serpente e o fruto proibido", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "serpent",
+        "asset": "assets/icons/serpent.svg",
+        "caption": "A serpente e o fruto proibido",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "The serpent persuades Eve to eat from the forbidden fruit, and Adam partakes as well.",
+          "topic": "The sin — the serpent and the forbidden fruit",
+          "caption": "The serpent and the forbidden fruit"
+        },
+        "es": {
+          "text": "La serpiente convence a Eva de comer del fruto prohibido, y Adán también participa.",
+          "topic": "El pecado — la serpiente y el fruto prohibido",
+          "caption": "La serpiente y el fruto prohibido"
+        },
+        "he": {
+          "text": "הַנָּחָשׁ מְפַתֶּה אֶת חַוָּה לֶאֱכֹל מִן הַפְּרִי הָאָסוּר, וְגַם הָאָדָם אוֹכֵל עִמָּהּ.",
+          "topic": "הַחֵטְא — הַנָּחָשׁ וְהַפְּרִי הָאָסוּר",
+          "caption": "הַנָּחָשׁ וְהַפְּרִי הָאָסוּר"
+        }
+      }
     },
     {
       "id": "b015",
       "order": 15,
       "text": "Após o pecado, Adam e Chavah percebem sua nudez, sentem vergonha e escondem-se diante de Deus.",
       "text_he": "וַיֵּדְעוּ כִּי עֵירֻמִּם הֵם וַיִּתְפְּרוּ עֲלֵה תְאֵנָה",
-      "refs": ["Genesis 3:7-13"],
+      "refs": [
+        "Genesis 3:7-13"
+      ],
       "ref_start": "Genesis 3:7",
       "ref_end": "Genesis 3:13",
       "chapter": 3,
@@ -295,15 +654,36 @@
       "verse_end": 13,
       "sefaria_ref": "Genesis 3:7-13",
       "day_of_creation": null,
-      "tags": ["vergonha", "consciência", "ocultação", "consequência"],
-      "topic": "Consciência do pecado — vergonha e ocultação"
+      "tags": [
+        "vergonha",
+        "consciência",
+        "ocultação",
+        "consequência"
+      ],
+      "topic": "Consciência do pecado — vergonha e ocultação",
+      "i18n": {
+        "en": {
+          "text": "After the sin, Adam and Eve become aware of their nakedness, feel shame, and hide from God.",
+          "topic": "Awareness of sin — shame and hiding"
+        },
+        "es": {
+          "text": "Tras el pecado, Adán y Eva perciben su desnudez, sienten vergüenza y se esconden ante Dios.",
+          "topic": "Conciencia del pecado — vergüenza y ocultamiento"
+        },
+        "he": {
+          "text": "לְאַחַר הַחֵטְא, אָדָם וְחַוָּה מַבְחִינִים בְּעֵירֻמָּם, חָשִׁים בּוּשָׁה וּמִתְחַבְּאִים מִפְּנֵי אֱלֹהִים.",
+          "topic": "תּוֹדָעַת הַחֵטְא — בּוּשָׁה וְהִתְחַבְּאוּת"
+        }
+      }
     },
     {
       "id": "b016",
       "order": 16,
       "text": "Deus pronuncia as consequências sobre a serpente, Chavah e Adam, alterando a condição humana no mundo.",
       "text_he": "בְּזֵעַת אַפֶּיךָ תֹּאכַל לֶחֶם",
-      "refs": ["Genesis 3:14-19"],
+      "refs": [
+        "Genesis 3:14-19"
+      ],
       "ref_start": "Genesis 3:14",
       "ref_end": "Genesis 3:19",
       "chapter": 3,
@@ -311,15 +691,37 @@
       "verse_end": 19,
       "sefaria_ref": "Genesis 3:14-19",
       "day_of_creation": null,
-      "tags": ["punição", "consequência", "mortalidade", "trabalho", "dor"],
-      "topic": "As consequências do pecado original"
+      "tags": [
+        "punição",
+        "consequência",
+        "mortalidade",
+        "trabalho",
+        "dor"
+      ],
+      "topic": "As consequências do pecado original",
+      "i18n": {
+        "en": {
+          "text": "God pronounces the consequences upon the serpent, Eve, and Adam, altering the human condition in the world.",
+          "topic": "The consequences of the original sin"
+        },
+        "es": {
+          "text": "Dios pronuncia las consecuencias sobre la serpiente, Eva y Adán, alterando la condición humana en el mundo.",
+          "topic": "Las consecuencias del pecado original"
+        },
+        "he": {
+          "text": "אֱלֹהִים גּוֹזֵר אֶת הָעֳנָשִׁים עַל הַנָּחָשׁ, עַל חַוָּה וְעַל אָדָם, וּמְשַׁנֶּה אֶת מַצַּב הָאָדָם בָּעוֹלָם.",
+          "topic": "תּוֹצְאוֹת הַחֵטְא הַקַּדְמוֹן"
+        }
+      }
     },
     {
       "id": "b017",
       "order": 17,
       "text": "Adam e Chavah são expulsos do Gan Eden, e querubins guardam o caminho da Árvore da Vida.",
       "text_he": "וַיְגָרֶשׁ אֶת הָאָדָם וַיַּשְׁכֵּן מִקֶּדֶם לְגַן עֵדֶן",
-      "refs": ["Genesis 3:20-24"],
+      "refs": [
+        "Genesis 3:20-24"
+      ],
       "ref_start": "Genesis 3:20",
       "ref_end": "Genesis 3:24",
       "chapter": 3,
@@ -327,15 +729,36 @@
       "verse_end": 24,
       "sefaria_ref": "Genesis 3:20-24",
       "day_of_creation": null,
-      "tags": ["expulsão", "gan-eden", "querubim", "exílio"],
-      "topic": "Expulsão do Gan Eden"
+      "tags": [
+        "expulsão",
+        "gan-eden",
+        "querubim",
+        "exílio"
+      ],
+      "topic": "Expulsão do Gan Eden",
+      "i18n": {
+        "en": {
+          "text": "Adam and Eve are expelled from the Garden of Eden, and cherubim guard the way to the Tree of Life.",
+          "topic": "Expulsion from the Garden of Eden"
+        },
+        "es": {
+          "text": "Adán y Eva son expulsados del Jardín del Edén, y querubines guardan el camino del Árbol de la Vida.",
+          "topic": "Expulsión del Jardín del Edén"
+        },
+        "he": {
+          "text": "אָדָם וְחַוָּה מְגֹרָשִׁים מִגַּן עֵדֶן, וּכְרוּבִים שׁוֹמְרִים אֶת הַדֶּרֶךְ אֶל עֵץ הַחַיִּים.",
+          "topic": "הַגֵּרוּשׁ מִגַּן עֵדֶן"
+        }
+      }
     },
     {
       "id": "b018",
       "order": 18,
       "text": "Chavah dá à luz Kayin e Hevel, que crescem e oferecem sacrifícios a Deus.",
       "text_he": "וַתַּהַר וַתֵּלֶד אֶת קַיִן",
-      "refs": ["Genesis 4:1-5"],
+      "refs": [
+        "Genesis 4:1-5"
+      ],
       "ref_start": "Genesis 4:1",
       "ref_end": "Genesis 4:5",
       "chapter": 4,
@@ -343,16 +766,47 @@
       "verse_end": 5,
       "sefaria_ref": "Genesis 4:1-5",
       "day_of_creation": null,
-      "tags": ["kayin", "hevel", "sacrifício", "oferta", "inveja"],
+      "tags": [
+        "kayin",
+        "hevel",
+        "sacrifício",
+        "oferta",
+        "inveja"
+      ],
       "topic": "Kayin e Hevel — as duas ofertas",
-      "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "As ofertas de Kayin e Hevel", "importance": 3 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "altar",
+        "asset": "assets/icons/altar.svg",
+        "caption": "As ofertas de Kayin e Hevel",
+        "importance": 3
+      },
+      "i18n": {
+        "en": {
+          "text": "Eve gives birth to Cain and Abel, who grow up and offer sacrifices to God.",
+          "topic": "Cain and Abel — the two offerings",
+          "caption": "The offerings of Cain and Abel"
+        },
+        "es": {
+          "text": "Eva da a luz a Caín y Abel, que crecen y ofrecen sacrificios a Dios.",
+          "topic": "Caín y Abel — las dos ofrendas",
+          "caption": "Las ofrendas de Caín y Abel"
+        },
+        "he": {
+          "text": "חַוָּה יוֹלֶדֶת אֶת קַיִן וְאֶת הֶבֶל, אֲשֶׁר גְּדֵלִים וּמַקְרִיבִים קָרְבָּנוֹת לֵאלֹהִים.",
+          "topic": "קַיִן וְהֶבֶל — שְׁתֵּי הַמִּנְחוֹת",
+          "caption": "מִנְחוֹת קַיִן וְהֶבֶל"
+        }
+      }
     },
     {
       "id": "b019",
       "order": 19,
       "text": "Kayin mata Hevel por inveja, tornando-se o primeiro assassinato da história bíblica; Deus o confronta e o pune.",
       "text_he": "וַיָּקָם קַיִן אֶל הֶבֶל אָחִיו וַיַּהַרְגֵהוּ",
-      "refs": ["Genesis 4:6-16"],
+      "refs": [
+        "Genesis 4:6-16"
+      ],
       "ref_start": "Genesis 4:6",
       "ref_end": "Genesis 4:16",
       "chapter": 4,
@@ -360,15 +814,38 @@
       "verse_end": 16,
       "sefaria_ref": "Genesis 4:6-16",
       "day_of_creation": null,
-      "tags": ["assassinato", "kayin", "hevel", "punição", "exílio", "nod"],
-      "topic": "O primeiro assassinato — Kayin e Hevel"
+      "tags": [
+        "assassinato",
+        "kayin",
+        "hevel",
+        "punição",
+        "exílio",
+        "nod"
+      ],
+      "topic": "O primeiro assassinato — Kayin e Hevel",
+      "i18n": {
+        "en": {
+          "text": "Cain kills Abel out of envy, becoming the first murder in biblical history; God confronts and punishes him.",
+          "topic": "The first murder — Cain and Abel"
+        },
+        "es": {
+          "text": "Caín mata a Abel por envidia, convirtiéndose en el primer asesinato de la historia bíblica; Dios lo confronta y lo castiga.",
+          "topic": "El primer asesinato — Caín y Abel"
+        },
+        "he": {
+          "text": "קַיִן הוֹרֵג אֶת הֶבֶל מִתּוֹךְ קִנְאָה, וְזֶהוּ הָרֶצַח הָרִאשׁוֹן בַּהִיסְטוֹרְיָה הַמִּקְרָאִית; אֱלֹהִים מוֹכִיחַ אוֹתוֹ וּמַעֲנִישׁוֹ.",
+          "topic": "הָרֶצַח הָרִאשׁוֹן — קַיִן וְהֶבֶל"
+        }
+      }
     },
     {
       "id": "b020",
       "order": 20,
       "text": "A parashá conclui com as gerações de Adam até Noach, enquanto a humanidade cresce, mas também se corrompe diante de Deus.",
       "text_he": "זֶה סֵפֶר תּוֹלְדֹת אָדָם",
-      "refs": ["Genesis 4:17-6:8"],
+      "refs": [
+        "Genesis 4:17-6:8"
+      ],
       "ref_start": "Genesis 4:17",
       "ref_end": "Genesis 6:8",
       "chapter": 4,
@@ -377,34 +854,95 @@
       "verse_end": 8,
       "sefaria_ref": "Genesis 4:17-6:8",
       "day_of_creation": null,
-      "tags": ["gerações", "toledot", "corrupção", "noach", "nefilim"],
-      "topic": "Gerações de Adam → Noach e corrupção da humanidade"
+      "tags": [
+        "gerações",
+        "toledot",
+        "corrupção",
+        "noach",
+        "nefilim"
+      ],
+      "topic": "Gerações de Adam → Noach e corrupção da humanidade",
+      "i18n": {
+        "en": {
+          "text": "The parashah concludes with the generations from Adam to Noah, as humankind multiplies but also grows corrupt before God.",
+          "topic": "Generations from Adam to Noah and the corruption of humankind"
+        },
+        "es": {
+          "text": "La parashá concluye con las generaciones de Adán hasta Noé, mientras la humanidad crece, pero también se corrompe ante Dios.",
+          "topic": "Generaciones de Adán a Noé y la corrupción de la humanidad"
+        },
+        "he": {
+          "text": "הַפָּרָשָׁה מִסְתַּיֶּמֶת בְּתוֹלְדוֹת אָדָם עַד נֹחַ, בְּעוֹד הָאֱנוֹשׁוּת רָבָה אַךְ גַּם נִשְׁחֶתֶת לִפְנֵי אֱלֹהִים.",
+          "topic": "תּוֹלְדוֹת אָדָם עַד נֹחַ וְהַשְׁחָתַת הָאֱנוֹשׁוּת"
+        }
+      }
     }
   ],
-
   "aliyot": [
-    { "number": 1, "ref_start": "Genesis 1:1",  "ref_end": "Genesis 2:3",  "sefaria_ref": "Genesis 1:1-2:3" },
-    { "number": 2, "ref_start": "Genesis 2:4",  "ref_end": "Genesis 2:19", "sefaria_ref": "Genesis 2:4-19" },
-    { "number": 3, "ref_start": "Genesis 2:20", "ref_end": "Genesis 3:21", "sefaria_ref": "Genesis 2:20-3:21" },
-    { "number": 4, "ref_start": "Genesis 3:22", "ref_end": "Genesis 4:18", "sefaria_ref": "Genesis 3:22-4:18" },
-    { "number": 5, "ref_start": "Genesis 4:19", "ref_end": "Genesis 4:22", "sefaria_ref": "Genesis 4:19-22" },
-    { "number": 6, "ref_start": "Genesis 4:23", "ref_end": "Genesis 5:24", "sefaria_ref": "Genesis 4:23-5:24" },
-    { "number": 7, "ref_start": "Genesis 5:25", "ref_end": "Genesis 6:8",  "sefaria_ref": "Genesis 5:25-6:8" }
+    {
+      "number": 1,
+      "ref_start": "Genesis 1:1",
+      "ref_end": "Genesis 2:3",
+      "sefaria_ref": "Genesis 1:1-2:3"
+    },
+    {
+      "number": 2,
+      "ref_start": "Genesis 2:4",
+      "ref_end": "Genesis 2:19",
+      "sefaria_ref": "Genesis 2:4-19"
+    },
+    {
+      "number": 3,
+      "ref_start": "Genesis 2:20",
+      "ref_end": "Genesis 3:21",
+      "sefaria_ref": "Genesis 2:20-3:21"
+    },
+    {
+      "number": 4,
+      "ref_start": "Genesis 3:22",
+      "ref_end": "Genesis 4:18",
+      "sefaria_ref": "Genesis 3:22-4:18"
+    },
+    {
+      "number": 5,
+      "ref_start": "Genesis 4:19",
+      "ref_end": "Genesis 4:22",
+      "sefaria_ref": "Genesis 4:19-22"
+    },
+    {
+      "number": 6,
+      "ref_start": "Genesis 4:23",
+      "ref_end": "Genesis 5:24",
+      "sefaria_ref": "Genesis 4:23-5:24"
+    },
+    {
+      "number": 7,
+      "ref_start": "Genesis 5:25",
+      "ref_end": "Genesis 6:8",
+      "sefaria_ref": "Genesis 5:25-6:8"
+    }
   ],
-
   "haftarah": {
     "ref": "Isaiah 42:5-43:10",
     "sefaria_ref": "Isaiah 42:5-43:10",
     "note": "Tema: Deus como Criador e Israel como testemunha"
   },
-
   "connections": {
     "next_parasha": "noach",
     "prev_parasha": null,
     "thematic_links": [
-      { "parasha": "yitro",     "theme": "Revelação divina e mandamentos" },
-      { "parasha": "ekev",      "theme": "Consequências da obediência e desobediência" },
-      { "parasha": "ha-azinu",  "theme": "Canto sobre a criação e a história" }
+      {
+        "parasha": "yitro",
+        "theme": "Revelação divina e mandamentos"
+      },
+      {
+        "parasha": "ekev",
+        "theme": "Consequências da obediência e desobediência"
+      },
+      {
+        "parasha": "ha-azinu",
+        "theme": "Canto sobre a criação e a história"
+      }
     ]
   }
 }
