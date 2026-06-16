@@ -2138,6 +2138,17 @@ function t(key, ptDefault) {
   return (cat[k] != null) ? cat[k] : k;
 }
 
+// Conteúdo dos dados (facts / summary) traduzido: usa obj.i18n[lang][campo]
+// com fallback ao PT canônico (obj[campo]). PT é sempre a fonte de verdade.
+function trContent(obj, field) {
+  if (!obj) return '';
+  if (currentLang !== 'pt' && obj.i18n && obj.i18n[currentLang]) {
+    const v = obj.i18n[currentLang][field];
+    if (v != null && v !== '') return v;
+  }
+  return obj[field] != null ? obj[field] : '';
+}
+
 // Traduz os nós de texto de um elemento, preservando filhos (badges, ícones)
 function _i18nTranslateEl(el, cat) {
   el.childNodes.forEach(n => {
@@ -2171,6 +2182,16 @@ async function setLang(lang) {
   if (typeof pkState !== 'undefined' && reader && reader.style.display !== 'none') pkRender();
   const atlasPage = document.getElementById('page-atlas');
   if (typeof atlasRender === 'function' && atlasPage && atlasPage.classList.contains('active')) atlasRender();
+  // Re-render do conteúdo dependente de i18n.{lang} (facts/summary) já exibido
+  const drawerEl = document.getElementById('drawer');
+  if (drawerEl && drawerEl.classList.contains('open') && _drawer.current) {
+    drawerShowParasha(_drawer.current.id, _drawer.current.dataFile, _drawer.current.context);
+  }
+  const tlPage = document.getElementById('page-timeline');
+  if (typeof renderTimelineDrilldowns === 'function' && tlPage && tlPage.classList.contains('active')) renderTimelineDrilldowns();
+  const chumashPage = document.getElementById('page-chumash');
+  if (typeof drillRenderCard === 'function' && typeof drillState !== 'undefined' && drillState.deck.length
+      && chumashPage && chumashPage.classList.contains('active')) drillRenderCard();
 }
 
 function showPage(id, btn) {
@@ -2838,8 +2859,8 @@ async function atlasRenderFacts(ctx) {
   }
   root.innerHTML = facts.slice(0, atlasState.zoom >= 4 ? 12 : 5).map(f => `
     <div class="atlas2d-fact">
-      <div class="atlas2d-fact-topic">${atlasEsc(f._unitName || '')}${f.topic ? ' · ' + atlasEsc(f.topic) : ''}</div>
-      <div class="atlas2d-fact-text">${atlasEsc(f.text || '')}</div>
+      <div class="atlas2d-fact-topic">${atlasEsc(f._unitName || '')}${trContent(f, 'topic') ? ' · ' + atlasEsc(trContent(f, 'topic')) : ''}</div>
+      <div class="atlas2d-fact-text">${atlasEsc(trContent(f, 'text'))}</div>
       <button class="atlas2d-action-btn" onclick="drawerOpen({bookKey:'${atlasEsc(ctx.factsContext.bookKey)}',parashaId:'${atlasEsc(f._unitId)}',factIds:['${atlasEsc(f.id)}']})">${t('Abrir fato')}</button>
     </div>
   `).join('');
@@ -3249,9 +3270,9 @@ function drillRenderCard() {
 
   card.innerHTML = `
     <div class="drill-card-era">${eraLabel} · ${f._parasha || ''}</div>
-    <div class="drill-card-topic">${f.topic || ''}</div>
+    <div class="drill-card-topic">${trContent(f, 'topic')}</div>
     ${revealed ? `
-      <div class="drill-card-text">${f.text || ''}</div>
+      <div class="drill-card-text">${trContent(f, 'text')}</div>
       ${f.text_he ? `<div class="drill-card-he">${f.text_he}</div>` : ''}
       <div class="drill-card-meta">
         ${refText ? `<span>${refText}</span>` : ''}
@@ -3591,7 +3612,7 @@ const BOOK_META = {
 };
 
 const _mart = { timeline: null, timelineGroups: null, parasha: {} };
-const _drawer = { bookKey: 'genesis', index: null, indices: {}, cache: {}, context: null };
+const _drawer = { bookKey: 'genesis', index: null, indices: {}, cache: {}, context: null, current: null };
 
 async function loadTimelineData() {
   if (!_mart.timeline) {
@@ -3745,8 +3766,8 @@ async function toggleGroupFacts(phaseId, groupId, cardEl, ev) {
         : '';
       return `
         <div class="tl-group-fact-item fact-item" id="tl-fact-${f.id}">
-          <div class="tl-group-fact-meta">${f._parashaName}${f.topic ? ' · ' + f.topic : ''}</div>
-          <div class="tl-group-fact-text">${f.text}</div>
+          <div class="tl-group-fact-meta">${f._parashaName}${trContent(f, 'topic') ? ' · ' + trContent(f, 'topic') : ''}</div>
+          <div class="tl-group-fact-text">${trContent(f, 'text')}</div>
           <div class="tl-group-fact-btns">${passBtn}${chapBtn}</div>
           ${passRef ? '<div class="fact-passage-area"></div>' : ''}
         </div>`;
@@ -3930,6 +3951,7 @@ function _buildRuler(parashiot, totalAM, highlightId) {
 }
 
 function drawerShowIndex() {
+  _drawer.current = null;
   document.getElementById('drawer-back').style.display = 'none';
   const meta = BOOK_META[_drawer.bookKey] || BOOK_META.genesis;
   const isNach = meta.indexField === 'units';
@@ -3986,6 +4008,7 @@ async function drawerShowParasha(id, dataFile, context = null) {
       if (!r.ok) throw new Error(`${r.status} — arquivo não encontrado`);
       _drawer.cache[cacheKey] = await r.json();
     }
+    _drawer.current = { id, dataFile, context: context || _drawer.context };
     _drawerRenderParasha(_drawer.cache[cacheKey], context || _drawer.context);
   } catch(e) {
     const idx = _drawer.indices[_drawer.bookKey] || _drawer.index;
@@ -4015,12 +4038,13 @@ function visualMarkerHTML(v) {
   return `<span class="icon-mask" role="img" aria-label="${cap}" title="${cap}" style="--icon:url('${v.asset}')"></span>`;
 }
 
-function illustrationHTML(v) {
+function illustrationHTML(v, capOverride) {
   if (!v || v.marker_type !== 'image' || !v.asset) return '';
-  const cap = (v.caption || '').replace(/"/g, '&quot;');
+  const capText = (capOverride != null && capOverride !== '') ? capOverride : (v.caption || '');
+  const cap = capText.replace(/"/g, '&quot;');
   return `<figure class="fact-illus">
     <img src="${v.asset}" alt="${cap}" loading="lazy" onerror="this.closest('figure').style.display='none'">
-    ${v.caption ? `<figcaption>${v.caption}</figcaption>` : ''}
+    ${capText ? `<figcaption>${capText}</figcaption>` : ''}
   </figure>`;
 }
 
@@ -4061,18 +4085,18 @@ function _drawerRenderParasha(data, context = null) {
       ? `<div style="display:flex;gap:5px;flex-shrink:0">${passBtn}${chapBtn}</div>`
       : '';
     const isImg     = f.visual && f.visual.marker_type === 'image';
-    const illusHTML = isImg ? illustrationHTML(f.visual) : '';
+    const illusHTML = isImg ? illustrationHTML(f.visual, trContent(f, 'caption')) : '';
     const visMarker = isImg ? '' : visualMarkerHTML(f.visual);
     const visHTML   = visMarker
       ? `<div class="fact-visual"><div class="fact-visual-icon">${visMarker}</div></div>`
       : '';
     factsHTML += `
       <div class="fact-item ${highlightedFacts.has(f.id) ? 'highlighted' : ''}" id="fact-${f.id}">
-        ${f.topic ? `<div class="fact-topic">${f.topic}</div>` : ''}
+        ${trContent(f, 'topic') ? `<div class="fact-topic">${trContent(f, 'topic')}</div>` : ''}
         <div class="fact-flex">
           ${visHTML}
           <div class="fact-main">
-            <div class="fact-text">${f.text}</div>
+            <div class="fact-text">${trContent(f, 'text')}</div>
             ${f.text_he ? `<div class="fact-he">${f.text_he}</div>` : ''}
             ${illusHTML}
             <div class="fact-bottom">
@@ -4094,7 +4118,7 @@ function _drawerRenderParasha(data, context = null) {
       <div class="dp-he">${identity.hebrew || ''}</div>
       <div class="dp-name">${identity.name}</div>
       <div class="dp-range">${range.ref_start} – ${range.ref_end} &nbsp;·&nbsp; ${timeline.anno_mundi_start}–${timeline.anno_mundi_end} AM</div>
-      <div class="dp-summary">${summary.short}</div>
+      <div class="dp-summary">${trContent(summary, 'short')}</div>
       <div class="dp-themes">${themesHTML}</div>
     </div>
     <div class="drawer-ruler">

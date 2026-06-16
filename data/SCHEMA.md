@@ -255,6 +255,39 @@ Regras:
 
 ---
 
+## Traduções de conteúdo (`i18n`) — opcional
+
+O PT é sempre a **fonte de verdade** (`text`, `topic`, `caption`, `summary.short`).
+Para expor o conteúdo em ES / EN / HE, adicione um bloco `i18n` opcional no
+objeto que tem o texto: cada `fact` (para `text`, `topic` e `caption`) e o
+`summary` (para `short`).
+
+```json
+{
+  "id": "mg017",
+  "text": "Achashverosh oferece um banquete de 180 dias…",
+  "topic": "O banquete do rei",
+  "visual": { "marker_type": "image", "asset": "assets/user/banquete.jpg", "caption": "O banquete real" },
+  "i18n": {
+    "en": { "text": "Ahasuerus holds a 180-day feast…", "topic": "The king's feast", "caption": "The royal feast" },
+    "es": { "text": "Asuero ofrece un banquete de 180 días…", "topic": "El banquete del rey" },
+    "he": { "text": "אֲחַשְׁוֵרוֹשׁ עוֹרֵךְ מִשְׁתֶּה…", "topic": "מִשְׁתֵּה הַמֶּלֶךְ" }
+  }
+}
+```
+
+Regras:
+- `i18n.{lang}` só precisa conter os campos traduzidos; o que faltar **cai no PT**.
+- `caption` traduzido fica em `fact.i18n.{lang}.caption` (não dentro de `visual`);
+  o PT canônico continua em `visual.caption`.
+- `summary.i18n.{lang}.short` traduz o resumo do cabeçalho do drawer.
+- `text_he` (passuk hebraico) é **outra coisa** — não é a tradução do resumo.
+- Idiomas suportados: `en`, `es`, `he`. PT não vai no `i18n` (é o default).
+- **Autoria:** use a seção *3 · Traduções* do `editor.html` — ela escreve esse
+  bloco automaticamente no objeto certo.
+
+---
+
 ## Como adicionar uma nova parasha
 
 1. Copie o template acima

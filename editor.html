@@ -53,6 +53,11 @@
   #cropbox{position:absolute;border:2px solid #fff;box-shadow:0 0 0 9999px rgba(0,0,0,.45);cursor:move;box-sizing:border-box}
   #crophandle{position:absolute;right:-8px;bottom:-8px;width:15px;height:15px;background:var(--gold);
     border:2px solid #fff;border-radius:3px;cursor:nwse-resize}
+  .trfield{margin:.7rem 0 .2rem}
+  .trpt{font-size:12.5px;color:var(--text2);background:rgba(92,76,47,.05);border:1px solid var(--border);
+    border-radius:6px;padding:5px 9px;margin:.25rem 0 .45rem;line-height:1.45}
+  .trlang{display:block;font-size:10px;letter-spacing:.08em;color:var(--text3);margin:0 0 .15rem;text-transform:uppercase}
+  .trfield textarea{font-family:inherit;font-size:13px;line-height:1.5}
 </style>
 </head>
 <body>
@@ -126,6 +131,19 @@
       <button class="btn" id="validate">Validar JSON</button>
       <button class="btn" id="save" disabled>Salvar no arquivo</button>
       <span class="hint" id="jstatus"></span>
+
+      <!-- ════════ 3. TRADUÇÕES ════════ -->
+      <h2 style="margin-top:1.6rem">3 · Traduções <span style="font-size:13px;color:var(--text3)">(ES · EN · עברית)</span></h2>
+      <div class="hint">O PT é a fonte de verdade (campos <code>text</code>, <code>topic</code>, <code>caption</code>, <code>summary.short</code>).
+        Escolha o alvo, clique em <b>Carregar alvo</b>, preencha e clique em <b>Aplicar</b> (depois <b>Salvar</b>).
+        Vazio = remove a tradução. O app usa a tradução quando existe, senão cai no PT.</div>
+      <div class="row" style="margin-top:.5rem">
+        <select id="trtarget"></select>
+        <button class="btn" id="trload" style="flex:0 0 auto;margin-top:0">Carregar alvo</button>
+      </div>
+      <div id="trfields"></div>
+      <button class="btn" id="trapply" disabled>Aplicar traduções ao JSON</button>
+      <span class="hint" id="trstatus"></span>
     </div>
   </div>
 </div>
@@ -287,17 +305,21 @@ async function loadFile(path){
   const text = await file.text();
   try{ const o=JSON.parse(text); $('json').value=JSON.stringify(o,null,2); populateTargets(o);
        $('jstatus').innerHTML='<span class="ok">JSON válido</span>'; $('save').disabled=false; }
-  catch(err){ $('json').value=text; $('target').innerHTML=''; $('jstatus').innerHTML=`<span class="err">JSON inválido: ${err.message}</span>`; $('save').disabled=true; }
+  catch(err){ $('json').value=text; $('target').innerHTML=''; $('trtarget').innerHTML=''; $('trfields').innerHTML=''; $('trapply').disabled=true; $('jstatus').innerHTML=`<span class="err">JSON inválido: ${err.message}</span>`; $('save').disabled=true; }
 }
 
 function populateTargets(obj){
-  const sel=$('target'); sel.innerHTML='';
-  const u=document.createElement('option'); u.value='unit'; u.textContent='Unidade (visual no topo / banner)'; sel.appendChild(u);
+  const sel=$('target'), tr=$('trtarget'); sel.innerHTML=''; tr.innerHTML='';
+  const mkUnit=()=>{const u=document.createElement('option');u.value='unit';u.textContent='Unidade (visual no topo / banner)';return u;};
+  const mkTrUnit=()=>{const u=document.createElement('option');u.value='unit';u.textContent='Unidade (summary.short)';return u;};
+  sel.appendChild(mkUnit()); tr.appendChild(mkTrUnit());
   (obj.facts||[]).forEach((f,i)=>{
-    const o=document.createElement('option'); o.value='fact:'+i;
-    o.textContent=`${f.id||('#'+i)} · ${f.topic||(f.text||'').slice(0,45)}`;
-    sel.appendChild(o);
+    const label=`${f.id||('#'+i)} · ${f.topic||(f.text||'').slice(0,45)}`;
+    const o=document.createElement('option'); o.value='fact:'+i; o.textContent=label; sel.appendChild(o);
+    const o2=document.createElement('option'); o2.value='fact:'+i; o2.textContent=label; tr.appendChild(o2);
   });
+  // reset do painel de traduções até o autor clicar em "Carregar alvo"
+  $('trfields').innerHTML=''; $('trapply').disabled=true; $('trstatus').textContent='';
 }
 
 $('validate').addEventListener('click', ()=>{
@@ -336,6 +358,73 @@ $('save').addEventListener('click', async ()=>{
     $('jstatus').innerHTML='<span class="ok">salvo ✓</span>';
   }catch(err){ $('jstatus').innerHTML=`<span class="err">erro ao salvar: ${err.message}</span>`; }
 });
+
+/* ───────── 3. traduções (ES / EN / HE) ───────── */
+const TR_LANGS=[['en','EN'],['es','ES'],['he','עברית']];
+function escapeHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+// Resolve o objeto que hospeda o i18n + os campos PT-fonte do alvo selecionado.
+function trResolve(obj,target){
+  if(target==='unit'){
+    const s=obj.summary||(obj.summary={});
+    return {host:s, fields:[{key:'short',label:'Resumo curto (summary.short)',pt:s.short||''}]};
+  }
+  if(target.startsWith('fact:')){
+    const i=+target.split(':')[1], f=(obj.facts||[])[i];
+    if(!f) return null;
+    const fields=[
+      {key:'text', label:'Texto do fato (text)', pt:f.text||''},
+      {key:'topic',label:'Tópico (topic)',       pt:f.topic||''},
+    ];
+    if(f.visual && f.visual.marker_type==='image')
+      fields.push({key:'caption',label:'Legenda da imagem (caption)',pt:f.visual.caption||''});
+    return {host:f, fields};
+  }
+  return null;
+}
+
+function loadTrTarget(){
+  let obj; try{ obj=JSON.parse($('json').value); }
+  catch(err){ $('trstatus').innerHTML=`<span class="err">JSON inválido: ${err.message}</span>`; return; }
+  const target=$('trtarget').value, res=trResolve(obj,target);
+  if(!res){ $('trfields').innerHTML=''; $('trstatus').innerHTML='<span class="err">alvo inválido</span>'; return; }
+  const cur=res.host.i18n||{};
+  $('trfields').dataset.target=target;
+  $('trfields').innerHTML=res.fields.map(fl=>{
+    const cells=TR_LANGS.map(([code,lbl])=>{
+      const val=(cur[code]&&cur[code][fl.key]!=null)?cur[code][fl.key]:'';
+      const rtl=code==='he'?' dir="rtl"':'';
+      return `<div><span class="trlang">${lbl}</span><textarea data-field="${fl.key}" data-lang="${code}" rows="2"${rtl}>${escapeHtml(val)}</textarea></div>`;
+    }).join('');
+    return `<div class="trfield"><label>${fl.label}</label>`
+      +`<div class="trpt">PT · ${fl.pt?escapeHtml(fl.pt):'<i>(vazio)</i>'}</div>`
+      +`<div class="row">${cells}</div></div>`;
+  }).join('');
+  $('trapply').disabled=false;
+  $('trstatus').innerHTML=`<span class="ok">${res.fields.length} campo(s) carregado(s)</span>`;
+}
+
+function applyTr(){
+  let obj; try{ obj=JSON.parse($('json').value); }
+  catch(err){ $('trstatus').innerHTML=`<span class="err">JSON inválido: ${err.message}</span>`; return; }
+  const target=$('trfields').dataset.target, res=trResolve(obj,target);
+  if(!res){ $('trstatus').innerHTML='<span class="err">recarregue o alvo</span>'; return; }
+  const host=res.host, i18n=host.i18n||{};
+  $('trfields').querySelectorAll('textarea').forEach(ta=>{
+    const lang=ta.dataset.lang, field=ta.dataset.field, val=ta.value.trim();
+    if(val){ (i18n[lang]=i18n[lang]||{})[field]=val; }
+    else if(i18n[lang]){ delete i18n[lang][field]; }
+  });
+  Object.keys(i18n).forEach(l=>{ if(i18n[l]&&!Object.keys(i18n[l]).length) delete i18n[l]; });
+  if(Object.keys(i18n).length) host.i18n=i18n; else delete host.i18n;
+  $('json').value=JSON.stringify(obj,null,2);
+  $('jstatus').innerHTML='<span class="ok">traduções aplicadas — confira e clique em Salvar</span>';
+  $('trstatus').innerHTML='<span class="ok">aplicado ✓ (clique em Salvar no arquivo)</span>';
+  $('save').disabled=false;
+}
+
+$('trload').addEventListener('click', loadTrTarget);
+$('trapply').addEventListener('click', applyTr);
 </script>
 </body>
 </html>
