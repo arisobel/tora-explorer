@@ -7,42 +7,68 @@
     "parasha_of_book": 2,
     "total_parashiot_in_book": 12
   },
-
   "identity": {
     "id": "noach",
     "name": "Noach",
     "hebrew": "נֹחַ",
     "aliyot_count": 7
   },
-
   "range": {
     "ref_start": "Genesis 6:9",
     "ref_end": "Genesis 11:32",
     "sefaria_ref": "Genesis 6:9-11:32",
-    "chapters_covered": [6, 7, 8, 9, 10, 11]
+    "chapters_covered": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
   },
-
   "timeline": {
     "anno_mundi_start": 1056,
     "anno_mundi_end": 1948,
     "era": "pos-diluvio",
     "position_pct": 18
   },
-
   "summary": {
     "short": "Da retidão de Noach ao Dilúvio universal, à aliança do arco-íris e à dispersão dos povos na Torre de Bavel.",
     "medium": "A parashá apresenta Noach como homem justo numa geração corrompida. Deus decreta o Dilúvio e ordena a construção da Teivá. Noach obedece fielmente, entra com sua família e os animais, e sobrevive às águas. Após o Dilúvio, Deus estabelece uma aliança eterna simbolizada pelo arco-íris. A parashá encerra com o episódio da Torre de Bavel e a genealogia que prepara a chegada de Avraham.",
-    "characters_main": ["Noach", "Shem", "Cham", "Yafet", "Canaã"],
-    "themes": ["Julgamento divino", "Fé e obediência", "Dilúvio e salvação", "Aliança", "Pureza e impureza", "Dispersão dos povos", "Arrogância humana"]
+    "characters_main": [
+      "Noach",
+      "Shem",
+      "Cham",
+      "Yafet",
+      "Canaã"
+    ],
+    "themes": [
+      "Julgamento divino",
+      "Fé e obediência",
+      "Dilúvio e salvação",
+      "Aliança",
+      "Pureza e impureza",
+      "Dispersão dos povos",
+      "Arrogância humana"
+    ],
+    "i18n": {
+      "en": {
+        "short": "From Noah's righteousness to the universal Flood, the covenant of the rainbow, and the scattering of the nations at the Tower of Babel."
+      },
+      "es": {
+        "short": "Desde la rectitud de Noé hasta el Diluvio universal, la alianza del arcoíris y la dispersión de los pueblos en la Torre de Babel."
+      },
+      "he": {
+        "short": "מִצִּדְקַת נֹחַ אֶל הַמַּבּוּל הָעוֹלָמִי, בְּרִית הַקֶּשֶׁת וּפִזּוּר הָעַמִּים בְּמִגְדַּל בָּבֶל."
+      }
+    }
   },
-
   "visual": {
     "marker_type": "icon",
     "icon": "ark",
     "asset": "assets/icons/ark.svg",
     "caption": "A Teivá — símbolo da parashá"
   },
-
   "facts": [
     {
       "id": "n001",
@@ -52,9 +78,37 @@
       "ref_start": "Genesis 6:9",
       "ref_end": "Genesis 6:10",
       "sefaria_ref": "Genesis 6:9-10",
-      "tags": ["tzaddik", "retidão", "fé", "geração-corrupta"],
+      "tags": [
+        "tzaddik",
+        "retidão",
+        "fé",
+        "geração-corrupta"
+      ],
       "topic": "Noach — O Homem Justo",
-      "visual": { "marker_type": "icon", "icon": "tzaddik", "asset": "assets/icons/tzaddik.svg", "caption": "Noach caminhava com Deus", "importance": 4 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "tzaddik",
+        "asset": "assets/icons/tzaddik.svg",
+        "caption": "Noach caminhava com Deus",
+        "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "The Torah presents Noah as a righteous and wholehearted man in his generation, who walked with God — in contrast to the corruption around him.",
+          "topic": "Noah — the Righteous Man",
+          "caption": "Noah walked with God"
+        },
+        "es": {
+          "text": "La Torá presenta a Noé como un hombre justo e íntegro en su generación, que caminaba con Dios — en contraste con la corrupción a su alrededor.",
+          "topic": "Noé — el hombre justo",
+          "caption": "Noé caminaba con Dios"
+        },
+        "he": {
+          "text": "הַתּוֹרָה מַצִּיגָה אֶת נֹחַ כְּאִישׁ צַדִּיק וְתָמִים בְּדוֹרוֹתָיו, אֲשֶׁר הִתְהַלֵּךְ עִם אֱלֹהִים — בְּנִגּוּד לַשְׁחִיתוּת סְבִיבוֹ.",
+          "topic": "נֹחַ — הָאִישׁ הַצַּדִּיק",
+          "caption": "נֹחַ הִתְהַלֵּךְ עִם אֱלֹהִים"
+        }
+      }
     },
     {
       "id": "n002",
@@ -64,8 +118,27 @@
       "ref_start": "Genesis 6:11",
       "ref_end": "Genesis 6:12",
       "sefaria_ref": "Genesis 6:11-12",
-      "tags": ["corrupção", "chamas", "violência", "julgamento"],
-      "topic": "A Corrupção da Humanidade"
+      "tags": [
+        "corrupção",
+        "chamas",
+        "violência",
+        "julgamento"
+      ],
+      "topic": "A Corrupção da Humanidade",
+      "i18n": {
+        "en": {
+          "text": "Humankind grows deeply corrupt before God: the earth is filled with violence and injustice in all its forms.",
+          "topic": "The Corruption of Humankind"
+        },
+        "es": {
+          "text": "La humanidad se corrompe profundamente ante Dios: la tierra se llena de violencia e injusticia en todas sus formas.",
+          "topic": "La corrupción de la humanidad"
+        },
+        "he": {
+          "text": "הָאֱנוֹשׁוּת נִשְׁחֶתֶת עָמֹק לִפְנֵי אֱלֹהִים: הָאָרֶץ מִתְמַלֵּאת חָמָס וְעָוֶל בְּכָל צוּרוֹתָיו.",
+          "topic": "הַשְׁחָתַת הָאֱנוֹשׁוּת"
+        }
+      }
     },
     {
       "id": "n003",
@@ -75,8 +148,27 @@
       "ref_start": "Genesis 6:13",
       "ref_end": "Genesis 6:13",
       "sefaria_ref": "Genesis 6:13",
-      "tags": ["decreto", "dilúvio", "julgamento", "fim"],
-      "topic": "O Decreto do Dilúvio"
+      "tags": [
+        "decreto",
+        "dilúvio",
+        "julgamento",
+        "fim"
+      ],
+      "topic": "O Decreto do Dilúvio",
+      "i18n": {
+        "en": {
+          "text": "God tells Noah His decision: the end of all creation is near because of the violence that has filled the earth; the Flood will destroy everything.",
+          "topic": "The Decree of the Flood"
+        },
+        "es": {
+          "text": "Dios comunica a Noé su decisión: el fin de toda la creación está cerca a causa de la violencia que llenó la tierra; el Diluvio lo destruirá todo.",
+          "topic": "El decreto del Diluvio"
+        },
+        "he": {
+          "text": "אֱלֹהִים מוֹדִיעַ לְנֹחַ אֶת הַחְלָטָתוֹ: קֵץ כָּל הַבְּרִיאָה קָרֵב בִּגְלַל הֶחָמָס שֶׁמִּלֵּא אֶת הָאָרֶץ; הַמַּבּוּל יַשְׁמִיד הַכֹּל.",
+          "topic": "גְּזֵרַת הַמַּבּוּל"
+        }
+      }
     },
     {
       "id": "n004",
@@ -86,9 +178,37 @@
       "ref_start": "Genesis 6:14",
       "ref_end": "Genesis 6:16",
       "sefaria_ref": "Genesis 6:14-16",
-      "tags": ["teivá", "construção", "madeira", "instrução"],
+      "tags": [
+        "teivá",
+        "construção",
+        "madeira",
+        "instrução"
+      ],
       "topic": "A Construção da Teivá",
-      "visual": { "marker_type": "icon", "icon": "ark", "asset": "assets/icons/ark.svg", "caption": "A Teivá de Noach", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "ark",
+        "asset": "assets/icons/ark.svg",
+        "caption": "A Teivá de Noach",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "Noah receives detailed instructions to build the Teivah (ark) — precise dimensions in gopher wood, with internal compartments and a coating of pitch.",
+          "topic": "The Building of the Ark",
+          "caption": "Noah's Ark"
+        },
+        "es": {
+          "text": "Noé recibe instrucciones detalladas para construir la Teivá (arca) — dimensiones precisas en madera de gofer, con compartimentos internos y un recubrimiento de brea.",
+          "topic": "La construcción de la Teivá",
+          "caption": "El arca de Noé"
+        },
+        "he": {
+          "text": "נֹחַ מְקַבֵּל הוֹרָאוֹת מְפֹרָטוֹת לִבְנוֹת אֶת הַתֵּבָה — מִדּוֹת מְדֻיָּקוֹת בַּעֲצֵי גֹפֶר, עִם תָּאִים פְּנִימִיִּים וְצִפּוּי שֶׁל זֶפֶת.",
+          "topic": "בְּנִיַּת הַתֵּבָה",
+          "caption": "תֵּבַת נֹחַ"
+        }
+      }
     },
     {
       "id": "n005",
@@ -98,8 +218,27 @@
       "ref_start": "Genesis 6:19",
       "ref_end": "Genesis 6:20",
       "sefaria_ref": "Genesis 6:19-20",
-      "tags": ["animais", "preservação", "espécies", "par"],
-      "topic": "Os Animais na Teivá"
+      "tags": [
+        "animais",
+        "preservação",
+        "espécies",
+        "par"
+      ],
+      "topic": "Os Animais na Teivá",
+      "i18n": {
+        "en": {
+          "text": "God commands Noah to gather into the ark a pair of every animal species — male and female — to preserve life after the Flood.",
+          "topic": "The Animals in the Ark"
+        },
+        "es": {
+          "text": "Dios ordena a Noé reunir en el arca una pareja de cada especie animal — macho y hembra — para preservar la vida después del Diluvio.",
+          "topic": "Los animales en el arca"
+        },
+        "he": {
+          "text": "אֱלֹהִים מְצַוֶּה עַל נֹחַ לְכַנֵּס אֶל הַתֵּבָה זוּג מִכָּל מִין שֶׁל בַּעֲלֵי חַיִּים — זָכָר וּנְקֵבָה — לִשְׁמֹר עַל הַחַיִּים אַחֲרֵי הַמַּבּוּל.",
+          "topic": "בַּעֲלֵי הַחַיִּים בַּתֵּבָה"
+        }
+      }
     },
     {
       "id": "n006",
@@ -109,8 +248,27 @@
       "ref_start": "Genesis 6:21",
       "ref_end": "Genesis 6:22",
       "sefaria_ref": "Genesis 6:21-22",
-      "tags": ["obediência", "fé", "provisões", "cumprimento"],
-      "topic": "A Obediência Perfeita de Noach"
+      "tags": [
+        "obediência",
+        "fé",
+        "provisões",
+        "cumprimento"
+      ],
+      "topic": "A Obediência Perfeita de Noach",
+      "i18n": {
+        "en": {
+          "text": "Noah prepares provisions for his family and all the animals, fulfilling every detail of the divine command exactly — without questioning.",
+          "topic": "Noah's Perfect Obedience"
+        },
+        "es": {
+          "text": "Noé prepara provisiones para su familia y para todos los animales, cumpliendo exactamente cada detalle de la orden divina — sin cuestionar.",
+          "topic": "La obediencia perfecta de Noé"
+        },
+        "he": {
+          "text": "נֹחַ מֵכִין מָזוֹן לְמִשְׁפַּחְתּוֹ וּלְכָל בַּעֲלֵי הַחַיִּים, וּמְקַיֵּם בְּדִיּוּק כָּל פְּרָט מִן הַצַּו הָאֱלֹהִי — מִבְּלִי לְהַרְהֵר.",
+          "topic": "צִיּוּתוֹ הַמֻּשְׁלָם שֶׁל נֹחַ"
+        }
+      }
     },
     {
       "id": "n007",
@@ -120,8 +278,27 @@
       "ref_start": "Genesis 7:1",
       "ref_end": "Genesis 7:9",
       "sefaria_ref": "Genesis 7:1-9",
-      "tags": ["entrada", "teivá", "família", "animais"],
-      "topic": "Entrada na Teivá"
+      "tags": [
+        "entrada",
+        "teivá",
+        "família",
+        "animais"
+      ],
+      "topic": "Entrada na Teivá",
+      "i18n": {
+        "en": {
+          "text": "At the appointed time, Noah enters the ark with his wife, his three sons, and their wives, together with all the clean and unclean animals, before the rains begin.",
+          "topic": "Entering the Ark"
+        },
+        "es": {
+          "text": "En el tiempo señalado, Noé entra en el arca con su esposa, sus tres hijos y las nueras, junto a todos los animales puros e impuros, antes de que comiencen las lluvias.",
+          "topic": "La entrada en el arca"
+        },
+        "he": {
+          "text": "בָּעֵת הַמְיֻעֶדֶת, נֹחַ נִכְנָס אֶל הַתֵּבָה עִם אִשְׁתּוֹ, שְׁלֹשֶׁת בָּנָיו וּכְלוֹתָיו, יַחַד עִם כָּל הַבְּהֵמוֹת הַטְּהוֹרוֹת וְהַטְּמֵאוֹת, בְּטֶרֶם יֵרְדוּ הַגְּשָׁמִים.",
+          "topic": "הַכְּנִיסָה לַתֵּבָה"
+        }
+      }
     },
     {
       "id": "n008",
@@ -131,9 +308,37 @@
       "ref_start": "Genesis 7:11",
       "ref_end": "Genesis 7:12",
       "sefaria_ref": "Genesis 7:11-12",
-      "tags": ["dilúvio", "abismo", "chuva", "quarenta-dias"],
+      "tags": [
+        "dilúvio",
+        "abismo",
+        "chuva",
+        "quarenta-dias"
+      ],
       "topic": "O Início do Dilúvio",
-      "visual": { "marker_type": "icon", "icon": "flood", "asset": "assets/icons/flood.svg", "caption": "As águas do Dilúvio", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "flood",
+        "asset": "assets/icons/flood.svg",
+        "caption": "As águas do Dilúvio",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "The waters of the Flood burst forth: the fountains of the great deep split open and the floodgates of the heavens are opened — rain for forty days and forty nights.",
+          "topic": "The Onset of the Flood",
+          "caption": "The waters of the Flood"
+        },
+        "es": {
+          "text": "Las aguas del Diluvio irrumpen: las fuentes del gran abismo se rompen y las compuertas de los cielos se abren — lluvia durante cuarenta días y cuarenta noches.",
+          "topic": "El comienzo del Diluvio",
+          "caption": "Las aguas del Diluvio"
+        },
+        "he": {
+          "text": "מֵימֵי הַמַּבּוּל פּוֹרְצִים: מַעְיְנוֹת תְּהוֹם רַבָּה נִבְקָעִים וַאֲרֻבּוֹת הַשָּׁמַיִם נִפְתָּחוֹת — גֶּשֶׁם אַרְבָּעִים יוֹם וְאַרְבָּעִים לַיְלָה.",
+          "topic": "תְּחִלַּת הַמַּבּוּל",
+          "caption": "מֵימֵי הַמַּבּוּל"
+        }
+      }
     },
     {
       "id": "n009",
@@ -143,8 +348,27 @@
       "ref_start": "Genesis 7:18",
       "ref_end": "Genesis 7:24",
       "sefaria_ref": "Genesis 7:18-24",
-      "tags": ["dilúvio", "destruição", "montanhas", "morte"],
-      "topic": "As Águas Dominam a Terra"
+      "tags": [
+        "dilúvio",
+        "destruição",
+        "montanhas",
+        "morte"
+      ],
+      "topic": "As Águas Dominam a Terra",
+      "i18n": {
+        "en": {
+          "text": "The waters rise and overwhelm all the earth, covering even the highest mountains. All flesh that moved upon the earth perishes — except those in the ark.",
+          "topic": "The Waters Overwhelm the Earth"
+        },
+        "es": {
+          "text": "Las aguas suben y dominan toda la tierra, cubriendo incluso las montañas más altas. Toda carne que se movía sobre la tierra perece — excepto los que estaban en el arca.",
+          "topic": "Las aguas dominan la tierra"
+        },
+        "he": {
+          "text": "הַמַּיִם עוֹלִים וְגוֹבְרִים עַל כָּל הָאָרֶץ, וּמְכַסִּים אַף אֶת הֶהָרִים הַגְּבוֹהִים בְּיוֹתֵר. כָּל בָּשָׂר הָרוֹמֵשׂ עַל הָאָרֶץ גּוֵֹעַ — מִלְּבַד אֲשֶׁר בַּתֵּבָה.",
+          "topic": "הַמַּיִם גּוֹבְרִים עַל הָאָרֶץ"
+        }
+      }
     },
     {
       "id": "n010",
@@ -154,8 +378,27 @@
       "ref_start": "Genesis 8:1",
       "ref_end": "Genesis 8:5",
       "sefaria_ref": "Genesis 8:1-5",
-      "tags": ["memória-divina", "recuo-das-águas", "vento", "misericórdia"],
-      "topic": "Deus Lembra-Se de Noach"
+      "tags": [
+        "memória-divina",
+        "recuo-das-águas",
+        "vento",
+        "misericórdia"
+      ],
+      "topic": "Deus Lembra-Se de Noach",
+      "i18n": {
+        "en": {
+          "text": "God remembers Noah and all the living beings in the ark — a wind passes over the earth, and the waters slowly begin to recede.",
+          "topic": "God Remembers Noah"
+        },
+        "es": {
+          "text": "Dios se acuerda de Noé y de todos los seres vivos en el arca — un viento pasa sobre la tierra, y las aguas comienzan lentamente a bajar.",
+          "topic": "Dios se acuerda de Noé"
+        },
+        "he": {
+          "text": "אֱלֹהִים זוֹכֵר אֶת נֹחַ וְאֶת כָּל הַחַיִּים שֶׁבַּתֵּבָה — רוּחַ עוֹבֶרֶת עַל הָאָרֶץ, וְהַמַּיִם מַתְחִילִים לָרֶדֶת לְאַט.",
+          "topic": "אֱלֹהִים זוֹכֵר אֶת נֹחַ"
+        }
+      }
     },
     {
       "id": "n011",
@@ -165,8 +408,27 @@
       "ref_start": "Genesis 8:7",
       "ref_end": "Genesis 8:9",
       "sefaria_ref": "Genesis 8:7-9",
-      "tags": ["corvo", "pomba", "sinal", "terra-seca"],
-      "topic": "O Corvo e a Pomba"
+      "tags": [
+        "corvo",
+        "pomba",
+        "sinal",
+        "terra-seca"
+      ],
+      "topic": "O Corvo e a Pomba",
+      "i18n": {
+        "en": {
+          "text": "To check whether the earth had dried, Noah first sends out a raven — which goes back and forth — and then a dove, which finds no place to rest and returns.",
+          "topic": "The Raven and the Dove"
+        },
+        "es": {
+          "text": "Para comprobar si la tierra se había secado, Noé envía primero un cuervo — que va y vuelve — y luego una paloma, que no halla dónde posarse y regresa.",
+          "topic": "El cuervo y la paloma"
+        },
+        "he": {
+          "text": "כְּדֵי לִבְדֹּק אִם יָבְשָׁה הָאָרֶץ, נֹחַ שׁוֹלֵחַ תְּחִלָּה אֶת הָעֹרֵב — הַיּוֹצֵא וָשָׁב — וְאַחַר כָּךְ יוֹנָה, אֲשֶׁר אֵינָהּ מוֹצֵאת מָנוֹחַ וְחוֹזֶרֶת.",
+          "topic": "הָעֹרֵב וְהַיּוֹנָה"
+        }
+      }
     },
     {
       "id": "n012",
@@ -176,9 +438,37 @@
       "ref_start": "Genesis 8:11",
       "ref_end": "Genesis 8:11",
       "sefaria_ref": "Genesis 8:11",
-      "tags": ["pomba", "oliveira", "paz", "renovação"],
+      "tags": [
+        "pomba",
+        "oliveira",
+        "paz",
+        "renovação"
+      ],
       "topic": "A Folha de Oliveira — Sinal de Esperança",
-      "visual": { "marker_type": "icon", "icon": "olive-branch", "asset": "assets/icons/olive-branch.svg", "caption": "A pomba e a folha de oliveira", "importance": 4 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "olive-branch",
+        "asset": "assets/icons/olive-branch.svg",
+        "caption": "A pomba e a folha de oliveira",
+        "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "On the second mission, the dove returns with a fresh olive leaf in its beak — an unmistakable sign that the earth was blossoming again.",
+          "topic": "The Olive Leaf — a Sign of Hope",
+          "caption": "The dove and the olive leaf"
+        },
+        "es": {
+          "text": "En la segunda misión, la paloma regresa con una hoja fresca de olivo en el pico — señal inconfundible de que la tierra volvía a florecer.",
+          "topic": "La hoja de olivo — señal de esperanza",
+          "caption": "La paloma y la hoja de olivo"
+        },
+        "he": {
+          "text": "בַּמִּשְׁלָח הַשֵּׁנִי, הַיּוֹנָה חוֹזֶרֶת וַעֲלֵה זַיִת טָרִי בְּפִיהָ — אוֹת בָּרוּר שֶׁהָאָרֶץ שָׁבָה לִפְרֹחַ.",
+          "topic": "עֲלֵה הַזַּיִת — אוֹת שֶׁל תִּקְוָה",
+          "caption": "הַיּוֹנָה וַעֲלֵה הַזַּיִת"
+        }
+      }
     },
     {
       "id": "n013",
@@ -188,8 +478,27 @@
       "ref_start": "Genesis 8:15",
       "ref_end": "Genesis 8:19",
       "sefaria_ref": "Genesis 8:15-19",
-      "tags": ["saída", "teivá", "recomeço", "terra"],
-      "topic": "A Saída da Teivá"
+      "tags": [
+        "saída",
+        "teivá",
+        "recomeço",
+        "terra"
+      ],
+      "topic": "A Saída da Teivá",
+      "i18n": {
+        "en": {
+          "text": "When the earth dries completely, God commands Noah to leave the ark with his family and all the animals — so that they may multiply and fill the earth again.",
+          "topic": "Leaving the Ark"
+        },
+        "es": {
+          "text": "Cuando la tierra se seca por completo, Dios ordena a Noé salir del arca con su familia y todos los animales — para que se reproduzcan y llenen la tierra de nuevo.",
+          "topic": "La salida del arca"
+        },
+        "he": {
+          "text": "כַּאֲשֶׁר הָאָרֶץ יְבֵשָׁה לְגַמְרֵי, אֱלֹהִים מְצַוֶּה עַל נֹחַ לָצֵאת מִן הַתֵּבָה עִם מִשְׁפַּחְתּוֹ וְכָל בַּעֲלֵי הַחַיִּים — לְמַעַן יִפְרוּ וְיִרְבּוּ וִימַלְּאוּ אֶת הָאָרֶץ מֵחָדָשׁ.",
+          "topic": "הַיְצִיאָה מִן הַתֵּבָה"
+        }
+      }
     },
     {
       "id": "n014",
@@ -199,9 +508,37 @@
       "ref_start": "Genesis 8:20",
       "ref_end": "Genesis 8:20",
       "sefaria_ref": "Genesis 8:20",
-      "tags": ["altar", "sacrifício", "gratidão", "culto"],
+      "tags": [
+        "altar",
+        "sacrifício",
+        "gratidão",
+        "culto"
+      ],
       "topic": "Noach Constrói um Altar",
-      "visual": { "marker_type": "icon", "icon": "altar", "asset": "assets/icons/altar.svg", "caption": "O altar de Noach", "importance": 3 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "altar",
+        "asset": "assets/icons/altar.svg",
+        "caption": "O altar de Noach",
+        "importance": 3
+      },
+      "i18n": {
+        "en": {
+          "text": "Noah's first act on leaving the ark is to build an altar to God and offer sacrifices of clean animals — an act of gratitude and consecration.",
+          "topic": "Noah Builds an Altar",
+          "caption": "Noah's altar"
+        },
+        "es": {
+          "text": "El primer acto de Noé al salir del arca es construir un altar a Dios y ofrecer sacrificios de animales puros — un acto de gratitud y consagración.",
+          "topic": "Noé construye un altar",
+          "caption": "El altar de Noé"
+        },
+        "he": {
+          "text": "מַעֲשֵׂהוּ הָרִאשׁוֹן שֶׁל נֹחַ בְּצֵאתוֹ מִן הַתֵּבָה הוּא לִבְנוֹת מִזְבֵּחַ לֵאלֹהִים וּלְהַקְרִיב קָרְבָּנוֹת מִבְּהֵמוֹת טְהוֹרוֹת — מַעֲשֵׂה שֶׁל הוֹדָיָה וְהַקְדָּשָׁה.",
+          "topic": "נֹחַ בּוֹנֶה מִזְבֵּחַ",
+          "caption": "מִזְבַּח נֹחַ"
+        }
+      }
     },
     {
       "id": "n015",
@@ -211,8 +548,27 @@
       "ref_start": "Genesis 8:21",
       "ref_end": "Genesis 8:22",
       "sefaria_ref": "Genesis 8:21-22",
-      "tags": ["promessa", "misericórdia", "natureza-humana", "continuidade"],
-      "topic": "A Promessa Divina — Nunca Mais"
+      "tags": [
+        "promessa",
+        "misericórdia",
+        "natureza-humana",
+        "continuidade"
+      ],
+      "topic": "A Promessa Divina — Nunca Mais",
+      "i18n": {
+        "en": {
+          "text": "God promises in His heart never again to curse the earth on account of man, nor to destroy all life — despite the human inclination to evil from youth.",
+          "topic": "The Divine Promise — Never Again"
+        },
+        "es": {
+          "text": "Dios promete en su corazón que nunca más maldecirá la tierra a causa del hombre, ni destruirá toda vida — a pesar de la inclinación humana al mal desde la juventud.",
+          "topic": "La promesa divina — nunca más"
+        },
+        "he": {
+          "text": "אֱלֹהִים מַבְטִיחַ בְּלִבּוֹ שֶׁלֹּא יוֹסִיף עוֹד לְקַלֵּל אֶת הָאֲדָמָה בַּעֲבוּר הָאָדָם, וְלֹא יַשְׁמִיד כָּל חַי — חֵרֶף יֵצֶר לֵב הָאָדָם הָרַע מִנְּעוּרָיו.",
+          "topic": "הַהַבְטָחָה הָאֱלֹהִית — לֹא עוֹד"
+        }
+      }
     },
     {
       "id": "n016",
@@ -222,8 +578,27 @@
       "ref_start": "Genesis 9:1",
       "ref_end": "Genesis 9:7",
       "sefaria_ref": "Genesis 9:1-7",
-      "tags": ["bênção", "sheva-mitzvot", "vida", "aliança-noachida"],
-      "topic": "A Nova Aliança com a Humanidade"
+      "tags": [
+        "bênção",
+        "sheva-mitzvot",
+        "vida",
+        "aliança-noachida"
+      ],
+      "topic": "A Nova Aliança com a Humanidade",
+      "i18n": {
+        "en": {
+          "text": "God blesses Noah and his sons with a new beginning: the command to be fruitful and multiply is renewed, now with laws that include the prohibition of murder and respect for life.",
+          "topic": "The New Covenant with Humankind"
+        },
+        "es": {
+          "text": "Dios bendice a Noé y a sus hijos con un nuevo comienzo: la orden de fructificar y multiplicarse se renueva, ahora con leyes que incluyen la prohibición del asesinato y el respeto por la vida.",
+          "topic": "La nueva alianza con la humanidad"
+        },
+        "he": {
+          "text": "אֱלֹהִים מְבָרֵךְ אֶת נֹחַ וְאֶת בָּנָיו בְּהַתְחָלָה חֲדָשָׁה: הַצַּו לִפְרוֹת וְלִרְבּוֹת מִתְחַדֵּשׁ, כָּעֵת עִם חֻקִּים הַכּוֹלְלִים אֶת אִסּוּר הָרֶצַח וְאֶת כְּבוֹד הַחַיִּים.",
+          "topic": "הַבְּרִית הַחֲדָשָׁה עִם הָאֱנוֹשׁוּת"
+        }
+      }
     },
     {
       "id": "n017",
@@ -233,9 +608,37 @@
       "ref_start": "Genesis 9:13",
       "ref_end": "Genesis 9:17",
       "sefaria_ref": "Genesis 9:13-17",
-      "tags": ["arco-íris", "aliança", "sinal", "eterno"],
+      "tags": [
+        "arco-íris",
+        "aliança",
+        "sinal",
+        "eterno"
+      ],
       "topic": "O Arco-Íris — Sinal da Aliança",
-      "visual": { "marker_type": "icon", "icon": "rainbow", "asset": "assets/icons/rainbow.svg", "caption": "O arco-íris da aliança", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "rainbow",
+        "asset": "assets/icons/rainbow.svg",
+        "caption": "O arco-íris da aliança",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "God establishes an eternal covenant with Noah, his descendants, and all living beings — the rainbow in the clouds is given as a permanent sign of this promise.",
+          "topic": "The Rainbow — Sign of the Covenant",
+          "caption": "The rainbow of the covenant"
+        },
+        "es": {
+          "text": "Dios establece una alianza eterna con Noé, su descendencia y todos los seres vivos — el arcoíris en las nubes es dado como señal permanente de esta promesa.",
+          "topic": "El arcoíris — señal de la alianza",
+          "caption": "El arcoíris de la alianza"
+        },
+        "he": {
+          "text": "אֱלֹהִים כּוֹרֵת בְּרִית עוֹלָם עִם נֹחַ, זַרְעוֹ וְכָל הַיְצוּרִים הַחַיִּים — הַקֶּשֶׁת בֶּעָנָן נִתֶּנֶת כְּאוֹת קֶבַע לַהַבְטָחָה זוֹ.",
+          "topic": "הַקֶּשֶׁת — אוֹת הַבְּרִית",
+          "caption": "קֶשֶׁת הַבְּרִית"
+        }
+      }
     },
     {
       "id": "n018",
@@ -245,9 +648,37 @@
       "ref_start": "Genesis 9:20",
       "ref_end": "Genesis 9:24",
       "sefaria_ref": "Genesis 9:20-24",
-      "tags": ["vinho", "embriaguez", "cham", "honra-dos-pais"],
+      "tags": [
+        "vinho",
+        "embriaguez",
+        "cham",
+        "honra-dos-pais"
+      ],
       "topic": "Noach, o Vinho e Cham",
-      "visual": { "marker_type": "icon", "icon": "vine", "asset": "assets/icons/vine.svg", "caption": "A vinha de Noach", "importance": 2 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "vine",
+        "asset": "assets/icons/vine.svg",
+        "caption": "A vinha de Noach",
+        "importance": 2
+      },
+      "i18n": {
+        "en": {
+          "text": "Noah plants a vineyard, drinks of the wine, and becomes drunk — and Ham's improper conduct on seeing his father uncovered sparks tensions among Noah's sons.",
+          "topic": "Noah, the Wine, and Ham",
+          "caption": "Noah's vineyard"
+        },
+        "es": {
+          "text": "Noé planta una viña, bebe del vino y se embriaga — y la conducta inapropiada de Cam al ver a su padre descubierto desata tensiones entre los hijos de Noé.",
+          "topic": "Noé, el vino y Cam",
+          "caption": "La viña de Noé"
+        },
+        "he": {
+          "text": "נֹחַ נוֹטֵעַ כֶּרֶם, שׁוֹתֶה מִן הַיַּיִן וּמִשְׁתַּכֵּר — וְהִתְנַהֲגוּתוֹ הַבִּלְתִּי הוֹלֶמֶת שֶׁל חָם לְמַרְאֵה אָבִיו הַמְגֻלֶּה מְעוֹרֶרֶת מְתִיחוּת בֵּין בְּנֵי נֹחַ.",
+          "topic": "נֹחַ, הַיַּיִן וְחָם",
+          "caption": "כֶּרֶם נֹחַ"
+        }
+      }
     },
     {
       "id": "n019",
@@ -257,8 +688,27 @@
       "ref_start": "Genesis 9:25",
       "ref_end": "Genesis 9:29",
       "sefaria_ref": "Genesis 9:25-29",
-      "tags": ["bênção", "maldição", "canaã", "nações"],
-      "topic": "A Bênção e a Maldição de Noach"
+      "tags": [
+        "bênção",
+        "maldição",
+        "canaã",
+        "nações"
+      ],
+      "topic": "A Bênção e a Maldição de Noach",
+      "i18n": {
+        "en": {
+          "text": "Noah blesses Shem and Japheth, who covered their father with respect, and pronounces a curse upon Canaan — Ham's descendant — foreshadowing the destinies of the nations.",
+          "topic": "Noah's Blessing and Curse"
+        },
+        "es": {
+          "text": "Noé bendice a Sem y Jafet, que cubrieron a su padre con respeto, y pronuncia una maldición sobre Canaán — descendiente de Cam — presagiando los destinos de las naciones.",
+          "topic": "La bendición y la maldición de Noé"
+        },
+        "he": {
+          "text": "נֹחַ מְבָרֵךְ אֶת שֵׁם וְאֶת יֶפֶת, אֲשֶׁר כִּסּוּ אֶת אֲבִיהֶם בְּכָבוֹד, וּמְקַלֵּל אֶת כְּנַעַן — צֶאֱצָא חָם — וּמְבַשֵּׂר אֶת גּוֹרְלוֹת הָאֻמּוֹת.",
+          "topic": "בִּרְכַּת נֹחַ וְקִלְלָתוֹ"
+        }
+      }
     },
     {
       "id": "n020",
@@ -268,9 +718,37 @@
       "ref_start": "Genesis 11:1",
       "ref_end": "Genesis 11:9",
       "sefaria_ref": "Genesis 11:1-9",
-      "tags": ["babel", "língua", "dispersão", "arrogância"],
+      "tags": [
+        "babel",
+        "língua",
+        "dispersão",
+        "arrogância"
+      ],
       "topic": "A Torre de Bavel",
-      "visual": { "marker_type": "icon", "icon": "tower", "asset": "assets/icons/tower.svg", "caption": "A Torre de Bavel", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "tower",
+        "asset": "assets/icons/tower.svg",
+        "caption": "A Torre de Bavel",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "Humankind becomes one — with a single language. They unite to build a city and a tower with its top in the heavens, seeking fame and avoiding dispersion. God confuses their languages and scatters them across the whole earth.",
+          "topic": "The Tower of Babel",
+          "caption": "The Tower of Babel"
+        },
+        "es": {
+          "text": "La humanidad se vuelve una sola — con una única lengua. Se unen para construir una ciudad y una torre con la cima en los cielos, buscando fama y evitando la dispersión. Dios confunde sus lenguas y los dispersa por toda la tierra.",
+          "topic": "La Torre de Babel",
+          "caption": "La Torre de Babel"
+        },
+        "he": {
+          "text": "הָאֱנוֹשׁוּת נַעֲשֵׂית אַחַת — בְּשָׂפָה אַחַת. הֵם מִתְאַחֲדִים לִבְנוֹת עִיר וּמִגְדָּל וְרֹאשׁוֹ בַּשָּׁמַיִם, מְבַקְּשִׁים שֵׁם וּמוֹנְעִים אֶת פִּזּוּרָם. אֱלֹהִים בּוֹלֵל אֶת שְׂפָתָם וּמֵפִיץ אוֹתָם עַל פְּנֵי כָל הָאָרֶץ.",
+          "topic": "מִגְדַּל בָּבֶל",
+          "caption": "מִגְדַּל בָּבֶל"
+        }
+      }
     },
     {
       "id": "n021",
@@ -280,32 +758,83 @@
       "ref_start": "Genesis 11:10",
       "ref_end": "Genesis 11:32",
       "sefaria_ref": "Genesis 11:10-32",
-      "tags": ["genealogia", "shem", "terach", "avraham", "transição"],
-      "topic": "Genealogia de Shem a Terach"
+      "tags": [
+        "genealogia",
+        "shem",
+        "terach",
+        "avraham",
+        "transição"
+      ],
+      "topic": "Genealogia de Shem a Terach",
+      "i18n": {
+        "en": {
+          "text": "The parashah closes with the genealogy from Shem to Terah, father of Abraham — preparing the transition to the story of the patriarch who founds the Jewish people.",
+          "topic": "Genealogy from Shem to Terah"
+        },
+        "es": {
+          "text": "La parashá concluye con la genealogía de Sem hasta Téraj, padre de Abraham — preparando la transición a la historia del patriarca fundador del pueblo judío.",
+          "topic": "Genealogía de Sem a Téraj"
+        },
+        "he": {
+          "text": "הַפָּרָשָׁה מִסְתַּיֶּמֶת בְּתוֹלְדוֹת שֵׁם עַד תֶּרַח, אֲבִי אַבְרָהָם — וּמְכִינָה אֶת הַמַּעֲבָר אֶל סִפּוּר הָאָב הַמְּיַסֵּד שֶׁל הָעָם הַיְּהוּדִי.",
+          "topic": "תּוֹלְדוֹת שֵׁם עַד תֶּרַח"
+        }
+      }
     }
   ],
-
   "aliyot": [
-    { "number": 1, "ref_start": "Genesis 6:9",  "ref_end": "Genesis 6:22" },
-    { "number": 2, "ref_start": "Genesis 7:1",  "ref_end": "Genesis 7:16" },
-    { "number": 3, "ref_start": "Genesis 7:17", "ref_end": "Genesis 8:14" },
-    { "number": 4, "ref_start": "Genesis 8:15", "ref_end": "Genesis 9:7"  },
-    { "number": 5, "ref_start": "Genesis 9:8",  "ref_end": "Genesis 9:17" },
-    { "number": 6, "ref_start": "Genesis 9:18", "ref_end": "Genesis 10:32"},
-    { "number": 7, "ref_start": "Genesis 11:1", "ref_end": "Genesis 11:32"}
+    {
+      "number": 1,
+      "ref_start": "Genesis 6:9",
+      "ref_end": "Genesis 6:22"
+    },
+    {
+      "number": 2,
+      "ref_start": "Genesis 7:1",
+      "ref_end": "Genesis 7:16"
+    },
+    {
+      "number": 3,
+      "ref_start": "Genesis 7:17",
+      "ref_end": "Genesis 8:14"
+    },
+    {
+      "number": 4,
+      "ref_start": "Genesis 8:15",
+      "ref_end": "Genesis 9:7"
+    },
+    {
+      "number": 5,
+      "ref_start": "Genesis 9:8",
+      "ref_end": "Genesis 9:17"
+    },
+    {
+      "number": 6,
+      "ref_start": "Genesis 9:18",
+      "ref_end": "Genesis 10:32"
+    },
+    {
+      "number": 7,
+      "ref_start": "Genesis 11:1",
+      "ref_end": "Genesis 11:32"
+    }
   ],
-
   "haftarah": {
     "ref": "Isaiah 54:1-55:5",
     "note": "Tema: a aliança eterna de paz — paralelo à promessa após o Dilúvio"
   },
-
   "connections": {
     "next_parasha": "lech-lecha",
     "prev_parasha": "bereshit",
     "thematic_links": [
-      { "parasha": "bereshit", "theme": "Corrupção humana que cresce desde Caim" },
-      { "parasha": "lech-lecha", "theme": "Transição para a era dos Patriarcas — Avraham surge da linhagem de Shem" }
+      {
+        "parasha": "bereshit",
+        "theme": "Corrupção humana que cresce desde Caim"
+      },
+      {
+        "parasha": "lech-lecha",
+        "theme": "Transição para a era dos Patriarcas — Avraham surge da linhagem de Shem"
+      }
     ]
   }
 }

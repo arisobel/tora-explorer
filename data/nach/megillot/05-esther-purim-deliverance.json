@@ -666,7 +666,7 @@
       "visual": {
         "marker_type": "image",
         "asset": "assets/user/mordechai-honrado.jpg",
-        "caption": "Haman guia Mordechai pelas ruas clamando: \"Assim deve ser feito para aquele que o Rei deseja honrar\"",
+        "caption": "Haman leva Mordechai pelas ruas anunciando \"ASsim deve ser feito para o homem ao qual o Rei quer honrar!\"",
         "importance": 4
       },
       "i18n": {
@@ -721,6 +721,12 @@
           "text": "מֻשְׁפָּל, חוֹזֵר הָמָן לְבֵיתוֹ חֲפוּי רֹאשׁ. זֶרֶשׁ וְהַחֲכָמִים מְנַבְּאִים לוֹ אֶת נְפִילָתוֹ: ׳אִם מִזֶּרַע הַיְּהוּדִים מָרְדֳּכַי אֲשֶׁר הַחִלּוֹתָ לִנְפֹּל לְפָנָיו, לֹא תוּכַל לוֹ׳. הַסָּרִיסִים מַגִּיעִים לְהוֹבִילוֹ אֶל מִשְׁתֵּה אֶסְתֵּר.",
           "topic": "סִימָן הַנְּפִילָה"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/haman-convocado.jpg",
+        "caption": "Haman reunido com a esposa e conselheiros é intimado para o segundo banquete.",
+        "importance": 4
       }
     },
     {
