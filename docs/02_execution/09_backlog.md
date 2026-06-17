@@ -97,7 +97,8 @@
 - [x] **Livro-piloto traduzido (Ester) — EN/ES/HE** — `05-esther-purim-deliverance.json` ganhou `i18n` em todos os 22 facts (`text`+`topic`), nas 7 legendas e no `summary.short`; HE narrativo preenche o modo RTL. Paridade validada (nenhum fato sem `text`/`topic`/`caption`). Próximo piloto candidato: uma parashá do Chumash (2026-06-15)
 - [x] **Bereshit traduzida (EN/ES/HE)** — primeiro piloto do Chumash: 20 facts + 5 legendas de ícone + `summary.short`. Ajuste de cobertura: legenda traduzida agora também em marcadores `icon` (`visualMarkerHTML` + editor) (2026-06-16)
 - [x] **Noach traduzida (EN/ES/HE)** — 21 facts + 8 legendas de ícone + `summary.short` (2026-06-16)
-- [ ] Estender as traduções de conteúdo ao restante de Gênesis (próximo: Lech Lecha) e demais livros; decidir ordem e se haverá assistência por LLM no editor
+- [x] **Lech Lecha + Vayera + Chayei Sarah traduzidas (EN/ES/HE)** — 44 facts + 10 legendas + 3 resumos (2026-06-16). Gênesis em 5/12.
+- [ ] Traduzir o restante de Gênesis (próximas: Toldot, Vayetze, Vayishlach…) e demais livros; decidir ordem e se haverá assistência por LLM no editor
 
 > **Sefaria multilíngue a nível de versículo — CONFIRMADO (2026-06-14).** A v3 Texts API serve HE/EN/PT/ES. Sintaxe: `version=<nome da língua em inglês>` (`hebrew`, `english`, `portuguese`, `spanish` — o código curto `pt`/`es` retorna vazio). Múltiplos `version=` por chamada são aceitos. Esther tem as 4: PT = *Publicado em 5784, Saymon Pires da Silva*; ES = *Meguilá Ester — Seminario Rabínico*. **Quick win:** parametrizar `version` em `sefariaTextUrl()` (index.html:2772) + seletor de idioma na aba Pessukim → conteúdo bíblico nas 4 línguas sem traduzir nada. **Ressalva:** cobertura PT/ES varia por livro; detectar `warnings` (código 102 = língua ausente) e cair para EN/HE.
 - [x] Quick win Pessukim: parametrizar `version` por língua + seletor de idioma + fallback via `warnings` (2026-06-14)

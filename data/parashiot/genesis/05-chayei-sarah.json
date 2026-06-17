@@ -8,7 +8,6 @@
     "parasha_of_book": 5,
     "total_parashiot_in_book": 12
   },
-
   "identity": {
     "id": "chayei-sarah",
     "name": "Chayei Sarah",
@@ -17,18 +16,20 @@
     "transliteration": "Chayei Sarah",
     "aliyot_count": 7
   },
-
   "range": {
     "ref_start": "Genesis 23:1",
     "ref_end": "Genesis 25:18",
     "sefaria_ref": "Genesis 23:1-25:18",
-    "chapters_covered": [23, 24, 25],
+    "chapters_covered": [
+      23,
+      24,
+      25
+    ],
     "chapter_start": 23,
     "chapter_end": 25,
     "verse_start": 1,
     "verse_end": 18
   },
-
   "timeline": {
     "period_name": "Morte de Sara, casamento de Yitzchak e morte de Avraham",
     "anno_mundi_start": 2085,
@@ -37,29 +38,59 @@
     "position_pct": 38,
     "description": "Da morte e sepultamento de Sara em Machpelah ao casamento de Yitzchak com Rivka e a morte de Avraham."
   },
-
   "summary": {
     "short": "A morte de Sara, a compra da Caverna de Machpelah, o casamento de Yitzchak com Rivka e a morte de Avraham.",
     "medium": "A parashá paradoxalmente intitulada 'Vida de Sara' abre com sua morte aos 127 anos. Avraham adquire da família hitita a Caverna de Machpelah como sepulcro perpétuo — a primeira propriedade judaica em Canaã. O capítulo mais longo do Gênesis narra a missão de Eliezer, servo de Avraham, para encontrar uma esposa para Yitzchak na família em Aram. A delicada Rivka é reconhecida como a escolhida e se une a Yitzchak, consolando-o após a morte da mãe. A parashá encerra com a morte de Avraham e a genealogia de Yishmael.",
-    "characters_main": ["Avraham", "Sara", "Yitzchak", "Rivka", "Eliezer"],
-    "characters_secondary": ["Efron o Hitita", "Betuel", "Lavan", "Milká", "Ketura", "Yishmael"],
-    "themes": ["Morte e luto", "Continuidade", "Propriedade da terra", "Casamento e destino", "Providência divina", "Legado"]
+    "characters_main": [
+      "Avraham",
+      "Sara",
+      "Yitzchak",
+      "Rivka",
+      "Eliezer"
+    ],
+    "characters_secondary": [
+      "Efron o Hitita",
+      "Betuel",
+      "Lavan",
+      "Milká",
+      "Ketura",
+      "Yishmael"
+    ],
+    "themes": [
+      "Morte e luto",
+      "Continuidade",
+      "Propriedade da terra",
+      "Casamento e destino",
+      "Providência divina",
+      "Legado"
+    ],
+    "i18n": {
+      "en": {
+        "short": "The death of Sarah, the purchase of the Cave of Machpelah, Isaac's marriage to Rebecca, and the death of Abraham."
+      },
+      "es": {
+        "short": "La muerte de Sara, la compra de la Cueva de Macpelá, el matrimonio de Isaac con Rebeca y la muerte de Abraham."
+      },
+      "he": {
+        "short": "מוֹת שָׂרָה, רְכִישַׁת מְעָרַת הַמַּכְפֵּלָה, נִשּׂוּאֵי יִצְחָק וְרִבְקָה וּמוֹת אַבְרָהָם."
+      }
+    }
   },
-
   "visual": {
     "marker_type": "icon",
     "icon": "well",
     "asset": "assets/icons/well.svg",
     "caption": "O poço — Rivka e Eliezer"
   },
-
   "facts": [
     {
       "id": "cs001",
       "order": 1,
       "text": "Sara falece aos 127 anos em Quiryat Arba (Hebron). Avraham vem prantear por ela e se inclina diante do povo da terra para pedir onde sepultá-la.",
       "text_he": "וַיִּהְיוּ֙ חַיֵּ֣י שָׂרָ֔ה מֵאָ֥ה שָׁנָ֛ה וְעֶשְׂרִ֥ים שָׁנָ֖ה וְשֶׁ֣בַע שָׁנִ֑ים",
-      "refs": ["Genesis 23:1-2"],
+      "refs": [
+        "Genesis 23:1-2"
+      ],
       "ref_start": "Genesis 23:1",
       "ref_end": "Genesis 23:2",
       "chapter": 23,
@@ -67,15 +98,37 @@
       "verse_end": 2,
       "sefaria_ref": "Genesis 23:1-2",
       "day_of_creation": null,
-      "tags": ["sara", "morte", "127-anos", "luto", "hebron"],
-      "topic": "Morte de Sara — 127 Anos"
+      "tags": [
+        "sara",
+        "morte",
+        "127-anos",
+        "luto",
+        "hebron"
+      ],
+      "topic": "Morte de Sara — 127 Anos",
+      "i18n": {
+        "en": {
+          "text": "Sarah dies at 127 in Kiryat Arba (Hebron). Abraham comes to mourn for her and bows before the people of the land to ask where to bury her.",
+          "topic": "The Death of Sarah — 127 Years"
+        },
+        "es": {
+          "text": "Sara muere a los 127 años en Quiriat Arbá (Hebrón). Abraham viene a llorarla y se inclina ante el pueblo de la tierra para pedir dónde sepultarla.",
+          "topic": "La muerte de Sara — 127 años"
+        },
+        "he": {
+          "text": "שָׂרָה נִפְטֶרֶת בְּגִיל 127 בְּקִרְיַת אַרְבַּע (חֶבְרוֹן). אַבְרָהָם בָּא לִסְפֹּד לָהּ וּמִשְׁתַּחֲוֶה לִפְנֵי עַם הָאָרֶץ לְבַקֵּשׁ הֵיכָן לְקָבְרָהּ.",
+          "topic": "מוֹת שָׂרָה — 127 שָׁנָה"
+        }
+      }
     },
     {
       "id": "cs002",
       "order": 2,
       "text": "Avraham negocia com Efron o Hitita a compra da Caverna de Machpelah. Efron oferece o campo de graça, mas Avraham insiste em pagar o preço justo: 400 siclos de prata pesados diante de testemunhas.",
       "text_he": "וַיִּשְׁקֹ֣ל אַבְרָהָ֗ם לְעֶפְרֹ֛ן אֶת הַכֶּ֕סֶף אֲשֶׁ֥ר דִּבֶּ֖ר",
-      "refs": ["Genesis 23:15-16"],
+      "refs": [
+        "Genesis 23:15-16"
+      ],
       "ref_start": "Genesis 23:15",
       "ref_end": "Genesis 23:16",
       "chapter": 23,
@@ -83,16 +136,47 @@
       "verse_end": 16,
       "sefaria_ref": "Genesis 23:15-16",
       "day_of_creation": null,
-      "tags": ["machpelah", "compra", "terra", "efron", "400-siclos"],
+      "tags": [
+        "machpelah",
+        "compra",
+        "terra",
+        "efron",
+        "400-siclos"
+      ],
       "topic": "Compra da Caverna de Machpelah — 400 Siclos",
-      "visual": { "marker_type": "icon", "icon": "cave", "asset": "assets/icons/cave.svg", "caption": "A Caverna de Machpelah", "importance": 4 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "cave",
+        "asset": "assets/icons/cave.svg",
+        "caption": "A Caverna de Machpelah",
+        "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Abraham negotiates with Ephron the Hittite to buy the Cave of Machpelah. Ephron offers the field for free, but Abraham insists on paying the full price: 400 shekels of silver weighed before witnesses.",
+          "topic": "The Purchase of the Cave of Machpelah — 400 Shekels",
+          "caption": "The Cave of Machpelah"
+        },
+        "es": {
+          "text": "Abraham negocia con Efrón el hitita la compra de la Cueva de Macpelá. Efrón ofrece el campo gratis, pero Abraham insiste en pagar el precio justo: 400 siclos de plata pesados ante testigos.",
+          "topic": "La compra de la Cueva de Macpelá — 400 siclos",
+          "caption": "La Cueva de Macpelá"
+        },
+        "he": {
+          "text": "אַבְרָהָם מִתְמַקֵּחַ עִם עֶפְרוֹן הַחִתִּי עַל רְכִישַׁת מְעָרַת הַמַּכְפֵּלָה. עֶפְרוֹן מַצִּיעַ אֶת הַשָּׂדֶה חִנָּם, אַךְ אַבְרָהָם מִתְעַקֵּשׁ לְשַׁלֵּם אֶת מְלוֹא הַמְּחִיר: 400 שֶׁקֶל כֶּסֶף נִשְׁקָלִים לִפְנֵי עֵדִים.",
+          "topic": "רְכִישַׁת מְעָרַת הַמַּכְפֵּלָה — 400 שֶׁקֶל",
+          "caption": "מְעָרַת הַמַּכְפֵּלָה"
+        }
+      }
     },
     {
       "id": "cs003",
       "order": 3,
       "text": "A Caverna de Machpelah em Mamre se torna propriedade perpétua de Avraham — o primeiro território judeu adquirido legalmente em Canaã. Sara é sepultada ali.",
       "text_he": "וְאַחֲרֵי כֵ֗ן קָבַ֧ר אַבְרָהָ֛ם אֶת שָׂרָ֥ה אִשְׁתּ֖וֹ",
-      "refs": ["Genesis 23:19-20"],
+      "refs": [
+        "Genesis 23:19-20"
+      ],
       "ref_start": "Genesis 23:19",
       "ref_end": "Genesis 23:20",
       "chapter": 23,
@@ -100,15 +184,36 @@
       "verse_end": 20,
       "sefaria_ref": "Genesis 23:19-20",
       "day_of_creation": null,
-      "tags": ["sepultamento", "machpelah", "propriedade", "canaã"],
-      "topic": "Sepultamento de Sara em Machpelah"
+      "tags": [
+        "sepultamento",
+        "machpelah",
+        "propriedade",
+        "canaã"
+      ],
+      "topic": "Sepultamento de Sara em Machpelah",
+      "i18n": {
+        "en": {
+          "text": "The Cave of Machpelah in Mamre becomes Abraham's perpetual property — the first Jewish territory legally acquired in Canaan. Sarah is buried there.",
+          "topic": "Sarah's Burial in Machpelah"
+        },
+        "es": {
+          "text": "La Cueva de Macpelá en Mamre se convierte en propiedad perpetua de Abraham — el primer territorio judío adquirido legalmente en Canaán. Sara es sepultada allí.",
+          "topic": "El sepultamiento de Sara en Macpelá"
+        },
+        "he": {
+          "text": "מְעָרַת הַמַּכְפֵּלָה בְּמַמְרֵא נַעֲשֵׂית רְכוּשׁ עוֹלָם שֶׁל אַבְרָהָם — הַשֶּׁטַח הַיְּהוּדִי הָרִאשׁוֹן שֶׁנִּרְכַּשׁ כַּחֹק בִּכְנַעַן. שָׂרָה נִקְבֶּרֶת שָׁם.",
+          "topic": "קְבוּרַת שָׂרָה בַּמַּכְפֵּלָה"
+        }
+      }
     },
     {
       "id": "cs004",
       "order": 4,
       "text": "Avraham, velho e de dias avançados, faz seu servo jurar não tomar uma esposa cananeia para Yitzchak, mas ir à sua terra e família para buscar a noiva certa.",
       "text_he": "לֹ֤א תִקַּח֙ אִשָּׁ֔ה לִבְנִ֖י מִבְּנ֣וֹת הַֽכְּנַעֲנִ֑י",
-      "refs": ["Genesis 24:2-4"],
+      "refs": [
+        "Genesis 24:2-4"
+      ],
       "ref_start": "Genesis 24:2",
       "ref_end": "Genesis 24:4",
       "chapter": 24,
@@ -116,15 +221,37 @@
       "verse_end": 4,
       "sefaria_ref": "Genesis 24:2-4",
       "day_of_creation": null,
-      "tags": ["juramento", "shidduch", "yitzchak", "noiva", "família"],
-      "topic": "O Juramento do Servo — Missão para Buscar a Noiva"
+      "tags": [
+        "juramento",
+        "shidduch",
+        "yitzchak",
+        "noiva",
+        "família"
+      ],
+      "topic": "O Juramento do Servo — Missão para Buscar a Noiva",
+      "i18n": {
+        "en": {
+          "text": "Abraham, old and advanced in days, makes his servant swear not to take a Canaanite wife for Isaac, but to go to his land and family to seek the right bride.",
+          "topic": "The Servant's Oath — the Mission to Find the Bride"
+        },
+        "es": {
+          "text": "Abraham, anciano y avanzado en días, hace jurar a su siervo no tomar una esposa cananea para Isaac, sino ir a su tierra y familia para buscar la novia adecuada.",
+          "topic": "El juramento del siervo — la misión de buscar la novia"
+        },
+        "he": {
+          "text": "אַבְרָהָם, זָקֵן וּבָא בַּיָּמִים, מַשְׁבִּיעַ אֶת עַבְדּוֹ שֶׁלֹּא יִקַּח אִשָּׁה כְּנַעֲנִית לְיִצְחָק, אֶלָּא יֵלֵךְ אֶל אַרְצוֹ וּמִשְׁפַּחְתּוֹ לְחַפֵּשׂ אֶת הַכַּלָּה הַנְּכוֹנָה.",
+          "topic": "שְׁבוּעַת הָעֶבֶד — שְׁלִיחוּת לְמֶצֶא הַכַּלָּה"
+        }
+      }
     },
     {
       "id": "cs005",
       "order": 5,
       "text": "O servo de Avraham (identificado pela tradição como Eliezer) chega a Aram Naharaim e, ao poço, pede a Deus um sinal: a jovem que lhe oferecer água e também der de beber aos camelos será a escolhida.",
       "text_he": "וְהָיָ֣ה הַֽנַּעֲרָ֗ אֲשֶׁ֤ר אֹמַר֙ אֵלֶ֔יהָ הַטִּי נָ֥א כַדֵּ֖ךְ",
-      "refs": ["Genesis 24:14"],
+      "refs": [
+        "Genesis 24:14"
+      ],
       "ref_start": "Genesis 24:14",
       "ref_end": "Genesis 24:14",
       "chapter": 24,
@@ -132,16 +259,47 @@
       "verse_end": 14,
       "sefaria_ref": "Genesis 24:14",
       "day_of_creation": null,
-      "tags": ["eliezer", "sinal", "poço", "camelos", "providência"],
+      "tags": [
+        "eliezer",
+        "sinal",
+        "poço",
+        "camelos",
+        "providência"
+      ],
       "topic": "O Sinal de Eliezer no Poço",
-      "visual": { "marker_type": "icon", "icon": "well", "asset": "assets/icons/well.svg", "caption": "O sinal no poço", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "well",
+        "asset": "assets/icons/well.svg",
+        "caption": "O sinal no poço",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "Abraham's servant (identified by tradition as Eliezer) arrives in Aram Naharaim and, at the well, asks God for a sign: the young woman who offers him water and also waters the camels will be the chosen one.",
+          "topic": "Eliezer's Sign at the Well",
+          "caption": "The sign at the well"
+        },
+        "es": {
+          "text": "El siervo de Abraham (identificado por la tradición como Eliezer) llega a Aram Naharaim y, en el pozo, pide a Dios una señal: la joven que le ofrezca agua y también dé de beber a los camellos será la elegida.",
+          "topic": "La señal de Eliezer en el pozo",
+          "caption": "La señal en el pozo"
+        },
+        "he": {
+          "text": "עֶבֶד אַבְרָהָם (הַמְזֻהֶה בַּמָּסֹרֶת כֶּאֱלִיעֶזֶר) מַגִּיעַ אֶל אֲרַם נַהֲרַיִם, וְעַל הַבְּאֵר מְבַקֵּשׁ מֵאֱלֹהִים אוֹת: הַנַּעֲרָה אֲשֶׁר תַּצִּיעַ לוֹ מַיִם וְגַם תַּשְׁקֶה אֶת הַגְּמַלִּים — הִיא הַנִּבְחֶרֶת.",
+          "topic": "אוֹת אֱלִיעֶזֶר עַל הַבְּאֵר",
+          "caption": "הָאוֹת עַל הַבְּאֵר"
+        }
+      }
     },
     {
       "id": "cs006",
       "order": 6,
       "text": "Rivka chega ao poço e cumpre o sinal: oferece água a Eliezer e corre para dar de beber a todos os dez camelos. Eliezer reconhece a escolha divina e lhe oferece um brinco e braceletes de ouro.",
       "text_he": "וַתְּמַהֵ֣ר וַתֹּ֣רֶד כַּדָּ֗הּ וַתַּשְׁקֵ֖הוּ",
-      "refs": ["Genesis 24:18-22"],
+      "refs": [
+        "Genesis 24:18-22"
+      ],
       "ref_start": "Genesis 24:18",
       "ref_end": "Genesis 24:22",
       "chapter": 24,
@@ -149,15 +307,37 @@
       "verse_end": 22,
       "sefaria_ref": "Genesis 24:18-22",
       "day_of_creation": null,
-      "tags": ["rivka", "camelos", "água", "escolhida", "sinal"],
-      "topic": "Rivka — O Sinal se Cumpre"
+      "tags": [
+        "rivka",
+        "camelos",
+        "água",
+        "escolhida",
+        "sinal"
+      ],
+      "topic": "Rivka — O Sinal se Cumpre",
+      "i18n": {
+        "en": {
+          "text": "Rebecca arrives at the well and fulfills the sign: she offers water to Eliezer and hurries to water all ten camels. Eliezer recognizes the divine choice and offers her a gold nose-ring and bracelets.",
+          "topic": "Rebecca — the Sign Is Fulfilled"
+        },
+        "es": {
+          "text": "Rebeca llega al pozo y cumple la señal: ofrece agua a Eliezer y corre a dar de beber a los diez camellos. Eliezer reconoce la elección divina y le ofrece un pendiente y brazaletes de oro.",
+          "topic": "Rebeca — la señal se cumple"
+        },
+        "he": {
+          "text": "רִבְקָה מַגִּיעָה אֶל הַבְּאֵר וּמְקַיֶּמֶת אֶת הָאוֹת: מַצִּיעָה מַיִם לֶאֱלִיעֶזֶר וְרָצָה לְהַשְׁקוֹת אֶת כָּל עֲשֶׂרֶת הַגְּמַלִּים. אֱלִיעֶזֶר מַכִּיר בַּבְּחִירָה הָאֱלֹהִית וּמַעֲנִיק לָהּ נֶזֶם וּצְמִידֵי זָהָב.",
+          "topic": "רִבְקָה — הָאוֹת מִתְקַיֵּם"
+        }
+      }
     },
     {
       "id": "cs007",
       "order": 7,
       "text": "Eliezer é recebido na casa de Betuel e narra toda a missão de Avraham, a oração no poço e o cumprimento do sinal. Betuel e Lavan respondem: 'Do Senhor veio esta coisa — não podemos falar nem bem nem mal.'",
       "text_he": "מֵֽה' יָצָ֣א הַדָּבָ֑ר לֹ֥א נוּכַ֛ל דַּבֵּ֥ר אֵלֶ֖יךָ רַ֥ע אוֹ טֽוֹב",
-      "refs": ["Genesis 24:50-51"],
+      "refs": [
+        "Genesis 24:50-51"
+      ],
       "ref_start": "Genesis 24:50",
       "ref_end": "Genesis 24:51",
       "chapter": 24,
@@ -165,15 +345,37 @@
       "verse_end": 51,
       "sefaria_ref": "Genesis 24:50-51",
       "day_of_creation": null,
-      "tags": ["betuel", "lavan", "providência", "resposta", "aceitação"],
-      "topic": "A Família de Rivka Reconhece o Decreto Divino"
+      "tags": [
+        "betuel",
+        "lavan",
+        "providência",
+        "resposta",
+        "aceitação"
+      ],
+      "topic": "A Família de Rivka Reconhece o Decreto Divino",
+      "i18n": {
+        "en": {
+          "text": "Eliezer is received in Bethuel's house and recounts Abraham's entire mission, the prayer at the well, and the fulfillment of the sign. Bethuel and Laban reply: 'This thing comes from the Lord — we can say neither bad nor good.'",
+          "topic": "Rebecca's Family Acknowledges the Divine Decree"
+        },
+        "es": {
+          "text": "Eliezer es recibido en la casa de Betuel y narra toda la misión de Abraham, la oración en el pozo y el cumplimiento de la señal. Betuel y Labán responden: 'Del Señor ha venido esto — no podemos hablar ni mal ni bien.'",
+          "topic": "La familia de Rebeca reconoce el decreto divino"
+        },
+        "he": {
+          "text": "אֱלִיעֶזֶר מִתְקַבֵּל בְּבֵית בְּתוּאֵל וּמְסַפֵּר אֶת כָּל שְׁלִיחוּת אַבְרָהָם, אֶת הַתְּפִלָּה עַל הַבְּאֵר וְאֶת קִיּוּם הָאוֹת. בְּתוּאֵל וְלָבָן עוֹנִים: ׳מֵה׳ יָצָא הַדָּבָר — לֹא נוּכַל דַּבֵּר אֵלֶיךָ רַע אוֹ טוֹב׳.",
+          "topic": "מִשְׁפַּחַת רִבְקָה מַכִּירָה בִּגְזֵרַת הָאֵל"
+        }
+      }
     },
     {
       "id": "cs008",
       "order": 8,
       "text": "A família quer reter Rivka alguns dias, mas ela opta por partir imediatamente. A bênção familiar: 'Torna-te em milhares de dezenas de milhares, e que tua descendência herde os portões de seus inimigos.'",
       "text_he": "אֲחֹתֵ֗נוּ אַ֣תְּ הֲיִ֤י לְאַלְפֵי֙ רְבָבָ֔ה",
-      "refs": ["Genesis 24:59-60"],
+      "refs": [
+        "Genesis 24:59-60"
+      ],
       "ref_start": "Genesis 24:59",
       "ref_end": "Genesis 24:60",
       "chapter": 24,
@@ -181,15 +383,36 @@
       "verse_end": 60,
       "sefaria_ref": "Genesis 24:59-60",
       "day_of_creation": null,
-      "tags": ["bênção", "rivka", "partida", "milhares"],
-      "topic": "A Partida de Rivka — Bênção da Família"
+      "tags": [
+        "bênção",
+        "rivka",
+        "partida",
+        "milhares"
+      ],
+      "topic": "A Partida de Rivka — Bênção da Família",
+      "i18n": {
+        "en": {
+          "text": "The family wishes to keep Rebecca a few days, but she chooses to leave at once. The family blessing: 'May you become thousands of myriads, and may your offspring inherit the gates of their enemies.'",
+          "topic": "Rebecca's Departure — the Family's Blessing"
+        },
+        "es": {
+          "text": "La familia quiere retener a Rebeca unos días, pero ella opta por partir de inmediato. La bendición familiar: 'Conviértete en millares de decenas de millares, y que tu descendencia herede las puertas de sus enemigos.'",
+          "topic": "La partida de Rebeca — la bendición de la familia"
+        },
+        "he": {
+          "text": "הַמִּשְׁפָּחָה מְבַקֶּשֶׁת לְעַכֵּב אֶת רִבְקָה כַּמָּה יָמִים, אַךְ הִיא בּוֹחֶרֶת לָצֵאת מִיָּד. בִּרְכַּת הַמִּשְׁפָּחָה: ׳אַתְּ הֲיִי לְאַלְפֵי רְבָבָה, וְיִירַשׁ זַרְעֵךְ אֵת שַׁעַר שֹׂנְאָיו׳.",
+          "topic": "יְצִיאַת רִבְקָה — בִּרְכַּת הַמִּשְׁפָּחָה"
+        }
+      }
     },
     {
       "id": "cs009",
       "order": 9,
       "text": "Yitzchak sai ao campo ao anoitecer para meditar. Rivka o avista montada no camelo e pergunta ao servo quem é aquele homem. Ao saber que é Yitzchak, ela desce do camelo e cobre o rosto com o véu.",
       "text_he": "וַיֵּצֵ֥א יִצְחָ֛ק לָשׂ֥וּחַ בַּשָּׂדֶ֖ה לִפְנ֣וֹת עָ֑רֶב",
-      "refs": ["Genesis 24:63-65"],
+      "refs": [
+        "Genesis 24:63-65"
+      ],
       "ref_start": "Genesis 24:63",
       "ref_end": "Genesis 24:65",
       "chapter": 24,
@@ -197,15 +420,37 @@
       "verse_end": 65,
       "sefaria_ref": "Genesis 24:63-65",
       "day_of_creation": null,
-      "tags": ["yitzchak", "rivka", "encontro", "véu", "campo"],
-      "topic": "O Primeiro Encontro de Yitzchak e Rivka"
+      "tags": [
+        "yitzchak",
+        "rivka",
+        "encontro",
+        "véu",
+        "campo"
+      ],
+      "topic": "O Primeiro Encontro de Yitzchak e Rivka",
+      "i18n": {
+        "en": {
+          "text": "Isaac goes out to the field at dusk to meditate. Rebecca, riding the camel, spots him and asks the servant who that man is. On learning it is Isaac, she dismounts and covers her face with the veil.",
+          "topic": "The First Meeting of Isaac and Rebecca"
+        },
+        "es": {
+          "text": "Isaac sale al campo al anochecer para meditar. Rebeca, montada en el camello, lo divisa y pregunta al siervo quién es aquel hombre. Al saber que es Isaac, baja del camello y se cubre el rostro con el velo.",
+          "topic": "El primer encuentro de Isaac y Rebeca"
+        },
+        "he": {
+          "text": "יִצְחָק יוֹצֵא אֶל הַשָּׂדֶה לִפְנוֹת עֶרֶב לָשׂוּחַ. רִבְקָה, רוֹכֶבֶת עַל הַגָּמָל, רוֹאָה אוֹתוֹ וְשׁוֹאֶלֶת אֶת הָעֶבֶד מִיהוּ הָאִישׁ הַלָּז. בְּהִוָּדַע לָהּ כִּי זֶה יִצְחָק, יוֹרֶדֶת מֵעַל הַגָּמָל וּמְכַסָּה אֶת פָּנֶיהָ בַּצָּעִיף.",
+          "topic": "הַמִּפְגָּשׁ הָרִאשׁוֹן שֶׁל יִצְחָק וְרִבְקָה"
+        }
+      }
     },
     {
       "id": "cs010",
       "order": 10,
       "text": "Yitzchak traz Rivka para a tenda de Sara sua mãe. Ela se torna sua esposa e ele a ama — e Yitzchak se consola após a morte de sua mãe.",
       "text_he": "וַיְבִאֶ֣הָ יִצְחָ֗ק הָאֹ֛הֱלָה שָׂרָ֥ה אִמּ֖וֹ וַיִּקַּ֤ח אֶת רִבְקָה֙",
-      "refs": ["Genesis 24:67"],
+      "refs": [
+        "Genesis 24:67"
+      ],
       "ref_start": "Genesis 24:67",
       "ref_end": "Genesis 24:67",
       "chapter": 24,
@@ -213,15 +458,37 @@
       "verse_end": 67,
       "sefaria_ref": "Genesis 24:67",
       "day_of_creation": null,
-      "tags": ["casamento", "amor", "consolo", "continuidade", "tenda-de-sara"],
-      "topic": "Casamento de Yitzchak e Rivka"
+      "tags": [
+        "casamento",
+        "amor",
+        "consolo",
+        "continuidade",
+        "tenda-de-sara"
+      ],
+      "topic": "Casamento de Yitzchak e Rivka",
+      "i18n": {
+        "en": {
+          "text": "Isaac brings Rebecca into the tent of Sarah his mother. She becomes his wife and he loves her — and Isaac is comforted after his mother's death.",
+          "topic": "The Marriage of Isaac and Rebecca"
+        },
+        "es": {
+          "text": "Isaac trae a Rebeca a la tienda de Sara su madre. Ella se convierte en su esposa y él la ama — e Isaac se consuela tras la muerte de su madre.",
+          "topic": "El matrimonio de Isaac y Rebeca"
+        },
+        "he": {
+          "text": "יִצְחָק מֵבִיא אֶת רִבְקָה הָאֹהֱלָה שָׂרָה אִמּוֹ. הִיא נַעֲשֵׂית לוֹ לְאִשָּׁה וְהוּא אוֹהֲבָהּ — וְיִצְחָק מִתְנַחֵם לְאַחַר מוֹת אִמּוֹ.",
+          "topic": "נִשּׂוּאֵי יִצְחָק וְרִבְקָה"
+        }
+      }
     },
     {
       "id": "cs011",
       "order": 11,
       "text": "Avraham toma uma segunda esposa chamada Ketura e tem mais seis filhos. Mas tudo o que possui ele dá a Yitzchak, e aos filhos das concubinas ele dá presentes e os envia para longe.",
       "text_he": "וְאֶ֨ת כָּל אֲשֶׁר ל֖וֹ נָתַ֥ן לְיִצְחָֽק",
-      "refs": ["Genesis 25:1-6"],
+      "refs": [
+        "Genesis 25:1-6"
+      ],
       "ref_start": "Genesis 25:1",
       "ref_end": "Genesis 25:6",
       "chapter": 25,
@@ -229,15 +496,36 @@
       "verse_end": 6,
       "sefaria_ref": "Genesis 25:1-6",
       "day_of_creation": null,
-      "tags": ["ketura", "yitzchak", "herança", "filhos"],
-      "topic": "Avraham, Ketura e a Herança de Yitzchak"
+      "tags": [
+        "ketura",
+        "yitzchak",
+        "herança",
+        "filhos"
+      ],
+      "topic": "Avraham, Ketura e a Herança de Yitzchak",
+      "i18n": {
+        "en": {
+          "text": "Abraham takes a second wife named Keturah and has six more sons. But all that he owns he gives to Isaac, and to the sons of the concubines he gives gifts and sends them away.",
+          "topic": "Abraham, Keturah, and Isaac's Inheritance"
+        },
+        "es": {
+          "text": "Abraham toma una segunda esposa llamada Cetura y tiene seis hijos más. Pero todo lo que posee lo da a Isaac, y a los hijos de las concubinas les da regalos y los envía lejos.",
+          "topic": "Abraham, Cetura y la herencia de Isaac"
+        },
+        "he": {
+          "text": "אַבְרָהָם לוֹקֵחַ אִשָּׁה שְׁנִיָּה בְּשֵׁם קְטוּרָה וְנוֹלָדִים לוֹ עוֹד שִׁשָּׁה בָּנִים. אַךְ אֶת כָּל אֲשֶׁר לוֹ הוּא נוֹתֵן לְיִצְחָק, וְלִבְנֵי הַפִּילַגְשִׁים הוּא נוֹתֵן מַתָּנוֹת וּמְשַׁלְּחָם.",
+          "topic": "אַבְרָהָם, קְטוּרָה וִירֻשַּׁת יִצְחָק"
+        }
+      }
     },
     {
       "id": "cs012",
       "order": 12,
       "text": "Avraham morre aos 175 anos, 'velho e saciado de dias.' Seus filhos Yitzchak e Yishmael o sepultam juntos na Caverna de Machpelah, ao lado de Sara.",
       "text_he": "וַיִּגְוַ֨ע וַיָּ֤מָת אַבְרָהָם֙ בְּשֵׂיבָ֣ה טוֹבָ֔ה זָקֵ֖ן וְשָׂבֵ֑עַ",
-      "refs": ["Genesis 25:7-10"],
+      "refs": [
+        "Genesis 25:7-10"
+      ],
       "ref_start": "Genesis 25:7",
       "ref_end": "Genesis 25:10",
       "chapter": 25,
@@ -245,34 +533,102 @@
       "verse_end": 10,
       "sefaria_ref": "Genesis 25:7-10",
       "day_of_creation": null,
-      "tags": ["morte", "avraham", "175-anos", "machpelah", "yitzchak", "yishmael"],
+      "tags": [
+        "morte",
+        "avraham",
+        "175-anos",
+        "machpelah",
+        "yitzchak",
+        "yishmael"
+      ],
       "topic": "Morte de Avraham — 175 Anos",
-      "visual": { "marker_type": "icon", "icon": "cave", "asset": "assets/icons/cave.svg", "caption": "Avraham sepultado em Machpelah", "importance": 3 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "cave",
+        "asset": "assets/icons/cave.svg",
+        "caption": "Avraham sepultado em Machpelah",
+        "importance": 3
+      },
+      "i18n": {
+        "en": {
+          "text": "Abraham dies at 175, 'old and full of days.' His sons Isaac and Ishmael bury him together in the Cave of Machpelah, beside Sarah.",
+          "topic": "The Death of Abraham — 175 Years",
+          "caption": "Abraham buried in Machpelah"
+        },
+        "es": {
+          "text": "Abraham muere a los 175 años, 'anciano y saciado de días.' Sus hijos Isaac e Ismael lo sepultan juntos en la Cueva de Macpelá, junto a Sara.",
+          "topic": "La muerte de Abraham — 175 años",
+          "caption": "Abraham sepultado en Macpelá"
+        },
+        "he": {
+          "text": "אַבְרָהָם מֵת בְּגִיל 175, ׳זָקֵן וְשָׂבֵעַ׳. בָּנָיו יִצְחָק וְיִשְׁמָעֵאל קוֹבְרִים אוֹתוֹ יַחַד בִּמְעָרַת הַמַּכְפֵּלָה, לְצַד שָׂרָה.",
+          "topic": "מוֹת אַבְרָהָם — 175 שָׁנָה",
+          "caption": "אַבְרָהָם נִקְבָּר בַּמַּכְפֵּלָה"
+        }
+      }
     }
   ],
-
   "aliyot": [
-    { "number": 1, "ref_start": "Genesis 23:1",  "ref_end": "Genesis 23:16", "sefaria_ref": "Genesis 23:1-16" },
-    { "number": 2, "ref_start": "Genesis 23:17", "ref_end": "Genesis 24:9",  "sefaria_ref": "Genesis 23:17-24:9" },
-    { "number": 3, "ref_start": "Genesis 24:10", "ref_end": "Genesis 24:26", "sefaria_ref": "Genesis 24:10-26" },
-    { "number": 4, "ref_start": "Genesis 24:27", "ref_end": "Genesis 24:52", "sefaria_ref": "Genesis 24:27-52" },
-    { "number": 5, "ref_start": "Genesis 24:53", "ref_end": "Genesis 24:67", "sefaria_ref": "Genesis 24:53-67" },
-    { "number": 6, "ref_start": "Genesis 25:1",  "ref_end": "Genesis 25:11", "sefaria_ref": "Genesis 25:1-11" },
-    { "number": 7, "ref_start": "Genesis 25:12", "ref_end": "Genesis 25:18", "sefaria_ref": "Genesis 25:12-18" }
+    {
+      "number": 1,
+      "ref_start": "Genesis 23:1",
+      "ref_end": "Genesis 23:16",
+      "sefaria_ref": "Genesis 23:1-16"
+    },
+    {
+      "number": 2,
+      "ref_start": "Genesis 23:17",
+      "ref_end": "Genesis 24:9",
+      "sefaria_ref": "Genesis 23:17-24:9"
+    },
+    {
+      "number": 3,
+      "ref_start": "Genesis 24:10",
+      "ref_end": "Genesis 24:26",
+      "sefaria_ref": "Genesis 24:10-26"
+    },
+    {
+      "number": 4,
+      "ref_start": "Genesis 24:27",
+      "ref_end": "Genesis 24:52",
+      "sefaria_ref": "Genesis 24:27-52"
+    },
+    {
+      "number": 5,
+      "ref_start": "Genesis 24:53",
+      "ref_end": "Genesis 24:67",
+      "sefaria_ref": "Genesis 24:53-67"
+    },
+    {
+      "number": 6,
+      "ref_start": "Genesis 25:1",
+      "ref_end": "Genesis 25:11",
+      "sefaria_ref": "Genesis 25:1-11"
+    },
+    {
+      "number": 7,
+      "ref_start": "Genesis 25:12",
+      "ref_end": "Genesis 25:18",
+      "sefaria_ref": "Genesis 25:12-18"
+    }
   ],
-
   "haftarah": {
     "ref": "I Kings 1:1-31",
     "sefaria_ref": "I Kings 1:1-31",
     "note": "Tema: a velhice do rei David — paralelo à velhice de Avraham; a questão da sucessão"
   },
-
   "connections": {
     "next_parasha": "toldot",
     "prev_parasha": "vayera",
     "thematic_links": [
-      { "parasha": "vayera",  "theme": "Consequência da Akeda — Yitzchak sobreviveu e agora precisa de uma esposa" },
-      { "parasha": "toldot",  "theme": "Rivka e Yitzchak — seus filhos gêmeos são o tema da próxima parashá" }
+      {
+        "parasha": "vayera",
+        "theme": "Consequência da Akeda — Yitzchak sobreviveu e agora precisa de uma esposa"
+      },
+      {
+        "parasha": "toldot",
+        "theme": "Rivka e Yitzchak — seus filhos gêmeos são o tema da próxima parashá"
+      }
     ]
   }
 }

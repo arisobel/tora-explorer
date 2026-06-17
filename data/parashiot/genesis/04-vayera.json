@@ -8,7 +8,6 @@
     "parasha_of_book": 4,
     "total_parashiot_in_book": 12
   },
-
   "identity": {
     "id": "vayera",
     "name": "Vayera",
@@ -17,18 +16,22 @@
     "transliteration": "Vayera",
     "aliyot_count": 7
   },
-
   "range": {
     "ref_start": "Genesis 18:1",
     "ref_end": "Genesis 22:24",
     "sefaria_ref": "Genesis 18:1-22:24",
-    "chapters_covered": [18, 19, 20, 21, 22],
+    "chapters_covered": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
     "chapter_start": 18,
     "chapter_end": 22,
     "verse_start": 1,
     "verse_end": 24
   },
-
   "timeline": {
     "period_name": "Avraham — visitantes, Sedom e Akeda",
     "anno_mundi_start": 2047,
@@ -37,29 +40,60 @@
     "position_pct": 30,
     "description": "Desde a visita dos três anjos até o nascimento de Yitzchak, a destruição de Sedom e o teste supremo da Akeda."
   },
-
   "summary": {
     "short": "Três visitantes anunciam o nascimento de Yitzchak, Sedom é destruída, Yitzchak nasce e Avraham é testado na Akeda.",
     "medium": "A parashá abre com a aparição de três visitantes a Avraham — que o tratou com hospitalidade exemplar — que anunciam o nascimento de Yitzchak em um ano. Avraham intercede pela população de Sedom. Lot escapa da destruição das cidades. Sara dá à luz Yitzchak em idade avançada; Hagar e Yishmael são expulsos. O ponto culminante é a Akeda: Deus ordena a Avraham que sacrifique Yitzchak — mas o anjo o detém no último instante, confirmando a fé absoluta de Avraham.",
-    "characters_main": ["Avraham", "Sara", "Lot", "Yitzchak", "Yishmael", "Hagar"],
-    "characters_secondary": ["os três anjos", "Avimelech", "Lot's daughters", "Efron", "o anjo da Akeda"],
-    "themes": ["Hospitalidade", "Intercessão", "Destruição e salvação", "Nascimento miraculoso", "Expulsão e misericórdia", "Fé suprema", "A Akeda"]
+    "characters_main": [
+      "Avraham",
+      "Sara",
+      "Lot",
+      "Yitzchak",
+      "Yishmael",
+      "Hagar"
+    ],
+    "characters_secondary": [
+      "os três anjos",
+      "Avimelech",
+      "Lot's daughters",
+      "Efron",
+      "o anjo da Akeda"
+    ],
+    "themes": [
+      "Hospitalidade",
+      "Intercessão",
+      "Destruição e salvação",
+      "Nascimento miraculoso",
+      "Expulsão e misericórdia",
+      "Fé suprema",
+      "A Akeda"
+    ],
+    "i18n": {
+      "en": {
+        "short": "Three visitors announce Isaac's birth, Sodom is destroyed, Isaac is born, and Abraham is tested at the Akedah."
+      },
+      "es": {
+        "short": "Tres visitantes anuncian el nacimiento de Isaac, Sodoma es destruida, Isaac nace y Abraham es probado en la Aqueda."
+      },
+      "he": {
+        "short": "שְׁלוֹשָׁה אוֹרְחִים מְבַשְּׂרִים אֶת לֵדַת יִצְחָק, סְדוֹם נֶחֱרֶבֶת, יִצְחָק נוֹלָד וְאַבְרָהָם נִבְחָן בָּעֲקֵדָה."
+      }
+    }
   },
-
   "visual": {
     "marker_type": "icon",
     "icon": "tent",
     "asset": "assets/icons/tent.svg",
     "caption": "A tenda aberta de Avraham"
   },
-
   "facts": [
     {
       "id": "va001",
       "order": 1,
       "text": "Deus aparece a Avraham no carvalho de Mamre num dia escaldante. Avraham vê três homens parados e corre ao encontro deles, inclinando-se e pedindo que descansem e comam.",
       "text_he": "וַיֵּ֤רָא אֵלָיו֙ ה' בְּאֵלֹנֵ֣י מַמְרֵ֔א",
-      "refs": ["Genesis 18:1-5"],
+      "refs": [
+        "Genesis 18:1-5"
+      ],
       "ref_start": "Genesis 18:1",
       "ref_end": "Genesis 18:5",
       "chapter": 18,
@@ -67,16 +101,46 @@
       "verse_end": 5,
       "sefaria_ref": "Genesis 18:1-5",
       "day_of_creation": null,
-      "tags": ["hospitalidade", "hachnasat-orchim", "anjos", "visita"],
+      "tags": [
+        "hospitalidade",
+        "hachnasat-orchim",
+        "anjos",
+        "visita"
+      ],
       "topic": "A Visita dos Três Anjos — Hospitalidade de Avraham",
-      "visual": { "marker_type": "icon", "icon": "tent", "asset": "assets/icons/tent.svg", "caption": "Os três visitantes", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "tent",
+        "asset": "assets/icons/tent.svg",
+        "caption": "Os três visitantes",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "God appears to Abraham at the oaks of Mamre on a scorching day. Abraham sees three men standing and runs to meet them, bowing and asking them to rest and eat.",
+          "topic": "The Visit of the Three Angels — Abraham's Hospitality",
+          "caption": "The three visitors"
+        },
+        "es": {
+          "text": "Dios aparece a Abraham en los encinares de Mamre en un día abrasador. Abraham ve a tres hombres de pie y corre a su encuentro, inclinándose y pidiéndoles que descansen y coman.",
+          "topic": "La visita de los tres ángeles — la hospitalidad de Abraham",
+          "caption": "Los tres visitantes"
+        },
+        "he": {
+          "text": "אֱלֹהִים נִרְאֶה אֶל אַבְרָהָם בְּאֵלוֹנֵי מַמְרֵא בְּיוֹם חַם. אַבְרָהָם רוֹאֶה שְׁלוֹשָׁה אֲנָשִׁים נִצָּבִים וְרָץ לִקְרָאתָם, מִשְׁתַּחֲוֶה וּמְבַקֵּשׁ שֶׁיָּנוּחוּ וְיֹאכְלוּ.",
+          "topic": "בִּקּוּר שְׁלוֹשֶׁת הַמַּלְאָכִים — הַכְנָסַת הָאוֹרְחִים שֶׁל אַבְרָהָם",
+          "caption": "שְׁלוֹשֶׁת הָאוֹרְחִים"
+        }
+      }
     },
     {
       "id": "va002",
       "order": 2,
       "text": "Um dos visitantes anuncia que em um ano Sara terá um filho. Sara, ouvindo da entrada da tenda, ri por dentro — ela e Avraham já são velhos. O anjo pergunta: 'Haverá algo difícil demais para Deus?'",
       "text_he": "הֲיִפָּלֵ֥א מֵֽה' דָּבָ֑ר לַמּוֹעֵ֞ד אָשׁ֧וּב אֵלֶ֛יךָ",
-      "refs": ["Genesis 18:10-14"],
+      "refs": [
+        "Genesis 18:10-14"
+      ],
       "ref_start": "Genesis 18:10",
       "ref_end": "Genesis 18:14",
       "chapter": 18,
@@ -84,15 +148,37 @@
       "verse_end": 14,
       "sefaria_ref": "Genesis 18:10-14",
       "day_of_creation": null,
-      "tags": ["anúncio", "yitzchak", "riso", "milagre", "sara"],
-      "topic": "Anúncio do Nascimento de Yitzchak"
+      "tags": [
+        "anúncio",
+        "yitzchak",
+        "riso",
+        "milagre",
+        "sara"
+      ],
+      "topic": "Anúncio do Nascimento de Yitzchak",
+      "i18n": {
+        "en": {
+          "text": "One of the visitors announces that in a year Sarah will have a son. Sarah, listening from the tent entrance, laughs inwardly — she and Abraham are already old. The angel asks: 'Is anything too hard for God?'",
+          "topic": "Announcement of Isaac's Birth"
+        },
+        "es": {
+          "text": "Uno de los visitantes anuncia que en un año Sara tendrá un hijo. Sara, escuchando desde la entrada de la tienda, ríe para sus adentros — ella y Abraham ya son ancianos. El ángel pregunta: '¿Hay algo demasiado difícil para Dios?'",
+          "topic": "Anuncio del nacimiento de Isaac"
+        },
+        "he": {
+          "text": "אֶחָד הָאוֹרְחִים מְבַשֵּׂר כִּי בְּעוֹד שָׁנָה יִהְיֶה לְשָׂרָה בֵּן. שָׂרָה, הַשּׁוֹמַעַת מִפֶּתַח הָאֹהֶל, צוֹחֶקֶת בְּקִרְבָּהּ — הִיא וְאַבְרָהָם כְּבָר זְקֵנִים. הַמַּלְאָךְ שׁוֹאֵל: ׳הֲיִפָּלֵא מֵה׳ דָּבָר?׳",
+          "topic": "בְּשׂוֹרַת לֵדַת יִצְחָק"
+        }
+      }
     },
     {
       "id": "va003",
       "order": 3,
       "text": "Deus comunica a Avraham que irá inspecionar Sedom e Amora por causa do seu grande clamor de pecado. Avraham intercede corajosamente: 'E se houver 50 justos? 45? 40? 30? 20? 10?'",
       "text_he": "הַשֹּׁפֵ֤ט כָּל הָאָ֙רֶץ֙ לֹ֥א יַֽעֲשֶׂ֖ה מִשְׁפָּֽט",
-      "refs": ["Genesis 18:23-32"],
+      "refs": [
+        "Genesis 18:23-32"
+      ],
       "ref_start": "Genesis 18:23",
       "ref_end": "Genesis 18:32",
       "chapter": 18,
@@ -100,15 +186,36 @@
       "verse_end": 32,
       "sefaria_ref": "Genesis 18:23-32",
       "day_of_creation": null,
-      "tags": ["sedom", "intercessão", "justiça", "50-justos"],
-      "topic": "Intercessão de Avraham por Sedom"
+      "tags": [
+        "sedom",
+        "intercessão",
+        "justiça",
+        "50-justos"
+      ],
+      "topic": "Intercessão de Avraham por Sedom",
+      "i18n": {
+        "en": {
+          "text": "God tells Abraham He will inspect Sodom and Gomorrah because of the great outcry of their sin. Abraham boldly intercedes: 'What if there are 50 righteous? 45? 40? 30? 20? 10?'",
+          "topic": "Abraham's Intercession for Sodom"
+        },
+        "es": {
+          "text": "Dios comunica a Abraham que inspeccionará Sodoma y Gomorra a causa del gran clamor de su pecado. Abraham intercede con valentía: '¿Y si hay 50 justos? ¿45? ¿40? ¿30? ¿20? ¿10?'",
+          "topic": "La intercesión de Abraham por Sodoma"
+        },
+        "he": {
+          "text": "אֱלֹהִים מוֹדִיעַ לְאַבְרָהָם כִּי יִבְחַן אֶת סְדוֹם וַעֲמוֹרָה בִּגְלַל זַעֲקַת חֲטָאָן הַגְּדוֹלָה. אַבְרָהָם מַפְצִיר בְּאֹמֶץ: ׳וְאִם יֵשׁ חֲמִשִּׁים צַדִּיקִים? אַרְבָּעִים וַחֲמִשָּׁה? אַרְבָּעִים? שְׁלוֹשִׁים? עֶשְׂרִים? עֲשָׂרָה?׳",
+          "topic": "הַפְצָרַת אַבְרָהָם עַל סְדוֹם"
+        }
+      }
     },
     {
       "id": "va004",
       "order": 4,
       "text": "Dois anjos chegam a Sedom. Lot os convida para sua casa. Os homens da cidade, velhos e jovens, cercam a casa exigindo os visitantes. Lot oferece suas filhas para proteger os hóspedes.",
       "text_he": "וַיָּבֹ֧אוּ שְׁנֵ֧י הַמַּלְאָכִ֛ים סְדֹ֖מָה בָּעֶ֑רֶב",
-      "refs": ["Genesis 19:1-9"],
+      "refs": [
+        "Genesis 19:1-9"
+      ],
       "ref_start": "Genesis 19:1",
       "ref_end": "Genesis 19:9",
       "chapter": 19,
@@ -116,15 +223,37 @@
       "verse_end": 9,
       "sefaria_ref": "Genesis 19:1-9",
       "day_of_creation": null,
-      "tags": ["sedom", "lot", "anjos", "perversão", "hospitalidade"],
-      "topic": "Os Anjos em Sedom — Perversão da Cidade"
+      "tags": [
+        "sedom",
+        "lot",
+        "anjos",
+        "perversão",
+        "hospitalidade"
+      ],
+      "topic": "Os Anjos em Sedom — Perversão da Cidade",
+      "i18n": {
+        "en": {
+          "text": "Two angels arrive in Sodom. Lot invites them into his house. The men of the city, old and young, surround the house demanding the visitors. Lot offers his daughters to protect the guests.",
+          "topic": "The Angels in Sodom — the City's Depravity"
+        },
+        "es": {
+          "text": "Dos ángeles llegan a Sodoma. Lot los invita a su casa. Los hombres de la ciudad, viejos y jóvenes, rodean la casa exigiendo a los visitantes. Lot ofrece a sus hijas para proteger a los huéspedes.",
+          "topic": "Los ángeles en Sodoma — la perversión de la ciudad"
+        },
+        "he": {
+          "text": "שְׁנֵי מַלְאָכִים מַגִּיעִים לִסְדוֹם. לוֹט מַזְמִינָם לְבֵיתוֹ. אַנְשֵׁי הָעִיר, מִזָּקֵן וְעַד נַעַר, מַקִּיפִים אֶת הַבַּיִת וְדוֹרְשִׁים אֶת הָאוֹרְחִים. לוֹט מַצִּיעַ אֶת בְּנוֹתָיו כְּדֵי לְהָגֵן עַל הָאוֹרְחִים.",
+          "topic": "הַמַּלְאָכִים בִּסְדוֹם — שְׁחִיתוּת הָעִיר"
+        }
+      }
     },
     {
       "id": "va005",
       "order": 5,
       "text": "Os anjos cegam os homens de Sedom e ordenam a Lot que fuja com sua família sem olhar para trás. Enxofre e fogo descem sobre Sedom e Amora. A mulher de Lot olha para trás e se transforma em estátua de sal.",
       "text_he": "וַה' הִמְטִ֨יר עַל סְדֹ֜ם וְעַל עֲמֹרָ֗ה גָּפְרִ֤ית וָאֵשׁ֙",
-      "refs": ["Genesis 19:24-26"],
+      "refs": [
+        "Genesis 19:24-26"
+      ],
       "ref_start": "Genesis 19:24",
       "ref_end": "Genesis 19:26",
       "chapter": 19,
@@ -132,16 +261,47 @@
       "verse_end": 26,
       "sefaria_ref": "Genesis 19:24-26",
       "day_of_creation": null,
-      "tags": ["destruição", "sedom", "fogo", "sal", "lot"],
+      "tags": [
+        "destruição",
+        "sedom",
+        "fogo",
+        "sal",
+        "lot"
+      ],
       "topic": "Destruição de Sedom — A Mulher de Sal",
-      "visual": { "marker_type": "icon", "icon": "fire", "asset": "assets/icons/fire.svg", "caption": "A destruição de Sedom", "importance": 4 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "fire",
+        "asset": "assets/icons/fire.svg",
+        "caption": "A destruição de Sedom",
+        "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "The angels blind the men of Sodom and command Lot to flee with his family without looking back. Sulfur and fire rain down on Sodom and Gomorrah. Lot's wife looks back and turns into a pillar of salt.",
+          "topic": "The Destruction of Sodom — the Pillar of Salt",
+          "caption": "The destruction of Sodom"
+        },
+        "es": {
+          "text": "Los ángeles ciegan a los hombres de Sodoma y ordenan a Lot huir con su familia sin mirar atrás. Azufre y fuego caen sobre Sodoma y Gomorra. La mujer de Lot mira atrás y se convierte en estatua de sal.",
+          "topic": "La destrucción de Sodoma — la mujer de sal",
+          "caption": "La destrucción de Sodoma"
+        },
+        "he": {
+          "text": "הַמַּלְאָכִים מַכִּים בְּסַנְוֵרִים אֶת אַנְשֵׁי סְדוֹם וּמְצַוִּים עַל לוֹט לִבְרֹחַ עִם מִשְׁפַּחְתּוֹ מִבְּלִי לְהַבִּיט אָחוֹר. גָּפְרִית וָאֵשׁ יוֹרְדוֹת עַל סְדוֹם וַעֲמוֹרָה. אֵשֶׁת לוֹט מַבִּיטָה אָחוֹר וְהוֹפֶכֶת לִנְצִיב מֶלַח.",
+          "topic": "חֻרְבַּן סְדוֹם — נְצִיב הַמֶּלַח",
+          "caption": "חֻרְבַּן סְדוֹם"
+        }
+      }
     },
     {
       "id": "va006",
       "order": 6,
       "text": "Lot e suas filhas refugiam-se numa caverna. As filhas, acreditando ser as últimas sobreviventes, embebedavam o pai para perpetuar a linhagem — nascendo Moav e Amon, ancestrais dessas duas nações.",
       "text_he": "וַתַּהֲרֶ֜יןָ שְׁתֵּ֧י בְנֽוֹת לוֹט מֵאֲבִיהֶֽן",
-      "refs": ["Genesis 19:30-38"],
+      "refs": [
+        "Genesis 19:30-38"
+      ],
       "ref_start": "Genesis 19:30",
       "ref_end": "Genesis 19:38",
       "chapter": 19,
@@ -149,15 +309,37 @@
       "verse_end": 38,
       "sefaria_ref": "Genesis 19:30-38",
       "day_of_creation": null,
-      "tags": ["lot", "moav", "amon", "filhas", "nações"],
-      "topic": "Lot e suas Filhas — Origem de Moav e Amon"
+      "tags": [
+        "lot",
+        "moav",
+        "amon",
+        "filhas",
+        "nações"
+      ],
+      "topic": "Lot e suas Filhas — Origem de Moav e Amon",
+      "i18n": {
+        "en": {
+          "text": "Lot and his daughters take refuge in a cave. The daughters, believing they are the last survivors, get their father drunk to perpetuate the line — giving birth to Moab and Ammon, ancestors of those two nations.",
+          "topic": "Lot and His Daughters — the Origin of Moab and Ammon"
+        },
+        "es": {
+          "text": "Lot y sus hijas se refugian en una cueva. Las hijas, creyéndose las últimas supervivientes, embriagan a su padre para perpetuar el linaje — naciendo Moab y Amón, ancestros de esas dos naciones.",
+          "topic": "Lot y sus hijas — el origen de Moab y Amón"
+        },
+        "he": {
+          "text": "לוֹט וּבְנוֹתָיו מוֹצְאִים מִקְלָט בִּמְעָרָה. הַבָּנוֹת, בְּהַאֲמִינָן שֶׁהֵן הַשּׂוֹרְדוֹת הָאַחֲרוֹנוֹת, מַשְׁקוֹת אֶת אֲבִיהֶן יַיִן כְּדֵי לְהַמְשִׁיךְ אֶת הַשּׁוֹשֶׁלֶת — וְנוֹלָדִים מוֹאָב וְעַמּוֹן, אֲבוֹת שְׁתֵּי הָאֻמּוֹת הָאֵלֶּה.",
+          "topic": "לוֹט וּבְנוֹתָיו — מוֹצָא מוֹאָב וְעַמּוֹן"
+        }
+      }
     },
     {
       "id": "va007",
       "order": 7,
       "text": "Avraham parte para o Neguev e novamente diz que Sara é sua irmã. Avimelech, rei de Gerar, a leva ao palácio. Deus aparece a Avimelech em sonho e o adverte; ele devolve Sara a Avraham com presentes.",
       "text_he": "וַיֹּ֣אמֶר אֱלֹהִ֗ים אֵלָ֛יו בַּחֲלֹ֖ם הַלַּ֑יְלָה",
-      "refs": ["Genesis 20:1-7"],
+      "refs": [
+        "Genesis 20:1-7"
+      ],
       "ref_start": "Genesis 20:1",
       "ref_end": "Genesis 20:7",
       "chapter": 20,
@@ -165,15 +347,36 @@
       "verse_end": 7,
       "sefaria_ref": "Genesis 20:1-7",
       "day_of_creation": null,
-      "tags": ["avimelech", "sara", "sonho", "gerar"],
-      "topic": "Sara e Avimelech em Gerar"
+      "tags": [
+        "avimelech",
+        "sara",
+        "sonho",
+        "gerar"
+      ],
+      "topic": "Sara e Avimelech em Gerar",
+      "i18n": {
+        "en": {
+          "text": "Abraham travels to the Negev and again says Sarah is his sister. Abimelech, king of Gerar, takes her to his palace. God appears to Abimelech in a dream and warns him; he returns Sarah to Abraham with gifts.",
+          "topic": "Sarah and Abimelech in Gerar"
+        },
+        "es": {
+          "text": "Abraham parte al Néguev y de nuevo dice que Sara es su hermana. Abimélec, rey de Guerar, la lleva al palacio. Dios aparece a Abimélec en sueños y le advierte; él devuelve a Sara a Abraham con regalos.",
+          "topic": "Sara y Abimélec en Guerar"
+        },
+        "he": {
+          "text": "אַבְרָהָם נוֹסֵעַ אֶל הַנֶּגֶב וְשׁוּב אוֹמֵר כִּי שָׂרָה אֲחוֹתוֹ. אֲבִימֶלֶךְ, מֶלֶךְ גְּרָר, לוֹקֵחַ אוֹתָהּ אֶל אַרְמוֹנוֹ. אֱלֹהִים נִרְאֶה אֶל אֲבִימֶלֶךְ בַּחֲלוֹם וּמַזְהִירוֹ; וְהוּא מֵשִׁיב אֶת שָׂרָה לְאַבְרָהָם עִם מַתָּנוֹת.",
+          "topic": "שָׂרָה וַאֲבִימֶלֶךְ בִּגְרָר"
+        }
+      }
     },
     {
       "id": "va008",
       "order": 8,
       "text": "Conforme prometido, Sara engravida e dá à luz Yitzchak. Avraham tem 100 anos, Sara 90. Avraham circuncida Yitzchak no oitavo dia e o nomeia — 'riso' — pois Sara diz: 'Deus me fez rir; quem ouvir rirá comigo.'",
       "text_he": "וַתַּ֥הַר וַתֵּ֛לֶד שָׂרָ֥ה לְאַבְרָהָ֖ם בֵּ֑ן לִזְקֻנָ֖יו",
-      "refs": ["Genesis 21:1-7"],
+      "refs": [
+        "Genesis 21:1-7"
+      ],
       "ref_start": "Genesis 21:1",
       "ref_end": "Genesis 21:7",
       "chapter": 21,
@@ -181,15 +384,37 @@
       "verse_end": 7,
       "sefaria_ref": "Genesis 21:1-7",
       "day_of_creation": null,
-      "tags": ["yitzchak", "nascimento", "milagre", "riso", "brit-milah"],
-      "topic": "Nascimento de Yitzchak"
+      "tags": [
+        "yitzchak",
+        "nascimento",
+        "milagre",
+        "riso",
+        "brit-milah"
+      ],
+      "topic": "Nascimento de Yitzchak",
+      "i18n": {
+        "en": {
+          "text": "As promised, Sarah conceives and gives birth to Isaac. Abraham is 100, Sarah 90. Abraham circumcises Isaac on the eighth day and names him — 'laughter' — for Sarah says: 'God has made me laugh; all who hear will laugh with me.'",
+          "topic": "The Birth of Isaac"
+        },
+        "es": {
+          "text": "Como fue prometido, Sara concibe y da a luz a Isaac. Abraham tiene 100 años, Sara 90. Abraham circuncida a Isaac al octavo día y lo nombra — 'risa' — pues Sara dice: 'Dios me ha hecho reír; quien lo oiga reirá conmigo.'",
+          "topic": "El nacimiento de Isaac"
+        },
+        "he": {
+          "text": "כְּפִי שֶׁהֻבְטַח, שָׂרָה הָרָה וְיוֹלֶדֶת אֶת יִצְחָק. אַבְרָהָם בֶּן 100, שָׂרָה בַּת 90. אַבְרָהָם מָל אֶת יִצְחָק בַּיּוֹם הַשְּׁמִינִי וְקוֹרֵא לוֹ — ׳צְחוֹק׳ — כִּי שָׂרָה אוֹמֶרֶת: ׳צְחֹק עָשָׂה לִי אֱלֹהִים; כָּל הַשּׁוֹמֵעַ יִצְחַק לִי׳.",
+          "topic": "לֵדַת יִצְחָק"
+        }
+      }
     },
     {
       "id": "va009",
       "order": 9,
       "text": "Sara vê Yishmael zombando de Yitzchak e exige que Avraham expulse Hagar e seu filho. Avraham fica angustiado, mas Deus lhe diz para atender Sara, pois por Yitzchak será chamada sua descendência.",
       "text_he": "וַיֵּ֨רַע הַדָּבָ֧ר מְאֹ֛ד בְּעֵינֵ֥י אַבְרָהָ֖ם",
-      "refs": ["Genesis 21:9-13"],
+      "refs": [
+        "Genesis 21:9-13"
+      ],
       "ref_start": "Genesis 21:9",
       "ref_end": "Genesis 21:13",
       "chapter": 21,
@@ -197,15 +422,37 @@
       "verse_end": 13,
       "sefaria_ref": "Genesis 21:9-13",
       "day_of_creation": null,
-      "tags": ["yishmael", "expulsão", "hagar", "sara", "yitzchak"],
-      "topic": "Expulsão de Hagar e Yishmael"
+      "tags": [
+        "yishmael",
+        "expulsão",
+        "hagar",
+        "sara",
+        "yitzchak"
+      ],
+      "topic": "Expulsão de Hagar e Yishmael",
+      "i18n": {
+        "en": {
+          "text": "Sarah sees Ishmael mocking Isaac and demands that Abraham send away Hagar and her son. Abraham is distressed, but God tells him to heed Sarah, for through Isaac his offspring will be named.",
+          "topic": "The Expulsion of Hagar and Ishmael"
+        },
+        "es": {
+          "text": "Sara ve a Ismael burlándose de Isaac y exige que Abraham expulse a Agar y a su hijo. Abraham se angustia, pero Dios le dice que escuche a Sara, pues por Isaac será llamada su descendencia.",
+          "topic": "La expulsión de Agar e Ismael"
+        },
+        "he": {
+          "text": "שָׂרָה רוֹאָה אֶת יִשְׁמָעֵאל מְצַחֵק בְּיִצְחָק וְדוֹרֶשֶׁת מֵאַבְרָהָם לְגָרֵשׁ אֶת הָגָר וְאֶת בְּנָהּ. אַבְרָהָם מִצְטַעֵר, אַךְ אֱלֹהִים אוֹמֵר לוֹ לִשְׁמֹעַ בְּקוֹל שָׂרָה, כִּי בְּיִצְחָק יִקָּרֵא לוֹ זָרַע.",
+          "topic": "גֵּרוּשׁ הָגָר וְיִשְׁמָעֵאל"
+        }
+      }
     },
     {
       "id": "va010",
       "order": 10,
       "text": "No deserto, a água acaba. Hagar coloca Yishmael sob um arbusto e se afasta para não ver a morte do filho. Um anjo a chama e lhe mostra um poço: 'Deus ouviu a voz do menino.' Deus está com Yishmael e ele cresce no deserto.",
       "text_he": "וַיִּשְׁמַ֣ע אֱלֹהִ֗ים אֶת ק֣וֹל הַנַּ֘עַר",
-      "refs": ["Genesis 21:17-21"],
+      "refs": [
+        "Genesis 21:17-21"
+      ],
       "ref_start": "Genesis 21:17",
       "ref_end": "Genesis 21:21",
       "chapter": 21,
@@ -213,15 +460,37 @@
       "verse_end": 21,
       "sefaria_ref": "Genesis 21:17-21",
       "day_of_creation": null,
-      "tags": ["hagar", "yishmael", "deserto", "poço", "misericórdia"],
-      "topic": "Hagar e Yishmael no Deserto"
+      "tags": [
+        "hagar",
+        "yishmael",
+        "deserto",
+        "poço",
+        "misericórdia"
+      ],
+      "topic": "Hagar e Yishmael no Deserto",
+      "i18n": {
+        "en": {
+          "text": "In the desert, the water runs out. Hagar places Ishmael under a bush and moves away so as not to see her son's death. An angel calls to her and shows her a well: 'God has heard the boy's voice.' God is with Ishmael, and he grows up in the desert.",
+          "topic": "Hagar and Ishmael in the Desert"
+        },
+        "es": {
+          "text": "En el desierto, el agua se acaba. Agar coloca a Ismael bajo un arbusto y se aleja para no ver la muerte de su hijo. Un ángel la llama y le muestra un pozo: 'Dios ha oído la voz del muchacho.' Dios está con Ismael y él crece en el desierto.",
+          "topic": "Agar e Ismael en el desierto"
+        },
+        "he": {
+          "text": "בַּמִּדְבָּר אוֹזְלִים הַמַּיִם. הָגָר מַשְׁכִּיבָה אֶת יִשְׁמָעֵאל תַּחַת שִׂיחַ וּמִתְרַחֶקֶת כְּדֵי שֶׁלֹּא תִּרְאֶה בְּמוֹת בְּנָהּ. מַלְאָךְ קוֹרֵא אֵלֶיהָ וּמַרְאֶה לָהּ בְּאֵר: ׳שָׁמַע אֱלֹהִים אֶל קוֹל הַנַּעַר׳. אֱלֹהִים עִם יִשְׁמָעֵאל וְהוּא גָּדֵל בַּמִּדְבָּר.",
+          "topic": "הָגָר וְיִשְׁמָעֵאל בַּמִּדְבָּר"
+        }
+      }
     },
     {
       "id": "va011",
       "order": 11,
       "text": "Avimelech e seu general Pichol fazem um tratado de paz com Avraham em Beer-Sheva. Avraham planta uma árvore e chama pelo nome de Deus como Eterno.",
       "text_he": "וַיִּשְׁבְּע֖וּ שְׁנֵיהֶ֑ם",
-      "refs": ["Genesis 21:31-33"],
+      "refs": [
+        "Genesis 21:31-33"
+      ],
       "ref_start": "Genesis 21:31",
       "ref_end": "Genesis 21:33",
       "chapter": 21,
@@ -229,15 +498,36 @@
       "verse_end": 33,
       "sefaria_ref": "Genesis 21:31-33",
       "day_of_creation": null,
-      "tags": ["beer-sheva", "tratado", "paz", "avimelech"],
-      "topic": "Tratado em Beer-Sheva"
+      "tags": [
+        "beer-sheva",
+        "tratado",
+        "paz",
+        "avimelech"
+      ],
+      "topic": "Tratado em Beer-Sheva",
+      "i18n": {
+        "en": {
+          "text": "Abimelech and his commander Phicol make a peace treaty with Abraham at Beersheba. Abraham plants a tree and calls on the name of God as the Eternal.",
+          "topic": "Treaty at Beersheba"
+        },
+        "es": {
+          "text": "Abimélec y su general Ficol hacen un tratado de paz con Abraham en Beerseba. Abraham planta un árbol e invoca el nombre de Dios como el Eterno.",
+          "topic": "Tratado en Beerseba"
+        },
+        "he": {
+          "text": "אֲבִימֶלֶךְ וְשַׂר צְבָאוֹ פִּיכֹל כּוֹרְתִים בְּרִית שָׁלוֹם עִם אַבְרָהָם בִּבְאֵר שֶׁבַע. אַבְרָהָם נוֹטֵעַ אֵשֶׁל וְקוֹרֵא בְּשֵׁם ה׳ אֵל עוֹלָם.",
+          "topic": "בְּרִית בִּבְאֵר שֶׁבַע"
+        }
+      }
     },
     {
       "id": "va012",
       "order": 12,
       "text": "Deus testa Avraham: 'Toma teu filho, teu único, aquele que amas, Yitzchak, e vai à terra de Moriá — e oferece-o ali como oferta queimada.' Avraham se levanta cedo e parte.",
       "text_he": "קַח נָ֠א אֶת בִּנְךָ֨ אֶת יְחִידְךָ֤ אֲשֶׁר אָהַ֙בְתָּ֙ אֶת יִצְחָ֔ק",
-      "refs": ["Genesis 22:1-3"],
+      "refs": [
+        "Genesis 22:1-3"
+      ],
       "ref_start": "Genesis 22:1",
       "ref_end": "Genesis 22:3",
       "chapter": 22,
@@ -245,15 +535,37 @@
       "verse_end": 3,
       "sefaria_ref": "Genesis 22:1-3",
       "day_of_creation": null,
-      "tags": ["akeda", "teste", "yitzchak", "moriá", "fé"],
-      "topic": "O Teste da Akeda — Deus Ordena"
+      "tags": [
+        "akeda",
+        "teste",
+        "yitzchak",
+        "moriá",
+        "fé"
+      ],
+      "topic": "O Teste da Akeda — Deus Ordena",
+      "i18n": {
+        "en": {
+          "text": "God tests Abraham: 'Take your son, your only one, whom you love, Isaac, and go to the land of Moriah — and offer him there as a burnt offering.' Abraham rises early and sets out.",
+          "topic": "The Test of the Akedah — God Commands"
+        },
+        "es": {
+          "text": "Dios prueba a Abraham: 'Toma a tu hijo, tu único, al que amas, Isaac, y ve a la tierra de Moria — y ofrécelo allí como holocausto.' Abraham se levanta temprano y parte.",
+          "topic": "La prueba de la Aqueda — Dios ordena"
+        },
+        "he": {
+          "text": "אֱלֹהִים מְנַסֶּה אֶת אַבְרָהָם: ׳קַח אֶת בִּנְךָ, אֶת יְחִידְךָ, אֲשֶׁר אָהַבְתָּ, אֶת יִצְחָק, וְלֵךְ אֶל אֶרֶץ הַמּוֹרִיָּה — וְהַעֲלֵהוּ שָׁם לְעֹלָה׳. אַבְרָהָם מַשְׁכִּים בַּבֹּקֶר וְיוֹצֵא.",
+          "topic": "נִסָּיוֹן הָעֲקֵדָה — אֱלֹהִים מְצַוֶּה"
+        }
+      }
     },
     {
       "id": "va013",
       "order": 13,
       "text": "No caminho para Moriá, Yitzchak pergunta ao pai: 'Aqui está o fogo e a lenha, mas onde está o cordeiro para a oferta?' Avraham responde: 'Deus providenciará para Si o cordeiro, meu filho.'",
       "text_he": "אֱלֹהִ֞ים יִרְאֶה לּ֥וֹ הַשֶּׂ֛ה לְעֹלָ֖ה בְּנִ֑י",
-      "refs": ["Genesis 22:7-8"],
+      "refs": [
+        "Genesis 22:7-8"
+      ],
       "ref_start": "Genesis 22:7",
       "ref_end": "Genesis 22:8",
       "chapter": 22,
@@ -261,15 +573,37 @@
       "verse_end": 8,
       "sefaria_ref": "Genesis 22:7-8",
       "day_of_creation": null,
-      "tags": ["akeda", "lenha", "cordeiro", "fé", "yitzchak"],
-      "topic": "A Pergunta de Yitzchak — 'Onde está o Cordeiro?'"
+      "tags": [
+        "akeda",
+        "lenha",
+        "cordeiro",
+        "fé",
+        "yitzchak"
+      ],
+      "topic": "A Pergunta de Yitzchak — 'Onde está o Cordeiro?'",
+      "i18n": {
+        "en": {
+          "text": "On the way to Moriah, Isaac asks his father: 'Here is the fire and the wood, but where is the lamb for the offering?' Abraham answers: 'God will provide Himself the lamb, my son.'",
+          "topic": "Isaac's Question — 'Where Is the Lamb?'"
+        },
+        "es": {
+          "text": "Camino a Moria, Isaac pregunta a su padre: 'Aquí está el fuego y la leña, pero ¿dónde está el cordero para la ofrenda?' Abraham responde: 'Dios proveerá para Sí el cordero, hijo mío.'",
+          "topic": "La pregunta de Isaac — '¿Dónde está el cordero?'"
+        },
+        "he": {
+          "text": "בַּדֶּרֶךְ אֶל הַמּוֹרִיָּה, יִצְחָק שׁוֹאֵל אֶת אָבִיו: ׳הִנֵּה הָאֵשׁ וְהָעֵצִים, וְאַיֵּה הַשֶּׂה לָעֹלָה?׳ אַבְרָהָם עוֹנֶה: ׳אֱלֹהִים יִרְאֶה לּוֹ הַשֶּׂה, בְּנִי׳.",
+          "topic": "שְׁאֵלַת יִצְחָק — ׳אַיֵּה הַשֶּׂה?׳"
+        }
+      }
     },
     {
       "id": "va014",
       "order": 14,
       "text": "Avraham amarra Yitzchak sobre o altar e levanta a faca. O anjo o chama e o detém: 'Não estendas a mão sobre o menino! Agora sei que temes a Deus.' Um carneiro preso pelos chifres num arbusto é oferecido em seu lugar.",
       "text_he": "אַל תִּשְׁלַ֤ח יָֽדְךָ֙ אֶל הַנַּ֔עַר וְאַל תַּ֥עַשׂ ל֖וֹ מְא֑וּמָה",
-      "refs": ["Genesis 22:10-13"],
+      "refs": [
+        "Genesis 22:10-13"
+      ],
       "ref_start": "Genesis 22:10",
       "ref_end": "Genesis 22:13",
       "chapter": 22,
@@ -277,16 +611,47 @@
       "verse_end": 13,
       "sefaria_ref": "Genesis 22:10-13",
       "day_of_creation": null,
-      "tags": ["akeda", "anjo", "carneiro", "faca", "substituição"],
+      "tags": [
+        "akeda",
+        "anjo",
+        "carneiro",
+        "faca",
+        "substituição"
+      ],
       "topic": "O Anjo Detém Avraham — O Carneiro Substituto",
-      "visual": { "marker_type": "icon", "icon": "shofar", "asset": "assets/icons/shofar.svg", "caption": "O carneiro da Akedá", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "shofar",
+        "asset": "assets/icons/shofar.svg",
+        "caption": "O carneiro da Akedá",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "Abraham binds Isaac upon the altar and raises the knife. The angel calls out and stops him: 'Do not lay a hand on the boy! Now I know that you fear God.' A ram caught by its horns in a thicket is offered in his place.",
+          "topic": "The Angel Stops Abraham — the Substitute Ram",
+          "caption": "The ram of the Akedah"
+        },
+        "es": {
+          "text": "Abraham ata a Isaac sobre el altar y alza el cuchillo. El ángel lo llama y lo detiene: '¡No extiendas tu mano sobre el muchacho! Ahora sé que temes a Dios.' Un carnero atrapado por los cuernos en un matorral es ofrecido en su lugar.",
+          "topic": "El ángel detiene a Abraham — el carnero sustituto",
+          "caption": "El carnero de la Aqueda"
+        },
+        "he": {
+          "text": "אַבְרָהָם עוֹקֵד אֶת יִצְחָק עַל הַמִּזְבֵּחַ וּמֵרִים אֶת הַמַּאֲכֶלֶת. הַמַּלְאָךְ קוֹרֵא וְעוֹצְרוֹ: ׳אַל תִּשְׁלַח יָדְךָ אֶל הַנַּעַר! עַתָּה יָדַעְתִּי כִּי יְרֵא אֱלֹהִים אַתָּה׳. אַיִל נֶאֱחָז בְּקַרְנָיו בַּסְּבַךְ קָרֵב תַּחְתָּיו.",
+          "topic": "הַמַּלְאָךְ עוֹצֵר אֶת אַבְרָהָם — הָאַיִל הַתַּחֲלִיף",
+          "caption": "אֵיל הָעֲקֵדָה"
+        }
+      }
     },
     {
       "id": "va015",
       "order": 15,
       "text": "Deus renova as promessas a Avraham em razão de sua obediência na Akeda: multiplicará sua descendência como as estrelas e a areia do mar, e por ela serão abençoadas todas as nações da terra.",
       "text_he": "כִּ֗י בָּרֵ֣ךְ אֲבָרֶכְךָ֮ וְהַרְבָּ֣ה אַרְבֶּ֣ה אֶֽת זַרְעֲךָ֒ כְּכוֹכְבֵ֣י הַשָּׁמַ֔יִם",
-      "refs": ["Genesis 22:16-18"],
+      "refs": [
+        "Genesis 22:16-18"
+      ],
       "ref_start": "Genesis 22:16",
       "ref_end": "Genesis 22:18",
       "chapter": 22,
@@ -294,34 +659,95 @@
       "verse_end": 18,
       "sefaria_ref": "Genesis 22:16-18",
       "day_of_creation": null,
-      "tags": ["promessa", "bênção", "estrelas", "areia", "nações"],
-      "topic": "Renovação das Promessas Após a Akeda"
+      "tags": [
+        "promessa",
+        "bênção",
+        "estrelas",
+        "areia",
+        "nações"
+      ],
+      "topic": "Renovação das Promessas Após a Akeda",
+      "i18n": {
+        "en": {
+          "text": "God renews His promises to Abraham on account of his obedience at the Akedah: He will multiply his offspring like the stars and the sand of the sea, and through them all the nations of the earth will be blessed.",
+          "topic": "Renewal of the Promises After the Akedah"
+        },
+        "es": {
+          "text": "Dios renueva las promesas a Abraham por su obediencia en la Aqueda: multiplicará su descendencia como las estrellas y la arena del mar, y por ella serán benditas todas las naciones de la tierra.",
+          "topic": "Renovación de las promesas tras la Aqueda"
+        },
+        "he": {
+          "text": "אֱלֹהִים מְחַדֵּשׁ אֶת הַבְטָחוֹתָיו לְאַבְרָהָם בִּזְכוּת צִיּוּתוֹ בָּעֲקֵדָה: יַרְבֶּה אֶת זַרְעוֹ כְּכוֹכְבֵי הַשָּׁמַיִם וּכְחוֹל הַיָּם, וּבוֹ יִתְבָּרְכוּ כָּל גּוֹיֵי הָאָרֶץ.",
+          "topic": "חִדּוּשׁ הַהַבְטָחוֹת לְאַחַר הָעֲקֵדָה"
+        }
+      }
     }
   ],
-
   "aliyot": [
-    { "number": 1, "ref_start": "Genesis 18:1",  "ref_end": "Genesis 18:14", "sefaria_ref": "Genesis 18:1-14" },
-    { "number": 2, "ref_start": "Genesis 18:15", "ref_end": "Genesis 18:33", "sefaria_ref": "Genesis 18:15-33" },
-    { "number": 3, "ref_start": "Genesis 19:1",  "ref_end": "Genesis 19:20", "sefaria_ref": "Genesis 19:1-20" },
-    { "number": 4, "ref_start": "Genesis 19:21", "ref_end": "Genesis 21:4",  "sefaria_ref": "Genesis 19:21-21:4" },
-    { "number": 5, "ref_start": "Genesis 21:5",  "ref_end": "Genesis 21:21", "sefaria_ref": "Genesis 21:5-21" },
-    { "number": 6, "ref_start": "Genesis 21:22", "ref_end": "Genesis 22:6",  "sefaria_ref": "Genesis 21:22-22:6" },
-    { "number": 7, "ref_start": "Genesis 22:7",  "ref_end": "Genesis 22:24", "sefaria_ref": "Genesis 22:7-24" }
+    {
+      "number": 1,
+      "ref_start": "Genesis 18:1",
+      "ref_end": "Genesis 18:14",
+      "sefaria_ref": "Genesis 18:1-14"
+    },
+    {
+      "number": 2,
+      "ref_start": "Genesis 18:15",
+      "ref_end": "Genesis 18:33",
+      "sefaria_ref": "Genesis 18:15-33"
+    },
+    {
+      "number": 3,
+      "ref_start": "Genesis 19:1",
+      "ref_end": "Genesis 19:20",
+      "sefaria_ref": "Genesis 19:1-20"
+    },
+    {
+      "number": 4,
+      "ref_start": "Genesis 19:21",
+      "ref_end": "Genesis 21:4",
+      "sefaria_ref": "Genesis 19:21-21:4"
+    },
+    {
+      "number": 5,
+      "ref_start": "Genesis 21:5",
+      "ref_end": "Genesis 21:21",
+      "sefaria_ref": "Genesis 21:5-21"
+    },
+    {
+      "number": 6,
+      "ref_start": "Genesis 21:22",
+      "ref_end": "Genesis 22:6",
+      "sefaria_ref": "Genesis 21:22-22:6"
+    },
+    {
+      "number": 7,
+      "ref_start": "Genesis 22:7",
+      "ref_end": "Genesis 22:24",
+      "sefaria_ref": "Genesis 22:7-24"
+    }
   ],
-
   "haftarah": {
     "ref": "II Kings 4:1-37",
     "sefaria_ref": "II Kings 4:1-37",
     "note": "Tema: o nascimento miraculoso do filho da Shunamite — paralelo ao nascimento de Yitzchak"
   },
-
   "connections": {
     "next_parasha": "chayei-sarah",
     "prev_parasha": "lech-lecha",
     "thematic_links": [
-      { "parasha": "lech-lecha",   "theme": "Continuação da vida de Avraham — desde a Brit Milah" },
-      { "parasha": "chayei-sarah", "theme": "Consequência da Akeda — Sara morre ao saber; Yitzchak se casa" },
-      { "parasha": "vayetze",      "theme": "Yitzchak e seus filhos repercutem temas da hospitalidade e dos testes" }
+      {
+        "parasha": "lech-lecha",
+        "theme": "Continuação da vida de Avraham — desde a Brit Milah"
+      },
+      {
+        "parasha": "chayei-sarah",
+        "theme": "Consequência da Akeda — Sara morre ao saber; Yitzchak se casa"
+      },
+      {
+        "parasha": "vayetze",
+        "theme": "Yitzchak e seus filhos repercutem temas da hospitalidade e dos testes"
+      }
     ]
   }
 }

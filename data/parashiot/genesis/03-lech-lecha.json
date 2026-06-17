@@ -8,7 +8,6 @@
     "parasha_of_book": 3,
     "total_parashiot_in_book": 12
   },
-
   "identity": {
     "id": "lech-lecha",
     "name": "Lech Lecha",
@@ -17,18 +16,23 @@
     "transliteration": "Lech Lecha",
     "aliyot_count": 7
   },
-
   "range": {
     "ref_start": "Genesis 12:1",
     "ref_end": "Genesis 17:27",
     "sefaria_ref": "Genesis 12:1-17:27",
-    "chapters_covered": [12, 13, 14, 15, 16, 17],
+    "chapters_covered": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
     "chapter_start": 12,
     "chapter_end": 17,
     "verse_start": 1,
     "verse_end": 27
   },
-
   "timeline": {
     "period_name": "Chamado de Avraham e início dos Patriarcas",
     "anno_mundi_start": 1948,
@@ -37,29 +41,60 @@
     "position_pct": 20,
     "description": "Desde o chamado divino a Avram até o estabelecimento do sinal da Brit Milah, fundando a identidade do povo judeu."
   },
-
   "summary": {
     "short": "A chamada de Avraham para deixar sua terra, sua jornada a Canaã, o Brit bein HaBetarim e a Brit Milah.",
     "medium": "Deus chama Avram para deixar sua terra, família e casa paterna e ir para a terra que lhe será mostrada. Com a promessa de torná-lo grande nação e fonte de bênção para todas as famílias da terra, Avram parte com Sara e Lot. A parashá narra suas andanças em Canaã e no Egito, a separação de Lot, guerras e o resgate de Lot, a Brit bein HaBetarim — onde Deus estabelece a promessa da terra através de uma aliança solene — e culmina com o nascimento de Yishmael de Hagar e a Brit Milah, quando Avram recebe o nome Avraham.",
-    "characters_main": ["Avraham", "Sara", "Lot", "Hagar", "Yishmael"],
-    "characters_secondary": ["Terach", "Avimelech", "Malkitzedek", "Elifaz", "os quatro reis", "Eliezer"],
-    "themes": ["Chamado e resposta", "Fé e obediência", "Promessa da terra", "Aliança", "Identidade e nome", "Hospitalidade", "Circuncisão"]
+    "characters_main": [
+      "Avraham",
+      "Sara",
+      "Lot",
+      "Hagar",
+      "Yishmael"
+    ],
+    "characters_secondary": [
+      "Terach",
+      "Avimelech",
+      "Malkitzedek",
+      "Elifaz",
+      "os quatro reis",
+      "Eliezer"
+    ],
+    "themes": [
+      "Chamado e resposta",
+      "Fé e obediência",
+      "Promessa da terra",
+      "Aliança",
+      "Identidade e nome",
+      "Hospitalidade",
+      "Circuncisão"
+    ],
+    "i18n": {
+      "en": {
+        "short": "Abraham's call to leave his land, his journey to Canaan, the Covenant Between the Parts, and the Brit Milah."
+      },
+      "es": {
+        "short": "El llamado de Abraham a dejar su tierra, su viaje a Canaán, el Pacto entre las Partes y la Brit Milá."
+      },
+      "he": {
+        "short": "קְרִיאַת אַבְרָהָם לַעֲזֹב אֶת אַרְצוֹ, מַסָּעוֹ אֶל כְּנַעַן, בְּרִית בֵּין הַבְּתָרִים וּבְרִית הַמִּילָה."
+      }
+    }
   },
-
   "visual": {
     "marker_type": "icon",
     "icon": "journey",
     "asset": "assets/icons/journey.svg",
     "caption": "Lech Lecha — a jornada de Avraham"
   },
-
   "facts": [
     {
       "id": "ll001",
       "order": 1,
       "text": "Deus dirige-se a Avram com três ordens crescentes de separação: deixe sua terra, seu local de nascimento e a casa de seu pai — e vá para a terra que Eu lhe mostrarei.",
       "text_he": "לֶךְ לְךָ֛ מֵאַרְצְךָ֥ וּמִמּֽוֹלַדְתְּךָ֖ וּמִבֵּ֣ית אָבִ֑יךָ אֶ֨ל הָאָ֔רֶץ אֲשֶׁ֖ר אַרְאֶֽךָּ",
-      "refs": ["Genesis 12:1"],
+      "refs": [
+        "Genesis 12:1"
+      ],
       "ref_start": "Genesis 12:1",
       "ref_end": "Genesis 12:1",
       "chapter": 12,
@@ -67,16 +102,46 @@
       "verse_end": 1,
       "sefaria_ref": "Genesis 12:1",
       "day_of_creation": null,
-      "tags": ["chamado", "lech-lecha", "obediência", "separação"],
+      "tags": [
+        "chamado",
+        "lech-lecha",
+        "obediência",
+        "separação"
+      ],
       "topic": "O Chamado Divino — Lech Lecha",
-      "visual": { "marker_type": "icon", "icon": "journey", "asset": "assets/icons/journey.svg", "caption": "Vai-te da tua terra", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "journey",
+        "asset": "assets/icons/journey.svg",
+        "caption": "Vai-te da tua terra",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "God addresses Abram with three escalating commands of separation: leave your land, your birthplace, and your father's house — and go to the land that I will show you.",
+          "topic": "The Divine Call — Lech Lecha",
+          "caption": "Go forth from your land"
+        },
+        "es": {
+          "text": "Dios se dirige a Abram con tres órdenes crecientes de separación: deja tu tierra, tu lugar de nacimiento y la casa de tu padre — y ve a la tierra que Yo te mostraré.",
+          "topic": "El llamado divino — Lej Lejá",
+          "caption": "Vete de tu tierra"
+        },
+        "he": {
+          "text": "אֱלֹהִים פּוֹנֶה אֶל אַבְרָם בִּשְׁלוֹשָׁה צִוּוּיִים הוֹלְכִים וּמִתְעַצְּמִים שֶׁל פְּרֵדָה: עֲזֹב אֶת אַרְצְךָ, אֶת מוֹלַדְתְּךָ וְאֶת בֵּית אָבִיךָ — וְלֵךְ אֶל הָאָרֶץ אֲשֶׁר אַרְאֶךָּ.",
+          "topic": "הַקְּרִיאָה הָאֱלֹהִית — לֶךְ לְךָ",
+          "caption": "לֶךְ לְךָ מֵאַרְצְךָ"
+        }
+      }
     },
     {
       "id": "ll002",
       "order": 2,
       "text": "Deus promete a Avram: torná-lo uma grande nação, abençoar os que o abençoarem, amaldiçoar os que o maldisserem — e que por ele serão abençoadas todas as famílias da terra.",
       "text_he": "וְאֶֽעֶשְׂךָ֙ לְג֣וֹי גָּד֔וֹל וַאֲבָ֣רֶכְךָ֔ וַאֲגַדְּלָ֖ה שְׁמֶ֑ךָ וֶֽהְיֵ֖ה בְּרָכָֽה",
-      "refs": ["Genesis 12:2-3"],
+      "refs": [
+        "Genesis 12:2-3"
+      ],
       "ref_start": "Genesis 12:2",
       "ref_end": "Genesis 12:3",
       "chapter": 12,
@@ -84,15 +149,36 @@
       "verse_end": 3,
       "sefaria_ref": "Genesis 12:2-3",
       "day_of_creation": null,
-      "tags": ["promessa", "bênção", "grande-nação", "missão-universal"],
-      "topic": "As Sete Promessas a Avraham"
+      "tags": [
+        "promessa",
+        "bênção",
+        "grande-nação",
+        "missão-universal"
+      ],
+      "topic": "As Sete Promessas a Avraham",
+      "i18n": {
+        "en": {
+          "text": "God promises Abram: to make him a great nation, to bless those who bless him, to curse those who curse him — and that through him all the families of the earth will be blessed.",
+          "topic": "The Seven Promises to Abraham"
+        },
+        "es": {
+          "text": "Dios promete a Abram: hacerlo una gran nación, bendecir a quienes lo bendigan, maldecir a quienes lo maldigan — y que por él serán benditas todas las familias de la tierra.",
+          "topic": "Las siete promesas a Abraham"
+        },
+        "he": {
+          "text": "אֱלֹהִים מַבְטִיחַ לְאַבְרָם: לַעֲשׂוֹתוֹ לְגוֹי גָּדוֹל, לְבָרֵךְ אֶת מְבָרְכָיו, לְקַלֵּל אֶת מְקַלְלָיו — וְשֶׁבּוֹ יִתְבָּרְכוּ כָּל מִשְׁפְּחוֹת הָאֲדָמָה.",
+          "topic": "שֶׁבַע הַהַבְטָחוֹת לְאַבְרָהָם"
+        }
+      }
     },
     {
       "id": "ll003",
       "order": 3,
       "text": "Avram parte com 75 anos levando Sara, Lot e toda a riqueza acumulada em Charan, chegando à terra de Canaã.",
       "text_he": "וַיֵּ֣לֶךְ אַבְרָ֗ם כַּֽאֲשֶׁ֨ר דִּבֶּ֤ר אֵלָיו֙ ה׳",
-      "refs": ["Genesis 12:4-5"],
+      "refs": [
+        "Genesis 12:4-5"
+      ],
       "ref_start": "Genesis 12:4",
       "ref_end": "Genesis 12:5",
       "chapter": 12,
@@ -100,15 +186,36 @@
       "verse_end": 5,
       "sefaria_ref": "Genesis 12:4-5",
       "day_of_creation": null,
-      "tags": ["partida", "canaã", "obediência", "75-anos"],
-      "topic": "A Partida de Charan"
+      "tags": [
+        "partida",
+        "canaã",
+        "obediência",
+        "75-anos"
+      ],
+      "topic": "A Partida de Charan",
+      "i18n": {
+        "en": {
+          "text": "Abram sets out at the age of 75, taking Sarah, Lot, and all the wealth amassed in Haran, arriving in the land of Canaan.",
+          "topic": "The Departure from Haran"
+        },
+        "es": {
+          "text": "Abram parte a los 75 años llevando a Sara, Lot y toda la riqueza acumulada en Jarán, llegando a la tierra de Canaán.",
+          "topic": "La partida de Jarán"
+        },
+        "he": {
+          "text": "אַבְרָם יוֹצֵא בְּגִיל 75, נוֹטֵל אֶת שָׂרָה, אֶת לוֹט וְאֶת כָּל הָרְכוּשׁ שֶׁצָּבְרוּ בְּחָרָן, וּמַגִּיעַ אֶל אֶרֶץ כְּנַעַן.",
+          "topic": "הַיְצִיאָה מֵחָרָן"
+        }
+      }
     },
     {
       "id": "ll004",
       "order": 4,
       "text": "Em Canaã, Deus aparece a Avram em Shechem junto ao carvalho de Moré e promete: 'A tua descendência darei esta terra.' Avram constrói um altar ao Senhor.",
       "text_he": "לְזַרְעֲךָ֖ אֶתֵּ֣ן אֶת הָאָ֥רֶץ הַזֹּֽאת",
-      "refs": ["Genesis 12:6-7"],
+      "refs": [
+        "Genesis 12:6-7"
+      ],
       "ref_start": "Genesis 12:6",
       "ref_end": "Genesis 12:7",
       "chapter": 12,
@@ -116,15 +223,36 @@
       "verse_end": 7,
       "sefaria_ref": "Genesis 12:6-7",
       "day_of_creation": null,
-      "tags": ["terra", "promessa", "altar", "shechem"],
-      "topic": "Primeira Promessa da Terra em Canaã"
+      "tags": [
+        "terra",
+        "promessa",
+        "altar",
+        "shechem"
+      ],
+      "topic": "Primeira Promessa da Terra em Canaã",
+      "i18n": {
+        "en": {
+          "text": "In Canaan, God appears to Abram at Shechem by the oak of Moreh and promises: 'To your offspring I will give this land.' Abram builds an altar to the Lord.",
+          "topic": "First Promise of the Land in Canaan"
+        },
+        "es": {
+          "text": "En Canaán, Dios aparece a Abram en Siquem junto a la encina de Moré y promete: 'A tu descendencia daré esta tierra.' Abram construye un altar al Señor.",
+          "topic": "Primera promesa de la tierra en Canaán"
+        },
+        "he": {
+          "text": "בִּכְנַעַן, אֱלֹהִים נִרְאֶה אֶל אַבְרָם בִּשְׁכֶם לְיַד אֵלוֹן מוֹרֶה וּמַבְטִיחַ: ׳לְזַרְעֲךָ אֶתֵּן אֶת הָאָרֶץ הַזֹּאת׳. אַבְרָם בּוֹנֶה מִזְבֵּחַ לַה׳.",
+          "topic": "הַבְטָחַת הָאָרֶץ הָרִאשׁוֹנָה בִּכְנַעַן"
+        }
+      }
     },
     {
       "id": "ll005",
       "order": 5,
       "text": "Uma fome severa obriga Avram a descer ao Egito. Temendo que o matem por causa da beleza de Sara, ele pede que ela diga ser sua irmã. Faraó a leva ao palácio, e Avram é tratado muito bem por sua causa.",
       "text_he": "אִמְרִי נָ֖א אֲחֹ֣תִי אָ֑תְּ לְמַעַן֙ יִֽיטַב לִ֔י בַּֽעֲבוּרֵ֖ךְ",
-      "refs": ["Genesis 12:10-16"],
+      "refs": [
+        "Genesis 12:10-16"
+      ],
       "ref_start": "Genesis 12:10",
       "ref_end": "Genesis 12:16",
       "chapter": 12,
@@ -132,15 +260,37 @@
       "verse_end": 16,
       "sefaria_ref": "Genesis 12:10-16",
       "day_of_creation": null,
-      "tags": ["egito", "sara", "faraó", "irmã", "fome"],
-      "topic": "A Descida ao Egito — Sara e Faraó"
+      "tags": [
+        "egito",
+        "sara",
+        "faraó",
+        "irmã",
+        "fome"
+      ],
+      "topic": "A Descida ao Egito — Sara e Faraó",
+      "i18n": {
+        "en": {
+          "text": "A severe famine forces Abram down to Egypt. Fearing they will kill him because of Sarah's beauty, he asks her to say she is his sister. Pharaoh takes her to the palace, and Abram is treated very well on her account.",
+          "topic": "The Descent to Egypt — Sarah and Pharaoh"
+        },
+        "es": {
+          "text": "Una hambruna severa obliga a Abram a descender a Egipto. Temiendo que lo maten por la belleza de Sara, le pide que diga ser su hermana. El Faraón la lleva al palacio, y Abram es tratado muy bien por causa de ella.",
+          "topic": "El descenso a Egipto — Sara y el Faraón"
+        },
+        "he": {
+          "text": "רָעָב כָּבֵד מַכְרִיחַ אֶת אַבְרָם לָרֶדֶת לְמִצְרַיִם. בְּחָשְׁשׁוֹ פֶּן יַהַרְגוּהוּ בִּגְלַל יָפְיָהּ שֶׁל שָׂרָה, הוּא מְבַקֵּשׁ שֶׁתֹּאמַר כִּי אֲחוֹתוֹ הִיא. פַּרְעֹה לוֹקֵחַ אוֹתָהּ אֶל הָאַרְמוֹן, וְאַבְרָם זוֹכֶה לְיַחַס טוֹב בִּגְלָלָהּ.",
+          "topic": "הַיְרִידָה לְמִצְרַיִם — שָׂרָה וּפַרְעֹה"
+        }
+      }
     },
     {
       "id": "ll006",
       "order": 6,
       "text": "Deus aflige Faraó com grandes pragas por causa de Sara. Faraó devolve Sara a Avram e os expulsa do Egito com todos os seus bens.",
       "text_he": "וַיְנַגַּ֨ע ה׳ אֶת פַּרְעֹ֛ה נְגָעִ֥ים גְּדֹלִ֖ים",
-      "refs": ["Genesis 12:17-20"],
+      "refs": [
+        "Genesis 12:17-20"
+      ],
       "ref_start": "Genesis 12:17",
       "ref_end": "Genesis 12:20",
       "chapter": 12,
@@ -148,15 +298,36 @@
       "verse_end": 20,
       "sefaria_ref": "Genesis 12:17-20",
       "day_of_creation": null,
-      "tags": ["pragas", "faraó", "sara", "libertação"],
-      "topic": "As Pragas de Faraó e a Libertação de Sara"
+      "tags": [
+        "pragas",
+        "faraó",
+        "sara",
+        "libertação"
+      ],
+      "topic": "As Pragas de Faraó e a Libertação de Sara",
+      "i18n": {
+        "en": {
+          "text": "God afflicts Pharaoh with great plagues on account of Sarah. Pharaoh returns Sarah to Abram and sends them out of Egypt with all their possessions.",
+          "topic": "Pharaoh's Plagues and the Release of Sarah"
+        },
+        "es": {
+          "text": "Dios aflige al Faraón con grandes plagas a causa de Sara. El Faraón devuelve a Sara a Abram y los expulsa de Egipto con todos sus bienes.",
+          "topic": "Las plagas del Faraón y la liberación de Sara"
+        },
+        "he": {
+          "text": "אֱלֹהִים מַכֶּה אֶת פַּרְעֹה בִּנְגָעִים גְּדוֹלִים בִּגְלַל שָׂרָה. פַּרְעֹה מֵשִׁיב אֶת שָׂרָה לְאַבְרָם וּמְשַׁלֵּחַ אוֹתָם מִמִּצְרַיִם עִם כָּל רְכוּשָׁם.",
+          "topic": "נִגְעֵי פַּרְעֹה וְשִׁחְרוּר שָׂרָה"
+        }
+      }
     },
     {
       "id": "ll007",
       "order": 7,
       "text": "De volta a Canaã, as riquezas de Avram e Lot são tão grandes que a terra não comporta ambos. Para evitar brigas entre os pastores, Avram propõe a Lot que se separem — e Lot escolhe o vale do Jordão.",
       "text_he": "כִּֽי אֲנָשִׁ֣ים אַחִ֔ים אֲנַ֖חְנוּ לֹֽא תְהִי נָ֣א מְרִיבָ֔ה בֵּינִ֖י וּבֵינֶ֑ךָ",
-      "refs": ["Genesis 13:8-11"],
+      "refs": [
+        "Genesis 13:8-11"
+      ],
       "ref_start": "Genesis 13:8",
       "ref_end": "Genesis 13:11",
       "chapter": 13,
@@ -164,15 +335,36 @@
       "verse_end": 11,
       "sefaria_ref": "Genesis 13:8-11",
       "day_of_creation": null,
-      "tags": ["lot", "separação", "paz", "generosidade"],
-      "topic": "A Separação de Avram e Lot"
+      "tags": [
+        "lot",
+        "separação",
+        "paz",
+        "generosidade"
+      ],
+      "topic": "A Separação de Avram e Lot",
+      "i18n": {
+        "en": {
+          "text": "Back in Canaan, the wealth of Abram and Lot is so great that the land cannot support them both. To avoid quarrels between the herdsmen, Abram proposes that they separate — and Lot chooses the Jordan valley.",
+          "topic": "The Separation of Abram and Lot"
+        },
+        "es": {
+          "text": "De vuelta en Canaán, las riquezas de Abram y Lot son tan grandes que la tierra no puede sostener a ambos. Para evitar peleas entre los pastores, Abram propone a Lot que se separen — y Lot elige el valle del Jordán.",
+          "topic": "La separación de Abram y Lot"
+        },
+        "he": {
+          "text": "בַּחֲזָרָה לִכְנַעַן, רְכוּשָׁם שֶׁל אַבְרָם וְלוֹט כֹּה רַב עַד שֶׁהָאָרֶץ אֵינָהּ נוֹשֵׂאת אֶת שְׁנֵיהֶם. כְּדֵי לִמְנֹעַ מְרִיבוֹת בֵּין הָרוֹעִים, אַבְרָם מַצִּיעַ לְלוֹט לְהִפָּרֵד — וְלוֹט בּוֹחֵר בְּכִכַּר הַיַּרְדֵּן.",
+          "topic": "פְּרֵדַת אַבְרָם וְלוֹט"
+        }
+      }
     },
     {
       "id": "ll008",
       "order": 8,
       "text": "Após a separação de Lot, Deus renova a promessa a Avram: toda a terra que ele vê será dada a ele e à sua descendência para sempre, e sua descendência será como o pó da terra em número.",
       "text_he": "כִּ֣י אֶת כָּל הָאָ֧רֶץ אֲשֶׁר אַתָּ֣ה רֹאֶ֗ה לְךָ֤ אֶתְּנֶ֙נָּה֙ וּלְזַרְעֲךָ֖ עַד עוֹלָֽם",
-      "refs": ["Genesis 13:14-17"],
+      "refs": [
+        "Genesis 13:14-17"
+      ],
       "ref_start": "Genesis 13:14",
       "ref_end": "Genesis 13:17",
       "chapter": 13,
@@ -180,15 +372,36 @@
       "verse_end": 17,
       "sefaria_ref": "Genesis 13:14-17",
       "day_of_creation": null,
-      "tags": ["terra", "promessa", "descendência", "eterno"],
-      "topic": "Renovação da Promessa da Terra"
+      "tags": [
+        "terra",
+        "promessa",
+        "descendência",
+        "eterno"
+      ],
+      "topic": "Renovação da Promessa da Terra",
+      "i18n": {
+        "en": {
+          "text": "After Lot's separation, God renews the promise to Abram: all the land he sees will be given to him and his offspring forever, and his offspring will be as numerous as the dust of the earth.",
+          "topic": "Renewal of the Promise of the Land"
+        },
+        "es": {
+          "text": "Tras la separación de Lot, Dios renueva la promesa a Abram: toda la tierra que ve le será dada a él y a su descendencia para siempre, y su descendencia será como el polvo de la tierra en número.",
+          "topic": "Renovación de la promesa de la tierra"
+        },
+        "he": {
+          "text": "לְאַחַר פְּרֵדַת לוֹט, אֱלֹהִים מְחַדֵּשׁ אֶת הַהַבְטָחָה לְאַבְרָם: כָּל הָאָרֶץ אֲשֶׁר הוּא רוֹאֶה תִּנָּתֵן לוֹ וּלְזַרְעוֹ עַד עוֹלָם, וְזַרְעוֹ יִהְיֶה כַּעֲפַר הָאָרֶץ לָרֹב.",
+          "topic": "חִדּוּשׁ הַבְטָחַת הָאָרֶץ"
+        }
+      }
     },
     {
       "id": "ll009",
       "order": 9,
       "text": "Uma guerra entre quatro reis e cinco reis resulta na captura de Lot, que habitava em Sedom. Avram, ao saber da captura de seu sobrinho, mobiliza 318 servos treinados e o resgata com um ataque noturno.",
       "text_he": "וַיִּשְׁמַ֤ע אַבְרָם֙ כִּ֣י נִשְׁבָּ֔ה אָחִ֖יו",
-      "refs": ["Genesis 14:12-16"],
+      "refs": [
+        "Genesis 14:12-16"
+      ],
       "ref_start": "Genesis 14:12",
       "ref_end": "Genesis 14:16",
       "chapter": 14,
@@ -196,15 +409,36 @@
       "verse_end": 16,
       "sefaria_ref": "Genesis 14:12-16",
       "day_of_creation": null,
-      "tags": ["guerra", "lot", "resgate", "318-servos"],
-      "topic": "O Resgate de Lot — A Guerra dos Reis"
+      "tags": [
+        "guerra",
+        "lot",
+        "resgate",
+        "318-servos"
+      ],
+      "topic": "O Resgate de Lot — A Guerra dos Reis",
+      "i18n": {
+        "en": {
+          "text": "A war between four kings and five kings results in the capture of Lot, who lived in Sodom. Abram, on hearing of his nephew's capture, mobilizes 318 trained servants and rescues him in a night attack.",
+          "topic": "The Rescue of Lot — the War of the Kings"
+        },
+        "es": {
+          "text": "Una guerra entre cuatro reyes y cinco reyes resulta en la captura de Lot, que habitaba en Sodoma. Abram, al enterarse de la captura de su sobrino, moviliza 318 siervos entrenados y lo rescata con un ataque nocturno.",
+          "topic": "El rescate de Lot — la guerra de los reyes"
+        },
+        "he": {
+          "text": "מִלְחָמָה בֵּין אַרְבָּעָה מְלָכִים לַחֲמִשָּׁה מְלָכִים מוֹבִילָה לִשְׁבִיַּת לוֹט, שֶׁיָּשַׁב בִּסְדוֹם. אַבְרָם, בְּשָׁמְעוֹ עַל שְׁבִיַּת אֲחִיָּנוֹ, מְגַיֵּס 318 חֲנִיכָיו הַמְאֻמָּנִים וּמְחַלְּצוֹ בְּהַתְקָפַת לַיְלָה.",
+          "topic": "חִלּוּץ לוֹט — מִלְחֶמֶת הַמְּלָכִים"
+        }
+      }
     },
     {
       "id": "ll010",
       "order": 10,
       "text": "O misterioso Malkitzedek, rei de Shalem e sacerdote do Deus Altíssimo, traz pão e vinho a Avram e o abençoa. Avram lhe oferece o dízimo de tudo.",
       "text_he": "וּמַלְכִּי-צֶ֜דֶק מֶ֣לֶךְ שָׁלֵ֗ם הוֹצִ֥יא לֶ֙חֶם֙ וָיַ֔יִן",
-      "refs": ["Genesis 14:18-20"],
+      "refs": [
+        "Genesis 14:18-20"
+      ],
       "ref_start": "Genesis 14:18",
       "ref_end": "Genesis 14:20",
       "chapter": 14,
@@ -212,15 +446,36 @@
       "verse_end": 20,
       "sefaria_ref": "Genesis 14:18-20",
       "day_of_creation": null,
-      "tags": ["malkitzedek", "dízimo", "sacerdote", "shalem"],
-      "topic": "Malkitzedek e o Dízimo de Avram"
+      "tags": [
+        "malkitzedek",
+        "dízimo",
+        "sacerdote",
+        "shalem"
+      ],
+      "topic": "Malkitzedek e o Dízimo de Avram",
+      "i18n": {
+        "en": {
+          "text": "The mysterious Malki-Tzedek, king of Salem and priest of God Most High, brings bread and wine to Abram and blesses him. Abram gives him a tithe of everything.",
+          "topic": "Malki-Tzedek and Abram's Tithe"
+        },
+        "es": {
+          "text": "El misterioso Melquisedec, rey de Salem y sacerdote del Dios Altísimo, trae pan y vino a Abram y lo bendice. Abram le ofrece el diezmo de todo.",
+          "topic": "Melquisedec y el diezmo de Abram"
+        },
+        "he": {
+          "text": "מַלְכִּי־צֶדֶק הַמִּסְתּוֹרִי, מֶלֶךְ שָׁלֵם וְכֹהֵן לְאֵל עֶלְיוֹן, מֵבִיא לֶחֶם וָיַיִן לְאַבְרָם וּמְבָרְכוֹ. אַבְרָם נוֹתֵן לוֹ מַעֲשֵׂר מִכֹּל.",
+          "topic": "מַלְכִּי־צֶדֶק וּמַעְשַׂר אַבְרָם"
+        }
+      }
     },
     {
       "id": "ll011",
       "order": 11,
       "text": "Avram teme não ter herdeiros. Deus lhe aparece em visão e promete que não será um servo seu o herdeiro, mas um filho gerado de suas próprias entranhas. Avram crê em Deus, e Deus conta isso como justiça.",
       "text_he": "וְהֶֽאֱמִ֖ן בַּֽה' וַיַּחְשְׁבֶ֥הָ לּ֖וֹ צְדָקָֽה",
-      "refs": ["Genesis 15:1-6"],
+      "refs": [
+        "Genesis 15:1-6"
+      ],
       "ref_start": "Genesis 15:1",
       "ref_end": "Genesis 15:6",
       "chapter": 15,
@@ -228,16 +483,46 @@
       "verse_end": 6,
       "sefaria_ref": "Genesis 15:1-6",
       "day_of_creation": null,
-      "tags": ["fé", "herdeiro", "tzedaká", "emunah"],
+      "tags": [
+        "fé",
+        "herdeiro",
+        "tzedaká",
+        "emunah"
+      ],
       "topic": "Fé de Avram — Contada como Justiça",
-      "visual": { "marker_type": "icon", "icon": "star", "asset": "assets/icons/star.svg", "caption": "Conta as estrelas — assim será tua descendência", "importance": 4 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "star",
+        "asset": "assets/icons/star.svg",
+        "caption": "Conta as estrelas — assim será tua descendência",
+        "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "Abram fears having no heirs. God appears to him in a vision and promises that his heir will not be a servant but a son from his own body. Abram believes in God, and God counts it to him as righteousness.",
+          "topic": "Abram's Faith — Counted as Righteousness",
+          "caption": "Count the stars — so shall your offspring be"
+        },
+        "es": {
+          "text": "Abram teme no tener herederos. Dios se le aparece en visión y promete que su heredero no será un siervo sino un hijo nacido de sus propias entrañas. Abram cree en Dios, y Dios se lo cuenta como justicia.",
+          "topic": "La fe de Abram — contada como justicia",
+          "caption": "Cuenta las estrellas — así será tu descendencia"
+        },
+        "he": {
+          "text": "אַבְרָם חוֹשֵׁשׁ שֶׁלֹּא יִהְיוּ לוֹ יוֹרְשִׁים. אֱלֹהִים נִרְאֶה אֵלָיו בְּמַחֲזֶה וּמַבְטִיחַ כִּי לֹא עַבְדּוֹ יִירָשֶׁנּוּ, אֶלָּא בֵּן הַיּוֹצֵא מִמֵּעָיו. אַבְרָם מַאֲמִין בַּה׳, וַה׳ חוֹשְׁבָהּ לוֹ צְדָקָה.",
+          "topic": "אֱמוּנַת אַבְרָם — נֶחְשֶׁבֶת לִצְדָקָה",
+          "caption": "סְפֹר הַכּוֹכָבִים — כֹּה יִהְיֶה זַרְעֶךָ"
+        }
+      }
     },
     {
       "id": "ll012",
       "order": 12,
       "text": "Deus estabelece com Avram o Brit bein HaBetarim — a Aliança entre os Pedaços: uma tocha de fogo passa entre os animais cortados enquanto Avram dorme, e Deus promete formalmente a terra de Canaã à sua descendência.",
       "text_he": "וַיְהִ֤י הַשֶּׁ֙מֶשׁ֙ בָּ֔אָה וַֽעֲלָטָ֖ה הָיָ֑ה וְהִנֵּ֨ה תַנּ֤וּר עָשָׁן֙ וְלַפִּ֣יד אֵ֔שׁ",
-      "refs": ["Genesis 15:17-21"],
+      "refs": [
+        "Genesis 15:17-21"
+      ],
       "ref_start": "Genesis 15:17",
       "ref_end": "Genesis 15:21",
       "chapter": 15,
@@ -245,16 +530,46 @@
       "verse_end": 21,
       "sefaria_ref": "Genesis 15:17-21",
       "day_of_creation": null,
-      "tags": ["brit", "aliança", "terra", "tocha"],
+      "tags": [
+        "brit",
+        "aliança",
+        "terra",
+        "tocha"
+      ],
       "topic": "Brit bein HaBetarim — A Aliança entre os Pedaços",
-      "visual": { "marker_type": "icon", "icon": "torch", "asset": "assets/icons/torch.svg", "caption": "A tocha entre os pedaços", "importance": 4 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "torch",
+        "asset": "assets/icons/torch.svg",
+        "caption": "A tocha entre os pedaços",
+        "importance": 4
+      },
+      "i18n": {
+        "en": {
+          "text": "God establishes with Abram the Brit bein HaBetarim — the Covenant Between the Parts: a torch of fire passes between the divided animals while Abram sleeps, and God formally promises the land of Canaan to his offspring.",
+          "topic": "Brit bein HaBetarim — the Covenant Between the Parts",
+          "caption": "The torch between the parts"
+        },
+        "es": {
+          "text": "Dios establece con Abram el Brit bein HaBetarim — el Pacto entre las Partes: una antorcha de fuego pasa entre los animales partidos mientras Abram duerme, y Dios promete formalmente la tierra de Canaán a su descendencia.",
+          "topic": "Brit bein HaBetarim — el Pacto entre las Partes",
+          "caption": "La antorcha entre las partes"
+        },
+        "he": {
+          "text": "אֱלֹהִים כּוֹרֵת עִם אַבְרָם אֶת בְּרִית בֵּין הַבְּתָרִים: לַפִּיד אֵשׁ עוֹבֵר בֵּין הַבְּהֵמוֹת הַבְּתוּרוֹת בְּעוֹד אַבְרָם יָשֵׁן, וֵאלֹהִים מַבְטִיחַ רִשְׁמִית אֶת אֶרֶץ כְּנַעַן לְזַרְעוֹ.",
+          "topic": "בְּרִית בֵּין הַבְּתָרִים",
+          "caption": "הַלַּפִּיד בֵּין הַבְּתָרִים"
+        }
+      }
     },
     {
       "id": "ll013",
       "order": 13,
       "text": "Deus revela a Avram que sua descendência será estrangeira em terra alheia por 400 anos, escravizada e oprimida — mas Ele a libertará com grandes riquezas. Profecia do Exílio e do Êxodo.",
       "text_he": "יָדֹ֨עַ תֵּדַ֜ע כִּי גֵ֣ר יִֽהְיֶ֗ה זַרְעֲךָ֙ בְּאֶ֣רֶץ לֹ֣א לָהֶ֔ם",
-      "refs": ["Genesis 15:13-14"],
+      "refs": [
+        "Genesis 15:13-14"
+      ],
       "ref_start": "Genesis 15:13",
       "ref_end": "Genesis 15:14",
       "chapter": 15,
@@ -262,15 +577,36 @@
       "verse_end": 14,
       "sefaria_ref": "Genesis 15:13-14",
       "day_of_creation": null,
-      "tags": ["profecia", "exílio", "400-anos", "êxodo"],
-      "topic": "Profecia do Exílio no Egito"
+      "tags": [
+        "profecia",
+        "exílio",
+        "400-anos",
+        "êxodo"
+      ],
+      "topic": "Profecia do Exílio no Egito",
+      "i18n": {
+        "en": {
+          "text": "God reveals to Abram that his offspring will be strangers in a land not theirs for 400 years, enslaved and oppressed — but He will free them with great wealth. A prophecy of the Exile and the Exodus.",
+          "topic": "Prophecy of the Egyptian Exile"
+        },
+        "es": {
+          "text": "Dios revela a Abram que su descendencia será extranjera en tierra ajena por 400 años, esclavizada y oprimida — pero Él la liberará con grandes riquezas. Profecía del Exilio y del Éxodo.",
+          "topic": "Profecía del exilio en Egipto"
+        },
+        "he": {
+          "text": "אֱלֹהִים מְגַלֶּה לְאַבְרָם כִּי זַרְעוֹ יִהְיֶה גֵּר בְּאֶרֶץ לֹא לָהֶם אַרְבַּע מֵאוֹת שָׁנָה, מְשֻׁעְבָּד וּמְעֻנֶּה — אַךְ הוּא יְחַלְּצֵם בִּרְכוּשׁ גָּדוֹל. נְבוּאַת הַגָּלוּת וְהַיְצִיאָה.",
+          "topic": "נְבוּאַת הַגָּלוּת בְּמִצְרַיִם"
+        }
+      }
     },
     {
       "id": "ll014",
       "order": 14,
       "text": "Após dez anos sem filhos, Sara oferece sua serva egípcia Hagar a Avram como concubina. Hagar concebe e passa a desprezar Sara. Sara a trata com dureza e Hagar foge.",
       "text_he": "וַתַּ֥רֶא שָׂרַ֖י כִּ֣י לֹ֣א יָלָ֑דָה",
-      "refs": ["Genesis 16:1-6"],
+      "refs": [
+        "Genesis 16:1-6"
+      ],
       "ref_start": "Genesis 16:1",
       "ref_end": "Genesis 16:6",
       "chapter": 16,
@@ -278,15 +614,36 @@
       "verse_end": 6,
       "sefaria_ref": "Genesis 16:1-6",
       "day_of_creation": null,
-      "tags": ["hagar", "sara", "concubina", "ciúme"],
-      "topic": "Hagar e Sara — Conflito e Fuga"
+      "tags": [
+        "hagar",
+        "sara",
+        "concubina",
+        "ciúme"
+      ],
+      "topic": "Hagar e Sara — Conflito e Fuga",
+      "i18n": {
+        "en": {
+          "text": "After ten years without children, Sarah gives her Egyptian maidservant Hagar to Abram as a concubine. Hagar conceives and comes to despise Sarah. Sarah treats her harshly, and Hagar flees.",
+          "topic": "Hagar and Sarah — Conflict and Flight"
+        },
+        "es": {
+          "text": "Tras diez años sin hijos, Sara entrega su sierva egipcia Agar a Abram como concubina. Agar concibe y comienza a despreciar a Sara. Sara la trata con dureza y Agar huye.",
+          "topic": "Agar y Sara — conflicto y huida"
+        },
+        "he": {
+          "text": "לְאַחַר עֶשֶׂר שָׁנִים לְלֹא יְלָדִים, שָׂרָה נוֹתֶנֶת אֶת שִׁפְחָתָהּ הַמִּצְרִית הָגָר לְאַבְרָם לְפִילֶגֶשׁ. הָגָר הָרָה וּמַתְחִילָה לְזַלְזֵל בְּשָׂרָה. שָׂרָה מִתְעַלֶּלֶת בָּהּ וְהָגָר בּוֹרַחַת.",
+          "topic": "הָגָר וְשָׂרָה — סִכְסוּךְ וּבְרִיחָה"
+        }
+      }
     },
     {
       "id": "ll015",
       "order": 15,
       "text": "Um anjo encontra Hagar no deserto e lhe ordena retornar a Sara, prometendo multiplicar sua descendência. O filho a ser nascido será chamado Yishmael — 'Deus ouviu' — pois Deus ouviu sua aflição.",
       "text_he": "וְקָרָ֤את שְׁמוֹ֙ יִשְׁמָעֵ֔אל כִּי שָׁמַ֥ע ה׳ אֶל עָנְיֵֽךְ",
-      "refs": ["Genesis 16:9-12"],
+      "refs": [
+        "Genesis 16:9-12"
+      ],
       "ref_start": "Genesis 16:9",
       "ref_end": "Genesis 16:12",
       "chapter": 16,
@@ -294,15 +651,36 @@
       "verse_end": 12,
       "sefaria_ref": "Genesis 16:9-12",
       "day_of_creation": null,
-      "tags": ["yishmael", "hagar", "anjo", "nome"],
-      "topic": "O Anjo e Hagar — Nascimento de Yishmael"
+      "tags": [
+        "yishmael",
+        "hagar",
+        "anjo",
+        "nome"
+      ],
+      "topic": "O Anjo e Hagar — Nascimento de Yishmael",
+      "i18n": {
+        "en": {
+          "text": "An angel finds Hagar in the desert and commands her to return to Sarah, promising to multiply her offspring. The son to be born will be called Ishmael — 'God has heard' — for God has heard her affliction.",
+          "topic": "The Angel and Hagar — the Birth of Ishmael"
+        },
+        "es": {
+          "text": "Un ángel encuentra a Agar en el desierto y le ordena regresar a Sara, prometiendo multiplicar su descendencia. El hijo que nacerá se llamará Ismael — 'Dios ha oído' — pues Dios oyó su aflicción.",
+          "topic": "El ángel y Agar — el nacimiento de Ismael"
+        },
+        "he": {
+          "text": "מַלְאָךְ מוֹצֵא אֶת הָגָר בַּמִּדְבָּר וּמְצַוֶּה עָלֶיהָ לָשׁוּב אֶל שָׂרָה, וּמַבְטִיחַ לְהַרְבּוֹת אֶת זַרְעָהּ. הַבֵּן שֶׁיִּוָּלֵד יִקָּרֵא יִשְׁמָעֵאל — ׳שָׁמַע אֵל׳ — כִּי שָׁמַע ה׳ אֶל עָנְיָהּ.",
+          "topic": "הַמַּלְאָךְ וְהָגָר — לֵדַת יִשְׁמָעֵאל"
+        }
+      }
     },
     {
       "id": "ll016",
       "order": 16,
       "text": "Quando Avram tem 99 anos, Deus aparece novamente e muda seu nome de Avram para Avraham — 'pai de multidões de nações' — e o de Sarai para Sara, prometendo que ela dará à luz um filho.",
       "text_he": "וְלֹֽא יִקָּרֵ֥א ע֛וֹד אֶת שִׁמְךָ֖ אַבְרָ֑ם וְהָיָ֤ה שִׁמְךָ֙ אַבְרָהָ֔ם",
-      "refs": ["Genesis 17:5-16"],
+      "refs": [
+        "Genesis 17:5-16"
+      ],
       "ref_start": "Genesis 17:5",
       "ref_end": "Genesis 17:16",
       "chapter": 17,
@@ -310,15 +688,37 @@
       "verse_end": 16,
       "sefaria_ref": "Genesis 17:5-16",
       "day_of_creation": null,
-      "tags": ["nome", "avraham", "sara", "identidade", "nações"],
-      "topic": "Mudança de Nome — Avram → Avraham"
+      "tags": [
+        "nome",
+        "avraham",
+        "sara",
+        "identidade",
+        "nações"
+      ],
+      "topic": "Mudança de Nome — Avram → Avraham",
+      "i18n": {
+        "en": {
+          "text": "When Abram is 99, God appears again and changes his name from Abram to Abraham — 'father of a multitude of nations' — and Sarai's to Sarah, promising that she will bear a son.",
+          "topic": "Change of Name — Abram → Abraham"
+        },
+        "es": {
+          "text": "Cuando Abram tiene 99 años, Dios aparece de nuevo y cambia su nombre de Abram a Abraham — 'padre de multitud de naciones' — y el de Saray a Sara, prometiendo que ella dará a luz un hijo.",
+          "topic": "Cambio de nombre — Abram → Abraham"
+        },
+        "he": {
+          "text": "כַּאֲשֶׁר אַבְרָם בֶּן 99, אֱלֹהִים נִרְאֶה שׁוּב וּמְשַׁנֶּה אֶת שְׁמוֹ מֵאַבְרָם לְאַבְרָהָם — ׳אַב הֲמוֹן גּוֹיִם׳ — וְאֶת שֵׁם שָׂרַי לְשָׂרָה, וּמַבְטִיחַ כִּי תֵּלֵד בֵּן.",
+          "topic": "שִׁנּוּי הַשֵּׁם — אַבְרָם → אַבְרָהָם"
+        }
+      }
     },
     {
       "id": "ll017",
       "order": 17,
       "text": "Deus ordena a Avraham que todo macho de sua casa seja circuncidado como sinal da aliança. Avraham mesmo, com 99 anos, e Yishmael, com 13, são circuncidados no mesmo dia.",
       "text_he": "זֹ֣את בְּרִיתִ֞י אֲשֶׁ֣ר תִּשְׁמְר֗וּ בֵּינִי֙ וּבֵ֣ינֵיכֶ֔ם וּבֵ֥ין זַרְעֲךָ֖ אַחֲרֶ֑יךָ הִמּ֖וֹל לָכֶ֥ם כָּל זָכָֽר",
-      "refs": ["Genesis 17:10-27"],
+      "refs": [
+        "Genesis 17:10-27"
+      ],
       "ref_start": "Genesis 17:10",
       "ref_end": "Genesis 17:27",
       "chapter": 17,
@@ -326,35 +726,105 @@
       "verse_end": 27,
       "sefaria_ref": "Genesis 17:10-27",
       "day_of_creation": null,
-      "tags": ["brit-milah", "circuncisão", "sinal", "aliança", "99-anos"],
+      "tags": [
+        "brit-milah",
+        "circuncisão",
+        "sinal",
+        "aliança",
+        "99-anos"
+      ],
       "topic": "A Brit Milah — Sinal da Aliança",
-      "visual": { "marker_type": "icon", "icon": "covenant", "asset": "assets/icons/covenant.svg", "caption": "Brit Milah — sinal da aliança", "importance": 5 }
+      "visual": {
+        "marker_type": "icon",
+        "icon": "covenant",
+        "asset": "assets/icons/covenant.svg",
+        "caption": "Brit Milah — sinal da aliança",
+        "importance": 5
+      },
+      "i18n": {
+        "en": {
+          "text": "God commands Abraham that every male of his household be circumcised as a sign of the covenant. Abraham himself, at 99, and Ishmael, at 13, are circumcised on the same day.",
+          "topic": "The Brit Milah — Sign of the Covenant",
+          "caption": "Brit Milah — sign of the covenant"
+        },
+        "es": {
+          "text": "Dios ordena a Abraham que todo varón de su casa sea circuncidado como señal de la alianza. Abraham mismo, a los 99 años, e Ismael, a los 13, son circuncidados el mismo día.",
+          "topic": "La Brit Milá — señal de la alianza",
+          "caption": "Brit Milá — señal de la alianza"
+        },
+        "he": {
+          "text": "אֱלֹהִים מְצַוֶּה עַל אַבְרָהָם שֶׁכָּל זָכָר בְּבֵיתוֹ יִמּוֹל כְּאוֹת הַבְּרִית. אַבְרָהָם עַצְמוֹ, בֶּן 99, וְיִשְׁמָעֵאל, בֶּן 13, נִמּוֹלִים בְּאוֹתוֹ הַיּוֹם.",
+          "topic": "בְּרִית הַמִּילָה — אוֹת הַבְּרִית",
+          "caption": "בְּרִית מִילָה — אוֹת הַבְּרִית"
+        }
+      }
     }
   ],
-
   "aliyot": [
-    { "number": 1, "ref_start": "Genesis 12:1",  "ref_end": "Genesis 12:13", "sefaria_ref": "Genesis 12:1-13" },
-    { "number": 2, "ref_start": "Genesis 12:14", "ref_end": "Genesis 13:4",  "sefaria_ref": "Genesis 12:14-13:4" },
-    { "number": 3, "ref_start": "Genesis 13:5",  "ref_end": "Genesis 13:18", "sefaria_ref": "Genesis 13:5-18" },
-    { "number": 4, "ref_start": "Genesis 14:1",  "ref_end": "Genesis 14:20", "sefaria_ref": "Genesis 14:1-20" },
-    { "number": 5, "ref_start": "Genesis 14:21", "ref_end": "Genesis 15:6",  "sefaria_ref": "Genesis 14:21-15:6" },
-    { "number": 6, "ref_start": "Genesis 15:7",  "ref_end": "Genesis 17:6",  "sefaria_ref": "Genesis 15:7-17:6" },
-    { "number": 7, "ref_start": "Genesis 17:7",  "ref_end": "Genesis 17:27", "sefaria_ref": "Genesis 17:7-27" }
+    {
+      "number": 1,
+      "ref_start": "Genesis 12:1",
+      "ref_end": "Genesis 12:13",
+      "sefaria_ref": "Genesis 12:1-13"
+    },
+    {
+      "number": 2,
+      "ref_start": "Genesis 12:14",
+      "ref_end": "Genesis 13:4",
+      "sefaria_ref": "Genesis 12:14-13:4"
+    },
+    {
+      "number": 3,
+      "ref_start": "Genesis 13:5",
+      "ref_end": "Genesis 13:18",
+      "sefaria_ref": "Genesis 13:5-18"
+    },
+    {
+      "number": 4,
+      "ref_start": "Genesis 14:1",
+      "ref_end": "Genesis 14:20",
+      "sefaria_ref": "Genesis 14:1-20"
+    },
+    {
+      "number": 5,
+      "ref_start": "Genesis 14:21",
+      "ref_end": "Genesis 15:6",
+      "sefaria_ref": "Genesis 14:21-15:6"
+    },
+    {
+      "number": 6,
+      "ref_start": "Genesis 15:7",
+      "ref_end": "Genesis 17:6",
+      "sefaria_ref": "Genesis 15:7-17:6"
+    },
+    {
+      "number": 7,
+      "ref_start": "Genesis 17:7",
+      "ref_end": "Genesis 17:27",
+      "sefaria_ref": "Genesis 17:7-27"
+    }
   ],
-
   "haftarah": {
     "ref": "Isaiah 40:27-41:16",
     "sefaria_ref": "Isaiah 40:27-41:16",
     "note": "Tema: Deus fortalece Israel — 'Não temas, pois Eu sou contigo'"
   },
-
   "connections": {
     "next_parasha": "vayera",
     "prev_parasha": "noach",
     "thematic_links": [
-      { "parasha": "noach",   "theme": "Transição das nações dispersas para a história de Avraham" },
-      { "parasha": "vayera",  "theme": "Continuação da saga de Avraham — visitantes, Sedom e Akeda" },
-      { "parasha": "bo",      "theme": "O Êxodo que Deus profetizou no Brit bein HaBetarim se realiza" }
+      {
+        "parasha": "noach",
+        "theme": "Transição das nações dispersas para a história de Avraham"
+      },
+      {
+        "parasha": "vayera",
+        "theme": "Continuação da saga de Avraham — visitantes, Sedom e Akeda"
+      },
+      {
+        "parasha": "bo",
+        "theme": "O Êxodo que Deus profetizou no Brit bein HaBetarim se realiza"
+      }
     ]
   }
 }
