@@ -266,6 +266,18 @@ Refinar a linha do tempo inferior para ficar mais proxima do target:
 - manter a timeline alimentada pelos dados atuais, sem criar uma segunda fonte
   de verdade.
 
+### Baby-step concluido - timeline inferior
+
+- A timeline inferior passou a ter um dock com faixa de eras clicaveis acima da
+  regua AM.
+- Os marcos de era sao renderizados a partir de `data/timeline_groups.json`,
+  reutilizando `phases[]`, `visual.asset`, `label`, `am_start` e `am_end`.
+- As setas laterais navegam para a fase anterior/proxima sem criar estado ou
+  fonte de dados paralela.
+- Hover e selecao da timeline agora compartilham o mesmo mecanismo
+  `atlasSetHoverTarget` usado pelos cards do Atlas.
+- A barra AM antiga foi preservada como regua de precisao abaixo dos marcos.
+
 ## Guardrails
 
 - Nao copiar HTML exportado diretamente para `index.html`; converter ideias em

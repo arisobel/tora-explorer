@@ -1568,14 +1568,141 @@ body.atlas-grabbing, body.atlas-grabbing * {
   border-radius: 20px;
   background: #fff;
   box-shadow: 0 14px 40px -22px rgba(20,35,60,.4);
-  padding: 1rem 1.35rem 1.1rem;
+  padding: 1rem 1.35rem 1.15rem;
 }
 .atlas-ref-shell .atlas2d-time-head {
+  justify-content: center;
+  display: grid;
+  gap: .15rem;
+  text-align: center;
   color: #13243c;
   font-weight: 700;
+  margin-bottom: .9rem;
+}
+.atlas-ref-shell .atlas2d-time-head span:first-child {
+  font-size: 14px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.atlas-ref-shell .atlas2d-time-head span:last-child {
+  color: #8893a2;
+  font-size: 12px;
+  font-weight: 600;
+}
+.atlas-ref-era-row {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 38px;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .9rem;
+}
+.atlas-ref-era-nav {
+  appearance: none;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--atlas-navy);
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -12px rgba(19,36,60,.8);
+}
+.atlas-ref-era-list {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(74px, 1fr));
+  gap: .45rem;
+}
+.atlas-ref-era-card {
+  appearance: none;
+  min-width: 0;
+  min-height: 82px;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: .35rem;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: transparent;
+  color: #5b6573;
+  padding: .25rem .2rem .35rem;
+  cursor: pointer;
+  transition: background .18s, border-color .18s, transform .18s, color .18s;
+}
+.atlas-ref-era-card:hover,
+.atlas-ref-era-card.hover-target,
+.atlas-ref-era-card.active {
+  background: #f5f7fa;
+  border-color: var(--atlas-line);
+  transform: translateY(-1px);
+  color: var(--atlas-ink);
+}
+.atlas-ref-era-icon {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #dfe7f0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #f7fbff;
+  color: var(--atlas-blue);
+  font-family: 'Crimson Pro', serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+.atlas-ref-era-card.active .atlas-ref-era-icon,
+.atlas-ref-era-card.hover-target .atlas-ref-era-icon {
+  border-color: var(--atlas-blue);
+  background: var(--atlas-blue);
+  color: #fff;
+  box-shadow: 0 10px 22px -12px rgba(45,108,180,.9);
+}
+.atlas-ref-era-name {
+  max-width: 100%;
+  color: currentColor;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.atlas-ref-era-sub {
+  color: #9aa4b2;
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: center;
 }
 .atlas-ref-shell .atlas2d-time-bar {
-  background: #dde3ea;
+  height: 18px;
+  border: 1px solid #d8e1ec;
+  background: #eef2f6;
+  box-shadow: inset 0 1px 3px rgba(19,36,60,.08);
+}
+.atlas-ref-shell .atlas2d-time-seg {
+  top: 2px;
+  bottom: 2px;
+  border-right: 2px solid rgba(255,255,255,.88);
+  opacity: .8;
+}
+.atlas-ref-shell .atlas2d-time-seg:hover,
+.atlas-ref-shell .atlas2d-time-seg.hover-target,
+.atlas-ref-shell .atlas2d-time-seg.active {
+  opacity: 1;
+  filter: saturate(1.12);
+}
+.atlas-ref-shell .atlas2d-time-focus {
+  top: -5px;
+  bottom: -5px;
+  border-color: var(--atlas-navy);
+  background: rgba(19,36,60,.08);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.75);
+}
+.atlas-ref-shell .atlas2d-time-labels {
+  color: #9aa4b2;
+  font-weight: 600;
 }
 .atlas-ref-shell .atlas2d-action-btn,
 .atlas-ref-shell .atlas2d-zoom-btn {
@@ -2120,6 +2247,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
     <div class="atlas2d-time-head">
       <span id="atlas-time-title">Régua histórica contextual</span>
       <span id="atlas-time-range">0–5785 AM</span>
+    </div>
+    <div class="atlas-ref-era-row">
+      <button class="atlas-ref-era-nav" type="button" onclick="atlasTimelineStep(-1)" aria-label="Periodo anterior">&lt;</button>
+      <div id="atlas-time-eras" class="atlas-ref-era-list"></div>
+      <button class="atlas-ref-era-nav" type="button" onclick="atlasTimelineStep(1)" aria-label="Proximo periodo">&gt;</button>
     </div>
     <div id="atlas-time-bar" class="atlas2d-time-bar"></div>
     <div class="atlas2d-time-labels"><span>0 AM</span><span>2448</span><span>3339</span><span>5785</span></div>
@@ -3130,10 +3262,10 @@ function atlasClearHoverTarget(kind = null, id = null) {
 }
 
 function atlasMarkHoverTarget() {
-  document.querySelectorAll('.atlas2d-node.hover-target, .atlas-ref-macro-card.hover-target').forEach(node => node.classList.remove('hover-target'));
+  document.querySelectorAll('.atlas2d-node.hover-target, .atlas-ref-macro-card.hover-target, .atlas-ref-era-card.hover-target, .atlas2d-time-seg.hover-target').forEach(node => node.classList.remove('hover-target'));
   const target = atlasState.hoverTarget;
   if (!target) return;
-  document.querySelectorAll('.atlas2d-node, .atlas-ref-macro-card').forEach(node => {
+  document.querySelectorAll('.atlas2d-node, .atlas-ref-macro-card, .atlas-ref-era-card, .atlas2d-time-seg').forEach(node => {
     if (node.dataset.atlasKind === target.kind && node.dataset.atlasId === target.id) {
       node.classList.add('hover-target');
     }
@@ -3647,22 +3779,60 @@ function atlasRenderSidePanel(ctx) {
 
 function atlasRenderTimeline(groupData, focusRange) {
   const root = document.getElementById('atlas-time-bar');
+  const erasRoot = document.getElementById('atlas-time-eras');
   const total = 5785;
   const colors = ['rgba(47,120,168,0.58)', 'rgba(61,139,98,0.52)', 'rgba(184,138,36,0.56)', 'rgba(138,106,191,0.52)'];
+  const start = Math.max(0, Math.min(total, focusRange?.start ?? 0));
+  const end = Math.max(start, Math.min(total, focusRange?.end ?? total));
+  const hasFocusedRange = start > 0 || end < total;
   const segments = (groupData.phases || []).map((phase, i) => {
     const left = Math.max(0, (phase.am_start / total) * 100);
     const width = Math.max(((phase.am_end - phase.am_start) / total) * 100, 0.7);
-    return `<button class="atlas2d-time-seg" title="${atlasEsc(phase.label)}" onclick="atlasSelect('phase','${atlasEsc(phase.id)}')" style="left:${left.toFixed(2)}%;width:${width.toFixed(2)}%;background:${colors[i % colors.length]}"></button>`;
+    const isActive = atlasTimelinePhaseIsActive(phase, start, end, hasFocusedRange);
+    return `<button class="atlas2d-time-seg ${isActive ? 'active' : ''}" data-atlas-kind="phase" data-atlas-id="${atlasEsc(phase.id)}" title="${atlasEsc(phase.label)}" onclick="atlasSelect('phase','${atlasEsc(phase.id)}')" onmouseenter="atlasSetHoverTarget('phase','${atlasEsc(phase.id)}')" onmouseleave="atlasClearHoverTarget('phase','${atlasEsc(phase.id)}')" style="left:${left.toFixed(2)}%;width:${width.toFixed(2)}%;background:${colors[i % colors.length]}"></button>`;
   }).join('');
 
-  const start = Math.max(0, Math.min(total, focusRange?.start ?? 0));
-  const end = Math.max(start, Math.min(total, focusRange?.end ?? total));
   const focusLeft = (start / total) * 100;
   const focusWidth = Math.max(((end - start) / total) * 100, 0.6);
   root.innerHTML = `${segments}<div class="atlas2d-time-focus" style="left:${focusLeft.toFixed(2)}%;width:${focusWidth.toFixed(2)}%"></div>`;
 
-  document.getElementById('atlas-time-title').textContent = t(focusRange?.label || 'Régua histórica contextual');
-  document.getElementById('atlas-time-range').textContent = `${start}–${end} AM`;
+  if (erasRoot) {
+    erasRoot.innerHTML = (groupData.phases || []).map(phase => atlasRenderTimelineEra(phase, start, end, hasFocusedRange)).join('');
+  }
+
+  document.getElementById('atlas-time-title').textContent = 'LINHA DO TEMPO DA TORA';
+  document.getElementById('atlas-time-range').textContent = `${t(focusRange?.label || 'Toda a linha historica')} · ${start}-${end} AM`;
+}
+
+function atlasTimelinePhaseIsActive(phase, start, end, hasFocusedRange) {
+  if (atlasState.selectedPhaseId === phase.id) return true;
+  if (!hasFocusedRange) return false;
+  return phase.am_start < end && phase.am_end > start;
+}
+
+function atlasRenderTimelineEra(phase, start, end, hasFocusedRange) {
+  const isActive = atlasTimelinePhaseIsActive(phase, start, end, hasFocusedRange);
+  const isHover = atlasState.hoverTarget?.kind === 'phase' && atlasState.hoverTarget?.id === phase.id;
+  const icon = phase.visual && phase.visual.asset
+    ? `<span class="icon-mask" style="--icon:url('${atlasEsc(phase.visual.asset)}')"></span>`
+    : atlasEsc((phase.label || '?').trim().charAt(0).toUpperCase());
+  return `
+    <button class="atlas-ref-era-card ${isActive ? 'active' : ''} ${isHover ? 'hover-target' : ''}" type="button" data-atlas-kind="phase" data-atlas-id="${atlasEsc(phase.id)}" title="${atlasEsc(phase.label)}" onclick="atlasSelect('phase','${atlasEsc(phase.id)}')" onmouseenter="atlasSetHoverTarget('phase','${atlasEsc(phase.id)}')" onmouseleave="atlasClearHoverTarget('phase','${atlasEsc(phase.id)}')">
+      <span class="atlas-ref-era-icon">${icon}</span>
+      <span class="atlas-ref-era-name">${atlasEsc(phase.label)}</span>
+      <span class="atlas-ref-era-sub">${atlasEsc(phase.am_start)}-${atlasEsc(phase.am_end)} AM</span>
+    </button>
+  `;
+}
+
+async function atlasTimelineStep(delta) {
+  const groupData = await atlasLoadTimelineGroups();
+  const phases = groupData.phases || [];
+  if (!phases.length) return;
+  let index = phases.findIndex(phase => phase.id === atlasState.selectedPhaseId);
+  if (index < 0) index = delta > 0 ? -1 : 0;
+  const next = phases[(index + delta + phases.length) % phases.length];
+  atlasSelect('phase', next.id);
 }
 
 async function atlasRenderFacts(ctx) {
