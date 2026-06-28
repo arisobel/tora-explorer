@@ -109,11 +109,10 @@
       ],
       "topic": "A Visita dos Três Anjos — Hospitalidade de Avraham",
       "visual": {
-        "marker_type": "icon",
-        "icon": "tent",
-        "asset": "assets/icons/tent.svg",
-        "caption": "Os três visitantes",
-        "importance": 5
+        "marker_type": "image",
+        "asset": "assets/user/tres-anjos-recepcao.png",
+        "caption": "Três Anjos aparecem para Abraão em forma de passageniros do deserto",
+        "importance": 3
       },
       "i18n": {
         "en": {
@@ -169,6 +168,12 @@
           "text": "אֶחָד הָאוֹרְחִים מְבַשֵּׂר כִּי בְּעוֹד שָׁנָה יִהְיֶה לְשָׂרָה בֵּן. שָׂרָה, הַשּׁוֹמַעַת מִפֶּתַח הָאֹהֶל, צוֹחֶקֶת בְּקִרְבָּהּ — הִיא וְאַבְרָהָם כְּבָר זְקֵנִים. הַמַּלְאָךְ שׁוֹאֵל: ׳הֲיִפָּלֵא מֵה׳ דָּבָר?׳",
           "topic": "בְּשׂוֹרַת לֵדַת יִצְחָק"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/noticia-nascimento-isaac.png",
+        "caption": "Os anjos anunciam o nascimento de Isaac, e Sarah escuta incrédula com a feliz notícia",
+        "importance": 3
       }
     },
     {
@@ -206,6 +211,12 @@
           "text": "אֱלֹהִים מוֹדִיעַ לְאַבְרָהָם כִּי יִבְחַן אֶת סְדוֹם וַעֲמוֹרָה בִּגְלַל זַעֲקַת חֲטָאָן הַגְּדוֹלָה. אַבְרָהָם מַפְצִיר בְּאֹמֶץ: ׳וְאִם יֵשׁ חֲמִשִּׁים צַדִּיקִים? אַרְבָּעִים וַחֲמִשָּׁה? אַרְבָּעִים? שְׁלוֹשִׁים? עֶשְׂרִים? עֲשָׂרָה?׳",
           "topic": "הַפְצָרַת אַבְרָהָם עַל סְדוֹם"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/abrao-orando-por-sodoma.png",
+        "caption": "Abaão tenta intervir por Sodoma",
+        "importance": 3
       }
     },
     {
@@ -244,6 +255,12 @@
           "text": "שְׁנֵי מַלְאָכִים מַגִּיעִים לִסְדוֹם. לוֹט מַזְמִינָם לְבֵיתוֹ. אַנְשֵׁי הָעִיר, מִזָּקֵן וְעַד נַעַר, מַקִּיפִים אֶת הַבַּיִת וְדוֹרְשִׁים אֶת הָאוֹרְחִים. לוֹט מַצִּיעַ אֶת בְּנוֹתָיו כְּדֵי לְהָגֵן עַל הָאוֹרְחִים.",
           "topic": "הַמַּלְאָכִים בִּסְדוֹם — שְׁחִיתוּת הָעִיר"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/anjos-chegam-a-sodoma.png",
+        "caption": "Anjos chegam à Sodoma para salvar Lot e revirar a cidade",
+        "importance": 3
       }
     },
     {
