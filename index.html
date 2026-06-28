@@ -1349,6 +1349,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
   font-weight: 700;
   box-shadow: 0 12px 26px -10px color-mix(in srgb, var(--tone-main) 70%, transparent);
 }
+.atlas-ref-macro-badge .icon-mask {
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+}
 .atlas-ref-macro-title {
   text-align: center;
   margin-bottom: 1.15rem;
@@ -1422,6 +1427,19 @@ body.atlas-grabbing, body.atlas-grabbing * {
   background: rgba(255,255,255,.65);
   color: var(--tone-ink);
   font-weight: 800;
+}
+.atlas-ref-macro-foot-icon .icon-mask {
+  width: 22px;
+  height: 22px;
+  background-color: var(--tone-ink);
+}
+.atlas-ref-svg-icon {
+  display: inline-block;
+  width: var(--atlas-icon-size, 24px);
+  height: var(--atlas-icon-size, 24px);
+  background-color: currentColor;
+  -webkit-mask: var(--atlas-icon) no-repeat center / contain;
+          mask: var(--atlas-icon) no-repeat center / contain;
 }
 .atlas-ref-macro-foot b {
   display: block;
@@ -1616,6 +1634,10 @@ body.atlas-grabbing, body.atlas-grabbing * {
   grid-template-columns: repeat(7, minmax(74px, 1fr));
   gap: .45rem;
 }
+.atlas-ref-era-list.atlas-ref-era-list-books {
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  gap: .7rem;
+}
 .atlas-ref-era-card {
   appearance: none;
   min-width: 0;
@@ -1659,6 +1681,16 @@ body.atlas-grabbing, body.atlas-grabbing * {
   background: var(--atlas-blue);
   color: #fff;
   box-shadow: 0 10px 22px -12px rgba(45,108,180,.9);
+}
+.atlas-ref-era-card[data-atlas-kind="book"].active .atlas-ref-era-icon,
+.atlas-ref-era-card[data-atlas-kind="book"].hover-target .atlas-ref-era-icon {
+  border-color: var(--atlas-blue);
+  background: var(--atlas-blue);
+}
+.atlas-ref-era-card[data-atlas-kind="book"] .atlas-ref-era-icon {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
 }
 .atlas-ref-era-name {
   max-width: 100%;
@@ -3153,6 +3185,23 @@ function atlasEsc(value) {
     .replace(/'/g, '&#39;');
 }
 
+const ATLAS_REF_ICON_PATHS = {
+  scroll: '<path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>',
+  users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  scale: '<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>',
+  bookOpen: '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+  leaf: '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/>',
+  heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>'
+};
+
+function atlasRefIconHTML(key, size = 24) {
+  const inner = ATLAS_REF_ICON_PATHS[key];
+  if (!inner) return '';
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`;
+  const uri = `url(data:image/svg+xml,${encodeURIComponent(svg)})`;
+  return `<span class="atlas-ref-svg-icon" style="--atlas-icon:${atlasEsc(uri)};--atlas-icon-size:${Number(size) || 24}px"></span>`;
+}
+
 async function initAtlas() {
   if (!document.getElementById('page-atlas')) return;
   try {
@@ -3392,7 +3441,7 @@ async function atlasRender() {
   atlasRenderBreadcrumb(ctx);
   atlasRenderNodes(ctx.nodes || []);
   atlasRenderSidePanel(ctx);
-  atlasRenderTimeline(groupData, ctx.focusRange);
+  await atlasRenderTimeline(groupData, ctx.focusRange, milestoneData);
   await atlasRenderFacts(ctx);
 }
 
@@ -3424,6 +3473,8 @@ async function atlasBuildContext(milestoneData, groupData) {
         meta: 'Área da Torá',
         macro: {
           tone: 'escrita',
+          badgeIcon: 'scroll',
+          footSvgIcon: 'bookOpen',
           badge: 'ח',
           title: 'TORÁ ESCRITA',
           he: 'תורה שבכתב',
@@ -3448,6 +3499,8 @@ async function atlasBuildContext(milestoneData, groupData) {
         meta: 'Camada interpretativa',
         macro: {
           tone: 'oral',
+          badgeIcon: 'users',
+          footSvgIcon: 'leaf',
           badge: 'ע',
           title: 'TORÁ ORAL',
           he: 'תורה שבעל פה',
@@ -3472,6 +3525,8 @@ async function atlasBuildContext(milestoneData, groupData) {
         meta: 'Modelo futuro',
         macro: {
           tone: 'halacha',
+          badgeIcon: 'scale',
+          footSvgIcon: 'heart',
           badge: 'ה',
           title: 'HALACHÁ',
           he: 'הלכה',
@@ -3725,6 +3780,16 @@ function atlasRenderNodes(nodes) {
 function atlasRenderMacroNode(node) {
   const macro = node.macro || {};
   const tone = macro.tone || 'escrita';
+  const badge = macro.badgeIcon
+    ? atlasRefIconHTML(macro.badgeIcon, 32)
+    : macro.badgeAsset
+    ? `<span class="icon-mask" style="--icon:url('${atlasEsc(macro.badgeAsset)}')"></span>`
+    : atlasEsc(macro.badge || node.icon || '');
+  const footIcon = macro.footSvgIcon
+    ? atlasRefIconHTML(macro.footSvgIcon, 22)
+    : macro.footAsset
+    ? `<span class="icon-mask" style="--icon:url('${atlasEsc(macro.footAsset)}')"></span>`
+    : atlasEsc(macro.footIcon || node.icon || '');
   const chips = (macro.chips || []).map(ch => `
     <span class="atlas-ref-macro-chip ${ch.wide ? 'wide' : ''}">
       <b>${atlasEsc(ch.t)}</b>
@@ -3735,14 +3800,14 @@ function atlasRenderMacroNode(node) {
   const isHover = atlasState.hoverTarget?.kind === node.kind && atlasState.hoverTarget?.id === node.id;
   return `
     <button class="atlas-ref-macro-card atlas-ref-tone-${atlasEsc(tone)} ${node.selected ? 'selected' : ''} ${isHover ? 'hover-target' : ''}" data-atlas-kind="${atlasEsc(node.kind)}" data-atlas-id="${atlasEsc(node.id)}" onclick="atlasSelect('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseenter="atlasSetHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseleave="atlasClearHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')">
-      <span class="atlas-ref-macro-badge">${atlasEsc(macro.badge || node.icon || '')}</span>
+      <span class="atlas-ref-macro-badge">${badge}</span>
       <span class="atlas-ref-macro-title">
         <strong>${atlasEsc(macro.title || node.label)}</strong>
         <span>${atlasEsc(macro.he || '')}</span>
       </span>
       <span class="atlas-ref-macro-chips">${chips}</span>
       <span class="atlas-ref-macro-foot">
-        <span class="atlas-ref-macro-foot-icon">${atlasEsc(macro.footIcon || node.icon || '')}</span>
+        <span class="atlas-ref-macro-foot-icon">${footIcon}</span>
         <span>
           <b>${atlasEsc(macro.footTitle || node.meta || '')}</b>
           <span>${atlasEsc(macro.footDesc || node.sub || '')}</span>
@@ -3777,7 +3842,7 @@ function atlasRenderSidePanel(ctx) {
   }
 }
 
-function atlasRenderTimeline(groupData, focusRange) {
+async function atlasRenderTimeline(groupData, focusRange, milestoneData = null) {
   const root = document.getElementById('atlas-time-bar');
   const erasRoot = document.getElementById('atlas-time-eras');
   const total = 5785;
@@ -3785,6 +3850,8 @@ function atlasRenderTimeline(groupData, focusRange) {
   const start = Math.max(0, Math.min(total, focusRange?.start ?? 0));
   const end = Math.max(start, Math.min(total, focusRange?.end ?? total));
   const hasFocusedRange = start > 0 || end < total;
+  const useChumashBooks = atlasState.lens === 'chumash' && atlasState.zoom === 1 && milestoneData;
+
   const segments = (groupData.phases || []).map((phase, i) => {
     const left = Math.max(0, (phase.am_start / total) * 100);
     const width = Math.max(((phase.am_end - phase.am_start) / total) * 100, 0.7);
@@ -3797,10 +3864,16 @@ function atlasRenderTimeline(groupData, focusRange) {
   root.innerHTML = `${segments}<div class="atlas2d-time-focus" style="left:${focusLeft.toFixed(2)}%;width:${focusWidth.toFixed(2)}%"></div>`;
 
   if (erasRoot) {
-    erasRoot.innerHTML = (groupData.phases || []).map(phase => atlasRenderTimelineEra(phase, start, end, hasFocusedRange)).join('');
+    erasRoot.classList.toggle('atlas-ref-era-list-books', !!useChumashBooks);
+    if (useChumashBooks) {
+      const bookItems = await atlasBuildTimelineBookItems(milestoneData);
+      erasRoot.innerHTML = bookItems.map(item => atlasRenderTimelineBook(item)).join('');
+    } else {
+      erasRoot.innerHTML = (groupData.phases || []).map(phase => atlasRenderTimelineEra(phase, start, end, hasFocusedRange)).join('');
+    }
   }
 
-  document.getElementById('atlas-time-title').textContent = 'LINHA DO TEMPO DA TORA';
+  document.getElementById('atlas-time-title').textContent = useChumashBooks ? 'LINHA DO TEMPO DO CHUMASH' : 'LINHA DO TEMPO DA TORA';
   document.getElementById('atlas-time-range').textContent = `${t(focusRange?.label || 'Toda a linha historica')} · ${start}-${end} AM`;
 }
 
@@ -3825,8 +3898,62 @@ function atlasRenderTimelineEra(phase, start, end, hasFocusedRange) {
   `;
 }
 
+async function atlasBuildTimelineBookItems(milestoneData) {
+  const books = milestoneData?.books || [];
+  const items = [];
+  for (const book of books) {
+    let range = null;
+    let visual = null;
+    try {
+      const mart = await loadParashaMart(book.book_key);
+      range = mart.index && mart.index.timeline;
+      visual = mart.index && mart.index.visual;
+    } catch(e) {}
+    const start = range?.anno_mundi_start ?? 0;
+    const end = range?.anno_mundi_end ?? 2488;
+    items.push({
+      kind: 'book',
+      id: book.book_key,
+      label: book.label,
+      he: book.label_he,
+      sub: `${start}-${end} AM`,
+      visual,
+      start,
+      end,
+      milestones: (book.milestones || []).length,
+      active: atlasState.selectedBookKey === book.book_key,
+      hover: atlasState.hoverTarget?.kind === 'book' && atlasState.hoverTarget?.id === book.book_key
+    });
+  }
+  return items;
+}
+
+function atlasRenderTimelineBook(item) {
+  const icon = item.visual && item.visual.asset
+    ? `<span class="icon-mask" style="--icon:url('${atlasEsc(item.visual.asset)}')"></span>`
+    : atlasEsc((item.he || item.label || '?').trim().charAt(0));
+  return `
+    <button class="atlas-ref-era-card ${item.active ? 'active' : ''} ${item.hover ? 'hover-target' : ''}" type="button" data-atlas-kind="book" data-atlas-id="${atlasEsc(item.id)}" title="${atlasEsc(item.label)}" onclick="atlasSelect('book','${atlasEsc(item.id)}')" onmouseenter="atlasSetHoverTarget('book','${atlasEsc(item.id)}')" onmouseleave="atlasClearHoverTarget('book','${atlasEsc(item.id)}')">
+      <span class="atlas-ref-era-icon">${icon}</span>
+      <span class="atlas-ref-era-name">${atlasEsc(item.label)}</span>
+      <span class="atlas-ref-era-sub">${atlasEsc(item.sub)} · ${atlasEsc(item.milestones)} milestones</span>
+    </button>
+  `;
+}
+
 async function atlasTimelineStep(delta) {
-  const groupData = await atlasLoadTimelineGroups();
+  if (atlasState.lens === 'chumash' && atlasState.zoom === 1) {
+    const milestoneData = await loadChumashMilestones();
+    const books = milestoneData.books || [];
+    if (!books.length) return;
+    let index = books.findIndex(book => book.book_key === atlasState.selectedBookKey);
+    if (index < 0) index = delta > 0 ? -1 : 0;
+    const next = books[(index + delta + books.length) % books.length];
+    atlasSelect('book', next.book_key);
+    return;
+  }
+
+  const groupData = await loadTimelineGroups();
   const phases = groupData.phases || [];
   if (!phases.length) return;
   let index = phases.findIndex(phase => phase.id === atlasState.selectedPhaseId);

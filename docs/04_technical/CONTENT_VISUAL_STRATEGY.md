@@ -128,6 +128,44 @@ Suggested fields:
 | `importance` | 1-5 priority for dense overview layouts |
 | `color` | Optional display accent |
 
+### Importance and Drill Visibility
+
+`visual.importance` should control when an image or icon is allowed to appear in
+the Atlas and timeline drill.
+
+The rule is: the more generic the zoom level, the more selective the visual
+layer must be. Detailed facts can have many images, but macro views should only
+promote the most important or most representative visuals.
+
+Suggested visibility thresholds:
+
+| Drill level | Meaning | Visuals allowed |
+|-------------|---------|-----------------|
+| 0 | Macro structure / whole timeline | importance 5 only |
+| 1 | Book or broad era | importance 4-5 |
+| 2 | Milestone or timeline group | importance 3-5 |
+| 3 | Parasha/unit | importance 2-5 |
+| 4 | Fact detail | importance 1-5 |
+
+When multiple visuals are available for the same node, choose in this order:
+
+1. highest `importance`;
+2. closest semantic ownership to the current node;
+3. richer `marker_type` for detail views (`image` over `icon`);
+4. simpler `marker_type` for overview views (`icon` or representative image);
+5. stable fallback by JSON order.
+
+Examples:
+
+- An image of Sinai with `importance: 5` may appear at book/era level.
+- A minor local fact image with `importance: 2` should wait until parasha or
+  fact drill.
+- A fact can keep a detailed illustration while its parent milestone exposes
+  only a symbolic icon.
+
+The UI may later expose this as an "image density" setting, but the default
+behavior should be deterministic from JSON metadata.
+
 ---
 
 ## Asset Organization

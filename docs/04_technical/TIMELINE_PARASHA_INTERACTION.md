@@ -279,6 +279,40 @@ Large phases can now expand into subject groups from
 `data/timeline_groups.json`. Each group acts as a thematic/milestone card and
 can open the parasha drawer with highlighted facts.
 
+### Atlas Timeline Semantic Zoom
+
+The Atlas timeline should support its own semantic zoom, synchronized with the
+main Atlas drill instead of acting as a static footer.
+
+The intended levels are:
+
+| Zoom | Timeline scope | Data source | UI behavior |
+|------|----------------|-------------|-------------|
+| 0 | Whole tradition / macro eras | `data/timeline_groups.json` `phases[]` | broad era chips and AM ruler |
+| 1 | Selected era or book span | `phases[]`, `data/milestones/chumash.json` | era expands into milestone/book bands |
+| 2 | Milestone groups | `phase.groups[]`, `milestones[]` | groups become clickable event clusters |
+| 3 | Parasha or unit facts | parasha/unit JSON `facts[]` via linked IDs | fact markers appear on the ruler |
+| 4 | Fact detail / source refs | fact `sefaria_ref`, chapter/verse fields | selected fact anchors drawer or reader |
+
+This means a zoom action in the Atlas has two coordinated effects:
+
+- the central canvas changes from macro cards to books, milestones, units, or
+  facts;
+- the bottom timeline changes from era overview to the corresponding temporal
+  granularity.
+
+The timeline should not own a separate data model. It should project the same
+multi-level JSON graph already used by the Atlas:
+
+```text
+timeline phase -> timeline group -> milestone -> parasha/unit -> fact
+book -> milestone -> parasha/unit -> fact
+```
+
+Implementation should keep `atlasState.zoom` as the initial coordinator, and
+only add a separate `timelineZoom` state later if users need to inspect time at
+a different depth than the main canvas.
+
 ### Parasha Drawer
 
 The drawer should show:

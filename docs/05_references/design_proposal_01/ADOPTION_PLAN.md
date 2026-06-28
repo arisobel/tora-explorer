@@ -278,6 +278,35 @@ Refinar a linha do tempo inferior para ficar mais proxima do target:
   `atlasSetHoverTarget` usado pelos cards do Atlas.
 - A barra AM antiga foi preservada como regua de precisao abaixo dos marcos.
 
+### Evolucao planejada - timeline como zoom semantico
+
+A timeline inferior deve evoluir para uma lente de drill sincronizada com o
+Atlas, baseada na estrutura multi-nivel dos JSONs:
+
+- zoom 0: fases macro da tradicao;
+- zoom 1: era/livro selecionado;
+- zoom 2: milestones e agrupadores;
+- zoom 3: parasha/unidade com marcadores de fatos;
+- zoom 4: fato selecionado e referencia textual.
+
+O mesmo principio vale para imagens: `visual.importance` deve decidir em que
+nivel uma imagem aparece. Imagens de importancia alta podem representar um
+periodo ou milestone em zoom generico; imagens mais locais aparecem apenas no
+drill de parasha/fato.
+
+### Baby-step concluido - timeline zoom 1 Chumash
+
+- Quando o Atlas esta na lente Chumash em zoom 1, o dock inferior passa a
+  renderizar os 5 livros do Chumash em vez das eras globais.
+- Os cards da timeline usam `data/milestones/chumash.json` para a lista de
+  livros e os `index.json` de cada livro para os ranges AM.
+- Hover e clique nos livros da timeline usam os mesmos `kind: "book"` e
+  `atlasSelect` dos cards centrais.
+- Os badges dos tres macro cards passaram a usar paths SVG embutidos inspirados
+  no `Atlas.dc.html`: `scroll`, `users` e `scale`. Os icones de rodape tambem
+  seguem a mesma base (`bookOpen`, `leaf`, `heart`), sem adicionar novos
+  arquivos.
+
 ## Guardrails
 
 - Nao copiar HTML exportado diretamente para `index.html`; converter ideias em
