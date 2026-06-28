@@ -997,6 +997,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   --atlas-gold: #cbb67a;
   min-height: calc(100vh - 56px);
   background: linear-gradient(180deg, #f5f7fa 0%, #eef1f5 100%);
+  padding-bottom: 230px;
 }
 .atlas-ref-topbar {
   min-height: 92px;
@@ -1489,11 +1490,22 @@ body.atlas-grabbing, body.atlas-grabbing * {
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
   margin-bottom: .75rem;
   background: #2d6cb4;
   color: #fff;
   font-family: 'Crimson Pro', serif;
   font-size: 22px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,.28),
+    0 10px 22px -12px rgba(45,108,180,.9);
+}
+.atlas-ref-shell .atlas2d-node-icon .icon-mask {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,.18));
 }
 .atlas-ref-shell .atlas2d-node-label {
   color: #235a99;
@@ -1580,10 +1592,14 @@ body.atlas-grabbing, body.atlas-grabbing * {
   grid-row: 3;
 }
 .atlas-ref-shell .atlas2d-floating-timeline {
-  position: static;
+  position: fixed;
+  left: max(1rem, calc((100vw - 1720px) / 2 + 1rem));
+  right: max(1rem, calc((100vw - 1720px) / 2 + 1rem));
+  bottom: 0;
+  z-index: 120;
   width: auto;
   border: 1px solid var(--atlas-line);
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
   background: #fff;
   box-shadow: 0 14px 40px -22px rgba(20,35,60,.4);
   padding: 1rem 1.35rem 1.15rem;
@@ -1816,7 +1832,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
     margin-top: 1rem;
   }
   .atlas-ref-stage > .atlas2d-floating-timeline {
-    margin-top: 1rem;
+    left: .75rem;
+    right: .75rem;
+    bottom: 0;
+    max-height: 42vh;
+    overflow: auto;
   }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
@@ -1828,7 +1848,14 @@ body.atlas-grabbing, body.atlas-grabbing * {
   to { opacity: 1; transform: translateY(0); }
 }
 .page.active > * { animation: fadeUp .35s ease forwards; }
-#page-atlas.active > .atlas2d-floating-timeline { animation: none; }
+#page-atlas.active > .atlas-ref-shell {
+  animation: none;
+  transform: none;
+}
+#page-atlas.active .atlas2d-floating-timeline {
+  animation: none;
+  transform: none;
+}
 </style>
 </head>
 <body>
