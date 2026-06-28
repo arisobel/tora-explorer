@@ -34,6 +34,25 @@
 - [ ] Show linked global timeline events inside the Parasha drawer
 - [ ] Show linked timeline groups inside the Parasha drawer
 
+## Design Reference Adoption (2026-06-28)
+
+Source: `docs/05_references/design_proposal_01/ADOPTION_PLAN.md`.
+
+Goal: absorb the visual improvements from the reference proposal without
+breaking the existing static HTML/CSS/JS app, current tabs, drawer behavior,
+i18n, Sefaria reader, JSON data flow, or Atlas 2D.
+
+- [ ] **Visual foundation from reference proposal** - document and apply the safer shared tokens first: paper/surface/ink/accent colors, border/shadow rhythm, typography hierarchy, nav polish, and card surfaces. No behavior changes in this step.
+- [ ] **Estrutura editorial intro** - add a compact orientation block for the five drill-down levels: Estrutura, 5 Livros/Nach, Milestones, Parasha, Pessukim.
+- [ ] **Estrutura primary cards** - refine Mikra, Talmud, and Halacha into stronger decision cards with Hebrew anchor text, concise copy, selected state, and detail panel below, preserving current click targets.
+- [ ] **Estrutura detail groups** - reorganize Chumash, Neviim, and Ketuvim details into scan-friendly groups inspired by the proposal, using existing data and routes.
+- [ ] **Estrutura drawer integration** - continue the existing next step: side drawer loading parasha/unit `index.json`, visual historical ruler, facts, and "Ver versiculos" actions into the Sefaria reader.
+- [~] **Atlas reference prototype** - macro shell documented and started in `index.html`: isolated `atlas-ref-*` CSS base, reference-style topbar, three target-inspired macro cards (Tora Escrita, Tora Oral, Halacha), contextual side panel with "Visao atual", hover/drill support for macro cards, horizontal timeline repositioned inside the shell, and opt-in checkbox for mouse-wheel zoom/drill. Next baby-step: refine the bottom timeline dock to match the target more closely before implementing the Chumash drill. Do not replace the current Atlas 2D before validation.
+- [ ] **Atlas bottom timeline target pass** - refine the lower timeline into a target-style dock: clearer horizontal ruler, period segments, active/hover states synchronized with the macro focus, and continued use of existing timeline data instead of a duplicated source.
+- [ ] **Atlas coordinated drill model** - implement focus as a coordinated context change: hover previews a section/book by dimming siblings and updating timeline/person panels; click confirms the drill so the focused section takes the main canvas. Keep separate `hoverFocus` and `selectedFocus` state, with breadcrumb/back control for returning one level.
+- [ ] **Chumash drill reference slice** - use `screenshots/chumash-full.png` as the first concrete drill target: five Chumash book headers, event columns by book, synchronized timeline spine, primary characters, secondary related characters, and clear "Voltar ao Atlas" navigation.
+- [ ] **Validation pass for each baby-step** - after each slice, check desktop/mobile layout, tab navigation, language switcher, drawer open/close, and Sefaria routing.
+
 ## Recently Completed
 
 - [x] **Nach visual layer (book + unit levels)** — 8 new SVGs (54 total: sword, lion, fish, heart, wall, mask, eye, hourglass); all 15 Nach/Ketuvim `index.json` files carry a book-level icon + per-unit icons (109 units); drawer index list shows mini icons per unit and the book icon in the ruler label; `_drawerRenderParasha` now falls back to the index entry's `visual` so the unit header badge renders without editing the 109 individual unit files (2026-06-14)

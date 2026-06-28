@@ -243,6 +243,12 @@
           "text": "בִּכְנַעַן, אֱלֹהִים נִרְאֶה אֶל אַבְרָם בִּשְׁכֶם לְיַד אֵלוֹן מוֹרֶה וּמַבְטִיחַ: ׳לְזַרְעֲךָ אֶתֵּן אֶת הָאָרֶץ הַזֹּאת׳. אַבְרָם בּוֹנֶה מִזְבֵּחַ לַה׳.",
           "topic": "הַבְטָחַת הָאָרֶץ הָרִאשׁוֹנָה בִּכְנַעַן"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/journey-to-canaan.png",
+        "caption": "Abraão, Sarai e o sobrinho Lot viajam para Canaan sb ordem Divina. A terra Prometida",
+        "importance": 5
       }
     },
     {
@@ -281,6 +287,12 @@
           "text": "רָעָב כָּבֵד מַכְרִיחַ אֶת אַבְרָם לָרֶדֶת לְמִצְרַיִם. בְּחָשְׁשׁוֹ פֶּן יַהַרְגוּהוּ בִּגְלַל יָפְיָהּ שֶׁל שָׂרָה, הוּא מְבַקֵּשׁ שֶׁתֹּאמַר כִּי אֲחוֹתוֹ הִיא. פַּרְעֹה לוֹקֵחַ אוֹתָהּ אֶל הָאַרְמוֹן, וְאַבְרָם זוֹכֶה לְיַחַס טוֹב בִּגְלָלָהּ.",
           "topic": "הַיְרִידָה לְמִצְרַיִם — שָׂרָה וּפַרְעֹה"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/sarai-and-pharaoh.png",
+        "caption": "Abraão, Sarai e o sobrinho Lot viajam para Canaan sb ordem Divina. A terra Prometida",
+        "importance": 5
       }
     },
     {
@@ -355,6 +367,12 @@
           "text": "בַּחֲזָרָה לִכְנַעַן, רְכוּשָׁם שֶׁל אַבְרָם וְלוֹט כֹּה רַב עַד שֶׁהָאָרֶץ אֵינָהּ נוֹשֵׂאת אֶת שְׁנֵיהֶם. כְּדֵי לִמְנֹעַ מְרִיבוֹת בֵּין הָרוֹעִים, אַבְרָם מַצִּיעַ לְלוֹט לְהִפָּרֵד — וְלוֹט בּוֹחֵר בְּכִכַּר הַיַּרְדֵּן.",
           "topic": "פְּרֵדַת אַבְרָם וְלוֹט"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/separation-of-abraham-and-lot.png",
+        "caption": "Abrão se separa de Lot, que vai para Sodoma",
+        "importance": 3
       }
     },
     {
@@ -429,6 +447,12 @@
           "text": "מִלְחָמָה בֵּין אַרְבָּעָה מְלָכִים לַחֲמִשָּׁה מְלָכִים מוֹבִילָה לִשְׁבִיַּת לוֹט, שֶׁיָּשַׁב בִּסְדוֹם. אַבְרָם, בְּשָׁמְעוֹ עַל שְׁבִיַּת אֲחִיָּנוֹ, מְגַיֵּס 318 חֲנִיכָיו הַמְאֻמָּנִים וּמְחַלְּצוֹ בְּהַתְקָפַת לַיְלָה.",
           "topic": "חִלּוּץ לוֹט — מִלְחֶמֶת הַמְּלָכִים"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/war-of-kings.png",
+        "caption": "Abrão luta com o 5 Reis para resgatar Lot",
+        "importance": 3
       }
     },
     {
@@ -466,6 +490,12 @@
           "text": "מַלְכִּי־צֶדֶק הַמִּסְתּוֹרִי, מֶלֶךְ שָׁלֵם וְכֹהֵן לְאֵל עֶלְיוֹן, מֵבִיא לֶחֶם וָיַיִן לְאַבְרָם וּמְבָרְכוֹ. אַבְרָם נוֹתֵן לוֹ מַעֲשֵׂר מִכֹּל.",
           "topic": "מַלְכִּי־צֶדֶק וּמַעְשַׂר אַבְרָם"
         }
+      },
+      "visual": {
+        "marker_type": "image",
+        "asset": "assets/user/abraham-and-malkissedek.png",
+        "caption": "Abrão dá o Dízimo a Malquisedek 9Midrash diz qe é Shem filho de Noach)",
+        "importance": 3
       }
     },
     {
@@ -538,11 +568,10 @@
       ],
       "topic": "Brit bein HaBetarim — A Aliança entre os Pedaços",
       "visual": {
-        "marker_type": "icon",
-        "icon": "torch",
-        "asset": "assets/icons/torch.svg",
-        "caption": "A tocha entre os pedaços",
-        "importance": 4
+        "marker_type": "image",
+        "asset": "assets/user/brit-bein-habetarim.png",
+        "caption": "Abrão dá o Dízimo a Malquisedek 9Midrash diz qe é Shem filho de Noach)",
+        "importance": 3
       },
       "i18n": {
         "en": {

@@ -975,6 +975,620 @@ body.atlas-grabbing, body.atlas-grabbing * {
   margin-top: .45rem;
 }
 
+/* ATLAS REFERENCE SHELL */
+#page-atlas.atlas-ref-page {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  background: #edf1f6;
+  color: #1b2430;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+.atlas-ref-shell {
+  --atlas-paper: #edf1f6;
+  --atlas-surface: #ffffff;
+  --atlas-muted: #f5f7fa;
+  --atlas-line: #e2e7ee;
+  --atlas-ink: #13243c;
+  --atlas-soft: #5b6573;
+  --atlas-faint: #98a2b1;
+  --atlas-blue: #2d6cb4;
+  --atlas-navy: #13243c;
+  --atlas-gold: #cbb67a;
+  min-height: calc(100vh - 56px);
+  background: linear-gradient(180deg, #f5f7fa 0%, #eef1f5 100%);
+}
+.atlas-ref-topbar {
+  min-height: 92px;
+  display: grid;
+  grid-template-columns: minmax(220px, 340px) minmax(240px, 520px) 1fr auto;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.75rem;
+  background: var(--atlas-surface);
+  border-bottom: 1px solid var(--atlas-line);
+}
+.atlas-ref-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+.atlas-ref-logo {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  background: linear-gradient(160deg, #1b3354, #0f2138);
+  color: #fff;
+  font-family: 'Crimson Pro', serif;
+  font-size: 28px;
+  box-shadow: 0 10px 22px -12px rgba(15,33,56,.7);
+}
+.atlas-ref-title {
+  font-family: 'Crimson Pro', serif;
+  font-size: 28px;
+  line-height: 1.05;
+  color: var(--atlas-ink);
+  font-weight: 600;
+}
+.atlas-ref-kicker {
+  margin-top: .2rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: var(--atlas-faint);
+  text-transform: uppercase;
+}
+.atlas-ref-search {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: 0 1rem;
+  border: 1px solid var(--atlas-line);
+  border-radius: 14px;
+  background: #f4f6f9;
+  color: var(--atlas-faint);
+  font-size: 14px;
+}
+.atlas-ref-search::before { content: '⌕'; font-size: 20px; color: #8b96a5; }
+.atlas-ref-tools {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.atlas-ref-tool {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #4a5462;
+  display: grid;
+  gap: .3rem;
+  justify-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.atlas-ref-tool span:first-child {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+}
+.atlas-ref-user {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .45rem .75rem .45rem .5rem;
+  border: 1px solid var(--atlas-line);
+  border-radius: 14px;
+  background: #fff;
+  white-space: nowrap;
+}
+.atlas-ref-user-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, #1b3354, #0f2138);
+  color: #fff;
+}
+.atlas-ref-user strong {
+  display: block;
+  color: var(--atlas-ink);
+  font-size: 13px;
+  line-height: 1.1;
+}
+.atlas-ref-user span {
+  color: var(--atlas-faint);
+  font-size: 11px;
+}
+.atlas-ref-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr) 300px;
+  grid-template-rows: auto minmax(470px, 1fr) auto;
+  gap: 1rem;
+  min-height: calc(100vh - 148px);
+  padding: 1.15rem 1.5rem 1.5rem;
+}
+.atlas-ref-stage > .sec-title,
+.atlas-ref-stage > .sec-sub {
+  display: none;
+}
+.atlas-ref-stage > .atlas2d-shell {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
+.atlas-ref-stage > .atlas2d-floating-timeline {
+  grid-column: 2 / 4;
+  grid-row: 3;
+}
+.atlas-ref-crumbs {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  min-height: 34px;
+}
+.atlas-ref-zoom {
+  grid-column: 2 / 3;
+  justify-self: center;
+  align-self: start;
+  width: min(560px, 100%);
+  text-align: center;
+}
+.atlas-ref-zoom-title {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  color: var(--atlas-ink);
+  text-transform: uppercase;
+}
+.atlas-ref-zoom-sub {
+  margin-top: .15rem;
+  color: #8893a2;
+  font-size: 12px;
+}
+.atlas-ref-zoom-row {
+  margin-top: .75rem;
+  display: grid;
+  grid-template-columns: 42px 1fr 42px;
+  align-items: center;
+  gap: .75rem;
+}
+.atlas-ref-zoom-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: .35rem;
+}
+.atlas-ref-zoom-dot {
+  height: 4px;
+  border-radius: 999px;
+  background: #dce3ec;
+}
+.atlas-ref-zoom-dot.active,
+.atlas-ref-zoom-dot.done {
+  background: var(--atlas-blue);
+}
+.atlas-ref-leftbar {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: start;
+  display: grid;
+  justify-items: center;
+  gap: .6rem;
+  padding: .75rem 0;
+  border: 1px solid var(--atlas-line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 24px -16px rgba(20,35,60,.3);
+}
+.atlas-ref-leftbar button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  width: 64px;
+  display: grid;
+  justify-items: center;
+  gap: .3rem;
+  color: #8893a2;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.atlas-ref-leftbar button span:first-child {
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--atlas-line);
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: #5b6573;
+  font-size: 17px;
+}
+.atlas-ref-leftbar button.active span:first-child {
+  background: var(--atlas-navy);
+  color: #fff;
+  box-shadow: 0 8px 18px -8px rgba(19,36,60,.7);
+}
+.atlas-ref-leftbar button.active { color: var(--atlas-navy); }
+.atlas-ref-main {
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.atlas-ref-shell .atlas2d-shell {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+}
+.atlas-ref-shell .atlas2d-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
+  padding: .4rem 0;
+  border: 0;
+  background: transparent;
+}
+.atlas-ref-shell .atlas2d-breadcrumb {
+  color: #6b7686;
+  font-weight: 600;
+}
+.atlas-ref-shell .atlas2d-crumb {
+  color: var(--atlas-blue);
+  font-weight: 700;
+}
+.atlas-ref-shell .atlas2d-zoom-controls {
+  justify-content: flex-end;
+}
+.atlas-ref-shell .atlas2d-viewport {
+  min-height: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: default;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1rem;
+  align-items: start;
+}
+.atlas-ref-shell .atlas2d-map {
+  min-height: 430px;
+  border: 1px solid var(--atlas-line);
+  border-radius: 24px;
+  background: rgba(255,255,255,.82);
+  padding: 1.35rem;
+  box-shadow: 0 18px 44px -30px rgba(20,35,60,.45);
+  cursor: default;
+}
+.atlas-ref-shell .atlas2d-map-title {
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+.atlas-ref-shell .atlas2d-map-title h3 {
+  color: var(--atlas-ink);
+  font-size: 26px;
+}
+.atlas-ref-shell .atlas2d-map-title p {
+  color: #6b7686;
+  max-width: 720px;
+}
+.atlas-ref-shell .atlas2d-node-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.atlas-ref-shell .atlas2d-node-grid.atlas-ref-macro-grid {
+  display: flex;
+  align-items: stretch;
+  gap: 1.25rem;
+}
+.atlas-ref-shell .atlas2d-node {
+  min-height: 146px;
+  border: 1.5px solid #d2e1f2;
+  border-left-width: 1.5px;
+  border-radius: 22px;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #eaf2fb 0%, #fff 48%);
+  box-shadow: 0 18px 44px -30px rgba(20,35,60,.45);
+}
+.atlas-ref-macro-card {
+  appearance: none;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 390px;
+  cursor: pointer;
+  border: 1.5px solid var(--tone-line);
+  border-radius: 24px;
+  padding: 3.35rem 1.4rem 1.35rem;
+  background: linear-gradient(180deg, var(--tone-soft) 0%, #fff 42%);
+  box-shadow: 0 18px 44px -30px rgba(20,35,60,.45);
+  color: var(--tone-ink);
+  transition: transform .2s, box-shadow .2s, border-color .2s, opacity .2s;
+}
+.atlas-ref-macro-card:hover,
+.atlas-ref-macro-card.hover-target {
+  transform: translateY(-3px);
+  border-color: var(--tone-main);
+  box-shadow: 0 26px 60px -28px color-mix(in srgb, var(--tone-main) 80%, transparent);
+}
+.atlas-ref-macro-card.selected {
+  border-color: var(--tone-main);
+}
+.atlas-ref-macro-badge {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 4px solid #fff;
+  background: var(--tone-main);
+  color: #fff;
+  font-family: 'Crimson Pro', serif;
+  font-size: 30px;
+  font-weight: 700;
+  box-shadow: 0 12px 26px -10px color-mix(in srgb, var(--tone-main) 70%, transparent);
+}
+.atlas-ref-macro-title {
+  text-align: center;
+  margin-bottom: 1.15rem;
+}
+.atlas-ref-macro-title strong {
+  display: block;
+  color: var(--tone-ink);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+.atlas-ref-macro-title span {
+  display: block;
+  margin-top: .25rem;
+  color: var(--tone-ink);
+  opacity: .78;
+  font-family: 'Crimson Pro', serif;
+  font-size: 22px;
+}
+.atlas-ref-macro-chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .6rem;
+}
+.atlas-ref-macro-chip {
+  min-height: 58px;
+  display: grid;
+  place-content: center;
+  gap: .15rem;
+  padding: .65rem .55rem;
+  border: 1px solid #e6e9ee;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+.atlas-ref-macro-chip.wide {
+  grid-column: span 2;
+}
+.atlas-ref-macro-chip b {
+  color: var(--tone-ink);
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+.atlas-ref-macro-chip span {
+  color: #9aa4b2;
+  font-family: 'Crimson Pro', serif;
+  font-size: 14px;
+}
+.atlas-ref-macro-chip small {
+  color: #6b7686;
+  font-size: 11px;
+  line-height: 1.35;
+}
+.atlas-ref-macro-foot {
+  margin-top: 1rem;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .85rem 1rem;
+  border-radius: 15px;
+  background: var(--tone-soft2);
+}
+.atlas-ref-macro-foot-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  background: rgba(255,255,255,.65);
+  color: var(--tone-ink);
+  font-weight: 800;
+}
+.atlas-ref-macro-foot b {
+  display: block;
+  color: var(--tone-ink);
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+.atlas-ref-macro-foot span {
+  display: block;
+  margin-top: .15rem;
+  color: #6b7686;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.atlas-ref-tone-escrita {
+  --tone-main: #2d6cb4;
+  --tone-soft: #eaf2fb;
+  --tone-soft2: #e2ecf9;
+  --tone-line: #d2e1f2;
+  --tone-ink: #235a99;
+}
+.atlas-ref-tone-oral {
+  --tone-main: #579372;
+  --tone-soft: #ebf3ee;
+  --tone-soft2: #e1eee6;
+  --tone-line: #d3e4d9;
+  --tone-ink: #3e7a5b;
+}
+.atlas-ref-tone-halacha {
+  --tone-main: #c7a050;
+  --tone-soft: #f8f1e2;
+  --tone-soft2: #f2e7cf;
+  --tone-line: #e8dbbc;
+  --tone-ink: #9c7a2c;
+}
+.atlas-ref-shell .atlas2d-node:hover,
+.atlas-ref-shell .atlas2d-node.hover-target {
+  transform: translateY(-3px);
+  border-color: var(--atlas-blue);
+  box-shadow: 0 26px 60px -28px rgba(45,108,180,.78);
+}
+.atlas-ref-shell .atlas2d-node.selected {
+  border-color: var(--atlas-blue);
+  box-shadow: 0 26px 60px -28px rgba(45,108,180,.78);
+}
+.atlas-ref-shell .atlas2d-node-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  margin-bottom: .75rem;
+  background: #2d6cb4;
+  color: #fff;
+  font-family: 'Crimson Pro', serif;
+  font-size: 22px;
+}
+.atlas-ref-shell .atlas2d-node-label {
+  color: #235a99;
+  font-size: 23px;
+}
+.atlas-ref-shell .atlas2d-node-meta {
+  color: #6b7686;
+}
+.atlas-ref-panel {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  align-self: start;
+  display: grid;
+  gap: 1rem;
+}
+.atlas-ref-shell .atlas2d-layer-panel {
+  position: static;
+  width: auto;
+  border-color: var(--atlas-line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 18px 50px -26px rgba(20,35,60,.45);
+  padding: 1.1rem;
+}
+.atlas-ref-shell .atlas2d-panel-title {
+  color: var(--atlas-ink);
+  font-weight: 800;
+}
+.atlas-ref-focus-card {
+  margin-top: 1rem;
+  min-height: 188px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem 1.2rem;
+  border-radius: 20px;
+  background: linear-gradient(165deg, #1b3354, #0e1e34);
+  color: #fff;
+  box-shadow: 0 16px 40px -18px rgba(15,33,56,.7);
+}
+.atlas-ref-focus-kicker {
+  color: var(--atlas-gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.atlas-ref-focus-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.atlas-ref-compass {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: 2px solid rgba(203,182,122,.4);
+  display: grid;
+  place-items: center;
+  color: var(--atlas-gold);
+  font-size: 30px;
+}
+.atlas-ref-focus-card button {
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--atlas-gold);
+  color: var(--atlas-navy);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.atlas-ref-shell .atlas2d-filter-row label {
+  justify-content: space-between;
+  gap: .75rem;
+}
+.atlas-ref-scroll-toggle {
+  margin-top: .75rem;
+  padding-top: .75rem;
+  border-top: 1px solid var(--atlas-line);
+}
+.atlas-ref-timeline {
+  grid-column: 2;
+  grid-row: 3;
+}
+.atlas-ref-shell .atlas2d-floating-timeline {
+  position: static;
+  width: auto;
+  border: 1px solid var(--atlas-line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 14px 40px -22px rgba(20,35,60,.4);
+  padding: 1rem 1.35rem 1.1rem;
+}
+.atlas-ref-shell .atlas2d-time-head {
+  color: #13243c;
+  font-weight: 700;
+}
+.atlas-ref-shell .atlas2d-time-bar {
+  background: #dde3ea;
+}
+.atlas-ref-shell .atlas2d-action-btn,
+.atlas-ref-shell .atlas2d-zoom-btn {
+  border-color: var(--atlas-line);
+  border-radius: 12px;
+  color: #4a5462;
+}
+.atlas-ref-shell .atlas2d-action-btn:hover,
+.atlas-ref-shell .atlas2d-zoom-btn:hover {
+  border-color: var(--atlas-blue);
+  color: var(--atlas-blue);
+}
+
 /* SHARED COMPONENTS */
 .badge {
   display: inline-block; padding: 2px 8px; border-radius: 20px;
@@ -1021,6 +1635,29 @@ body.atlas-grabbing, body.atlas-grabbing * {
   }
   .atlas2d-floating-timeline {
     padding: .65rem 1rem .7rem;
+  }
+  .atlas-ref-topbar {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+  .atlas-ref-tools {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: .25rem;
+  }
+  .atlas-ref-stage {
+    display: block;
+    min-height: 0;
+    padding: 1rem;
+  }
+  .atlas-ref-shell .atlas2d-viewport {
+    display: block;
+  }
+  .atlas-ref-shell .atlas2d-layer-panel {
+    margin-top: 1rem;
+  }
+  .atlas-ref-stage > .atlas2d-floating-timeline {
+    margin-top: 1rem;
   }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
@@ -1367,9 +2004,55 @@ body.atlas-grabbing, body.atlas-grabbing * {
 </div>
 
 <!-- ════════════════════════ PAGE 3: ATLAS 2D ════════════════════════ -->
-<div id="page-atlas" class="page">
+<div id="page-atlas" class="page atlas-ref-page">
+  <div class="atlas-ref-shell">
+    <header class="atlas-ref-topbar">
+      <div class="atlas-ref-brand">
+        <div class="atlas-ref-logo">T</div>
+        <div>
+          <div class="atlas-ref-title">Estrutura da Tora</div>
+          <div class="atlas-ref-kicker">Atlas visual do conhecimento</div>
+        </div>
+      </div>
+      <div class="atlas-ref-search">Pesquisar na Tora, temas, livros, personagens...</div>
+      <div class="atlas-ref-tools" aria-label="Ferramentas do Atlas">
+        <button class="atlas-ref-tool" type="button"><span>*</span><span>Explorar</span></button>
+        <button class="atlas-ref-tool" type="button"><span>=</span><span>Camadas</span></button>
+        <button class="atlas-ref-tool" type="button"><span>[]</span><span>Visao 3D</span></button>
+        <button class="atlas-ref-tool" type="button"><span>+</span><span>Favoritos</span></button>
+        <button class="atlas-ref-tool" type="button"><span>/</span><span>Anotacoes</span></button>
+      </div>
+      <div class="atlas-ref-user">
+        <div class="atlas-ref-user-icon">U</div>
+        <div><strong>Estudante</strong><span>Nivel 1</span></div>
+      </div>
+    </header>
+    <div class="atlas-ref-stage">
   <div class="sec-title">Atlas 2D</div>
   <div class="sec-sub">Drill-down visual por estrutura, tempo, milestones, personagens e fatos</div>
+
+  <div class="atlas-ref-zoom">
+    <div class="atlas-ref-zoom-title">Cada zoom revela mais detalhe e compreensão</div>
+    <div class="atlas-ref-zoom-sub">Cada aproximação muda o contexto, a timeline e as relações visíveis</div>
+    <div class="atlas-ref-zoom-row">
+      <button class="atlas2d-zoom-btn" onclick="atlasZoom(-1)">−</button>
+      <div class="atlas-ref-zoom-track" aria-hidden="true">
+        <span class="atlas-ref-zoom-dot active"></span>
+        <span class="atlas-ref-zoom-dot"></span>
+        <span class="atlas-ref-zoom-dot"></span>
+        <span class="atlas-ref-zoom-dot"></span>
+        <span class="atlas-ref-zoom-dot"></span>
+      </div>
+      <button class="atlas2d-zoom-btn" onclick="atlasZoom(1)">+</button>
+    </div>
+  </div>
+
+  <div class="atlas-ref-leftbar" aria-label="Ferramentas de navegação do Atlas">
+    <button class="active" type="button" onclick="atlasReset()"><span>></span><span>Navegar</span></button>
+    <button type="button" onclick="atlasZoom(1)"><span>+</span><span>Zoom +</span></button>
+    <button type="button" onclick="atlasZoom(-1)"><span>-</span><span>Zoom -</span></button>
+    <button type="button" onclick="atlasReset()"><span>o</span><span>Centralizar</span></button>
+  </div>
 
   <div class="atlas2d-shell">
     <div class="atlas2d-toolbar">
@@ -1414,6 +2097,20 @@ body.atlas-grabbing, body.atlas-grabbing * {
           <label><input id="atlas-layer-themes" type="checkbox" checked onchange="atlasToggleLayer('themes', this.checked)"> Temas</label>
           <label><input id="atlas-layer-facts" type="checkbox" checked onchange="atlasToggleLayer('facts', this.checked)"> Fatos</label>
         </div>
+        <div class="atlas2d-filter-row atlas-ref-scroll-toggle">
+          <label><input id="atlas-wheel-drill" type="checkbox" onchange="atlasToggleWheelDrill(this.checked)"> Usar scroll para aprofundar</label>
+        </div>
+        <div class="atlas-ref-focus-card">
+          <div class="atlas-ref-focus-kicker">Visao atual</div>
+          <div class="atlas-ref-focus-body">
+            <div class="atlas-ref-compass">◎</div>
+            <div>
+              <div id="atlas-focus-level" class="atlas-ref-focus-kicker">Macro</div>
+              <strong id="atlas-focus-label">Macro estrutura</strong>
+            </div>
+          </div>
+          <button type="button" onclick="atlasZoom(1)">Ver foco da navegacao</button>
+        </div>
       </aside>
 
     </div>
@@ -1426,6 +2123,8 @@ body.atlas-grabbing, body.atlas-grabbing * {
     </div>
     <div id="atlas-time-bar" class="atlas2d-time-bar"></div>
     <div class="atlas2d-time-labels"><span>0 AM</span><span>2448</span><span>3339</span><span>5785</span></div>
+  </div>
+  </div>
   </div>
 </div>
 
@@ -2305,6 +3004,7 @@ const atlasState = {
   selectedMilestoneId: null,
   selectedGroupId: null,
   layers: { people: true, themes: true, facts: true },
+  wheelDrill: false,
   wheelAt: 0,
   hoverTarget: null,
   grab: null
@@ -2360,6 +3060,7 @@ function atlasZoom(delta) {
 }
 
 function atlasHandleWheel(ev) {
+  if (!atlasState.wheelDrill) return;
   const now = Date.now();
   if (now - atlasState.wheelAt < 260) return;
   atlasState.wheelAt = now;
@@ -2412,6 +3113,10 @@ function atlasToggleLayer(layer, isOn) {
   atlasRender();
 }
 
+function atlasToggleWheelDrill(isOn) {
+  atlasState.wheelDrill = isOn;
+}
+
 function atlasSetHoverTarget(kind, id) {
   atlasState.hoverTarget = atlasCanHoverDrill(kind, id) ? { kind, id } : null;
   atlasMarkHoverTarget();
@@ -2425,10 +3130,10 @@ function atlasClearHoverTarget(kind = null, id = null) {
 }
 
 function atlasMarkHoverTarget() {
-  document.querySelectorAll('.atlas2d-node.hover-target').forEach(node => node.classList.remove('hover-target'));
+  document.querySelectorAll('.atlas2d-node.hover-target, .atlas-ref-macro-card.hover-target').forEach(node => node.classList.remove('hover-target'));
   const target = atlasState.hoverTarget;
   if (!target) return;
-  document.querySelectorAll('.atlas2d-node').forEach(node => {
+  document.querySelectorAll('.atlas2d-node, .atlas-ref-macro-card').forEach(node => {
     if (node.dataset.atlasKind === target.kind && node.dataset.atlasId === target.id) {
       node.classList.add('hover-target');
     }
@@ -2436,12 +3141,12 @@ function atlasMarkHoverTarget() {
 }
 
 function atlasCanHoverDrill(kind, id) {
-  if (kind === 'macro-oral' || kind === 'unit') return false;
+  if (kind === 'unit') return false;
   if (kind === 'book' && atlasState.selectedBookKey === id && atlasState.zoom >= 2) return false;
   if (kind === 'phase' && atlasState.selectedPhaseId === id && atlasState.zoom >= 2) return false;
   if (kind === 'milestone' && atlasState.selectedMilestoneId === id && atlasState.zoom >= 3) return false;
   if (kind === 'group' && atlasState.selectedGroupId === id && atlasState.zoom >= 3) return false;
-  return ['macro-chumash', 'macro-nach', 'book', 'phase', 'milestone', 'group'].includes(kind);
+  return ['macro-chumash', 'macro-nach', 'macro-oral', 'macro-halacha', 'book', 'phase', 'milestone', 'group'].includes(kind);
 }
 
 function atlasFindBook(data, bookKey) {
@@ -2484,7 +3189,7 @@ async function atlasSelect(kind, id) {
     atlasState.selectedPhaseId = null;
     atlasState.selectedMilestoneId = null;
     atlasState.selectedGroupId = null;
-  } else if (kind === 'macro-oral') {
+  } else if (kind === 'macro-oral' || kind === 'macro-halacha') {
     drillGo('mishna');
     return;
   } else if (kind === 'book') {
@@ -2542,6 +3247,16 @@ async function atlasRender() {
   document.getElementById('atlas-map-title').textContent = t(ctx.title);
   document.getElementById('atlas-map-sub').textContent = t(ctx.sub);
   document.getElementById('atlas-zoom-label').textContent = t(atlasZoomLabel());
+  document.querySelectorAll('.atlas-ref-zoom-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === atlasState.zoom);
+    dot.classList.toggle('done', i < atlasState.zoom);
+  });
+  const wheelToggle = document.getElementById('atlas-wheel-drill');
+  if (wheelToggle) wheelToggle.checked = atlasState.wheelDrill;
+  const focusLevel = document.getElementById('atlas-focus-level');
+  const focusLabel = document.getElementById('atlas-focus-label');
+  if (focusLevel) focusLevel.textContent = atlasState.zoom === 0 ? 'Macro' : atlasZoomLabel();
+  if (focusLabel) focusLabel.textContent = atlasState.zoom === 0 ? 'Macro estrutura' : t(ctx.title);
   atlasRenderBreadcrumb(ctx);
   atlasRenderNodes(ctx.nodes || []);
   atlasRenderSidePanel(ctx);
@@ -2558,7 +3273,7 @@ function atlasZoomLabel() {
 async function atlasBuildContext(milestoneData, groupData) {
   const ctx = {
     title: 'Mapa macro da tradição',
-    sub: 'Use scroll ou os botões de zoom para aprofundar. Clique em um nó para selecionar uma área.',
+    sub: 'Use os botões de zoom para aprofundar. O scroll do mouse só vira drill quando o controle de scroll estiver ativado.',
     nodes: [],
     people: [],
     themes: [],
@@ -2568,9 +3283,77 @@ async function atlasBuildContext(milestoneData, groupData) {
 
   if (atlasState.zoom === 0) {
     ctx.nodes = [
-      { kind: 'macro-chumash', id: 'chumash', icon: 'ח', label: 'Chumash', sub: 'Cinco livros, parashiot, milestones e fatos.', meta: 'Torá Escrita' },
-      { kind: 'macro-nach', id: 'nach', icon: 'AM', label: 'Linha histórica / Nach', sub: 'Fases AM com agrupadores de Chumash, Nach e Ketuvim.', meta: 'Eixo do tempo' },
-      { kind: 'macro-oral', id: 'oral', icon: 'ת', label: 'Torá Oral', sub: 'Mishna, Guemara e Halachá permanecem como camada futura do Atlas.', meta: 'Modelo futuro' }
+      {
+        kind: 'macro-chumash',
+        id: 'chumash',
+        icon: 'ח',
+        label: 'Torá Escrita',
+        sub: 'Chumash, Nach, profetas e escritos.',
+        meta: 'Área da Torá',
+        macro: {
+          tone: 'escrita',
+          badge: 'ח',
+          title: 'TORÁ ESCRITA',
+          he: 'תורה שבכתב',
+          footIcon: '□',
+          footTitle: 'A REVELAÇÃO ESCRITA',
+          footDesc: 'A fundação textual do Atlas',
+          chips: [
+            { t: 'CHUMASH', h: 'חומש' },
+            { t: 'NACH', h: 'נ״ך' },
+            { t: '5 LIVROS', h: 'חמשה חומשי תורה', wide: true },
+            { t: 'PROFETAS', h: 'נביאים' },
+            { t: 'ESCRITOS', h: 'כתובים' }
+          ]
+        }
+      },
+      {
+        kind: 'macro-oral',
+        id: 'oral',
+        icon: 'ע',
+        label: 'Torá Oral',
+        sub: 'Mishna, Guemara, transmissão e tradição viva.',
+        meta: 'Camada interpretativa',
+        macro: {
+          tone: 'oral',
+          badge: 'ע',
+          title: 'TORÁ ORAL',
+          he: 'תורה שבעל פה',
+          footIcon: '◇',
+          footTitle: 'A TORÁ É UMA UNIDADE COMPLETA',
+          footDesc: 'A tradição oral organiza leitura, prática e memória',
+          chips: [
+            { t: 'MISHNÁ', h: 'משנה' },
+            { t: 'GUEMARÁ', h: 'גמרא' },
+            { t: 'TANAIM', h: 'תנאים' },
+            { t: 'AMORAIM', h: 'אמוראים' },
+            { t: 'TRANSMISSÃO VIVA', sub: 'Explicação e desenvolvimento oral da lei ao longo do tempo.', wide: true }
+          ]
+        }
+      },
+      {
+        kind: 'macro-halacha',
+        id: 'halacha',
+        icon: 'ה',
+        label: 'Halachá',
+        sub: 'Codificação, aplicação e vida prática.',
+        meta: 'Modelo futuro',
+        macro: {
+          tone: 'halacha',
+          badge: 'ה',
+          title: 'HALACHÁ',
+          he: 'הלכה',
+          footIcon: '♡',
+          footTitle: 'APLICAÇÃO NA VIDA',
+          footDesc: 'Lei, prática e serviço no cotidiano',
+          chips: [
+            { t: 'RAMBAM', h: 'רמב״ם' },
+            { t: 'TUR', h: 'טור' },
+            { t: 'SHULCHAN ARUCH', h: 'שולחן ערוך' },
+            { t: 'ORACH CHAIM', h: 'אורח חיים' }
+          ]
+        }
+      }
     ];
     ctx.people = atlasCountList(['Adam', 'Noach', 'Avraham', 'Moshe', 'David']);
     ctx.themes = atlasCountList(['criação', 'aliança', 'terra', 'revelação', 'templo']);
@@ -2792,6 +3575,11 @@ function atlasRenderNodes(nodes) {
     root.innerHTML = `<div class="atlas2d-empty">${t('Nenhum nó disponível para este nível.')}</div>`;
     return;
   }
+  root.classList.toggle('atlas-ref-macro-grid', atlasState.zoom === 0);
+  if (atlasState.zoom === 0) {
+    root.innerHTML = nodes.map(atlasRenderMacroNode).join('');
+    return;
+  }
   root.innerHTML = nodes.map(node => `
     <button class="atlas2d-node ${node.selected ? 'selected' : ''} ${atlasState.hoverTarget?.kind === node.kind && atlasState.hoverTarget?.id === node.id ? 'hover-target' : ''}" data-atlas-kind="${atlasEsc(node.kind)}" data-atlas-id="${atlasEsc(node.id)}" onclick="atlasSelect('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseenter="atlasSetHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseleave="atlasClearHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')">
       <span class="atlas2d-node-icon">${node.visual && node.visual.asset ? `<span class="icon-mask" style="--icon:url('${node.visual.asset}')"></span>` : atlasEsc(node.icon || '•')}</span>
@@ -2800,6 +3588,36 @@ function atlasRenderNodes(nodes) {
       <span class="atlas2d-node-meta">${atlasEsc(node.meta || '')}</span>
     </button>
   `).join('');
+}
+
+function atlasRenderMacroNode(node) {
+  const macro = node.macro || {};
+  const tone = macro.tone || 'escrita';
+  const chips = (macro.chips || []).map(ch => `
+    <span class="atlas-ref-macro-chip ${ch.wide ? 'wide' : ''}">
+      <b>${atlasEsc(ch.t)}</b>
+      ${ch.h ? `<span>${atlasEsc(ch.h)}</span>` : ''}
+      ${ch.sub ? `<small>${atlasEsc(ch.sub)}</small>` : ''}
+    </span>
+  `).join('');
+  const isHover = atlasState.hoverTarget?.kind === node.kind && atlasState.hoverTarget?.id === node.id;
+  return `
+    <button class="atlas-ref-macro-card atlas-ref-tone-${atlasEsc(tone)} ${node.selected ? 'selected' : ''} ${isHover ? 'hover-target' : ''}" data-atlas-kind="${atlasEsc(node.kind)}" data-atlas-id="${atlasEsc(node.id)}" onclick="atlasSelect('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseenter="atlasSetHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseleave="atlasClearHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')">
+      <span class="atlas-ref-macro-badge">${atlasEsc(macro.badge || node.icon || '')}</span>
+      <span class="atlas-ref-macro-title">
+        <strong>${atlasEsc(macro.title || node.label)}</strong>
+        <span>${atlasEsc(macro.he || '')}</span>
+      </span>
+      <span class="atlas-ref-macro-chips">${chips}</span>
+      <span class="atlas-ref-macro-foot">
+        <span class="atlas-ref-macro-foot-icon">${atlasEsc(macro.footIcon || node.icon || '')}</span>
+        <span>
+          <b>${atlasEsc(macro.footTitle || node.meta || '')}</b>
+          <span>${atlasEsc(macro.footDesc || node.sub || '')}</span>
+        </span>
+      </span>
+    </button>
+  `;
 }
 
 function atlasRenderSidePanel(ctx) {

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#2F5D86; --accent-soft:#E9EFF4; --accent-ink:#244A6B;
+    --paper:#F7F5F0; --surface:#FFFFFF; --surface2:#FCFBF8;
+    --ink:#1B1A17; --ink-soft:#57534B; --ink-faint:#8C877C;
+    --line:#E7E3DA; --line-soft:#EFECE5;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; }
+  body{ background:var(--paper); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  ::selection{ background:var(--accent-soft); }
+  @keyframes drawerIn{ from{ opacity:0; transform:translateY(10px); } to{ opacity:1; transform:translateY(0); } }
+</style>
+</helmet>
+
+<div style="min-height:100vh; background:var(--paper);">
+
+  <header style="position:sticky; top:0; z-index:40; background:rgba(247,245,240,0.86); backdrop-filter:blur(12px); border-bottom:1px solid var(--line);">
+    <div style="max-width:1180px; margin:0 auto; padding:0 32px; height:66px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="#" style="display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--ink);">
+        <span style="font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:26px; line-height:1; letter-spacing:0.5px;">תּוֹרָה</span>
+        <span style="font-family:'Newsreader',serif; font-size:19px; letter-spacing:0.2px; color:var(--ink-soft);">Explorer</span>
+      </a>
+      <nav style="display:flex; align-items:center; gap:4px; font-size:13.5px; font-weight:500;">
+        <a href="#" style="padding:7px 13px; border-radius:8px; text-decoration:none; color:var(--accent-ink); background:var(--accent-soft);">Estrutura</a>
+        <a href="#" style="padding:7px 13px; border-radius:8px; text-decoration:none; color:var(--ink-soft);" style-hover="background:var(--line-soft);">Linha do Tempo</a>
+        <a href="#" style="padding:7px 13px; border-radius:8px; text-decoration:none; color:var(--ink-soft);" style-hover="background:var(--line-soft);">Atlas 2D</a>
+        <a href="#" style="padding:7px 13px; border-radius:8px; text-decoration:none; color:var(--ink-soft);" style-hover="background:var(--line-soft);">Mishná & Guemará</a>
+        <a href="#" style="padding:7px 13px; border-radius:8px; text-decoration:none; color:var(--ink-soft);" style-hover="background:var(--line-soft);">Chumash</a>
+        <a href="#" style="padding:7px 13px; border-radius:8px; text-decoration:none; color:var(--ink-soft);" style-hover="background:var(--line-soft);">Pessukim</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:2px; padding:3px; background:var(--surface); border:1px solid var(--line); border-radius:9px; font-size:12px; font-weight:600;">
+        <span style="padding:4px 9px; border-radius:6px; background:var(--ink); color:#fff;">PT</span>
+        <span style="padding:4px 9px; border-radius:6px; color:var(--ink-faint); cursor:pointer;" style-hover="background:var(--line-soft);">EN</span>
+        <span style="padding:4px 9px; border-radius:6px; color:var(--ink-faint); cursor:pointer;" style-hover="background:var(--line-soft);">ES</span>
+        <span style="padding:4px 9px; border-radius:6px; color:var(--ink-faint); cursor:pointer; font-family:'Frank Ruhl Libre',serif; font-size:14px;" style-hover="background:var(--line-soft);">עב</span>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width:1180px; margin:0 auto; padding:0 32px;">
+
+    <section style="padding:64px 0 8px;">
+      <div style="display:inline-flex; align-items:center; gap:9px; padding:6px 13px; border:1px solid var(--line); border-radius:999px; background:var(--surface); font-size:12px; font-weight:600; letter-spacing:1.4px; color:var(--accent-ink);">
+        <span style="width:7px; height:7px; border-radius:50%; background:var(--accent);"></span>
+        ESTRUTURA DA TORÁ
+      </div>
+      <h1 style="font-family:'Newsreader',serif; font-weight:500; font-size:clamp(40px,5.4vw,62px); line-height:1.04; letter-spacing:-0.5px; margin:24px 0 0; max-width:15ch;">Da Torá Escrita à <em style="font-style:italic; color:var(--accent);">Halachá</em></h1>
+      <p style="font-size:18px; line-height:1.6; color:var(--ink-soft); max-width:54ch; margin:20px 0 0;">O caminho da transmissão, em camadas. Explore os cinco níveis de estudo — da estrutura geral ao versículo-fonte — com referências visuais que encurtam a curva de aprendizado.</p>
+    </section>
+
+    <sc-if value="{{ showMap }}" hint-placeholder-val="{{ true }}">
+    <section style="margin-top:46px; padding:28px 30px; background:var(--surface); border:1px solid var(--line); border-radius:20px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:26px;">
+        <span style="font-size:12px; font-weight:700; letter-spacing:1.5px; color:var(--ink-faint);">OS CINCO NÍVEIS DO DRILL-DOWN</span>
+        <span style="font-size:13px; color:var(--ink-faint);">geral → específico</span>
+      </div>
+      <div style="position:relative;">
+        <div style="position:absolute; top:21px; left:10%; right:10%; height:2px; background:var(--line);"></div>
+        <div style="position:relative; display:flex; justify-content:space-between; gap:10px;">
+
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:11px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; box-shadow:0 6px 16px -6px var(--accent);">1</div>
+            <div style="font-weight:600; font-size:14.5px;">Estrutura</div>
+            <div style="font-size:12.5px; color:var(--ink-faint); line-height:1.4;">Escrita · Oral · Halachá</div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:11px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--surface); border:1.5px solid var(--line); color:var(--ink-soft); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">2</div>
+            <div style="font-weight:600; font-size:14.5px;">5 Livros</div>
+            <div style="font-size:12.5px; color:var(--ink-faint); line-height:1.4;">Mapa do Chumash</div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:11px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--surface); border:1.5px solid var(--line); color:var(--ink-soft); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">3</div>
+            <div style="font-weight:600; font-size:14.5px;">Milestones</div>
+            <div style="font-size:12.5px; color:var(--ink-faint); line-height:1.4;">Agregadores narrativos</div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:11px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--surface); border:1.5px solid var(--line); color:var(--ink-soft); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">4</div>
+            <div style="font-weight:600; font-size:14.5px;">Parashá</div>
+            <div style="font-size:12.5px; color:var(--ink-faint); line-height:1.4;">Régua, temas e fatos</div>
+          </div>
+          <div style="flex:1; display:flex; flex-direction:column; align-items:center; text-align:center; gap:11px;">
+            <div style="width:44px; height:44px; border-radius:50%; background:var(--surface); border:1.5px solid var(--line); color:var(--ink-soft); display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">5</div>
+            <div style="font-weight:600; font-size:14.5px;">Pessukim</div>
+            <div style="font-size:12.5px; color:var(--ink-faint); line-height:1.4;">Texto-fonte · Sefaria</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <section style="margin-top:64px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-bottom:22px;">
+        <h2 style="font-family:'Newsreader',serif; font-weight:500; font-size:25px; margin:0;">O caminho da transmissão</h2>
+        <span style="font-size:13px; color:var(--ink-faint);">clique para abrir um nível</span>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:14px; align-items:stretch;">
+
+        <div style="grid-column:1; grid-row:1; display:flex; flex-direction:column; align-items:center; gap:1px; padding:9px 14px; background:var(--accent-soft); border-radius:12px;">
+          <span style="font-size:11px; font-weight:700; letter-spacing:1.6px; color:var(--accent-ink);">TORÁ ESCRITA</span>
+          <span style="font-family:'Frank Ruhl Libre',serif; font-size:15px; color:var(--accent-ink);">תּוֹרָה שֶׁבִּכְתָב</span>
+        </div>
+        <div style="grid-column:3 / span 3; grid-row:1; display:flex; flex-direction:column; align-items:center; gap:1px; padding:9px 14px; background:var(--accent); border-radius:12px;">
+          <span style="font-size:11px; font-weight:700; letter-spacing:1.6px; color:#fff;">TORÁ ORAL</span>
+          <span style="font-family:'Frank Ruhl Libre',serif; font-size:15px; color:rgba(255,255,255,0.92);">תּוֹרָה שֶׁבְּעַל פֶּה</span>
+        </div>
+
+        <button onClick="{{ selMikra }}" style="{{ ringMikra }}" style-hover="border-color:var(--accent);">
+          <div style="{{ barMikra }}"></div>
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+            <span style="font-size:11px; font-weight:700; letter-spacing:1.3px; color:var(--ink-faint);">PATRIARCAS · PROFETAS</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin:16px 0 4px;">
+            <div style="font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:50px; line-height:1; color:var(--ink);">מִקְרָא</div>
+            <span style="width:54px; height:54px; border-radius:15px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; color:var(--accent); flex:none;"><span style="{{ iconStyleMikra }}"></span></span>
+          </div>
+          <div style="font-family:'Newsreader',serif; font-size:23px; margin-bottom:8px;">Mikra</div>
+          <div style="font-size:14px; line-height:1.5; color:var(--ink-soft);">A Torá Escrita — o texto revelado: Chumash &amp; Nach.</div>
+        </button>
+
+        <div style="grid-column:2; grid-row:2; display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:22px; font-weight:700; user-select:none;">›››</div>
+
+        <button onClick="{{ selTalmud }}" style="{{ ringTalmud }}" style-hover="border-color:var(--accent);">
+          <div style="{{ barTalmud }}"></div>
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+            <span style="font-size:11px; font-weight:700; letter-spacing:1.3px; color:var(--ink-faint);">TANAIM · AMORAIM</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin:16px 0 4px;">
+            <div style="font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:50px; line-height:1; color:var(--ink);">תַּלְמוּד</div>
+            <span style="width:54px; height:54px; border-radius:15px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; color:var(--accent); flex:none;"><span style="{{ iconStyleTalmud }}"></span></span>
+          </div>
+          <div style="font-family:'Newsreader',serif; font-size:23px; margin-bottom:8px;">Talmud</div>
+          <div style="font-size:14px; line-height:1.5; color:var(--ink-soft);">A Torá Oral — Mishná &amp; Guemará.</div>
+        </button>
+
+        <div style="grid-column:4; grid-row:2; display:flex; align-items:center; justify-content:center; color:var(--accent); font-size:22px; font-weight:700; user-select:none;">›››</div>
+
+        <button onClick="{{ selHalacha }}" style="{{ ringHalacha }}" style-hover="border-color:var(--accent);">
+          <div style="{{ barHalacha }}"></div>
+          <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px;">
+            <span style="font-size:11px; font-weight:700; letter-spacing:1.3px; color:var(--ink-faint);">RISHONIM · ACHARONIM</span>
+          </div>
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; margin:16px 0 4px;">
+            <div style="font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:50px; line-height:1; color:var(--ink);">הֲלָכָה</div>
+            <span style="width:54px; height:54px; border-radius:15px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; color:var(--accent); flex:none;"><span style="{{ iconStyleHalacha }}"></span></span>
+          </div>
+          <div style="font-family:'Newsreader',serif; font-size:23px; margin-bottom:8px;">Halachá</div>
+          <div style="font-size:14px; line-height:1.5; color:var(--ink-soft);">A lei prática — codificadores &amp; Shulchan Aruch.</div>
+        </button>
+
+      </div>
+    </section>
+
+    <section style="margin-top:18px; padding-bottom:80px;">
+      <div key="{{ detailKey }}" style="animation:drawerIn 0.4s ease both; background:var(--surface); border:1px solid var(--line); border-radius:22px; overflow:hidden;">
+
+        <div style="padding:26px 30px; border-bottom:1px solid var(--line-soft); display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+          <div>
+            <div style="display:flex; align-items:center; gap:9px; font-size:13px; color:var(--ink-faint); margin-bottom:12px;">
+              <span>Estrutura</span>
+              <span style="color:var(--accent);">›</span>
+              <span style="color:var(--ink); font-weight:600;">{{ detailName }}</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:16px;">
+              <span style="font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:36px; line-height:1; color:var(--accent);">{{ detailHe }}</span>
+              <span style="font-family:'Newsreader',serif; font-size:27px;">{{ detailName }}</span>
+              <span style="font-size:14px; color:var(--ink-faint);">{{ detailTag }}</span>
+            </div>
+          </div>
+          <div style="display:inline-flex; align-items:center; gap:9px; padding:9px 15px; background:var(--accent-soft); border-radius:999px; font-size:13px; font-weight:600; color:var(--accent-ink);">
+            <span style="width:8px; height:8px; border-radius:50%; background:var(--accent);"></span>
+            Nível 2 · {{ detailLevelName }}
+          </div>
+        </div>
+
+        <div style="padding:14px 30px 30px;">
+          <sc-for list="{{ detailGroups }}" as="g" hint-placeholder-count="3">
+            <div style="padding:24px 0; border-bottom:1px solid var(--line-soft);">
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:18px;">
+                <span style="width:34px; height:34px; border-radius:10px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; color:var(--accent); flex:none;"><span style="{{ g.iconStyle }}"></span></span>
+                <span style="font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:22px; color:var(--ink);">{{ g.he }}</span>
+                <span style="font-weight:600; font-size:15px;">{{ g.title }}</span>
+                <span style="font-size:12px; font-weight:600; letter-spacing:0.4px; color:var(--accent-ink); background:var(--accent-soft); padding:3px 9px; border-radius:999px;">{{ g.count }}</span>
+              </div>
+              <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(168px,1fr)); gap:12px;">
+                <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="5">
+                  <div style="padding:15px 16px 16px; background:var(--surface2); border:1px solid var(--line); border-radius:14px; cursor:pointer; transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease;" style-hover="transform:translateY(-3px); border-color:var(--accent); box-shadow:0 12px 24px -16px rgba(31,30,28,0.5);">
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+                      <span style="width:36px; height:36px; border-radius:10px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; color:var(--accent);"><span style="{{ it.iconStyle }}"></span></span>
+                      <span style="color:var(--ink-faint); font-size:15px;">›</span>
+                    </div>
+                    <div style="font-family:'Frank Ruhl Libre',serif; font-weight:700; font-size:26px; line-height:1.1; color:var(--ink);">{{ it.he }}</div>
+                    <div style="font-family:'Newsreader',serif; font-size:16px; margin-top:6px; color:var(--ink);">{{ it.tr }}</div>
+                    <div style="font-size:13px; color:var(--ink-faint); margin-top:3px;">{{ it.gloss }}</div>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-for>
+          <div style="padding-top:20px; display:flex; align-items:center; gap:10px; font-size:13.5px; color:var(--ink-faint);">
+            <span style="color:var(--accent);">↳</span>
+            Continue o drill: <span style="color:var(--ink-soft);">cada item abre Milestones (N3) → Parashá (N4) → Pessukim (N5).</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="border-top:1px solid var(--line); background:var(--surface);">
+    <div style="max-width:1180px; margin:0 auto; padding:22px 32px; display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:13px; color:var(--ink-faint);">
+      <span style="font-family:'Frank Ruhl Libre',serif; font-size:16px; color:var(--ink-soft);">תּוֹרָה Explorer</span>
+      <span>Projeto open source · textos via Sefaria</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:1040},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#2F5D86&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#2F5D86&quot;,&quot;#B05A3C&quot;,&quot;#3C6E57&quot;,&quot;#6B4A78&quot;],&quot;section&quot;:&quot;Aparência&quot;},&quot;showLevelMap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Aparência&quot;},&quot;startPillar&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;mikra&quot;,&quot;options&quot;:[&quot;mikra&quot;,&quot;talmud&quot;,&quot;halacha&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Comportamento&quot;}}">
+class Component extends DCLogic {
+  state = { selected: null };
+
+  componentDidMount(){ this.applyAccent(); }
+  componentDidUpdate(){ this.applyAccent(); }
+
+  applyAccent(){
+    const map = {
+      '#2F5D86': { soft:'#E9EFF4', ink:'#244A6B' },
+      '#B05A3C': { soft:'#F6ECE6', ink:'#8A4126' },
+      '#3C6E57': { soft:'#E8F0EC', ink:'#2C5341' },
+      '#6B4A78': { soft:'#F0EBF2', ink:'#503659' }
+    };
+    const c = this.props.accentColor || '#2F5D86';
+    const e = map[c] || { soft:'#E9EFF4', ink:c };
+    const r = document.documentElement.style;
+    r.setProperty('--accent', c);
+    r.setProperty('--accent-soft', e.soft);
+    r.setProperty('--accent-ink', e.ink);
+  }
+
+  current(){
+    return this.state.selected || this.props.startPillar || 'mikra';
+  }
+
+  iconPaths(){
+    return {
+      scroll:'<path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>',
+      books:'<path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/>',
+      scale:'<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>',
+      sprout:'<path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8Z"/><path d="M14.1 6c-1 1.7-1.1 3.8-.6 5.6 1.9-.3 3.4-1.1 4.3-2.3 1-1.4 1.2-3.4 1.1-5.3-2 .4-3.7 1.3-4.8 2Z"/>',
+      calendar:'<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
+      user:'<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+      coin:'<circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 6v2"/><path d="M12 16v2"/>',
+      flame:'<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5Z"/>',
+      droplet:'<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7Z"/>',
+      sunmoon:'<path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.9 4.9 1.4 1.4"/><path d="m17.7 17.7 1.4 1.4"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.3 17.7-1.4 1.4"/><path d="m19.1 4.9-1.4 1.4"/>',
+      checkx:'<path d="m3 12 3 3 5-6"/><path d="m15 10 5 5"/><path d="m20 10-5 5"/>',
+      users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+      book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>'
+    };
+  }
+
+  maskUri(key){
+    const inner = this.iconPaths()[key] || '';
+    const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+inner+'</svg>';
+    return 'data:image/svg+xml,' + encodeURIComponent(svg);
+  }
+
+  iconStyle(key, size){
+    const u = 'url("' + this.maskUri(key) + '")';
+    return {
+      width: size + 'px', height: size + 'px', display: 'block', flex: 'none',
+      backgroundColor: 'var(--accent)',
+      WebkitMaskImage: u, maskImage: u,
+      WebkitMaskRepeat: 'no-repeat', maskRepeat: 'no-repeat',
+      WebkitMaskPosition: 'center', maskPosition: 'center',
+      WebkitMaskSize: 'contain', maskSize: 'contain'
+    };
+  }
+
+  data(){
+    return {
+      mikra: {
+        he:'מִקְרָא', name:'Mikra', tag:'Torá Escrita', levelName:'5 Livros & Nach',
+        groups:[
+          { he:'תּוֹרָה', title:'Chumash — Torá', count:'5 livros', icon:'#ic-scroll', items:[
+            { he:'בְּרֵאשִׁית', tr:'Bereshit', gloss:'Gênesis', icon:'#ic-sprout' },
+            { he:'שְׁמוֹת', tr:'Shemot', gloss:'Êxodo', icon:'#ic-flame' },
+            { he:'וַיִּקְרָא', tr:'Vayikrá', gloss:'Levítico', icon:'#ic-flame' },
+            { he:'בְּמִדְבַּר', tr:'Bamidbar', gloss:'Números', icon:'#ic-scroll' },
+            { he:'דְּבָרִים', tr:'Devarim', gloss:'Deuteronômio', icon:'#ic-scroll' }
+          ]},
+          { he:'נְבִיאִים', title:'Neviim — Profetas', count:'8 unidades', icon:'#ic-user', items:[
+            { he:'יְהוֹשֻׁעַ', tr:'Yehoshua', gloss:'Josué', icon:'#ic-user' },
+            { he:'שׁוֹפְטִים', tr:'Shoftim', gloss:'Juízes', icon:'#ic-user' },
+            { he:'שְׁמוּאֵל', tr:'Shmuel I·II', gloss:'Samuel', icon:'#ic-user' },
+            { he:'מְלָכִים', tr:'Malachim I·II', gloss:'Reis', icon:'#ic-user' },
+            { he:'יְשַׁעְיָה', tr:'Yeshaya', gloss:'Isaías', icon:'#ic-user' },
+            { he:'יִרְמְיָה', tr:'Yirmiya', gloss:'Jeremias', icon:'#ic-user' },
+            { he:'יְחֶזְקֵאל', tr:'Yechezkel', gloss:'Ezequiel', icon:'#ic-user' },
+            { he:'תְּרֵי עָשָׂר', tr:'Trei Assar', gloss:'Doze Profetas', icon:'#ic-users' }
+          ]},
+          { he:'כְּתוּבִים', title:'Ketuvim — Escrituras', count:'11 livros', icon:'#ic-book', items:[
+            { he:'תְּהִלִּים', tr:'Tehilim', gloss:'Salmos', icon:'#ic-book' },
+            { he:'מִשְׁלֵי', tr:'Mishlei', gloss:'Provérbios', icon:'#ic-book' },
+            { he:'אִיּוֹב', tr:'Iyov', gloss:'Jó', icon:'#ic-book' },
+            { he:'מְגִלּוֹת', tr:'Meguilot', gloss:'Cinco Rolos', icon:'#ic-scroll' },
+            { he:'דָּנִיֵּאל', tr:'Daniel', gloss:'Daniel', icon:'#ic-book' },
+            { he:'עֶזְרָא', tr:'Ezra·Nechemia', gloss:'Retorno', icon:'#ic-book' },
+            { he:'דִּבְרֵי הַיָּמִים', tr:'Divrei Hayamim', gloss:'Crônicas', icon:'#ic-book' }
+          ]}
+        ]
+      },
+      talmud: {
+        he:'תַּלְמוּד', name:'Talmud', tag:'Torá Oral', levelName:'Mishná & Guemará',
+        groups:[
+          { he:'מִשְׁנָה', title:'Mishná — 6 Ordens', count:'6 ordens · 60 tratados', icon:'#ic-books', items:[
+            { he:'זְרָעִים', tr:'Zeraim', gloss:'Sementes', icon:'#ic-sprout' },
+            { he:'מוֹעֵד', tr:'Moed', gloss:'Festividades', icon:'#ic-calendar' },
+            { he:'נָשִׁים', tr:'Nashim', gloss:'Mulheres', icon:'#ic-user' },
+            { he:'נְזִיקִין', tr:'Nezikin', gloss:'Danos · monetário', icon:'#ic-coin' },
+            { he:'קָדָשִׁים', tr:'Kodashim', gloss:'Santidades', icon:'#ic-flame' },
+            { he:'טָהֳרוֹת', tr:'Taharot', gloss:'Pureza ritual', icon:'#ic-droplet' }
+          ]},
+          { he:'גְּמָרָא', title:'Guemará', count:'36 tratados', icon:'#ic-books', items:[
+            { he:'בַּבְלִי', tr:'Talmud Bavli', gloss:'Babilônia', icon:'#ic-books' },
+            { he:'יְרוּשַׁלְמִי', tr:'Yerushalmi', gloss:'Jerusalém', icon:'#ic-books' },
+            { he:'תַּנָּאִים', tr:'Tanaim', gloss:'Sábios da Mishná', icon:'#ic-users' },
+            { he:'אָמוֹרָאִים', tr:'Amoraim', gloss:'Sábios da Guemará', icon:'#ic-users' }
+          ]}
+        ]
+      },
+      halacha: {
+        he:'הֲלָכָה', name:'Halachá', tag:'Lei prática', levelName:'Codificadores',
+        groups:[
+          { he:'רִאשׁוֹנִים', title:'Rishonim — Codificadores', count:'Sec. XI–XV', icon:'#ic-book', items:[
+            { he:'רִי״ף', tr:'Rif', gloss:'R. Yitzchak Alfasi', icon:'#ic-book' },
+            { he:'רַמְבַּ״ם', tr:'Rambam', gloss:'Mishneh Torá', icon:'#ic-book' },
+            { he:'רֹא״שׁ', tr:'Rosh', gloss:'R. Asher ben Yechiel', icon:'#ic-book' },
+            { he:'טוּר', tr:'Tur', gloss:'Arba’á Turim', icon:'#ic-book' }
+          ]},
+          { he:'שֻׁלְחָן עָרוּךְ', title:'Shulchan Aruch — 4 Seções', count:'Lei prática', icon:'#ic-scale', items:[
+            { he:'אֹרַח חַיִּים', tr:'Orach Chaim', gloss:'Vida diária', icon:'#ic-sunmoon' },
+            { he:'יוֹרֶה דֵּעָה', tr:'Yoreh Deah', gloss:'Proibido e permitido', icon:'#ic-checkx' },
+            { he:'אֶבֶן הָעֵזֶר', tr:'Even Haezer', gloss:'Casamento', icon:'#ic-user' },
+            { he:'חֹשֶׁן מִשְׁפָּט', tr:'Choshen Mishpat', gloss:'Leis financeiras', icon:'#ic-coin' }
+          ]}
+        ]
+      }
+    };
+  }
+
+  ring(id){
+    const cols = { mikra:1, talmud:3, halacha:5 };
+    const base = 'grid-column:'+cols[id]+'; grid-row:2; position:relative; text-align:left; cursor:pointer; padding:22px 24px 26px; border-radius:20px; background:var(--surface); font-family:inherit; transition:border-color .18s ease, box-shadow .18s ease, transform .18s ease;';
+    if (id === this.current())
+      return base + ' border:1.5px solid var(--accent); box-shadow:0 18px 40px -22px rgba(47,93,134,0.55); transform:translateY(-2px);';
+    return base + ' border:1.5px solid var(--line);';
+  }
+
+  bar(id){
+    if (id === this.current())
+      return 'position:absolute; left:0; right:0; top:0; height:4px; border-radius:20px 20px 0 0; background:var(--accent);';
+    return 'position:absolute; left:0; right:0; top:0; height:4px; border-radius:20px 20px 0 0; background:transparent;';
+  }
+
+  renderVals(){
+    const cur = this.current();
+    const d = this.data()[cur];
+    const set = (id) => () => this.setState({ selected: id });
+    const k = (s) => (s || '').replace('#ic-', '');
+    const groups = d.groups.map(g => ({
+      ...g,
+      iconStyle: this.iconStyle(k(g.icon), 19),
+      items: g.items.map(it => ({ ...it, iconStyle: this.iconStyle(k(it.icon), 20) }))
+    }));
+    return {
+      showMap: this.props.showLevelMap !== false,
+      selMikra: set('mikra'), selTalmud: set('talmud'), selHalacha: set('halacha'),
+      ringMikra: this.ring('mikra'), ringTalmud: this.ring('talmud'), ringHalacha: this.ring('halacha'),
+      barMikra: this.bar('mikra'), barTalmud: this.bar('talmud'), barHalacha: this.bar('halacha'),
+      iconStyleMikra: this.iconStyle('scroll', 29), iconStyleTalmud: this.iconStyle('books', 29), iconStyleHalacha: this.iconStyle('scale', 29),
+      detailKey: cur,
+      detailHe: d.he, detailName: d.name, detailTag: d.tag,
+      detailLevelName: d.levelName, detailGroups: groups
+    };
+  }
+}
+</script>
+</body>
+</html>

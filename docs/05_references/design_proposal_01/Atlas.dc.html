@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; }
+  body{ background:#EDEFF3; font-family:'Hanken Grotesk',system-ui,sans-serif; -webkit-font-smoothing:antialiased; color:#1B2430; }
+  .atlas-scroll::-webkit-scrollbar{ height:0; width:0; }
+</style>
+</helmet>
+
+<div style="position:relative; width:1680px; height:945px; background:linear-gradient(180deg,#F5F7FA,#EEF1F5); overflow:hidden; font-family:'Hanken Grotesk',system-ui,sans-serif;">
+
+  <header style="position:absolute; top:0; left:0; right:0; height:96px; background:#FFFFFF; border-bottom:1px solid #E6E9EE; display:flex; align-items:center; gap:26px; padding:0 28px; z-index:30;">
+    <div style="display:flex; align-items:center; gap:16px; flex:none;">
+      <div style="width:62px; height:62px; border-radius:16px; background:linear-gradient(160deg,#1B3354,#0F2138); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px -10px rgba(15,33,56,0.7);"><span style="{{ ic.logo }}"></span></div>
+      <div>
+        <div style="font-family:'Newsreader',serif; font-weight:600; font-size:27px; line-height:1.05; color:#13243C;">Estrutura da Torá</div>
+        <div style="font-size:11px; font-weight:700; letter-spacing:2px; color:#9AA4B2; margin-top:3px;">ATLAS VISUAL DO CONHECIMENTO</div>
+      </div>
+    </div>
+
+    <div style="flex:0 0 520px; height:50px; background:#F4F6F9; border:1px solid #E6E9EE; border-radius:14px; display:flex; align-items:center; gap:12px; padding:0 16px;">
+      <span style="{{ ic.search }}"></span>
+      <span style="flex:1; font-size:15px; color:#98A2B1;">Pesquisar na Torá, temas, livros, personagens…</span>
+      <span style="{{ ic.search2 }}"></span>
+    </div>
+
+    <div style="flex:1;"></div>
+
+    <nav style="display:flex; align-items:flex-end; gap:22px; flex:none;">
+      <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="6">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:6px; cursor:pointer;">
+          <span style="{{ n.iconStyle }}"></span>
+          <span style="font-size:11px; font-weight:600; color:#6B7686;">{{ n.label }}</span>
+        </div>
+      </sc-for>
+    </nav>
+
+    <div style="width:1px; height:42px; background:#E6E9EE; flex:none;"></div>
+
+    <div style="width:44px; height:44px; border-radius:12px; border:1px solid #E6E9EE; display:flex; align-items:center; justify-content:center; flex:none; cursor:pointer;"><span style="{{ ic.help }}"></span></div>
+
+    <div style="display:flex; align-items:center; gap:10px; padding:7px 12px 7px 8px; border:1px solid #E6E9EE; border-radius:14px; flex:none; cursor:pointer;">
+      <div style="width:38px; height:38px; border-radius:10px; background:linear-gradient(160deg,#1B3354,#0F2138); display:flex; align-items:center; justify-content:center;"><span style="{{ ic.userW }}"></span></div>
+      <div>
+        <div style="font-size:13.5px; font-weight:700; color:#13243C; line-height:1.1;">Estudante</div>
+        <div style="font-size:11.5px; color:#98A2B1;">Nível 1</div>
+      </div>
+      <span style="{{ ic.chevron }}"></span>
+    </div>
+  </header>
+
+  <div style="position:absolute; left:32px; top:114px; display:flex; align-items:center; gap:10px; font-size:14px; z-index:20;">
+    <span style="font-weight:700; color:#2D6CB4; cursor:pointer;">Macro visão</span>
+    <span style="{{ ic.crumbArrow }}"></span>
+    <span style="font-weight:600; color:#4A5462;">{{ crumb2 }}</span>
+  </div>
+
+  <div style="position:absolute; left:560px; top:110px; width:560px; text-align:center; z-index:20;">
+    <div style="font-size:16px; font-weight:800; letter-spacing:0.4px; color:#13243C;">CADA ZOOM REVELA MAIS DETALHE E COMPREENSÃO</div>
+    <div style="font-size:13px; color:#8893A2; margin-top:3px;">Cada zoom revela o contexto e a unidade da Torá</div>
+    <div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-top:14px;">
+      <div onClick="{{ doZoomOut }}" style="width:42px; height:42px; border-radius:12px; background:#fff; border:1px solid #E6E9EE; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 2px 6px -3px rgba(0,0,0,0.15);"><span style="{{ ic.minus }}"></span></div>
+      <span style="{{ ic.globe }}"></span>
+      <div style="flex:1; max-width:300px; display:flex; align-items:center; gap:0;">
+        <sc-for list="{{ zoomDots }}" as="d" hint-placeholder-count="7">
+          <div style="{{ d.seg }}"></div>
+          <div style="{{ d.dot }}"></div>
+        </sc-for>
+        <div style="flex:1; height:2px; background:#DDE3EA;"></div>
+      </div>
+      <span style="{{ ic.landmark }}"></span>
+      <div onClick="{{ doZoomIn }}" style="width:42px; height:42px; border-radius:12px; background:#fff; border:1px solid #E6E9EE; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 2px 6px -3px rgba(0,0,0,0.15);"><span style="{{ ic.plus }}"></span></div>
+    </div>
+  </div>
+
+  <div style="position:absolute; left:24px; top:236px; width:84px; background:#fff; border:1px solid #E6E9EE; border-radius:18px; padding:12px 0; display:flex; flex-direction:column; align-items:center; gap:6px; z-index:20; box-shadow:0 8px 24px -16px rgba(20,35,60,0.3);">
+    <sc-for list="{{ tools }}" as="t" hint-placeholder-count="5">
+      <div onClick="{{ t.onClick }}" style="display:flex; flex-direction:column; align-items:center; gap:5px; cursor:pointer; padding:4px 0;">
+        <div style="{{ t.btn }}"><span style="{{ t.iconStyle }}"></span></div>
+        <span style="{{ t.label }}">{{ t.name }}</span>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="position:absolute; left:24px; top:678px; width:178px; background:#fff; border:1px solid #E6E9EE; border-radius:18px; padding:16px 16px; z-index:21; box-shadow:0 8px 24px -16px rgba(20,35,60,0.3);">
+    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+      <span style="font-size:12px; font-weight:800; letter-spacing:1px; color:#13243C;">CAMADAS</span>
+      <span style="{{ ic.chevronUp }}"></span>
+    </div>
+    <sc-for list="{{ layers }}" as="l" hint-placeholder-count="3">
+      <div onClick="{{ l.onClick }}" style="display:flex; align-items:center; gap:10px; padding:7px 0; cursor:pointer;">
+        <span style="{{ l.dot }}"></span>
+        <span style="{{ l.name }}">{{ l.label }}</span>
+        <span style="flex:1;"></span>
+        <span style="{{ l.eye }}"></span>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="{{ cardsWrap }}">
+    <sc-for list="{{ cards }}" as="c" hint-placeholder-count="3">
+      <div onClick="{{ c.onClick }}" style="{{ c.ring }}">
+        <div style="{{ c.badge }}"><span style="{{ c.badgeIcon }}"></span></div>
+        <div style="text-align:center; margin-bottom:18px;">
+          <div style="font-family:'Hanken Grotesk',sans-serif; font-weight:800; font-size:26px; letter-spacing:0.5px; color:{{ c.titleColor }};">{{ c.title }}</div>
+          <div style="font-family:'Frank Ruhl Libre',serif; font-size:21px; color:{{ c.titleColor }}; opacity:0.78; margin-top:2px;">{{ c.he }}</div>
+        </div>
+        <div style="{{ c.chipsWrap }}">
+          <sc-for list="{{ c.chips }}" as="ch" hint-placeholder-count="5">
+            <div style="{{ ch.box }}">
+              <div style="font-size:12.5px; font-weight:700; letter-spacing:0.3px;">{{ ch.t }}</div>
+              <sc-if value="{{ ch.h }}" hint-placeholder-val="x"><div style="font-family:'Frank Ruhl Libre',serif; font-size:14px; color:#9AA4B2; margin-top:3px;">{{ ch.h }}</div></sc-if>
+              <sc-if value="{{ ch.sub }}"><div style="font-size:11.5px; font-weight:400; color:#6B7686; margin-top:6px; line-height:1.45;">{{ ch.sub }}</div></sc-if>
+            </div>
+          </sc-for>
+        </div>
+        <div style="{{ c.foot }}">
+          <span style="{{ c.footIconStyle }}"></span>
+          <div>
+            <div style="font-size:13px; font-weight:800; letter-spacing:0.3px; color:{{ c.titleColor }};">{{ c.footTitle }}</div>
+            <div style="font-size:12px; color:#6B7686; margin-top:2px; line-height:1.4;">{{ c.footDesc }}</div>
+          </div>
+        </div>
+      </div>
+      <sc-if value="{{ c.node }}"><div style="position:relative; width:46px; flex:none; align-self:stretch;"><div style="position:absolute; top:118px; left:0; right:0; height:2px; background:{{ c.nodeColor }}; opacity:0.4;"></div><div style="position:absolute; top:108px; left:50%; transform:translateX(-50%); width:20px; height:20px; border-radius:50%; background:{{ c.nodeColor }}; border:3px solid #fff; box-shadow:0 3px 8px -2px rgba(0,0,0,0.3);"></div></div></sc-if>
+    </sc-for>
+  </div>
+
+  <div style="{{ timelineWrap }}">
+    <div style="text-align:center; margin-bottom:6px;">
+      <div style="font-size:15px; font-weight:800; letter-spacing:0.4px; color:#13243C;">LINHA DO TEMPO DA TORÁ</div>
+      <div style="font-size:12.5px; color:#8893A2; margin-top:2px;">Navegue pelos períodos e aprofunde-se em cada era</div>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <div onClick="{{ eraPrev }}" style="width:38px; height:38px; flex:none; border-radius:50%; background:#13243C; display:flex; align-items:center; justify-content:center; cursor:pointer;"><span style="{{ ic.prevW }}"></span></div>
+      <div style="flex:1; display:flex; align-items:flex-start; justify-content:space-between; overflow:hidden;">
+        <sc-for list="{{ eras }}" as="e" hint-placeholder-count="10">
+          <div onClick="{{ e.onClick }}" style="flex:1; display:flex; flex-direction:column; align-items:center; gap:7px; cursor:pointer; padding:0 3px;">
+            <div style="{{ e.circle }}"><span style="{{ e.iconStyle }}"></span></div>
+            <div style="{{ e.name }}">{{ e.label }}</div>
+            <div style="font-size:10px; color:#9AA4B2; text-align:center; line-height:1.25;">{{ e.sub }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div onClick="{{ eraNext }}" style="width:38px; height:38px; flex:none; border-radius:50%; background:#13243C; display:flex; align-items:center; justify-content:center; cursor:pointer;"><span style="{{ ic.nextW }}"></span></div>
+    </div>
+  </div>
+
+  <div style="{{ drawerWrap }}">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:4px;">
+      <div>
+        <div style="font-size:17px; font-weight:800; letter-spacing:0.4px; color:#13243C;">PERSONAGENS</div>
+        <div style="font-size:12.5px; color:#8893A2; margin-top:3px;">Sábios e líderes que moldaram a Torá</div>
+      </div>
+      <span style="{{ ic.close }}"></span>
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; margin:18px 0 12px;">
+      <span style="font-size:12px; font-weight:800; letter-spacing:1px; color:#13243C;">PRINCIPAIS</span>
+      <span style="font-size:12px; font-weight:700; color:#2D6CB4; cursor:pointer;">Ver todos</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px 8px;">
+      <sc-for list="{{ principais }}" as="p" hint-placeholder-count="6">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:7px;">
+          <div style="{{ p.av }}">{{ p.mono }}</div>
+          <div style="text-align:center;">
+            <div style="font-size:12.5px; font-weight:700; color:#2A323D; line-height:1.1;">{{ p.name }}</div>
+            <div style="font-family:'Frank Ruhl Libre',serif; font-size:12px; color:#9AA4B2; margin-top:1px;">{{ p.he }}</div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; margin:22px 0 12px;">
+      <span style="font-size:12px; font-weight:800; letter-spacing:1px; color:#13243C;">RELACIONADOS</span>
+      <span style="font-size:12px; font-weight:700; color:#2D6CB4; cursor:pointer;">Ver todos</span>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:10px 6px;">
+      <sc-for list="{{ relacionados }}" as="r" hint-placeholder-count="4">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:6px;">
+          <div style="{{ r.av }}">{{ r.mono }}</div>
+          <div style="font-size:10.5px; font-weight:600; color:#5B6573; text-align:center; line-height:1.15;">{{ r.name }}</div>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="margin-top:22px; height:48px; border:1px solid #E6E9EE; border-radius:13px; display:flex; align-items:center; justify-content:center; gap:10px; cursor:pointer; background:#FAFBFC;">
+      <span style="{{ ic.explore }}"></span>
+      <span style="font-size:13.5px; font-weight:700; color:#2A323D;">Explorar todos os personagens</span>
+    </div>
+  </div>
+
+  <div style="position:absolute; right:24px; bottom:24px; width:300px; height:188px; background:linear-gradient(165deg,#1B3354,#0E1E34); border-radius:20px; padding:18px 20px; z-index:21; box-shadow:0 16px 40px -18px rgba(15,33,56,0.7); display:flex; flex-direction:column;">
+    <div style="display:flex; align-items:center; gap:8px;">
+      <span style="{{ ic.compassSm }}"></span>
+      <span style="font-size:12px; font-weight:800; letter-spacing:1.5px; color:#CBB67A;">VISÃO ATUAL</span>
+    </div>
+    <div style="flex:1; display:flex; align-items:center; gap:16px;">
+      <div style="width:84px; height:84px; flex:none; border-radius:50%; border:2px solid rgba(203,182,122,0.4); display:flex; align-items:center; justify-content:center; position:relative;">
+        <div style="position:absolute; inset:14px; border-radius:50%; border:1px solid rgba(255,255,255,0.12);"></div>
+        <span style="{{ ic.compassBig }}"></span>
+      </div>
+      <div>
+        <div style="font-size:11px; color:#8FA0B8; letter-spacing:0.5px;">FOCO</div>
+        <div style="font-size:17px; font-weight:700; color:#fff; margin-top:2px;">Macro estrutura</div>
+      </div>
+    </div>
+    <div style="height:42px; border-radius:12px; background:#CBB67A; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+      <span style="font-size:13.5px; font-weight:800; color:#1B3354;">Ver foco da navegação</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1680,&quot;height&quot;:945}}">
+class Component extends DCLogic {
+  state = { selected:null, layers:{ area:true, tempo:true, pers:true }, zoom:3, era:3 };
+
+  tone(t){
+    const m={
+      escrita:{ main:'#2D6CB4', soft:'#EAF2FB', soft2:'#E2ECF9', line:'#D2E1F2', ink:'#235A99' },
+      oral:{ main:'#579372', soft:'#EBF3EE', soft2:'#E1EEE6', line:'#D3E4D9', ink:'#3E7A5B' },
+      halacha:{ main:'#C7A050', soft:'#F8F1E2', soft2:'#F2E7CF', line:'#E8DBBC', ink:'#9C7A2C' }
+    };
+    return m[t];
+  }
+
+  iconPaths(){
+    return {
+      logo:'<path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>',
+      scroll:'<path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/>',
+      books:'<path d="m16 6 4 14"/><path d="M12 6v14"/><path d="M8 8v12"/><path d="M4 4v16"/>',
+      scale:'<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>',
+      users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+      user:'<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+      bookOpen:'<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+      leaf:'<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/>',
+      heart:'<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/>',
+      search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+      compass:'<circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>',
+      layers:'<path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.84Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>',
+      box:'<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>',
+      star:'<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+      pencil:'<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/>',
+      dots:'<circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/><circle cx="5" cy="12" r="1.4"/>',
+      help:'<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/>',
+      globe:'<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>',
+      landmark:'<line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/>',
+      minus:'<path d="M5 12h14"/>',
+      plus:'<path d="M12 5v14"/><path d="M5 12h14"/>',
+      navigate:'<polygon points="3 11 22 2 13 21 11 13 3 11"/>',
+      zoomIn:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/>',
+      zoomOut:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/><line x1="8" x2="14" y1="11" y2="11"/>',
+      target:'<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
+      maximize:'<path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>',
+      eye:'<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+      eyeOff:'<path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><line x1="2" x2="22" y1="2" y2="22"/>',
+      close:'<path d="M18 6 6 18"/><path d="M6 6l12 12"/>',
+      chevron:'<path d="m6 9 6 6 6-6"/>',
+      chevronUp:'<path d="m18 15-6-6-6 6"/>',
+      arrowRight:'<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
+      arrowR:'<path d="m9 18 6-6-6-6"/>',
+      arrowL:'<path d="m15 18-6-6 6-6"/>',
+      tree:'<path d="M8 19a4 4 0 0 1-1.6-7.7A5 5 0 1 1 16 9.5a4.5 4.5 0 0 1 .5 9H8Z"/><path d="M12 19v3"/>',
+      sailboat:'<path d="M22 18H2a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4Z"/><path d="M21 14 10 2 3 14h18Z"/><path d="M10 2v16"/>',
+      tent:'<path d="M3.5 21 14 3"/><path d="M20.5 21 10 3"/><path d="M15.5 21 12 15l-3.5 6"/><path d="M2 21h20"/>',
+      mountain:'<path d="m8 3 4 8 5-5 5 15H2L8 3z"/>',
+      feather:'<path d="M20 3a7 7 0 0 0-9.9 0L4 9.1V20h10.9l6.1-6.1A7 7 0 0 0 20 3Z"/><path d="M16 8 2 22"/><path d="M17.5 15H9"/>',
+      book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>'
+    };
+  }
+  maskUri(key){
+    const inner = this.iconPaths()[key] || '';
+    const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+inner+'</svg>';
+    return 'data:image/svg+xml,' + encodeURIComponent(svg);
+  }
+  icon(key,size,color){
+    const u='url("'+this.maskUri(key)+'")';
+    return { width:size+'px', height:size+'px', display:'block', flex:'none', backgroundColor:color,
+      WebkitMaskImage:u, maskImage:u, WebkitMaskRepeat:'no-repeat', maskRepeat:'no-repeat',
+      WebkitMaskPosition:'center', maskPosition:'center', WebkitMaskSize:'contain', maskSize:'contain' };
+  }
+
+  cardData(){
+    return [
+      { id:'escrita', tone:'escrita', title:'TORÁ ESCRITA', he:'תורה שבכתב', badge:'scroll',
+        chips:[ {t:'CHUMASH',h:'חומ״ש'},{t:'NACH',h:'נ״ך'},{t:'5 LIVROS',h:'חמשה חומשי תורה',wide:true},{t:'PROFETAS',h:'נביאים'},{t:'ESCRITOS',h:'כתובים'} ],
+        footIcon:'bookOpen', footTitle:'A REVELAÇÃO ESCRITA', footDesc:'A fundação eterna', node:true },
+      { id:'oral', tone:'oral', title:'TORÁ ORAL', he:'תורה שבעל פה', badge:'users',
+        chips:[ {t:'MISHNÁ',h:'משנה'},{t:'GUEMARÁ',h:'גמרא'},{t:'TANAIM',h:'תנאים'},{t:'AMORÁIM',h:'אמוראים'},{t:'TRANSMISSÃO VIVA',h:'',wide:true,sub:'Explicação e desenvolvimento oral da lei ao longo do tempo.'} ],
+        footIcon:'leaf', footTitle:'A TORÁ É UMA UNIDADE COMPLETA', footDesc:'Escrita, Oral e Halachá formam um sistema integrado que guia o povo de Israel através do tempo.', node:true },
+      { id:'halacha', tone:'halacha', title:'HALACHÁ', he:'הלכה', badge:'scale',
+        chips:[ {t:'RAMBAM',h:'רמב״ם'},{t:'TUR',h:'טור'},{t:'SHULCHAN ARUCH',h:'שולחן ערוך'},{t:'ORACH CHAIM',h:'אורח חיים'} ],
+        footIcon:'heart', footTitle:'APLICAÇÃO NA VIDA', footDesc:'Lei, prática e serviço no cotidiano', node:false }
+    ];
+  }
+  eraData(){
+    return [
+      { label:'ADAM', sub:'Início da Humanidade', icon:'tree', tone:'escrita' },
+      { label:'NOACH', sub:'Aliança e Mundo', icon:'sailboat', tone:'escrita' },
+      { label:'AVRAHAM', sub:'Pai da Fé', icon:'tent', tone:'escrita' },
+      { label:'MOSHE / SINAI', sub:'Recebimento da Torá', icon:'mountain', tone:'escrita' },
+      { label:'PROFETAS', sub:'Guia e Inspiração', icon:'scroll', tone:'oral' },
+      { label:'TANAIM', sub:'Formação da Mishná', icon:'book', tone:'oral' },
+      { label:'AMORÁIM', sub:'Expansão da Guemará', icon:'books', tone:'oral' },
+      { label:'GUEONIM', sub:'Liderança na Diáspora', icon:'landmark', tone:'halacha' },
+      { label:'RISHONIM', sub:'Comentários e Decisões', icon:'feather', tone:'halacha' },
+      { label:'ACHARONIM', sub:'Sabedoria nos tempos Finais', icon:'bookOpen', tone:'halacha' }
+    ];
+  }
+
+  chipBox(wide){
+    return 'background:#fff; border:1px solid #E6E9EE; border-radius:12px; padding:11px 10px; text-align:center;'+(wide?' grid-column:1 / span 2;':'');
+  }
+
+  renderVals(){
+    const C={ inkSoft:'#5B6573', faint:'#98A2B1', navy:'#13243C' };
+    const sel=this.state.selected, L=this.state.layers;
+    const set=(v)=>()=>this.setState({selected:v});
+
+    // header / one-off icons
+    const ic={
+      logo:this.icon('logo',26,'#fff'),
+      search:this.icon('search',20,C.faint),
+      search2:this.icon('search',18,'#6B7686'),
+      help:this.icon('help',21,'#6B7686'),
+      userW:this.icon('user',20,'#fff'),
+      chevron:this.icon('chevron',16,'#98A2B1'),
+      chevronUp:this.icon('chevronUp',16,'#98A2B1'),
+      crumbArrow:this.icon('arrowR',15,'#B6BEC9'),
+      minus:this.icon('minus',18,'#5B6573'),
+      plus:this.icon('plus',18,'#5B6573'),
+      globe:this.icon('globe',24,'#7C8694'),
+      landmark:this.icon('landmark',24,'#7C8694'),
+      prevW:this.icon('arrowL',17,'#fff'),
+      nextW:this.icon('arrowR',17,'#fff'),
+      close:this.icon('close',18,'#98A2B1'),
+      explore:this.icon('users',18,'#5B6573'),
+      compassSm:this.icon('compass',16,'#CBB67A'),
+      compassBig:this.icon('compass',34,'#CBB67A')
+    };
+
+    const navItems=[
+      {label:'Explorar',icon:'compass'},{label:'Camadas',icon:'layers'},{label:'Visão 3D',icon:'box'},
+      {label:'Favoritos',icon:'star'},{label:'Anotações',icon:'pencil'},{label:'Mais',icon:'dots'}
+    ].map(n=>({label:n.label, iconStyle:this.icon(n.icon,22,'#4A5462')}));
+
+    // zoom indicator
+    const zoomDots=Array.from({length:7}).map((_,i)=>{
+      const active=i===this.state.zoom;
+      return {
+        seg:'flex:1; height:2px; background:'+(i<=this.state.zoom?'#2D6CB4':'#DDE3EA')+';',
+        dot:'width:'+(active?'13px':'9px')+'; height:'+(active?'13px':'9px')+'; border-radius:50%; flex:none; background:'+(active?'#2D6CB4':(i<this.state.zoom?'#2D6CB4':'#C7CFD9'))+'; '+(active?'box-shadow:0 0 0 4px rgba(45,108,180,0.18);':'')
+      };
+    });
+
+    // left toolbar
+    const tools=[
+      {name:'Navegar',icon:'navigate',act:true,fn:set('escrita')},
+      {name:'Zoom +',icon:'zoomIn',fn:()=>this.setState(s=>({zoom:Math.min(6,s.zoom+1)}))},
+      {name:'Zoom −',icon:'zoomOut',fn:()=>this.setState(s=>({zoom:Math.max(0,s.zoom-1)}))},
+      {name:'Centralizar',icon:'target',fn:()=>this.setState({selected:null})},
+      {name:'Tela cheia',icon:'maximize',fn:()=>{}}
+    ].map(t=>({
+      name:t.name, onClick:t.fn,
+      btn:'width:48px; height:48px; border-radius:13px; display:flex; align-items:center; justify-content:center; '+(t.act?'background:#13243C; box-shadow:0 8px 18px -8px rgba(19,36,60,0.7);':'background:#fff; border:1px solid #E6E9EE;'),
+      iconStyle:this.icon(t.icon,20,t.act?'#fff':'#5B6573'),
+      label:'font-size:10.5px; font-weight:600; color:'+(t.act?'#13243C':'#8893A2')+';'
+    }));
+
+    // camadas
+    const layerMeta=[ {key:'area',label:'Área da Torá',color:'#2D6CB4'},{key:'tempo',label:'Linha do Tempo',color:'#579372'},{key:'pers',label:'Personagens',color:'#C7A050'} ];
+    const layers=layerMeta.map(m=>{
+      const on=L[m.key];
+      return {
+        label:m.label, onClick:()=>this.setState(s=>({layers:{...s.layers,[m.key]:!s.layers[m.key]}})),
+        dot:'width:10px; height:10px; border-radius:50%; flex:none; background:'+m.color+'; '+(on?'':'opacity:0.35;'),
+        name:'font-size:13px; font-weight:600; color:'+(on?'#3A434F':'#AEB6C0')+';',
+        eye:this.icon(on?'eye':'eyeOff',17,on?'#6B7686':'#C3CAD3')
+      };
+    });
+
+    // cards
+    const cards=this.cardData().map((c,idx)=>{
+      const t=this.tone(c.tone), isSel=sel===c.id;
+      return {
+        onClick:set(c.id),
+        ring:'position:relative; flex:1; cursor:pointer; border-radius:24px; padding:52px 24px 22px; background:linear-gradient(180deg,'+t.soft+' 0%,#FFFFFF 42%); transition:box-shadow .2s, border-color .2s, transform .2s; '+(isSel?'border:2px solid '+t.main+'; box-shadow:0 26px 60px -28px '+t.main+'cc; transform:translateY(-3px);':'border:1.5px solid '+t.line+'; box-shadow:0 18px 44px -30px rgba(20,35,60,0.45);'),
+        badge:'position:absolute; top:-34px; left:50%; transform:translateX(-50%); width:72px; height:72px; border-radius:50%; background:'+t.main+'; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 26px -10px '+t.main+'b0; border:4px solid #fff;',
+        badgeIcon:this.icon(c.badge,32,'#fff'),
+        title:c.title, he:c.he, titleColor:t.ink,
+        chipsWrap:'display:grid; grid-template-columns:1fr 1fr; gap:10px; color:'+t.ink+';',
+        chips:c.chips.map(ch=>({ t:ch.t, h:ch.h, sub:ch.sub, box:this.chipBox(ch.wide) })),
+        foot:'margin-top:16px; display:flex; align-items:center; gap:12px; padding:14px 16px; border-radius:15px; background:'+t.soft2+';',
+        footIconStyle:this.icon(c.footIcon,22,t.ink),
+        footTitle:c.footTitle, footDesc:c.footDesc,
+        node:c.node, nodeColor:(idx===0?this.tone('escrita').main:this.tone('halacha').main)
+      };
+    });
+
+    // eras
+    const eras=this.eraData().map((e,i)=>{
+      const t=this.tone(e.tone), isSel=i===this.state.era;
+      return {
+        label:e.label, sub:e.sub, onClick:()=>this.setState({era:i}),
+        circle:'width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:all .18s; '+(isSel?'background:#fff; border:2px solid '+t.main+'; box-shadow:0 8px 18px -8px '+t.main+'90;':'background:'+t.soft+'; border:1px solid '+t.line+';'),
+        iconStyle:this.icon(e.icon,26,t.main),
+        name:'font-size:11px; font-weight:800; letter-spacing:0.3px; color:'+(isSel?t.ink:'#3A434F')+'; text-align:center;'
+      };
+    });
+
+    // personagens
+    const avStyle=(tone,size,fs)=>{ const t=this.tone(tone);
+      return 'width:'+size+'px; height:'+size+'px; border-radius:50%; flex:none; display:flex; align-items:center; justify-content:center; background:radial-gradient(circle at 32% 26%, #ffffff, '+t.soft+'); border:1px solid '+t.line+'; color:'+t.main+'; font-family:\'Frank Ruhl Libre\',serif; font-weight:700; font-size:'+fs+'px;';
+    };
+    const principais=[
+      {name:'Moshe',he:'משה',mono:'מ',tone:'escrita'},
+      {name:'Rabi Akiva',he:'רבי עקיבא',mono:'ע',tone:'halacha'},
+      {name:'Rambam',he:'רמב״ם',mono:'ר',tone:'escrita'},
+      {name:'Rashi',he:'רש״י',mono:'ר',tone:'halacha'},
+      {name:'Rabi Yochanan',he:'רבי יוחנן',mono:'י',tone:'oral'},
+      {name:'Rav Ovadia',he:'הרב עובדיה',mono:'ע',tone:'oral'}
+    ].map(p=>({...p, av:avStyle(p.tone,62,26)}));
+    const relacionados=[
+      {name:'Rabbeinu Bachya',mono:'ב',tone:'escrita'},
+      {name:'Ramban',mono:'ר',tone:'oral'},
+      {name:'Tosafot',mono:'ת',tone:'halacha'},
+      {name:'Rav Hai Gaon',mono:'ה',tone:'escrita'}
+    ].map(r=>({...r, av:avStyle(r.tone,46,19)}));
+
+    const crumbNames={ escrita:'Torá Escrita', oral:'Torá Oral', halacha:'Halachá' };
+    const crumb2 = sel ? crumbNames[sel] : 'Visão geral da Torá';
+
+    return {
+      ic, navItems, crumb2, zoomDots,
+      doZoomIn:()=>this.setState(s=>({zoom:Math.min(6,s.zoom+1)})),
+      doZoomOut:()=>this.setState(s=>({zoom:Math.max(0,s.zoom-1)})),
+      tools, layers,
+      cards,
+      cardsWrap:'position:absolute; left:128px; top:236px; width:1228px; display:flex; align-items:stretch; gap:0; z-index:10; transition:opacity .2s; opacity:'+(L.area?1:0.4)+';',
+      eras,
+      timelineWrap:'position:absolute; left:200px; right:340px; bottom:24px; background:#fff; border:1px solid #E6E9EE; border-radius:20px; padding:16px 22px 18px; z-index:15; box-shadow:0 14px 40px -22px rgba(20,35,60,0.4); transition:opacity .2s; opacity:'+(L.tempo?1:0.4)+';',
+      eraPrev:()=>this.setState(s=>({era:Math.max(0,s.era-1)})),
+      eraNext:()=>this.setState(s=>({era:Math.min(9,s.era+1)})),
+      principais, relacionados,
+      drawerWrap:'position:absolute; right:24px; top:114px; width:300px; background:#fff; border:1px solid #E6E9EE; border-radius:20px; padding:20px; z-index:20; box-shadow:0 18px 50px -26px rgba(20,35,60,0.45); transition:opacity .2s; opacity:'+(L.pers?1:0.4)+';'
+    };
+  }
+}
+</script>
+</body>
+</html>
