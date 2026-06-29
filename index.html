@@ -1390,6 +1390,20 @@ body.atlas-grabbing, body.atlas-grabbing * {
   background: #fff;
   text-align: center;
 }
+.atlas-ref-macro-chip.is-clickable {
+  cursor: pointer;
+  transition: border-color .18s, box-shadow .18s, transform .18s;
+}
+.atlas-ref-macro-chip.is-clickable:hover {
+  border-color: var(--tone-main);
+  box-shadow: 0 10px 22px -18px color-mix(in srgb, var(--tone-main) 70%, transparent);
+  transform: translateY(-1px);
+}
+.atlas-ref-macro-chip.hover-target {
+  border-color: var(--tone-main);
+  box-shadow: 0 12px 26px -18px color-mix(in srgb, var(--tone-main) 80%, transparent);
+  transform: translateY(-1px);
+}
 .atlas-ref-macro-chip.wide {
   grid-column: span 2;
 }
@@ -3338,10 +3352,10 @@ function atlasClearHoverTarget(kind = null, id = null) {
 }
 
 function atlasMarkHoverTarget() {
-  document.querySelectorAll('.atlas2d-node.hover-target, .atlas-ref-macro-card.hover-target, .atlas-ref-era-card.hover-target, .atlas2d-time-seg.hover-target').forEach(node => node.classList.remove('hover-target'));
+  document.querySelectorAll('.atlas2d-node.hover-target, .atlas-ref-macro-card.hover-target, .atlas-ref-macro-chip.hover-target, .atlas-ref-era-card.hover-target, .atlas2d-time-seg.hover-target').forEach(node => node.classList.remove('hover-target'));
   const target = atlasState.hoverTarget;
   if (!target) return;
-  document.querySelectorAll('.atlas2d-node, .atlas-ref-macro-card, .atlas-ref-era-card, .atlas2d-time-seg').forEach(node => {
+  document.querySelectorAll('.atlas2d-node, .atlas-ref-macro-card, .atlas-ref-macro-chip, .atlas-ref-era-card, .atlas2d-time-seg').forEach(node => {
     if (node.dataset.atlasKind === target.kind && node.dataset.atlasId === target.id) {
       node.classList.add('hover-target');
     }
@@ -3354,7 +3368,7 @@ function atlasCanHoverDrill(kind, id) {
   if (kind === 'phase' && atlasState.selectedPhaseId === id && atlasState.zoom >= 2) return false;
   if (kind === 'milestone' && atlasState.selectedMilestoneId === id && atlasState.zoom >= 3) return false;
   if (kind === 'group' && atlasState.selectedGroupId === id && atlasState.zoom >= 3) return false;
-  return ['macro-chumash', 'macro-nach', 'macro-oral', 'macro-halacha', 'book', 'phase', 'milestone', 'group'].includes(kind);
+  return ['macro-chumash', 'written-section', 'macro-nach', 'macro-oral', 'macro-halacha', 'book', 'nach-book', 'phase', 'milestone', 'group'].includes(kind);
 }
 
 function atlasFindBook(data, bookKey) {
@@ -3385,6 +3399,13 @@ async function atlasSelect(kind, id) {
   atlasState.hoverTarget = null;
   if (kind === 'macro-chumash') {
     atlasState.lens = 'chumash';
+    atlasState.zoom = 1;
+    atlasState.selectedBookKey = null;
+    atlasState.selectedPhaseId = null;
+    atlasState.selectedMilestoneId = null;
+    atlasState.selectedGroupId = null;
+  } else if (kind === 'written-section') {
+    atlasState.lens = id === 'neviim' || id === 'ketuvim' ? id : 'chumash';
     atlasState.zoom = 1;
     atlasState.selectedBookKey = null;
     atlasState.selectedPhaseId = null;
@@ -3426,6 +3447,9 @@ async function atlasSelect(kind, id) {
     const [bookKey, parashaId, factIdsRaw] = id.split('|');
     const factIds = factIdsRaw ? factIdsRaw.split(',').filter(Boolean) : [];
     drawerOpen({ bookKey, parashaId, factIds });
+    return;
+  } else if (kind === 'nach-book') {
+    drawerOpen(id);
     return;
   }
   await atlasRender();
@@ -3474,6 +3498,8 @@ async function atlasRender() {
 
 function atlasZoomLabel() {
   if (atlasState.zoom === 1 && atlasState.lens === 'timeline') return 'Fases AM';
+  if (atlasState.zoom === 1 && atlasState.lens === 'neviim') return 'Profetas';
+  if (atlasState.zoom === 1 && atlasState.lens === 'ketuvim') return 'Escritos';
   if (atlasState.zoom === 2 && atlasState.lens === 'timeline') return 'Agrupadores';
   return ATLAS_ZOOM_LABELS[atlasState.zoom] || 'Atlas';
 }
@@ -3509,11 +3535,9 @@ async function atlasBuildContext(milestoneData, groupData) {
           footTitle: 'A REVELAÇÃO ESCRITA',
           footDesc: 'A fundação textual do Atlas',
           chips: [
-            { t: 'CHUMASH', h: 'חומש' },
-            { t: 'NACH', h: 'נ״ך' },
-            { t: '5 LIVROS', h: 'חמשה חומשי תורה', wide: true },
-            { t: 'PROFETAS', h: 'נביאים' },
-            { t: 'ESCRITOS', h: 'כתובים' }
+            { t: 'CHUMASH / 5 LIVROS', h: 'תורה', wide: true, actionKind: 'written-section', actionId: 'chumash' },
+            { t: 'PROFETAS', h: 'נביאים', actionKind: 'written-section', actionId: 'neviim' },
+            { t: 'ESCRITOS', h: 'כתובים', actionKind: 'written-section', actionId: 'ketuvim' }
           ]
         }
       },
@@ -3589,6 +3613,20 @@ async function atlasBuildContext(milestoneData, groupData) {
       }));
       ctx.themes = atlasCountList((groupData.phases || []).flatMap(p => (p.groups || []).flatMap(g => g.themes || [])));
       ctx.people = atlasCountList(['Adam', 'Noach', 'Avraham', 'Moshe', 'David', 'Shlomo', 'Ester', 'Ezra']);
+      return ctx;
+    }
+
+    if (atlasState.lens === 'neviim' || atlasState.lens === 'ketuvim') {
+      const isNeviim = atlasState.lens === 'neviim';
+      const writtenBooks = await atlasBuildNachDivisionNodes(atlasState.lens);
+      ctx.title = isNeviim ? 'Profetas · Neviim' : 'Escritos · Ketuvim';
+      ctx.sub = isNeviim
+        ? 'Livros proféticos disponíveis no Atlas. Clique em um livro para abrir suas unidades.'
+        : 'Livros dos Escritos disponíveis no Atlas. Clique em um livro para abrir suas unidades.';
+      ctx.focusRange = atlasRangeFromNodes(writtenBooks, isNeviim ? 'Profetas' : 'Escritos');
+      ctx.nodes = writtenBooks;
+      ctx.people = atlasCountList(writtenBooks.flatMap(node => node.people || []));
+      ctx.themes = atlasCountList(writtenBooks.flatMap(node => node.themes || []));
       return ctx;
     }
 
@@ -3712,6 +3750,50 @@ async function atlasAttachBookRangeAndMeta(ctx, book) {
   } catch(e) {}
 }
 
+async function atlasBuildNachDivisionNodes(division) {
+  const entries = Object.entries(BOOK_META || {}).filter(([key]) =>
+    !['genesis', 'exodus', 'leviticus', 'numbers', 'deuteronomy'].includes(key)
+  );
+  const nodes = [];
+  for (const [bookKey, meta] of entries) {
+    try {
+      const response = await fetch(meta.path);
+      if (!response.ok) continue;
+      const index = await response.json();
+      const bookDivision = index.division || '';
+      const belongs = division === 'neviim'
+        ? bookDivision.startsWith('neviim')
+        : bookDivision === 'ketuvim';
+      if (!belongs) continue;
+      const units = index[meta.indexField || 'units'] || [];
+      nodes.push({
+        kind: 'nach-book',
+        id: bookKey,
+        icon: index.book_he || meta.label,
+        visual: index.visual || null,
+        label: index.book_pt || meta.label,
+        sub: index.summary?.short || index.timeline?.description || '',
+        meta: `${units.length} unidades · ${index.timeline?.anno_mundi_start ?? '?'}-${index.timeline?.anno_mundi_end ?? '?'} AM`,
+        people: index.summary?.characters || [],
+        themes: index.summary?.themes || [],
+        rangeStart: index.timeline?.anno_mundi_start,
+        rangeEnd: index.timeline?.anno_mundi_end
+      });
+    } catch(e) {}
+  }
+  return nodes;
+}
+
+function atlasRangeFromNodes(nodes, label) {
+  const starts = nodes.map(node => node.rangeStart).filter(value => Number.isFinite(value));
+  const ends = nodes.map(node => node.rangeEnd).filter(value => Number.isFinite(value));
+  return {
+    start: starts.length ? Math.min(...starts) : 0,
+    end: ends.length ? Math.max(...ends) : 5785,
+    label
+  };
+}
+
 async function atlasAttachRangeFromUnits(ctx, bookKey, unitIds) {
   try {
     const mart = await loadParashaMart(bookKey);
@@ -3818,10 +3900,10 @@ function atlasRenderMacroNode(node) {
     ? `<span class="icon-mask" style="--icon:url('${atlasEsc(macro.footAsset)}')"></span>`
     : atlasEsc(macro.footIcon || node.icon || '');
   const chips = (macro.chips || []).map(ch => `
-    <span class="atlas-ref-macro-chip ${ch.wide ? 'wide' : ''}">
-      <b>${atlasEsc(ch.t)}</b>
+    <span class="atlas-ref-macro-chip ${ch.wide ? 'wide' : ''} ${ch.actionKind ? 'is-clickable' : ''}" ${ch.actionKind ? `data-atlas-kind="${atlasEsc(ch.actionKind)}" data-atlas-id="${atlasEsc(ch.actionId)}" onclick="event.stopPropagation(); atlasSelect('${atlasEsc(ch.actionKind)}','${atlasEsc(ch.actionId)}')" onmouseenter="event.stopPropagation(); atlasSetHoverTarget('${atlasEsc(ch.actionKind)}','${atlasEsc(ch.actionId)}')" onmouseleave="atlasSetHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')"` : ''}>
+      <b>${atlasEsc(t(ch.t))}</b>
       ${ch.h ? `<span>${atlasEsc(ch.h)}</span>` : ''}
-      ${ch.sub ? `<small>${atlasEsc(ch.sub)}</small>` : ''}
+      ${ch.sub ? `<small>${atlasEsc(t(ch.sub))}</small>` : ''}
     </span>
   `).join('');
   const isHover = atlasState.hoverTarget?.kind === node.kind && atlasState.hoverTarget?.id === node.id;
@@ -3829,15 +3911,15 @@ function atlasRenderMacroNode(node) {
     <button class="atlas-ref-macro-card atlas-ref-tone-${atlasEsc(tone)} ${node.selected ? 'selected' : ''} ${isHover ? 'hover-target' : ''}" data-atlas-kind="${atlasEsc(node.kind)}" data-atlas-id="${atlasEsc(node.id)}" onclick="atlasSelect('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseenter="atlasSetHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')" onmouseleave="atlasClearHoverTarget('${atlasEsc(node.kind)}','${atlasEsc(node.id)}')">
       <span class="atlas-ref-macro-badge">${badge}</span>
       <span class="atlas-ref-macro-title">
-        <strong>${atlasEsc(macro.title || node.label)}</strong>
+        <strong>${atlasEsc(t(macro.title || node.label))}</strong>
         <span>${atlasEsc(macro.he || '')}</span>
       </span>
       <span class="atlas-ref-macro-chips">${chips}</span>
       <span class="atlas-ref-macro-foot">
         <span class="atlas-ref-macro-foot-icon">${footIcon}</span>
         <span>
-          <b>${atlasEsc(macro.footTitle || node.meta || '')}</b>
-          <span>${atlasEsc(macro.footDesc || node.sub || '')}</span>
+          <b>${atlasEsc(t(macro.footTitle || node.meta || ''))}</b>
+          <span>${atlasEsc(t(macro.footDesc || node.sub || ''))}</span>
         </span>
       </span>
     </button>

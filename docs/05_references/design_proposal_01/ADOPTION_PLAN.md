@@ -307,6 +307,18 @@ drill de parasha/fato.
   seguem a mesma base (`bookOpen`, `leaf`, `heart`), sem adicionar novos
   arquivos.
 
+### Ajuste concluido - Tora Escrita como TaNaCh
+
+- O macro card **Tora Escrita** agora apresenta tres entradas coerentes com
+  TaNaCh: **Chumash / 5 Livros**, **Profetas** e **Escritos**.
+- Clicar em Chumash continua abrindo a lente dos 5 livros do Pentateuco.
+- Clicar em Profetas abre uma lente propria baseada nos livros `data/nach/*`
+  cuja `division` comeca com `neviim`.
+- Clicar em Escritos abre uma lente propria baseada nos livros `data/nach/*`
+  cuja `division` e `ketuvim`.
+- Os livros de Profetas/Escritos abrem o drawer existente via `BOOK_META`, sem
+  criar um segundo modelo de dados.
+
 ## Guardrails
 
 - Nao copiar HTML exportado diretamente para `index.html`; converter ideias em
