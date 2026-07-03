@@ -1,2 +1,4 @@
 [2026-06-28 12:12:36] Serving C:\projetos\tora-explorer at http://127.0.0.1:8080/
 [2026-06-29 04:57:16] Serving C:\projetos\tora-explorer at http://127.0.0.1:8080/
+[2026-07-03 06:28:49] Serving C:\projetos\tora-explorer at http://127.0.0.1:8123/
+[2026-07-03 06:29:05] Error: Exceção ao chamar "Write" com "3" argumento(s): "Não é possível gravar dados na conexão de transporte: Uma conexão estabelecida foi anulada pelo software no computador host."

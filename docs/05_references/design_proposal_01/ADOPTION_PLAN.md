@@ -319,6 +319,24 @@ drill de parasha/fato.
 - Os livros de Profetas/Escritos abrem o drawer existente via `BOOK_META`, sem
   criar um segundo modelo de dados.
 
+### Baby-step concluido - responsivo + dedup de zoom (2026-07-03)
+
+- O dock inferior da timeline deixou de ser `position: fixed` e passou a viver
+  no fluxo do documento: quando tudo cabe na tela o visual e identico ao mock;
+  quando nao cabe, nada fica escondido atras do dock (corrige o BUG-04 de
+  sobreposicao em ~1366px).
+- O rail lateral esquerdo (Navegar / Zoom + / Zoom - / Centralizar) foi
+  removido: duplicava a regua de zoom do topo e o Reset. A regua de pontos no
+  topo e agora a unica affordance de zoom, com o `Reset` mantido na toolbar.
+  O rail so retorna se agregar funcoes reais (centralizar, tela cheia).
+- Breakpoints novos: topbar reflui em 2 linhas <=1280px (ferramentas
+  decorativas ocultas); painel lateral desce abaixo do mapa e os tres macro
+  cards empilham <=1100px; lista de eras do dock rola horizontalmente em telas
+  estreitas.
+- Validado com screenshots headless em 1366x768, 1920x1080, 768x1024 e na
+  menor largura que o headless permite (~460px), com probe de overflow
+  confirmando ausencia de scroll horizontal do documento.
+
 ## Guardrails
 
 - Nao copiar HTML exportado diretamente para `index.html`; converter ideias em

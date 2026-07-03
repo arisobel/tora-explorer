@@ -40,6 +40,30 @@
 
 ---
 
+## BUG-04 — Atlas 2D elements overlap at lower resolutions — **FIXED 2026-07-03**
+
+**Symptom:** On smaller screens (~1366px wide, verified by screenshot on
+2026-07-03 at `tora-explorer.lion.app.br`), the Atlas 2D tab had overlapping
+elements: the left tool rail (Navegar / Zoom + / Zoom −) overlapped the top
+zoom ruler and the macro cards, and the fixed bottom timeline dock covered the
+macro cards.
+
+**Root cause:** The timeline dock used `position: fixed` with only a 230px
+`padding-bottom` reservation (smaller than the dock's real height), and the
+left rail occupied an 84px grid column while duplicating zoom/reset controls
+already present in two other places.
+
+**Fix applied:** The dock now lives in the document flow (identical look when
+everything fits on screen, no overlap when it does not); the left rail was
+removed and the zoom controls deduplicated to a single top ruler + Reset;
+macro cards stack vertically and the side panel drops below the map under
+1100px; the topbar reflows under 1280px; the era list scrolls horizontally on
+narrow screens. Verified via headless-Chrome screenshots at 1366x768,
+1920x1080, 768x1024, and ~460px (headless minimum), with an element-overflow
+probe confirming no horizontal document overflow.
+
+---
+
 ## DEV-01 — Git status/diff requires safe.directory handling
 
 **Symptom:** Git commands may fail with Git's `dubious ownership` error unless an explicit `safe.directory` override is used.

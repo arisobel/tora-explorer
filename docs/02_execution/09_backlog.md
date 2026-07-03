@@ -55,6 +55,53 @@ i18n, Sefaria reader, JSON data flow, or Atlas 2D.
 - [ ] **Chumash drill reference slice** - use `screenshots/chumash-full.png` as the first concrete drill target: five Chumash book headers, event columns by book, synchronized timeline spine, primary characters, secondary related characters, and clear "Voltar ao Atlas" navigation.
 - [ ] **Validation pass for each baby-step** - after each slice, check desktop/mobile layout, tab navigation, language switcher, drawer open/close, and Sefaria routing.
 
+## Direção Atlas 2D + Linha do Tempo (2026-07-03)
+
+Fonte: revisão do usuário sobre o Atlas em produção (`tora-explorer.lion.app.br`)
+comparado ao mock `Atlas.pdf`/`atlas-full.png`, em telas de menor e maior
+resolução. Direção confirmada: seguir o design da proposta. Modelo mental do
+drill: **Google Earth** — quanto mais zoom-in, mais detalhamento focado em um
+recorte menor; um único gesto de zoom, contexto sempre reorganizado ao redor
+do foco.
+
+- [ ] **Expandir o design do Atlas 2D para todo o app (mobile-first)** — a
+  fundação visual `atlas-ref-*` (paper/surface/ink/accent, serifada para
+  títulos/hebraico, bordas finas, sombras suaves) deve virar a linguagem de
+  todo o projeto: nav, Estrutura, Linha do Tempo, Mishna & Guemara, Chumash,
+  Pessukim e drawer. Premissa inegociável: funcionar bem no celular E no
+  desktop — cada componente promovido precisa de comportamento responsivo
+  definido, não só o visual.
+- [x] **Atlas 2D responsivo — eliminar sobreposição em telas menores**
+  (BUG-04, corrigido 2026-07-03) — o dock da timeline saiu do `position:
+  fixed` e entrou no fluxo do documento (visual idêntico quando tudo cabe na
+  tela, sem sobreposição quando não cabe); macro cards empilham e o painel
+  lateral desce abaixo do mapa sob 1100px; topbar reflui sob 1280px; lista de
+  eras rola horizontalmente em telas estreitas. Validado com screenshots
+  headless em 1366x768, 1920x1080, 768x1024 e ~460px + probe de overflow.
+- [x] **Deduplicar controles de zoom/navegação do Atlas** (2026-07-03) — o
+  rail lateral (Navegar/Zoom +/Zoom −/Centralizar) foi removido e o par
+  "− Macro +" da toolbar reduzido ao label + `Reset`; a régua de pontos no
+  topo é agora a única affordance de zoom, como no mock. O rail só volta se
+  agregar funções reais (centralizar, tela cheia).
+- [ ] **Timeline dock acompanha o zoom com fatos e personagens** — evolução do
+  item "Atlas timeline semantic zoom": além de re-renderizar níveis (eras →
+  livros → milestones → parasha → fato), o dock deve trazer **fatos e
+  personagens** do recorte focado nos zooms mais profundos, adicionando uma
+  dimensão de entendimento ao que está sendo estudado nos cards acima. Fonte:
+  os mesmos JSONs (`facts[]`, `summary.characters`) — sem segunda fonte de
+  verdade.
+- [ ] **Promoção visual por `visual.importance` — priorizada** — confirmada
+  como diretriz do projeto: macro mostra só importância 5, livro/era 4–5,
+  milestone 3–5, parasha/unidade 2–5, detalhe de fato 1–5. Combina com o item
+  anterior: as imagens que aparecem no dock seguem a mesma regra.
+- [ ] **Aba Linha do Tempo horizontal com zoom expansivo** *(segundo momento,
+  depois do Atlas)* — reorientar a aba dedicada de vertical para horizontal;
+  ao fazer zoom-in a linha **expande horizontalmente** (mais espaço para o
+  recorte focado); setas nas extremidades direita e esquerda navegam para
+  trás/frente na história quando o zoom está focado em um ponto específico.
+  Reaproveitar a mecânica de lente/zoom semântico validada no dock do Atlas —
+  mesma engine, contêiner diferente.
+
 ## Recently Completed
 
 - [x] **Nach visual layer (book + unit levels)** — 8 new SVGs (54 total: sword, lion, fish, heart, wall, mask, eye, hourglass); all 15 Nach/Ketuvim `index.json` files carry a book-level icon + per-unit icons (109 units); drawer index list shows mini icons per unit and the book icon in the ruler label; `_drawerRenderParasha` now falls back to the index entry's `visual` so the unit header badge renders without editing the 109 individual unit files (2026-06-14)

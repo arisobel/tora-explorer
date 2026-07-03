@@ -997,7 +997,6 @@ body.atlas-grabbing, body.atlas-grabbing * {
   --atlas-gold: #cbb67a;
   min-height: calc(100vh - 56px);
   background: linear-gradient(180deg, #f5f7fa 0%, #eef1f5 100%);
-  padding-bottom: 230px;
 }
 .atlas-ref-topbar {
   min-height: 92px;
@@ -1113,7 +1112,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
 .atlas-ref-stage {
   position: relative;
   display: grid;
-  grid-template-columns: 84px minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto minmax(470px, 1fr) auto;
   gap: 1rem;
   min-height: calc(100vh - 148px);
@@ -1124,11 +1123,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
   display: none;
 }
 .atlas-ref-stage > .atlas2d-shell {
-  grid-column: 2 / 4;
+  grid-column: 1;
   grid-row: 2;
 }
 .atlas-ref-stage > .atlas2d-floating-timeline {
-  grid-column: 2 / 4;
+  grid-column: 1;
   grid-row: 3;
 }
 .atlas-ref-crumbs {
@@ -1139,7 +1138,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   min-height: 34px;
 }
 .atlas-ref-zoom {
-  grid-column: 2 / 3;
+  grid-column: 1;
   justify-self: center;
   align-self: start;
   width: min(560px, 100%);
@@ -1178,49 +1177,6 @@ body.atlas-grabbing, body.atlas-grabbing * {
 .atlas-ref-zoom-dot.done {
   background: var(--atlas-blue);
 }
-.atlas-ref-leftbar {
-  grid-column: 1;
-  grid-row: 2;
-  align-self: start;
-  display: grid;
-  justify-items: center;
-  gap: .6rem;
-  padding: .75rem 0;
-  border: 1px solid var(--atlas-line);
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 8px 24px -16px rgba(20,35,60,.3);
-}
-.atlas-ref-leftbar button {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  width: 64px;
-  display: grid;
-  justify-items: center;
-  gap: .3rem;
-  color: #8893a2;
-  font-size: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
-.atlas-ref-leftbar button span:first-child {
-  width: 46px;
-  height: 46px;
-  border: 1px solid var(--atlas-line);
-  border-radius: 13px;
-  display: grid;
-  place-items: center;
-  background: #fff;
-  color: #5b6573;
-  font-size: 17px;
-}
-.atlas-ref-leftbar button.active span:first-child {
-  background: var(--atlas-navy);
-  color: #fff;
-  box-shadow: 0 8px 18px -8px rgba(19,36,60,.7);
-}
-.atlas-ref-leftbar button.active { color: var(--atlas-navy); }
 .atlas-ref-main {
   grid-column: 2;
   grid-row: 2;
@@ -1606,18 +1562,21 @@ body.atlas-grabbing, body.atlas-grabbing * {
   grid-row: 3;
 }
 .atlas-ref-shell .atlas2d-floating-timeline {
-  position: fixed;
-  left: max(1rem, calc((100vw - 1720px) / 2 + 1rem));
-  right: max(1rem, calc((100vw - 1720px) / 2 + 1rem));
-  bottom: 0;
-  z-index: 120;
+  position: static;
+  left: auto;
+  right: auto;
+  bottom: auto;
   width: auto;
+  margin-top: 0;
+  backdrop-filter: none;
   border: 1px solid var(--atlas-line);
-  border-radius: 20px 20px 0 0;
+  border-radius: 20px;
   background: #fff;
   box-shadow: 0 14px 40px -22px rgba(20,35,60,.4);
   padding: 1rem 1.35rem 1.15rem;
 }
+/* O dock da timeline vive no fluxo do documento: em telas onde tudo cabe,
+   o resultado é idêntico ao dock fixo do mock, sem nunca sobrepor os cards. */
 .atlas-ref-shell .atlas2d-time-head {
   justify-content: center;
   display: grid;
@@ -1663,6 +1622,8 @@ body.atlas-grabbing, body.atlas-grabbing * {
   display: grid;
   grid-template-columns: repeat(7, minmax(74px, 1fr));
   gap: .45rem;
+  overflow-x: auto;
+  padding-bottom: .15rem;
 }
 .atlas-ref-era-list.atlas-ref-era-list-books {
   grid-template-columns: repeat(5, minmax(110px, 1fr));
@@ -1778,6 +1739,31 @@ body.atlas-grabbing, body.atlas-grabbing * {
   color: var(--atlas-blue);
 }
 
+/* ATLAS RESPONSIVE — telas médias (laptops ~1366px e tablets) */
+@media (max-width: 1280px) {
+  .atlas-ref-topbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    row-gap: .65rem;
+    min-height: 0;
+  }
+  .atlas-ref-brand { grid-column: 1; grid-row: 1; }
+  .atlas-ref-user { grid-column: 2; grid-row: 1; justify-self: end; }
+  .atlas-ref-search { grid-column: 1 / -1; grid-row: 2; min-height: 44px; }
+  .atlas-ref-tools { display: none; }
+}
+@media (max-width: 1100px) {
+  .atlas-ref-shell .atlas2d-viewport {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .atlas-ref-shell .atlas2d-node-grid.atlas-ref-macro-grid {
+    flex-direction: column;
+    gap: 3rem;
+    padding-top: 1.5rem;
+  }
+  .atlas-ref-macro-card { min-height: 0; }
+}
+
 /* SHARED COMPONENTS */
 .badge {
   display: inline-block; padding: 2px 8px; border-radius: 20px;
@@ -1829,28 +1815,15 @@ body.atlas-grabbing, body.atlas-grabbing * {
     grid-template-columns: 1fr;
     align-items: start;
   }
-  .atlas-ref-tools {
-    justify-content: flex-start;
-    overflow-x: auto;
-    padding-bottom: .25rem;
-  }
+  .atlas-ref-brand { grid-column: 1; grid-row: 1; }
+  .atlas-ref-user { grid-column: 1; grid-row: 2; justify-self: start; }
+  .atlas-ref-search { grid-column: 1; grid-row: 3; }
   .atlas-ref-stage {
-    display: block;
     min-height: 0;
     padding: 1rem;
   }
-  .atlas-ref-shell .atlas2d-viewport {
-    display: block;
-  }
-  .atlas-ref-shell .atlas2d-layer-panel {
-    margin-top: 1rem;
-  }
   .atlas-ref-stage > .atlas2d-floating-timeline {
-    left: .75rem;
-    right: .75rem;
-    bottom: 0;
-    max-height: 42vh;
-    overflow: auto;
+    padding: .75rem .85rem .85rem;
   }
   .timeline-spine { left: 120px; }
   .tl-event { grid-template-columns: 100px 36px 1fr; }
@@ -2247,20 +2220,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
     </div>
   </div>
 
-  <div class="atlas-ref-leftbar" aria-label="Ferramentas de navegação do Atlas">
-    <button class="active" type="button" onclick="atlasReset()"><span>></span><span>Navegar</span></button>
-    <button type="button" onclick="atlasZoom(1)"><span>+</span><span>Zoom +</span></button>
-    <button type="button" onclick="atlasZoom(-1)"><span>-</span><span>Zoom -</span></button>
-    <button type="button" onclick="atlasReset()"><span>o</span><span>Centralizar</span></button>
-  </div>
-
   <div class="atlas2d-shell">
     <div class="atlas2d-toolbar">
       <div id="atlas-breadcrumb" class="atlas2d-breadcrumb"></div>
       <div class="atlas2d-zoom-controls">
-        <button class="atlas2d-zoom-btn" onclick="atlasZoom(-1)">−</button>
         <span id="atlas-zoom-label" class="atlas2d-zoom-label">Macro</span>
-        <button class="atlas2d-zoom-btn" onclick="atlasZoom(1)">+</button>
         <button class="atlas2d-action-btn" onclick="atlasReset()">Reset</button>
       </div>
     </div>
