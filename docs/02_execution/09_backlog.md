@@ -83,13 +83,32 @@ do foco.
   "− Macro +" da toolbar reduzido ao label + `Reset`; a régua de pontos no
   topo é agora a única affordance de zoom, como no mock. O rail só volta se
   agregar funções reais (centralizar, tela cheia).
-- [ ] **Timeline dock acompanha o zoom com fatos e personagens** — evolução do
+- [~] **Timeline dock acompanha o zoom com fatos e personagens** — evolução do
   item "Atlas timeline semantic zoom": além de re-renderizar níveis (eras →
   livros → milestones → parasha → fato), o dock deve trazer **fatos e
   personagens** do recorte focado nos zooms mais profundos, adicionando uma
   dimensão de entendimento ao que está sendo estudado nos cards acima. Fonte:
   os mesmos JSONs (`facts[]`, `summary.characters`) — sem segunda fonte de
   verdade.
+  **Fatia 1 implementada (2026-07-04), inspirada no mock "Timeline contextual
+  expandida — Melachim":** com um livro do Chumash selecionado (zoom ≥ 2), o
+  dock troca os chips de era por um painel multi-faixa: eixo de anos AM com
+  ticks, faixa **Parashiot** (barras clicáveis → drawer), faixa
+  **Acontecimentos** (losangos de milestones filtrados por `visual.importance`
+  — zoom 2 mostra 4-5, zoom 3+ mostra 3-5 — clique → `atlasSelect('milestone')`)
+  e faixa **Personagens** (spans derivados de `mart.byCharacter`, top 8, até 3
+  linhas empacotadas). Validado com screenshots headless (Gênesis).
+  **Quick wins do fonte HTML da proposta (`estrutura_tora_atlas_visual.html`)
+  absorvidos em 2026-07-04:** níveis de zoom nomeados sob a régua, labels de
+  texto nos losangos de Acontecimentos (alternando acima/abaixo) e card
+  "Sobre o período" no painel lateral derivado do `index.json`.
+  **Faltam:** (a) livros do Nach — hoje `nach-book` abre o drawer direto, sem
+  estado de livro selecionado no Atlas; a timeline expandida do Nach depende do
+  "Nach atlas/drill view" do Mid Term (o fallback por `key_events` já está
+  pronto no código); (b) faixas de **Reinados** (Yehudá/Israel rei a rei, como
+  no mock) — exigem dados novos (ex.: `data/timeline_lanes/kingdoms.json`);
+  (c) refinamento visual das barras comprimidas em recortes densos (parashiot
+  patriarcais em 1948-2255 se sobrepõem no eixo linear).
 - [ ] **Promoção visual por `visual.importance` — priorizada** — confirmada
   como diretriz do projeto: macro mostra só importância 5, livro/era 4–5,
   milestone 3–5, parasha/unidade 2–5, detalhe de fato 1–5. Combina com o item

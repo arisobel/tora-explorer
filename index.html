@@ -1177,6 +1177,20 @@ body.atlas-grabbing, body.atlas-grabbing * {
 .atlas-ref-zoom-dot.done {
   background: var(--atlas-blue);
 }
+.atlas-ref-zoom-names {
+  margin-top: .4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0 54px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #8893a2;
+  text-align: center;
+}
+.atlas-ref-zoom-names .active {
+  color: var(--atlas-blue);
+  font-weight: 800;
+}
 .atlas-ref-main {
   grid-column: 2;
   grid-row: 2;
@@ -1698,6 +1712,154 @@ body.atlas-grabbing, body.atlas-grabbing * {
   line-height: 1.2;
   text-align: center;
 }
+/* TIMELINE CONTEXTUAL EXPANDIDA — lanes paralelas (unidades, acontecimentos, personagens) */
+.atlas-tlx { display: none; margin-bottom: .9rem; }
+.atlas-tlx-grid {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  border: 1px solid var(--atlas-line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fbfcfe;
+}
+.atlas-tlx-grid > :nth-child(1),
+.atlas-tlx-grid > :nth-child(2) { border-top: 0; }
+.atlas-tlx-lane-label {
+  display: flex;
+  align-items: center;
+  padding: .5rem .6rem;
+  border-top: 1px solid var(--atlas-line);
+  background: #f5f7fa;
+  color: #5b6573;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.atlas-tlx-lane-track {
+  position: relative;
+  min-height: 34px;
+  border-top: 1px solid var(--atlas-line);
+  background: linear-gradient(90deg, rgba(19,36,60,.05) 1px, transparent 1px);
+  background-size: 10% 100%;
+}
+.atlas-tlx-axis { min-height: 24px; }
+.atlas-tlx-tick {
+  position: absolute;
+  top: 5px;
+  transform: translateX(-50%);
+  color: #9aa4b2;
+  font-size: 9px;
+  font-weight: 700;
+}
+.atlas-tlx-bar {
+  appearance: none;
+  position: absolute;
+  top: 5px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .45rem;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: filter .15s, transform .15s;
+}
+.atlas-tlx-bar-unit {
+  background: #e4eefb;
+  border-color: #c4d9f2;
+  color: #235a99;
+  cursor: pointer;
+}
+.atlas-tlx-bar-unit:hover {
+  filter: saturate(1.3) brightness(.97);
+  transform: translateY(-1px);
+  z-index: 2;
+}
+.atlas-tlx-bar-char {
+  height: 20px;
+  background: #efe7f8;
+  border-color: #dccbf0;
+  color: #6d4fa1;
+  font-weight: 600;
+}
+.atlas-tlx-mark {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #7bb597;
+  border: 1px solid #3e7a5b;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: transform .15s, background .15s;
+}
+.atlas-tlx-mark:hover {
+  transform: translate(-50%, -50%) rotate(45deg) scale(1.3);
+  background: #579372;
+  z-index: 2;
+}
+.atlas-tlx-mark.active {
+  background: #3e7a5b;
+  box-shadow: 0 0 0 3px rgba(87,147,114,.28);
+}
+.atlas-tlx-mark[disabled] { cursor: default; }
+.atlas-tlx-track-marks { min-height: 56px; }
+.atlas-tlx-mark-label {
+  position: absolute;
+  transform: translateX(-50%);
+  max-width: 96px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #3e5c4c;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+.atlas-period strong {
+  display: block;
+  color: var(--atlas-ink);
+  font-size: 14px;
+  margin-bottom: .3rem;
+}
+.atlas-period p {
+  color: #5b6573;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 .45rem;
+}
+.atlas-period-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #f4f6fa;
+  border-radius: 10px;
+  padding: .5rem .6rem;
+  margin-top: .4rem;
+}
+.atlas-period-row small {
+  color: #8893a2;
+  font-size: 10px;
+  font-weight: 700;
+}
+.atlas-period-row b {
+  color: var(--atlas-ink);
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .atlas-tlx-grid { grid-template-columns: 84px minmax(0, 1fr); }
+  .atlas-tlx-lane-label { font-size: 9px; padding: .4rem .45rem; }
+}
+
 .atlas-ref-shell .atlas2d-time-bar {
   height: 18px;
   border: 1px solid #d8e1ec;
@@ -2218,6 +2380,9 @@ body.atlas-grabbing, body.atlas-grabbing * {
       </div>
       <button class="atlas2d-zoom-btn" onclick="atlasZoom(1)">+</button>
     </div>
+    <div class="atlas-ref-zoom-names" aria-hidden="true">
+      <span class="active">Macro</span><span>Geral</span><span>Contexto</span><span>Detalhe</span><span>Profundidade</span>
+    </div>
   </div>
 
   <div class="atlas2d-shell">
@@ -2255,6 +2420,8 @@ body.atlas-grabbing, body.atlas-grabbing * {
           <span class="atlas2d-theme-chip">camadas</span>
         </div>
 
+        <div id="atlas-period-card"></div>
+
         <div class="atlas2d-panel-title" style="margin-top:1rem">Camadas</div>
         <div class="atlas2d-filter-row">
           <label><input id="atlas-layer-people" type="checkbox" checked onchange="atlasToggleLayer('people', this.checked)"> Personagens</label>
@@ -2290,6 +2457,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
       <div id="atlas-time-eras" class="atlas-ref-era-list"></div>
       <button class="atlas-ref-era-nav" type="button" onclick="atlasTimelineStep(1)" aria-label="Proximo periodo">&gt;</button>
     </div>
+    <div id="atlas-time-expanded" class="atlas-tlx"></div>
     <div id="atlas-time-bar" class="atlas2d-time-bar"></div>
     <div class="atlas2d-time-labels"><span>0 AM</span><span>2448</span><span>3339</span><span>5785</span></div>
   </div>
@@ -3447,6 +3615,9 @@ async function atlasRender() {
     dot.classList.toggle('active', i === atlasState.zoom);
     dot.classList.toggle('done', i < atlasState.zoom);
   });
+  document.querySelectorAll('.atlas-ref-zoom-names span').forEach((el, i) => {
+    el.classList.toggle('active', i === atlasState.zoom);
+  });
   const wheelToggle = document.getElementById('atlas-wheel-drill');
   if (wheelToggle) wheelToggle.checked = atlasState.wheelDrill;
   const focusLevel = document.getElementById('atlas-focus-level');
@@ -3946,8 +4117,154 @@ async function atlasRenderTimeline(groupData, focusRange, milestoneData = null) 
     }
   }
 
-  document.getElementById('atlas-time-title').textContent = useChumashBooks ? 'LINHA DO TEMPO DO CHUMASH' : 'LINHA DO TEMPO DA TORA';
+  // Timeline contextual expandida: com livro selecionado, o dock troca os chips
+  // de era por lanes paralelas (unidades, acontecimentos, personagens).
+  let tlxHTML = '';
+  if (atlasState.selectedBookKey && atlasState.zoom >= 2) {
+    try { tlxHTML = await atlasBuildTlxHTML(atlasState.selectedBookKey, milestoneData); } catch(e) { tlxHTML = ''; }
+  }
+  const tlxRoot = document.getElementById('atlas-time-expanded');
+  if (tlxRoot) {
+    tlxRoot.innerHTML = tlxHTML;
+    tlxRoot.style.display = tlxHTML ? 'block' : 'none';
+  }
+  const eraRow = document.querySelector('.atlas-ref-era-row');
+  if (eraRow) eraRow.style.display = tlxHTML ? 'none' : '';
+
+  const periodRoot = document.getElementById('atlas-period-card');
+  if (periodRoot) {
+    if (tlxHTML) {
+      try { periodRoot.innerHTML = await atlasBuildPeriodCardHTML(atlasState.selectedBookKey); } catch(e) { periodRoot.innerHTML = ''; }
+    } else {
+      periodRoot.innerHTML = '';
+    }
+  }
+
+  document.getElementById('atlas-time-title').textContent = tlxHTML
+    ? t('Timeline contextual expandida')
+    : (useChumashBooks ? 'LINHA DO TEMPO DO CHUMASH' : 'LINHA DO TEMPO DA TORA');
   document.getElementById('atlas-time-range').textContent = `${t(focusRange?.label || 'Toda a linha historica')} · ${start}-${end} AM`;
+}
+
+async function atlasBuildPeriodCardHTML(bookKey) {
+  const mart = await loadParashaMart(bookKey);
+  const idx = mart.index || {};
+  const tl = idx.timeline || {};
+  const name = idx.book_pt || idx.book || bookKey;
+  const desc = tl.description || idx.summary?.short || '';
+  const units = idx.parashiot || [];
+  const refStart = units[0]?.ref_start;
+  const refEnd = units[units.length - 1]?.ref_end;
+  return `
+    <div class="atlas2d-panel-title" style="margin-top:1rem">${t('Sobre o período')}</div>
+    <div class="atlas-period">
+      <strong>${atlasEsc(name)}${idx.book_he ? ' · ' + atlasEsc(idx.book_he) : ''}</strong>
+      ${desc ? `<p>${atlasEsc(desc)}</p>` : ''}
+      ${tl.anno_mundi_start != null ? `<div class="atlas-period-row"><small>${t('Período aproximado')}</small><b>${tl.anno_mundi_start}–${tl.anno_mundi_end} AM</b></div>` : ''}
+      ${refStart && refEnd ? `<div class="atlas-period-row"><small>${t('Abrangência principal')}</small><b>${atlasEsc(refStart)} – ${atlasEsc(refEnd)}</b></div>` : ''}
+    </div>
+  `;
+}
+
+function atlasTlxTickStep(span) {
+  const steps = [1, 2, 5, 10, 20, 25, 50, 100, 200, 250, 500, 1000];
+  for (const s of steps) if (span / s <= 8) return s;
+  return 2000;
+}
+
+async function atlasBuildTlxHTML(bookKey, milestoneData) {
+  const mart = await loadParashaMart(bookKey);
+  const units = (mart.index?.parashiot || []).filter(u => u.anno_mundi_start != null && u.anno_mundi_end != null);
+  if (!units.length) return '';
+  const idx = mart.index || {};
+  let start = Math.min(...units.map(u => u.anno_mundi_start));
+  let end = Math.max(...units.map(u => u.anno_mundi_end));
+  if (end - start < 4) end = start + 4;
+  const pad = Math.max(1, Math.round((end - start) * 0.02));
+  start = Math.max(0, start - pad);
+  end += pad;
+  const X = am => ((Math.max(start, Math.min(end, am)) - start) / (end - start)) * 100;
+
+  const step = atlasTlxTickStep(end - start);
+  let ticks = '';
+  for (let v = Math.ceil(start / step) * step; v <= end; v += step) {
+    ticks += `<span class="atlas-tlx-tick" style="left:${X(v).toFixed(2)}%">${v}</span>`;
+  }
+
+  const unitBars = units.map(u => {
+    const l = X(u.anno_mundi_start);
+    const w = Math.min(Math.max(X(u.anno_mundi_end) - l, 1.6), 100 - l);
+    const label = u.name || u.label || u.id;
+    return `<button class="atlas-tlx-bar atlas-tlx-bar-unit" type="button" style="left:${l.toFixed(2)}%;width:${w.toFixed(2)}%" title="${atlasEsc(label)} · ${u.anno_mundi_start}-${u.anno_mundi_end} AM" onclick="drawerOpen({bookKey:'${atlasEsc(bookKey)}',parashaId:'${atlasEsc(u.id)}'})">${atlasEsc(label)}</button>`;
+  }).join('');
+
+  // Acontecimentos: milestones do livro (Chumash) filtrados por importance —
+  // zoom 2 mostra só 4-5, zoom 3+ mostra 3-5; Nach cai nos key_events globais.
+  const markItems = [];
+  const bookMs = (milestoneData?.books || []).find(b => b.book_key === bookKey);
+  if (bookMs) {
+    const minImportance = atlasState.zoom >= 3 ? 3 : 4;
+    for (const ms of (bookMs.milestones || [])) {
+      if ((ms.importance || 3) < minImportance) continue;
+      const spans = (ms.parasha_ids || []).map(pid => mart.byId[pid]).filter(p => p && p.anno_mundi_start != null);
+      if (!spans.length) continue;
+      const mid = (Math.min(...spans.map(p => p.anno_mundi_start)) + Math.max(...spans.map(p => p.anno_mundi_end))) / 2;
+      markItems.push({ x: X(mid), label: ms.label, title: ms.label, active: atlasState.selectedMilestoneId === ms.id, onclick: `atlasSelect('milestone','${atlasEsc(ms.id)}')` });
+    }
+  } else {
+    try {
+      const tl = await loadTimelineData();
+      for (const e of (tl.key_events || [])) {
+        if (typeof e.am !== 'number' || e.am < start || e.am > end) continue;
+        markItems.push({ x: X(e.am), label: e.label, title: `${e.label} · ${e.am} AM`, active: false, onclick: null });
+      }
+    } catch(e) {}
+  }
+  const marks = markItems.map((m, i) => {
+    const labelTop = i % 2 === 0 ? 4 : 42;
+    const btn = m.onclick
+      ? `<button class="atlas-tlx-mark ${m.active ? 'active' : ''}" type="button" style="left:${m.x.toFixed(2)}%" title="${atlasEsc(m.title)}" onclick="${m.onclick}"></button>`
+      : `<button class="atlas-tlx-mark" type="button" disabled style="left:${m.x.toFixed(2)}%" title="${atlasEsc(m.title)}"></button>`;
+    return `${btn}<span class="atlas-tlx-mark-label" style="left:${m.x.toFixed(2)}%;top:${labelTop}px">${atlasEsc(m.label)}</span>`;
+  }).join('');
+  const marksRow = marks
+    ? `<div class="atlas-tlx-lane-label">${t('Acontecimentos')}</div><div class="atlas-tlx-lane-track atlas-tlx-track-marks">${marks}</div>`
+    : '';
+
+  // Personagens: spans derivados das unidades onde cada personagem aparece.
+  const chars = Object.entries(mart.byCharacter || {}).map(([name, ids]) => {
+    const spans = ids.map(id => mart.byId[id]).filter(p => p && p.anno_mundi_start != null);
+    if (!spans.length) return null;
+    return { name, count: ids.length, s: Math.min(...spans.map(p => p.anno_mundi_start)), e: Math.max(...spans.map(p => p.anno_mundi_end)) };
+  }).filter(Boolean).sort((a, b) => b.count - a.count || a.s - b.s).slice(0, 8).sort((a, b) => a.s - b.s);
+
+  let charsRow = '';
+  if (chars.length) {
+    const rowEnds = [];
+    const bars = chars.map(c => {
+      let row = rowEnds.findIndex(endAm => endAm <= c.s);
+      if (row === -1) {
+        if (rowEnds.length >= 3) return '';
+        row = rowEnds.length;
+        rowEnds.push(0);
+      }
+      const l = X(c.s);
+      const w = Math.min(Math.max(X(c.e) - l, 3.4), 100 - l);
+      rowEnds[row] = start + ((l + w) / 100) * (end - start);
+      return `<span class="atlas-tlx-bar atlas-tlx-bar-char" style="left:${l.toFixed(2)}%;width:${w.toFixed(2)}%;top:${5 + row * 23}px" title="${atlasEsc(c.name)} · ${c.count} ${t('unidades')}">${atlasEsc(c.name)}</span>`;
+    }).join('');
+    charsRow = `<div class="atlas-tlx-lane-label">${t('Personagens')}</div><div class="atlas-tlx-lane-track" style="min-height:${10 + rowEnds.length * 23}px">${bars}</div>`;
+  }
+
+  const unitsLabel = idx.corpus === 'nach' ? t('Unidades') : t('Parashiot');
+  return `
+    <div class="atlas-tlx-grid">
+      <div class="atlas-tlx-lane-label">${t('Ano (AM)')}</div><div class="atlas-tlx-lane-track atlas-tlx-axis">${ticks}</div>
+      <div class="atlas-tlx-lane-label">${unitsLabel}</div><div class="atlas-tlx-lane-track">${unitBars}</div>
+      ${marksRow}
+      ${charsRow}
+    </div>
+  `;
 }
 
 function atlasTimelinePhaseIsActive(phase, start, end, hasFocusedRange) {

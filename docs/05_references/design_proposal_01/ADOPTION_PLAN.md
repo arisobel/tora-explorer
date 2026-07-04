@@ -337,6 +337,46 @@ drill de parasha/fato.
   menor largura que o headless permite (~460px), com probe de overflow
   confirmando ausencia de scroll horizontal do documento.
 
+### Baby-step concluido - timeline contextual expandida, fatia 1 (2026-07-04)
+
+Referencia nova aceita: mock "Timeline contextual expandida - Melachim"
+(fornecido pelo usuario em 2026-07-04): timeline do Atlas como painel
+multi-faixa - eixo de anos, faixa de livros, acontecimentos, profetas/
+personagens e reinados, com painel lateral de personagens do periodo.
+Fonte HTML da proposta: `estrutura_tora_atlas_visual.html` (mesma pasta).
+
+- Com um livro do Chumash selecionado (zoom >= 2), o dock troca os chips de
+  era por um painel multi-faixa: eixo AM com ticks adaptativos, faixa
+  **Parashiot** (barras posicionadas por `anno_mundi_start/end`, clique abre o
+  drawer), faixa **Acontecimentos** (losangos de milestones filtrados por
+  `visual.importance` - primeira aplicacao real da regra de promocao visual:
+  zoom 2 mostra 4-5, zoom 3+ mostra 3-5) e faixa **Personagens** (spans
+  derivados de `byCharacter`, top 8, ate 3 linhas empacotadas).
+- Nenhuma fonte de dados nova: tudo deriva dos `index.json`, de
+  `milestones/chumash.json` e do mart em runtime. A regua AM de precisao
+  continua abaixo do painel.
+- Pendencias mapeadas no backlog: estado de livro selecionado para Nach (hoje
+  `nach-book` abre o drawer direto), faixas de reinados (exigem dados novos) e
+  refinamento de barras em recortes densos.
+
+### Baby-step concluido - quick wins do HTML da proposta (2026-07-04)
+
+Com o fonte `estrutura_tora_atlas_visual.html` em maos, tres detalhes do mock
+foram absorvidos no mesmo dia:
+
+- **Niveis de zoom nomeados** sob a regua de pontos (Macro, Geral, Contexto,
+  Detalhe, Profundidade), com o nivel ativo destacado em azul a cada render.
+- **Labels de texto nos losangos** da faixa Acontecimentos, alternando acima/
+  abaixo do marcador para reduzir colisao (alem do tooltip que ja existia).
+- **Card "Sobre o periodo"** no painel lateral quando um livro esta em foco:
+  nome + hebraico, `timeline.description`, periodo aproximado em AM e
+  abrangencia principal (ref inicial-final), tudo derivado do `index.json`.
+
+Nao absorvido de proposito: o rail lateral de Navegar/Zoom/Centralizar do mock
+(duplicaria a regua canonica - decisao de 2026-07-03) e o eixo em a.E.C.
+(o projeto usa AM como calendario canonico; conversao dupla fica para
+avaliacao futura).
+
 ## Guardrails
 
 - Nao copiar HTML exportado diretamente para `index.html`; converter ideias em
