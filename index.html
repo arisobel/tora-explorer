@@ -5665,6 +5665,10 @@ function _drawerRenderParasha(data, context = null) {
 
 const _passageCache = {};
 
+// Mapeia o idioma global da plataforma para a versão de tradução da Sefaria.
+// he → sem coluna de tradução (o passuk já é hebraico).
+const SITE_LANG_TO_SEFARIA = { pt: 'portuguese', en: 'english', es: 'spanish', he: null };
+
 async function drawerLoadPassage(btn, ref) {
   const area = btn.closest('.fact-item').querySelector('.fact-passage-area');
   if (!area) return;
@@ -5677,48 +5681,61 @@ async function drawerLoadPassage(btn, ref) {
 
   area.classList.add('open');
 
-  if (_passageCache[ref]) {
-    area.innerHTML = _passageCache[ref];
+  // Tradução segue o idioma global da plataforma (PT→PT-br, EN→inglês, ES→espanhol).
+  const transVersion = SITE_LANG_TO_SEFARIA[currentLang];
+  const cacheKey = `${ref}::${currentLang}`;
+  if (_passageCache[cacheKey]) {
+    area.innerHTML = _passageCache[cacheKey];
     return;
   }
 
   area.innerHTML = `<div class="passage-loading">${t('Carregando da Sefaria…')}</div>`;
   btn.textContent = t('Carregando…');
 
-  const urlHe = sefariaTextUrl(ref, 'hebrew');
-  const urlEn = sefariaTextUrl(ref, 'english');
+  const fetchVersion = async (version) => {
+    const res = await fetch(sefariaTextUrl(ref, version));
+    const data = await res.json();
+    const ver = data.versions && data.versions[0];
+    if (!ver || ver.text == null) return [];
+    return (Array.isArray(ver.text) ? ver.text.flat() : [ver.text]).filter(v => v != null);
+  };
 
   try {
-    const [resHe, resEn] = await Promise.all([fetch(urlHe), fetch(urlEn)]);
-    const [dataHe, dataEn] = await Promise.all([resHe.json(), resEn.json()]);
+    const [heArr, trInit] = await Promise.all([
+      fetchVersion('hebrew'),
+      transVersion ? fetchVersion(transVersion) : Promise.resolve([])
+    ]);
 
-    const heVer = dataHe.versions && dataHe.versions[0];
-    const enVer = dataEn.versions && dataEn.versions[0];
-    let heArr = heVer ? (Array.isArray(heVer.text) ? heVer.text.flat() : [heVer.text]) : [];
-    let enArr = enVer ? (Array.isArray(enVer.text) ? enVer.text.flat() : [enVer.text]) : [];
-    heArr = heArr.filter(v => v != null);
-    enArr = enArr.filter(v => v != null);
+    // Fallback: tradução escolhida ausente neste livro → Inglês (não se aplica a HE nem EN).
+    let trArr = trInit;
+    let usedFallback = false;
+    if (transVersion && trArr.length === 0 && currentLang !== 'en') {
+      trArr = await fetchVersion('english');
+      if (trArr.length) usedFallback = true;
+    }
 
     const chapMatch   = ref.match(/\s(\d+):(\d+)/);
     const chapNum     = chapMatch ? parseInt(chapMatch[1]) : 0;
     const verseStart  = chapMatch ? parseInt(chapMatch[2]) : 1;
     const isMultiChap = /\d+:\d+-\d+:\d+/.test(ref);
+    const showTr      = transVersion != null;
 
-    const len = Math.max(heArr.length, enArr.length);
+    const len = Math.max(heArr.length, trArr.length);
     let html = '';
     for (let i = 0; i < len; i++) {
       const he     = (heArr[i] || '').replace(/<[^>]*>/g, '').trim();
-      const en     = (enArr[i] || '').replace(/<[^>]*>/g, '').trim();
+      const tr     = (trArr[i] || '').replace(/<[^>]*>/g, '').trim();
       const vLabel = isMultiChap ? (i + 1) : `${chapNum}:${verseStart + i}`;
       html += `<div class="passage-verse">
         <div class="passage-vnum">${vLabel}</div>
         <div class="passage-he">${he || '—'}</div>
-        <div class="passage-en">${en || '—'}</div>
+        ${showTr ? `<div class="passage-en">${tr || '—'}</div>` : ''}
       </div>`;
     }
-    html += `<div class="passage-footer">${ref}</div>`;
+    const fbNote = usedFallback ? ` · ${t('tradução indisponível neste livro, exibindo Inglês')}` : '';
+    html += `<div class="passage-footer">${ref}${fbNote}</div>`;
 
-    _passageCache[ref] = html;
+    _passageCache[cacheKey] = html;
     area.innerHTML    = html;
     btn.textContent   = t('Ver passagem');
   } catch(e) {

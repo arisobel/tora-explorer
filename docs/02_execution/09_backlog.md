@@ -198,6 +198,7 @@ do foco.
 
 > **Sefaria multilíngue a nível de versículo — CONFIRMADO (2026-06-14).** A v3 Texts API serve HE/EN/PT/ES. Sintaxe: `version=<nome da língua em inglês>` (`hebrew`, `english`, `portuguese`, `spanish` — o código curto `pt`/`es` retorna vazio). Múltiplos `version=` por chamada são aceitos. Esther tem as 4: PT = *Publicado em 5784, Saymon Pires da Silva*; ES = *Meguilá Ester — Seminario Rabínico*. **Quick win:** parametrizar `version` em `sefariaTextUrl()` (index.html:2772) + seletor de idioma na aba Pessukim → conteúdo bíblico nas 4 línguas sem traduzir nada. **Ressalva:** cobertura PT/ES varia por livro; detectar `warnings` (código 102 = língua ausente) e cair para EN/HE.
 - [x] Quick win Pessukim: parametrizar `version` por língua + seletor de idioma + fallback via `warnings` (2026-06-14)
+- [x] **Drawer: passagem Sefaria segue o idioma global** (2026-07-04) — `drawerLoadPassage` usa `SITE_LANG_TO_SEFARIA[currentLang]` (pt→portuguese, en→english, es→spanish, he→só passuk), com fallback para Inglês e cache por `ref::lang`. Diferente da aba Pessukim, que mantém seu próprio seletor de tradução; o drawer segue a língua geral da plataforma. Validado em PT/ES/HE.
 
 ### User image uploads (CapRover volume)
 **Decision (2026-06-14): author-only + filebrowser sidecar.** App stays pure-static; a separate password-protected filebrowser container writes to a shared host volume; the app serves/references `assets/user/`. Repo side scaffolded; CapRover dashboard side is the author's to do. See `docs/04_technical/USER_IMAGE_UPLOADS.md`.
