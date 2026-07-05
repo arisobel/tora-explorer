@@ -4,32 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Torá Explorer — Minian</title>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #fbfaf7;
-  --bg2: #f5f1e9;
-  --bg3: #eee7d9;
+  /* Esquema frio da proposta estrutura_tora_atlas_visual (2026-07-04) */
+  --bg: #f7f9fc;
+  --bg2: #eef2f8;
+  --bg3: #e3ebf5;
   --surface: #ffffff;
-  --surface2: #f3efe7;
-  --gold: #b88a24;
-  --gold2: #8f691a;
-  --gold3: #6f5013;
-  --sand: #8f826d;
-  --sand2: #5f5343;
-  --blue: #2f78a8;
-  --blue2: #1f638d;
-  --green: #3d8b62;
-  --green2: #2f754f;
-  --text: #24211c;
-  --text2: #5f5547;
-  --text3: #8a7d68;
-  --border: rgba(92,76,47,0.16);
-  --border2: rgba(92,76,47,0.28);
-  --r: 8px;
-  --r2: 14px;
-  --shadow-1: 0 1px 2px rgba(60,48,24,0.06), 0 1px 4px rgba(60,48,24,0.05);
-  --shadow-2: 0 2px 6px rgba(60,48,24,0.08), 0 4px 14px rgba(60,48,24,0.07);
+  --surface2: #f4f6fa;
+  /* Acento primário agora é AZUL. Os tokens --gold* foram mantidos por
+     compatibilidade com dezenas de regras de interface, mas carregam o azul
+     primário. Ouro real (Halachá / eras douradas) vive em --hal/--hal2. */
+  --gold: #0f67e8;
+  --gold2: #0a52c0;
+  --gold3: #083d8f;
+  --hal: #db8b00;
+  --hal2: #a86a00;
+  --sand: #7a869c;
+  --sand2: #46536e;
+  --blue: #0f67e8;
+  --blue2: #0a52c0;
+  --green: #4b8f3f;
+  --green2: #3a7030;
+  --purple: #7b43bd;
+  --purple2: #633a99;
+  --ink: #071738;
+  --navy: #062a63;
+  --text: #10203a;
+  --text2: #4a5875;
+  --text3: #8794ad;
+  --border: #dbe3f1;
+  --border2: #c6d2e6;
+  --r: 12px;
+  --r2: 18px;
+  --shadow-1: 0 6px 16px rgba(10,32,70,0.05);
+  --shadow-2: 0 16px 38px rgba(10,32,70,0.09);
 
   /* Escala tipográfica (base 14px, razão ~1.25) */
   --text-xs: 11px;
@@ -65,7 +75,7 @@ html { scroll-behavior: smooth; }
 body {
   background: linear-gradient(180deg, #ffffff 0%, var(--bg) 280px);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
   font-size: 14px;
   line-height: 1.6;
   min-height: 100vh;
@@ -109,7 +119,7 @@ nav {
   background: none; border: 1px solid transparent; transition: all .15s;
 }
 .lang-btn:hover { color: var(--gold2); }
-.lang-btn.active { color: var(--gold2); background: rgba(201,168,76,0.12); border-color: var(--gold); }
+.lang-btn.active { color: var(--gold2); background: rgba(15,103,232,0.12); border-color: var(--gold); }
 
 /* RTL (hebraico) */
 body.rtl .sec-title, body.rtl .sec-sub { direction: rtl; text-align: right; }
@@ -167,8 +177,8 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 .pillar-he { font-size: var(--text-md); opacity: 0.6; margin-left: auto; }
 .pillar-body { padding: var(--space-4) var(--space-5); }
 
-.escrita .pillar-header { background: rgba(74,127,165,0.15); color: var(--blue2); border-bottom: 1px solid rgba(74,127,165,0.2); }
-.oral .pillar-header { background: rgba(74,138,106,0.15); color: var(--green2); border-bottom: 1px solid rgba(74,138,106,0.2); }
+.escrita .pillar-header { background: rgba(15,103,232,0.15); color: var(--blue2); border-bottom: 1px solid rgba(15,103,232,0.2); }
+.oral .pillar-header { background: rgba(75,143,63,0.15); color: var(--green2); border-bottom: 1px solid rgba(75,143,63,0.2); }
 
 .book-group { margin-bottom: var(--space-5); }
 .book-group-title {
@@ -183,11 +193,14 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   font-size: var(--text-sm); cursor: pointer;
   transition: transform .15s, box-shadow .15s, background .18s, border-color .18s;
 }
-.chip-blue { background: rgba(74,127,165,0.15); color: var(--blue2); border: 1px solid rgba(74,127,165,0.25); }
-.chip-blue:hover { background: rgba(74,127,165,0.3); }
-.chip-green { background: rgba(74,138,106,0.15); color: var(--green2); border: 1px solid rgba(74,138,106,0.25); }
-.chip-green:hover { background: rgba(74,138,106,0.3); }
-.chip-blue:hover, .chip-green:hover { transform: translateY(-1px); box-shadow: var(--shadow-1); }
+.chip-blue { background: rgba(15,103,232,0.15); color: var(--blue2); border: 1px solid rgba(15,103,232,0.25); }
+.chip-blue:hover { background: rgba(15,103,232,0.3); }
+.chip-green { background: rgba(75,143,63,0.15); color: var(--green2); border: 1px solid rgba(75,143,63,0.25); }
+.chip-green:hover { background: rgba(75,143,63,0.3); }
+.chip-gold { background: rgba(219,139,0,0.13); color: var(--hal2); border: 1px solid rgba(219,139,0,0.28); }
+.chip-gold:hover { background: rgba(219,139,0,0.26); }
+.chip-blue:hover, .chip-green:hover, .chip-gold:hover { transform: translateY(-1px); box-shadow: var(--shadow-1); }
+.oral-section-title.halacha { color: var(--hal2); }
 
 .oral-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .oral-section { }
@@ -224,13 +237,13 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   border-radius: var(--r);
   padding: .75rem .85rem;
   cursor: pointer;
-  box-shadow: 0 8px 22px rgba(82,65,35,0.05);
+  box-shadow: 0 8px 22px rgba(10,32,70,0.05);
   transition: transform .18s, border-color .18s, box-shadow .18s;
 }
 .drill-step:hover {
   transform: translateY(-1px);
-  border-color: rgba(184,138,36,.45);
-  box-shadow: 0 10px 28px rgba(82,65,35,0.08);
+  border-color: rgba(15,103,232,.45);
+  box-shadow: 0 10px 28px rgba(10,32,70,0.08);
 }
 .drill-step-kicker {
   display: block;
@@ -327,7 +340,7 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 .tl-event:hover .tl-event-title { color: var(--gold2); }
 .tl-event:hover .tl-dot { transform: scale(1.4); }
 .tl-event.selected .tl-event-title { color: var(--gold2); }
-.tl-event.selected .tl-dot { transform: scale(1.5); box-shadow: 0 0 0 4px rgba(201,168,76,.16); }
+.tl-event.selected .tl-dot { transform: scale(1.5); box-shadow: 0 0 0 4px rgba(15,103,232,.16); }
 .tl-drill-hint {
   display: inline-flex; align-items: center; gap: 5px;
   margin-top: 7px;
@@ -339,7 +352,7 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   border: 1px solid var(--border);
   border-radius: var(--r);
   background: rgba(255,255,255,0.72);
-  box-shadow: 0 10px 26px rgba(82,65,35,0.06);
+  box-shadow: 0 10px 26px rgba(10,32,70,0.06);
   padding: .85rem;
 }
 .tl-event.expanded .tl-drill-panel { display: block; }
@@ -354,7 +367,7 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   gap: .6rem;
 }
 .tl-group-card {
-  border: 1px solid rgba(92,76,47,0.14);
+  border: 1px solid rgba(10,32,70,0.14);
   border-radius: var(--r);
   background: var(--surface);
   padding: .65rem;
@@ -363,8 +376,8 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 }
 .tl-group-card:hover {
   transform: translateY(-1px);
-  border-color: rgba(184,138,36,.42);
-  box-shadow: 0 10px 20px rgba(82,65,35,0.08);
+  border-color: rgba(15,103,232,.42);
+  box-shadow: 0 10px 20px rgba(10,32,70,0.08);
 }
 .tl-group-head {
   display: flex; align-items: center; gap: .45rem;
@@ -416,18 +429,18 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 .tl-phase-event-chip {
   display: inline-flex; align-items: center; gap: 5px;
   padding: 3px 10px; border-radius: 20px;
-  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+  background: rgba(15,103,232,0.08); border: 1px solid rgba(15,103,232,0.25);
   color: var(--gold2); font-size: 11px; cursor: pointer;
   transition: all .2s; appearance: none;
 }
-.tl-phase-event-chip:hover { background: rgba(201,168,76,0.2); border-color: var(--gold2); }
+.tl-phase-event-chip:hover { background: rgba(15,103,232,0.2); border-color: var(--gold2); }
 .tl-phase-event-chip.active {
-  background: rgba(201,168,76,0.28); border-color: var(--gold);
-  font-weight: 500; box-shadow: 0 0 0 2px rgba(201,168,76,0.18);
+  background: rgba(15,103,232,0.28); border-color: var(--gold);
+  font-weight: 500; box-shadow: 0 0 0 2px rgba(15,103,232,0.18);
 }
 .tl-group-card.tl-group-selected {
-  border-color: rgba(184,138,36,.6);
-  box-shadow: 0 0 0 2px rgba(201,168,76,0.15), 0 10px 24px rgba(82,65,35,0.09);
+  border-color: rgba(15,103,232,.6);
+  box-shadow: 0 0 0 2px rgba(15,103,232,0.15), 0 10px 24px rgba(10,32,70,0.09);
 }
 .tl-phase-event-chip-he {
   font-family: 'Crimson Pro', serif; font-size: 13px; opacity: .65;
@@ -435,8 +448,8 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 
 /* GROUP FACTS PANEL */
 .tl-group-card.tl-group-expanded {
-  border-color: rgba(184,138,36,.5);
-  box-shadow: 0 12px 28px rgba(82,65,35,0.1);
+  border-color: rgba(15,103,232,.5);
+  box-shadow: 0 12px 28px rgba(10,32,70,0.1);
 }
 .tl-group-facts-panel {
   display: none;
@@ -464,19 +477,19 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 .tl-group-drawer-btn {
   display: block; width: 100%; margin-top: .65rem;
   padding: 5px 12px; border-radius: var(--r);
-  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.3);
+  background: rgba(15,103,232,0.08); border: 1px solid rgba(15,103,232,0.3);
   color: var(--gold2); font-size: 11px; cursor: pointer;
   text-align: center; transition: all .2s;
 }
-.tl-group-drawer-btn:hover { background: rgba(201,168,76,0.18); border-color: var(--gold2); }
+.tl-group-drawer-btn:hover { background: rgba(15,103,232,0.18); border-color: var(--gold2); }
 
 /* Era colors */
 .dot-escrita { background: var(--blue); }
 .dot-oral { background: var(--green); }
 .tag-escrita { color: var(--blue2); }
 .tag-oral { color: var(--green2); }
-.connector-escrita { background: linear-gradient(180deg, var(--blue) 0%, rgba(74,127,165,0.3) 100%); }
-.connector-oral { background: linear-gradient(180deg, var(--green) 0%, rgba(74,138,106,0.3) 100%); }
+.connector-escrita { background: linear-gradient(180deg, var(--blue) 0%, rgba(15,103,232,0.3) 100%); }
+.connector-oral { background: linear-gradient(180deg, var(--green) 0%, rgba(75,143,63,0.3) 100%); }
 
 /* Oral timeline bar */
 .oral-bar-section { margin: 2.5rem 0; }
@@ -510,8 +523,8 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   font-family: 'Crimson Pro', serif; font-size: var(--text-xl); font-weight: 600;
   border-bottom: 1px solid var(--border);
 }
-.mg-pillar-head.mishna { background: rgba(74,138,106,0.12); color: var(--green2); }
-.mg-pillar-head.guemara { background: rgba(201,168,76,0.1); color: var(--gold2); }
+.mg-pillar-head.mishna { background: rgba(75,143,63,0.12); color: var(--green2); }
+.mg-pillar-head.guemara { background: rgba(75,143,63,0.1); color: var(--green2); }
 
 .mg-pillar-body { padding: var(--space-4) var(--space-5); }
 
@@ -527,10 +540,10 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   padding: 3px 9px; border-radius: 20px;
   font-size: 11px; cursor: pointer; transition: all .2s;
 }
-.name-tag.mishna-tag { background: rgba(74,138,106,0.12); color: var(--green2); border: 1px solid rgba(74,138,106,0.2); }
-.name-tag.mishna-tag:hover { background: rgba(74,138,106,0.25); }
-.name-tag.guemara-tag { background: rgba(201,168,76,0.1); color: var(--gold2); border: 1px solid rgba(201,168,76,0.2); }
-.name-tag.guemara-tag:hover { background: rgba(201,168,76,0.22); }
+.name-tag.mishna-tag { background: rgba(75,143,63,0.12); color: var(--green2); border: 1px solid rgba(75,143,63,0.2); }
+.name-tag.mishna-tag:hover { background: rgba(75,143,63,0.25); }
+.name-tag.guemara-tag { background: rgba(75,143,63,0.1); color: var(--green2); border: 1px solid rgba(75,143,63,0.2); }
+.name-tag.guemara-tag:hover { background: rgba(75,143,63,0.22); }
 .name-tag.highlight { font-weight: 600; border-width: 2px; }
 
 /* Braitot sidebar */
@@ -571,7 +584,7 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   color: var(--text2);
 }
 .book-btn:hover { border-color: var(--gold); color: var(--gold2); transform: translateY(-1px); box-shadow: var(--shadow-1); }
-.book-btn.active { background: rgba(201,168,76,0.12); border-color: var(--gold); color: var(--gold2); font-weight: 500; }
+.book-btn.active { background: rgba(15,103,232,0.12); border-color: var(--gold); color: var(--gold2); font-weight: 500; }
 
 .book-view { display: none; }
 .book-view.active { display: block; }
@@ -628,7 +641,7 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   gap: .75rem;
 }
 .atlas-book {
-  border-left: 2px solid rgba(74,127,165,.45);
+  border-left: 2px solid rgba(15,103,232,.45);
   padding-left: .65rem;
 }
 .atlas-book-title {
@@ -644,7 +657,7 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   cursor: default;
 }
 .milestone-card.interactive { cursor: pointer; border-radius: 6px; transition: background .15s; }
-.milestone-card.interactive:hover { background: rgba(201,168,76,0.08); }
+.milestone-card.interactive:hover { background: rgba(15,103,232,0.08); }
 .milestone-icon { font-size: 16px; width: 24px; text-align: center; opacity: .8; }
 .milestone-label { color: var(--text2); font-size: var(--text-sm); line-height: 1.3; }
 .milestone-meta { color: var(--text3); font-size: 10px; margin-top: 2px; }
@@ -656,7 +669,7 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
   border-radius: var(--r2);
   background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,241,233,0.64));
   overflow: hidden;
-  box-shadow: 0 18px 48px rgba(82,65,35,0.08);
+  box-shadow: 0 18px 48px rgba(10,32,70,0.08);
 }
 .atlas2d-toolbar {
   display: flex;
@@ -719,13 +732,13 @@ body.rtl .verse-en { direction: rtl; text-align: right; }
 }
 .atlas2d-map {
   min-height: 465px;
-  border: 1px solid rgba(92,76,47,0.12);
+  border: 1px solid rgba(10,32,70,0.12);
   border-radius: var(--r);
   background:
     radial-gradient(circle at 18% 20%, rgba(47,120,168,0.08), transparent 28%),
-    radial-gradient(circle at 72% 28%, rgba(184,138,36,0.09), transparent 30%),
-    linear-gradient(90deg, rgba(92,76,47,0.055) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(92,76,47,0.055) 1px, transparent 1px),
+    radial-gradient(circle at 72% 28%, rgba(15,103,232,0.09), transparent 30%),
+    linear-gradient(90deg, rgba(10,32,70,0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(10,32,70,0.055) 1px, transparent 1px),
     rgba(255,255,255,0.7);
   background-size: auto, auto, 52px 52px, 52px 52px, auto;
   padding: 1.2rem;
@@ -792,16 +805,16 @@ body.atlas-grabbing, body.atlas-grabbing * {
 }
 .atlas2d-node:hover {
   transform: translateY(-2px);
-  border-color: rgba(184,138,36,0.45);
-  box-shadow: 0 12px 28px rgba(82,65,35,0.10);
+  border-color: rgba(15,103,232,0.45);
+  box-shadow: 0 12px 28px rgba(10,32,70,0.10);
 }
 .atlas2d-node.selected {
-  border-color: rgba(184,138,36,0.6);
+  border-color: rgba(15,103,232,0.6);
   border-left-color: var(--gold);
   background: rgba(255,250,238,0.96);
 }
 .atlas2d-node.hover-target {
-  border-color: rgba(184,138,36,0.42);
+  border-color: rgba(15,103,232,0.42);
   border-left-color: var(--gold);
   background: rgba(255,250,238,0.78);
 }
@@ -852,7 +865,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   border: 1px solid var(--border);
   border-radius: var(--r);
   background: rgba(255,255,255,0.94);
-  box-shadow: 0 18px 34px rgba(82,65,35,0.10);
+  box-shadow: 0 18px 34px rgba(10,32,70,0.10);
   padding: .85rem;
 }
 .atlas2d-panel-title {
@@ -906,7 +919,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   border-radius: 0;
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(12px);
-  box-shadow: 0 -14px 34px rgba(82,65,35,0.10);
+  box-shadow: 0 -14px 34px rgba(10,32,70,0.10);
   padding: .65rem max(2rem, calc((100vw - 1280px) / 2 + 2rem)) .7rem;
 }
 .atlas2d-time-head {
@@ -938,7 +951,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   min-width: 4px;
   border: 2px solid var(--gold);
   border-radius: 18px;
-  background: rgba(184,138,36,0.12);
+  background: rgba(15,103,232,0.12);
   pointer-events: none;
 }
 .atlas2d-time-labels {
@@ -982,7 +995,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   padding: 0;
   background: #edf1f6;
   color: #1b2430;
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Inter', 'DM Sans', system-ui, sans-serif;
 }
 .atlas-ref-shell {
   --atlas-paper: #edf1f6;
@@ -1931,9 +1944,9 @@ body.atlas-grabbing, body.atlas-grabbing * {
   display: inline-block; padding: 2px 8px; border-radius: 20px;
   font-size: 11px;
 }
-.badge-gold { background: rgba(201,168,76,0.15); color: var(--gold2); border: 1px solid rgba(201,168,76,0.25); }
-.badge-blue { background: rgba(74,127,165,0.15); color: var(--blue2); }
-.badge-green { background: rgba(74,138,106,0.15); color: var(--green2); }
+.badge-gold { background: rgba(219,139,0,0.15); color: var(--hal2); border: 1px solid rgba(219,139,0,0.3); }
+.badge-blue { background: rgba(15,103,232,0.15); color: var(--blue2); }
+.badge-green { background: rgba(75,143,63,0.15); color: var(--green2); }
 
 .card {
   background: var(--surface); border: 1px solid var(--border);
@@ -1948,11 +1961,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
 .tooltip-wrap { position: relative; display: inline-block; }
 .tooltip {
   position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
-  background: #fffdf8; border: 1px solid var(--border2);
+  background: #ffffff; border: 1px solid var(--border2);
   border-radius: var(--r); padding: 6px 10px;
   font-size: 12px; color: var(--text); white-space: nowrap;
   pointer-events: none; opacity: 0; transition: opacity .2s; z-index: 50;
-  box-shadow: 0 12px 26px rgba(62,48,24,0.12);
+  box-shadow: 0 12px 26px rgba(10,32,70,0.12);
 }
 .tooltip-wrap:hover .tooltip { opacity: 1; }
 
@@ -2064,21 +2077,21 @@ body.atlas-grabbing, body.atlas-grabbing * {
 
   <!-- Flow: Mikra → Talmud → Halachá -->
   <div class="flow-row" style="margin-bottom: 2rem;">
-    <div class="flow-box" style="border-color: rgba(74,127,165,0.4); background: rgba(74,127,165,0.06);">
+    <div class="flow-box" style="border-color: rgba(15,103,232,0.4); background: rgba(15,103,232,0.06);">
       <div class="flow-box-he">מִקְרָא</div>
       <div class="flow-box-title">Mikra</div>
       <div class="flow-box-sub">Torá Escrita · Patriarcas &amp; Profetas</div>
     </div>
     <div class="flow-arrow">›››</div>
-    <div class="flow-box" style="border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.05);">
+    <div class="flow-box" style="border-color: rgba(75,143,63,0.4); background: rgba(75,143,63,0.06);">
       <div class="flow-box-he">תַּלְמוּד</div>
-      <div class="flow-box-title">Talmud</div>
+      <div class="flow-box-title" style="color: var(--green2)">Talmud</div>
       <div class="flow-box-sub">Mishna + Guemara · Tanaim &amp; Amoraim</div>
     </div>
     <div class="flow-arrow">›››</div>
-    <div class="flow-box" style="border-color: rgba(74,138,106,0.4); background: rgba(74,138,106,0.06);">
+    <div class="flow-box" style="border-color: rgba(219,139,0,0.42); background: rgba(219,139,0,0.08);">
       <div class="flow-box-he">הֲלָכָה</div>
-      <div class="flow-box-title">Halachá</div>
+      <div class="flow-box-title" style="color: var(--hal2)">Halachá</div>
       <div class="flow-box-sub">Rishonim &amp; Acharonim · Lei prática</div>
     </div>
   </div>
@@ -2161,21 +2174,21 @@ body.atlas-grabbing, body.atlas-grabbing * {
           </div>
 
           <div class="oral-section">
-            <div class="oral-section-title">Halachá <span class="badge badge-gold">הֲלָכָה</span></div>
+            <div class="oral-section-title halacha">Halachá <span class="badge badge-gold">הֲלָכָה</span></div>
             <div class="oral-sub">LEI JUDAICA PRÁTICA</div>
             <div class="book-chips">
-              <div class="chip chip-green tooltip-wrap" style="margin-bottom:4px">Rif<div class="tooltip">Rabi Yitzchak Alfasi — sec. XI</div></div>
-              <div class="chip chip-green tooltip-wrap" style="margin-bottom:4px">Rambam<div class="tooltip">Maimônides — Mishneh Torá</div></div>
-              <div class="chip chip-green tooltip-wrap" style="margin-bottom:4px">Rosh<div class="tooltip">Rabi Asher ben Yechiel</div></div>
+              <div class="chip chip-gold tooltip-wrap" style="margin-bottom:4px">Rif<div class="tooltip">Rabi Yitzchak Alfasi — sec. XI</div></div>
+              <div class="chip chip-gold tooltip-wrap" style="margin-bottom:4px">Rambam<div class="tooltip">Maimônides — Mishneh Torá</div></div>
+              <div class="chip chip-gold tooltip-wrap" style="margin-bottom:4px">Rosh<div class="tooltip">Rabi Asher ben Yechiel</div></div>
             </div>
-            <div class="chip chip-green" style="margin-bottom: 4px; margin-top: 2px; display:inline-block">Tur</div>
+            <div class="chip chip-gold" style="margin-bottom: 4px; margin-top: 2px; display:inline-block">Tur</div>
             <div style="margin-top: 8px;">
-              <div class="i18n-t" style="font-size: 13px; color: var(--gold2); font-family: 'Crimson Pro', serif; font-weight: 600; margin-bottom: 5px;">Shulchan Aruch</div>
+              <div class="i18n-t" style="font-size: 13px; color: var(--hal2); font-family: 'Crimson Pro', serif; font-weight: 600; margin-bottom: 5px;">Shulchan Aruch</div>
               <div class="book-chips">
-                <div class="chip chip-green tooltip-wrap" style="font-size:11px">Orach Chaim<div class="tooltip">Vida diária e calendário</div></div>
-                <div class="chip chip-green tooltip-wrap" style="font-size:11px">Yoreh Deah<div class="tooltip">Proibido e permitido</div></div>
-                <div class="chip chip-green tooltip-wrap" style="font-size:11px">Even Haezer<div class="tooltip">Casamento</div></div>
-                <div class="chip chip-green tooltip-wrap" style="font-size:11px">Choshen Mishpat<div class="tooltip">Leis financeiras</div></div>
+                <div class="chip chip-gold tooltip-wrap" style="font-size:11px">Orach Chaim<div class="tooltip">Vida diária e calendário</div></div>
+                <div class="chip chip-gold tooltip-wrap" style="font-size:11px">Yoreh Deah<div class="tooltip">Proibido e permitido</div></div>
+                <div class="chip chip-gold tooltip-wrap" style="font-size:11px">Even Haezer<div class="tooltip">Casamento</div></div>
+                <div class="chip chip-gold tooltip-wrap" style="font-size:11px">Choshen Mishpat<div class="tooltip">Leis financeiras</div></div>
               </div>
             </div>
           </div>
@@ -2317,19 +2330,19 @@ body.atlas-grabbing, body.atlas-grabbing * {
     <div class="oral-bar-title">Linha do tempo da Torá Oral (anos do calendário comum)</div>
     <div style="position:relative; height:44px; background:var(--surface); border-radius:8px; overflow:hidden; margin-bottom:8px;">
       <!-- Zugot ~ -200 a 0 -->
-      <div class="oral-bar-fill" style="left:0%;width:9%;background:rgba(74,138,106,0.5);">Zugot</div>
+      <div class="oral-bar-fill" style="left:0%;width:9%;background:rgba(75,143,63,0.5);">Zugot</div>
       <!-- Tannaim 0-200 -->
-      <div class="oral-bar-fill" style="left:9%;width:9%;background:rgba(74,138,106,0.65);">Tanaim</div>
+      <div class="oral-bar-fill" style="left:9%;width:9%;background:rgba(75,143,63,0.65);">Tanaim</div>
       <!-- Amoraim 200-500 -->
-      <div class="oral-bar-fill" style="left:18%;width:13%;background:rgba(74,138,106,0.8);">Amoraim</div>
+      <div class="oral-bar-fill" style="left:18%;width:13%;background:rgba(75,143,63,0.8);">Amoraim</div>
       <!-- Savoraim 500-600 -->
-      <div class="oral-bar-fill" style="left:31%;width:4%;background:rgba(201,168,76,0.6);">Savoraim</div>
+      <div class="oral-bar-fill" style="left:31%;width:4%;background:rgba(15,103,232,0.6);">Savoraim</div>
       <!-- Geonim 600-1000 -->
-      <div class="oral-bar-fill" style="left:35%;width:18%;background:rgba(201,168,76,0.75);">Gueonim</div>
+      <div class="oral-bar-fill" style="left:35%;width:18%;background:rgba(15,103,232,0.75);">Gueonim</div>
       <!-- Rishonim 1000-1500 -->
-      <div class="oral-bar-fill" style="left:53%;width:23%;background:rgba(201,168,76,0.85);">Rishonim</div>
+      <div class="oral-bar-fill" style="left:53%;width:23%;background:rgba(15,103,232,0.85);">Rishonim</div>
       <!-- Acharonim 1500-hoje -->
-      <div class="oral-bar-fill" style="left:76%;width:24%;background:rgba(201,168,76,0.95);">Acharonim</div>
+      <div class="oral-bar-fill" style="left:76%;width:24%;background:rgba(15,103,232,0.95);">Acharonim</div>
     </div>
     <div class="oral-bar-labels">
       <span>-200</span><span>0</span><span>200</span><span>400</span><span>600</span><span>800</span>
@@ -2935,7 +2948,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
       <label class="i18n-t" style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text3)">Capítulo</label>
       <select id="pk-chapter" style="background:var(--surface); color:var(--text); border:1px solid var(--border2); border-radius:var(--r); padding:6px 12px; font-size:13px; min-width:90px;"></select>
     </div>
-    <button class="i18n-t" onclick="pkLoad()" style="padding:8px 20px; background:rgba(201,168,76,0.12); border:1px solid var(--gold); border-radius:var(--r); color:var(--gold2); font-size:13px; cursor:pointer; transition:all .2s; height:36px;">
+    <button class="i18n-t" onclick="pkLoad()" style="padding:8px 20px; background:rgba(15,103,232,0.12); border:1px solid var(--gold); border-radius:var(--r); color:var(--gold2); font-size:13px; cursor:pointer; transition:all .2s; height:36px;">
       Carregar Pessukim
     </button>
     <div id="pk-loading" style="display:none; font-size:12px; color:var(--text3); align-self:center;">
@@ -2999,7 +3012,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   background: var(--surface); border: 1px solid var(--border); color: var(--text2);
   transition: all .2s;
 }
-.pk-view-btn.active { background: rgba(201,168,76,0.12); border-color: var(--gold); color: var(--gold2); }
+.pk-view-btn.active { background: rgba(15,103,232,0.12); border-color: var(--gold); color: var(--gold2); }
 .pk-view-btn:hover { border-color: var(--gold); color: var(--gold2); }
 
 .verse-row {
@@ -3008,8 +3021,8 @@ body.atlas-grabbing, body.atlas-grabbing * {
   transition: background .15s;
   cursor: pointer;
 }
-.verse-row:hover { background: rgba(201,168,76,0.04); }
-.verse-row.highlighted { background: rgba(201,168,76,0.08); }
+.verse-row:hover { background: rgba(15,103,232,0.04); }
+.verse-row.highlighted { background: rgba(15,103,232,0.08); }
 
 .view-parallel .verse-row { grid-template-columns: 40px 1fr 1fr; }
 .view-hebrew .verse-row   { grid-template-columns: 40px 1fr; }
@@ -3073,7 +3086,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   color: var(--text2);
 }
 .drill-era-chip:hover { border-color: var(--gold); color: var(--gold2); }
-.drill-era-chip.active { background: rgba(201,168,76,0.12); border-color: var(--gold); color: var(--gold2); font-weight: 500; }
+.drill-era-chip.active { background: rgba(15,103,232,0.12); border-color: var(--gold); color: var(--gold2); font-weight: 500; }
 .drill-card-area { min-height: 140px; }
 .drill-card {
   border: 1px solid var(--border2);
@@ -3093,10 +3106,10 @@ body.atlas-grabbing, body.atlas-grabbing * {
 .drill-reveal-btn {
   padding: 7px 20px; border-radius: 20px;
   font-size: 13px; cursor: pointer; transition: all .2s;
-  background: rgba(201,168,76,0.1); border: 1px solid var(--gold);
+  background: rgba(15,103,232,0.1); border: 1px solid var(--gold);
   color: var(--gold2);
 }
-.drill-reveal-btn:hover { background: rgba(201,168,76,0.22); }
+.drill-reveal-btn:hover { background: rgba(15,103,232,0.22); }
 .drill-card-text {
   color: var(--text2); font-size: 14px; line-height: 1.7;
   margin-bottom: 0.75rem;
@@ -4090,7 +4103,7 @@ async function atlasRenderTimeline(groupData, focusRange, milestoneData = null) 
   const root = document.getElementById('atlas-time-bar');
   const erasRoot = document.getElementById('atlas-time-eras');
   const total = 5785;
-  const colors = ['rgba(47,120,168,0.58)', 'rgba(61,139,98,0.52)', 'rgba(184,138,36,0.56)', 'rgba(138,106,191,0.52)'];
+  const colors = ['rgba(47,120,168,0.58)', 'rgba(61,139,98,0.52)', 'rgba(15,103,232,0.56)', 'rgba(138,106,191,0.52)'];
   const start = Math.max(0, Math.min(total, focusRange?.start ?? 0));
   const end = Math.max(start, Math.min(total, focusRange?.end ?? total));
   const hasFocusedRange = start > 0 || end < total;
@@ -4834,7 +4847,7 @@ document.addEventListener('keydown', e => {
   transition: transform .32s cubic-bezier(.4,0,.2,1);
   overflow-y: auto;
   display: flex; flex-direction: column;
-  box-shadow: -18px 0 46px rgba(62,48,24,0.14);
+  box-shadow: -18px 0 46px rgba(10,32,70,0.14);
 }
 .drawer.open { transform: translateX(0); }
 
@@ -4845,7 +4858,7 @@ body.rtl .drawer {
   left: 0; right: auto;
   border-left: none; border-right: 1px solid var(--border2);
   transform: translateX(-100%);
-  box-shadow: 18px 0 46px rgba(62,48,24,0.14);
+  box-shadow: 18px 0 46px rgba(10,32,70,0.14);
 }
 body.rtl .drawer.open { transform: translateX(0); }
 
@@ -4875,7 +4888,7 @@ body.rtl .drawer.open { transform: translateX(0); }
 .drawer-ruler {
   padding: 1.1rem 1.5rem .9rem;
   border-bottom: 1px solid var(--border);
-  background: rgba(201,168,76,0.02);
+  background: rgba(15,103,232,0.02);
 }
 .ruler-label {
   font-size: 10px; letter-spacing: .1em; text-transform: uppercase;
@@ -4896,7 +4909,7 @@ body.rtl .drawer.open { transform: translateX(0); }
   background: transparent;
   border: 2px solid var(--gold2);
   border-radius: 3px;
-  box-shadow: 0 0 10px rgba(201,168,76,0.45);
+  box-shadow: 0 0 10px rgba(15,103,232,0.45);
   pointer-events: none;
 }
 .ruler-ticks {
@@ -4913,7 +4926,7 @@ body.rtl .drawer.open { transform: translateX(0); }
   gap: 10px; align-items: center;
   transition: background .15s;
 }
-.parasha-item:hover { background: rgba(201,168,76,0.04); }
+.parasha-item:hover { background: rgba(15,103,232,0.04); }
 .parasha-idx { font-size: 11px; color: var(--text3); font-weight: 500; text-align:center; }
 .parasha-name-he { font-family: 'Crimson Pro', serif; font-size: 17px; color: var(--text); font-weight: 600; }
 .parasha-name-he span { font-size: 14px; color: var(--text3); font-weight: 400; margin-left: 6px; }
@@ -4923,9 +4936,9 @@ body.rtl .drawer.open { transform: translateX(0); }
 .era-chip {
   font-size: 10px; padding: 2px 8px; border-radius: 20px; white-space: nowrap;
 }
-.era-pre-diluvio     { background: rgba(74,127,165,0.15);  color: var(--blue2);  border: 1px solid rgba(74,127,165,0.25); }
-.era-pos-diluvio     { background: rgba(74,138,106,0.15);  color: var(--green2); border: 1px solid rgba(74,138,106,0.25); }
-.era-patriarcas      { background: rgba(201,168,76,0.15);  color: var(--gold2);  border: 1px solid rgba(201,168,76,0.25); }
+.era-pre-diluvio     { background: rgba(15,103,232,0.15);  color: var(--blue2);  border: 1px solid rgba(15,103,232,0.25); }
+.era-pos-diluvio     { background: rgba(75,143,63,0.15);  color: var(--green2); border: 1px solid rgba(75,143,63,0.25); }
+.era-patriarcas      { background: rgba(15,103,232,0.15);  color: var(--gold2);  border: 1px solid rgba(15,103,232,0.25); }
 .era-yossef          { background: rgba(180,130,50,0.15);  color: #7a5510;       border: 1px solid rgba(180,130,50,0.25); }
 .era-egito           { background: rgba(160,80,40,0.15);   color: #7a3a18;       border: 1px solid rgba(160,80,40,0.25); }
 .era-saida-egito     { background: rgba(200,150,50,0.15);  color: #8a6010;       border: 1px solid rgba(200,150,50,0.25); }
@@ -4938,7 +4951,7 @@ body.rtl .drawer.open { transform: translateX(0); }
   position: relative;
   padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border);
-  background: rgba(201,168,76,0.025);
+  background: rgba(15,103,232,0.025);
 }
 .dp-visual {
   position: absolute; top: 1.4rem; right: 1.5rem;
@@ -4964,7 +4977,7 @@ body.rtl .drawer.open { transform: translateX(0); }
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
 .fact-item.highlighted {
-  background: rgba(201,168,76,0.08);
+  background: rgba(15,103,232,0.08);
   border-left: 2px solid var(--gold);
 }
 .fact-topic {
@@ -5022,11 +5035,11 @@ body.rtl .drawer.open { transform: translateX(0); }
 .dp-banner img { display: block; width: 100%; max-height: 210px; object-fit: cover; }
 .fact-verse-btn {
   padding: 4px 12px; border-radius: var(--r);
-  background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
+  background: rgba(15,103,232,0.1); border: 1px solid rgba(15,103,232,0.3);
   color: var(--gold2); font-size: 12px; cursor: pointer;
   transition: all .2s; white-space: nowrap; flex-shrink: 0;
 }
-.fact-verse-btn:hover { background: rgba(201,168,76,0.22); border-color: var(--gold2); }
+.fact-verse-btn:hover { background: rgba(15,103,232,0.22); border-color: var(--gold2); }
 
 /* sem dados */
 .drawer-no-data {
@@ -5038,17 +5051,17 @@ body.rtl .drawer.open { transform: translateX(0); }
 /* PASSAGEM INLINE */
 .fact-passage-btn {
   padding: 3px 10px; border-radius: var(--r);
-  background: rgba(74,127,165,0.1); border: 1px solid rgba(74,127,165,0.25);
+  background: rgba(15,103,232,0.1); border: 1px solid rgba(15,103,232,0.25);
   color: var(--blue2); font-size: 11px; cursor: pointer;
   transition: all .2s; white-space: nowrap; flex-shrink: 0;
 }
-.fact-passage-btn:hover { background: rgba(74,127,165,0.2); border-color: var(--blue2); }
+.fact-passage-btn:hover { background: rgba(15,103,232,0.2); border-color: var(--blue2); }
 
 .fact-passage-area {
   display: none; margin-top: 8px;
-  border: 1px solid rgba(74,127,165,0.2);
+  border: 1px solid rgba(15,103,232,0.2);
   border-radius: var(--r); overflow: hidden;
-  background: rgba(74,127,165,0.03);
+  background: rgba(15,103,232,0.03);
 }
 .fact-passage-area.open { display: block; }
 
@@ -5081,9 +5094,9 @@ body.rtl .drawer.open { transform: translateX(0); }
 /* ═══════ DRAWER — PARASHIOT ═══════ */
 
 const ERA = {
-  'pre-diluvio':     { bg: 'rgba(74,127,165,0.7)',   label: 'Pré-Dilúvio',     cls: 'era-pre-diluvio'     },
-  'pos-diluvio':     { bg: 'rgba(74,138,106,0.65)',  label: 'Pós-Dilúvio',     cls: 'era-pos-diluvio'     },
-  'patriarcas':      { bg: 'rgba(201,168,76,0.65)',  label: 'Patriarcas',      cls: 'era-patriarcas'      },
+  'pre-diluvio':     { bg: 'rgba(15,103,232,0.7)',   label: 'Pré-Dilúvio',     cls: 'era-pre-diluvio'     },
+  'pos-diluvio':     { bg: 'rgba(75,143,63,0.65)',  label: 'Pós-Dilúvio',     cls: 'era-pos-diluvio'     },
+  'patriarcas':      { bg: 'rgba(15,103,232,0.65)',  label: 'Patriarcas',      cls: 'era-patriarcas'      },
   'yossef':          { bg: 'rgba(180,130,50,0.65)',  label: 'Yossef',          cls: 'era-yossef'          },
   'egito':           { bg: 'rgba(160,80,40,0.65)',   label: 'Egito',           cls: 'era-egito'           },
   'saida-egito':     { bg: 'rgba(200,150,50,0.65)',  label: 'Êxodo/Sinai',     cls: 'era-saida-egito'     },

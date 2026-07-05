@@ -64,13 +64,22 @@ drill: **Google Earth** — quanto mais zoom-in, mais detalhamento focado em um
 recorte menor; um único gesto de zoom, contexto sempre reorganizado ao redor
 do foco.
 
-- [ ] **Expandir o design do Atlas 2D para todo o app (mobile-first)** — a
+- [~] **Expandir o design do Atlas 2D para todo o app (mobile-first)** — a
   fundação visual `atlas-ref-*` (paper/surface/ink/accent, serifada para
   títulos/hebraico, bordas finas, sombras suaves) deve virar a linguagem de
   todo o projeto: nav, Estrutura, Linha do Tempo, Mishna & Guemara, Chumash,
   Pessukim e drawer. Premissa inegociável: funcionar bem no celular E no
   desktop — cada componente promovido precisa de comportamento responsivo
   definido, não só o visual.
+  **Fundação de cor/tipografia aplicada (2026-07-04):** o esquema frio da
+  proposta `estrutura_tora_atlas_visual.html` foi promovido a todo o site via
+  `:root` (neutros frios, acento azul primário, ouro real em `--hal`, raios
+  maiores, sombras frias) + Inter na interface mantendo Crimson Pro nos
+  títulos/hebraico + semântica de domínio (Escrita azul / Oral verde / Halachá
+  ouro). Validado em todas as abas + drawer + Atlas + RTL. **Falta a parte
+  mobile-first:** revisar/ajustar breakpoints e comportamento responsivo das
+  abas não-Atlas (Estrutura, Timeline, Mishna, Chumash, Pessukim, drawer) em
+  ~1366px, tablet e celular — hoje só o Atlas 2D tem responsividade dedicada.
 - [x] **Atlas 2D responsivo — eliminar sobreposição em telas menores**
   (BUG-04, corrigido 2026-07-03) — o dock da timeline saiu do `position:
   fixed` e entrou no fluxo do documento (visual idêntico quando tudo cabe na

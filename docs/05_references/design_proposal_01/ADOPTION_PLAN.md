@@ -377,6 +377,30 @@ Nao absorvido de proposito: o rail lateral de Navegar/Zoom/Centralizar do mock
 (o projeto usa AM como calendario canonico; conversao dupla fica para
 avaliacao futura).
 
+### Baby-step concluido - esquema de CSS aplicado a todo o site (2026-07-04)
+
+O usuario pediu para usar o esquema de CSS de `estrutura_tora_atlas_visual.html`
+em todo o site, nao so no Atlas 2D. Feito via camada de tokens (baixo risco,
+sem mexer em layout):
+
+- **`:root` remapeado** para o esquema frio da proposta: neutros frios,
+  acento primario AZUL (os tokens `--gold*` foram mantidos por compatibilidade
+  com dezenas de regras mas agora carregam o azul; ouro real vive em
+  `--hal`/`--hal2`), `--ink`/`--navy`/`--purple*` adicionados, raios maiores,
+  sombras frias suaves.
+- **Tipografia hibrida** (escolha do usuario via pergunta): Inter em toda a
+  interface, Crimson Pro preservado em titulos de secao, hebraico e logo -
+  exatamente o guardrail "serifada para titulos/hebraico, sans para interface".
+- **replace_all** das familias rgba quentes -> frias/azul.
+- **Semantica de dominio alinhada a proposta**: Tora Escrita azul, Tora Oral
+  verde, Halacha ouro (`.chip-gold`/`.badge-gold`, cards Mikra/Talmud/Halacha,
+  Guemara para verde).
+- Validado com screenshots headless em todas as 6 abas + drawer + Atlas 2D +
+  modo hebraico/RTL. Sem regressoes, sem erros JS, 0 valores quentes restantes.
+
+Pendencia: responsividade mobile-first das abas nao-Atlas (so o Atlas 2D tem
+breakpoints dedicados hoje).
+
 ## Guardrails
 
 - Nao copiar HTML exportado diretamente para `index.html`; converter ideias em
