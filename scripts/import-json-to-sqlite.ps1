@@ -120,11 +120,11 @@ function Parse-Ref($ref) {
   return $null
 }
 
-function Add-SourceRef($nodeId, $refDisplay, $refStart = $null, $refEnd = $null) {
+function Add-SourceRef($nodeId, $refDisplay, $refStart = $null, $refEnd = $null, $refKey = $null) {
   if (-not $nodeId -or -not $refDisplay) { return }
   $parsed = Parse-Ref $refDisplay
   $bookName = if ($parsed) { $parsed.Book } else { (($refDisplay -split '\s+')[0]) }
-  $id = "source-ref:$nodeId"
+  $id = if ($refKey) { "source-ref:" + $nodeId + ":" + $refKey } else { "source-ref:$nodeId" }
   $start = if ($refStart) { $refStart } else { $refDisplay }
   $sql.Add(@"
 INSERT INTO source_refs(id, node_id, source_system, book_name, ref_start, ref_end, ref_display, chapter_start, verse_start, chapter_end, verse_end)
@@ -459,6 +459,152 @@ if (Test-Path $timelineGroupsPath) {
         Add-Edge $themeId $groupId "tagged_with"
       }
     }
+  }
+}
+
+
+# Character and tribe entities
+$tribesPath = Join-Path $root "data/entities/tribes.json"
+if (Test-Path $tribesPath) {
+  $tribeData = Get-Content $tribesPath -Encoding UTF8 | ConvertFrom-Json
+  foreach ($tribe in @($tribeData.tribes)) {
+    $tribeId = Node-Id "tribe" $tribe.id
+    Add-Node $tribeId $tribe.id "theme" $tribe.name $tribe.name_he $tribe.name_pt $null $null $null @{
+      entity_kind = "tribe"
+      people = $tribe.people
+      name_pt = $tribe.name_pt
+      schema_version = $tribeData.schema_version
+    }
+    if ($tribe.visual) {
+      Add-VisualMarker $tribeId $tribe.visual.marker_type $tribe.visual.icon $tribe.visual.asset $tribe.visual.caption "tribes" $tribe.visual.color
+    }
+  }
+}
+
+$characterIndexPath = Join-Path $root "data/entities/characters.json"
+if (Test-Path $characterIndexPath) {
+  $characterIndex = Get-Content $characterIndexPath -Encoding UTF8 | ConvertFrom-Json
+
+  # Register compact identities first so relationships resolve independently of detail-file order.
+  foreach ($entry in @($characterIndex.characters | Where-Object { $_.type -eq "person" })) {
+    $characterId = Node-Id "character" $entry.id
+    Add-Node $characterId $entry.id "character" $entry.name $entry.name_he $entry.name_pt $null $null $null @{
+      entity_kind = "person"
+      name_pt = $entry.name_pt
+      related_book_keys = $entry.related_book_keys
+      detail_file = $entry.detail_file
+      tribe_id = $entry.tribe_id
+      schema_version = $characterIndex.schema_version
+    }
+    if ($entry.visual) {
+      Add-VisualMarker $characterId $entry.visual.marker_type $entry.visual.icon $entry.visual.asset $entry.visual.caption "characters" $null $null @{
+        portrait_asset = $entry.visual.portrait_asset
+      }
+    }
+    Add-Projection "character-index" $characterId $null "list_item"
+  }
+
+  foreach ($entry in @($characterIndex.characters | Where-Object { $_.type -eq "person" -and $_.detail_file })) {
+    $detailPath = Join-Path $root $entry.detail_file
+    if (-not (Test-Path $detailPath)) {
+      throw "Character detail file not found: $($entry.detail_file)"
+    }
+
+    $character = Get-Content $detailPath -Encoding UTF8 | ConvertFrom-Json
+    if ($character.id -ne $entry.id) {
+      throw "Character detail id '$($character.id)' does not match index id '$($entry.id)'"
+    }
+
+    $characterId = Node-Id "character" $character.id
+    Add-Node $characterId $character.id "character" $character.names.primary $character.names.he $character.biography.short $null $null $null @{
+      entity_kind = "person"
+      status = $character.status
+      names = $character.names
+      roles = $character.identity.roles
+      people = $character.identity.people
+      biography_sections = $character.biography.sections
+      characterization = $character.characterization
+      places = $character.places
+      editorial = $character.editorial
+      detail_file = $entry.detail_file
+      schema_version = $character.schema_version
+    }
+
+    $active = $character.timeline.active_period
+    if ($active -and $null -ne $active.am_start) {
+      $certainty = if (@("traditional", "approximate", "unknown") -contains $active.precision) { $active.precision } else { "approximate" }
+      Add-TimeRange $characterId "anno_mundi" $active.am_start $active.am_end "Active period" $certainty
+    }
+
+    $sourceIndex = 0
+    foreach ($source in @($character.source_ranges)) {
+      $sourceIndex++
+      $key = if ($source.id) { $source.id } else { "range-$sourceIndex" }
+      Add-SourceRef $characterId $source.sefaria_ref $null $null $key
+    }
+
+    if ($character.visual) {
+      Add-VisualMarker $characterId $character.visual.marker_type $character.visual.icon $character.visual.icon_asset $character.visual.caption "characters" $character.visual.color $null @{
+        portrait_asset = $character.visual.portrait_asset
+        symbolic_role = $character.visual.symbolic_role
+        alt = $character.visual.alt
+      }
+    }
+
+    $tribe = $character.identity.tribe
+    if ($tribe -and $tribe.tribe_id) {
+      Add-Edge $characterId (Node-Id "tribe" $tribe.tribe_id) "related_to" $null $null @{
+        semantic_relation = "member_of_tribe"
+        classification = $tribe.classification
+        evidence = $tribe.evidence
+        review_status = $tribe.review_status
+      }
+    }
+
+    foreach ($relation in @($character.relationships)) {
+      $relatedId = Node-Id "character" $relation.character_id
+      if ($relation.type -eq "parent") {
+        Add-Edge $relatedId $characterId "related_to" $null $null @{
+          semantic_relation = "parent_of"
+          classification = $relation.classification
+          evidence = $relation.evidence
+        }
+      } elseif ($relation.type -eq "child") {
+        Add-Edge $characterId $relatedId "related_to" $null $null @{
+          semantic_relation = "parent_of"
+          classification = $relation.classification
+          evidence = $relation.evidence
+        }
+      } else {
+        Add-Edge $characterId $relatedId "related_to" $null $null @{
+          semantic_relation = $relation.type
+          classification = $relation.classification
+          evidence = $relation.evidence
+        }
+      }
+    }
+
+    foreach ($link in @($character.canonical_fact_links)) {
+      $factSlug = "nach:" + $link.book_key + ":" + $link.fact_id
+      Add-Edge $characterId (Node-Id "fact" $factSlug) "appears_in" $null $null @{
+        semantic_relation = "participates_in"
+        source = "character-detail"
+      }
+    }
+
+    foreach ($place in @($character.places)) {
+      $placeId = Node-Id "place" $place.place_id
+      $placeLabel = (Get-Culture).TextInfo.ToTitleCase($place.place_id.Replace("-", " "))
+      Add-Node $placeId $place.place_id "place" $placeLabel
+      Add-Edge $characterId $placeId "located_in" $null $null @{
+        semantic_relation = $place.relation
+        classification = $place.classification
+        evidence = $place.evidence
+      }
+    }
+
+    Add-Projection "character-bio" $characterId $null "drawer_item"
+    Add-Projection "timeline-v2" $characterId $null "lane_marker"
   }
 }
 
