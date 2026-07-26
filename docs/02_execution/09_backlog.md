@@ -294,14 +294,16 @@ Reference: `docs/04_technical/TIMELINE_V2_HORIZONTAL_LANES.md`
 
 Reference: `docs/04_technical/CHARACTER_ENTITY_MODEL.md`
 
-- [ ] Create a minimal stable tribe registry.
-- [ ] Create a complete Shlomo entity file.
-- [ ] Add identity, name variants and roles.
-- [ ] Add optional tribal affiliation with evidence classification.
-- [ ] Add active period without invented dates.
-- [ ] Link biography sections to canonical fact IDs.
-- [ ] Add primary source ranges.
-- [ ] Add direct family relationships through stable character IDs.
-- [ ] Add symbolic SVG and optional portrait metadata.
-- [ ] Add evidence-based narrative characterization.
+- [x] Create a minimal stable tribe registry.
+- [x] Create a complete Shlomo entity file.
+- [x] Add identity, name variants and roles.
+- [x] Add optional tribal affiliation with evidence classification.
+- [x] Add active period without invented dates.
+- [x] Link biography sections to canonical fact IDs.
+- [x] Add primary source ranges.
+- [x] Add direct family relationships through stable character IDs.
+- [x] Add symbolic SVG and optional portrait metadata.
+- [x] Add evidence-based narrative characterization.
 - [ ] Open a read-only character biography drawer from the timeline.
+- [x] Import character entities and tribe registry into SQLite.
+- [x] Add isolated JSON/SQLite correlation validation.
