@@ -305,5 +305,21 @@ Reference: `docs/04_technical/CHARACTER_ENTITY_MODEL.md`
 - [x] Add symbolic SVG and optional portrait metadata.
 - [x] Add evidence-based narrative characterization.
 - [ ] Open a read-only character biography drawer from the timeline.
+- [x] Add structured character authoring form and Bio preview to `editor.html`.
 - [x] Import character entities and tribe registry into SQLite.
 - [x] Add isolated JSON/SQLite correlation validation.
+
+
+### CH-H2 — graph-oriented knowledge editor
+
+- [ ] Evaluate a client-side graph visualization/editor library compatible with the local authoring workflow.
+- [ ] Visualize characters, facts, tribes, places and narrative units as typed nodes.
+- [ ] Visualize family, participation, location and affiliation as typed edges.
+- [ ] Open the structured entity form when a graph node is selected.
+- [ ] Permit edge creation only through controlled relationship types.
+- [ ] Validate stable IDs and referenced targets before saving JSON.
+- [ ] Keep raw JSON available as an expert/debug view.
+- [ ] Define a safe round-trip contract: graph/form → JSON → SQLite validation.
+- [ ] Test performance before adopting the graph editor for the complete corpus.
+
+This item is intentionally deferred until the structured form and public Bio drawer validate the character data contract.
