@@ -2104,9 +2104,13 @@ body.atlas-grabbing, body.atlas-grabbing * {
   position: fixed; z-index: 111; top: 0; right: 0; width: min(520px, 94vw); height: 100vh;
   display: flex; flex-direction: column; background: #fff; color: #1d3049;
   border-left: 1px solid #dce4ef; box-shadow: -24px 0 60px rgba(15,35,62,.2);
-  transform: translateX(102%); transition: transform .24s ease;
+  visibility: hidden; pointer-events: none; opacity: 0;
+  transform: translateX(102%); transition: transform .24s ease, opacity .18s ease, visibility 0s linear .24s;
 }
-.tlv2-bio-drawer.open { transform: translateX(0); }
+.tlv2-bio-drawer.open {
+  visibility: visible; pointer-events: auto; opacity: 1;
+  transform: translateX(0); transition-delay: 0s;
+}
 .tlv2-bio-head {
   display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: .9rem;
   padding: 1.1rem 1.25rem; border-bottom: 1px solid #e2e8f0;
@@ -2141,6 +2145,56 @@ body.atlas-grabbing, body.atlas-grabbing * {
 .tlv2-bio-row small { display: block; margin-top: .2rem; color: #788596; font-size: 10px; line-height: 1.45; }
 body.rtl .tlv2-bio-drawer { right: auto; left: 0; border-left: 0; border-right: 1px solid #dce4ef; transform: translateX(-102%); }
 body.rtl .tlv2-bio-drawer.open { transform: translateX(0); }
+.tlv2-horizontal {
+  margin-top: .8rem; border: 1px solid #d9e2ed; border-radius: 14px; background: #fff; overflow: hidden;
+}
+.tlv2-horizontal-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .65rem .8rem; border-bottom: 1px solid #e4eaf2; background: #f7f9fc;
+}
+.tlv2-horizontal-head strong { color: #243b58; font-size: 11px; }
+.tlv2-horizontal-head small { color: #8490a0; font-size: 9px; }
+.tlv2-horizontal-scroll { overflow-x: auto; }
+.tlv2-horizontal-canvas { min-width: 760px; }
+.tlv2-hrow { display: grid; grid-template-columns: 120px minmax(620px,1fr); min-height: 54px; border-top: 1px solid #edf1f6; }
+.tlv2-hrow:first-child { border-top: 0; min-height: 38px; }
+.tlv2-hlabel {
+  position: sticky; left: 0; z-index: 3; display: flex; align-items: center; gap: .4rem;
+  padding: .55rem .65rem; border-right: 1px solid #e4eaf2; background: #f8fafc;
+  color: #536174; font-size: 9px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+}
+.tlv2-htrack {
+  position: relative; min-width: 620px;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(25% - 1px), #edf1f6 calc(25% - 1px) 25%);
+}
+.tlv2-htick {
+  position: absolute; top: 7px; transform: translateX(-50%); color: #8390a1; font-size: 9px; font-weight: 700;
+}
+.tlv2-hunit {
+  position: absolute; left: 2%; right: 2%; top: 13px; height: 28px; display: flex; align-items: center;
+  padding: 0 .7rem; border: 1px solid #bcd1eb; border-radius: 9px; background: #e7f0fb;
+  color: #245a97; font-size: 10px; font-weight: 800;
+}
+.tlv2-hcharacter-line {
+  position: absolute; left: 3%; right: 3%; top: 26px; height: 4px; border-radius: 999px; background: #b99bd7;
+}
+.tlv2-hcharacter {
+  position: absolute; left: 3%; top: 7px; display: flex; align-items: center; gap: .42rem;
+  border: 1px solid #d7c4eb; border-radius: 999px; background: #f8f3fc; color: #65458f;
+  padding: .28rem .62rem .28rem .32rem; font-size: 10px; font-weight: 800; cursor: pointer;
+}
+.tlv2-hcharacter img { width: 20px; height: 20px; padding: 3px; border-radius: 50%; background: #eadff5; }
+.tlv2-hfact {
+  position: absolute; top: 14px; width: 15px; height: 15px; padding: 0; border: 2px solid #fff;
+  border-radius: 50%; transform: translateX(-50%); background: #4f956d; box-shadow: 0 0 0 1px #3d7657;
+  cursor: pointer;
+}
+.tlv2-hfact:hover, .tlv2-hfact:focus-visible { z-index: 2; transform: translateX(-50%) scale(1.25); }
+.tlv2-hfact-label {
+  position: absolute; top: 33px; width: 92px; transform: translateX(-50%);
+  color: #496556; font-size: 8px; font-weight: 700; line-height: 1.15; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none;
+}
 @media (max-width: 720px) {
   .tlv2-head { align-items:flex-start; }
   .tlv2-controls { grid-template-columns:auto 1fr auto; padding:.8rem; }
@@ -6072,6 +6126,39 @@ function timelineV2Lane(label, icon, cards) {
     timelineV2Esc(label) + '</div><div class="tlv2-items">' + cards + '</div></div>';
 }
 
+function timelineV2HorizontalCanvas(unit, facts, peopleById) {
+  var start = Number(unit.chronology.am_start);
+  var end = Number(unit.chronology.am_end);
+  var span = Math.max(1, end - start);
+  var ticks = [0, .25, .5, .75, 1].map(function(position) {
+    var year = Math.round(start + span * position);
+    return '<span class="tlv2-htick" style="left:' + (position * 100) + '%">' + year + ' AM</span>';
+  }).join('');
+  var shlomo = peopleById.shlomo;
+  var character = shlomo
+    ? '<span class="tlv2-hcharacter-line"></span><button class="tlv2-hcharacter" onclick="timelineV2CharacterOpen(\'shlomo\')">' +
+      timelineV2Icon(shlomo.visual) + '<span>' + timelineV2Esc(shlomo.name_pt || shlomo.name) + '</span></button>'
+    : '';
+  var factMarks = facts.map(function(fact) {
+    var position = Math.max(.015, Math.min(.985, Number(fact.chronology.position_in_unit || 0)));
+    var left = position * 100;
+    var label = fact.display.label_short || fact.fact_id;
+    return '<button class="tlv2-hfact" style="left:' + left + '%" onclick="timelineV2FactDetail(\'' +
+      timelineV2Esc(fact.fact_id) + '\')" aria-label="' + timelineV2Esc(label) + '" title="' +
+      timelineV2Esc(label) + '"></button><span class="tlv2-hfact-label" style="left:' + left + '%">' +
+      timelineV2Esc(label) + '</span>';
+  }).join('');
+  return '<section class="tlv2-horizontal" aria-label="Piloto de navegação temporal horizontal">' +
+    '<div class="tlv2-horizontal-head"><strong>Canvas temporal compartilhado</strong>' +
+    '<small>Role lateralmente para acompanhar unidade, personagem e fatos</small></div>' +
+    '<div class="tlv2-horizontal-scroll"><div class="tlv2-horizontal-canvas">' +
+    '<div class="tlv2-hrow"><div class="tlv2-hlabel">Régua AM</div><div class="tlv2-htrack">' + ticks + '</div></div>' +
+    '<div class="tlv2-hrow"><div class="tlv2-hlabel">Unidade</div><div class="tlv2-htrack"><div class="tlv2-hunit">Declínio e cisão do reino</div></div></div>' +
+    '<div class="tlv2-hrow"><div class="tlv2-hlabel">Personagem</div><div class="tlv2-htrack">' + character + '</div></div>' +
+    '<div class="tlv2-hrow"><div class="tlv2-hlabel">Fatos</div><div class="tlv2-htrack">' + factMarks + '</div></div>' +
+    '</div></div></section>';
+}
+
 async function timelineV2Render() {
   var stage = document.getElementById('tlv2-stage');
   if (!stage) return;
@@ -6133,13 +6220,7 @@ async function timelineV2Render() {
         output += timelineV2Lane('Personagens', '●', personCards);
       }
       if (depth >= 4) {
-        var factCards = facts.map(function(fact) {
-          return '<button class="tlv2-card fact" onclick="timelineV2FactDetail(\'' + timelineV2Esc(fact.fact_id) + '\')">' +
-            '<div class="tlv2-card-top"><span class="tlv2-marker">' + timelineV2Icon(fact.visual) +
-            '</span><strong>' + timelineV2Esc(fact.display.label_short) + '</strong></div>' +
-            '<small>Fato ' + timelineV2Esc(fact.fact_id) + ' · importância ' + timelineV2Esc(fact.display.importance) + '</small></button>';
-        }).join('');
-        output += timelineV2Lane('Fatos', '◆', factCards);
+        output += timelineV2HorizontalCanvas(unit, facts, peopleById);
       }
       output += '</div>';
     }
