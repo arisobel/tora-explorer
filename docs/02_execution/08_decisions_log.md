@@ -301,3 +301,34 @@
 **Decision:** Treat SQLite as the implemented local authoring and integration layer. Keep static JSON as the publication and public runtime format until an SQLite-to-JSON export pipeline and generated projections are ready.
 
 **Impact:** Documentation and backlog items should distinguish between local database authoring, which exists, and a live database-backed public runtime, which remains out of scope.
+
+---
+
+## 2026-07-26 — Timeline v2 starts as a projection-first Melachim pilot
+
+**Context:** The existing Atlas footer compresses rich timeline groups into a 22px proportional ruler. The repository already contains the hierarchy needed for deeper navigation, but canonical facts do not consistently carry character IDs, exact chronology or display metadata. Expanding the entire corpus before validating the interaction would create a large migration with uncertain UI value.
+
+**Decision:** Start Timeline v2 with one reversible vertical slice: `first-temple-kings -> kingdom-split -> solomon-decline-kingdom-split -> facts`. Store experimental navigation metadata in `data/timeline_v2/melachim-pilot.json`, reference canonical unit/fact IDs instead of duplicating prose, and introduce stable pilot identities in `data/entities/characters.json`.
+
+**Impact:** Existing runtime JSON, Atlas, Timeline, drawer and Pessukim behavior remain unchanged. The pilot can validate the data contract before any corpus-wide migration. A later implementation should use one shared renderer in compact Atlas-footer and expanded Timeline-tab modes.
+
+---
+
+## 2026-07-26 — Timeline v2 separates depth from transversal layers
+
+**Context:** Phase, group, narrative unit and fact describe navigation depth. Characters, themes, books, polities and future geography are cross-cutting dimensions and should not become additional drill levels.
+
+**Decision:** Define four initial depth levels: phase, group, narrative unit and fact. Define units, facts and characters as the first visible tracks, with Characters treated as a transversal layer linked by stable IDs. Selection changes focus; drill changes depth; Back returns one level.
+
+**Impact:** The UI can independently show or hide characters and facts without corrupting the hierarchy. Future layers such as kingdoms, locations and routes can join the same time axis without changing the drill contract.
+
+---
+
+## 2026-07-26 — AM remains canonical; uncertainty is explicit
+
+**Context:** Several Melachim events can be ordered reliably from the source but do not yet have reviewed exact AM dates at fact granularity. Assigning invented exact dates would create false precision.
+
+**Decision:** Preserve AM as the canonical calendar. Allow chronology precision values such as `traditional`, `approximate`, `relative` and `unknown`. Relative facts use `sequence` and `position_in_unit` until a reviewed date is available. BCE/CE remains a future secondary display.
+
+**Impact:** The timeline can render narrative order immediately while visually distinguishing reviewed ranges from approximate or relative placement.
+
