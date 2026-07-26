@@ -270,3 +270,38 @@ do foco.
 - [ ] Verify compatibility with the adopted design-restructuring components.
 - [ ] Review visual density before expanding beyond the Kingdom split group.
 
+
+
+---
+
+## Timeline v2 — next validated baby-steps (2026-07-26)
+
+### TL-H1 — synchronized Melachim horizontal canvas
+
+Reference: `docs/04_technical/TIMELINE_V2_HORIZONTAL_LANES.md`
+
+- [ ] Replace only depth 4 with a shared horizontal time canvas.
+- [ ] Keep one sticky AM ruler for all temporal lanes.
+- [ ] Render narrative units as interval bars.
+- [ ] Render characters as avatars plus activity lines.
+- [ ] Render facts as point markers positioned by `position_in_unit`.
+- [ ] Synchronize lateral scrolling across ruler, units, characters and facts.
+- [ ] Link character selection to related facts and vice versa.
+- [ ] Represent approximate, open and fact-derived chronology explicitly.
+- [ ] Preserve the existing depths 1–3.
+
+### CH-H1 — Shlomo biography specimen
+
+Reference: `docs/04_technical/CHARACTER_ENTITY_MODEL.md`
+
+- [ ] Create a minimal stable tribe registry.
+- [ ] Create a complete Shlomo entity file.
+- [ ] Add identity, name variants and roles.
+- [ ] Add optional tribal affiliation with evidence classification.
+- [ ] Add active period without invented dates.
+- [ ] Link biography sections to canonical fact IDs.
+- [ ] Add primary source ranges.
+- [ ] Add direct family relationships through stable character IDs.
+- [ ] Add symbolic SVG and optional portrait metadata.
+- [ ] Add evidence-based narrative characterization.
+- [ ] Open a read-only character biography drawer from the timeline.
