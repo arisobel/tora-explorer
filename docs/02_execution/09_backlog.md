@@ -244,3 +244,29 @@ do foco.
 - [ ] Keep `docs/02_execution/KNOWN_ISSUES.md` limited to real, verified issues
 - [ ] Standardize the local Git `safe.directory` workflow for reliable status/diff verification
 - [ ] Preserve JSON-first content publication while adding visual marker support
+
+---
+
+## Timeline v2 — visual Melachim pilot
+
+### Data contract
+- [x] Add an experimental phase -> group -> unit -> fact projection.
+- [x] Add stable character/entity IDs.
+- [x] Add visual metadata for phase, group, facts and characters.
+- [x] Reuse existing repository icons and canonical unit visuals.
+- [ ] Add automated validation for entity, unit, fact and asset references.
+
+### Shared renderer
+- [ ] Implement compact and expanded modes from the same data/state.
+- [ ] Implement click drill and one-level Back behavior.
+- [ ] Add independent Facts and Characters layer toggles.
+- [ ] Render image -> icon -> color/label fallback.
+- [ ] Distinguish traditional, approximate and relative chronology.
+- [ ] Open the existing drawer/Pessukim flow from a selected fact.
+
+### Integration
+- [ ] Pilot compact mode in the Atlas 2D footer behind an experimental flag.
+- [ ] Pilot expanded mode in the Timeline tab.
+- [ ] Verify compatibility with the adopted design-restructuring components.
+- [ ] Review visual density before expanding beyond the Kingdom split group.
+
