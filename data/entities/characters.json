@@ -23,7 +23,9 @@
         "asset": "assets/icons/crown.svg",
         "caption": "Shlomo",
         "portrait_asset": null
-      }
+      },
+      "detail_file": "data/entities/characters/shlomo.json",
+      "tribe_id": "judah"
     },
     {
       "id": "queen-of-sheba",
@@ -147,6 +149,49 @@
         "icon": "crown",
         "asset": "assets/icons/crown.svg",
         "caption": "Reino de Yehudá",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "david",
+      "name": "David",
+      "name_pt": "David",
+      "name_he": "דָּוִד",
+      "type": "person",
+      "related_book_keys": [
+        "samuel",
+        "kings",
+        "chronicles"
+      ],
+      "timeline": {
+        "precision": "unknown"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "David",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "bat-sheva",
+      "name": "Bat-Sheva",
+      "name_pt": "Bat-Sheva",
+      "name_he": "בַּת־שֶׁבַע",
+      "type": "person",
+      "related_book_keys": [
+        "samuel",
+        "kings"
+      ],
+      "timeline": {
+        "precision": "unknown"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Bat-Sheva",
         "portrait_asset": null
       }
     }
