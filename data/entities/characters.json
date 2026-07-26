@@ -1,0 +1,154 @@
+{
+  "schema_version": "0.1-experimental",
+  "status": "pilot",
+  "description": "Canonical character identities for the Timeline v2 Melachim pilot. Dates are intentionally omitted when the current repository does not provide a reviewed chronology.",
+  "characters": [
+    {
+      "id": "shlomo",
+      "name": "Shlomo",
+      "name_pt": "Salomão",
+      "name_he": "שְׁלֹמֹה",
+      "type": "person",
+      "related_book_keys": [
+        "samuel",
+        "kings",
+        "chronicles"
+      ],
+      "timeline": {
+        "precision": "unknown"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Shlomo",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "queen-of-sheba",
+      "name": "Rainha de Sheva",
+      "name_pt": "Rainha de Sabá",
+      "name_he": "מַלְכַּת שְׁבָא",
+      "type": "person",
+      "related_book_keys": [
+        "kings",
+        "chronicles"
+      ],
+      "timeline": {
+        "precision": "relative"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Rainha de Sheva",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "achiyah",
+      "name": "Achiyah",
+      "name_pt": "Aías",
+      "name_he": "אֲחִיָּה",
+      "type": "person",
+      "related_book_keys": [
+        "kings"
+      ],
+      "timeline": {
+        "precision": "relative"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "scroll",
+        "asset": "assets/icons/scroll.svg",
+        "caption": "Achiyah",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "yeravam",
+      "name": "Yeravam",
+      "name_pt": "Jeroboão",
+      "name_he": "יָרָבְעָם",
+      "type": "person",
+      "related_book_keys": [
+        "kings",
+        "chronicles"
+      ],
+      "timeline": {
+        "precision": "relative"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Yeravam",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "rechavam",
+      "name": "Rechavam",
+      "name_pt": "Roboão",
+      "name_he": "רְחַבְעָם",
+      "type": "person",
+      "related_book_keys": [
+        "kings",
+        "chronicles"
+      ],
+      "timeline": {
+        "precision": "relative"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Rechavam",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "israel-northern-kingdom",
+      "name": "Reino de Israel",
+      "name_pt": "Reino do Norte",
+      "name_he": "מַמְלֶכֶת יִשְׂרָאֵל",
+      "type": "polity",
+      "related_book_keys": [
+        "kings",
+        "chronicles"
+      ],
+      "timeline": {
+        "precision": "traditional"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Reino de Israel",
+        "portrait_asset": null
+      }
+    },
+    {
+      "id": "judah-kingdom",
+      "name": "Reino de Yehudá",
+      "name_pt": "Reino de Judá",
+      "name_he": "מַמְלֶכֶת יְהוּדָה",
+      "type": "polity",
+      "related_book_keys": [
+        "kings",
+        "chronicles"
+      ],
+      "timeline": {
+        "precision": "traditional"
+      },
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Reino de Yehudá",
+        "portrait_asset": null
+      }
+    }
+  ]
+}
