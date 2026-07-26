@@ -2080,6 +2080,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
 }
 .tlv2-card.fact { border-color: #cfe0d3; background: linear-gradient(180deg,#f7fcf8,#fff); cursor: pointer; }
 .tlv2-card.person { border-color: #dfd2ee; background: linear-gradient(180deg,#faf7fd,#fff); }
+.tlv2-card.person[data-has-bio="true"] { cursor: pointer; }
+.tlv2-card.person[data-has-bio="true"]:hover {
+  border-color: #bfa5dc; box-shadow: 0 8px 20px rgba(109,79,161,.12); transform: translateY(-1px);
+}
+.tlv2-card.person[data-has-bio="false"] { opacity: .72; }
 .tlv2-card-top { display:flex; align-items:center; gap:.5rem; margin-bottom:.42rem; }
 .tlv2-card .tlv2-marker { width: 28px; height: 28px; border-radius: 8px; background: #eef3f9; }
 .tlv2-card .tlv2-marker img { width: 16px; height: 16px; }
@@ -2090,6 +2095,52 @@ body.atlas-grabbing, body.atlas-grabbing * {
 .tlv2-detail strong { display:block; margin-bottom:.25rem; }
 .tlv2-detail p { margin:0; color:#d7e1ec; font-size:12px; line-height:1.55; }
 .tlv2-loading { padding: 1.5rem; color:#6c7889; text-align:center; }
+.tlv2-bio-overlay {
+  position: fixed; inset: 0; z-index: 110; display: none;
+  background: rgba(13,29,50,.38); backdrop-filter: blur(2px);
+}
+.tlv2-bio-overlay.open { display: block; }
+.tlv2-bio-drawer {
+  position: fixed; z-index: 111; top: 0; right: 0; width: min(520px, 94vw); height: 100vh;
+  display: flex; flex-direction: column; background: #fff; color: #1d3049;
+  border-left: 1px solid #dce4ef; box-shadow: -24px 0 60px rgba(15,35,62,.2);
+  transform: translateX(102%); transition: transform .24s ease;
+}
+.tlv2-bio-drawer.open { transform: translateX(0); }
+.tlv2-bio-head {
+  display: grid; grid-template-columns: 64px 1fr auto; align-items: center; gap: .9rem;
+  padding: 1.1rem 1.25rem; border-bottom: 1px solid #e2e8f0;
+  background: linear-gradient(135deg,#f8f4ff,#fff);
+}
+.tlv2-bio-avatar {
+  width: 60px; height: 60px; display: grid; place-items: center; border-radius: 50%;
+  background: #f1e9fa; border: 1px solid #d9c7ec;
+}
+.tlv2-bio-avatar img { width: 30px; height: 30px; }
+.tlv2-bio-kicker { color: #7352aa; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.tlv2-bio-name { margin: .12rem 0 0; color: #172b46; font: 700 25px/1.1 'Crimson Pro',serif; }
+.tlv2-bio-he { margin-top: .18rem; color: #7c8796; font-size: 15px; direction: rtl; text-align: left; }
+.tlv2-bio-close {
+  width: 38px; height: 38px; border: 1px solid #d8e0eb; border-radius: 50%;
+  background: #fff; color: #344a65; font-size: 18px; cursor: pointer;
+}
+.tlv2-bio-body { padding: 1.1rem 1.25rem 2rem; overflow-y: auto; }
+.tlv2-bio-loading { padding: 2rem; color: #6b7788; text-align: center; }
+.tlv2-bio-intro { margin: 0 0 1rem; color: #4f5e71; font-size: 13px; line-height: 1.65; }
+.tlv2-bio-meta { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; margin-bottom: 1rem; }
+.tlv2-bio-meta div { padding: .7rem; border-radius: 11px; background: #f5f7fa; }
+.tlv2-bio-meta small { display: block; color: #8490a0; font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.tlv2-bio-meta strong { display: block; margin-top: .2rem; color: #203750; font-size: 12px; }
+.tlv2-bio-section { padding: .9rem 0; border-top: 1px solid #e5eaf1; }
+.tlv2-bio-section h4 { margin: 0 0 .65rem; color: #233b58; font-size: 12px; letter-spacing: .05em; text-transform: uppercase; }
+.tlv2-bio-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.tlv2-bio-chip { padding: .35rem .55rem; border-radius: 999px; background: #f1e9fa; color: #684895; font-size: 10px; font-weight: 700; }
+.tlv2-bio-list { display: grid; gap: .5rem; }
+.tlv2-bio-row { padding: .65rem .7rem; border: 1px solid #e1e7ef; border-radius: 10px; background: #fff; }
+.tlv2-bio-row strong { display: block; color: #263d58; font-size: 12px; }
+.tlv2-bio-row small { display: block; margin-top: .2rem; color: #788596; font-size: 10px; line-height: 1.45; }
+body.rtl .tlv2-bio-drawer { right: auto; left: 0; border-left: 0; border-right: 1px solid #dce4ef; transform: translateX(-102%); }
+body.rtl .tlv2-bio-drawer.open { transform: translateX(0); }
 @media (max-width: 720px) {
   .tlv2-head { align-items:flex-start; }
   .tlv2-controls { grid-template-columns:auto 1fr auto; padding:.8rem; }
@@ -2097,6 +2148,7 @@ body.atlas-grabbing, body.atlas-grabbing * {
   .tlv2-depth-step::after { content:attr(data-short); font-size:9px; }
   .tlv2-lane { grid-template-columns:1fr; }
   .tlv2-lane-label { padding:.55rem .75rem; }
+  .tlv2-bio-meta { grid-template-columns: 1fr; }
 }
 
 </style>
@@ -2309,6 +2361,11 @@ body.atlas-grabbing, body.atlas-grabbing * {
     <div id="tlv2-breadcrumb" class="tlv2-breadcrumb"></div>
     <div id="tlv2-stage" class="tlv2-stage"><div class="tlv2-loading">Carregando piloto de Melachim…</div></div>
   </section>
+
+  <div id="tlv2-bio-overlay" class="tlv2-bio-overlay" onclick="timelineV2CharacterClose()"></div>
+  <aside id="tlv2-bio-drawer" class="tlv2-bio-drawer" role="dialog" aria-modal="true" aria-labelledby="tlv2-bio-title">
+    <div id="tlv2-bio-content" class="tlv2-bio-loading">Selecione um personagem com biografia disponível.</div>
+  </aside>
 
 
   <div class="timeline-legend">
@@ -5877,7 +5934,7 @@ function drawerGoToPessukim(chapterNum, bookKey, refStart = null) {
 
 
 // Timeline v2 — piloto visual orientado pelos dados de Melachim
-const timelineV2State = { depth: 1, data: null, characters: null, canonical: null, loading: null };
+const timelineV2State = { depth: 1, data: null, characters: null, canonical: null, loading: null, characterDetails: {} };
 
 async function timelineV2Load() {
   if (timelineV2State.loading) return timelineV2State.loading;
@@ -5922,6 +5979,92 @@ function timelineV2FactDetail(factId) {
   detail.innerHTML = '<strong>' + timelineV2Esc(fact.topic || fact.id) + '</strong>' +
     '<p>' + timelineV2Esc(fact.text || '') + '<br><small>' + timelineV2Esc(fact.sefaria_ref || '') + '</small></p>';
   detail.classList.add('open');
+}
+
+function timelineV2CharacterName(characterId) {
+  var person = timelineV2State.characters && (timelineV2State.characters.characters || []).find(function(item) {
+    return item.id === characterId;
+  });
+  return person ? (person.name_pt || person.name || characterId) : characterId;
+}
+
+function timelineV2CharacterClose() {
+  document.getElementById('tlv2-bio-overlay').classList.remove('open');
+  document.getElementById('tlv2-bio-drawer').classList.remove('open');
+}
+
+async function timelineV2CharacterOpen(characterId) {
+  var person = timelineV2State.characters && (timelineV2State.characters.characters || []).find(function(item) {
+    return item.id === characterId;
+  });
+  if (!person || !person.detail_file) return;
+  var drawer = document.getElementById('tlv2-bio-drawer');
+  var overlay = document.getElementById('tlv2-bio-overlay');
+  var content = document.getElementById('tlv2-bio-content');
+  overlay.classList.add('open');
+  drawer.classList.add('open');
+  content.className = 'tlv2-bio-loading';
+  content.innerHTML = 'Carregando biografia…';
+  try {
+    if (!timelineV2State.characterDetails[characterId]) {
+      var response = await fetch(person.detail_file);
+      if (!response.ok) throw new Error('biografia não encontrada');
+      timelineV2State.characterDetails[characterId] = await response.json();
+    }
+    timelineV2CharacterRender(timelineV2State.characterDetails[characterId]);
+  } catch (error) {
+    content.innerHTML = 'Não foi possível carregar a biografia: ' + timelineV2Esc(error.message);
+  }
+}
+
+function timelineV2CharacterRender(character) {
+  var content = document.getElementById('tlv2-bio-content');
+  var visual = character.visual || {};
+  var iconAsset = visual.portrait_asset || visual.icon_asset;
+  var roles = ((character.identity && character.identity.roles) || []).map(function(role) {
+    return '<span class="tlv2-bio-chip">' + timelineV2Esc(role.label || role.id) + '</span>';
+  }).join('');
+  var period = character.timeline && character.timeline.active_period;
+  var periodLabel = period && period.am_start != null
+    ? (period.start_open ? 'antes de ' : '') + period.am_start + '–' + period.am_end + ' AM'
+    : 'Não estabelecido';
+  var tribe = character.identity && character.identity.tribe;
+  var sections = ((character.biography && character.biography.sections) || []).map(function(section) {
+    var evidence = []
+      .concat(section.source_refs || [])
+      .concat((section.fact_ids || []).map(function(id) { return 'Fato ' + id; }));
+    return '<div class="tlv2-bio-row"><strong>' + timelineV2Esc(section.title) + '</strong>' +
+      '<small>' + timelineV2Esc(section.summary || (evidence.length ? evidence.join(' · ') : 'Conteúdo editorial a completar.')) + '</small></div>';
+  }).join('');
+  var relations = (character.relationships || []).map(function(relation) {
+    var relationLabel = relation.type === 'parent' ? 'Ascendente' : relation.type === 'child' ? 'Descendente' : relation.type;
+    return '<div class="tlv2-bio-row"><strong>' + timelineV2Esc(relationLabel + ' · ' + timelineV2CharacterName(relation.character_id)) + '</strong>' +
+      '<small>' + timelineV2Esc((relation.evidence || []).join(' · ')) + '</small></div>';
+  }).join('');
+  var sources = (character.source_ranges || []).map(function(source) {
+    return '<div class="tlv2-bio-row"><strong>' + timelineV2Esc(source.sefaria_ref) + '</strong>' +
+      '<small>' + timelineV2Esc(source.relation || '') + '</small></div>';
+  }).join('');
+  var traits = (character.characterization || []).map(function(trait) {
+    return '<div class="tlv2-bio-row"><strong>' + timelineV2Esc(trait.label) + '</strong>' +
+      '<small>' + timelineV2Esc(trait.note || '') + ' · ' + timelineV2Esc((trait.evidence || []).join(', ')) + '</small></div>';
+  }).join('');
+  content.className = '';
+  content.innerHTML =
+    '<header class="tlv2-bio-head"><div class="tlv2-bio-avatar">' +
+      (iconAsset ? '<img src="' + timelineV2Esc(iconAsset) + '" alt="">' : '<span aria-hidden="true">♛</span>') +
+      '</div><div><div class="tlv2-bio-kicker">Biografia · personagem</div>' +
+      '<h3 id="tlv2-bio-title" class="tlv2-bio-name">' + timelineV2Esc(character.names.pt || character.names.primary) + '</h3>' +
+      '<div class="tlv2-bio-he">' + timelineV2Esc(character.names.he || '') + '</div></div>' +
+      '<button class="tlv2-bio-close" onclick="timelineV2CharacterClose()" aria-label="Fechar biografia">✕</button></header>' +
+    '<div class="tlv2-bio-body"><p class="tlv2-bio-intro">' + timelineV2Esc(character.biography.short || '') + '</p>' +
+      '<div class="tlv2-bio-meta"><div><small>Período ativo</small><strong>' + timelineV2Esc(periodLabel) + '</strong></div>' +
+      '<div><small>Tribo</small><strong>' + timelineV2Esc(tribe ? tribe.tribe_id : 'Não aplicável') + '</strong></div></div>' +
+      '<section class="tlv2-bio-section"><h4>Funções</h4><div class="tlv2-bio-chips">' + roles + '</div></section>' +
+      '<section class="tlv2-bio-section"><h4>Trajetória</h4><div class="tlv2-bio-list">' + sections + '</div></section>' +
+      '<section class="tlv2-bio-section"><h4>Família imediata</h4><div class="tlv2-bio-list">' + relations + '</div></section>' +
+      '<section class="tlv2-bio-section"><h4>Características narrativas</h4><div class="tlv2-bio-list">' + traits + '</div></section>' +
+      '<section class="tlv2-bio-section"><h4>Fontes principais</h4><div class="tlv2-bio-list">' + sources + '</div></section></div>';
 }
 
 function timelineV2Lane(label, icon, cards) {
@@ -5979,9 +6122,13 @@ async function timelineV2Render() {
         var personIds = unit.character_ids || [];
         var personCards = personIds.map(function(id) {
           var person = peopleById[id] || { id:id, name_pt:id, visual:null };
-          return '<div class="tlv2-card person"><div class="tlv2-card-top"><span class="tlv2-marker">' +
+          var hasBio = !!person.detail_file;
+          return '<button class="tlv2-card person" data-has-bio="' + hasBio + '"' +
+            (hasBio ? ' onclick="timelineV2CharacterOpen(\'' + timelineV2Esc(id) + '\')"' : ' disabled title="Biografia em preparação"') +
+            '><div class="tlv2-card-top"><span class="tlv2-marker">' +
             timelineV2Icon(person.visual) + '</span><strong>' + timelineV2Esc(person.name_pt || person.name || id) +
-            '</strong></div><small>' + timelineV2Esc(person.name_he || person.name || '') + '</small></div>';
+            '</strong></div><small>' + timelineV2Esc(person.name_he || person.name || '') +
+            (hasBio ? ' · abrir biografia' : ' · biografia em preparação') + '</small></button>';
         }).join('');
         output += timelineV2Lane('Personagens', '●', personCards);
       }
@@ -6007,6 +6154,7 @@ async function timelineV2Render() {
 // Fechar com Escape
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && document.getElementById('drawer').classList.contains('open')) drawerClose();
+  if (e.key === 'Escape' && document.getElementById('tlv2-bio-drawer').classList.contains('open')) timelineV2CharacterClose();
 });
 </script>
 </body>
