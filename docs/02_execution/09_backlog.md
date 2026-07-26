@@ -304,7 +304,7 @@ Reference: `docs/04_technical/CHARACTER_ENTITY_MODEL.md`
 - [x] Add direct family relationships through stable character IDs.
 - [x] Add symbolic SVG and optional portrait metadata.
 - [x] Add evidence-based narrative characterization.
-- [ ] Open a read-only character biography drawer from the timeline.
+- [x] Open a read-only character biography drawer from the timeline — Shlomo specimen loads `data/entities/characters/shlomo.json` and presents identity, active period, tribe, roles, biography sections, immediate family, narrative characterization and primary sources; other character cards explicitly remain “in preparation” until they receive `detail_file` (2026-07-26).
 - [x] Add structured character authoring form and Bio preview to `editor.html`.
 - [x] Import character entities and tribe registry into SQLite.
 - [x] Add isolated JSON/SQLite correlation validation.
