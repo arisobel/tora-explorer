@@ -2018,6 +2018,87 @@ body.atlas-grabbing, body.atlas-grabbing * {
   animation: none;
   transform: none;
 }
+
+/* TIMELINE V2 — PILOTO VISUAL MELACHIM */
+.tlv2-shell {
+  margin: 1.25rem 0 2rem;
+  border: 1px solid #dce4ef;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #ffffff 0%, #f6f8fc 100%);
+  box-shadow: 0 18px 48px rgba(20, 42, 73, .09);
+  overflow: hidden;
+}
+.tlv2-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.2rem 1.35rem; border-bottom: 1px solid #e2e8f0;
+}
+.tlv2-eyebrow { color: #2d6cb4; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.tlv2-title { margin-top: .2rem; color: #13243c; font: 700 22px/1.15 'Crimson Pro', serif; }
+.tlv2-sub { margin-top: .28rem; color: #657185; font-size: 12px; }
+.tlv2-status { padding: .42rem .72rem; border-radius: 999px; background: #e9f2ff; color: #1e5eaa; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.tlv2-controls {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .8rem;
+  padding: .9rem 1.35rem; background: rgba(247,249,252,.9); border-bottom: 1px solid #e5eaf1;
+}
+.tlv2-zoom-btn {
+  width: 36px; height: 36px; border: 1px solid #d8e0eb; border-radius: 50%;
+  background: #fff; color: #173253; font-size: 20px; cursor: pointer;
+}
+.tlv2-zoom-btn:hover { border-color: #2d6cb4; color: #2d6cb4; }
+.tlv2-depth { min-width: 0; }
+.tlv2-depth-track { position: relative; height: 3px; margin: 0 9%; background: #cfd8e6; }
+.tlv2-depth-progress { position: absolute; inset: 0 auto 0 0; background: #2d6cb4; transition: width .25s ease; }
+.tlv2-depth-steps { display: grid; grid-template-columns: repeat(4,1fr); margin-top: -8px; position: relative; }
+.tlv2-depth-step { border: 0; background: transparent; color: #8792a4; cursor: pointer; font-size: 10px; padding-top: 17px; position: relative; }
+.tlv2-depth-step::before {
+  content: ''; position: absolute; top: 4px; left: 50%; width: 8px; height: 8px;
+  border-radius: 50%; transform: translateX(-50%); background: #aab5c5; border: 2px solid #f7f9fc;
+}
+.tlv2-depth-step.active { color: #1e63b6; font-weight: 800; }
+.tlv2-depth-step.active::before, .tlv2-depth-step.done::before { background: #2d6cb4; }
+.tlv2-breadcrumb { display: flex; gap: .45rem; flex-wrap: wrap; padding: .75rem 1.35rem 0; color: #627086; font-size: 11px; }
+.tlv2-breadcrumb b { color: #173253; }
+.tlv2-stage { padding: 1rem 1.35rem 1.35rem; }
+.tlv2-summary {
+  display: flex; align-items: center; gap: .8rem; padding: .85rem 1rem; margin-bottom: .8rem;
+  border: 1px solid #e3d3a9; border-radius: 14px; background: linear-gradient(90deg,#fff8e8,#fff);
+}
+.tlv2-summary-icon, .tlv2-marker {
+  flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; background: #f0d99e;
+  display: grid; place-items: center;
+}
+.tlv2-summary-icon img, .tlv2-marker img { width: 20px; height: 20px; }
+.tlv2-summary strong { display: block; color: #493916; font-size: 14px; }
+.tlv2-summary small { color: #857552; }
+.tlv2-lanes { display: grid; gap: .65rem; }
+.tlv2-lane { display: grid; grid-template-columns: 140px 1fr; min-height: 70px; border: 1px solid #e1e7ef; border-radius: 14px; background: #fff; overflow: hidden; }
+.tlv2-lane-label { padding: .85rem; background: #f6f8fb; color: #273b56; font-size: 11px; font-weight: 800; display: flex; align-items: center; gap: .5rem; }
+.tlv2-items { display: flex; align-items: stretch; gap: .55rem; padding: .65rem; overflow-x: auto; }
+.tlv2-card {
+  min-width: 150px; flex: 1 0 150px; border: 1px solid #dbe3ed; border-radius: 11px;
+  background: #fff; color: #203754; padding: .62rem; text-align: left; cursor: default;
+}
+.tlv2-card.fact { border-color: #cfe0d3; background: linear-gradient(180deg,#f7fcf8,#fff); cursor: pointer; }
+.tlv2-card.person { border-color: #dfd2ee; background: linear-gradient(180deg,#faf7fd,#fff); }
+.tlv2-card-top { display:flex; align-items:center; gap:.5rem; margin-bottom:.42rem; }
+.tlv2-card .tlv2-marker { width: 28px; height: 28px; border-radius: 8px; background: #eef3f9; }
+.tlv2-card .tlv2-marker img { width: 16px; height: 16px; }
+.tlv2-card strong { display:block; font-size: 11px; line-height: 1.25; }
+.tlv2-card small { display:block; color:#7b8797; font-size:9px; line-height:1.35; }
+.tlv2-detail { display:none; margin-top:.8rem; padding:.9rem 1rem; border-radius:13px; background:#152b47; color:#fff; }
+.tlv2-detail.open { display:block; }
+.tlv2-detail strong { display:block; margin-bottom:.25rem; }
+.tlv2-detail p { margin:0; color:#d7e1ec; font-size:12px; line-height:1.55; }
+.tlv2-loading { padding: 1.5rem; color:#6c7889; text-align:center; }
+@media (max-width: 720px) {
+  .tlv2-head { align-items:flex-start; }
+  .tlv2-controls { grid-template-columns:auto 1fr auto; padding:.8rem; }
+  .tlv2-depth-step { font-size:0; }
+  .tlv2-depth-step::after { content:attr(data-short); font-size:9px; }
+  .tlv2-lane { grid-template-columns:1fr; }
+  .tlv2-lane-label { padding:.55rem .75rem; }
+}
+
 </style>
 </head>
 <body>
@@ -2202,6 +2283,33 @@ body.atlas-grabbing, body.atlas-grabbing * {
 <div id="page-timeline" class="page">
   <div class="sec-title">Linha do Tempo</div>
   <div class="sec-sub">Da Criação até os Acharonim</div>
+
+  <section id="timeline-v2-pilot" class="tlv2-shell" aria-label="Piloto visual Timeline v2">
+    <div class="tlv2-head">
+      <div>
+        <div class="tlv2-eyebrow">Timeline v2 · protótipo funcional</div>
+        <div class="tlv2-title">Melachim — narrativa, fatos e personagens</div>
+        <div class="tlv2-sub">Use o zoom para percorrer a hierarquia histórica e revelar novas camadas.</div>
+      </div>
+      <span class="tlv2-status">PILOTO</span>
+    </div>
+    <div class="tlv2-controls">
+      <button class="tlv2-zoom-btn" onclick="timelineV2Step(-1)" aria-label="Reduzir profundidade">−</button>
+      <div class="tlv2-depth">
+        <div class="tlv2-depth-track"><span id="tlv2-progress" class="tlv2-depth-progress"></span></div>
+        <div class="tlv2-depth-steps">
+          <button class="tlv2-depth-step" data-short="Fase" onclick="timelineV2SetDepth(1)">Fase histórica</button>
+          <button class="tlv2-depth-step" data-short="Grupo" onclick="timelineV2SetDepth(2)">Agrupador</button>
+          <button class="tlv2-depth-step" data-short="Unidade" onclick="timelineV2SetDepth(3)">Unidade narrativa</button>
+          <button class="tlv2-depth-step" data-short="Fatos" onclick="timelineV2SetDepth(4)">Fatos</button>
+        </div>
+      </div>
+      <button class="tlv2-zoom-btn" onclick="timelineV2Step(1)" aria-label="Aumentar profundidade">+</button>
+    </div>
+    <div id="tlv2-breadcrumb" class="tlv2-breadcrumb"></div>
+    <div id="tlv2-stage" class="tlv2-stage"><div class="tlv2-loading">Carregando piloto de Melachim…</div></div>
+  </section>
+
 
   <div class="timeline-legend">
     <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Torá Escrita</div>
@@ -3250,6 +3358,7 @@ function showPage(id, btn) {
   btn.classList.add('active');
   if (id === 'atlas') initAtlas();
   if (id === 'chumash') initDrill();
+  if (id === 'timeline') timelineV2Render();
 }
 
 function drillGo(pageId, bookKey = null) {
@@ -5765,6 +5874,135 @@ function drawerGoToPessukim(chapterNum, bookKey, refStart = null) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   pkLoad();
 }
+
+
+// Timeline v2 — piloto visual orientado pelos dados de Melachim
+const timelineV2State = { depth: 1, data: null, characters: null, canonical: null, loading: null };
+
+async function timelineV2Load() {
+  if (timelineV2State.loading) return timelineV2State.loading;
+  timelineV2State.loading = Promise.all([
+    fetch('data/timeline_v2/melachim-pilot.json').then(function(r) { if (!r.ok) throw new Error('piloto não encontrado'); return r.json(); }),
+    fetch('data/entities/characters.json').then(function(r) { if (!r.ok) throw new Error('personagens não encontrados'); return r.json(); }),
+    fetch('data/nach/kings/03-solomon-decline-kingdom-split.json').then(function(r) { if (!r.ok) throw new Error('unidade canônica não encontrada'); return r.json(); })
+  ]).then(function(values) {
+    timelineV2State.data = values[0];
+    timelineV2State.characters = values[1];
+    timelineV2State.canonical = values[2];
+    return values;
+  });
+  return timelineV2State.loading;
+}
+
+function timelineV2Esc(value) {
+  return String(value == null ? '' : value).replace(/[&<>"']/g, function(char) {
+    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char];
+  });
+}
+
+function timelineV2Icon(visual) {
+  if (!visual || !visual.asset) return '<span aria-hidden="true">•</span>';
+  return '<img src="' + timelineV2Esc(visual.asset) + '" alt="" loading="lazy">';
+}
+
+function timelineV2SetDepth(depth) {
+  timelineV2State.depth = Math.max(1, Math.min(4, depth));
+  timelineV2Render();
+}
+
+function timelineV2Step(delta) {
+  timelineV2SetDepth(timelineV2State.depth + delta);
+}
+
+function timelineV2FactDetail(factId) {
+  var detail = document.getElementById('tlv2-detail');
+  if (!detail || !timelineV2State.canonical) return;
+  var fact = (timelineV2State.canonical.facts || []).find(function(item) { return item.id === factId; });
+  if (!fact) return;
+  detail.innerHTML = '<strong>' + timelineV2Esc(fact.topic || fact.id) + '</strong>' +
+    '<p>' + timelineV2Esc(fact.text || '') + '<br><small>' + timelineV2Esc(fact.sefaria_ref || '') + '</small></p>';
+  detail.classList.add('open');
+}
+
+function timelineV2Lane(label, icon, cards) {
+  return '<div class="tlv2-lane"><div class="tlv2-lane-label"><span>' + icon + '</span>' +
+    timelineV2Esc(label) + '</div><div class="tlv2-items">' + cards + '</div></div>';
+}
+
+async function timelineV2Render() {
+  var stage = document.getElementById('tlv2-stage');
+  if (!stage) return;
+  try {
+    await timelineV2Load();
+    var data = timelineV2State.data;
+    var phase = data.phase;
+    var group = (phase.groups || [])[0];
+    var unit = group && (group.units || [])[0];
+    var facts = unit ? (unit.facts || []) : [];
+    var peopleById = {};
+    (timelineV2State.characters.characters || []).forEach(function(person) { peopleById[person.id] = person; });
+    var depth = timelineV2State.depth;
+    var crumbs = [phase.label];
+    if (depth >= 2 && group) crumbs.push(group.label);
+    if (depth >= 3 && unit) crumbs.push('Melachim · ' + unit.unit_id);
+    if (depth >= 4) crumbs.push('Fatos e personagens');
+    document.getElementById('tlv2-breadcrumb').innerHTML = crumbs.map(function(item, index) {
+      return (index ? '<span>›</span>' : '') + '<b>' + timelineV2Esc(item) + '</b>';
+    }).join('');
+    document.getElementById('tlv2-progress').style.width = ((depth - 1) / 3 * 100) + '%';
+    document.querySelectorAll('.tlv2-depth-step').forEach(function(button, index) {
+      button.classList.toggle('active', index + 1 === depth);
+      button.classList.toggle('done', index + 1 < depth);
+    });
+
+    var summaryVisual = depth === 1 ? phase.visual : depth === 2 ? group.visual : (group.visual || phase.visual);
+    var summaryTitle = depth === 1 ? phase.label : depth === 2 ? group.label : 'Declínio de Shlomo e divisão do reino';
+    var summarySub = depth === 1
+      ? phase.chronology.am_start + '–' + phase.chronology.am_end + ' AM · visão macroscópica'
+      : depth === 2
+        ? group.chronology.am_start + '–' + group.chronology.am_end + ' AM · agrupador'
+        : unit.chronology.am_start + '–' + unit.chronology.am_end + ' AM · unidade narrativa';
+
+    var output = '<div class="tlv2-summary"><span class="tlv2-summary-icon">' + timelineV2Icon(summaryVisual) +
+      '</span><div><strong>' + timelineV2Esc(summaryTitle) + '</strong><small>' + timelineV2Esc(summarySub) + '</small></div></div>';
+
+    if (depth >= 2) {
+      var groupCards = '<div class="tlv2-card"><div class="tlv2-card-top"><span class="tlv2-marker">' +
+        timelineV2Icon(group.visual) + '</span><strong>' + timelineV2Esc(group.label) +
+        '</strong></div><small>Agrupa unidades narrativas relacionadas.</small></div>';
+      output += '<div class="tlv2-lanes">' + timelineV2Lane('Agrupadores', '◆', groupCards);
+      if (depth >= 3) {
+        var unitCards = '<div class="tlv2-card"><div class="tlv2-card-top"><span class="tlv2-marker">' +
+          timelineV2Icon(group.visual) + '</span><strong>Declínio e cisão do reino</strong></div>' +
+          '<small>1 Reis 9–12 · ' + facts.length + ' fatos canônicos</small></div>';
+        output += timelineV2Lane('Unidade narrativa', '▣', unitCards);
+        var personIds = unit.character_ids || [];
+        var personCards = personIds.map(function(id) {
+          var person = peopleById[id] || { id:id, name_pt:id, visual:null };
+          return '<div class="tlv2-card person"><div class="tlv2-card-top"><span class="tlv2-marker">' +
+            timelineV2Icon(person.visual) + '</span><strong>' + timelineV2Esc(person.name_pt || person.name || id) +
+            '</strong></div><small>' + timelineV2Esc(person.name_he || person.name || '') + '</small></div>';
+        }).join('');
+        output += timelineV2Lane('Personagens', '●', personCards);
+      }
+      if (depth >= 4) {
+        var factCards = facts.map(function(fact) {
+          return '<button class="tlv2-card fact" onclick="timelineV2FactDetail(\'' + timelineV2Esc(fact.fact_id) + '\')">' +
+            '<div class="tlv2-card-top"><span class="tlv2-marker">' + timelineV2Icon(fact.visual) +
+            '</span><strong>' + timelineV2Esc(fact.display.label_short) + '</strong></div>' +
+            '<small>Fato ' + timelineV2Esc(fact.fact_id) + ' · importância ' + timelineV2Esc(fact.display.importance) + '</small></button>';
+        }).join('');
+        output += timelineV2Lane('Fatos', '◆', factCards);
+      }
+      output += '</div>';
+    }
+    output += '<div id="tlv2-detail" class="tlv2-detail" aria-live="polite"></div>';
+    stage.innerHTML = output;
+  } catch (error) {
+    stage.innerHTML = '<div class="tlv2-loading">Não foi possível carregar o piloto: ' + timelineV2Esc(error.message) + '</div>';
+  }
+}
+
 
 // Fechar com Escape
 document.addEventListener('keydown', e => {
