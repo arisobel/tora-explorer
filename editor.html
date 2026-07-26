@@ -58,6 +58,34 @@
     border-radius:6px;padding:5px 9px;margin:.25rem 0 .45rem;line-height:1.45}
   .trlang{display:block;font-size:10px;letter-spacing:.08em;color:var(--text3);margin:0 0 .15rem;text-transform:uppercase}
   .trfield textarea{font-family:inherit;font-size:13px;line-height:1.5}
+
+  /* Character authoring */
+  .char-editor{display:none}
+  .char-editor.active{display:block}
+  .char-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+  .char-status{font-size:11px;padding:.3rem .6rem;border-radius:999px;background:rgba(184,138,36,.1);color:var(--gold2)}
+  .char-tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin:.3rem 0 1rem}
+  .char-tab{border:1px solid var(--border2);background:#fff;color:var(--text2);border-radius:999px;padding:.35rem .7rem;font-size:11px;cursor:pointer}
+  .char-tab.active{background:var(--gold2);border-color:var(--gold2);color:#fff}
+  .char-panel{display:none}.char-panel.active{display:block}
+  .char-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1rem}
+  .char-preview{border:1px solid var(--border);border-radius:14px;background:linear-gradient(145deg,#fffaf0,#fff);padding:1.2rem;min-height:360px}
+  .char-preview-head{display:flex;gap:.9rem;align-items:center;padding-bottom:1rem;border-bottom:1px solid var(--border)}
+  .char-avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#f2dda4;border:3px solid #fff;box-shadow:0 3px 12px rgba(76,58,21,.16)}
+  .char-avatar img{width:30px;height:30px}
+  .char-preview h3{font:600 23px/1.1 'Crimson Pro',serif;color:var(--gold2)}
+  .char-he{font-size:16px;color:var(--text2);direction:rtl}
+  .char-meta{font-size:11px;color:var(--text3);margin-top:.2rem}
+  .char-bio{font-family:'Crimson Pro',serif;font-size:16px;color:var(--text2);line-height:1.55;margin:1rem 0}
+  .char-preview-section{margin-top:1rem}
+  .char-preview-section strong{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:.35rem}
+  .char-chips{display:flex;gap:.35rem;flex-wrap:wrap}
+  .char-chip{padding:.28rem .5rem;border-radius:999px;background:rgba(92,76,47,.07);color:var(--text2);font-size:10px}
+  .char-list{display:grid;gap:.45rem;margin-top:.5rem}
+  .char-list-item{padding:.55rem .65rem;border:1px solid var(--border);border-radius:8px;font-size:11px;color:var(--text2)}
+  .char-actions{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+  @media(max-width:780px){.char-form-grid{grid-template-columns:1fr}.char-toolbar{align-items:flex-start;flex-direction:column}}
+
 </style>
 </head>
 <body>
@@ -144,6 +172,104 @@
       <div id="trfields"></div>
       <button class="btn" id="trapply" disabled>Aplicar traduções ao JSON</button>
       <span class="hint" id="trstatus"></span>
+    </div>
+  </div>
+
+  <!-- ════════ 4. PERSONAGENS ════════ -->
+  <div class="card">
+    <div class="char-toolbar">
+      <div>
+        <h2>4 · Personagens</h2>
+        <div class="hint">Selecione um arquivo em <code>entities/characters/*.json</code> na seção anterior. O formulário edita o mesmo JSON e oferece uma prévia da futura Bio.</div>
+      </div>
+      <span id="char-status" class="char-status">nenhum personagem carregado</span>
+    </div>
+
+    <div id="char-editor" class="char-editor">
+      <div class="grid">
+        <div>
+          <div class="char-tabs" role="tablist" aria-label="Seções do personagem">
+            <button class="char-tab active" data-char-panel="identity" type="button">Identidade</button>
+            <button class="char-tab" data-char-panel="chronology" type="button">Cronologia</button>
+            <button class="char-tab" data-char-panel="biography" type="button">Biografia</button>
+            <button class="char-tab" data-char-panel="relations" type="button">Relações e fontes</button>
+            <button class="char-tab" data-char-panel="visual" type="button">Visual</button>
+          </div>
+
+          <div class="char-panel active" data-char-content="identity">
+            <div class="char-form-grid">
+              <div><label>ID estável</label><input id="char-id" readonly></div>
+              <div><label>Status editorial</label><input id="char-review" readonly></div>
+              <div><label>Nome principal</label><input id="char-name"></div>
+              <div><label>Nome em português</label><input id="char-name-pt"></div>
+              <div><label>Nome em hebraico</label><input id="char-name-he" dir="rtl"></div>
+              <div><label>Transliteração</label><input id="char-transliteration"></div>
+              <div><label>Tribo</label><input id="char-tribe"></div>
+              <div><label>Classificação da tribo</label>
+                <select id="char-tribe-class">
+                  <option value="explicit">explicit</option>
+                  <option value="traditional">traditional</option>
+                  <option value="relationship-derived">relationship-derived</option>
+                  <option value="unknown">unknown</option>
+                </select>
+              </div>
+            </div>
+            <label>Funções — separadas por vírgula</label>
+            <input id="char-roles">
+          </div>
+
+          <div class="char-panel" data-char-content="chronology">
+            <div class="char-form-grid">
+              <div><label>Início do período ativo — AM</label><input id="char-am-start" type="number"></div>
+              <div><label>Fim do período ativo — AM</label><input id="char-am-end" type="number"></div>
+              <div><label>Precisão</label>
+                <select id="char-precision">
+                  <option value="traditional">traditional</option>
+                  <option value="approximate">approximate</option>
+                  <option value="fact-derived">fact-derived</option>
+                  <option value="unknown">unknown</option>
+                </select>
+              </div>
+              <div><label>Datas vitais</label><input id="char-vital" readonly></div>
+            </div>
+            <div class="hint">Campos vazios permanecem desconhecidos. O editor não cria datas automaticamente.</div>
+          </div>
+
+          <div class="char-panel" data-char-content="biography">
+            <label>Resumo biográfico</label>
+            <textarea id="char-bio-short" rows="5"></textarea>
+            <div id="char-sections" class="char-list"></div>
+          </div>
+
+          <div class="char-panel" data-char-content="relations">
+            <label>Relações familiares</label>
+            <div id="char-relations" class="char-list"></div>
+            <label>Fontes principais</label>
+            <div id="char-sources" class="char-list"></div>
+          </div>
+
+          <div class="char-panel" data-char-content="visual">
+            <div class="char-form-grid">
+              <div><label>SVG simbólico</label><input id="char-icon-asset"></div>
+              <div><label>Retrato editorial</label><input id="char-portrait-asset" placeholder="opcional"></div>
+              <div><label>Cor</label><input id="char-color" type="color" value="#c9a84c"></div>
+              <div><label>Função simbólica</label><input id="char-symbolic-role"></div>
+            </div>
+            <label>Texto alternativo</label><input id="char-alt">
+          </div>
+
+          <div class="char-actions">
+            <button class="btn" id="char-apply" type="button">Aplicar formulário ao JSON</button>
+            <button class="btn ghost" id="char-refresh" type="button">Recarregar do JSON</button>
+            <span id="char-message" class="hint"></span>
+          </div>
+        </div>
+
+        <div>
+          <label>Prévia da Bio</label>
+          <div id="char-preview" class="char-preview"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -303,9 +429,9 @@ async function loadFile(path){
   currentHandle = handles.get(path);
   const file = await currentHandle.getFile();
   const text = await file.text();
-  try{ const o=JSON.parse(text); $('json').value=JSON.stringify(o,null,2); populateTargets(o);
+  try{ const o=JSON.parse(text); $('json').value=JSON.stringify(o,null,2); populateTargets(o); characterEditorLoad(o,path);
        $('jstatus').innerHTML='<span class="ok">JSON válido</span>'; $('save').disabled=false; }
-  catch(err){ $('json').value=text; $('target').innerHTML=''; $('trtarget').innerHTML=''; $('trfields').innerHTML=''; $('trapply').disabled=true; $('jstatus').innerHTML=`<span class="err">JSON inválido: ${err.message}</span>`; $('save').disabled=true; }
+  catch(err){ $('json').value=text; $('target').innerHTML=''; $('trtarget').innerHTML=''; $('trfields').innerHTML=''; $('trapply').disabled=true; characterEditorClear(); $('jstatus').innerHTML=`<span class="err">JSON inválido: ${err.message}</span>`; $('save').disabled=true; }
 }
 
 function populateTargets(obj){
@@ -358,6 +484,167 @@ $('save').addEventListener('click', async ()=>{
     $('jstatus').innerHTML='<span class="ok">salvo ✓</span>';
   }catch(err){ $('jstatus').innerHTML=`<span class="err">erro ao salvar: ${err.message}</span>`; }
 });
+
+
+/* ───────── 4. editor estruturado de personagens ───────── */
+let currentCharacterPath='';
+
+document.querySelectorAll('.char-tab').forEach(function(button){
+  button.addEventListener('click',function(){
+    document.querySelectorAll('.char-tab').forEach(function(item){ item.classList.toggle('active',item===button); });
+    document.querySelectorAll('.char-panel').forEach(function(panel){
+      panel.classList.toggle('active',panel.dataset.charContent===button.dataset.charPanel);
+    });
+  });
+});
+
+function characterEditorClear(){
+  currentCharacterPath='';
+  $('char-editor').classList.remove('active');
+  $('char-status').textContent='nenhum personagem carregado';
+}
+
+function characterValue(id,value){
+  $(id).value=value==null?'':value;
+}
+
+function characterEditorLoad(obj,path){
+  if(!obj || obj.entity_type!=='person' || !obj.names){
+    characterEditorClear();
+    return;
+  }
+  currentCharacterPath=path||'';
+  $('char-editor').classList.add('active');
+  $('char-status').textContent=(obj.status||'draft')+' · '+(path||obj.id);
+  characterValue('char-id',obj.id);
+  characterValue('char-review',obj.editorial&&obj.editorial.review_status);
+  characterValue('char-name',obj.names.primary);
+  characterValue('char-name-pt',obj.names.pt);
+  characterValue('char-name-he',obj.names.he);
+  characterValue('char-transliteration',obj.names.transliteration);
+  characterValue('char-tribe',obj.identity&&obj.identity.tribe&&obj.identity.tribe.tribe_id);
+  characterValue('char-tribe-class',obj.identity&&obj.identity.tribe&&obj.identity.tribe.classification);
+  characterValue('char-roles',((obj.identity&&obj.identity.roles)||[]).map(function(role){return role.label||role.id;}).join(', '));
+  var active=obj.timeline&&obj.timeline.active_period||{};
+  characterValue('char-am-start',active.am_start);
+  characterValue('char-am-end',active.am_end);
+  characterValue('char-precision',active.precision||'unknown');
+  var birth=obj.timeline&&obj.timeline.birth&&obj.timeline.birth.am;
+  var death=obj.timeline&&obj.timeline.death&&obj.timeline.death.am;
+  characterValue('char-vital','Nascimento: '+(birth==null?'desconhecido':birth+' AM')+' · Falecimento: '+(death==null?'desconhecido':death+' AM'));
+  characterValue('char-bio-short',obj.biography&&obj.biography.short);
+  var visual=obj.visual||{};
+  characterValue('char-icon-asset',visual.icon_asset);
+  characterValue('char-portrait-asset',visual.portrait_asset);
+  characterValue('char-color',visual.color||'#c9a84c');
+  characterValue('char-symbolic-role',visual.symbolic_role);
+  characterValue('char-alt',visual.alt);
+  characterRenderCollections(obj);
+  characterRenderPreview(obj);
+  $('char-message').textContent='';
+}
+
+function characterRenderCollections(obj){
+  var sections=obj.biography&&obj.biography.sections||[];
+  $('char-sections').innerHTML=sections.map(function(section){
+    return '<div class="char-list-item"><b>'+escapeHtml(section.title||section.id)+'</b><br>'+
+      escapeHtml(String((section.fact_ids||[]).length))+' fatos · '+escapeHtml(String((section.source_refs||[]).length))+' referências</div>';
+  }).join('')||'<div class="hint">Nenhuma seção cadastrada.</div>';
+  $('char-relations').innerHTML=(obj.relationships||[]).map(function(relation){
+    return '<div class="char-list-item"><b>'+escapeHtml(relation.type)+'</b> · '+escapeHtml(relation.character_id)+
+      '<br>'+escapeHtml(relation.classification||'sem classificação')+' · '+escapeHtml((relation.evidence||[]).join(', '))+'</div>';
+  }).join('')||'<div class="hint">Nenhuma relação cadastrada.</div>';
+  $('char-sources').innerHTML=(obj.source_ranges||[]).map(function(source){
+    return '<div class="char-list-item"><b>'+escapeHtml(source.sefaria_ref)+'</b><br>'+
+      escapeHtml(source.relation||'fonte')+' · '+escapeHtml(source.classification||'sem classificação')+'</div>';
+  }).join('')||'<div class="hint">Nenhuma fonte cadastrada.</div>';
+}
+
+function characterFormDraft(base){
+  var obj=JSON.parse(JSON.stringify(base));
+  obj.names=obj.names||{};
+  obj.names.primary=$('char-name').value.trim();
+  obj.names.pt=$('char-name-pt').value.trim();
+  obj.names.he=$('char-name-he').value.trim();
+  obj.names.transliteration=$('char-transliteration').value.trim();
+  obj.identity=obj.identity||{};
+  obj.identity.tribe=obj.identity.tribe||{evidence:[],review_status:'pending'};
+  obj.identity.tribe.tribe_id=$('char-tribe').value.trim()||null;
+  obj.identity.tribe.classification=$('char-tribe-class').value;
+  var oldRoles=obj.identity.roles||[];
+  obj.identity.roles=$('char-roles').value.split(',').map(function(label,index){
+    label=label.trim();
+    if(!label)return null;
+    var old=oldRoles[index];
+    return {id:old&&old.id?old.id:slugify(label),label:label};
+  }).filter(Boolean);
+  obj.timeline=obj.timeline||{};
+  obj.timeline.active_period=obj.timeline.active_period||{};
+  var start=$('char-am-start').value,end=$('char-am-end').value;
+  obj.timeline.active_period.am_start=start===''?null:Number(start);
+  obj.timeline.active_period.am_end=end===''?null:Number(end);
+  obj.timeline.active_period.precision=$('char-precision').value;
+  obj.biography=obj.biography||{sections:[]};
+  obj.biography.short=$('char-bio-short').value.trim();
+  obj.visual=obj.visual||{};
+  obj.visual.icon_asset=$('char-icon-asset').value.trim()||null;
+  obj.visual.portrait_asset=$('char-portrait-asset').value.trim()||null;
+  obj.visual.color=$('char-color').value;
+  obj.visual.symbolic_role=$('char-symbolic-role').value.trim()||null;
+  obj.visual.alt=$('char-alt').value.trim();
+  return obj;
+}
+
+function characterRenderPreview(obj){
+  var visual=obj.visual||{},active=obj.timeline&&obj.timeline.active_period||{};
+  var roles=((obj.identity&&obj.identity.roles)||[]).map(function(role){return '<span class="char-chip">'+escapeHtml(role.label||role.id)+'</span>';}).join('');
+  var facts=(obj.canonical_fact_links||[]).map(function(link){return '<span class="char-chip">'+escapeHtml(link.fact_id)+'</span>';}).join('');
+  var relations=(obj.relationships||[]).map(function(relation){return '<span class="char-chip">'+escapeHtml(relation.type+' · '+relation.character_id)+'</span>';}).join('');
+  var icon=visual.icon_asset?'<img src="'+escapeHtml(visual.icon_asset)+'" alt="">':'◆';
+  $('char-preview').innerHTML='<div class="char-preview-head"><div class="char-avatar" style="background:'+escapeHtml(visual.color||'#f2dda4')+'55">'+icon+'</div>'+
+    '<div><h3>'+escapeHtml(obj.names&&obj.names.pt||obj.names&&obj.names.primary||obj.id)+'</h3>'+
+    '<div class="char-he">'+escapeHtml(obj.names&&obj.names.he||'')+'</div>'+
+    '<div class="char-meta">'+escapeHtml((active.am_start==null?'?':active.am_start)+'–'+(active.am_end==null?'?':active.am_end)+' AM · '+(active.precision||'unknown'))+'</div></div></div>'+
+    '<div class="char-bio">'+escapeHtml(obj.biography&&obj.biography.short||'Sem resumo biográfico.')+'</div>'+
+    '<div class="char-preview-section"><strong>Funções</strong><div class="char-chips">'+(roles||'<span class="char-chip">não informadas</span>')+'</div></div>'+
+    '<div class="char-preview-section"><strong>Tribo</strong><div class="char-chips"><span class="char-chip">'+escapeHtml(obj.identity&&obj.identity.tribe&&obj.identity.tribe.tribe_id||'não informada')+'</span></div></div>'+
+    '<div class="char-preview-section"><strong>Fatos vinculados</strong><div class="char-chips">'+facts+'</div></div>'+
+    '<div class="char-preview-section"><strong>Família</strong><div class="char-chips">'+relations+'</div></div>';
+}
+
+function characterRefreshFromJson(){
+  try{
+    var obj=JSON.parse($('json').value);
+    characterEditorLoad(obj,currentCharacterPath);
+  }catch(error){
+    $('char-message').innerHTML='<span class="err">'+escapeHtml(error.message)+'</span>';
+  }
+}
+
+$('char-refresh').addEventListener('click',characterRefreshFromJson);
+$('char-apply').addEventListener('click',function(){
+  try{
+    var current=JSON.parse($('json').value);
+    if(current.entity_type!=='person')throw new Error('O arquivo atual não é uma entidade de personagem.');
+    var updated=characterFormDraft(current);
+    $('json').value=JSON.stringify(updated,null,2);
+    characterEditorLoad(updated,currentCharacterPath);
+    $('save').disabled=false;
+    $('jstatus').innerHTML='<span class="ok">formulário aplicado — confira e clique em Salvar no arquivo</span>';
+    $('char-message').innerHTML='<span class="ok">alterações aplicadas ao JSON ✓</span>';
+  }catch(error){
+    $('char-message').innerHTML='<span class="err">'+escapeHtml(error.message)+'</span>';
+  }
+});
+
+['char-name','char-name-pt','char-name-he','char-transliteration','char-tribe','char-tribe-class','char-roles',
+ 'char-am-start','char-am-end','char-precision','char-bio-short','char-icon-asset','char-portrait-asset',
+ 'char-color','char-symbolic-role','char-alt'].forEach(function(id){
+  $(id).addEventListener('input',function(){
+    try{ characterRenderPreview(characterFormDraft(JSON.parse($('json').value))); }catch(error){}
+  });
+});
+
 
 /* ───────── 3. traduções (ES / EN / HE) ───────── */
 const TR_LANGS=[['en','EN'],['es','ES'],['he','עברית']];
