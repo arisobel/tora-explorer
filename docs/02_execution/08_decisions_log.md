@@ -301,3 +301,24 @@
 **Decision:** Treat SQLite as the implemented local authoring and integration layer. Keep static JSON as the publication and public runtime format until an SQLite-to-JSON export pipeline and generated projections are ready.
 
 **Impact:** Documentation and backlog items should distinguish between local database authoring, which exists, and a live database-backed public runtime, which remains out of scope.
+
+---
+
+## 2026-07-26 — Timeline v2 is based on design-restructuring-01
+
+**Context:** The design branch is 11 commits ahead of main and contains the current Atlas restructuring, visual strategy, reference screenshots and expanded timeline proposal.
+
+**Decision:** Base the Timeline v2 Melachim pilot on `design-restructuring-01`, not `main`. Treat its layout and visual documentation as the active product context.
+
+**Impact:** The pilot can evolve with the current design without reintroducing obsolete main-branch assumptions. Its pull request targets the design branch.
+
+---
+
+## 2026-07-26 — Timeline visuals are functional navigation metadata
+
+**Context:** The intended product relies on strong visual recognition of facts, periods, characters and future places. Treating visuals as renderer decoration would postpone an essential data requirement.
+
+**Decision:** Phase, group, fact and character projections may declare a `visual` block. Narrative units inherit canonical visuals. The fallback order is curated image, semantic icon, then color and label. Every asset requires a caption.
+
+**Impact:** Compact mode can remain icon-led while expanded mode can progressively introduce thumbnails and portraits. Existing repository assets are reused, and richer images remain external files under `assets/`.
+
