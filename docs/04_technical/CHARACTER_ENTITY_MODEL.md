@@ -209,18 +209,18 @@ The index supports fast timeline rendering. Individual files hold complete biogr
 
 Deliver:
 
-- [ ] create `data/entities/tribes.json` with the minimal stable tribe registry;
-- [ ] expand the Shlomo index entry with stable summary fields;
-- [ ] create `data/entities/characters/shlomo.json`;
-- [ ] add identity and name variants;
-- [ ] add roles;
-- [ ] add tribal affiliation with classification and evidence;
-- [ ] add active-period chronology without invented exact dates;
-- [ ] add a short biography divided into fact-linked sections;
-- [ ] add primary source ranges;
-- [ ] add direct parents, relevant spouse and child relations;
-- [ ] add symbolic SVG metadata;
-- [ ] add up to three evidence-based narrative characterizations;
+- [x] create `data/entities/tribes.json` with the minimal stable tribe registry;
+- [x] expand the Shlomo index entry with stable summary fields;
+- [x] create `data/entities/characters/shlomo.json`;
+- [x] add identity and name variants;
+- [x] add roles;
+- [x] add tribal affiliation with classification and evidence;
+- [x] add active-period chronology without invented exact dates;
+- [x] add a short biography divided into fact-linked sections;
+- [x] add primary source ranges;
+- [x] add direct parents, relevant spouse and child relations;
+- [x] add symbolic SVG metadata;
+- [x] add up to three evidence-based narrative characterizations;
 - [ ] render a read-only biography drawer opened from the timeline.
 
 ## Acceptance criteria
@@ -242,3 +242,15 @@ Deliver:
 - portraits for every character;
 - relationship inference;
 - full multilingual biography content.
+
+
+## Implementation note — JSON/SQLite correlation
+
+The initial implementation extends `import-json-to-sqlite.ps1` and adds
+`scripts/validate-character-sync.ps1`. The current database CHECK constraints
+do not yet include a dedicated `tribe` node type or family-specific edge types.
+For this pilot, tribe registry entries are stored as controlled-vocabulary
+`theme` nodes with `metadata_json.entity_kind = "tribe"`, while family and
+tribal semantics use `related_to` edges with an explicit
+`metadata_json.semantic_relation`. This is deliberate compatibility behavior,
+not the final domain vocabulary.
