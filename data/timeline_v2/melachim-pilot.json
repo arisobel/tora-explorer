@@ -137,8 +137,8 @@
                 },
                 "visual": {
                   "marker_type": "icon",
-                  "icon": "city",
-                  "asset": "assets/icons/city.svg",
+                  "icon": "light",
+                  "asset": "assets/icons/light.svg",
                   "caption": "Expansão econômica",
                   "inherit_canonical_fact_visual": true
                 }
@@ -210,8 +210,8 @@
                 },
                 "visual": {
                   "marker_type": "icon",
-                  "icon": "warning",
-                  "asset": "assets/icons/warning.svg",
+                  "icon": "scroll",
+                  "asset": "assets/icons/scroll.svg",
                   "caption": "Desvio espiritual",
                   "inherit_canonical_fact_visual": true
                 }
