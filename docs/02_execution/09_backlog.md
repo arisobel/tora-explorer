@@ -147,3 +147,41 @@
 - [ ] Keep `docs/02_execution/KNOWN_ISSUES.md` limited to real, verified issues
 - [ ] Standardize the local Git `safe.directory` workflow for reliable status/diff verification
 - [ ] Preserve JSON-first content publication while adding visual marker support
+
+---
+
+## Timeline v2 — Melachim pilot
+
+### Phase A — Data contract
+
+- [x] Add an experimental projection for phase -> group -> unit -> fact.
+- [x] Add stable character/entity IDs for the first Melachim slice.
+- [x] Keep canonical fact prose and Sefaria refs in existing unit files.
+- [x] Record chronology precision instead of inventing exact dates.
+- [ ] Validate every pilot fact reference against its canonical unit file.
+- [ ] Add a JSON validation script for character IDs, unit IDs and fact IDs.
+
+### Phase B — Shared timeline renderer
+
+- [ ] Implement one renderer with `compact` and `expanded` modes.
+- [ ] Add explicit click drill: phase -> group -> unit -> fact.
+- [ ] Add Back behavior that returns exactly one level.
+- [ ] Add independent Facts and Characters layer toggles.
+- [ ] Distinguish exact, approximate and relative chronology visually.
+- [ ] Connect fact selection to the existing drawer/Pessukim flow.
+
+### Phase C — Product integration
+
+- [ ] Render compact mode in the Atlas 2D footer behind an experimental flag.
+- [ ] Render expanded mode in the Timeline tab.
+- [ ] Preserve current Timeline and Atlas behavior until pilot acceptance.
+- [ ] Run desktop, keyboard and responsive interaction checks.
+- [ ] Review the pilot before expanding to the remaining Melachim groups.
+
+### Deferred
+
+- [ ] Add BCE/CE as a secondary display calendar.
+- [ ] Add locations, routes and map synchronization.
+- [ ] Consider a 2D historical map before any 3D globe.
+- [ ] Extend the identity registry beyond the pilot.
+
