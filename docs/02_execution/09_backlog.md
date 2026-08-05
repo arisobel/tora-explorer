@@ -280,12 +280,12 @@ do foco.
 
 Reference: `docs/04_technical/TIMELINE_V2_HORIZONTAL_LANES.md`
 
-- [ ] Replace only depth 4 with a shared horizontal time canvas.
-- [ ] Keep one sticky AM ruler for all temporal lanes.
-- [ ] Render narrative units as interval bars.
-- [ ] Render characters as avatars plus activity lines.
-- [ ] Render facts as point markers positioned by `position_in_unit`.
-- [ ] Synchronize lateral scrolling across ruler, units, characters and facts.
+- [~] Replace only depth 4 with a shared horizontal time canvas — first Melachim slice rendered; card-based depths 1–3 preserved (2026-07-26).
+- [~] Keep one sticky AM ruler for all temporal lanes — shared ruler present inside the pilot canvas; viewport-level stickiness remains for a larger canvas (2026-07-26).
+- [x] Render the pilot narrative unit as an interval bar.
+- [x] Render Shlomo as an avatar plus activity line within the selected unit.
+- [x] Render facts as point markers positioned by `position_in_unit`.
+- [x] Synchronize lateral scrolling across ruler, unit, character and fact lanes through one shared scroll container.
 - [ ] Link character selection to related facts and vice versa.
 - [ ] Represent approximate, open and fact-derived chronology explicitly.
 - [ ] Preserve the existing depths 1–3.
@@ -305,6 +305,7 @@ Reference: `docs/04_technical/CHARACTER_ENTITY_MODEL.md`
 - [x] Add symbolic SVG and optional portrait metadata.
 - [x] Add evidence-based narrative characterization.
 - [x] Open a read-only character biography drawer from the timeline — Shlomo specimen loads `data/entities/characters/shlomo.json` and presents identity, active period, tribe, roles, biography sections, immediate family, narrative characterization and primary sources; other character cards explicitly remain “in preparation” until they receive `detail_file` (2026-07-26).
+- [x] Keep the character drawer fully hidden and non-interactive until explicitly opened; prevents the page-level entrance animation from exposing the fixed drawer at browser zoom levels (2026-07-26).
 - [x] Add structured character authoring form and Bio preview to `editor.html`.
 - [x] Import character entities and tribe registry into SQLite.
 - [x] Add isolated JSON/SQLite correlation validation.
