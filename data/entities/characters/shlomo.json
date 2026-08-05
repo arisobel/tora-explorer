@@ -113,14 +113,38 @@
     ]
   },
   "canonical_fact_links": [
-    { "book_key": "kings", "fact_id": "kg017" },
-    { "book_key": "kings", "fact_id": "kg018" },
-    { "book_key": "kings", "fact_id": "kg019" },
-    { "book_key": "kings", "fact_id": "kg020" },
-    { "book_key": "kings", "fact_id": "kg021" },
-    { "book_key": "kings", "fact_id": "kg022" },
-    { "book_key": "kings", "fact_id": "kg023" },
-    { "book_key": "kings", "fact_id": "kg024" }
+    {
+      "book_key": "kings",
+      "fact_id": "kg017"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg018"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg019"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg020"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg021"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg022"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg023"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg024"
+    }
   ],
   "source_ranges": [
     {
@@ -211,7 +235,7 @@
     "icon_asset": "assets/icons/crown.svg",
     "portrait_asset": null,
     "symbolic_role": "king",
-    "color": "#c9a84c",
+    "color": "#fbff00",
     "caption": "Shlomo",
     "alt": "Símbolo de coroa associado ao reinado de Shlomo"
   },
