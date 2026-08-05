@@ -57,6 +57,27 @@ Current import sources:
 - `data/milestones/chumash.json`
 - `data/parashiot/*/index.json`
 - existing `data/parashiot/*/*.json` files
+- `data/entities/tribes.json`
+- `data/entities/characters.json`
+- character detail files referenced by `characters[].detail_file`
 
 The import is idempotent. Use `-Reset` to clear imported content tables before
 loading the current JSON state again.
+
+
+## Validate Character Correlation
+
+The Shlomo pilot includes an isolated JSON-to-SQLite correlation check:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\validate-character-sync.ps1
+```
+
+The validator creates a temporary database, runs every migration, imports the
+current JSON, verifies the Shlomo node, tribe, chronology, sources, visual,
+family relations and eight canonical fact links, runs `foreign_key_check`, and
+removes the temporary database. Use `-KeepDatabase` only when inspection is
+needed.
+
+Until SQLite-to-JSON export exists, JSON remains the operational source and
+SQLite is its normalized authoring/validation mirror.

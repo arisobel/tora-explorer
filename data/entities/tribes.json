@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1-experimental",
+  "status": "pilot",
+  "description": "Minimal stable registry for tribal affiliations referenced by character entities. A registry entry does not assert that a specific character belongs to the tribe.",
+  "tribes": [
+    {
+      "id": "judah",
+      "name": "Yehudá",
+      "name_pt": "Judá",
+      "name_he": "יְהוּדָה",
+      "people": "israel",
+      "visual": {
+        "marker_type": "icon",
+        "icon": "crown",
+        "asset": "assets/icons/crown.svg",
+        "caption": "Tribo de Yehudá",
+        "color": "#c9a84c"
+      }
+    }
+  ]
+}

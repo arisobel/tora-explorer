@@ -244,3 +244,83 @@ do foco.
 - [ ] Keep `docs/02_execution/KNOWN_ISSUES.md` limited to real, verified issues
 - [ ] Standardize the local Git `safe.directory` workflow for reliable status/diff verification
 - [ ] Preserve JSON-first content publication while adding visual marker support
+
+---
+
+## Timeline v2 — visual Melachim pilot
+
+### Data contract
+- [x] Add an experimental phase -> group -> unit -> fact projection.
+- [x] Add stable character/entity IDs.
+- [x] Add visual metadata for phase, group, facts and characters.
+- [x] Reuse existing repository icons and canonical unit visuals.
+- [ ] Add automated validation for entity, unit, fact and asset references.
+
+### Shared renderer
+- [ ] Implement compact and expanded modes from the same data/state.
+- [ ] Implement click drill and one-level Back behavior.
+- [ ] Add independent Facts and Characters layer toggles.
+- [ ] Render image -> icon -> color/label fallback.
+- [ ] Distinguish traditional, approximate and relative chronology.
+- [ ] Open the existing drawer/Pessukim flow from a selected fact.
+
+### Integration
+- [ ] Pilot compact mode in the Atlas 2D footer behind an experimental flag.
+- [ ] Pilot expanded mode in the Timeline tab.
+- [ ] Verify compatibility with the adopted design-restructuring components.
+- [ ] Review visual density before expanding beyond the Kingdom split group.
+
+
+
+---
+
+## Timeline v2 — next validated baby-steps (2026-07-26)
+
+### TL-H1 — synchronized Melachim horizontal canvas
+
+Reference: `docs/04_technical/TIMELINE_V2_HORIZONTAL_LANES.md`
+
+- [~] Replace only depth 4 with a shared horizontal time canvas — first Melachim slice rendered; card-based depths 1–3 preserved (2026-07-26).
+- [~] Keep one sticky AM ruler for all temporal lanes — shared ruler present inside the pilot canvas; viewport-level stickiness remains for a larger canvas (2026-07-26).
+- [x] Render the pilot narrative unit as an interval bar.
+- [x] Render Shlomo as an avatar plus activity line within the selected unit.
+- [x] Render facts as point markers positioned by `position_in_unit`.
+- [x] Synchronize lateral scrolling across ruler, unit, character and fact lanes through one shared scroll container.
+- [ ] Link character selection to related facts and vice versa.
+- [ ] Represent approximate, open and fact-derived chronology explicitly.
+- [ ] Preserve the existing depths 1–3.
+
+### CH-H1 — Shlomo biography specimen
+
+Reference: `docs/04_technical/CHARACTER_ENTITY_MODEL.md`
+
+- [x] Create a minimal stable tribe registry.
+- [x] Create a complete Shlomo entity file.
+- [x] Add identity, name variants and roles.
+- [x] Add optional tribal affiliation with evidence classification.
+- [x] Add active period without invented dates.
+- [x] Link biography sections to canonical fact IDs.
+- [x] Add primary source ranges.
+- [x] Add direct family relationships through stable character IDs.
+- [x] Add symbolic SVG and optional portrait metadata.
+- [x] Add evidence-based narrative characterization.
+- [x] Open a read-only character biography drawer from the timeline — Shlomo specimen loads `data/entities/characters/shlomo.json` and presents identity, active period, tribe, roles, biography sections, immediate family, narrative characterization and primary sources; other character cards explicitly remain “in preparation” until they receive `detail_file` (2026-07-26).
+- [x] Keep the character drawer fully hidden and non-interactive until explicitly opened; prevents the page-level entrance animation from exposing the fixed drawer at browser zoom levels (2026-07-26).
+- [x] Add structured character authoring form and Bio preview to `editor.html`.
+- [x] Import character entities and tribe registry into SQLite.
+- [x] Add isolated JSON/SQLite correlation validation.
+
+
+### CH-H2 — graph-oriented knowledge editor
+
+- [ ] Evaluate a client-side graph visualization/editor library compatible with the local authoring workflow.
+- [ ] Visualize characters, facts, tribes, places and narrative units as typed nodes.
+- [ ] Visualize family, participation, location and affiliation as typed edges.
+- [ ] Open the structured entity form when a graph node is selected.
+- [ ] Permit edge creation only through controlled relationship types.
+- [ ] Validate stable IDs and referenced targets before saving JSON.
+- [ ] Keep raw JSON available as an expert/debug view.
+- [ ] Define a safe round-trip contract: graph/form → JSON → SQLite validation.
+- [ ] Test performance before adopting the graph editor for the complete corpus.
+
+This item is intentionally deferred until the structured form and public Bio drawer validate the character data contract.

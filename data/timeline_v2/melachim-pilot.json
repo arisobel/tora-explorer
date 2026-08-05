@@ -1,0 +1,335 @@
+{
+  "schema_version": "0.1-experimental",
+  "status": "pilot",
+  "id": "timeline-v2-melachim-pilot",
+  "label": "Timeline v2 — Melachim pilot",
+  "source_policy": "Projection over canonical runtime JSON. Text and Sefaria references remain owned by the referenced unit files.",
+  "calendar": {
+    "canonical": "AM",
+    "secondary_future": [
+      "BCE_CE"
+    ],
+    "total_span_am": 5785
+  },
+  "zoom_levels": [
+    {
+      "level": 0,
+      "id": "phase",
+      "label": "Fase histórica"
+    },
+    {
+      "level": 1,
+      "id": "group",
+      "label": "Agrupador"
+    },
+    {
+      "level": 2,
+      "id": "unit",
+      "label": "Unidade narrativa"
+    },
+    {
+      "level": 3,
+      "id": "fact",
+      "label": "Fato"
+    }
+  ],
+  "layers": [
+    {
+      "id": "units",
+      "label": "Unidades narrativas",
+      "default_visible": true
+    },
+    {
+      "id": "facts",
+      "label": "Fatos",
+      "default_visible": true
+    },
+    {
+      "id": "characters",
+      "label": "Personagens",
+      "default_visible": true
+    }
+  ],
+  "phase": {
+    "phase_id": "first-temple-kings",
+    "label": "Monarquia e Primeiro Templo",
+    "chronology": {
+      "am_start": 2924,
+      "am_end": 3339,
+      "precision": "traditional"
+    },
+    "source_file": "data/timeline_groups.json",
+    "groups": [
+      {
+        "group_id": "kingdom-split",
+        "label": "Divisão do reino",
+        "chronology": {
+          "am_start": 2935,
+          "am_end": 2964,
+          "precision": "unit-derived"
+        },
+        "character_ids": [
+          "shlomo",
+          "queen-of-sheba",
+          "achiyah",
+          "yeravam",
+          "rechavam"
+        ],
+        "units": [
+          {
+            "book_key": "kings",
+            "unit_type": "narrative-unit",
+            "unit_id": "solomon-decline-kingdom-split",
+            "role": "primary",
+            "source_file": "data/nach/kings/03-solomon-decline-kingdom-split.json",
+            "chronology": {
+              "am_start": 2935,
+              "am_end": 2964,
+              "precision": "traditional"
+            },
+            "character_ids": [
+              "shlomo",
+              "queen-of-sheba",
+              "achiyah",
+              "yeravam",
+              "rechavam"
+            ],
+            "facts": [
+              {
+                "fact_id": "kg017",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 1,
+                  "position_in_unit": 0.111
+                },
+                "character_ids": [
+                  "shlomo"
+                ],
+                "display": {
+                  "importance": 5,
+                  "min_zoom": 3,
+                  "lane": "facts",
+                  "label_short": "Promessa e advertência"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "covenant",
+                  "asset": "assets/icons/covenant.svg",
+                  "caption": "Promessa e advertência",
+                  "inherit_canonical_fact_visual": true
+                }
+              },
+              {
+                "fact_id": "kg018",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 2,
+                  "position_in_unit": 0.222
+                },
+                "character_ids": [
+                  "shlomo"
+                ],
+                "display": {
+                  "importance": 2,
+                  "min_zoom": 4,
+                  "lane": "facts",
+                  "label_short": "Expansão econômica"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "light",
+                  "asset": "assets/icons/light.svg",
+                  "caption": "Expansão econômica",
+                  "inherit_canonical_fact_visual": true
+                }
+              },
+              {
+                "fact_id": "kg019",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 3,
+                  "position_in_unit": 0.333
+                },
+                "character_ids": [
+                  "shlomo",
+                  "queen-of-sheba"
+                ],
+                "display": {
+                  "importance": 3,
+                  "min_zoom": 4,
+                  "lane": "facts",
+                  "label_short": "Visita de Sheva"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "crown",
+                  "asset": "assets/icons/crown.svg",
+                  "caption": "Visita de Sheva",
+                  "inherit_canonical_fact_visual": true
+                }
+              },
+              {
+                "fact_id": "kg020",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 4,
+                  "position_in_unit": 0.444
+                },
+                "character_ids": [
+                  "shlomo"
+                ],
+                "display": {
+                  "importance": 3,
+                  "min_zoom": 4,
+                  "lane": "facts",
+                  "label_short": "Apogeu material"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "crown",
+                  "asset": "assets/icons/crown.svg",
+                  "caption": "Apogeu material",
+                  "inherit_canonical_fact_visual": true
+                }
+              },
+              {
+                "fact_id": "kg021",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 5,
+                  "position_in_unit": 0.556
+                },
+                "character_ids": [
+                  "shlomo"
+                ],
+                "display": {
+                  "importance": 5,
+                  "min_zoom": 3,
+                  "lane": "facts",
+                  "label_short": "Desvio espiritual"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "scroll",
+                  "asset": "assets/icons/scroll.svg",
+                  "caption": "Desvio espiritual",
+                  "inherit_canonical_fact_visual": true
+                }
+              },
+              {
+                "fact_id": "kg022",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 6,
+                  "position_in_unit": 0.667
+                },
+                "character_ids": [
+                  "shlomo"
+                ],
+                "display": {
+                  "importance": 3,
+                  "min_zoom": 4,
+                  "lane": "facts",
+                  "label_short": "Oposição a Shlomo"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "sword",
+                  "asset": "assets/icons/sword.svg",
+                  "caption": "Oposição a Shlomo",
+                  "inherit_canonical_fact_visual": true
+                }
+              },
+              {
+                "fact_id": "kg023",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 7,
+                  "position_in_unit": 0.778
+                },
+                "character_ids": [
+                  "shlomo",
+                  "achiyah",
+                  "yeravam"
+                ],
+                "display": {
+                  "importance": 5,
+                  "min_zoom": 3,
+                  "lane": "facts",
+                  "label_short": "Profecia da ruptura"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "scroll",
+                  "asset": "assets/icons/scroll.svg",
+                  "caption": "Profecia da ruptura",
+                  "inherit_canonical_fact_visual": true
+                }
+              },
+              {
+                "fact_id": "kg024",
+                "chronology": {
+                  "precision": "relative",
+                  "sequence": 8,
+                  "position_in_unit": 0.889
+                },
+                "character_ids": [
+                  "rechavam",
+                  "yeravam"
+                ],
+                "display": {
+                  "importance": 5,
+                  "min_zoom": 3,
+                  "lane": "facts",
+                  "label_short": "Cisão do reino"
+                },
+                "visual": {
+                  "marker_type": "icon",
+                  "icon": "sword",
+                  "asset": "assets/icons/sword.svg",
+                  "caption": "Cisão do reino",
+                  "inherit_canonical_fact_visual": true
+                }
+              }
+            ],
+            "visual_source": "canonical-unit"
+          }
+        ],
+        "visual": {
+          "marker_type": "icon",
+          "icon": "sword",
+          "asset": "assets/icons/sword.svg",
+          "caption": "A divisão entre Yehudá e Israel",
+          "importance": 5,
+          "color": "#8a6abf"
+        }
+      }
+    ],
+    "visual": {
+      "marker_type": "icon",
+      "icon": "crown",
+      "asset": "assets/icons/crown.svg",
+      "caption": "Monarquia e Primeiro Templo",
+      "importance": 5,
+      "color": "#c9a84c"
+    }
+  },
+  "interaction_contract": {
+    "select": "Changes focus without losing parent context.",
+    "drill": "phase -> group -> unit -> fact",
+    "back": "Returns exactly one hierarchy level.",
+    "fact_action": "Open the existing drawer using book_key, unit_id and fact_id.",
+    "compact_mode": "Atlas 2D footer",
+    "expanded_mode": "Timeline tab"
+  },
+  "visual_contract": {
+    "purpose": "Visual identity is functional navigation metadata, not decoration.",
+    "fallback_order": [
+      "image",
+      "icon",
+      "color-and-label"
+    ],
+    "require_caption": true,
+    "inherit_canonical_unit_visual": true
+  }
+}

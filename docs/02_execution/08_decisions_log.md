@@ -301,3 +301,53 @@
 **Decision:** Treat SQLite as the implemented local authoring and integration layer. Keep static JSON as the publication and public runtime format until an SQLite-to-JSON export pipeline and generated projections are ready.
 
 **Impact:** Documentation and backlog items should distinguish between local database authoring, which exists, and a live database-backed public runtime, which remains out of scope.
+
+---
+
+## 2026-07-26 — Timeline v2 is based on design-restructuring-01
+
+**Context:** The design branch is 11 commits ahead of main and contains the current Atlas restructuring, visual strategy, reference screenshots and expanded timeline proposal.
+
+**Decision:** Base the Timeline v2 Melachim pilot on `design-restructuring-01`, not `main`. Treat its layout and visual documentation as the active product context.
+
+**Impact:** The pilot can evolve with the current design without reintroducing obsolete main-branch assumptions. Its pull request targets the design branch.
+
+---
+
+## 2026-07-26 — Timeline visuals are functional navigation metadata
+
+**Context:** The intended product relies on strong visual recognition of facts, periods, characters and future places. Treating visuals as renderer decoration would postpone an essential data requirement.
+
+**Decision:** Phase, group, fact and character projections may declare a `visual` block. Narrative units inherit canonical visuals. The fallback order is curated image, semantic icon, then color and label. Every asset requires a caption.
+
+**Impact:** Compact mode can remain icon-led while expanded mode can progressively introduce thumbnails and portraits. Existing repository assets are reused, and richer images remain external files under `assets/`.
+
+
+
+---
+
+## 2026-07-26 — Distinct visual grammar for Timeline v2 layers
+
+**Decision:** Phase, group, narrative unit, character and fact will not share one generic card representation at the detailed level.
+
+**Rationale:** These objects have different temporal semantics. Intervals must appear as bands or bars, characters as avatar/activity lines, and facts as point markers. Every temporal lane will share one synchronized horizontal coordinate system.
+
+**First implementation:** Only depth 4 of the Melachim pilot will change. Depths 1–3 remain stable while the horizontal interaction is validated.
+
+**Reference:** `docs/04_technical/TIMELINE_V2_HORIZONTAL_LANES.md`
+
+---
+
+## 2026-07-26 — Characters are sourced knowledge entities
+
+**Decision:** A character biography will be stored as a separate knowledge entity with stable identity, chronology, fact links, sources, family relationships, visual metadata and contextual characterization.
+
+**Tribal affiliation:** Tribe membership is optional and must include a classification and evidence. It must not be inferred solely from residence, political kingdom or narrative proximity.
+
+**Personality:** Fixed unsupported personality labels are rejected. The system uses contextual narrative characterization with evidence and an explicit classification.
+
+**Storage:** Keep a compact character index for timeline rendering and load an individual character file only when the biography is opened.
+
+**First implementation:** Shlomo will be the initial complete specimen.
+
+**Reference:** `docs/04_technical/CHARACTER_ENTITY_MODEL.md`

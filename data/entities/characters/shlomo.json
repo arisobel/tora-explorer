@@ -1,0 +1,253 @@
+{
+  "schema_version": "0.1-experimental",
+  "status": "draft",
+  "id": "shlomo",
+  "entity_type": "person",
+  "names": {
+    "primary": "Shlomo",
+    "pt": "Salomão",
+    "he": "שְׁלֹמֹה",
+    "transliteration": "Shlomo",
+    "variants": [
+      "Shelomo",
+      "Solomon"
+    ]
+  },
+  "identity": {
+    "people": "israel",
+    "tribe": {
+      "tribe_id": "judah",
+      "classification": "relationship-derived",
+      "evidence": [],
+      "review_status": "pending"
+    },
+    "roles": [
+      {
+        "id": "king",
+        "label": "Rei de Israel"
+      },
+      {
+        "id": "sage",
+        "label": "Sábio"
+      },
+      {
+        "id": "temple-builder",
+        "label": "Construtor do Primeiro Templo"
+      }
+    ]
+  },
+  "timeline": {
+    "birth": {
+      "am": null,
+      "precision": "unknown",
+      "evidence": []
+    },
+    "death": {
+      "am": null,
+      "precision": "unknown",
+      "evidence": []
+    },
+    "active_period": {
+      "am_start": 2924,
+      "am_end": 2964,
+      "precision": "traditional",
+      "start_open": true,
+      "end_open": false,
+      "evidence": [],
+      "review_status": "pending"
+    }
+  },
+  "biography": {
+    "short": "Filho de David e Bat-Sheva, rei de Israel, reconhecido por sua sabedoria e pela construção do Primeiro Templo.",
+    "sections": [
+      {
+        "id": "accession",
+        "title": "Ascensão ao trono",
+        "summary": "",
+        "fact_ids": [],
+        "source_refs": []
+      },
+      {
+        "id": "wisdom-and-reign",
+        "title": "Sabedoria e reinado",
+        "summary": "",
+        "fact_ids": [],
+        "source_refs": []
+      },
+      {
+        "id": "temple",
+        "title": "Construção do Primeiro Templo",
+        "summary": "",
+        "fact_ids": [],
+        "source_refs": []
+      },
+      {
+        "id": "prosperity",
+        "title": "Prosperidade e relações internacionais",
+        "summary": "",
+        "fact_ids": [
+          "kg018",
+          "kg019",
+          "kg020"
+        ],
+        "source_refs": [
+          "I Kings 9:10-28",
+          "I Kings 10:1-29"
+        ]
+      },
+      {
+        "id": "decline",
+        "title": "Declínio e divisão anunciada",
+        "summary": "",
+        "fact_ids": [
+          "kg021",
+          "kg022",
+          "kg023",
+          "kg024"
+        ],
+        "source_refs": [
+          "I Kings 11:1-40",
+          "I Kings 12:1-24"
+        ]
+      }
+    ]
+  },
+  "canonical_fact_links": [
+    {
+      "book_key": "kings",
+      "fact_id": "kg017"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg018"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg019"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg020"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg021"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg022"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg023"
+    },
+    {
+      "book_key": "kings",
+      "fact_id": "kg024"
+    }
+  ],
+  "source_ranges": [
+    {
+      "id": "primary-kings",
+      "book_key": "kings",
+      "sefaria_ref": "I Kings 1:1-11:43",
+      "relation": "primary-narrative",
+      "classification": "explicit"
+    },
+    {
+      "id": "parallel-chronicles",
+      "book_key": "chronicles",
+      "sefaria_ref": "II Chronicles 1:1-9:31",
+      "relation": "parallel-narrative",
+      "classification": "explicit"
+    }
+  ],
+  "relationships": [
+    {
+      "type": "parent",
+      "character_id": "david",
+      "classification": "explicit",
+      "evidence": [
+        "II Samuel 12:24"
+      ]
+    },
+    {
+      "type": "parent",
+      "character_id": "bat-sheva",
+      "classification": "explicit",
+      "evidence": [
+        "II Samuel 12:24"
+      ]
+    },
+    {
+      "type": "child",
+      "character_id": "rechavam",
+      "classification": "explicit",
+      "evidence": [
+        "I Kings 11:43"
+      ]
+    }
+  ],
+  "characterization": [
+    {
+      "trait": "wisdom",
+      "label": "Sabedoria",
+      "classification": "explicit",
+      "context": "Reinado",
+      "evidence": [
+        "I Kings 3:12"
+      ],
+      "note": "Característica explicitamente atribuída na narrativa."
+    },
+    {
+      "trait": "administrative-capacity",
+      "label": "Capacidade administrativa",
+      "classification": "action-derived",
+      "context": "Organização e expansão do reino",
+      "evidence": [
+        "I Kings 4:1-28",
+        "I Kings 9:10-28"
+      ],
+      "note": "Síntese editorial derivada das ações narradas."
+    },
+    {
+      "trait": "decline-in-fidelity",
+      "label": "Declínio de fidelidade",
+      "classification": "narrative-interpretation",
+      "context": "Período final do reinado",
+      "evidence": [
+        "I Kings 11:1-13"
+      ],
+      "note": "Caracterização contextual, não apresentada como traço permanente."
+    }
+  ],
+  "places": [
+    {
+      "place_id": "jerusalem",
+      "relation": "seat-of-reign",
+      "classification": "explicit",
+      "evidence": []
+    }
+  ],
+  "visual": {
+    "marker_type": "icon",
+    "icon": "crown",
+    "icon_asset": "assets/icons/crown.svg",
+    "portrait_asset": null,
+    "symbolic_role": "king",
+    "color": "#fbff00",
+    "caption": "Shlomo",
+    "alt": "Símbolo de coroa associado ao reinado de Shlomo"
+  },
+  "editorial": {
+    "review_status": "draft",
+    "reviewed_by": null,
+    "last_reviewed_at": null,
+    "notes": [
+      "Confirmar cronologia AM.",
+      "Completar fatos anteriores a kg017.",
+      "Revisar evidência da afiliação à tribo de Yehudá.",
+      "Cadastrar entidades relacionadas antes de ativar todos os vínculos."
+    ]
+  }
+}
